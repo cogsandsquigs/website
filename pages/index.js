@@ -1,3 +1,11 @@
+import Nav from "@/components/Nav";
+
 export default function Home() {
-  return <>Hello world!</>;
+  return (
+    <>
+      <Nav />
+      <p>Hello world!</p>
+      <p>This is Ian Pratt's website!</p>
+    </>
+  );
 }

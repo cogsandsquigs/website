@@ -1,5 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   background-color: #000000;
   color: #ffffff;
   font-family: monospace;
+  font-size: 100%;
 }
