@@ -3,8 +3,15 @@
 @tailwind utilities;
 
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: black;
+  color: white;
   font-family: monospace;
   font-size: 100%;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:visited {
 }

@@ -4,7 +4,7 @@ export default function Nav() {
   return (
     <nav>
       <div className="flex justify-between">
-        <div className="grid content-center p-4">
+        <div className="grid content-center p-4 text-base font-bold">
           <Link href="/">Home</Link>
         </div>
         <div className="grid content-center p-4 text-right">
