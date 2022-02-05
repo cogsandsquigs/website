@@ -1,17 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
   background-color: black;
   color: white;
   font-family: monospace;
   font-size: 100%;
+  padding: 1rem;
 }
 
 a {
   text-decoration: underline;
-}
-
-a:visited {
+  color: white;
+  font-weight: bold;
 }
