@@ -8,7 +8,7 @@ export default function Nav() {
         <div className={styles.links}>
           <Link href="/">Home</Link>
         </div>
-        <div className={styles.card}>
+        <div>
           <h1>Ian Pratt</h1>
           <h3>Just a gay programmer</h3>
         </div>
