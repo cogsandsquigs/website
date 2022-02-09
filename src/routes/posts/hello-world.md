@@ -23,4 +23,5 @@ Below, you should see some KaTeX being formatted correctly
 and displayed correctly as math equations!
 
 $\KaTeX$
+
 $f(x) = x^2$
