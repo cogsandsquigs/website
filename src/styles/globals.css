@@ -11,3 +11,7 @@ a {
   color: white;
   font-weight: bold;
 }
+
+pre {
+  justify-self: center;
+}
