@@ -11,7 +11,9 @@
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/adapter-static": "^1.0.0-next.26",
     "@sveltejs/kit": "next",
-    "svelte": "^3.44.0"
+    "mdsvex": "^0.10.5",
+    "svelte": "^3.44.0",
+    "sveltejs-adapter-ipfs": "^0.2.1"
   },
   "type": "module"
 }
