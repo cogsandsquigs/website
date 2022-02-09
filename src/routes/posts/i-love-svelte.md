@@ -5,15 +5,15 @@ date: 2022-02-09
 # {title}
 
 For those of you that don't know this website is built
-with [sveltekit](https://kit.svelte.dev) and [mdsvex](https://mdsvex.com).
+with [Sveltekit](https://kit.Svelte.dev) and [mdsvex](https://mdsvex.com).
 It really allows me to build pretty, interactive
 pages on my website with minimal effort! I also love how
-svelte allows you to compile everything you have down
+Svelte allows you to compile everything you have down
 to raw html and css, and only javascript for a very 
 minimal runtime environment (for animations and stuff),
 as well as being just very intuitive to work with! For
 example, the navbar this website uses (a very minimal
-navbar at that) looks like this under svelte
+navbar at that) looks like this under Svelte
 
 ```html
 <nav>
@@ -43,7 +43,7 @@ navbar at that) looks like this under svelte
 </style>
 ```
 Thats it. Literally thats it. This is a full-blown 
-svelte component, ready to be imported into any
+Svelte component, ready to be imported into any
 page you like! Svelte just makes it easy to work with
 HTML, JS, and CSS, and the upside of using this is that
 the compiler does most, if not all of the work for you,
@@ -54,8 +54,8 @@ if you like that. I dont).
 
 [mdsvex](https://mdsvex.com) allows me to write my pages
 in an [mdx](https://mdxjs.com)-like interface designed
-for svelte users. It looks like markdown, it feels like
-markdown, but you can include svelte components within it!
+for Svelte users. It looks like markdown, it feels like
+markdown, but you can include Svelte components within it!
 
 For example, the index page for my website looks like this:
 ```markdown
@@ -70,8 +70,8 @@ my [testing page](./posts/hell-world)? It's where I test
 out new things for my website!
 ```
 
-This gets transpiled into svelte and then into raw html
-and css. Thank's to svelte's amazing and easy way to 
+This gets transpiled into Svelte and then into raw html
+and css. Thank's to Svelte's amazing and easy way to 
 use preprocessor plugins of any and all kinds, its
 almost too easy to add support for sass, mdsvex, tailwind,
 and other preprocessors that make you website beautiful.
@@ -79,9 +79,9 @@ However I ownly use mdsvex as of right now, because I don't
 really need to use any other plugin or preprocessor to
 style a website with a very basic style and font change.
 
-In the end, svelte is just amazing to work with. I don't
+In the end, Svelte is just amazing to work with. I don't
 think things like [nextjs](https://nextjs.org) compare,
 simply because of the elegance of writing a website with
-svelte and mdsvex. It's too easy, to elegant, to simple.
+Svelte and mdsvex. It's too easy, to elegant, to simple.
 
-I love svelte.
+I love Svelte.
