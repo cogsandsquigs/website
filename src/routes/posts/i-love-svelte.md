@@ -1,6 +1,6 @@
 ---
 title: I love Svelte!
-date: 2022-2-9
+date: 2022-02-09
 ---
 # {title}
 
