@@ -1,7 +1,7 @@
 <nav>
   <div class="wrap">
     <div class="links">
-      <a href="/home">Home</a>
+      <a href="/">Home</a>
     </div>
     <div>
       <h1>Ian Pratt</h1>

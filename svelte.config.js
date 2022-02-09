@@ -6,7 +6,7 @@ const config = {
 
   kit: {
     // Default SvelteKit options
-    target: "#svelte",
+    // target: "#svelte",
     adapter: adapter(),
   },
 };
