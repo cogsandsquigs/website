@@ -12,12 +12,12 @@
     "@sveltejs/adapter-static": "^1.0.0-next.26",
     "@sveltejs/kit": "next",
     "mdsvex": "^0.10.5",
+    "remark-math": "^3.0.0",
     "svelte": "^3.44.0",
     "sveltejs-adapter-ipfs": "^0.2.1"
   },
   "type": "module",
   "dependencies": {
-    "rehype-katex-svelte": "^1.0.3",
-    "remark-math": "^5.1.1"
+    "rehype-katex-svelte": "^1.0.3"
   }
 }
