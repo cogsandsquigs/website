@@ -1,6 +1,6 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: hsl(220, 13%, 18%);
+  color: hsl(220, 14%, 71%);
   font-family: monospace;
   font-size: 100%;
   padding: 0.9em;
