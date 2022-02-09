@@ -6,6 +6,15 @@
 <svelte:head>
   <title>Ian Pratt | Just a gay programmer</title>
 </svelte:head>
+
 <Nav />
 
-<slot />
+<div class="content">
+  <slot />
+</div>
+
+<style>
+  .content {
+    padding: 1em;
+  }
+</style>
