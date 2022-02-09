@@ -8,7 +8,13 @@ const config = defineConfig({
     dashes: "oldschool",
   },
 
+  layout: {
+			posts: "./src/routes/posts/__layout.svelte"
+			//projects: "./src/routes/projects/layout.svelte"
+	},
+
   remarkPlugins: [],
+  
   rehypePlugins: [
     rehypeKatexSvelte,
   ],

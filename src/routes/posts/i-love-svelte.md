@@ -2,7 +2,6 @@
 title: I love Svelte!
 date: 2022-02-09
 ---
-# {title}
 
 For those of you that don't know this website is built
 with [Sveltekit](https://kit.Svelte.dev) and [mdsvex](https://mdsvex.com).
