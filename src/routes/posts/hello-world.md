@@ -10,7 +10,7 @@ At the top, you should see something like "Hello World!
 Posted on whatever date". Below, you should see a code
 block of javascript, colored in correctly.
 
-```javascript
+```js
 let x = "hello world!";
 
 function test() {
