@@ -15,6 +15,6 @@
 
 <style>
   .content {
-    padding: 1em;
+    padding: 1.5rem;
   }
 </style>
