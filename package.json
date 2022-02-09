@@ -15,5 +15,8 @@
     "svelte": "^3.44.0",
     "sveltejs-adapter-ipfs": "^0.2.1"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "rehype-katex-svelte": "^1.0.3"
+  }
 }

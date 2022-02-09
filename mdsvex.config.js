@@ -1,4 +1,5 @@
 import { defineMDSveXConfig as defineConfig } from "mdsvex";
+import rehypeKatexSvelte from "rehype-katex-svelte";
 
 const config = defineConfig({
   extensions: [".svelte.md", ".md", ".svx"],
@@ -8,7 +9,9 @@ const config = defineConfig({
   },
 
   remarkPlugins: [],
-  rehypePlugins: [],
+  rehypePlugins: [
+    rehypeKatexSvelte,
+  ],
 });
 
 export default config;
