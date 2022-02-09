@@ -5,7 +5,7 @@
 
 <svelte:head>
   <title>Ian Pratt | Just a gay programmer</title>
-</svelte:head/>
+</svelte:head>
 <Nav />
 
 <slot />
