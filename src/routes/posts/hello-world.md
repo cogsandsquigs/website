@@ -12,6 +12,7 @@ block of javascript, colored in correctly.
 
 ```javascript
 let x = "hello world!";
+
 function test() {
   console.log(x);
 }
