@@ -82,6 +82,6 @@ style a website with a very basic style and font change.
 In the end, Svelte is just amazing to work with. I don't
 think things like [nextjs](https://nextjs.org) compare,
 simply because of the elegance of writing a website with
-Svelte and mdsvex. It's too easy, to elegant, to simple.
+Svelte and mdsvex. It's too easy, too elegant, too simple.
 
 I love Svelte.
