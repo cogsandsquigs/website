@@ -19,8 +19,8 @@
 </script>
 
 <div>
-  {#each posts as path, metadata}
-    <h1><a href={path}>{metadata.title}</a></h1>
-    <h4>Published on {metadata.date}</h4>
+  {#each posts as {title, date}}
+    <h1><a href={path}>{title}</a></h1>
+    <h4>Published on {date}</h4>
   {/each}
 </div>
