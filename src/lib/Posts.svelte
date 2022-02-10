@@ -4,7 +4,7 @@
   let body = [];
 
   for (const path in posts) {
-    body.push(posts[path]().then(({metadata}) => {path, metadata})).sort((a, b) => {new Date(a.metadata.date) - new Date(b.metadata.date)});
+    body.push(posts[path]().then(({metadata}) => metadata));
   }
   
   /** @type {import('@sveltejs/kit').Load} */
