@@ -1,27 +1,25 @@
 <script context="module">
-  const posts = import.meta.glob("./src/routes/posts/*.md");
-
-  let body = [];
-
-  for (const path in posts) {
-    body.push(posts[path]().then(({metadata}) => metadata));
-  }
-  
   /** @type {import('@sveltejs/kit').Load} */
   export async function load({ page, fetch }) {
-    const posts = await Promise.all(body)
-    return {
-      props: {
-        posts
-      }
-    };
-  }
+		const response = await fetch('/posts.json')
+
+		const posts = await response.json().posts;
+    
+		return {
+			props: {
+				posts
+			}
+		};
+	}
+</script>
+
+<script>
+  export let posts;
 </script>
 
 <div>
-  {JSON.stringify(posts)}
-  {#each posts as {title, date}}
-    <h1><a href={path}>{title}</a></h1>
-    <h4>Published on {date}</h4>
+  {#each posts as post}
+    <h1><a rel="prefetch" href="/posts/{post.metadata.title}">{post.metadata.title}</a></h1>
+    <h4>Published on {post.metadata.date}</h4>
   {/each}
 </div>
