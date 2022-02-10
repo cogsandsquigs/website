@@ -2,6 +2,7 @@
   <div class="wrap">
     <div class="links">
       <a href="/">Home</a>
+      <a href="/posts">Posts</a>
     </div>
     <div>
       <h1>Ian Pratt</h1>
