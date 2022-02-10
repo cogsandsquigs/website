@@ -19,6 +19,7 @@
 </script>
 
 <div>
+  {JSON.stringify(posts)}
   {#each posts as {title, date}}
     <h1><a href={path}>{title}</a></h1>
     <h4>Published on {date}</h4>
