@@ -3,10 +3,6 @@
   import Nav from "$lib/Nav.svelte";
 </script>
 
-<svelte:head>
-  <title>Ian Pratt | Just a gay programmer</title>
-</svelte:head>
-
 <Nav />
 
 <div class="content">

@@ -18,6 +18,11 @@
   const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
 </script>
 
+<svelte:head>
+
+  <title>Ian Pratt | Just a gay programmer</title>
+</svelte:head>
+
 # **Posts**
 
 {#each posts as post}
