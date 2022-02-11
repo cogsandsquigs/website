@@ -28,6 +28,7 @@
  * --syntax-cursor-line: hsla(220, 100%, 80%, 0.04);
  */
 
+body,
 code[class*="language-"],
 pre[class*="language-"] {
 	background: hsl(220, 13%, 18%);
