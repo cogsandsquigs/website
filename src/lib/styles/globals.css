@@ -2,11 +2,9 @@
 @import url("https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css");
 
 body {
-  /*
   background-color: hsl(220, 13%, 18%);
   color: hsl(220, 14%, 71%);
   font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
-  */
   padding: 0.9em;
 }
 
