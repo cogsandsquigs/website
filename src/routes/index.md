@@ -6,7 +6,7 @@
 # Welcome to Ian Pratt's Website!!!
 
 I'm glad you could make it! This is my little corner
-of the web, powered by IPFS (which means this site is
+of the web, powered by [IPFS](https://ipfs.io/) (which means this site is
 viewable on ipfs!!!), served by [fleek](https://fleek.co)
 for all you http/s viewers out there. In any case,
 I hope you enjoy what you find here! Why not check out
