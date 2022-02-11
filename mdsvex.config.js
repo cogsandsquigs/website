@@ -4,7 +4,7 @@ import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 
 const config = defineConfig({
-  extensions: [".svelte.md", ".md", ".svx"],
+  extensions: [".md"],
 
   smartypants: {
     quotes: false,
