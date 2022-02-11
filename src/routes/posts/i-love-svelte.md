@@ -8,7 +8,7 @@ with [Sveltekit](https://kit.Svelte.dev) and [mdsvex](https://mdsvex.com).
 It really allows me to build pretty, interactive
 pages on my website with minimal effort! I also love how
 Svelte allows you to compile everything you have down
-to raw html and css, and only javascript for a very 
+to raw html and css, and only javascript for a very
 minimal runtime environment (for animations and stuff),
 as well as being just very intuitive to work with! For
 example, the navbar this website uses (a very minimal
@@ -18,7 +18,7 @@ navbar at that) looks like this under Svelte
 <nav>
   <div class="wrap">
     <div class="links">
-      <!--navigation links go here!-->  
+      <!--navigation links go here!-->
     </div>
     <div>
       <h1>Ian Pratt</h1>
@@ -41,7 +41,8 @@ navbar at that) looks like this under Svelte
   }
 </style>
 ```
-Thats it. Literally thats it. This is a full-blown 
+
+Thats it. Literally thats it. This is a full-blown
 Svelte component, ready to be imported into any
 page you like! Svelte just makes it easy to work with
 HTML, JS, and CSS, and the upside of using this is that
@@ -57,6 +58,7 @@ for Svelte users. It looks like markdown, it feels like
 markdown, but you can include Svelte components within it!
 
 For example, the index page for my website looks like this:
+
 ```markdown
 # Welcome to Ian Pratt's Website!!!
 
@@ -64,13 +66,13 @@ I'm glad you could make it! This is my little corner
 of the web, powered by IPFS (which means this site is
 viewable on ipfs!!!), served by [fleek](https://fleek.co)
 for all you http/s viewers out there. In any case,
-I hope you enjoy what you find here! Why not  check out
-my [testing page](./posts/hell-world)? It's where I test
+I hope you enjoy what you find here! Why not check out
+my [testing page](./posts/hello-world)? It's where I test
 out new things for my website!
 ```
 
 This gets transpiled into Svelte and then into raw html
-and css. Thank's to Svelte's amazing and easy way to 
+and css. Thank's to Svelte's amazing and easy way to
 use preprocessor plugins of any and all kinds, its
 almost too easy to add support for sass, mdsvex, tailwind,
 and other preprocessors that make you website beautiful.
