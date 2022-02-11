@@ -5,7 +5,7 @@
       "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"],
       "$styles/*": ["src/styles/*"],
-      "$posts/*": ["src/routes/posts/*"]
+      "$posts/*": ["posts/*"]
     }
   },
   "include": [

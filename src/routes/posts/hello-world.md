@@ -45,5 +45,3 @@ of solving the area between the curves <Katex math="x^2"/> and <Katex math="3x +
 <Katex math={"\\frac{21}{6}-\\frac{2}{6}"} inline={false}/>
 
 <Katex math={"\\frac{19}{6}"} inline={false}/>
-
-notes: maybe use [alex](https://alexjs.com)?
