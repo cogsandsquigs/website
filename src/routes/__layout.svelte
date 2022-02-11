@@ -1,5 +1,5 @@
 <script>
-  import "../styles/globals.css";
+  import "../lib/styles/globals.css";
   import Nav from "$lib/Nav.svelte";
 </script>
 

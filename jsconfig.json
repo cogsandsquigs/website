@@ -4,8 +4,8 @@
     "paths": {
       "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"],
-      "$styles/*": ["src/styles/*"],
-      "$posts/*": ["posts/*"]
+      "$styles": ["src/lib/styles"],
+      "$styles/*": ["src/lib/styles/*"]
     }
   },
   "include": [
