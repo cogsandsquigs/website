@@ -17,7 +17,7 @@ const config = defineConfig({
 
   remarkPlugins: [remarkMath],
 
-  rehypePlugins: [rehypeKatex],
+  rehypePlugins: [rehypeKatexSvelte],
 });
 
 export default config;
