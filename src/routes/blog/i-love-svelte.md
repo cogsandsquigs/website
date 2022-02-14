@@ -16,29 +16,29 @@ navbar at that) looks like this under Svelte
 
 ```html
 <nav>
-  <div class="wrap">
-    <div class="links">
-      <!--navigation links go here!-->
-    </div>
-    <div>
-      <h1>Ian Pratt</h1>
-      <h3>Just a gay programmer</h3>
-    </div>
-  </div>
+	<div class="wrap">
+		<div class="links">
+			<!--navigation links go here!-->
+		</div>
+		<div>
+			<h1>Ian Pratt</h1>
+			<h3>Just a gay programmer</h3>
+		</div>
+	</div>
 </nav>
 <hr />
 
 <style>
-  .wrap {
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-items: center;
-  }
+	.wrap {
+		display: flex;
+		box-sizing: border-box;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-  .links > * {
-    font-size: 120%;
-  }
+	.links > * {
+		font-size: 120%;
+	}
 </style>
 ```
 
@@ -60,14 +60,19 @@ markdown, but you can include Svelte components within it!
 For example, the index page for my website looks like this:
 
 ```markdown
+<svelte:head>
+
+  <title>Ian Pratt | Just a gay programmer</title>
+</svelte:head>
+
 # Welcome to Ian Pratt's Website!!!
 
 I'm glad you could make it! This is my little corner
-of the web, powered by IPFS (which means this site is
+of the web, powered by [IPFS](https://ipfs.io/) (which means this site is
 viewable on ipfs!!!), served by [fleek](https://fleek.co)
 for all you http/s viewers out there. In any case,
 I hope you enjoy what you find here! Why not check out
-my [testing page](./posts/hello-world)? It's where I test
+my [testing page](./blog/hello-world)? It's where I test
 out new things for my website!
 ```
 
