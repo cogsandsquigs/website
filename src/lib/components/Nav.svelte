@@ -1,14 +1,14 @@
 <nav>
-  <div class="wrap">
-    <div class="links">
-      <a href="/">Home</a>
-      <a href="/posts">Posts</a>
-    </div>
-    <div>
-      <h1>Ian Pratt</h1>
-      <h3>Just a gay programmer</h3>
-    </div>
-  </div>
+	<div class="wrap">
+		<div class="links">
+			<a href="/">Home</a>
+			<a href="/blog">Blog</a>
+		</div>
+		<div>
+			<h1>Ian Pratt</h1>
+			<h3>Just a gay programmer</h3>
+		</div>
+	</div>
 </nav>
 <hr />
 

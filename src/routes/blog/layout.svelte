@@ -1,6 +1,14 @@
 <script>
   export let title;
   export let date;
+
+  const locale = "en-US";
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  };
 </script>
 
 <svelte:head>
@@ -9,5 +17,5 @@
 </svelte:head>
 
 <h1>{title}</h1>
-<p>Posted on {date}</p>
+<p>Posted on {new Date(date).toLocaleDateString(locale, options)}</p>
 <slot />

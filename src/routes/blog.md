@@ -23,11 +23,11 @@
   <title>Ian Pratt | Just a gay programmer</title>
 </svelte:head>
 
-# **Posts**
+# **Blog**
 
 {#each posts as post}
 
-## [{post.title}](/posts/{post.slug})
+## [{post.title}](/blog/{post.slug})
 
 #### Published on {new Date(post.date).toLocaleDateString(locale, options)}
 
