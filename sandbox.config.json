@@ -1,6 +1,6 @@
 {
 	"infiniteLoopProtection": true,
-	"hardReloadOnChange": false,
+	"hardReloadOnChange": true,
 	"view": "terminal",
 	"template": "node",
 	"startScript": "dev"
