@@ -24,7 +24,7 @@ title: "Blog"
 
 <svelte:head>
 
-  <title>Ian Pratt | Just a gay programmer</title>
+  <title>Ian Pratt | Blog</title>
 </svelte:head>
 
 # **Blog**

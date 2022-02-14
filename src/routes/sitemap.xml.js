@@ -1,4 +1,6 @@
 import { website } from "$lib/info"
+
+import { projects } from "$lib/projects"
 import { posts } from "$lib/posts"
 import { pages } from "$lib/pages"
 
@@ -18,11 +20,6 @@ export async function get() {
       xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
       xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
     >
-      <url>
-        <loc>${website}</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-      </url>
 
       ${(await pages())
 			.map((page) =>
@@ -31,6 +28,20 @@ export async function get() {
 					: `
         <url>
           <loc>${website}/${page.slug}</loc>
+          <changefreq>daily</changefreq>
+          <priority>0.7</priority>
+        </url>
+        `,
+			)
+			.join("")}
+
+      ${(await projects())
+			.map((post) =>
+				post.isPrivate
+					? null
+					: `
+        <url>
+          <loc>${website}/projects/${post.slug}</loc>
           <changefreq>daily</changefreq>
           <priority>0.7</priority>
         </url>

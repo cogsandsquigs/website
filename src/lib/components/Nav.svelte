@@ -3,6 +3,7 @@
 		<div class="links">
 			<a href="/">Home</a>
 			<a href="/blog">Blog</a>
+			<a href="/projects">Projects</a>
 		</div>
 		<div>
 			<h1>Ian Pratt</h1>
