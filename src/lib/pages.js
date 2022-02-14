@@ -7,8 +7,10 @@ export const pages = async () => {
 		Object.entries(modules).map(async ([slug, module]) => {
 			const { metadata } = await module()
 			slug = slug.slice(10, -3) //remove trailing path and .md from file name
-			if (slug != "index") {
+			if (slug !== "index") {
 				pages.push({ slug, ...metadata })
+			} else {
+				pages.push({ ...{ slug: "" }, ...metadata })
 			}
 		}),
 	)

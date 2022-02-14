@@ -12,7 +12,7 @@ export const posts = async () => {
 			const { metadata } = await module()
 			slug = slug.slice(15, -3) //remove trailing path and .md from file name
 
-			posts.push({ slug, ...metadata })
+			posts.unshift({ slug, ...metadata })
 		}),
 	)
 

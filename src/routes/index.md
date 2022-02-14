@@ -1,3 +1,7 @@
+---
+title: "Home"
+---
+
 <svelte:head>
 
   <title>Ian Pratt | Just a gay programmer</title>
