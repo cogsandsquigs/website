@@ -15,7 +15,7 @@ export const projects = async () => {
 				slug = slug.slice(19, -3) //remove trailing path and .md from file name
 
 				projects.unshift({ slug, ...metadata })
-			} else if (slug.endsWith("svelte") && slug !== "layout") {
+			} else if (slug.endsWith("svelte") && slug != "layout") {
 				slug = slug.slice(19, -7) //remove trailing path and .md from file name
 
 				projects.unshift({ slug, ...metadata })
