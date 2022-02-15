@@ -13,7 +13,7 @@ const config = defineConfig({
 
 	layout: {
 		blog: "./src/routes/blog/layout.svelte",
-		//projects: "./src/routes/projects/layout.svelte"
+		projects: "./src/routes/projects/layout.svelte",
 	},
 
 	remarkPlugins: [remarkMath],
