@@ -1,6 +1,6 @@
 import { mdsvex } from "mdsvex";
 import mdsvexConfig from "./mdsvex.config.js";
-import adapter from "@sveltejs/adapter-vercel"; //"sveltejs-adapter-ipfs"; //"@sveltejs/adapter-static";
+import adapter from "sveltejs-adapter-ipfs"; //"@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,9 +10,7 @@ const config = {
   kit: {
     // Default SvelteKit options
     // target: "#svelte",
-    adapter: adapter({
-      removeSourceMap: false,
-    }),
+    adapter: adapter(),
   },
 
   preprocess: [mdsvex(mdsvexConfig)],

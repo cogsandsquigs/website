@@ -1,23 +1,17 @@
-import { website } from "$lib/info";
+import { website } from "$lib/info"
 
-import { projects } from "$lib/projects";
-import { posts } from "$lib/posts";
-import { pages } from "$lib/pages";
+import { projects } from "$lib/projects"
+import { posts } from "$lib/posts"
+import { pages } from "$lib/pages"
 
-export const get = async () => {
-  const headers = {
-    "Cache-Control": "max-age=0, s-maxage=3600",
-    "Content-Type": "application/xml",
-  };
-  return {
-    headers,
-    status: 200,
-    body: await render(),
-  };
-};
-
-const render = async () => {
-  return `<?xml version="1.0" encoding="UTF-8" ?>
+export async function get() {
+	const headers = {
+		"Cache-Control": "max-age=0, s-maxage=3600",
+		"Content-Type": "application/xml",
+	}
+	return {
+		headers,
+		body: `<?xml version="1.0" encoding="UTF-8" ?>
     <urlset
       xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
@@ -28,45 +22,46 @@ const render = async () => {
     >
 
       ${(await pages())
-        .map((page) =>
-          page.isPrivate
-            ? null
-            : `
+			.map((page) =>
+				page.isPrivate
+					? null
+					: `
         <url>
           <loc>${website}/${page.slug}</loc>
           <changefreq>daily</changefreq>
           <priority>0.7</priority>
         </url>
-        `
-        )
-        .join("")}
+        `,
+			)
+			.join("")}
 
       ${(await projects())
-        .map((post) =>
-          post.isPrivate
-            ? null
-            : `
+			.map((post) =>
+				post.isPrivate
+					? null
+					: `
         <url>
           <loc>${website}/projects/${post.slug}</loc>
           <changefreq>daily</changefreq>
           <priority>0.7</priority>
         </url>
-        `
-        )
-        .join("")}
+        `,
+			)
+			.join("")}
 
       ${(await posts())
-        .map((post) =>
-          post.isPrivate
-            ? null
-            : `
+			.map((post) =>
+				post.isPrivate
+					? null
+					: `
       <url>
         <loc>${website}/blog/${post.slug}</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
       </url>
-      `
-        )
-        .join("")}
-    </urlset>`;
-};
+      `,
+			)
+			.join("")}
+    </urlset>`,
+	}
+}
