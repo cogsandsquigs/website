@@ -10,7 +10,9 @@ const config = {
   kit: {
     // Default SvelteKit options
     // target: "#svelte",
-    adapter: adapter(),
+    adapter: adapter({
+      removeSourceMap: false,
+    }),
   },
 
   preprocess: [mdsvex(mdsvexConfig)],
