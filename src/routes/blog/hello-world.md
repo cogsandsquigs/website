@@ -1,7 +1,6 @@
 ---
 title: Hello World!
 date: 2022-02-07
-description: This is my testing page for all sorts of goodies!
 ---
 
 Hi! This is my testing page. What does that mean? well,
@@ -12,13 +11,13 @@ Posted on whatever date". Below, you should see a code
 block of javascript, colored in correctly.
 
 ```js
-let x = "hello world!";
+let x = "hello world!"
 
 function test() {
-  console.log(x);
+	console.log(x)
 }
 
-test();
+test()
 ```
 
 Below, you should see some $\KaTeX$ being formatted correctly
