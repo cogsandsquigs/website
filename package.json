@@ -11,6 +11,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.26",
+		"@sveltejs/adapter-vercel": "^1.0.0-next.39",
 		"@sveltejs/kit": "next",
 		"mdsvex": "^0.10.5",
 		"rehype-katex-svelte": "^1.0.3",
