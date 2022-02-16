@@ -1,5 +1,5 @@
 ---
-title: A cheater detector and helper
+title: A cheater detector
 date: 2022-02-16
 ---
 
@@ -10,10 +10,14 @@ date: 2022-02-16
   let stddev = 0;
 
   let zscore;
+  let teststddev;
   $: zscore = (score - mean)/stddev;
+  $: teststddev = Math.round(Math.abs(zscore));
 </script>
 
 This only works for multiple choice, but I still think its pretty useful!
+
+Mostly an exercise in reactivity
 
 ### (Average) Number of choices per question
 
@@ -34,3 +38,5 @@ This only works for multiple choice, but I still think its pretty useful!
 ## Results
 
 ### Test result Z score: {zscore}
+
+### Test standard deviations: {teststddev}
