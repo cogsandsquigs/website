@@ -11,7 +11,7 @@ date: 2022-02-16
 
   let zscore;
   let teststddev;
-  $: zscore = (score - mean)/stddev;
+  $: zscore = ((score - mean)/stddev).toFixed(3);
   $: teststddev = Math.trunc(Math.abs(zscore));
 </script>
 
