@@ -12,7 +12,7 @@ date: 2022-02-16
   let zscore;
   let teststddev;
   $: zscore = (score - mean)/stddev;
-  $: teststddev = Math.round(Math.abs(zscore));
+  $: teststddev = Math.trunc(Math.abs(zscore));
 </script>
 
 This only works for multiple choice, but I still think its pretty useful!
