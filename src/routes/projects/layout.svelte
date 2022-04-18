@@ -1,7 +1,6 @@
 <script>
   export let title;
   export let date;
-
   const locale = "en-US";
   const options = {
     weekday: "long",

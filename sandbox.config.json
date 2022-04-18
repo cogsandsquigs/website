@@ -3,5 +3,8 @@
 	"hardReloadOnChange": false,
 	"view": "terminal",
 	"template": "node",
-	"startScript": "dev"
+	"startScript": "dev",
+	"container": {
+		"node": "16"
+	}
 }

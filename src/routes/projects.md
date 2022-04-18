@@ -27,7 +27,7 @@ title: "Projects"
   <title>Ian Pratt | Projects</title>
 </svelte:head>
 
-# **Project**
+# **Projects**
 
 {#each projects as project}
 
