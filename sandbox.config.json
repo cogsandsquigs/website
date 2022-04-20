@@ -5,6 +5,6 @@
 	"template": "node",
 	"startScript": "dev",
 	"container": {
-		"node": "16"
+		"node": "14"
 	}
 }
