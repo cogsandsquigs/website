@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+isPrivate: true
 ---
 
 <script context="module">

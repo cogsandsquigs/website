@@ -34,7 +34,7 @@ export async function get() {
         `,
 			)
 			.join("")}
-
+      <!--
       ${(await projects())
 			.map((post) =>
 				post.isPrivate
@@ -48,7 +48,7 @@ export async function get() {
         `,
 			)
 			.join("")}
-
+      -->  
       ${(await posts())
 			.map((post) =>
 				post.isPrivate
