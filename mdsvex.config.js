@@ -13,6 +13,7 @@ const config = defineConfig({
 
 	layout: {
 		blog: "./src/routes/blog/layout.svelte",
+		posts: "./posts/layout.svelte",
 		projects: "./src/routes/projects/layout.svelte",
 	},
 
