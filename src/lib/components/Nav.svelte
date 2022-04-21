@@ -5,17 +5,8 @@ import { pages } from "$lib/pages";
 <nav>
 	<div class="wrap">
 		<div class="links">
-      {#await pages()}
-        <h3>loading...</h3>
-      {:then pgs}
-        {#each pgs as page}
-          {#if !page.isPrivate}
-            <a class="link" href={"/" + page.slug}>{page.title}</a>
-          {/if}
-        {/each}
-      {:catch error}
-        <p>ERROR: {error}</p>
-      {/await}
+      <a href="/">Index</a>
+      <a href="/blog">Blog</a>
     </div>
 		<div>
 			<h1>Ian Pratt</h1>
