@@ -10,15 +10,12 @@
 		"start": "svelte-kit dev --host"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-static": "^1.0.0-next.26",
-		"@sveltejs/adapter-vercel": "^1.0.0-next.0",
-		"@sveltejs/kit": "1.0.0-next.288",
+		"@sveltejs/adapter-vercel": "next",
+		"@sveltejs/kit": "1.0.0-next.292",
 		"mdsvex": "^0.10.5",
 		"rehype-katex-svelte": "^1.1.1",
 		"remark-math": "^3.0.0",
-		"svelte": "^3.44.0",
-		"sveltejs-adapter-ipfs": "^0.2.1"
+		"svelte": "^3.44.0"
 	},
 	"type": "module",
 	"dependencies": {}
