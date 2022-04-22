@@ -27,8 +27,11 @@ import { pages } from "$lib/pages";
   .links > * {
     font-size: 120%;
   }
-  .link {
-    padding-right: 1.25em;
-    padding-bottom: 1em;
-  }
+
+  /*
+    .link {
+      padding-right: 1.25em;
+      padding-bottom: 1em;
+    }
+    */
 </style>
