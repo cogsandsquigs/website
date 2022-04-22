@@ -1,7 +1,7 @@
 ---
 date: 2022-2-11
 slug: anti-pidgen-coo-hate
-title: I hate this article against pidgen coos
+title: I hate this article against pidgen coos >:(
 description: I just really hate this article like wtf
 ---
 

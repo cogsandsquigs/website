@@ -1,26 +1,26 @@
 function dateSort(a, b) {
-	return new Date(b.date).getTime() - new Date(a.date).getTime()
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
 }
 
 export const posts = async () => {
-	const modules = import.meta.glob("../routes/blog/*.md")
+  const modules = import.meta.glob("/src/posts/*.md");
 
-	const posts = []
+  const posts = [];
 
-	await Promise.all(
-		Object.entries(modules).map(async ([slug, module]) => {
-			const { metadata } = await module()
-			slug = slug.slice(15, -3) //remove trailing path and .md from file name
+  await Promise.all(
+    Object.entries(modules).map(async ([slug, module]) => {
+      const { metadata } = await module();
+      slug = slug.slice(15, -3); //remove trailing path and .md from file name
 
-			posts.unshift({
-				slug: slug,
-				...metadata,
-			})
-		}),
-	)
+      posts.unshift({
+        slug: slug,
+        ...metadata,
+      });
+    })
+  );
 
-	// Newest first
-	posts.sort(dateSort)
+  // Newest first
+  posts.sort(dateSort);
 
-	return posts
-}
+  return posts;
+};
