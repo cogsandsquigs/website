@@ -1,23 +1,21 @@
 function dateSort(a, b) {
-  return new Date(b.date).getTime() - new Date(a.date).getTime();
+  return (
+    new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime()
+  );
 }
 
 export const posts = async () => {
-  const modules = import.meta.glob("/src/posts/*.md");
+  // grab all of the post files
+  const files = import.meta.glob("/src/posts/*.md");
 
-  const posts = [];
+  // holds all the posts
+  let posts = [];
 
-  await Promise.all(
-    Object.entries(modules).map(async ([slug, module]) => {
-      const { metadata } = await module();
-      slug = slug.slice(15, -3); //remove trailing path and .md from file name
-
-      posts.unshift({
-        slug: slug,
-        ...metadata,
-      });
-    })
-  );
+  // puts all the posts in the pages array
+  for (let file in files) {
+    let p = await files[file]();
+    posts.push({ metadata: p.metadata, renderer: p.default });
+  }
 
   // Newest first
   posts.sort(dateSort);

@@ -1,18 +1,11 @@
 <script context="module">
+  import { posts } from "$lib/posts";
+
   export async function load({ fetch, url, params }) {
-    // grab all of the post files
-    const files = import.meta.glob("/src/posts/*.md");
-
-    // holds all the posts
-    let pages = [];
-
-    // puts all the posts in the pages array
-    for (let file in files) {
-      pages.push(await files[file]());
-    }
-
     // gets the post with the matching slug
-    pages = pages.filter((page) => page.metadata.slug === params.slug);
+    let pages = (await posts()).filter(
+      (page) => page.metadata.slug === params.slug
+    );
 
     // if there is a post w/ matching slug,
     // return it so it can be rendered
@@ -37,8 +30,8 @@
 </script>
 
 <!--
-  post.default gets us the renderer.
+  post.renderer gets us the renderer.
   This way we can render the post's 
   mdsvex content!
  -->
-<svelte:component this={post.default} />
+<svelte:component this={post.renderer} />
