@@ -1,5 +1,6 @@
 ---
 title: Hello World!
+slug: hello-world
 date: 2022-02-07
 description: This is my testing page for all sorts of goodies!
 ---
