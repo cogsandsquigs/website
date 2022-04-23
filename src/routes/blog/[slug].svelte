@@ -4,7 +4,7 @@
   export async function load({ fetch, url, params }) {
     // gets the post with the matching slug
     let pages = (await posts()).filter(
-      (page) => page.metadata.slug === params.slug
+      page => page.metadata.slug === params.slug
     );
 
     // if there is a post w/ matching slug,
@@ -12,15 +12,15 @@
     if (pages.length !== 0) {
       return {
         props: {
-          post: pages[0],
-        },
+          post: pages[0]
+        }
       };
     }
 
     // if there is none, then return an error
     return {
       status: 404,
-      error: "Blog post not found! Try looking for another, would ya?",
+      error: "Blog post not found! Try looking for another, would ya?"
     };
   }
 </script>
