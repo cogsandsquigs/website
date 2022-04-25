@@ -1,33 +1,39 @@
 function dateSort(a, b) {
-	return new Date(b.date).getTime() - new Date(a.date).getTime()
+  return (
+    new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime()
+  );
 }
 
 export const projects = async () => {
-	const modules = import.meta.glob("../routes/projects/*.{md,svelte}")
+  // grab all of the post files
+  const files = import.meta.glob("../routes/projects/*.{md,svelte}");
 
-	const projects = []
+  // holds all the projects
+  let projects = [];
 
-	await Promise.all(
-		Object.entries(modules).map(async ([slug, module]) => {
-			const { metadata } = await module()
+  // puts all the projects in the pages array
+  for (let file in files) {
+    let p = await files[file]();
 
-			if (slug.endsWith("md")) {
-				slug = slug.slice(19, -3) //remove trailing path and .md from file name
+    if (file.endsWith("md") && file.slice(19, -3) !== "index") {
+      file = file.slice(19, -3); //remove trailing path and .md from file name
 
-				projects.unshift({ slug, ...metadata })
-			} else if (
-				slug.endsWith("svelte") &&
-				slug.slice(19, -7) !== "layout"
-			) {
-				slug = slug.slice(19, -7) //remove trailing path and .md from file name
+      projects.push({
+        metadata: { slug: file, ...p.metadata },
+        renderer: p.default,
+      });
+    } else if (file.endsWith("svelte") && file.slice(19, -7) !== "layout") {
+      file = file.slice(19, -7); //remove trailing path and .md from file name
 
-				projects.unshift({ slug, ...metadata })
-			}
-		}),
-	)
+      projects.push({
+        metadata: { slug: file, ...p.metadata },
+        renderer: p.default,
+      });
+    }
+  }
 
-	// Newest first
-	projects.sort(dateSort)
+  // Newest first
+  projects.sort(dateSort);
 
-	return projects
-}
+  return projects;
+};

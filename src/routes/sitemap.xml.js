@@ -22,6 +22,7 @@ export async function get() {
     >
 
       ${(await pages())
+        .map((x) => x.metadata)
         .map((page) =>
           page.isPrivate
             ? null
@@ -36,6 +37,7 @@ export async function get() {
         .join("")}
       <!--
       ${(await projects())
+        .map((x) => x.metadata)
         .map((post) =>
           post.isPrivate
             ? null
@@ -48,7 +50,7 @@ export async function get() {
         `
         )
         .join("")}
-      -->  
+      -->
       ${(await posts())
         .map((x) => x.metadata)
         .map((post) =>

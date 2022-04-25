@@ -1,25 +1,29 @@
 export const pages = async () => {
-	const modules = import.meta.glob("../routes/*.md")
+  // grab all of the page files
+  const files = import.meta.glob("/src/routes/{index.md,*.md,*/index.md}");
 
-	let pages = []
+  // holds all the pages
+  let pages = [];
+  let index;
 
-	let index = undefined
+  // puts all the pages in the pages array
+  for (let file in files) {
+    let p = await files[file]();
+    if (p.metadata.title == "Index") {
+      index = {
+        metadata: { slug: file.slice(12, -3), ...p.metadata },
+        renderer: p.default,
+      };
+    } else {
+      pages.push({
+        metadata: { slug: file.slice(12, -3), ...p.metadata },
+        renderer: p.default,
+      });
+    }
+  }
 
-	await Promise.all(
-		Object.entries(modules).map(async ([slug, module]) => {
-			const { metadata } = await module()
+  pages.unshift(index);
+  console.log(pages[1].metadata);
 
-			slug = slug.slice(10, -3) //remove trailing path and .md from file name
-
-			if (slug !== "index") {
-				pages.push({ slug, ...metadata })
-			} else {
-				index = { ...{ slug: "" }, ...metadata }
-			}
-		}),
-	)
-
-	pages.unshift(index)
-
-	return pages
-}
+  return pages;
+};
