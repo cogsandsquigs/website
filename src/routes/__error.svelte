@@ -4,8 +4,8 @@
       props: {
         path: url.pathname,
         error,
-        status
-      }
+        status,
+      },
     };
   }
 </script>
@@ -19,11 +19,11 @@
 <div class="wrap">
   <h1>{status}</h1>
   <h3>
-  {#if (status == 404 && !path.startsWith("/blog"))}
-  This page doesn't exist, doofus. What were you even looking for?
-  {:else}
-  {error.message}
-  {/if}
+    {#if status == 404 && !path.startsWith("/blog")}
+      This page doesn't exist, doofus. What were you even looking for?
+    {:else}
+      {error.message}
+    {/if}
   </h3>
 </div>
 

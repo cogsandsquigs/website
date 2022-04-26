@@ -3,16 +3,11 @@ title: "Blog"
 ---
 
 <script context="module">
+  import * as ps from "$lib/posts"
   /** @type {import("@sveltejs/kit").Load} */
-  export const load = async ({ fetch }) => {
-    const posts = await fetch("/api/posts.json");
-    const allPosts = await posts.json();
-
-    return {
-      props: {
-        posts: allPosts,
-      },
-    };
+  export const load = async () => {
+    let p = (await ps.posts()).map(x => x.metadata);
+    return {props: {posts:p}};
   };
 </script>
 

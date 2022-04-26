@@ -23,7 +23,6 @@ export const pages = async () => {
   }
 
   pages.unshift(index);
-  console.log(pages[1].metadata);
 
   return pages;
 };
