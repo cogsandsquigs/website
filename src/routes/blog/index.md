@@ -30,4 +30,10 @@ title: "Blog"
 
 #### Published on {new Date(post.date).toLocaleDateString(locale, options)}
 
+{#if post.tags != undefined}
+
+##### Tags: {#each post.tags as tag, index}{#if index > 0}{", " + tag}{:else}{tag}{/if}{/each}
+
+{/if}
+
 {/each}
