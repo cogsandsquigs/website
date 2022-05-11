@@ -3,6 +3,7 @@ title: I love Svelte!
 slug: i-love-svelte
 date: 2022-02-09
 description: A small little rant about how much I love svelte
+tags: [svelte, mdsvex, webdev]
 ---
 
 For those of you that don't know this website is built

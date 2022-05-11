@@ -3,6 +3,7 @@ title: Hello World!
 slug: hello-world
 date: 2022-02-07
 description: This is my testing page for all sorts of goodies!
+tags: [testing, hello world, project, webdev]
 ---
 
 Hi! This is my testing page. What does that mean? well,
