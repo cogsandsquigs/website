@@ -1,7 +1,7 @@
 <script context="module">
   import { posts } from "$lib/posts";
 
-  export async function load({ fetch, url, params }) {
+  export async function load({ params }) {
     let pages = (await posts()).filter(
       page =>
         page.metadata.tags != undefined &&
