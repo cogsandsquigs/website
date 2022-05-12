@@ -31,7 +31,8 @@
 
 <!--
   post.renderer gets us the renderer.
-  This way we can render the post's 
+  This way we can render the post's
   mdsvex content!
  -->
+
 <svelte:component this={post.renderer} />

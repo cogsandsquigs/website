@@ -1,32 +1,37 @@
----
-title: "Blog"
----
-
 <script context="module">
-  import { posts } from "$lib/posts"
-  /** @type {import("@sveltejs/kit").Load} */
-  export const load = async () => {
-    
+  import { posts } from "$lib/posts";
+
+  export async function load({ fetch, url, params }) {
+    let pages = (await posts()).filter(
+      page =>
+        page.metadata.tags != undefined &&
+        page.metadata.tags.indexOf(params.slug) > -1
+    );
+
+    if (pages == undefined || pages.length == 0) {
+      return {
+        status: 404,
+        error: "No post has this tag. What even is " + params.slug + "???"
+      }
+    }
+
     return {
       props: {
-        pages: (await posts()),
+        pages,
+        tag: params.slug
       }
     };
-  };
+  }
 </script>
 
 <script>
-  export let pages;
+  export let pages
+  export let tag;
   const locale = "en-US";
   const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
 </script>
 
-<svelte:head>
-
-  <title>Ian Pratt | Blog</title>
-</svelte:head>
-
-# **Blog**
+# Tag: {tag}
 
 {#each pages as post}
 

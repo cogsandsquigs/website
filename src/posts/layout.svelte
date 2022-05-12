@@ -24,9 +24,9 @@
     Tags: 
     {#each tags as tag, index}
       {#if index > 0}
-        {", " + tag}
+        , <a href={"/blog/tags/" + tag}>{tag}</a>
       {:else}
-        {tag}
+        <a href={"/blog/tags/" + tag}>{tag}</a>
       {/if}
     {/each}
   </p>
