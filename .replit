@@ -1,4 +1,0 @@
-run = "npm run dev"
-
-[nix]
-channel = "unstable" #"stable-21_11"
