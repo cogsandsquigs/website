@@ -14,5 +14,6 @@
     "src/**/*.svelte",
     "src/**/*.svx",
     "src/**/*.md"
-  ]
+  ],
+  "extends": "./.svelte-kit/tsconfig.json"
 }

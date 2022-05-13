@@ -1,8 +1,7 @@
 <script context="module">
-  export function load({ url, error, status }) {
+  export function load({ error, status }) {
     return {
       props: {
-        path: url.pathname,
         error,
         status
       }
@@ -13,7 +12,6 @@
 <script>
   export let status;
   export let error;
-  export let path;
 </script>
 
 <div class="wrap">
