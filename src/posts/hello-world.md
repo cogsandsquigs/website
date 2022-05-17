@@ -22,10 +22,11 @@ function test() {
 
 test()
 ```
-
+<!--
 Below, you should see some $\KaTeX$ being formatted correctly
 and displayed correctly as math equations. You should be seeing the _Riemann Zeta function_, $\zeta (s)$, as well as its definition!
 
 $$
 {\displaystyle \zeta (s)=\sum _{n=1}^{\infty }{\frac {1}{n^{s}}}={\frac {1}{1^{s}}}+{\frac {1}{2^{s}}}+{\frac {1}{3^{s}}}+\cdots }
 $$
+-->

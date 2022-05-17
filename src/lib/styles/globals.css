@@ -1,5 +1,5 @@
 @import url("./one-dark-code.css");
-@import url("https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css");
+/*@import url("https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css");*/
 
 body {
 	background-color: hsl(220, 13%, 18%);

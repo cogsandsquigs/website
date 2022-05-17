@@ -1,6 +1,6 @@
 import { defineMDSveXConfig as defineConfig } from "mdsvex"
-import rehypeKatexSvelte from "rehype-katex-svelte"
-import remarkMath from "remark-math"
+//import rehypeKatexSvelte from "rehype-katex-svelte"
+//import remarkMath from "remark-math"
 
 const config = defineConfig({
 	extensions: [".md"],
@@ -16,9 +16,9 @@ const config = defineConfig({
 		//projects: "./src/routes/projects/layout.svelte",
 	},
 
-	remarkPlugins: [remarkMath],
+	//remarkPlugins: [remarkMath],
 
-	rehypePlugins: [rehypeKatexSvelte],
+	//rehypePlugins: [rehypeKatexSvelte],
 })
 
 export default config
