@@ -1,7 +1,3 @@
-<script>
-import { pages } from "$lib/pages";
-</script>
-
 <nav>
 	<div class="wrap">
 		<div class="links">
