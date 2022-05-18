@@ -30,17 +30,6 @@ const xml = (
           <description>${post.description}</description>
           <link>${website}/posts/${post.slug}/</link>
           <pubDate>${new Date(post.date)}</pubDate>
-          <!--
-          <content:encoded>${post.preview} 
-            <div style="margin-top: 50px; font-style: italic;">
-              <strong>
-                <a href="${website}/posts/${post.slug}">
-                  Keep reading
-                </a>
-              </strong>  
-            </div>
-          </content:encoded>
-          -->
         </item>
       `
       )
