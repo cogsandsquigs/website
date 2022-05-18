@@ -1,10 +1,10 @@
 import { mdsvex } from "mdsvex"
-import mdsvexConfig from "./mdsvex.config.js"
+import mdsvexconfig from "./mdsvex.config.js"
 import adapter from "@sveltejs/adapter-vercel" //"sveltejs-adapter-ipfs"; //"@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: [".svelte", ...mdsvexConfig.extensions],
+	extensions: [".svelte", ...mdsvexconfig.extensions],
 	//extensions: [".svelte", ".md"],
 
 	kit: {
@@ -13,7 +13,7 @@ const config = {
 		adapter: adapter(),
 	},
 
-	preprocess: [mdsvex(mdsvexConfig)],
+	preprocess: [mdsvex(mdsvexconfig)],
 }
 
 export default config

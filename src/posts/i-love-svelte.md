@@ -60,28 +60,19 @@ in an [mdx](https://mdxjs.com)-like interface designed
 for Svelte users. It looks like markdown, it feels like
 markdown, but you can include Svelte components within it!
 
-For example, the index page for my website looks like this:
+For example, a standard hello world page would look like this:
 
 ```markdown
----
-title: "Index"
----
+# Hello world!
 
-<svelte:head>
-
-  <title>Ian Pratt | Just a gay programmer</title>
-</svelte:head>
-
-# Welcome to my website!!!
-
-I'm glad you could make it! This is my little corner of the web, made with [SvelteKit](https://kit.svelte.dev), and [mdsvex](https://mdsvex.com), and deployed on [Vercel](https://vercel.com). In any case, I hope you enjoy what you find here! Why not check out my [testing page](./blog/hello-world)? It's where I test out new things for my website, and generally just mess around!
+Welcome to this website!
 ```
 
 This gets transpiled into Svelte and then into raw html
 and css. Thanks to Svelte's amazing and easy way to
 use preprocessor plugins of any and all kinds, its
-almost too easy to add support for Sass, mdsvex, Tailwind CSS,
-and other preprocessors that make you website beautiful.
+almost too easy to add support for any and all other 
+preprocessors that make you website beautiful.
 
 Besides mdsvex, the other plugin I use is [Tailwind CSS](https://tailwindcss.com),
 because it makes styling a breeze to do! It also lets me 
