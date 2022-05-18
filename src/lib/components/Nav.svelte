@@ -5,7 +5,7 @@
       		<a href="/blog">Blog</a>
     	</div>
 		<div class="space-y-0">
-			<h1 class="m-0">Ian Pratt</h1>
+			<h2 class="m-0">Ian Pratt</h2>
 			<h3>Just a gay programmer</h3>
 		</div>
 	</div>
