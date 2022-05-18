@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="ts" context="module">
   import { posts } from "$lib/posts";
 
   function arrayMatch(arr1, arr2) {
@@ -52,10 +52,10 @@
   }
 </script>
 
-<script>
+<script lang="ts">
   import PostListing from "$lib/components/PostListing.svelte";
   export let post;
-  export let reccomended;
+  export let recomended;
 </script>
 
 <!--
@@ -66,14 +66,14 @@
 
 <svelte:component this={post.renderer} />
 
-{#if reccomended != undefined && reccomended.length > 0}
+{#if recomended != undefined && recomended.length > 0}
   <hr />
 
   If you like this article, you might enjoy these!
   <ul>
-    {#each reccomended as post}
+    {#each recomended as post}
       <li class="my-0">
-        <PostListing {post} minimal="true" />
+        <PostListing {post} minimal={true} />
       </li>
     {/each}
   </ul>
