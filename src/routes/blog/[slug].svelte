@@ -18,7 +18,7 @@
   export async function load({ fetch, url, params }) {
     // gets the post with the matching slug
     let pages = (await posts()).filter(
-      page => page.metadata.slug === params.slug
+      (page) => page.metadata.slug === params.slug
     );
 
     // if there is a post w/ matching slug,
@@ -27,7 +27,7 @@
       let post = pages[0];
 
       let reccomended = (await posts())
-        .filter(page => page.metadata.slug !== params.slug)
+        .filter((page) => page.metadata.slug !== params.slug)
         .sort(function compare(a, b) {
           return (
             arrayMatch(b.metadata.tags, post.metadata.tags).length -
@@ -39,21 +39,21 @@
       return {
         props: {
           post: post,
-          reccomended: reccomended
-        }
+          reccomended: reccomended,
+        },
       };
     }
 
     // if there is none, then return an error
     return {
       status: 404,
-      error: "Blog post not found! Try looking for another, would ya?"
+      error: "Blog post not found! Try looking for another, would ya?",
     };
   }
 </script>
 
 <script>
-  import PostListing from "$lib/components/PostListing.svelte"
+  import PostListing from "$lib/components/PostListing.svelte";
   export let post;
   export let reccomended;
 </script>
@@ -66,17 +66,15 @@
 
 <svelte:component this={post.renderer} />
 
-
 {#if reccomended != undefined && reccomended.length > 0}
-  <hr>
+  <hr />
 
   If you like this article, you might enjoy these!
   <ul>
-  {#each reccomended as post}
-    <li class="my-0">
-      <!--<a href={"/blog/" + rec.metadata.slug}>{rec.metadata.title}</a>-->
-      <PostListing {post} minimal=true/>
-    </li>
-  {/each}
+    {#each reccomended as post}
+      <li class="my-0">
+        <PostListing {post} minimal="true" />
+      </li>
+    {/each}
   </ul>
 {/if}
