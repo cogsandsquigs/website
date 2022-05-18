@@ -1,28 +1,32 @@
 @import url("./one-dark-code.css");
 /*@import url("https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css");*/
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-	background-color: hsl(220, 13%, 18%);
-	color: hsl(220, 14%, 71%);
-	font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono",
-		monospace;
-	padding: 0.9em;
+  background-color: hsl(220, 13%, 18%);
+  color: hsl(220, 14%, 71%);
+  font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono",
+    monospace;
+  padding: 0.9em;
 }
 
 a {
-	text-decoration: underline;
-	color: white;
-	font-weight: bold;
+  text-decoration: underline;
+  color: white;
+  font-weight: bold;
 }
 
 select,
 input {
-	margin: 0.3em;
-	background-color: inherit;
-	color: inherit;
-	border: none;
+  margin: 0.3em;
+  background-color: inherit;
+  color: inherit;
+  border: none;
 }
 
 input {
-	border-bottom: solid 0.2em;
+  border-bottom: solid 0.2em;
 }

@@ -5,12 +5,6 @@
 
 <Nav />
 
-<div class="content">
+<div class="p-4 prose prose-stone !prose-invert">
   <slot />
 </div>
-
-<style>
-  .content {
-    padding: 2rem;
-  }
-</style>
