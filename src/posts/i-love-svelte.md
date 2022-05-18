@@ -78,17 +78,19 @@ I'm glad you could make it! This is my little corner of the web, made with [Svel
 ```
 
 This gets transpiled into Svelte and then into raw html
-and css. Thank's to Svelte's amazing and easy way to
+and css. Thanks to Svelte's amazing and easy way to
 use preprocessor plugins of any and all kinds, its
-almost too easy to add support for sass, mdsvex, tailwind,
+almost too easy to add support for Sass, mdsvex, Tailwind CSS,
 and other preprocessors that make you website beautiful.
-However I ownly use mdsvex as of right now, because I don't
-really need to use any other plugin or preprocessor to
-style a website with a very basic style and font change.
+
+Besides mdsvex, the other plugin I use is [Tailwind CSS](https://tailwindcss.com),
+because it makes styling a breeze to do! It also lets me 
+experiment with different styles and themes quite fast, which
+with ordinary, plain CSS would be difficult.
 
 In the end, Svelte is just amazing to work with. I don't
 think things like [nextjs](https://nextjs.org) compare,
 simply because of the elegance of writing a website with
-Svelte and mdsvex. It's too easy, too elegant, too simple.
+Svelte. It's too easy, too elegant, too simple. Truly svelte.
 
 I love Svelte.

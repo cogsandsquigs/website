@@ -1,7 +1,3 @@
----
-title: "Blog"
----
-
 <script context="module">
   import { posts } from "$lib/posts"
   /** @type {import("@sveltejs/kit").Load} */
@@ -22,22 +18,16 @@ title: "Blog"
 </script>
 
 <svelte:head>
-
   <title>Ian Pratt | Blog</title>
 </svelte:head>
 
-# **Blog**
+<h1>Blog</h1>
 
 {#each pages as post}
+  <h2><a href="/blog/{post.metadata.slug}">{post.metadata.title}</a></h2>
+  <h4>Published on {new Date(post.metadata.date).toLocaleDateString(locale, options)}</h4>
 
-## [{post.metadata.title}](/blog/{post.metadata.slug})
-
-#### Published on {new Date(post.metadata.date).toLocaleDateString(locale, options)}
-
-{#if post.metadata.tags != undefined}
-
-##### Tags: {#each post.metadata.tags as tag, index}{#if index > 0}, <a href={"/blog/tags/" + tag}>{tag}</a>{:else}<a href={"/blog/tags/" + tag}>{tag}</a>{/if}{/each}
-
-{/if}
-
+  {#if post.metadata.tags != undefined}
+    <h5>Tags: {#each post.metadata.tags as tag, index}{#if index > 0}, <a href={"/blog/tags/" + tag}>{tag}</a>{:else}<a href={"/blog/tags/" + tag}>{tag}</a>{/if}{/each}</h5>
+  {/if}
 {/each}

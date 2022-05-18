@@ -11,10 +11,10 @@ it means this is where all my website features are tested.
 
 At the top, you should see something like "Hello World!
 Posted on whatever date". Below, you should see a code
-block of javascript, colored in correctly.
+block of typescript, colored in correctly.
 
-```js
-let x = "hello world!"
+```ts
+let x: string = "hello world!"
 
 function test() {
 	console.log(x)
