@@ -53,6 +53,7 @@
 </script>
 
 <script>
+  import PostListing from "$lib/components/PostListing.svelte"
   export let post;
   export let reccomended;
 </script>
@@ -71,9 +72,10 @@
 
   If you like this article, you might enjoy these!
   <ul>
-  {#each reccomended as rec}
+  {#each reccomended as post}
     <li class="my-0">
-      <a href={"/blog/" + rec.metadata.slug}>{rec.metadata.title}</a>
+      <!--<a href={"/blog/" + rec.metadata.slug}>{rec.metadata.title}</a>-->
+      <PostListing {post} minimal=true/>
     </li>
   {/each}
   </ul>
