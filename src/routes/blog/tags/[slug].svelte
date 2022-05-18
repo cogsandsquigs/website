@@ -31,18 +31,18 @@
   const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
 </script>
 
-# Tag: {tag}
+<h1>Tag: {tag}</h1>
 
 {#each pages as post}
 
-## [{post.metadata.title}](/blog/{post.metadata.slug})
+<h2><a href="/blog/{post.metadata.slug}">{post.metadata.title}</a></h2>
 
-#### Published on {new Date(post.metadata.date).toLocaleDateString(locale, options)}
+<h4>Published on {new Date(post.metadata.date).toLocaleDateString(locale, options)}</h4>
 
 {#if post.metadata.tags != undefined}
-
-##### Tags: {#each post.metadata.tags as tag, index}{#if index > 0}, <a href={"/blog/tags/" + tag}>{tag}</a>{:else}<a href={"/blog/tags/" + tag}>{tag}</a>{/if}{/each}
-
+  <h5>
+    Tags: {#each post.metadata.tags as tag, index}{#if index > 0}, <a href={"/blog/tags/" + tag}>{tag}</a>{:else}<a href={"/blog/tags/" + tag}>{tag}</a>{/if}{/each}
+  </h5>
 {/if}
 
 {/each}
