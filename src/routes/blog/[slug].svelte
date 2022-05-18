@@ -72,10 +72,9 @@
   If you like this article, you might enjoy these!
   <ul>
   {#each reccomended as rec}
-    <li>
+    <li class="my-0">
       <a href={"/blog/" + rec.metadata.slug}>{rec.metadata.title}</a>
     </li>
-    <br/>
   {/each}
   </ul>
 {/if}
