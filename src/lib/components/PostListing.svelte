@@ -24,7 +24,7 @@
       </h5>
     {/if}
   </div>
-{:else if size == "sm"}
+{:else if size === "sm"}
   <div class="pb-1">
     <p class="m-0">
       <a href="/blog/{post.metadata.slug}">{post.metadata.title}</a>, posted on {new Date(

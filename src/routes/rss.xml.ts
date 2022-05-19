@@ -22,9 +22,9 @@ const xml = (
     <link>${website}</link>
     <description>${description}</description>
     ${posts
-      .map(
-        (post) =>
-          `
+    .map(
+      (post) =>
+        `
         <item>
           <title>${post.title}</title>
           <description>${post.description}</description>
@@ -32,7 +32,7 @@ const xml = (
           <pubDate>${new Date(post.date)}</pubDate>
         </item>
       `
-      )
-      .join("")}
+    )
+    .join("")}
   </channel>
 </rss>`;

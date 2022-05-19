@@ -15,7 +15,7 @@
     return arr; // Return the arr elements
   }
 
-  export async function load({ fetch, url, params }) {
+  export async function load({ params }) {
     // gets the post with the matching slug
     let pages = (await posts()).filter(
       (page) => page.metadata.slug === params.slug
@@ -26,7 +26,7 @@
     if (pages.length !== 0) {
       let post = pages[0];
 
-      let reccomended = (await posts())
+      let recomended = (await posts())
         .filter((page) => page.metadata.slug !== params.slug)
         .sort(function compare(a, b) {
           return (
@@ -39,7 +39,7 @@
       return {
         props: {
           post: post,
-          reccomended: reccomended,
+          recomended: recomended,
         },
       };
     }
@@ -71,9 +71,9 @@
 
   If you like this article, you might enjoy these!
   <ul>
-    {#each recomended as post}
+    {#each recomended as rec}
       <li class="my-0">
-        <PostListing {post} minimal={true} />
+        <PostListing post={rec} size="sm" />
       </li>
     {/each}
   </ul>

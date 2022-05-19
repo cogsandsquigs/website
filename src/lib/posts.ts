@@ -4,7 +4,7 @@ function dateSort(a, b) {
   );
 }
 
-export const posts = async () => {
+export async function posts() {
   // grab all of the post files
   const files = import.meta.glob("/src/posts/*.md");
 
