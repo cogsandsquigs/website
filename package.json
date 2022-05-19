@@ -10,6 +10,7 @@
 		"start": "svelte-kit dev --host"
 	},
 	"devDependencies": {
+		"@rgossiaux/svelte-headlessui": "^1.0.1",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "1.0.0-next.292",
 		"@tailwindcss/typography": "^0.5.2",
