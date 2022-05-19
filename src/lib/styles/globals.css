@@ -1,10 +1,5 @@
 @import url("./one-dark-code.css");
-/*@import url("https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css");*/
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
-}

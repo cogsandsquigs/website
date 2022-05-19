@@ -3,8 +3,8 @@
     return {
       props: {
         error,
-        status
-      }
+        status,
+      },
     };
   }
 </script>

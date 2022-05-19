@@ -1,19 +1,18 @@
 <script lang="ts" context="module">
-  import { posts } from "$lib/posts"
-  
+  import { posts } from "$lib/posts";
+
   /** @type {import("@sveltejs/kit").Load} */
   export const load = async () => {
-    
     return {
       props: {
-        pages: (await posts()),
-      }
+        pages: await posts(),
+      },
     };
   };
 </script>
 
 <script lang="ts">
-  import PostListing from "$lib/components/PostListing.svelte"
+  import PostListing from "$lib/components/PostListing.svelte";
   export let pages;
 </script>
 
