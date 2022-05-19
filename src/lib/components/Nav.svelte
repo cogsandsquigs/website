@@ -4,7 +4,6 @@
     PopoverButton,
     PopoverPanel,
   } from "@rgossiaux/svelte-headlessui";
-  import { comment } from "postcss";
 </script>
 
 <nav class="space-y-0">
