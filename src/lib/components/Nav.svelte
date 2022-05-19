@@ -4,6 +4,7 @@
     PopoverButton,
     PopoverPanel,
   } from "@rgossiaux/svelte-headlessui";
+  import { comment } from "postcss";
 </script>
 
 <nav class="space-y-0">
@@ -24,6 +25,7 @@
         >
           <a href="/">Index</a>
           <a href="/blog">Blog</a>
+          <a href="https://github.com/cogsandsquigs">Github</a>
         </div>
       </PopoverPanel>
     </Popover>
