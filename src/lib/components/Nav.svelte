@@ -21,6 +21,7 @@
         >
           <a href="/">Index</a>
           <a href="/blog">Blog</a>
+          <a href="/about">About</a>
           <a href="https://github.com/cogsandsquigs">Github</a>
         </div>
       </PopoverPanel>
