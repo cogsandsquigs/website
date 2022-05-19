@@ -8,10 +8,7 @@
 
 <nav class="space-y-0">
   <div class="px-4 py-1 flex box-border justify-between items-center">
-    <Popover
-      class="text-left text-md sm:text-lg md:text-xl max-w-auto"
-      style="position: relative;"
-    >
+    <Popover class="text-left max-w-auto" style="position: relative;">
       <PopoverButton
         class="font-bold underline decoration-secondary decoration-2"
       >
