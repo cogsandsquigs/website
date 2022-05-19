@@ -14,4 +14,11 @@
   <div class="p-2 sm:p-4 md:p-8 max-w-prose mx-auto">
     <slot />
   </div>
+  <hr class="m-0" />
+  <p class="text-xs text-center">
+    This site was made with
+    <a href="https://kit.svelte.dev">SvelteKit</a> +
+    <a href="https://tailwindcss.com">Tailwind CSS</a>. It's deployed on
+    <a href="https://vercel.com">Vercel</a>.
+  </p>
 </body>
