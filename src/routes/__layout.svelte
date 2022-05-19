@@ -4,10 +4,10 @@
 </script>
 
 <body
-  class="font-mono px-3.5 bg-primary pt-1 prose prose-invert prose-a:text-secondary prose-a:font-bold prose-hr:border-[1px] prose-hr:border-secondary prose-hr:rounded-sm max-w-none"
+  class="font-mono px-0.5 sm:px-1.5 md:px-3.5 pt-1 bg-primary prose prose-invert prose-a:text-secondary prose-a:font-bold prose-hr:border-[1px] prose-hr:border-secondary prose-hr:rounded-sm max-w-none"
 >
   <Nav />
-  <div class="p-8 max-w-prose mx-auto">
+  <div class="p-1 sm:p-4 md:p-8 max-w-prose mx-auto">
     <slot />
   </div>
 </body>

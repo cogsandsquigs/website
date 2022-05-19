@@ -58,6 +58,9 @@
   export let recomended;
 </script>
 
+<PostListing {post} size="lg" link={false} />
+<hr class="mt-2 mb-6" />
+
 <!--
   post.renderer gets us the renderer.
   This way we can render the post's
