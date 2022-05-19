@@ -10,7 +10,7 @@
   <div class="px-4 py-1 flex box-border justify-between items-center">
     <Popover class="text-left max-w-auto" style="position: relative;">
       <PopoverButton
-        class="transform duration-200 focus:rotate-12 font-bold underline decoration-secondary decoration-2"
+        class="transform duration-200 hover:rotate-12 font-bold underline decoration-secondary decoration-2"
       >
         Menu
       </PopoverButton>
