@@ -1,5 +1,5 @@
-export const title = "Ian Pratt | Just a gay programmer"
-export const website = "https://ianpratt.gq"
-export const description = "My little corner of the web, where I can play around and have fun."
+export const title: string = "Ian Pratt | Just a gay programmer"
+export const website: string = "https://cogsandsquigs.gq"
+export const description: string = "My little corner of the web, where I can play around and have fun."
 export const locale: string = "en-US";
 export const dateOptions: Intl.DateTimeFormatOptions = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
