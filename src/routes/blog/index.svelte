@@ -30,6 +30,9 @@
   Blog
 </h1>
 
-{#each pages as post}
+{#each pages as post, index}
+  {#if index > 0}
+    <hr />
+  {/if}
   <PostListing {post} />
 {/each}

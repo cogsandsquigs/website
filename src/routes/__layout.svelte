@@ -11,7 +11,7 @@
   class="font-body text-md sm:text-lg md:text-xl px-0.5 sm:px-1.5 md:px-3.5 pt-1 bg-primary prose prose-invert prose-h1:text-center prose-a:underline prose-a:decoration-secondary prose-a:decoration-2 prose-a:font-bold prose-hr:border-[1px] prose-hr:border-secondary max-w-none"
 >
   <Nav />
-  <div class="p-2 sm:p-4 md:p-8 max-w-prose mx-auto">
+  <div class="p-2 pt-6 sm:p-4 md:p-8 max-w-prose mx-auto">
     <slot />
   </div>
   <hr class="m-0" />
