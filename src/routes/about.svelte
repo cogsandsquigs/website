@@ -19,8 +19,8 @@
 
 <p>
     It may be obvious at this point, but I built this whole site from scratch! I
-    really like programming things (especially things I can see!), and it's what
-    I plan to have a job in in the future.
+    really like programming things (especially things I can see!), and I plan to
+    have a job in computer science in the future!
 </p>
 
 <p>
