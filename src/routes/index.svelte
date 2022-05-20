@@ -19,7 +19,7 @@
 <p>
   If you want to know more about me, go to my <a href="/about">about me page</a
   >! Or, you could go explore the rest of my website. IDK, its up to you! After
-  all, I'm not paying you a fortune to look at my site ;).
+  all, I'm not paying a fortune for you to look at my site ;).
 </p>
 
 <p>Have fun, and stay snazzy!</p>
