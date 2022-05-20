@@ -2,7 +2,9 @@
   <title>Ian Pratt | Just a gay programmer</title>
 </svelte:head>
 
-<h1>Welcome to my website!!!</h1>
+<h1 class="transform duration-300 hover:-rotate-12">
+  Welcome to my website!!!
+</h1>
 
 <p>
   I'm glad you could make it! This is my little corner of the web, made with

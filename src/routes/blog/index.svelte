@@ -20,7 +20,7 @@
   <title>Ian Pratt | Blog</title>
 </svelte:head>
 
-<h1>Blog</h1>
+<h1 class="transform duration-300 hover:-rotate-12">Blog</h1>
 
 {#each pages as post}
   <PostListing {post} />
