@@ -20,8 +20,8 @@
           class="bg-primary p-3 border-2 border-secondary rounded-sm panel-contents"
         >
           <a href="/">Index</a>
-          <a href="/blog">Blog</a>
           <a href="/about">About</a>
+          <a href="/blog">Blog</a>
           <a href="https://github.com/cogsandsquigs">Github</a>
         </div>
       </PopoverPanel>

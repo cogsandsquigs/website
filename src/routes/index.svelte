@@ -14,3 +14,10 @@
   <a href="blog/hello-world">testing page</a>? It's where I test out new things
   for my website, and generally just mess around!
 </p>
+<p>
+  If you want to know more about me, go to my <a href="/about">about me page</a
+  >! Or, you could go explore the rest of my website. IDK, its up to you! After
+  all, I'm not paying you a fortune to look at my site ;).
+</p>
+
+<p>Have fun, and stay snazzy!</p>
