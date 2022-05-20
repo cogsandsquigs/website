@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-  <title>Ian Pratt | 404</title>
+  <title>Ian Pratt | {status}</title>
 </svelte:head>
 
 <div class="wrap">

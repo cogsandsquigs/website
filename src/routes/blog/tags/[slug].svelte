@@ -27,9 +27,14 @@
 
 <script lang="ts">
   import PostListing from "$lib/components/PostListing.svelte";
+  import { RssOutline } from "svelte-heros";
   export let pages;
   export let tag;
 </script>
+
+<a class="flex justify-end" href="/rss.xml"
+  ><RssOutline class="align-bottom" />
+</a>
 
 <h1>Tag: {tag}</h1>
 
