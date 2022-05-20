@@ -36,7 +36,7 @@
 
 <p>
     And of course, I'm <em>fabulously</em> gay. Don't worry though, I don't bite!
-    (at least, in most cases I don't).
+    At least, in most cases I don't ;).
 </p>
 
 <p>
