@@ -28,15 +28,15 @@
 </p>
 
 <p>
-    And of course, I'm <em>fabulously</em> gay. Don't worry though, I don't bite!
-    (at least, in most cases I don't).
-</p>
-
-<p>
     Check out the rest of my site for more stuff I'm doing! Or, if it's your
     thing, take a look at my <a href="https://github.com/cogsandsquigs"
         >Github page</a
     > if you're into looking at someone else's code.
+</p>
+
+<p>
+    And of course, I'm <em>fabulously</em> gay. Don't worry though, I don't bite!
+    (at least, in most cases I don't).
 </p>
 
 <p>

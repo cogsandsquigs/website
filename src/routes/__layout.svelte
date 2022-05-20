@@ -19,6 +19,6 @@
     This site was made with
     <a href="https://kit.svelte.dev">SvelteKit</a> +
     <a href="https://tailwindcss.com">Tailwind CSS</a>. It's deployed on
-    <a href="https://vercel.com">Vercel</a>.
+    <a href="https://fly.io">Fly.io</a>.
   </p>
 </body>

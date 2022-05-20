@@ -12,7 +12,7 @@ COPY . .
 RUN npm run build
 
 # set the port 
-RUN export PORT=8080
+ENV PORT=8080
 
 EXPOSE 8080
 CMD ["node", "./build"]
