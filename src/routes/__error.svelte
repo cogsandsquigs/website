@@ -19,7 +19,7 @@
 </svelte:head>
 
 <div class="wrap">
-  <h1>{status}</h1>
+  <h1 class="transition duration-300 hover:-rotate-12">{status}</h1>
   <h3>
     {#if status == 404}
       This page doesn't exist, doofus. What were you even looking for?

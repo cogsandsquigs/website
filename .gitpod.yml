@@ -4,9 +4,6 @@
 
 tasks:
   - init: npm install
-  - init: curl -L https://fly.io/install.sh | sh
-  - init: export FLYCTL_INSTALL="/home/gitpod/fly"
-  - init: export PATH="$FLYCTL_INSTALL/bin:$PATH"
     command: npm run dev
 
 ports:
