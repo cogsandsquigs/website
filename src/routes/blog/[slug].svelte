@@ -59,9 +59,9 @@
   export let recomended;
 </script>
 
-<a class="flex justify-end" href="/rss.xml"
-  ><RssOutline class="align-bottom" />
-</a>
+<div class="flex justify-end">
+  <a class="max-w-fit" href="/rss.xml"><RssOutline class="align-bottom" /> </a>
+</div>
 
 <PostListing {post} size="lg" link={false} />
 <hr class="mt-2 mb-6" />

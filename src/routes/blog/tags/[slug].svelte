@@ -32,9 +32,9 @@
   export let tag;
 </script>
 
-<a class="flex justify-end" href="/rss.xml"
-  ><RssOutline class="align-bottom" />
-</a>
+<div class="flex justify-end">
+  <a class="max-w-fit" href="/rss.xml"><RssOutline class="align-bottom" /> </a>
+</div>
 
 <h1>Tag: {tag}</h1>
 
