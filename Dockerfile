@@ -5,11 +5,14 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm i
 
-# Copy all local files into the image.
+# copy all local files into the image.
 COPY . .
 
-#build the app
+# build the app
 RUN npm run build
 
-EXPOSE 3000
+# set the port 
+RUN export PORT=8080
+
+EXPOSE 8080
 CMD ["node", "./build"]
