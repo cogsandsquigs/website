@@ -14,6 +14,10 @@
   export let error;
 </script>
 
+<svelte:head>
+  <title>Ian Pratt | 404</title>
+</svelte:head>
+
 <div class="wrap">
   <h1>{status}</h1>
   <h3>
