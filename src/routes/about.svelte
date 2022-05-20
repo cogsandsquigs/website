@@ -2,7 +2,11 @@
     import profileimg from "$lib/images/profile.png";
 </script>
 
-<h1 class="transform duration-300 hover:-rotate-12">About Me</h1>
+<svelte:head>
+    <title>Ian Pratt | About Me!</title>
+</svelte:head>
+
+<h1 class="transform duration-300 hover:-rotate-12">About Me!</h1>
 <img
     class="w-20 sm:w-28 md:w-32 lg:w-40 mx-auto border-2 border-secondary rounded-full"
     src={profileimg}
