@@ -1,5 +1,10 @@
+<script lang="ts">
+  import { title, subtitle } from "$lib/info";
+</script>
+
 <svelte:head>
-  <title>Ian Pratt | Just a gay programmer</title>
+  <title>{title + " - " + subtitle}</title>
+  <meta property="og:title" content={title + " - " + subtitle} />
 </svelte:head>
 
 <h1 class="transform duration-300 hover:-rotate-12">

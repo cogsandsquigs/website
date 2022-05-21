@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { subtitle, title } from "$lib/info";
+
   import {
     Popover,
     PopoverButton,
@@ -27,12 +29,12 @@
       </PopoverPanel>
     </Popover>
 
-    <div class="text-right text-xs sm:text-sm md:text-lg space-y-0">
-      <h2 class="m-0 transform origin-[75%_50%] duration-300 hover:rotate-12">
-        Ian Pratt
+    <div class="ml-full text-right text-xs sm:text-sm md:text-lg space-y-0">
+      <h2 class="m-0 max-w-fit transform duration-300 hover:rotate-12">
+        {title}
       </h2>
       <h3 class="m-0 transform duration-300 hover:-rotate-6">
-        Just a gay programmer
+        {subtitle}
       </h3>
     </div>
   </div>

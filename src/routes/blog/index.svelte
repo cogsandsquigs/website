@@ -13,12 +13,14 @@
 
 <script lang="ts">
   import PostListing from "$lib/components/PostListing.svelte";
+  import { title } from "$lib/info";
   import { RssOutline } from "svelte-heros";
   export let pages;
 </script>
 
 <svelte:head>
-  <title>Ian Pratt | Blog</title>
+  <title>{title + " - Blog"}</title>
+  <meta property="og:title" content={title + " - Blog"} />
 </svelte:head>
 <div class="flex justify-end">
   <a class="max-w-fit" href="/rss.xml"><RssOutline class="align-bottom" /> </a>

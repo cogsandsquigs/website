@@ -28,9 +28,15 @@
 <script lang="ts">
   import PostListing from "$lib/components/PostListing.svelte";
   import { RssOutline } from "svelte-heros";
+  import { title } from "$lib/info";
   export let pages;
   export let tag;
 </script>
+
+<svelte:head>
+  <title>{title + " - Tag: " + tag}</title>
+  <meta property="og:title" content={title + " - Tag: " + tag} />
+</svelte:head>
 
 <div class="flex justify-end">
   <a class="max-w-fit" href="/rss.xml"><RssOutline class="align-bottom" /> </a>
