@@ -29,11 +29,11 @@
       </PopoverPanel>
     </Popover>
 
-    <div class="ml-full text-right text-xs sm:text-sm md:text-lg space-y-0">
+    <div class="text-right text-xs sm:text-sm md:text-lg space-y-0">
       <h2 class="m-0 max-w-fit transform duration-300 hover:rotate-12">
         {title}
       </h2>
-      <h3 class="m-0 transform duration-300 hover:-rotate-6">
+      <h3 class="m-0 max-w-fit transform duration-300 hover:-rotate-6">
         {subtitle}
       </h3>
     </div>
