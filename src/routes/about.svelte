@@ -165,6 +165,30 @@
       </DisclosurePanel>
     </Transition>
   </Disclosure>
+  <Disclosure let:open class="space-y-2">
+    <DisclosureButton
+      class="flex justify-between min-w-full border-secondary border-2 rounded-sm pt-1 px-2"
+    >
+      <span>Anything you're working on right now?</span>
+      <ChevronUpIcon
+        style={open ? "transform: rotate(180deg);" : ""}
+        class="w-8 p-1 duration-150"
+      />
+    </DisclosureButton>
+    <Transition
+      enter="transition duration-100 ease-out"
+      enterFrom="transform scale-95 opacity-0"
+      enterTo="transform scale-100 opacity-100"
+      leave="transition duration-75 ease-out"
+      leaveFrom="transform scale-100 opacity-100"
+      leaveTo="transform scale-95 opacity-0"
+    >
+      <DisclosurePanel>
+        Nothing much, really. I'm not really doing anything besides making my
+        website cooler ;)
+      </DisclosurePanel>
+    </Transition>
+  </Disclosure>
 </div>
 
 <p>
