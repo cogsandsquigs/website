@@ -1,19 +1,19 @@
 <script lang="ts">
-    import { subtitle, title } from "$lib/info";
-
     import {
         Popover,
         PopoverButton,
         PopoverPanel,
         Transition,
     } from "@rgossiaux/svelte-headlessui";
+
+    export let title: string = "Menu";
 </script>
 
 <Popover class="text-left max-w-auto" style="position: relative;">
     <PopoverButton
         class="transform duration-300 hover:rotate-12 font-bold underline decoration-secondary decoration-2"
     >
-        Menu
+        {title}
     </PopoverButton>
 
     <Transition
@@ -28,10 +28,7 @@
             <div
                 class="bg-primary p-3 border-2 border-secondary rounded-sm panel-contents"
             >
-                <a href="/">Index</a>
-                <a href="/about">About</a>
-                <a href="/blog">Blog</a>
-                <a href="https://github.com/cogsandsquigs">Github</a>
+                <slot>Put something here!</slot>
             </div>
         </PopoverPanel>
     </Transition>
