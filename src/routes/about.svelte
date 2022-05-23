@@ -2,6 +2,39 @@
   import profileimg from "$lib/images/profile.png";
   import { title } from "$lib/info";
   import Disclosure from "$lib/components/Disclosure.svelte";
+
+  let infos = [
+    {
+      title: "First off. Pronouns?",
+      text: "He/They, and thanks in advance for respecting them!",
+    },
+    {
+      title: "Any preference for titles?",
+      text: "Mr. works just fine!",
+    },
+    {
+      title: "Okay! Anything you like?",
+      text: `Cheesecakes of any and all varieties, elegant and working code, and finally, sleep ;)`,
+    },
+    {
+      title: "Anything you <em>dislike</em>?",
+      text: `Not much, but for starters: Obtrusive and overly-explicit code (I see you,
+    java), heights, and those days where you just have nothing to do but you
+    want to do something, so you just walk around slightly agitated.`,
+    },
+    {
+      title: "Oh and! What's your setup at home?",
+      text: `Glad you asked! Currently, I'm running a Ryzen 5 3600XT CPU with 16 GB of
+    RAM, along with a Radeon RX 6600 GPU, all on an MSI X470 GAMING PLUS MAX ATX
+    (oooh look fancy!) motherboard. And of course, it's running Manjaro Linux.
+    Because Linux > Windows.`,
+    },
+    {
+      title: "Anything you're working on right now?",
+      text: `Nothing much, really. I'm not really doing anything besides making my
+    website cooler ;)`,
+    },
+  ];
 </script>
 
 <svelte:head>
@@ -40,31 +73,9 @@
 <p>Anyways, on to some rapid-fire information blasting!</p>
 
 <div class="space-y-4">
-  <Disclosure title="First off. Pronouns?">
-    He/They, and thanks in advance for respecting them!
-  </Disclosure>
-  <Disclosure title="Any preference for titles?">
-    Mr. works just fine!
-  </Disclosure>
-  <Disclosure title="Okay! Anything you like?">
-    Cheesecakes of any and all varieties, elegant and <em>working</em> code, and
-    finally, sleep ;)
-  </Disclosure>
-  <Disclosure title="Anything you <em>dislike</em>?">
-    Not much, but for starters: Obtrusive and overly-explicit code (I see you,
-    java), heights, and those days where you just have nothing to do but you
-    want to do something, so you just walk around slightly agitated.
-  </Disclosure>
-  <Disclosure title="Oh! What's your setup at home?">
-    Glad you asked! Currently, I'm running a Ryzen 5 3600XT CPU with 16 GB of
-    RAM, along with a Radeon RX 6600 GPU, all on an MSI X470 GAMING PLUS MAX ATX
-    (oooh look fancy!) motherboard. And of course, it's running Manjaro Linux.
-    Because Linux > Windows.
-  </Disclosure>
-  <Disclosure title="Anything you're working on right now?">
-    Nothing much, really. I'm not really doing anything besides making my
-    website cooler ;)
-  </Disclosure>
+  {#each infos as info}
+    <Disclosure title={info.title}>{@html info.text}</Disclosure>
+  {/each}
 </div>
 
 <p>
