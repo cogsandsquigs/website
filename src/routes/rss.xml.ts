@@ -20,8 +20,8 @@ const xml = (
 <rss version="2.0">
   <channel>
     <title>${title}</title>
-    <link>${website}</link>
     <description>${description}</description>
+    <link>${website}</link>
     <language>${locale}</language>
     ${posts
     .map(
