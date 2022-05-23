@@ -1,5 +1,5 @@
 import { posts } from "$lib/posts";
-import { title, website, description } from "$lib/info";
+import { title, website, description, locale } from "$lib/info";
 
 export async function get() {
   const body = xml((await posts()).map((x) => x.metadata));
@@ -22,6 +22,7 @@ const xml = (
     <title>${title}</title>
     <link>${website}</link>
     <description>${description}</description>
+    <language>${locale}</language>
     ${posts
     .map(
       (post) =>
