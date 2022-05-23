@@ -14,11 +14,15 @@ export async function posts() {
   // puts all the posts in the pages array
   for (let file in files) {
     let p = await files[file]();
-    posts.push({ metadata: p.metadata, renderer: p.default });
+    console.log(file);
+    posts.push({
+      metadata: { ...p.metadata, slug: file.slice(11, file.indexOf(".md")) },
+      renderer: p.default,
+    });
   }
 
   // Newest first
   posts.sort(dateSort);
 
   return posts;
-};
+}

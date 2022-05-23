@@ -1,6 +1,5 @@
 ---
 title: I love Svelte!
-slug: i-love-svelte
 date: 2022-02-09
 description: A small little rant about how much I love svelte
 tags: [svelte, mdsvex, webdev]
@@ -19,29 +18,29 @@ navbar at that) looks like this under Svelte
 
 ```html
 <nav>
-	<div class="wrap">
-		<div class="links">
-			<!--navigation links go here!-->
-		</div>
-		<div>
-			<h1>Ian Pratt</h1>
-			<h3>Just a gay programmer</h3>
-		</div>
-	</div>
+  <div class="wrap">
+    <div class="links">
+      <!--navigation links go here!-->
+    </div>
+    <div>
+      <h1>Ian Pratt</h1>
+      <h3>Just a gay programmer</h3>
+    </div>
+  </div>
 </nav>
 <hr />
 
 <style>
-	.wrap {
-		display: flex;
-		box-sizing: border-box;
-		justify-content: space-between;
-		align-items: center;
-	}
+  .wrap {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-	.links > * {
-		font-size: 120%;
-	}
+  .links > * {
+    font-size: 120%;
+  }
 </style>
 ```
 
@@ -71,11 +70,11 @@ Welcome to this website!
 This gets transpiled into Svelte and then into raw html
 and css. Thanks to Svelte's amazing and easy way to
 use preprocessor plugins of any and all kinds, its
-almost too easy to add support for any and all other 
+almost too easy to add support for any and all other
 preprocessors that make you website beautiful.
 
 Besides mdsvex, the other plugin I use is [Tailwind CSS](https://tailwindcss.com),
-because it makes styling a breeze to do! It also lets me 
+because it makes styling a breeze to do! It also lets me
 experiment with different styles and themes quite fast, which
 with ordinary, plain CSS would be difficult.
 

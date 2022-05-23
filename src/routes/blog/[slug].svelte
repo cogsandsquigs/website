@@ -75,7 +75,7 @@
 <svelte:component this={post.renderer} />
 
 {#if recomended != undefined && recomended.length > 0}
-  <hr />
+  <hr class="m-2" />
 
   If you like this article, you might enjoy these!
   <ul>

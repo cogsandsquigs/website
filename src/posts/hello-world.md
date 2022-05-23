@@ -1,6 +1,5 @@
 ---
 title: Hello World!
-slug: hello-world
 date: 2022-02-07
 description: This is my testing page for all sorts of goodies!
 tags: [testing, hello world, project, webdev]
@@ -14,14 +13,15 @@ Posted on whatever date". Below, you should see a code
 block of typescript, colored in correctly.
 
 ```ts
-let x: string = "hello world!"
+let x: string = "hello world!";
 
 function test() {
-	console.log(x)
+  console.log(x);
 }
 
-test()
+test();
 ```
+
 <!--
 Below, you should see some $\KaTeX$ being formatted correctly
 and displayed correctly as math equations. You should be seeing the _Riemann Zeta function_, $\zeta (s)$, as well as its definition!

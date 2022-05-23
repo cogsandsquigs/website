@@ -14,7 +14,7 @@
         {post.metadata.title}
       {/if}
     </h1>
-
+    <h3>{post.metadata.description}</h3>
     <p>
       Posted on {new Date(post.metadata.date).toLocaleDateString(
         locale,
@@ -44,6 +44,7 @@
         {post.metadata.title}
       {/if}
     </h2>
+    <h6>{post.metadata.description}</h6>
     <h4>
       Posted on {new Date(post.metadata.date).toLocaleDateString(
         locale,
