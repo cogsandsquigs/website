@@ -1,7 +1,11 @@
 <script lang="ts">
   import { subtitle, title } from "$lib/info";
   import Popover from "$lib/components/Popover.svelte";
+
+  let w;
 </script>
+
+<svelte:window bind:innerWidth={w} />
 
 <nav class="space-y-0">
   <div class="px-4 py-1 flex box-border justify-between items-center">
@@ -23,3 +27,5 @@
   </div>
   <hr />
 </nav>
+
+{w}
