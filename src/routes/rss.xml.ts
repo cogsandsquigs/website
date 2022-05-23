@@ -29,7 +29,7 @@ const xml = (
         <item>
           <title>${post.title}</title>
           <description>${post.description}</description>
-          <link>${website}/posts/${post.slug}/</link>
+          <link>${website}/posts/${post.slug}</link>
           <pubDate>${new Date(post.date)}</pubDate>
           ${post.tags
           .map(
