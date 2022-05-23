@@ -8,6 +8,6 @@ export default {
   },
 
   layout: {
-    posts: "./src/posts/layout.svelte",
+    posts: "./src/lib/layouts/post.svelte",
   },
 };

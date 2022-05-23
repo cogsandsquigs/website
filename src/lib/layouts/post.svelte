@@ -1,5 +1,4 @@
-<script>
-  import { locale, dateOptions } from "$lib/info";
+<script lang="ts">
   import { title as sitetitle } from "$lib/info";
   export let title;
   export let date;
