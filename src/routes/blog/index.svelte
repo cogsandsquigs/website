@@ -26,11 +26,7 @@
   <a class="" href="/rss.xml"><RssIcon class="w-6" /></a>
 </div>
 
-<h1
-  class="transform duration-300 hover:-rotate-12 flex justify-center space-x-1"
->
-  Blog
-</h1>
+<h1>Blog</h1>
 
 {#each pages as post, index}
   {#if index > 0}

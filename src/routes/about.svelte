@@ -42,7 +42,7 @@
   <meta property="og:title" content={title + " - About Me!"} />
 </svelte:head>
 
-<h1 class="transform duration-300 hover:-rotate-12">About Me!</h1>
+<h1>About Me!</h1>
 <img
   class="w-20 sm:w-28 md:w-32 lg:w-40 mx-auto border-2 border-secondary rounded-full"
   src={profileimg}
