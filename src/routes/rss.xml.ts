@@ -22,7 +22,7 @@ const xml = (
     <title>${title}</title>
     <description>${description}</description>
     <link>${website}</link>
-    <language>${locale}</language>
+    <language>${locale.toLocaleLowerCase()}</language>
     ${posts
     .map(
       (post) =>
