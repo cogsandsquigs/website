@@ -23,7 +23,7 @@
     want to do something, so you just walk around slightly agitated.`,
     },
     {
-      title: "Oh and! What's your setup at home?",
+      title: "Oh and, what's your setup at home?",
       text: `Glad you asked! Currently, I'm running a Ryzen 5 3600XT CPU with 16 GB of
     RAM, along with a Radeon RX 6600 GPU, all on an MSI X470 GAMING PLUS MAX ATX
     (oooh look fancy!) motherboard. And of course, it's running Manjaro Linux.
