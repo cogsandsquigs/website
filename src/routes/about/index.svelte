@@ -37,8 +37,8 @@
 </p>
 
 <p>
-  And of course, I'm <em>fabulously</em> gay. Don't worry though, I don't bite! At
-  least, in most cases I don't ;).
+  And if you're looking for a fact-sheet of quick info about me (pronouns and
+  such), look no further than <a href="/about/info">here</a>!
 </p>
 
 <p>
