@@ -42,12 +42,15 @@
   <meta property="og:title" content={title + " - About Me!"} />
 </svelte:head>
 
-<h1>About Me!</h1>
-<img
-  class="w-20 sm:w-28 md:w-32 lg:w-40 mx-auto border-2 border-secondary rounded-full"
-  src={profileimg}
-  alt="My profile."
-/>
+<div class="sm:flex sm:items-center sm:justify-between">
+  <h1 class="m-0">About Me!</h1>
+
+  <img
+    class="mx-auto sm:mx-0 w-20 sm:w-28 md:w-32 lg:w-40 border-2 border-secondary rounded-full"
+    src={profileimg}
+    alt="My profile."
+  />
+</div>
 
 <p>
   Hey! I'm Ian Pratt, although I go by the online alias <u>cogsandsquigs</u>. I
