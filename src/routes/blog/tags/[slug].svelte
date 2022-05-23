@@ -27,7 +27,7 @@
 
 <script lang="ts">
   import PostListing from "$lib/components/PostListing.svelte";
-  import { RssOutline } from "svelte-heros";
+  import { RssIcon } from "@rgossiaux/svelte-heroicons/outline";
   import { title } from "$lib/info";
   export let pages;
   export let tag;
@@ -39,7 +39,7 @@
 </svelte:head>
 
 <div class="flex justify-end">
-  <a class="max-w-fit" href="/rss.xml"><RssOutline class="align-bottom" /> </a>
+  <a class="" href="/rss.xml"><RssIcon class="w-6" /></a>
 </div>
 
 <h1>Tag: {tag}</h1>
