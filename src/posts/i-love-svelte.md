@@ -2,7 +2,7 @@
 title: I love Svelte!
 date: 2022-02-09
 description: A small little rant about how much I love svelte
-tags: [dev, svelte, tailwind, webdev]
+tags: [dev, svelte, tailwind, webdev, review]
 ---
 
 For those of you that don't know this website is built
