@@ -14,7 +14,7 @@
     <a href="/">Index</a>
     <a href="/about">About</a>
     <a href="/blog">Blog</a>
-    <a href="https://github.com/cogsandsquigs">Github</a>
+    <a href="https://github.com/cogsandsquigs" rel="me">Github</a>
   </Nav>
   <div class="p-2 pt-6 sm:p-4 md:p-8 max-w-prose mx-auto scrollbar-none">
     <slot />
