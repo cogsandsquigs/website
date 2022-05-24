@@ -39,14 +39,14 @@ No, I decided to instead scour the web for other ways.
 
 And then I found it.
 
-GPT-3-6b.
+GPT-J-6b.
 
-GPT-3-6b is a creation by [Eluther.ai](https://eluther.ai). It was
+GPT-J-6b is a creation by [Eluther.ai](https://eluther.ai). It was
 designed to be a parallel to GPT-2, and more importantly, a stepping
 stone on the road to matching OpenAI's language models, and even
 perhaps, exceeding them, for AI and language model research.
 
-More importantly, GPT-3-6b has a
+More importantly, GPT-J-6b has a
 [free online public demo](https://6b.eluther.ai). One that I could use
 to ~~exploit for my own purposes~~ create usernames because I was
 lazy and bored.
