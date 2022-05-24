@@ -104,8 +104,9 @@ to 1.0 or over (The temperature is roughly the "uniqueness" or
 it's allowed to take in generating a response).
 
 Fun fact! While GPT-2 has 1.5 billion parameters, GPT-J-6b has,
-you guessed it, 6 billion parameters! That's quite a lot, and it
-shows, because it's pretty ok at completing prompts (or at least
+you guessed it, 6 billion parameters! That's quite a lot, and [it
+shows](https://github.com/kingoflolz/mesh-transformer-jax/#zero-shot-evaluations)
+because it's pretty ok at completing prompts (or at least
 this one).
 
 That's all for now!
