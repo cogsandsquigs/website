@@ -11,19 +11,16 @@
 <nav class="space-y-0">
   <div class="px-4 py-1 flex box-border justify-between items-center">
     {#if w < breakpoint}
-    <Popover>
-      <a href="/">Index</a>
-      <a href="/about">About</a>
-      <a href="/blog">Blog</a>
-      <a href="https://github.com/cogsandsquigs">Github</a>
-    </Popover>
-    {:else}
-    <div class="flex justify-between w-max space-b - first-letter:x-">
-    </div>>  <a href="/">Index</a>
-      <a href="/about">About</a>
-      <a href="/blog">Blog</a>
-      <a href="https://github.com/cogsandsquigs">Github</a>
-    <div></div>
+      <Popover>
+    {/if}
+
+    <a href="/">Index</a>
+    <a href="/about">About</a>
+    <a href="/blog">Blog</a>
+    <a href="https://github.com/cogsandsquigs">Github</a>
+    
+    {#if w < breakpoint}
+      </Popover>
     {/if}
 
     <div class="text-right text-xs sm:text-sm md:text-lg space-y-0">
