@@ -18,7 +18,6 @@
 		"@sveltejs/kit": "1.0.0-next.292",
 		"@tailwindcss/typography": "^0.5.2",
 		"autoprefixer": "^10.4.7",
-		"daisyui": "^2.15.1",
 		"mdsvex": "^0.10.5",
 		"postcss": "^8.4.13",
 		"svelte": "^3.44.0",
