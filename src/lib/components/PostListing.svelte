@@ -1,5 +1,7 @@
 <script lang="ts">
   import { locale, dateOptions } from "$lib/info";
+  import { RssIcon } from "@rgossiaux/svelte-heroicons/outline";
+
   export let post;
   export let size: "sm" | "md" | "lg" = "md";
   export let link: boolean = true;
@@ -7,13 +9,17 @@
 
 {#if size === "lg"}
   <div class="space-y-0">
-    <h1 class="m-0">
-      {#if link}
-        <a href="/blog/{post.metadata.slug}">{post.metadata.title}</a>
-      {:else}
-        {post.metadata.title}
-      {/if}
-    </h1>
+    <div class="flex justify-between items-center">
+      <h1 class="m-0">
+        {#if link}
+          <a href="/blog/{post.metadata.slug}">{post.metadata.title}</a>
+        {:else}
+          {post.metadata.title}
+        {/if}
+      </h1>
+      <a class="" href="/rss.xml"><RssIcon class="w-6" /></a>
+    </div>
+
     <h3>{post.metadata.description}</h3>
     <p>
       Posted on {new Date(post.metadata.date).toLocaleDateString(

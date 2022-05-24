@@ -54,14 +54,9 @@
 
 <script lang="ts">
   import PostListing from "$lib/components/PostListing.svelte";
-  import { RssIcon } from "@rgossiaux/svelte-heroicons/outline";
   export let post;
   export let recomended;
 </script>
-
-<div class="flex justify-end">
-  <a class="" href="/rss.xml"><RssIcon class="w-6" /></a>
-</div>
 
 <PostListing {post} size="lg" link={false} />
 <hr class="mt-2 mb-6" />

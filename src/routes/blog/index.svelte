@@ -22,11 +22,11 @@
   <title>{title + " - Blog"}</title>
   <meta property="og:title" content={title + " - Blog"} />
 </svelte:head>
-<div class="flex justify-end">
+
+<div class="flex justify-between items-center">
+  <h1 class="m-0">Blog</h1>
   <a class="" href="/rss.xml"><RssIcon class="w-6" /></a>
 </div>
-
-<h1>Blog</h1>
 
 {#each pages as post, index}
   {#if index > 0}
