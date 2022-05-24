@@ -2,7 +2,7 @@
 title: Hello World!
 date: 2022-02-07
 description: This is my testing page for all sorts of goodies!
-tags: [programming, testing, hello world, project, webdev]
+tags: [dev, webdev, hello world, project]
 ---
 
 Hi! This is my testing page. What does that mean? well,
