@@ -2,8 +2,8 @@
   import { subtitle, title } from "$lib/info";
   import Popover from "$lib/components/Popover.svelte";
 
-  let w:number = 0;
-  const breakpoint:number = 640; // screen size at when to break
+  let w: number = 0;
+  const breakpoint: number = 640; // screen size at when to break
 </script>
 
 <svelte:window bind:innerWidth={w} />
@@ -12,16 +12,10 @@
   <div class="px-4 py-1 flex box-border justify-between items-center">
     {#if w < breakpoint}
       <Popover>
-        <a href="/">Index</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
-        <a href="https://github.com/cogsandsquigs">Github</a>
+        <slot />
       </Popover>
-    {:else} 
-      <a href="/">Index</a>
-      <a href="/about">About</a>
-      <a href="/blog">Blog</a>
-      <a href="https://github.com/cogsandsquigs">Github</a>
+    {:else}
+      <slot />
     {/if}
 
     <div class="text-right text-xs sm:text-sm md:text-lg space-y-0">
