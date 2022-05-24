@@ -22,7 +22,7 @@ const xml = (
     <title>${title}</title>
     <description>${description}</description>
     <link>${website}</link>
-    <language>${locale.toLocaleLowerCase()}</language>
+    <language>${locale}</language>
     ${posts
     .map(
       (post) =>
@@ -30,8 +30,9 @@ const xml = (
         <item>
           <title>${post.title}</title>
           <description>${post.description}</description>
+          <pubDate>${new Date(post.date).toUTCString()}</pubDate>
           <link>${website}/blog/${post.slug}</link>
-          <pubDate>${new Date(post.date)}</pubDate>
+          <guid>${website}/blog/${post.slug}</guid>
           ${post.tags
           .map(
             (tag) =>
