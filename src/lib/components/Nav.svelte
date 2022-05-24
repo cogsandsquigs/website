@@ -3,7 +3,7 @@
   import Popover from "$lib/components/Popover.svelte";
 
   let w: number = 0;
-  const breakpoint: number = 540; // screen size at when to break
+  const breakpoint: number = 540; // screen size in pixels at when to break
 </script>
 
 <svelte:window bind:innerWidth={w} />
