@@ -2,6 +2,7 @@
   import "$lib/styles/globals.css";
   import { description } from "$lib/info";
   import Nav from "$lib/components/Nav.svelte";
+  import Popover from "$lib/components/Popover.svelte";
 </script>
 
 <svelte:head>
@@ -15,7 +16,9 @@
     <a href="/">Index</a>
     <a href="/about">About</a>
     <a href="/blog">Blog</a>
-    <a href="https://github.com/cogsandsquigs" rel="me">Github</a>
+    <Popover title="Socials">
+      <a href="https://github.com/cogsandsquigs" rel="me">Github</a>
+    </Popover>
   </Nav>
 
   <div class="p-2 pt-6 sm:p-4 md:p-8 max-w-prose mx-auto scrollbar-none">
