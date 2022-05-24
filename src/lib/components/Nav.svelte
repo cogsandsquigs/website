@@ -12,15 +12,16 @@
   <div class="px-4 py-1 flex box-border justify-between items-center">
     {#if w < breakpoint}
       <Popover>
-    {/if}
-
-    <a href="/">Index</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
-    <a href="https://github.com/cogsandsquigs">Github</a>
-    
-    {#if w < breakpoint}
+        <a href="/">Index</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <a href="https://github.com/cogsandsquigs">Github</a>
       </Popover>
+    {:else} 
+      <a href="/">Index</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="https://github.com/cogsandsquigs">Github</a>
     {/if}
 
     <div class="text-right text-xs sm:text-sm md:text-lg space-y-0">
