@@ -20,7 +20,7 @@
     {/if}
 
     <div class="text-right text-xs sm:text-sm md:text-lg space-y-0">
-      <h2 class="m-0 max-w-fit float-right">
+      <h2 class="m-0">
         {title}
       </h2>
       <h3 class="m-0">
