@@ -11,12 +11,12 @@
 
 <nav class="space-y-0">
   <div class="px-4 py-1 flex box-border justify-between items-center">
-    {#if w >= xs}
-      <slot />
-    {:else}
+    {#if w < xs}
       <Popover>
         <slot />
       </Popover>
+    {:else}
+      <slot />
     {/if}
 
     <div class="text-right text-xs sm:text-sm md:text-lg space-y-0">
