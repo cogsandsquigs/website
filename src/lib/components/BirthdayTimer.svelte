@@ -1,26 +1,29 @@
 <script lang="ts">
-  import dayjs from "dayjs";
+    import dayjs, { Dayjs } from "dayjs";
+    import { ConfettiExplosion } from "svelte-confetti-explosion";
 
-  let now = dayjs();
-  let bday = dayjs(`${now.year()}-12-07`);
+    const month = 12;
+    const day = 7;
+    const time = "00:00:00";
 
-  setInterval(() => {
-    now = dayjs();
-  }, 1000);
+    let now = dayjs();
 
-  $: months = bday.diff(now, "month");
-  $: days = bday.diff(
-    dayjs(`${now.year()}-${now.month() + months}-${now.day()}`),
-    "day"
-  );
-  $: hours = bday.diff(now, "hour");
-  $: minutes = bday.diff(now, "minutes");
-  $: seconds = bday.diff(now, "seconds");
+    setInterval(() => {
+        now = dayjs();
+    }, 1);
+
+    let bday = dayjs(`${now.year()}-${month}-${day} ${time}`);
+
+    if (
+        now.unix() >= dayjs(`${now.year()}-${month}-${day + 1} ${time}`).unix()
+    ) {
+        bday = dayjs(`${now.year() + 1}-${month}-${day} ${time}`);
+    }
 </script>
 
-{months}
-{dayjs(`${now.year()}-${now.month() + months}-07`).toString()}
-{days}
-{hours}
-{minutes}
-{seconds}
+{#if bday.diff(now) > 0}
+    {bday.diff(now)}
+{:else}
+    Happy birthday me!
+    <ConfettiExplosion particleCount={200} />
+{/if}

@@ -24,7 +24,7 @@
         {title}
       </h2>
       <h3 class="m-0">
-        <!-- Usually I add this-, but I wanna add a bday timer :3 ->
+        <!-- Usually I add this-, but I wanna add a bday timer sometime :3 -->
         <!-- {subtitle} -->
         <BirthdayTimer />
       </h3>
