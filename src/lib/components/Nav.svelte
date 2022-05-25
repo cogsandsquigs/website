@@ -1,6 +1,7 @@
 <script lang="ts">
   import { subtitle, title } from "$lib/info";
   import Popover from "$lib/components/Popover.svelte";
+  import BirthdayTimer from "$lib/components/BirthdayTimer.svelte";
 
   let w: number = 0;
   const breakpoint: number = 540; // screen size in pixels at when to break
@@ -23,7 +24,9 @@
         {title}
       </h2>
       <h3 class="m-0">
-        {subtitle}
+        <!-- Usually I add this-, but I wanna add a bday timer :3 ->
+        <!-- {subtitle} -->
+        <BirthdayTimer />
       </h3>
     </div>
   </div>
