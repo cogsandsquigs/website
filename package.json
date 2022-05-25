@@ -22,7 +22,6 @@
 		"mdsvex": "^0.10.5",
 		"postcss": "^8.4.13",
 		"svelte": "^3.44.0",
-		"svelte-countdown": "^1.1.0",
 		"svelte-preprocess": "^4.10.6",
 		"tailwindcss": "^3.0.24",
 		"tslib": "^2.4.0",
