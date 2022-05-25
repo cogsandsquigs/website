@@ -10,7 +10,10 @@
 </script>
 
 <Popover class="text-left max-w-auto" style="position: relative;">
-  <PopoverButton as="a" class="cursor-pointer">
+  <PopoverButton
+    as="h4"
+    class="cursor-pointer m-0 underline decoration-2 decoration-secondary"
+  >
     {title}
   </PopoverButton>
 
