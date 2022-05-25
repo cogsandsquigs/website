@@ -1,5 +1,5 @@
 <script lang="ts">
-    import dayjs, { Dayjs } from "dayjs";
+    import dayjs from "dayjs";
     import { ConfettiExplosion } from "svelte-confetti-explosion";
 
     const month = 12;
