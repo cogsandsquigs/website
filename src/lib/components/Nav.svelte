@@ -3,7 +3,7 @@
   import Popover from "$lib/components/Popover.svelte";
   import NavSubtitle from "$lib/components/NavSubtitle.svelte";
 
-  let w: number = 0;
+  let w: number = 540;
   const xs: number = 540; // screen size in pixels at when to break xs
 </script>
 
