@@ -4,7 +4,7 @@
     import { ConfettiExplosion } from "svelte-confetti-explosion";
 </script>
 
-<div>
+<h3>
     {#if dayjs().month() === 11 && dayjs().date() === 7}
         <!-- if it's my birthday, december 7th-->
         <ConfettiExplosion
@@ -23,4 +23,4 @@
     {:else}
         {subtitle}
     {/if}
-</div>
+</h3>
