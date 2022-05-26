@@ -13,7 +13,7 @@ const config = {
     adapter: adapter(),
 
     browser: {
-      hydrate: false,
+      hydrate: true,
       router: false,
     }
   },
