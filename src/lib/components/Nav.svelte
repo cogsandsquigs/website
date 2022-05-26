@@ -9,7 +9,7 @@
 
 <svelte:window bind:innerWidth={w} />
 
-<nav class="space-y-0 sticky top-0 bg-primary">
+<nav class="space-y-0 bg-primary">
   <div class="px-4 py-1 flex box-border justify-between items-center">
     {#if w < xs}
       <Popover>

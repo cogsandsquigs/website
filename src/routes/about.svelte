@@ -1,7 +1,7 @@
 <script lang="ts">
-  import profileimg from "$lib/images/profile.png";
   import { title } from "$lib/info";
   import Disclosure from "$lib/components/Disclosure.svelte";
+  import ProfileImg from "$lib/components/ProfileImg.svelte";
 
   let infos = [
     {
@@ -45,11 +45,7 @@
 <div class="sm:flex sm:items-center sm:justify-between">
   <h1 class="m-0">About Me!</h1>
 
-  <img
-    class="mx-auto sm:mx-0 w-20 sm:w-28 md:w-32 lg:w-40 border-2 border-secondary rounded-full"
-    src={profileimg}
-    alt="My profile."
-  />
+  <ProfileImg />
 </div>
 
 <p>
