@@ -39,7 +39,7 @@
 </svelte:head>
 
 <div class="flex items-start justify-between">
-  <h1 class="m-0">Tag: <a href="/blog/tags/{tag}">{tag}</a></h1>
+  <h1 class="m-0">Tag: <a href="/tags/{tag}">{tag}</a></h1>
   <a class="" href="/rss.xml"><RssIcon class="icon" /></a>
 </div>
 

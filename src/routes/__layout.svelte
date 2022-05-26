@@ -15,7 +15,6 @@
   <Nav>
     <a href="/">Index</a>
     <a href="/about">About</a>
-    <a href="/blog">Blog</a>
     <Popover title="Socials">
       <a href="https://github.com/cogsandsquigs" rel="me">Github</a>
     </Popover>
@@ -24,17 +23,4 @@
   <div class="px-2.5 mx-auto my-4 max-w-prose scrollbar-none">
     <slot />
   </div>
-
-  <!--
-  <div class="bottom-0 w-full mt-2">
-    <hr class="m-0" />
-
-    <p class="text-xs text-center">
-      This site was made with
-      <a href="https://kit.svelte.dev">SvelteKit</a> +
-      <a href="https://tailwindcss.com">Tailwind CSS</a>. It's deployed on
-      <a href="https://vercel.com">Vercel</a>.
-    </p>
-  </div>
-  -->
 </body>

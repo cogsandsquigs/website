@@ -17,31 +17,14 @@ example, the navbar this website uses (a very minimal
 navbar at that) looks like this under Svelte
 
 ```html
-<nav>
-  <div class="wrap">
-    <div class="links">
-      <!--navigation links go here!-->
-    </div>
-    <div>
-      <h1>Ian Pratt</h1>
-      <h3>Just a gay programmer</h3>
+<nav class="space-y-0 bg-primary my-2">
+  <div class="px-4 py-1">
+    <div class="flex box-border justify-evenly items-center">
+      <slot />
     </div>
   </div>
+  <hr />
 </nav>
-<hr />
-
-<style>
-  .wrap {
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .links > * {
-    font-size: 120%;
-  }
-</style>
 ```
 
 Thats it. Literally thats it. This is a full-blown

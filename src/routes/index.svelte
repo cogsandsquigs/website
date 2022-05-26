@@ -1,4 +1,6 @@
 <script lang="ts">
+  import PostList from "$lib/components/PostList.svelte";
+  import Subtitle from "$lib/components/Subtitle.svelte";
   import { title, subtitle } from "$lib/info";
 </script>
 
@@ -7,6 +9,13 @@
   <meta property="og:title" content={title + " - " + subtitle} />
 </svelte:head>
 
+<div class="space-y-2">
+  <h1 class="m-0">{title}</h1>
+  <h2 class="m-0"><Subtitle /></h2>
+</div>
+
+<PostList />
+<!--
 <h1>Welcome to my website!!!</h1>
 
 <p>
@@ -26,3 +35,4 @@
 </p>
 
 <p>Have fun, and stay snazzy!</p>
+-->

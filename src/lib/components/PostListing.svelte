@@ -12,7 +12,7 @@
     <div class="flex justify-between items-start">
       <h1 class="m-0">
         {#if link}
-          <a href="/blog/{post.metadata.slug}">{post.metadata.title}</a>
+          <a href="/{post.metadata.slug}">{post.metadata.title}</a>
         {:else}
           {post.metadata.title}
         {/if}
@@ -33,9 +33,9 @@
         Tags:
         {#each post.metadata.tags as tag, index}
           {#if index > 0}
-            , <a href={"/blog/tags/" + tag}>{tag}</a>
+            , <a href={"/tags/" + tag}>{tag}</a>
           {:else}
-            <a href={"/blog/tags/" + tag}>{tag}</a>
+            <a href={"/tags/" + tag}>{tag}</a>
           {/if}
         {/each}
       </p>
@@ -45,7 +45,7 @@
   <div>
     <h2>
       {#if link}
-        <a href="/blog/{post.metadata.slug}">{post.metadata.title}</a>
+        <a href="/{post.metadata.slug}">{post.metadata.title}</a>
       {:else}
         {post.metadata.title}
       {/if}
@@ -61,8 +61,8 @@
     {#if post.metadata.tags != undefined}
       <h5>
         Tags: {#each post.metadata.tags as tag, index}{#if index > 0}, <a
-              href={"/blog/tags/" + tag}>{tag}</a
-            >{:else}<a href={"/blog/tags/" + tag}>{tag}</a>{/if}{/each}
+              href={"/tags/" + tag}>{tag}</a
+            >{:else}<a href={"/tags/" + tag}>{tag}</a>{/if}{/each}
       </h5>
     {/if}
   </div>
@@ -70,7 +70,7 @@
   <div class="pb-1">
     <p class="m-0">
       {#if link}
-        <a href="/blog/{post.metadata.slug}">{post.metadata.title}</a>,
+        <a href="/{post.metadata.slug}">{post.metadata.title}</a>,
       {:else}
         {post.metadata.title},
       {/if}
@@ -81,8 +81,8 @@
     </p>
     <h5 class="text-sm">
       Tags: {#each post.metadata.tags as tag, index}{#if index > 0}, <a
-            href={"/blog/tags/" + tag}>{tag}</a
-          >{:else}<a href={"/blog/tags/" + tag}>{tag}</a>{/if}{/each}
+            href={"/tags/" + tag}>{tag}</a
+          >{:else}<a href={"/tags/" + tag}>{tag}</a>{/if}{/each}
     </h5>
   </div>
 {/if}
