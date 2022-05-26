@@ -21,10 +21,11 @@
     </Popover>
   </Nav>
 
-  <div class="mb-auto px-2.5 mx-auto my-4 max-w-prose scrollbar-none">
+  <div class="px-2.5 mx-auto my-4 max-w-prose scrollbar-none">
     <slot />
   </div>
 
+  <!--
   <div class="bottom-0 w-full mt-2">
     <hr class="m-0" />
 
@@ -35,4 +36,5 @@
       <a href="https://vercel.com">Vercel</a>.
     </p>
   </div>
+  -->
 </body>

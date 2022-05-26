@@ -1,18 +1,19 @@
 <script lang="ts">
     import { subtitle } from "$lib/info";
-    import dayjs from "dayjs";
     import { ConfettiExplosion } from "svelte-confetti-explosion";
+
+    let now = new Date(Date.now());
 </script>
 
 <h3>
-    {#if dayjs().month() === 11 && dayjs().date() === 7}
+    {#if now.getMonth() === 11 && now.getDate() === 7}
         <!-- if it's my birthday, december 7th-->
         <ConfettiExplosion
             particleCount={200}
             colors={["red", "orange", "yellow", "green", "blue", "purple"]}
         />
         Happy birthday me!
-    {:else if dayjs().month() === 5}
+    {:else if now.getMonth() === 5}
         <!-- if it is june -->
         <ConfettiExplosion
             particleCount={200}
