@@ -1,4 +1,5 @@
 <script>
+  // TODO: make css only import code css when used
   import "$lib/styles/globals.css";
   import { description } from "$lib/info";
   import Nav from "$lib/components/Nav.svelte";
