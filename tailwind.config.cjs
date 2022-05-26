@@ -1,6 +1,11 @@
 module.exports = {
   important: true,
+
   content: ["./src/**/*.{html,js,svelte,ts}"],
+
+  // REMINDER: theme can be generated from daisyui.
+  // Copy-paste theme colors into tailwind colors
+  // section
   theme: {
     colors: {
       primary: "#111827",
