@@ -6,23 +6,18 @@
 <script lang="ts">
     import PostListing from "$lib/components/PostListing.svelte";
     import { posts } from "$lib/posts";
-    import { onMount } from "svelte";
-
-    let pages;
-    // USE AWAIT BLOCK
-    // Get the posts
-    onMount(async () => {
-        pages = await posts();
-    });
 </script>
 
-{#if pages != undefined}
+{#await posts()}
+    <h2>Loading posts...</h2>
+{:then pages}
     {#each pages as post, index}
         {#if index > 0}
             <hr />
         {/if}
         <PostListing {post} />
     {/each}
-{:else}
-    <h2>Loading posts...</h2>
-{/if}
+{:catch}
+    <!-- TODO: error component-->
+    <h2>Error!</h2>
+{/await}
