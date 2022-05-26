@@ -6,14 +6,6 @@ u {
   @apply underline decoration-2 decoration-secondary;
 }
 
-/* Chrome, Safari and Opera */
-.scrollbar-none::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollbar-none {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+.icon {
+  @apply w-8 p-1
 }

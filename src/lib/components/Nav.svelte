@@ -12,7 +12,7 @@
 <nav class="space-y-0 bg-primary">
   <div class="px-4 py-1 flex box-border justify-between items-center">
     {#if w < xs}
-      <Popover>
+      <Popover arrow={false}>
         <slot />
       </Popover>
     {:else}

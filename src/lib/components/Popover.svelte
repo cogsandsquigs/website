@@ -6,15 +6,31 @@
     Transition,
   } from "@rgossiaux/svelte-headlessui";
 
-  export let title: string = "Menu";
+  import {
+    ChevronRightIcon,
+    MenuAlt2Icon,
+  } from "@rgossiaux/svelte-heroicons/solid";
+
+  export let title: string = undefined;
+  export let arrow: boolean = true;
 </script>
 
-<Popover class="text-left max-w-auto" style="position: relative;">
+<Popover let:open class="text-left max-w-auto" style="position: relative;">
   <PopoverButton
     as="h4"
-    class="cursor-pointer m-0 underline decoration-2 decoration-secondary"
+    class="flex items-center cursor-pointer m-0 underline decoration-2 decoration-secondary"
   >
-    {title}
+    {#if title === undefined}
+      <MenuAlt2Icon class="icon" />
+    {:else}
+      {title}
+      {#if arrow}
+        <ChevronRightIcon
+          style={open ? "transform: rotate(90deg);" : ""}
+          class="icon duration-150"
+        />
+      {/if}
+    {/if}
   </PopoverButton>
 
   <Transition
