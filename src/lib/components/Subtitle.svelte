@@ -13,7 +13,7 @@
         particleCount={200}
         colors={["red", "orange", "yellow", "green", "blue", "purple"]}
     />
-{:else if now.getMonth() === 4}
+{:else if now.getMonth() === 5}
     <!-- if it is june -->
 
     Happy pride month!
