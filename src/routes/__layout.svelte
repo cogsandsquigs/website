@@ -1,9 +1,11 @@
 <script>
-  // TODO: make css only import code css when used
+  // TODO: make css only import one-dark-code css when used
   import "$lib/styles/globals.css";
+  import "$lib/styles/one-dark-code.css";
   import { description } from "$lib/info";
   import Nav from "$lib/components/Nav.svelte";
   import Popover from "$lib/components/Popover.svelte";
+  import { onMount } from "svelte";
 </script>
 
 <svelte:head>
