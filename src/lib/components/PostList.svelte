@@ -9,7 +9,7 @@
     import { onMount } from "svelte";
 
     let pages;
-
+    // USE AWAIT BLOCK
     // Get the posts
     onMount(async () => {
         pages = await posts();
