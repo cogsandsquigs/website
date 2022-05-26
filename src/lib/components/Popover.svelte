@@ -43,7 +43,7 @@
   >
     <PopoverPanel style="position: absolute; z-index: 10;">
       <div
-        class="bg-primary p-3 border-2 border-secondary rounded-sm panel-contents"
+        class="grid bg-primary p-3 border-2 border-secondary rounded-sm panel-contents"
       >
         <slot>Put something here!</slot>
       </div>
