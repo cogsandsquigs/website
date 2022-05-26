@@ -21,11 +21,11 @@
     </Popover>
   </Nav>
 
-  <div class="min-h-[80vh] px-2.5 mx-auto my-4 max-w-prose scrollbar-none">
+  <div class="mb-auto px-2.5 mx-auto my-4 max-w-prose scrollbar-none">
     <slot />
   </div>
 
-  <div class="bottom-0 relative w-full">
+  <div class="bottom-0 w-full mt-2">
     <hr class="m-0" />
 
     <p class="text-xs text-center">
