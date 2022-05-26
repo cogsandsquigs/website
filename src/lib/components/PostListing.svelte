@@ -9,7 +9,7 @@
 
 {#if size === "lg"}
   <div class="space-y-0">
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-start">
       <h1 class="m-0">
         {#if link}
           <a href="/blog/{post.metadata.slug}">{post.metadata.title}</a>
@@ -17,7 +17,7 @@
           {post.metadata.title}
         {/if}
       </h1>
-      <a class="" href="/rss.xml"><RssIcon class="w-6" /></a>
+      <a href="/rss.xml"><RssIcon class="icon" /></a>
     </div>
 
     <h3>{post.metadata.description}</h3>

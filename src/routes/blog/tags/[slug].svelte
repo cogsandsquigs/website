@@ -38,9 +38,9 @@
   <meta property="og:title" content={title + " - Tag: " + tag} />
 </svelte:head>
 
-<div class="flex justify-between items-center">
+<div class="flex items-start justify-between">
   <h1 class="m-0">Tag: <a href="/blog/tags/{tag}">{tag}</a></h1>
-  <a class="" href="/rss.xml"><RssIcon class="w-6" /></a>
+  <a class="" href="/rss.xml"><RssIcon class="icon" /></a>
 </div>
 
 {#each pages as post, index}

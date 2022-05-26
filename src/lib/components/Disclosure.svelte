@@ -23,7 +23,7 @@
     <span>{@html title}</span>
     <ChevronUpIcon
       style={open ? "transform: rotate(180deg);" : ""}
-      class="icon duration-150 fill-secondary"
+      class="icon duration-150"
     />
   </DisclosureButton>
   <Transition
