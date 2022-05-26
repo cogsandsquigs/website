@@ -1,3 +1,8 @@
+<script context="module">
+  // generate no JS for this page
+  export const hydrate = false;
+</script>
+
 <script lang="ts">
   import { title } from "$lib/info";
   import Disclosure from "$lib/components/Disclosure.svelte";

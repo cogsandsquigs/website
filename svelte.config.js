@@ -11,6 +11,11 @@ const config = {
     // Default SvelteKit options
     // target: "#svelte",
     adapter: adapter(),
+
+    browser: {
+      hydrate: false,
+      router: false,
+    }
   },
 
   preprocess: [preprocess({}), mdsvex(mdsvexconfig)],

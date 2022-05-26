@@ -1,3 +1,8 @@
+<!--
+    NOTE:
+    Wherever this is used, you MUST
+    enable hydration.
+-->
 <script lang="ts">
     import PostListing from "$lib/components/PostListing.svelte";
     import { posts } from "$lib/posts";
