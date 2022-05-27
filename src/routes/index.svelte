@@ -1,3 +1,8 @@
+<script context="module">
+  // generate JS for this page
+  export const hydrate = true;
+</script>
+
 <script lang="ts">
   import PostList from "$components/PostList.svelte";
   import Subtitle from "$components/Subtitle.svelte";
