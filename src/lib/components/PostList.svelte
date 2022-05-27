@@ -1,7 +1,8 @@
 <!--
     NOTE:
     Wherever this is used, you MUST
-    enable hydration.
+    enable hydration if posts is
+    undefined.
 -->
 <script lang="ts">
   import PostListing from "$components/PostListing.svelte";
