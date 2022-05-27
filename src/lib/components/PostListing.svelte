@@ -50,13 +50,13 @@
         {post.metadata.title}
       {/if}
     </h2>
-    <span>{post.metadata.description}</span>
-    <h4 class="m-0">
+    <p class="m-0 font-bold">{post.metadata.description}</p>
+    <p class="m-0">
       Posted on {new Date(post.metadata.date).toLocaleDateString(
         locale,
         dateOptions
       )}
-    </h4>
+    </p>
 
     {#if post.metadata.tags != undefined}
       <h5>
