@@ -15,6 +15,10 @@ const config = {
     // target: "#svelte",
     adapter: adapter(),
 
+    prerender: {
+      default: true,
+    },
+
     browser: {
       hydrate: true,
       router: false,
@@ -32,7 +36,7 @@ const config = {
     },
   },
 
-  preprocess: [preprocess({}), mdsvex(mdsvexconfig)],
+  preprocess: [preprocess(), mdsvex(mdsvexconfig)],
 };
 
 export default config;
