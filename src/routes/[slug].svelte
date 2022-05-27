@@ -1,9 +1,6 @@
 <script context="module">
   import { posts } from "$lib/posts";
 
-  // generate no JS for this page
-  export const hydrate = false;
-
   export async function load({ params }) {
     // gets the post with the matching slug
     let post = (await posts()).filter(
