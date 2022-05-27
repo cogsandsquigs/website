@@ -17,8 +17,7 @@
 
 <Popover let:open class="text-left max-w-auto" style="position: relative;">
   <PopoverButton
-    as="h4"
-    class="flex items-center cursor-pointer m-0 underline decoration-2 decoration-secondary"
+    class="flex items-center cursor-pointer font-bold text-[#fff] m-0 underline decoration-2 decoration-secondary"
   >
     {#if title === undefined}
       <MenuAlt2Icon class="icon" />
