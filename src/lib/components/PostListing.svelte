@@ -42,7 +42,7 @@
     {/if}
   </div>
 {:else if size === "md"}
-  <div>
+  <div class="space-y-0">
     <h2 class="mb-0">
       {#if link}
         <a href="/{post.metadata.slug}">{post.metadata.title}</a>
@@ -51,7 +51,7 @@
       {/if}
     </h2>
     <span>{post.metadata.description}</span>
-    <h4>
+    <h4 class="m-0">
       Posted on {new Date(post.metadata.date).toLocaleDateString(
         locale,
         dateOptions
