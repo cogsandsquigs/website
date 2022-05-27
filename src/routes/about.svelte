@@ -55,7 +55,7 @@
   program things for fun and profit (although mainly for fun!). Currently, my
   main project is working on my website, and making it look as brilliant and
   fancy as possible. It's also a great way to practice my
-  <a href="/blog/tags/webdev">webdev</a> skills!
+  <a href="/tags/webdev">webdev</a> skills!
 </p>
 
 <p>

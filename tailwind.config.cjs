@@ -18,30 +18,11 @@ module.exports = {
       warning: "#FBBD23",
       error: "#F87272",
     },
+  },
 
-    fontFamily: {
-      display: [
-        "Fira Code",
-        "Fira Mono",
-        "Menlo",
-        "Consolas",
-        "DejaVu Sans Mono",
-        "monospace",
-      ],
-      body: [
-        "Fira Code",
-        "Fira Mono",
-        "Menlo",
-        "Consolas",
-        "DejaVu Sans Mono",
-        "monospace",
-      ],
-    },
-
-    extend: {
-      screens: {
-        xs: "540px",
-      },
+  extend: {
+    screens: {
+      xs: "540px",
     },
   },
 
