@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Popover from "$components/Popover.svelte";
+  import Dropdown from "$components/Dropdown.svelte";
 </script>
 
 <nav class="space-y-0 bg-primary my-2">
@@ -7,9 +7,9 @@
     <div class="flex box-border justify-evenly items-center">
       <a href="/">Index</a>
       <a href="/about">About</a>
-      <Popover title="Socials">
+      <Dropdown title="Socials">
         <a href="https://github.com/cogsandsquigs" rel="me">Github</a>
-      </Popover>
+      </Dropdown>
     </div>
   </div>
   <hr />
