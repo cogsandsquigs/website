@@ -59,11 +59,11 @@
     </p>
 
     {#if post.metadata.tags != undefined}
-      <h5>
+      <p class="m-0">
         Tags: {#each post.metadata.tags as tag, index}{#if index > 0}, <a
               href={"/tags/" + tag}>{tag}</a
             >{:else}<a href={"/tags/" + tag}>{tag}</a>{/if}{/each}
-      </h5>
+      </p>
     {/if}
   </div>
 {:else if size === "sm"}
