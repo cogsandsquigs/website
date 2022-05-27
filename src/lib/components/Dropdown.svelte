@@ -36,6 +36,13 @@
 <style>
     .drop:hover .content {
         display: block !important;
+        opacity: 100;
+    }
+
+    .drop .content {
+        opacity: 0;
+        transition-timing-function: ease-in-out;
+        transition: opacity 0.15s;
     }
 
     .drop:hover .btn .turn {
