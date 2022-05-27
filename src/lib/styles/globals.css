@@ -4,6 +4,9 @@
 
 body {
   font-family: "Fira Code", "Fira Mono", "Menlo", "Consolas", "DejaVu Sans Mono", "monospace";
+
+  /* prose styles for the body */
+  @apply prose-a: underline prose-a:decoration-secondary prose-a:decoration-2 prose-a:font-bold prose-hr:border-[1px] prose-hr:border-secondary;
 }
 
 u {
