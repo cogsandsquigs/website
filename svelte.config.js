@@ -26,6 +26,7 @@ const config = {
           $lib: path.resolve("src/lib"),
           $styles: path.resolve("src/lib/styles"),
           $components: path.resolve("src/lib/components"),
+          $posts: path.resolve("src/posts")
         },
       },
     },

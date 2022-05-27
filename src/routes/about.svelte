@@ -42,10 +42,12 @@
   <meta property="og:title" content={title + " - About Me!"} />
 </svelte:head>
 
-<div class="sm:flex sm:items-center sm:justify-between">
+<div class="flex items-center w-fill">
   <h1 class="m-0">About Me!</h1>
 
-  <ProfileImg />
+  <div class="flex flex-1 justify-center">
+    <ProfileImg />
+  </div>
 </div>
 
 <p>

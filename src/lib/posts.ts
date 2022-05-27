@@ -6,7 +6,7 @@ function dateSort(a, b) {
 
 export async function posts() {
   // grab all of the post files
-  const files = import.meta.glob("/src/posts/*.md");
+  const files = import.meta.glob("$posts/*.md");
 
   // holds all the posts
   let posts = [];
