@@ -14,9 +14,7 @@ export async function get() {
   };
 }
 
-const xml = (
-  posts
-) => `<?xml version="1.0"?>
+const xml = (posts) => `<?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <atom:link href="${website}/rss.xml" rel="self" type="application/rss+xml" />
@@ -25,9 +23,9 @@ const xml = (
     <link>${website}</link>
     <language>${locale}</language>
     ${posts
-    .map(
-      (post) =>
-        `
+      .map(
+        (post) =>
+          `
         <item>
           <title>${post.title}</title>
           <description>${post.description}</description>
@@ -35,17 +33,17 @@ const xml = (
           <link>${website}/blog/${post.slug}</link>
           <guid>${website}/blog/${post.slug}</guid>
           ${post.tags
-          .map(
-            (tag) =>
-              `
+            .map(
+              (tag) =>
+                `
                 <category domain="${website}/blog/tags/${tag}">${tag}</category>
               `
-          )
-          .join("")}
+            )
+            .join("")}
         </item>
         `
-    )
-    .join("")}
+      )
+      .join("")}
   </channel>
 </rss>
 `;

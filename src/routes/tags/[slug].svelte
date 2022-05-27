@@ -26,7 +26,7 @@
 </script>
 
 <script lang="ts">
-  import PostListing from "$lib/components/PostListing.svelte";
+  import PostListing from "$components/PostListing.svelte";
   import { RssIcon } from "@rgossiaux/svelte-heroicons/outline";
   import { title } from "$lib/info";
   export let pages;

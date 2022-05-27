@@ -1,7 +1,10 @@
-import { mdsvex } from "mdsvex";
 import mdsvexconfig from "./mdsvex.config.js";
-import adapter from '@sveltejs/adapter-auto';
+import { mdsvex } from "mdsvex";
+
+import adapter from "@sveltejs/adapter-auto";
 import preprocess from "svelte-preprocess";
+
+import path from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -15,7 +18,17 @@ const config = {
     browser: {
       hydrate: true,
       router: false,
-    }
+    },
+
+    vite: {
+      resolve: {
+        alias: {
+          $lib: path.resolve("src/lib"),
+          $styles: path.resolve("src/lib/styles"),
+          $components: path.resolve("src/lib/components"),
+        },
+      },
+    },
   },
 
   preprocess: [preprocess({}), mdsvex(mdsvexconfig)],

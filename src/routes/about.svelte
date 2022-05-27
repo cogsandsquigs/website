@@ -5,8 +5,8 @@
 
 <script lang="ts">
   import { title } from "$lib/info";
-  import Disclosure from "$lib/components/Disclosure.svelte";
-  import ProfileImg from "$lib/components/ProfileImg.svelte";
+  import Disclosure from "$components/Disclosure.svelte";
+  import ProfileImg from "$components/ProfileImg.svelte";
 
   let infos = [
     {

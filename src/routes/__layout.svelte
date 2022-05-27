@@ -1,8 +1,8 @@
 <script>
-  import "$lib/styles/globals.css";
+  import "$styles/globals.css";
   import { description } from "$lib/info";
-  import Nav from "$lib/components/Nav.svelte";
-  import Popover from "$lib/components/Popover.svelte";
+  import Nav from "$components/Nav.svelte";
+  import Popover from "$components/Popover.svelte";
 </script>
 
 <svelte:head>

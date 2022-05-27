@@ -1,6 +1,6 @@
 <script lang="ts">
-  import PostList from "$lib/components/PostList.svelte";
-  import Subtitle from "$lib/components/Subtitle.svelte";
+  import PostList from "$components/PostList.svelte";
+  import Subtitle from "$components/Subtitle.svelte";
   import { title, subtitle } from "$lib/info";
 </script>
 

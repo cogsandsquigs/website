@@ -10,6 +10,9 @@
 </script>
 
 <script>
+  import Error from "$lib/components/Error.svelte";
+  import Warn from "$lib/components/Warn.svelte";
+
   export let status;
   export let error;
 </script>
@@ -18,19 +21,15 @@
   <title>Ian Pratt | {status}</title>
 </svelte:head>
 
-<div class="wrap">
-  <h1 class="transition duration-300 hover:-rotate-12">{status}</h1>
-  <h3>
-    {#if status == 404}
-      This page doesn't exist, doofus. What were you even looking for?
-    {:else}
-      {error.message}
-    {/if}
-  </h3>
+<div class="grid justify-center">
+  <h1 class="text-center">{status}</h1>
+  <Error>
+    <h2 class="m-0">
+      {#if status == 404}
+        This page doesn't exist, doofus. What were you even looking for?
+      {:else}
+        {error.message}
+      {/if}
+    </h2>
+  </Error>
 </div>
-
-<style>
-  .wrap {
-    text-align: center;
-  }
-</style>

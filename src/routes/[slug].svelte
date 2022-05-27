@@ -27,8 +27,8 @@
 
 <script lang="ts">
   // TODO: make css only import one-dark-code css when used
-  import "$lib/styles/one-dark-code.css";
-  import PostListing from "$lib/components/PostListing.svelte";
+  import "$styles/one-dark-code.css";
+  import PostListing from "$components/PostListing.svelte";
 
   export let post;
   export let recomended;
