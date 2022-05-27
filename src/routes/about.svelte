@@ -1,6 +1,6 @@
 <script context="module">
-  // generate no JS for this page
-  export const hydrate = false;
+  // generate JS for this page
+  export const hydrate = true;
 </script>
 
 <script lang="ts">
