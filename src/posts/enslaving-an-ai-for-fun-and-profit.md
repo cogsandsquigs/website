@@ -1,5 +1,5 @@
 ---
-date: 2022-5-23
+date: 2022-05-23
 title: Enslaving an AI for fun and profit
 description: Or, how I came up with the name 'cogsandsquigs'
 tags: [dev, ai, gpt-j-6b, project]
