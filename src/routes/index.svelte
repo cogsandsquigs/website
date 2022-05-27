@@ -1,12 +1,25 @@
 <script context="module">
-  // generate JS for this page
-  export const hydrate = true;
+  import { posts } from "$lib/posts";
+
+  // generate no JS for this page
+  export const hydrate = false;
+
+  /** @type {import("@sveltejs/kit").Load} */
+  export async function load({}) {
+    return {
+      props: {
+        pages: await posts(),
+      },
+    };
+  }
 </script>
 
 <script lang="ts">
   import PostList from "$components/PostList.svelte";
   import Subtitle from "$components/Subtitle.svelte";
   import { title, subtitle } from "$lib/info";
+
+  export let pages;
 </script>
 
 <svelte:head>
@@ -19,7 +32,7 @@
   <h2 class="m-0"><Subtitle /></h2>
 </div>
 
-<PostList />
+<PostList posts={pages}/>
 <!--
 <h1>Welcome to my website!!!</h1>
 
