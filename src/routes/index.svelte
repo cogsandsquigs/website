@@ -1,9 +1,6 @@
 <script context="module">
   import { posts } from "$lib/posts";
 
-  // generate no JS for this page
-  export const hydrate = false;
-
   /** @type {import("@sveltejs/kit").Load} */
   export async function load({}) {
     return {
