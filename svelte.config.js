@@ -15,6 +15,12 @@ const config = {
     // target: "#svelte",
     adapter: adapter(),
 
+    alias: {
+      $styles: path.resolve("src/lib/styles"),
+      $components: path.resolve("src/lib/components"),
+      $posts: path.resolve("src/posts"),
+    },
+
     prerender: {
       default: true,
     },
@@ -24,16 +30,7 @@ const config = {
       router: false,
     },
 
-    vite: {
-      resolve: {
-        alias: {
-          $lib: path.resolve("src/lib"),
-          $styles: path.resolve("src/lib/styles"),
-          $components: path.resolve("src/lib/components"),
-          $posts: path.resolve("src/posts")
-        },
-      },
-    },
+    vite:{},
   },
 
   preprocess: [preprocess(), mdsvex(mdsvexconfig)],
