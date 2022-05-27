@@ -1,6 +1,9 @@
 <script lang="ts" context="module">
   import { posts } from "$lib/posts";
 
+  // generate no JS for this page
+  export const hydrate = false;
+
   /** @type {import("@sveltejs/kit").Load} */
   export async function load({ params }) {
     let pages = (await posts()).filter(
@@ -26,6 +29,7 @@
 </script>
 
 <script lang="ts">
+  import PostList from "$components/PostList.svelte"
   import PostListing from "$components/PostListing.svelte";
   import { RssIcon } from "@rgossiaux/svelte-heroicons/outline";
   import { title } from "$lib/info";
@@ -43,9 +47,4 @@
   <a class="" href="/rss.xml"><RssIcon class="icon" /></a>
 </div>
 
-{#each pages as post, index}
-  {#if index > 0}
-    <hr />
-  {/if}
-  <PostListing {post} />
-{/each}
+<PostList posts={pages} />
