@@ -11,7 +11,6 @@
 
 <script>
   import Error from "$lib/components/Error.svelte";
-  import Warn from "$lib/components/Warn.svelte";
 
   export let status;
   export let error;
