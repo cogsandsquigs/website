@@ -12,7 +12,7 @@
 </script>
 
 <div class="drop">
-  <div
+  <button
     class="btn flex items-center font-bold text-[#fff] underline decoration-2 decoration-secondary"
   >
     {#if title === undefined}
@@ -25,7 +25,7 @@
         </div>
       {/if}
     {/if}
-  </div>
+  </button>
   <div
     class="content grid absolute bg-primary border-2 border-secondary rounded-sm p-3"
   >
@@ -34,13 +34,13 @@
 </div>
 
 <style>
-  .drop .content {
+  .content {
     opacity: 0;
     scale: 0.95;
     transition: 150ms;
   }
 
-  .drop:hover .content {
+  .btn:focus ~ .content {
     display: block !important;
     opacity: 100;
     scale: 1;

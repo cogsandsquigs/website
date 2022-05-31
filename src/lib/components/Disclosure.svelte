@@ -1,41 +1,52 @@
+<!--
+    This should not generate JS!!!
+-->
 <script lang="ts">
-  import {
-    Disclosure,
-    DisclosureButton,
-    DisclosurePanel,
-    Transition,
-  } from "@rgossiaux/svelte-headlessui";
-  import { ChevronUpIcon } from "@rgossiaux/svelte-heroicons/solid";
+  import { ChevronRightIcon } from "@rgossiaux/svelte-heroicons/solid";
 
-  export let title: string = "";
-  let text: string;
+  export let title = "...";
 </script>
 
-<!-- I have to do this hack to get the text value -->
-<span contenteditable="true" bind:textContent={text} class="hidden">
-  <slot />
-</span>
+<div>
+  <button
+    class="btn flex items-center justify-between w-full border-2 border-secondary rounded-sm p-1 px-2"
+  >
+    <div>{@html title}</div>
+    <div class="turn duration-150">
+      <ChevronRightIcon class="icon" />
+    </div>
+  </button>
+  <div class="hidden content pt-1">
+    <slot>...</slot>
+  </div>
+</div>
 
-<Disclosure let:open class="space-y-2">
-  <DisclosureButton
-    class="flex justify-between min-w-full border-secondary border-2 rounded-sm pt-1 px-2"
-  >
-    <span>{@html title}</span>
-    <ChevronUpIcon
-      style={open ? "transform: rotate(180deg);" : ""}
-      class="icon duration-150"
-    />
-  </DisclosureButton>
-  <Transition
-    enter="transition duration-200 ease-out"
-    enterFrom="transform scale-95 opacity-0"
-    enterTo="transform scale-100 opacity-100"
-    leave="transition duration-150 ease-out"
-    leaveFrom="transform scale-100 opacity-100"
-    leaveTo="transform scale-95 opacity-0"
-  >
-    <DisclosurePanel>
-      {text}
-    </DisclosurePanel>
-  </Transition>
-</Disclosure>
+<style>
+  .content {
+    opacity: 0;
+    scale: 0.95;
+    transition: 150ms;
+  }
+
+  .btn:focus ~ .content {
+    display: block !important;
+    opacity: 100;
+    scale: 1;
+    animation: display 150ms ease-in-out;
+  }
+
+  .drop:hover .btn .turn {
+    transform: rotate(90deg);
+  }
+
+  @keyframes display {
+    from {
+      opacity: 0;
+      scale: 0.95;
+    }
+    to {
+      opacity: 100;
+      scale: 1;
+    }
+  }
+</style>
