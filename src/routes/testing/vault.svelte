@@ -10,6 +10,8 @@
         x++;
         token = totp.generate(secret);
     }, 1000);
+
+    export const hydrate = true;
 </script>
 
 <h1>Vault</h1>
