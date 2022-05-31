@@ -21,7 +21,12 @@ const config = {
       $posts: path.resolve("src/posts"),
     },
 
+    prerender: {
+      default: true
+    },
+
     browser: {
+      hydrate: true,
       router: false,
     },
   },

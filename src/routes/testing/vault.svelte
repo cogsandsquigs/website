@@ -1,7 +1,12 @@
 <script lang="ts">
-    function handleClick() {
-        alert("no more alerts");
-    }
+    let x = 0;
 </script>
 
-<button on:click|once={handleClick}>Click me</button>
+<button
+    class="border-2 border-secondary rounded-sm p-2"
+    on:click={() => {
+        x++;
+    }}
+>
+    {x}
+</button>
