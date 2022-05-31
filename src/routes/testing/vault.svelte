@@ -19,3 +19,11 @@
 {token}
 
 {valid}
+
+<button
+    on:click={() => {
+        x++;
+    }}
+>
+    click
+</button>
