@@ -26,7 +26,6 @@ const config = {
     },
 
     browser: {
-      hydrate: false, // no js
       router: false,
     },
 

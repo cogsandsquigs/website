@@ -23,11 +23,13 @@
       },
     };
   }
+
+  // generate no js for this page
+  export const hydrate = false;
 </script>
 
 <script lang="ts">
-  import PostList from "$components/PostList.svelte"
-  import PostListing from "$components/PostListing.svelte";
+  import PostList from "$components/PostList.svelte";
   import { RssIcon } from "@rgossiaux/svelte-heroicons/outline";
   import { title } from "$lib/info";
   export let pages;

@@ -21,6 +21,9 @@
       },
     };
   }
+
+  // generate no js for this page
+  export const hydrate = false;
 </script>
 
 <script lang="ts">
