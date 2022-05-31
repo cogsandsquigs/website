@@ -11,12 +11,12 @@
   <button
     class="btn flex items-center justify-between w-full border-2 border-secondary rounded-sm p-1 px-2"
   >
-    <div>{@html title}</div>
-    <div class="turn duration-150">
+    <span>{@html title}</span>
+    <div class="turn">
       <ChevronRightIcon class="icon" />
     </div>
   </button>
-  <div class="content bg-primary pt-1">
+  <div class="content bg-primary pt-1 max-w-prose">
     <slot>...</slot>
   </div>
 </div>
@@ -26,17 +26,19 @@
     opacity: 0;
     scale: 0.95;
     position: absolute;
+    z-index: -1;
     transition: 150ms;
   }
 
   .btn:focus ~ .content {
-    display: block !important;
     opacity: 100;
     scale: 1;
     position: relative;
+    z-index: none;
   }
 
   .btn:focus .turn {
     transform: rotate(90deg);
+    transition: 150ms;
   }
 </style>
