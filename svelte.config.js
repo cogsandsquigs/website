@@ -21,15 +21,9 @@ const config = {
       $posts: path.resolve("src/posts"),
     },
 
-    prerender: {
-      default: true,
-    },
-
     browser: {
       router: false,
     },
-
-    vite: {},
   },
 
   preprocess: [preprocess(), mdsvex(mdsvexconfig)],

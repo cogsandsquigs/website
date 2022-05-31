@@ -1,16 +1,7 @@
-<script lang="ts" context="module">
-    // add js to the page
-    export const hydrate = true;
-</script>
-
 <script lang="ts">
-    let x = 0;
+    function handleClick() {
+        alert("no more alerts");
+    }
 </script>
 
-<button
-    class="p-2 border-2 border-secondary rounded-sm"
-    on:click={() => {
-        x++;
-        console.log(x);
-    }}>{x}</button
->
+<button on:click|once={handleClick}>Click me</button>
