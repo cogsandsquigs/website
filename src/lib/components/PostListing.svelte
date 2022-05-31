@@ -43,7 +43,7 @@
   </div>
 {:else if size === "md"}
   <div class="space-y-0">
-    <h2 class="mb-0">
+    <h2 class="m-0">
       {#if link}
         <a href="/{post.metadata.slug}">{post.metadata.title}</a>
       {:else}

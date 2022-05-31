@@ -16,6 +16,7 @@
 		"@sveltejs/kit": "^1.0.0-next.345",
 		"@tailwindcss/typography": "^0.5.2",
 		"autoprefixer": "^10.4.7",
+		"dayjs": "^1.11.2",
 		"html-minifier": "^4.0.0",
 		"mdsvex": "^0.10.5",
 		"postcss": "^8.4.13",
