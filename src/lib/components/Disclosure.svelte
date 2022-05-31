@@ -16,7 +16,7 @@
       <ChevronRightIcon class="icon" />
     </div>
   </button>
-  <div class="hidden content pt-1">
+  <div class="content bg-primary pt-1">
     <slot>...</slot>
   </div>
 </div>
@@ -25,6 +25,7 @@
   .content {
     opacity: 0;
     scale: 0.95;
+    position: absolute;
     transition: 150ms;
   }
 
@@ -32,21 +33,10 @@
     display: block !important;
     opacity: 100;
     scale: 1;
-    animation: display 150ms ease-in-out;
+    position: relative;
   }
 
-  .drop:hover .btn .turn {
+  .btn:focus .turn {
     transform: rotate(90deg);
-  }
-
-  @keyframes display {
-    from {
-      opacity: 0;
-      scale: 0.95;
-    }
-    to {
-      opacity: 100;
-      scale: 1;
-    }
   }
 </style>

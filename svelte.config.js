@@ -26,11 +26,11 @@ const config = {
     },
 
     browser: {
-      hydrate: true,
+      hydrate: false, // no js
       router: false,
     },
 
-    vite:{},
+    vite: {},
   },
 
   preprocess: [preprocess(), mdsvex(mdsvexconfig)],

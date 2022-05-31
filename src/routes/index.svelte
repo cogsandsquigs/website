@@ -29,7 +29,7 @@
   <h2 class="m-0"><Subtitle /></h2>
 </div>
 
-<PostList posts={pages}/>
+<PostList posts={pages} />
 <!--
 <h1>Welcome to my website!!!</h1>
 

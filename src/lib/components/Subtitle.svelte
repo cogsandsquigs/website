@@ -3,6 +3,7 @@
   import { ConfettiExplosion } from "svelte-confetti-explosion";
 
   let now = new Date(Date.now());
+  export const hydrateable = true;
 </script>
 
 {#if now.getMonth() === 11 && now.getDate() === 7}

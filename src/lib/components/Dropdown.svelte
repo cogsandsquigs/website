@@ -46,7 +46,7 @@
     scale: 1;
   }
 
-  .drop:hover .btn .turn {
+  .btn:focus .turn {
     transform: rotate(90deg);
   }
 </style>
