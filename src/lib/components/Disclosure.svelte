@@ -31,6 +31,7 @@
   }
 
   .btn:focus ~ .content {
+    display: block !important;
     opacity: 100;
     scale: 1;
     position: relative;
