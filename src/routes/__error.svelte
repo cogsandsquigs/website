@@ -26,12 +26,12 @@
 <div class="grid justify-center">
   <h1 class="text-center">{status}</h1>
   <Error>
-    <h2 class="m-0">
+    <p class="">
         {#if status == 404}
           This page doesn't exist, doofus. What were you even looking for?
         {:else}
           {error.message}
         {/if}
-    </h2>
+    </p>
   </Error>
 </div>
