@@ -39,6 +39,12 @@
       text: `Nothing much, really. I'm not really doing anything besides making my
     website cooler ;)`,
     },
+    {
+      title: "Heyyyy. Why does this website keep changing???",
+      text: `Because its 1) mine, and I control the style, and 2) I like changing
+    up every now and then, cuz its fun. Be thankful that I'm not making the primary
+    color blisteringly bright yellow.`
+    },
   ];
 </script>
 
