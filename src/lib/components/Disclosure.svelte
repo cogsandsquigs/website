@@ -28,6 +28,7 @@
     position: absolute;
     z-index: -1;
     transition: 150ms;
+    transition-timing-function: ease-out;
   }
 
   .btn:focus ~ .content {
@@ -35,7 +36,7 @@
     opacity: 100;
     scale: 1;
     position: relative;
-    z-index: none;
+    z-index: auto;
   }
 
   .btn:focus .turn {
