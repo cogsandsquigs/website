@@ -18,12 +18,19 @@
     {#await p.posts()}
       <h2>Loading posts...</h2>
     {:then pages}
-      {#each pages as post, index}
-        {#if index > 0}
-          <hr />
+      {#each posts as post, index}
+      <div class="flex m-0 items-center">
+        {#if index === 0 || dayjs(post.metadata.date).month() != dayjs(posts[index - 1].metadata.date).month() || dayjs(post.metadata.date).year() != dayjs(posts[index - 1].metadata.date).year()}
+          <h3 class="m-0">
+            {dayjs(post.metadata.date).format("MMMM YYYY")}
+          </h3>
+          <hr class="flex-1 ml-2 my-16" />
+        {:else}
+          <hr class="flex-1 ml-2 my-16" />
         {/if}
-        <PostListing {post} />
-      {/each}
+      </div>
+      <PostListing {post} />
+    {/each}
     {:catch}
       <div class="max-w-max flex justify-center">
         <Error>Error!</Error>
