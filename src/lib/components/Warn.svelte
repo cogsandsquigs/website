@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="flex rounded-md border-warning border-2 shadow-2xl shadow-black max-w-fit"
+  class="flex rounded-md border-warning border-2 shadow-2xl shadow-black max-w-max"
 >
   <ExclamationIcon class="icon float-left h-max !w-14 stroke-warning" />
 

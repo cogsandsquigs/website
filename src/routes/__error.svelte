@@ -3,10 +3,13 @@
     return {
       props: {
         error,
-        status,
-      },
+        status
+      }
     };
   }
+
+  // generate no js for this page
+  export const hydrate = false;
 </script>
 
 <script>
@@ -24,11 +27,11 @@
   <h1 class="text-center">{status}</h1>
   <Error>
     <h2 class="m-0">
-      {#if status == 404}
-        This page doesn't exist, doofus. What were you even looking for?
-      {:else}
-        {error.message}
-      {/if}
+        {#if status == 404}
+          This page doesn't exist, doofus. What were you even looking for?
+        {:else}
+          {error.message}
+        {/if}
     </h2>
   </Error>
 </div>
