@@ -9,9 +9,6 @@
       },
     };
   }
-
-  // generate js for this page
-  export const hydrate = true;
 </script>
 
 <script lang="ts">

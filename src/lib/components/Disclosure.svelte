@@ -1,46 +1,39 @@
-<!--
-    This should not generate JS!!!
--->
 <script lang="ts">
+  import {
+    Disclosure,
+    DisclosureButton,
+    DisclosurePanel,
+    Transition
+  } from "@rgossiaux/svelte-headlessui";
+
   import { ChevronRightIcon } from "@rgossiaux/svelte-heroicons/solid";
 
   export let title = "...";
 </script>
 
-<div>
-  <button
-    class="btn flex items-center justify-between w-full border-2 border-secondary rounded-sm p-1 px-2"
+<Disclosure let:open>
+  <DisclosureButton
+    class="flex p-2 w-full justify-between items-center border-2 border-secondary rounded-sm"
   >
     <span>{@html title}</span>
-    <div class="turn">
-      <ChevronRightIcon class="icon" />
+    <div class="turn duration-150">
+      <ChevronRightIcon
+        class="icon duration-150"
+        style={open ? "transform: rotate(90deg);" : ""}
+      />
     </div>
-  </button>
-  <div class="content bg-primary pt-1 max-w-prose">
-    <slot>...</slot>
-  </div>
-</div>
-
-<style>
-  .content {
-    opacity: 0;
-    scale: 0.95;
-    position: absolute;
-    z-index: -1;
-    transition: 150ms;
-    transition-timing-function: ease-out;
-  }
-
-  .btn:focus ~ .content {
-    display: block !important;
-    opacity: 100;
-    scale: 1;
-    position: relative;
-    z-index: auto;
-  }
-
-  .btn:focus .turn {
-    transform: rotate(90deg);
-    transition: 150ms;
-  }
-</style>
+  </DisclosureButton>
+  <!-- This example uses Tailwind's transition classes -->
+  <Transition
+    enter="transition duration-100 ease-out"
+    enterFrom="transform scale-95 opacity-0"
+    enterTo="transform scale-100 opacity-100"
+    leave="transition duration-75 ease-out"
+    leaveFrom="transform scale-100 opacity-100"
+    leaveTo="transform scale-95 opacity-0"
+  >
+    <DisclosurePanel>
+      <slot>...</slot>
+    </DisclosurePanel>
+  </Transition>
+</Disclosure>
