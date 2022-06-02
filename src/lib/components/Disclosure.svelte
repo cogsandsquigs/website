@@ -32,7 +32,7 @@
     leaveFrom="transform scale-100 opacity-100"
     leaveTo="transform scale-95 opacity-0"
   >
-    <DisclosurePanel>
+    <DisclosurePanel class="p-2">
       <slot>...</slot>
     </DisclosurePanel>
   </Transition>
