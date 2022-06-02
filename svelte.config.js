@@ -31,7 +31,12 @@ const config = {
 		},
 	},
 
-	preprocess: [preprocess(), mdsvex(mdsvexconfig)],
+	preprocess: [
+		preprocess({
+			postcss: true,
+		}),
+		mdsvex(mdsvexconfig),
+	],
 }
 
 export default config
