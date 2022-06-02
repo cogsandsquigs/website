@@ -4,7 +4,7 @@
 <script lang="ts">
   import {
     ChevronRightIcon,
-    MenuAlt2Icon,
+    MenuAlt2Icon
   } from "@rgossiaux/svelte-heroicons/solid";
 
   export let title: string = undefined;
@@ -38,12 +38,15 @@
     opacity: 0;
     scale: 0.95;
     transition: 150ms;
+    z-index: -1;
   }
 
-  .btn:focus ~ .content {
+  .btn:focus ~ .content,
+  .content:hover {
     display: block !important;
     opacity: 100;
     scale: 1;
+    z-index: auto;
   }
 
   .btn:focus .turn {
