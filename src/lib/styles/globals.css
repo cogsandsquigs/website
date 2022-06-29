@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Victor Mono", "Fira Code", "Fira Mono", "Menlo", "Consolas",
+    "DejaVu Sans Mono", "monospace";
+}
+
 u {
   @apply underline decoration-2 decoration-secondary;
 }

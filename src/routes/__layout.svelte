@@ -21,10 +21,3 @@
 
   <!--<ClickCounter />-->
 </body>
-
-<style>
-  body {
-    font-family: "Victor Mono", "Fira Code", "Fira Mono", "Menlo", "Consolas",
-      "DejaVu Sans Mono", "monospace";
-  }
-</style>
