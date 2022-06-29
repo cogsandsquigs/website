@@ -29,5 +29,8 @@
 		"tslib": "^2.4.0",
 		"typescript": "^4.6.4"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"victormono": "^1.5.3"
+	}
 }

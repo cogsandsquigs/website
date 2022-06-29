@@ -1,5 +1,6 @@
 <script>
   import "$styles/globals.css";
+  import "victormono";
   import { description } from "$lib/info";
   import Nav from "$components/Nav.svelte";
   import ClickCounter from "$lib/components/ClickCounter.svelte";
@@ -18,5 +19,12 @@
     <slot />
   </div>
 
-  <ClickCounter />
+  <!--<ClickCounter />-->
 </body>
+
+<style>
+  body {
+    font-family: "Victor Mono", "Fira Code", "Fira Mono", "Menlo", "Consolas",
+      "DejaVu Sans Mono", "monospace";
+  }
+</style>
