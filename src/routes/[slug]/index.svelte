@@ -4,7 +4,6 @@
     import { dateOptions, locale } from "$lib/info";
     import { RssIcon } from "@rgossiaux/svelte-heroicons/solid";
     import "$styles/one-dark-code.css"; // TODO: make css only import one-dark-code css when used
-    import "victormono";
     import { onMount } from "svelte";
 
     export let title: string;
