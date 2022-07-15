@@ -1,13 +1,14 @@
 <script lang="ts">
     import PostList from "$components/PostList.svelte";
+    import Views from "$components/blog/Views.svelte";
     import { dateOptions, locale, title as sitetitle } from "$lib/info";
     import { RssIcon } from "@rgossiaux/svelte-heroicons/solid";
-    export let title;
-    export let description;
-    export let date;
-    export let slug;
-    export let tags;
-    export let recommendations;
+    export let title: string;
+    export let description: string;
+    export let date: Date;
+    export let slug: string;
+    export let tags: string[];
+    export let recommendations: any[];
 </script>
 
 <svelte:head>
@@ -23,11 +24,16 @@
 </div>
 
 <h3>{description}</h3>
-<p>
-    Posted on {new Date(date).toLocaleDateString(locale, dateOptions)}
-</p>
 
-{#if tags != undefined}
+<div class="flex items-center pb-2">
+    <p class="m-0">
+        Posted on {new Date(date).toLocaleDateString(locale, dateOptions)}
+    </p>
+    <span class="p-2">•</span>
+    <Views class="m-0" />
+</div>
+
+{#if tags != undefined && tags.length > 0}
     <p class="m-0 p-0">
         Tags:
         {#each tags as tag, index}
