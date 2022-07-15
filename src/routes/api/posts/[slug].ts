@@ -27,18 +27,9 @@ export async function GET({ params }) {
 
     return {
         status: 200,
-        body: Object.fromEntries(
-            Object.entries({
-                ...post,
-                ...data,
-            }).filter((field) => {
-                return (
-                    field[0] != "metadata" &&
-                    field[0] != "renderer" &&
-                    field[0] != "recommendations"
-                );
-            })
-        ),
+        body: {
+            ...data,
+        },
     };
 }
 
