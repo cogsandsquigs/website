@@ -1,4 +1,4 @@
-import { Prisma, PrismaClient, type Post, type User } from "@prisma/client";
+import { PrismaClient, type Post, type User } from "@prisma/client";
 
 export class DB {
     client: PrismaClient;
