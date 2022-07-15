@@ -14,10 +14,8 @@ export async function GET({ params }) {
         };
     }
 
-    let data: any;
-
     try {
-        data = await db.getPost(slug);
+        post = await db.getPost(slug);
     } catch (e) {
         return {
             status: 404,
@@ -28,7 +26,7 @@ export async function GET({ params }) {
     return {
         status: 200,
         body: {
-            ...data,
+            ...post,
         },
     };
 }
