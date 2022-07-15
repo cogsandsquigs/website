@@ -36,11 +36,11 @@ export async function posts() {
 
     // puts all the posts in the pages array
     for (let file in files) {
-        let p = await files[file]();
+        let p: any = await files[file]();
         posts.push({
             metadata: {
                 ...p.metadata,
-                slug: file.slice(9, file.indexOf(".md")),
+                slug: file.slice(11, file.indexOf(".md")),
                 date: dayjs.tz(p.metadata.date, dateOptions.timeZone).toDate(),
             },
             renderer: p.default,

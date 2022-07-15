@@ -1,9 +1,8 @@
 <script lang="ts" context="module">
     import { posts } from "$lib/posts";
-    import { db } from "$lib/blog/database";
     import { session } from "$app/stores";
 
-    export const load = async ({ session, params }) => {
+    export const load = async ({ session, params, fetch }) => {
         const slug = params.slug;
         // gets the post with the matching slug
         let post = (await posts()).filter(
@@ -25,11 +24,13 @@
             props: {
                 ...post.metadata,
                 post: post,
+                /*
                 views: await db.getPostViews(slug),
                 liked: (await db.getUserLikes(session.user.uuid)).includes(
                     slug
                 ),
                 likes: await db.getPostLikes(slug),
+                */
             },
         };
     };
