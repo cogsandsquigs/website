@@ -1,18 +1,28 @@
 import { db } from "$lib/blog/database";
+import { dateOptions } from "$lib/info";
 import { posts } from "$lib/posts";
+import dayjs from "dayjs";
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function GET({ params }) {
     const slug = params.slug;
+    const paths = import.meta.glob("$posts/*.md");
+    let slugs: string[] = [];
 
-    let post = (await posts()).filter((p) => p.slug === slug)[0];
+    for (let path in paths) {
+        slugs.push(path.slice(11, path.indexOf(".md")));
+    }
 
-    if (!post || post === undefined) {
+    if (!slugs.includes(slug)) {
         return {
             status: 404,
             error: `Post not found: ${slug}`,
         };
     }
+
+    const metadata = (await paths[`/src/posts/${slug}.md`]()).metadata;
+
+    let post;
 
     try {
         post = await db.getPost(slug);
@@ -26,7 +36,9 @@ export async function GET({ params }) {
     return {
         status: 200,
         body: {
+            ...metadata,
             ...post,
+            date: dayjs.tz(metadata.date, dateOptions.timeZone).toDate(),
         },
     };
 }

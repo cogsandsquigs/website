@@ -1,3 +1,4 @@
+import fs from "fs";
 import { dateOptions } from "$lib/info";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc.js";
@@ -37,6 +38,7 @@ export async function posts() {
     // puts all the posts in the pages array
     for (let file in files) {
         let p: any = await files[file]();
+
         posts.push({
             ...{
                 ...p.metadata,
