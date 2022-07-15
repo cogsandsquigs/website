@@ -38,6 +38,12 @@ export async function posts() {
     for (let file in files) {
         let p: any = await files[file]();
         posts.push({
+            ...{
+                ...p.metadata,
+                slug: file.slice(11, file.indexOf(".md")),
+                date: dayjs.tz(p.metadata.date, dateOptions.timeZone).toDate(),
+            },
+            // This is soon to be deprecated, but it's here for backwards compatibility
             metadata: {
                 ...p.metadata,
                 slug: file.slice(11, file.indexOf(".md")),
@@ -54,7 +60,7 @@ export async function posts() {
     for (let i = 0; i < posts.length; i++) {
         let post = posts[i];
         let others = posts.slice(0, i).concat(posts.slice(i + 1));
-        post.metadata.recommendations = others
+        post.recommendations = others
             .sort((a, b) => {
                 return (
                     scorePostSimilarity(post, b) - scorePostSimilarity(post, a)
@@ -72,6 +78,8 @@ export async function posts() {
             .sort(dateSort);
 
         posts[i] = post;
+
+        post.metadata.recommendations = post.recommendations;
     }
 
     return posts;

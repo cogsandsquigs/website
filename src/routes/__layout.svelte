@@ -3,7 +3,7 @@
     import "victormono";
     import { description } from "$lib/info";
     import Nav from "$components/Nav.svelte";
-    import ClickCounter from "$components/ClickCounter.svelte";
+    // import ClickCounter from "$components/ClickCounter.svelte";
 </script>
 
 <svelte:head>

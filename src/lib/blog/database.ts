@@ -167,7 +167,7 @@ export class DB {
      * @returns {Promise<User>}
      * @throws {Error} If the user does not exist or is not found
      */
-    private async getUser(uuid: string): Promise<User> {
+    public async getUser(uuid: string): Promise<User> {
         return this.client.user.findUniqueOrThrow({
             where: {
                 uuid,
@@ -226,7 +226,7 @@ export class DB {
      * @returns {Promise<Post>}
      * @throws {Error} If the post does not exist or is not found
      */
-    private async getPost(slug: string): Promise<Post> {
+    public async getPost(slug: string): Promise<Post> {
         return this.client.post.findUniqueOrThrow({
             where: {
                 slug,

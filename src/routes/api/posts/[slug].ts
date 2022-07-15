@@ -2,32 +2,47 @@ import { db } from "$lib/blog/database";
 import { posts } from "$lib/posts";
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
-export async function get({ params, locals }) {
+export async function GET({ params }) {
     const slug = params.slug;
-    // gets the post with the matching slug
-    let post = (await posts()).filter((page) => page.metadata.slug === slug)[0];
 
-    if (post === undefined) {
-        // if there is none, then return an error
+    let post = (await posts()).filter((p) => p.slug === slug)[0];
+
+    if (!post || post === undefined) {
         return {
             status: 404,
-            error: "Blog post not found! Try looking for another, would ya?",
+            error: `Post not found: ${slug}`,
+        };
+    }
+
+    let data: any;
+
+    try {
+        data = await db.getPost(slug);
+    } catch (e) {
+        return {
+            status: 404,
+            error: `Post not found: ${slug}`,
         };
     }
 
     return {
         status: 200,
-        body: {
-            ...post.metadata,
-            post: post,
-            views: await db.getPostViews(slug),
-            liked: (await db.getUserLikes(locals.user.uuid)).includes(slug),
-            likes: await db.getPostLikes(slug),
-        },
+        body: Object.fromEntries(
+            Object.entries({
+                ...post,
+                ...data,
+            }).filter((field) => {
+                return (
+                    field[0] != "metadata" &&
+                    field[0] != "renderer" &&
+                    field[0] != "recommendations"
+                );
+            })
+        ),
     };
 }
 
-export async function post({ params, request, locals }): Promise<any> {
+export async function POST({ params, request, locals }): Promise<any> {
     const slug = params.slug;
     // gets the post with the matching slug
     let post = (await posts()).filter((page) => page.metadata.slug === slug)[0];

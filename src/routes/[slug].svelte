@@ -17,12 +17,13 @@
             };
         }
 
-        console.log(session.user.uuid);
-
         return {
             status: 200,
             props: {
                 ...post.metadata,
+                ...(await (
+                    await fetch("/api/posts/" + post.metadata.slug)
+                ).json()),
                 post: post,
                 /*
                 views: await db.getPostViews(slug),

@@ -36,7 +36,5 @@ export async function handle({ event, resolve }) {
 
 /** @type {import('@sveltejs/kit').GetSession} */
 export async function getSession(event) {
-    return {
-        user: event.locals.user,
-    };
+    return event.locals.user;
 }
