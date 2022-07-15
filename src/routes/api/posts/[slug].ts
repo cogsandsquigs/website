@@ -1,26 +1,20 @@
 import { db } from "$lib/blog/database";
 import { dateOptions } from "$lib/info";
-import { posts } from "$lib/posts";
 import dayjs from "dayjs";
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function GET({ params }) {
     const slug = params.slug;
     const paths = import.meta.glob("$posts/*.md");
-    let slugs: string[] = [];
 
-    for (let path in paths) {
-        slugs.push(path.slice(11, path.indexOf(".md")));
-    }
-
-    if (!slugs.includes(slug)) {
+    if (!(await slugs()).includes(slug)) {
         return {
             status: 404,
             error: `Post not found: ${slug}`,
         };
     }
 
-    const metadata = (await paths[`/src/posts/${slug}.md`]()).metadata;
+    const metadata = (await paths[`/src/posts/${slug}.md`]())["metadata"];
 
     let post;
 
@@ -45,14 +39,11 @@ export async function GET({ params }) {
 
 export async function POST({ params, request, locals }): Promise<any> {
     const slug = params.slug;
-    // gets the post with the matching slug
-    let post = (await posts()).filter((page) => page.metadata.slug === slug)[0];
 
-    if (post === undefined) {
-        // if there is none, then return an error
+    if (!(await slugs()).includes(slug)) {
         return {
             status: 404,
-            error: "Blog post not found! Try looking for another, would ya?",
+            error: `Post not found: ${slug}`,
         };
     }
 
@@ -74,4 +65,15 @@ export async function POST({ params, request, locals }): Promise<any> {
         status: 400,
         error: "Invalid request body",
     };
+}
+
+async function slugs() {
+    const paths = import.meta.glob("$posts/*.md");
+    let slugs: string[] = [];
+
+    for (let path in paths) {
+        slugs.push(path.slice(11, path.indexOf(".md")));
+    }
+
+    return slugs;
 }
