@@ -1,10 +1,45 @@
-<script lang="ts">
+<script lang="ts" context="module">
+    import { posts } from "$lib/posts";
+    import { db } from "$lib/blog/database";
     import { session } from "$app/stores";
+
+    export const load = async ({ session, params }) => {
+        const slug = params.slug;
+        // gets the post with the matching slug
+        let post = (await posts()).filter(
+            (page) => page.metadata.slug === slug
+        )[0];
+
+        if (post === undefined) {
+            // if there is none, then return an error
+            return {
+                status: 404,
+                error: "Blog post not found! Try looking for another, would ya?",
+            };
+        }
+
+        console.log(session.user.uuid);
+
+        return {
+            status: 200,
+            props: {
+                ...post.metadata,
+                post: post,
+                views: await db.getPostViews(slug),
+                liked: (await db.getUserLikes(session.user.uuid)).includes(
+                    slug
+                ),
+                likes: await db.getPostLikes(slug),
+            },
+        };
+    };
+</script>
+
+<script lang="ts">
     import PostList from "$components/PostList.svelte";
     import { dateOptions, locale } from "$lib/info";
     import { RssIcon } from "@rgossiaux/svelte-heroicons/solid";
     import "$styles/one-dark-code.css"; // TODO: make css only import one-dark-code css when used
-    import { onMount } from "svelte";
 
     export let title: string;
     export let description: string;
