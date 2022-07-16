@@ -85,7 +85,7 @@
     {#each infos as info}
         <Disclosure class="min-w-full">
             <DisclosureButton
-                class="px-2 py-[1px] min-w-full text-left border-2 border-secondary rounded-sm"
+                class="px-2 py-1 min-w-full text-left border-2 border-secondary rounded-sm"
             >
                 {@html info.title}
             </DisclosureButton>
