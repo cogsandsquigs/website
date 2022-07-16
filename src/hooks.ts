@@ -3,8 +3,10 @@ import { parse, serialize } from "cookie";
 import { db } from "$lib/blog/database";
 
 export async function handle({ event, resolve }) {
-    if (event.url.pathname.startsWith("/api/posts/")) {
-        console.log(event.url.pathname);
+    if (
+        event.url.pathname.startsWith("/api/posts/") &&
+        event.url.pathname.split("/").length === 3
+    ) {
         const slug = event.url.pathname.slice(11);
         if (!(await slugs()).includes(slug)) {
             return new Response(`Post not found: ${slug}`, {

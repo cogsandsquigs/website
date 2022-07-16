@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-    export const load = async ({ params, fetch }) => {
+    export const load = async ({ params, fetch, session }) => {
         const slug = params.slug;
 
         if (!(await slugs()).includes(slug)) {
@@ -12,8 +12,13 @@
         return {
             status: 200,
             props: {
-                ...(await (await fetch(`/api/posts/${slug}`)).json()),
+                ...(await fetch(`/api/posts/${slug}`)
+                    .then((res) => res.json())
+                    .then((data) => data)),
                 render: (await import(`../posts/${slug}.md`)).default, // we do this here so we can still use mdsvex stuff yay 🎉
+                liked: await fetch(`/api/users/${session.uuid}`)
+                    .then((res) => res.json())
+                    .then((data) => data.likes.includes(slug)),
             },
         };
     };
@@ -49,6 +54,7 @@
 
     const handleLikeButtonClick = async () => {
         liked = !liked;
+        likes = liked ? likes + 1 : likes - 1;
         await fetch(`/api/posts/${slug}/like`, {
             method: "POST",
             headers: {

@@ -5,7 +5,7 @@
     undefined.
 -->
 <script lang="ts">
-    import Post from "$lib/components/Post.svelte";
+    import Post from "$lib/components/PostListing.svelte";
     import dayjs from "dayjs";
 
     export let posts: any[];
