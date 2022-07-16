@@ -1,17 +1,20 @@
-import { posts } from "$lib/posts";
 import { title, website, description, locale } from "$lib/info";
 
 export async function get() {
-  const body = xml((await posts()).map((x) => x.metadata));
+    const body = xml(
+        await fetch("/api/posts")
+            .then((res) => res.json())
+            .then((data) => data)
+    );
 
-  const headers = {
-    "Cache-Control": "max-age=0, s-maxage=3600",
-    "Content-Type": "application/xml",
-  };
-  return {
-    headers,
-    body,
-  };
+    const headers = {
+        "Cache-Control": "max-age=0, s-maxage=3600",
+        "Content-Type": "application/xml",
+    };
+    return {
+        headers,
+        body,
+    };
 }
 
 const xml = (posts) => `<?xml version="1.0"?>
@@ -23,9 +26,9 @@ const xml = (posts) => `<?xml version="1.0"?>
     <link>${website}</link>
     <language>${locale}</language>
     ${posts
-      .map(
-        (post) =>
-          `
+        .map(
+            (post) =>
+                `
         <item>
           <title>${post.title}</title>
           <description>${post.description}</description>
@@ -33,17 +36,17 @@ const xml = (posts) => `<?xml version="1.0"?>
           <link>${website}/blog/${post.slug}</link>
           <guid>${website}/blog/${post.slug}</guid>
           ${post.tags
-            .map(
-              (tag) =>
-                `
+              .map(
+                  (tag) =>
+                      `
                 <category domain="${website}/blog/tags/${tag}">${tag}</category>
               `
-            )
-            .join("")}
+              )
+              .join("")}
         </item>
         `
-      )
-      .join("")}
+        )
+        .join("")}
   </channel>
 </rss>
 `;
