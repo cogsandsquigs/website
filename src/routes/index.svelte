@@ -1,11 +1,9 @@
 <script context="module">
-    import { posts } from "$lib/posts";
-
     /** @type {import("@sveltejs/kit").Load} */
     export async function load({}) {
         return {
             props: {
-                pages: await posts(),
+                pages: await (await fetch("/api/posts")).json(),
             },
         };
     }

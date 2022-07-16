@@ -1,62 +1,61 @@
 <script lang="ts" context="module">
-    import { posts } from "$lib/posts";
-    import { session } from "$app/stores";
-
-    export const load = async ({ session, params, fetch }) => {
+    export const load = async ({ params, fetch }) => {
         const slug = params.slug;
-        // gets the post with the matching slug
-        let post = (await posts()).filter(
-            (page) => page.metadata.slug === slug
-        )[0];
 
-        if (post === undefined) {
-            // if there is none, then return an error
+        if (!(await slugs()).includes(slug)) {
             return {
                 status: 404,
-                error: "Blog post not found! Try looking for another, would ya?",
+                error: `Post not found: ${slug}`,
             };
         }
 
         return {
             status: 200,
             props: {
-                ...post.metadata,
-                ...(await (
-                    await fetch("/api/posts/" + post.metadata.slug)
-                ).json()),
-                post: post,
-                /*
-                views: await db.getPostViews(slug),
-                liked: (await db.getUserLikes(session.user.uuid)).includes(
-                    slug
-                ),
-                likes: await db.getPostLikes(slug),
-                */
+                ...(await (await fetch(`/api/posts/${slug}`)).json()),
+                render: (await import(`../posts/${slug}.md`)).default, // we do this here so we can still use mdsvex stuff yay 🎉
             },
         };
     };
+
+    async function slugs() {
+        const paths = import.meta.glob("$posts/*.md");
+        let slugs: string[] = [];
+
+        for (let path in paths) {
+            slugs.push(path.slice(11, path.indexOf(".md")));
+        }
+
+        return slugs;
+    }
 </script>
 
 <script lang="ts">
-    import PostList from "$components/PostList.svelte";
     import { dateOptions, locale } from "$lib/info";
     import { RssIcon } from "@rgossiaux/svelte-heroicons/solid";
     import "$styles/one-dark-code.css"; // TODO: make css only import one-dark-code css when used
+    import type { Post } from "$lib/types";
 
     export let title: string;
     export let description: string;
-    export let date;
-    export let slug;
-    export let tags;
-    export let recommendations;
-    export let liked;
-    export let likes;
-    export let views;
-    export let post: any;
+    export let date: Date;
+    export let slug: string;
+    export let tags: string[];
+    export let recommendations: Post[];
+    export let liked: boolean;
+    export let likes: number;
+    export let views: number;
+    export let render: string;
 
-    const handleLikeButtonClick = () => {
-        console.log("changed");
+    const handleLikeButtonClick = async () => {
         liked = !liked;
+        await fetch(`/api/posts/${slug}/like`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ liked }),
+        });
     };
 </script>
 
@@ -113,7 +112,7 @@
   This way we can render the post's
   mdsvex content!
  -->
-<svelte:component this={post.renderer} {...post.metadata} />
+<svelte:component this={render} {title} />
 
 <button on:click={handleLikeButtonClick}>
     {#if !liked}
@@ -126,5 +125,11 @@
 {#if recommendations != null && recommendations.length > 0}
     <hr class="mt-2 mb-6" />
     <h3>You might like:</h3>
-    <PostList posts={recommendations} size="sm" />
+    <ul>
+        {#each recommendations as post}
+            <li>
+                <a href="/{post.slug}">{post.title}</a>
+            </li>
+        {/each}
+    </ul>
 {/if}

@@ -1,7 +1,17 @@
 import { validate, v4 as uuidv4 } from "uuid";
 import { parse, serialize } from "cookie";
+import { db } from "$lib/blog/database";
 
 export async function handle({ event, resolve }) {
+    if (event.url.pathname.startsWith("/api/posts/")) {
+        const slug = event.url.pathname.slice(11);
+        if (!(await slugs()).includes(slug)) {
+            return new Response(`Post not found: ${slug}`, {
+                status: 404,
+            });
+        }
+    }
+
     const cookies = parse(event.request.headers.get("cookie") || "");
 
     try {
@@ -18,6 +28,8 @@ export async function handle({ event, resolve }) {
         event.locals.user = {
             uuid: uuidv4(),
         };
+
+        db.newUser(event.locals.user.uuid);
     }
 
     const response = await resolve(event);
@@ -37,4 +49,15 @@ export async function handle({ event, resolve }) {
 /** @type {import('@sveltejs/kit').GetSession} */
 export async function getSession(event) {
     return event.locals.user;
+}
+
+async function slugs() {
+    const paths = import.meta.glob("$posts/*.md");
+    let slugs: string[] = [];
+
+    for (let path in paths) {
+        slugs.push(path.slice(11, path.indexOf(".md")));
+    }
+
+    return slugs;
 }

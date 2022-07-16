@@ -79,7 +79,7 @@ export class DB {
      * If the user already liked the post, it does not update the
      * likes, and removes the post slug from the user's likes.
      * If the post does not exist, creates a new post.
-     * If the user does not exist, creates a new user.
+     * If the user does not exist, throws.
      * @param slug The slug of the post.
      * @param uuid The uuid of the user.
      * @param liked Whether the user liked the post or not.
@@ -92,14 +92,7 @@ export class DB {
             post = await this.newPost(slug);
         }
 
-        let user: User;
-        let newUser: boolean = false;
-        try {
-            user = await this.getUser(uuid);
-        } catch (e) {
-            user = await this.newUser(uuid);
-            newUser = true;
-        }
+        let user = await this.getUser(uuid);
 
         if (!user.likes.includes(slug)) {
             await this.updateUser(uuid, {
@@ -143,16 +136,12 @@ export class DB {
     }
 
     /**
-     * Helper methods
-     */
-
-    /**
      * newUser creates a new user object.
      * @param uuid The uuid of the user.
      * @param user The fields you would like to update.
      * @returns {Promise<User>}
      */
-    private async newUser(uuid: string, user?: any): Promise<User> {
+    public async newUser(uuid: string, user?: any): Promise<User> {
         return this.client.user.create({
             data: {
                 ...user,
