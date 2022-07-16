@@ -1,9 +1,13 @@
 <script lang="ts">
     import { title } from "$lib/info";
-    import Disclosure from "$components/Disclosure.svelte";
-    import ProfileImg from "$components/ProfileImg.svelte";
+    import {
+        Disclosure,
+        DisclosureButton,
+        DisclosurePanel,
+        Transition,
+    } from "@rgossiaux/svelte-headlessui";
 
-    let infos = [
+    let infos: { title: string; text: string }[] = [
         {
             title: "First off. Pronouns?",
             text: "He/They, and thanks in advance for respecting them!",
@@ -19,26 +23,26 @@
         {
             title: "Anything you <em>dislike</em>?",
             text: `Not much, but for starters: Obtrusive and overly-explicit code (I see you,
-    java), heights, and those days where you just have nothing to do but you
-    want to do something, so you just walk around slightly agitated.`,
+            java), heights, and those days where you just have nothing to do but you
+            want to do something, so you just walk around slightly agitated.`,
         },
         {
             title: "Oh and, what's your setup at home?",
             text: `Glad you asked! Currently, I'm running a Ryzen 5 3600XT CPU with 16 GB of
-    RAM, along with a Radeon RX 6600 GPU, all on an MSI X470 GAMING PLUS MAX ATX
-    (oooh look fancy words!) motherboard. And of course, it's running Manjaro Linux.
-    Because Linux > Windows.`,
+            RAM, along with a Radeon RX 6600 GPU, all on an MSI X470 GAMING PLUS MAX ATX
+            (oooh look fancy words!) motherboard. And of course, it's running Manjaro Linux.
+            Because Linux > Windows.`,
         },
         {
             title: "Anything you're working on right now?",
             text: `Nothing much, really. I'm not really doing anything besides making my
-    website cooler ;)`,
+            website cooler ;)`,
         },
         {
-            title: "Heyyyy. Why does this website keep changing???",
+            title: "Heyyyy. Why does this website keep changing?",
             text: `Because its 1) mine, and I control the style, and 2) I like changing
-    up every now and then, cuz its fun. Be thankful that I'm not making the primary
-    color blisteringly bright yellow.`,
+            up every now and then, cuz its fun. Be thankful that I'm not making the primary
+            color blisteringly bright yellow.`,
         },
     ];
 </script>
@@ -51,9 +55,7 @@
 <div class="flex items-center w-fill">
     <h1 class="m-0">About Me!</h1>
 
-    <div class="flex flex-1 justify-center">
-        <ProfileImg />
-    </div>
+    <div class="flex flex-1 justify-center" />
 </div>
 
 <p>
@@ -81,7 +83,25 @@
 
 <div class="space-y-4">
     {#each infos as info}
-        <Disclosure title={info.title}>{@html info.text}</Disclosure>
+        <Disclosure class="min-w-full">
+            <DisclosureButton
+                class="px-2 py-[1px] min-w-full text-left border-2 border-secondary rounded-sm"
+            >
+                {@html info.title}
+            </DisclosureButton>
+            <Transition
+                enter="transition duration-100 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-95 opacity-0"
+            >
+                <DisclosurePanel>
+                    {@html info.text}
+                </DisclosurePanel>
+            </Transition>
+        </Disclosure>
     {/each}
 </div>
 
