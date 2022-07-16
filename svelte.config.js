@@ -1,6 +1,3 @@
-import mdsvexconfig from "./mdsvex.config.js";
-import { mdsvex } from "mdsvex";
-
 import adapter from "@sveltejs/adapter-auto";
 import preprocess from "svelte-preprocess";
 
@@ -8,7 +5,7 @@ import path from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-    extensions: [".svelte", ...mdsvexconfig.extensions],
+    extensions: [".svelte"],
 
     kit: {
         // Default SvelteKit options
@@ -31,7 +28,6 @@ const config = {
         preprocess({
             postcss: true,
         }),
-        mdsvex(mdsvexconfig),
     ],
 };
 

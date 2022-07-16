@@ -7,7 +7,7 @@
         Transition,
     } from "@rgossiaux/svelte-headlessui";
 
-    let infos: { title: string; text: string }[] = [
+    const infos: { title: string; text: string }[] = [
         {
             title: "First off. Pronouns?",
             text: "He/They, and thanks in advance for respecting them!",

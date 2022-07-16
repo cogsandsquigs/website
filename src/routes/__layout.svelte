@@ -17,7 +17,7 @@
 <body
     class="max-w-none text-md sm:text-lg md:text-xl bg-primary prose prose-invert prose-a:underline prose-a:decoration-secondary prose-a:decoration-2 prose-a:font-bold prose-hr:border-[1px] prose-hr:border-secondary"
 >
-    <nav>
+    <nav class="sticky top-0 bg-primary">
         <ul class="flex justify-evenly list-none p-0">
             <li class="mr-4">
                 <a href="/">Home</a>
