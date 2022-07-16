@@ -12,6 +12,8 @@ dayjs.extend(timezone);
 export async function GET({ params, locals }) {
     const slug = params.slug;
 
+    console.log(slug);
+
     try {
         db.updatePostViews(slug, locals.user.uuid);
         return {

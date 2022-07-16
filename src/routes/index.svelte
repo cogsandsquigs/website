@@ -1,6 +1,6 @@
 <script context="module">
     /** @type {import("@sveltejs/kit").Load} */
-    export async function load({}) {
+    export async function load({ fetch }) {
         return {
             props: {
                 pages: await (await fetch("/api/posts")).json(),

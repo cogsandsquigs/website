@@ -16,7 +16,7 @@
     {#if size == "lg"}
         {#each posts as post, index}
             <div class="flex m-0 items-center">
-                {#if index === 0 || dayjs(post.date).month() != dayjs(posts[index - 1].date).month() || dayjs(post.date).year() != dayjs(posts[index - 1].metadata.date).year()}
+                {#if index === 0 || dayjs(post.date).month() != dayjs(posts[index - 1].date).month() || dayjs(post.date).year() != dayjs(posts[index - 1].date).year()}
                     <h3 class="m-0">
                         {dayjs(post.date).format("MMMM YYYY")}
                     </h3>

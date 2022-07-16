@@ -200,7 +200,7 @@ export class DB {
      * @param post The fields you would like to create.
      * @returns {Promise<Post>}
      */
-    private async newPost(slug: string, post?: any): Promise<Post> {
+    public async newPost(slug: string, post?: any): Promise<Post> {
         return this.client.post.create({
             data: {
                 ...post,

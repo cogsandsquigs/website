@@ -4,6 +4,7 @@ import { db } from "$lib/blog/database";
 
 export async function handle({ event, resolve }) {
     if (event.url.pathname.startsWith("/api/posts/")) {
+        console.log(event.url.pathname);
         const slug = event.url.pathname.slice(11);
         if (!(await slugs()).includes(slug)) {
             return new Response(`Post not found: ${slug}`, {

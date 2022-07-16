@@ -12,26 +12,26 @@
         <div class="flex justify-between items-start">
             <h1 class="m-0">
                 {#if link}
-                    <a href="/{post.metadata.slug}">{post.metadata.title}</a>
+                    <a href="/{post.slug}">{post.title}</a>
                 {:else}
-                    {post.metadata.title}
+                    {post.title}
                 {/if}
             </h1>
             <a href="/rss.xml"><RssIcon class="icon" /></a>
         </div>
 
-        <h3>{post.metadata.description}</h3>
+        <h3>{post.description}</h3>
         <p>
-            Posted on {new Date(post.metadata.date).toLocaleDateString(
+            Posted on {new Date(post.date).toLocaleDateString(
                 locale,
                 dateOptions
             )}
         </p>
 
-        {#if post.metadata.tags != undefined}
+        {#if post.tags != undefined}
             <p class="m-0 p-0">
                 Tags:
-                {#each post.metadata.tags as tag, index}
+                {#each post.tags as tag, index}
                     {#if index > 0}
                         , <a href={"/tags/" + tag}>{tag}</a>
                     {:else}
@@ -45,22 +45,22 @@
     <div class="space-y-0">
         <h2 class="m-0">
             {#if link}
-                <a href="/{post.metadata.slug}">{post.metadata.title}</a>
+                <a href="/{post.slug}">{post.title}</a>
             {:else}
-                {post.metadata.title}
+                {post.title}
             {/if}
         </h2>
-        <p class="m-0 font-bold">{post.metadata.description}</p>
+        <p class="m-0 font-bold">{post.description}</p>
         <p class="m-0">
-            Posted on {new Date(post.metadata.date).toLocaleDateString(
+            Posted on {new Date(post.date).toLocaleDateString(
                 locale,
                 dateOptions
             )}
         </p>
 
-        {#if post.metadata.tags != undefined}
+        {#if post.tags != undefined}
             <p class="m-0">
-                Tags: {#each post.metadata.tags as tag, index}{#if index > 0}, <a
+                Tags: {#each post.tags as tag, index}{#if index > 0}, <a
                             href={"/tags/" + tag}>{tag}</a
                         >{:else}<a href={"/tags/" + tag}>{tag}</a>{/if}{/each}
             </p>
@@ -70,17 +70,17 @@
     <div class="pb-1">
         <p class="m-0">
             {#if link}
-                <a href="/{post.metadata.slug}">{post.metadata.title}</a>,
+                <a href="/{post.slug}">{post.title}</a>,
             {:else}
-                {post.metadata.title},
+                {post.title},
             {/if}
-            posted on {new Date(post.metadata.date).toLocaleDateString(
+            posted on {new Date(post.date).toLocaleDateString(
                 locale,
                 dateOptions
             )}
         </p>
         <p class="text-sm text-[#fff] font-bold">
-            Tags: {#each post.metadata.tags as tag, index}{#if index > 0}, <a
+            Tags: {#each post.tags as tag, index}{#if index > 0}, <a
                         href={"/tags/" + tag}>{tag}</a
                     >{:else}<a href={"/tags/" + tag}>{tag}</a>{/if}{/each}
         </p>
