@@ -1,4 +1,4 @@
-import { db } from "$lib/blog/database";
+import { db } from "$lib/database";
 import { dateOptions } from "$lib/info";
 import type { Post } from "$lib/types";
 import dayjs from "dayjs";

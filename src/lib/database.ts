@@ -1,4 +1,5 @@
 import { PrismaClient, type Post, type User } from "@prisma/client";
+import { v4 as uuidv4 } from "uuid";
 
 export class DB {
     client: PrismaClient;
@@ -137,16 +138,15 @@ export class DB {
 
     /**
      * newUser creates a new user object.
+     * If no uuid is provided, it generates a new one.
      * @param uuid The uuid of the user.
      * @param user The fields you would like to update.
      * @returns {Promise<User>}
      */
-    public async newUser(uuid: string, user?: any): Promise<User> {
+    public async newUser(uuid?: string, user?: any): Promise<User> {
         return this.client.user.create({
-            data: {
-                ...user,
-                uuid: uuid,
-            },
+            data:
+                uuid != null ? { uuid, ...user } : { uuid: uuidv4(), ...user },
         });
     }
 

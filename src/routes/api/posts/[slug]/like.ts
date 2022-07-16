@@ -1,4 +1,4 @@
-import { db } from "$lib/blog/database";
+import { db } from "$lib/database";
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function POST({ params, request, locals }) {

@@ -1,52 +1,50 @@
 import { validate, v4 as uuidv4 } from "uuid";
-import { parse, serialize } from "cookie";
-import { db } from "$lib/blog/database";
+import { parse, serialize, type CookieSerializeOptions } from "cookie";
+import { db } from "$lib/database";
+import User from "@rgossiaux/svelte-heroicons/solid/User";
 
 export async function handle({ event, resolve }) {
+    // if post is not valid, return 404
     if (
-        event.url.pathname.startsWith("/api/posts/") &&
-        event.url.pathname.split("/").length === 3
+        event.params.slug !== undefined &&
+        !(await slugs()).includes(event.params.slug)
     ) {
-        const slug = event.url.pathname.slice(11);
-        if (!(await slugs()).includes(slug)) {
-            return new Response(`Post not found: ${slug}`, {
+        return new Response(`Post not found: ${event.params.slug}`, {
+            status: 404,
+        });
+    }
+
+    // if user UUID is not valid, return 404
+    if (event.params.uuid !== undefined && !validate(event.params.uuid)) {
+        try {
+            await db.getUser(event.params.uuid);
+        } catch (e) {
+            return new Response(`User not found: ${event.params.uuid}`, {
                 status: 404,
             });
         }
     }
 
-    const cookies = parse(event.request.headers.get("cookie") || "");
+    // set uuid if user does not have one
+    let cookie = parse(event.headers.cookie || "");
+    let uuid = validate(cookie.uuid) ? cookie.uuid : (await db.newUser()).uuid;
+    event.locals.user.uuid = uuid;
 
-    try {
-        event.locals.user = JSON.parse(cookies.user) || null;
-    } catch (e) {
-        event.locals.user = null;
-    }
+    // set cookie
+    let cookieOptions: CookieSerializeOptions = {
+        maxAge: 1000 * 60 * 60 * 24 * 365,
+        httpOnly: true,
+        sameSite: "strict",
+        secure: process.env.NODE_ENV === "production",
+    };
+    let cookieHeader = serialize("uuid", uuid, cookieOptions);
 
-    if (
-        event.locals.user === null ||
-        event.locals.user === undefined ||
-        !validate(event.locals.user.uuid)
-    ) {
-        event.locals.user = {
-            uuid: uuidv4(),
-        };
-
-        db.newUser(event.locals.user.uuid);
-    }
-
-    const response = await resolve(event);
-
-    response.headers.set(
-        "set-cookie",
-        serialize("user", JSON.stringify(event.locals.user), {
-            path: "/",
-            httpOnly: true,
-            expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 365),
-        })
-    );
-
-    return response;
+    // return response
+    return new Response(resolve(), {
+        headers: {
+            "set-cookie": cookieHeader,
+        },
+    });
 }
 
 /** @type {import('@sveltejs/kit').GetSession} */
