@@ -3,7 +3,6 @@
     import "victormono";
     import { description } from "$lib/info";
     import Nav from "$components/Nav.svelte";
-    // import ClickCounter from "$components/ClickCounter.svelte";
 </script>
 
 <svelte:head>
@@ -18,6 +17,4 @@
     <div class="px-2.5 mx-auto my-4 max-w-prose scrollbar-none">
         <slot />
     </div>
-
-    <!--<ClickCounter />-->
 </body>

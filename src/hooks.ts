@@ -15,25 +15,25 @@ export async function handle({ event, resolve }) {
         });
     }
 
-    // if user UUID is not valid, return 404
+    // if user id is not valid, return 404
     if (
-        event.params.uuid !== undefined &&
-        !validate(event.params.uuid) &&
+        event.params.id !== undefined &&
+        !validate(event.params.id) &&
         (await prisma.user.findUnique({
-            where: { uuid: event.params.uuid },
+            where: { id: event.params.id },
         })) !== null
     ) {
-        return new Response(`User not found: ${event.params.uuid}`, {
+        return new Response(`User not found: ${event.params.id}`, {
             status: 404,
         });
     }
 
-    // set uuid if user does not have one
+    // set id if user does not have one
     let cookie = parse(event.request.headers.cookie || "");
-    let uuid = validate(cookie.uuid)
-        ? cookie.uuid
-        : (await prisma.user.create({ data: { uuid: uuidv4() } })).uuid;
-    event.locals.user = await prisma.user.findUnique({ where: { uuid } });
+    let id = validate(cookie.id)
+        ? cookie.id
+        : (await prisma.user.create({ data: { id: uuidv4() } })).id;
+    event.locals.user = await prisma.user.findUnique({ where: { id } });
 
     // resolve request
     const response = await resolve(event);
@@ -45,7 +45,7 @@ export async function handle({ event, resolve }) {
         sameSite: "strict",
         secure: process.env.NODE_ENV === "production",
     };
-    let cookieHeader = serialize("uuid", uuid, cookieOptions);
+    let cookieHeader = serialize("id", id, cookieOptions);
     response.headers.set("Set-Cookie", cookieHeader);
 
     // return response
