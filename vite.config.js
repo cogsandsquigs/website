@@ -16,10 +16,12 @@ const PatchSSRNoExternalPlugin = {
 /** @type {import('vite').UserConfig} */
 const config = {
     plugins: [sveltekit(), PatchSSRNoExternalPlugin],
+
     legacy: { buildSsrCjsExternalHeuristics: true },
+
     server: {
         port: 3000,
-        open: true,
+        open: false,
     },
 };
 
