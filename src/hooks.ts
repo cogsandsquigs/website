@@ -1,7 +1,8 @@
 import { validate, v4 as uuidv4 } from "uuid";
 import { parse, serialize, type CookieSerializeOptions } from "cookie";
-import { db } from "$lib/database";
-import User from "@rgossiaux/svelte-heroicons/solid/User";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 export async function handle({ event, resolve }) {
     // if post is not valid, return 404
@@ -15,20 +16,27 @@ export async function handle({ event, resolve }) {
     }
 
     // if user UUID is not valid, return 404
-    if (event.params.uuid !== undefined && !validate(event.params.uuid)) {
-        try {
-            await db.getUser(event.params.uuid);
-        } catch (e) {
-            return new Response(`User not found: ${event.params.uuid}`, {
-                status: 404,
-            });
-        }
+    if (
+        event.params.uuid !== undefined &&
+        !validate(event.params.uuid) &&
+        (await prisma.user.findUnique({
+            where: { uuid: event.params.uuid },
+        })) !== null
+    ) {
+        return new Response(`User not found: ${event.params.uuid}`, {
+            status: 404,
+        });
     }
 
     // set uuid if user does not have one
-    let cookie = parse(event.headers.cookie || "");
-    let uuid = validate(cookie.uuid) ? cookie.uuid : (await db.newUser()).uuid;
-    event.locals.user.uuid = uuid;
+    let cookie = parse(event.request.headers.cookie || "");
+    let uuid = validate(cookie.uuid)
+        ? cookie.uuid
+        : (await prisma.user.create({ data: { uuid: uuidv4() } })).uuid;
+    event.locals.user = await prisma.user.findUnique({ where: { uuid } });
+
+    // resolve request
+    const response = await resolve(event);
 
     // set cookie
     let cookieOptions: CookieSerializeOptions = {
@@ -38,13 +46,10 @@ export async function handle({ event, resolve }) {
         secure: process.env.NODE_ENV === "production",
     };
     let cookieHeader = serialize("uuid", uuid, cookieOptions);
+    response.headers.set("Set-Cookie", cookieHeader);
 
     // return response
-    return new Response(resolve(), {
-        headers: {
-            "set-cookie": cookieHeader,
-        },
-    });
+    return response;
 }
 
 /** @type {import('@sveltejs/kit').GetSession} */
