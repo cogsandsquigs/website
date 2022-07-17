@@ -1,6 +1,6 @@
-/** @type {import('./__types/[slug]').RequestHandler} */
-export const GET = async ({ params }) => {
+/** @type {import('@sveltejs/kit').RequestHandler} */
+export const GET = async ({}) => {
     return {
-        status: 200,
+        status: 404,
     };
 };

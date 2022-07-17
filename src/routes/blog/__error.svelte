@@ -1,10 +1,12 @@
 <script context="module">
     /** @type {import('@sveltejs/kit').Load} */
-    export const load = async ({ error, status }) => {
+    export const load = async ({ error, status, params }) => {
         let tip = null;
 
         if (status === 404) {
-            tip = "Try looking elsewhere, wouldya?";
+            error.message = `Post "${params.slug}" does not exist`;
+            tip =
+                "There are plenty of other posts you could have clicked on. How did you even get here?";
         } else if (String(status)[0] === "5") {
             tip =
                 "Howabout you <a href='https://github.com/cogsandsquigs/cogsandsquigs/issues/new' target='_blank'>report an issue</a>. Seems like this is a me problem, not a you problem ;)";
