@@ -1,11 +1,6 @@
 <script lang="ts">
     import { title } from "$lib/info";
-    import {
-        Disclosure,
-        DisclosureButton,
-        DisclosurePanel,
-        Transition,
-    } from "@rgossiaux/svelte-headlessui";
+    import Disclosure from "$components/Disclosure.svelte";
 
     const infos: { title: string; text: string }[] = [
         {
@@ -83,25 +78,7 @@
 
 <div class="space-y-4">
     {#each infos as info}
-        <Disclosure class="min-w-full">
-            <DisclosureButton
-                class="px-2 py-1 min-w-full text-left border-2 border-secondary rounded-sm"
-            >
-                {@html info.title}
-            </DisclosureButton>
-            <Transition
-                enter="transition duration-100 ease-out"
-                enterFrom="transform scale-95 opacity-0"
-                enterTo="transform scale-100 opacity-100"
-                leave="transition duration-75 ease-out"
-                leaveFrom="transform scale-100 opacity-100"
-                leaveTo="transform scale-95 opacity-0"
-            >
-                <DisclosurePanel>
-                    {@html info.text}
-                </DisclosurePanel>
-            </Transition>
-        </Disclosure>
+        <Disclosure title={info.title}>{@html info.text}</Disclosure>
     {/each}
 </div>
 

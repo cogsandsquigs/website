@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 body {
-  font-family: "Victor Mono", "Fira Code", "Fira Mono", "Menlo", "Consolas",
-    "DejaVu Sans Mono", "monospace";
+    font-family: "Victor Mono", "Fira Code", "Fira Mono", "Menlo", "Consolas",
+        "DejaVu Sans Mono", "monospace";
 }
 
 u {
-  @apply underline decoration-2 decoration-secondary;
+    @apply underline decoration-2 decoration-secondary;
 }
 
 .icon {
-  @apply w-8 p-1;
+    width: 28px !important;
+    height: 28px !important;
 }

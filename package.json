@@ -25,6 +25,7 @@
         "victormono": "^1.5.3"
     },
     "devDependencies": {
+        "@rgossiaux/svelte-heroicons": "^0.1.2",
         "vite": "^3.0.0"
     }
 }
