@@ -21,6 +21,6 @@
 
 <h1 class="text-center">{status}</h1>
 <h2>{message}</h2>
-<Disclosure title="<h3 class='p-0 m-0'>Trace</h3>">
+<Disclosure title="<h3 class='p-0 m-0'>Trace (if ya wanna know more)</h3>">
     <pre>{trace}</pre>
 </Disclosure>
