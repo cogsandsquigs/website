@@ -9,9 +9,8 @@
         "preview": "vite preview"
     },
     "type": "module",
-    "dependencies": {
-        "@rgossiaux/svelte-headlessui": "^1.0.2",
-        "@sveltejs/adapter-auto": "^1.0.0-next.48",
+    "devDependencies": {
+        "@sveltejs/adapter-auto": "^1.0.0-next.61",
         "@sveltejs/kit": "^1.0.0-next.377",
         "@tailwindcss/typography": "^0.5.2",
         "autoprefixer": "^10.4.7",
@@ -21,10 +20,11 @@
         "tailwindcss": "^3.0.24",
         "tslib": "^2.4.0",
         "typescript": "^4.6.4",
-        "victormono": "^1.5.3"
-    },
-    "devDependencies": {
-        "@rgossiaux/svelte-heroicons": "^0.1.2",
         "vite": "^3.0.0"
+    },
+    "dependencies": {
+        "@rgossiaux/svelte-headlessui": "^1.0.2",
+        "@rgossiaux/svelte-heroicons": "^0.1.2",
+        "victormono": "^1.5.3"
     }
 }
