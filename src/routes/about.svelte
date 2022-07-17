@@ -49,8 +49,6 @@
 
 <div class="flex items-center w-fill">
     <h1 class="m-0">About Me!</h1>
-
-    <div class="flex flex-1 justify-center" />
 </div>
 
 <p>

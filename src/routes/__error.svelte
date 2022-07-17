@@ -3,11 +3,12 @@
     export const load = async ({ error, status }) => {
         let tip = null;
 
-        if (status === 404) {
+        if (status === 400) {
+            tip =
+                "I dunno how you screwed up, but I'm sure you'll figure it out. Try again differently, maybe?";
+        } else if (status === 404) {
             tip = "Try looking elsewhere, wouldya?";
-        }
-
-        if (String(status)[0] === "5") {
+        } else if (String(status)[0] === "5") {
             tip =
                 "Howabout you <a href='https://github.com/cogsandsquigs/cogsandsquigs/issues/new' target='_blank'>report an issue</a>. Seems like this is a me problem, not a you problem ;)";
         }
@@ -40,7 +41,7 @@
 {/if}
 
 {#if trace}
-    <Disclosure title="<h3 class='p-0 m-0'>Trace (if ya wanna know more)</h3>">
+    <Disclosure title="Trace (if ya wanna know more)">
         <pre>{trace}</pre>
     </Disclosure>
 {/if}
