@@ -26,6 +26,7 @@
         "remark-parse-frontmatter": "^1.0.3",
         "remark-rehype": "^10.1.0",
         "remark-stringify": "^10.0.2",
+        "svelte": "^3.49.0",
         "svelte-preprocess": "^4.10.6",
         "tailwindcss": "^3.1.6",
         "to-vfile": "^7.2.3",
