@@ -11,4 +11,9 @@ export const GET = async ({ params }) => {
             error: new Error(`Post with slug ${slug} not found`),
         };
     }
+
+    return {
+        status: 200,
+        body: post
+    }
 };

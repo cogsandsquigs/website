@@ -5,10 +5,6 @@ description: Because I want it to. Here's why.
 tags: [dev, webdev, website]
 ---
 
-<script>
-  import Info from "$components/Info.svelte"
-</script>
-
 Ok so. You might be wondering.
 
 "Ian, why do you change your site so often? What's the point?"
@@ -36,9 +32,5 @@ My about me page is similar in vein. It's a block of text describing me, with th
 Blog posts are just a title, subtitle, post date, tags, and then the block of text composing the post (If I ever feel up for it, I may make some of the posts interactive). Again, not too interesting.
 
 What may be interesting to you (assuming you are interesting in web development) is that most, if not all, of this site is basically HTML and CSS. The only javascript elements are the index page subtitle (because it changes depending on the date it's viewed on), the dropdowns, and the disclosures.
-
-<Info>
-  These are used because 1) `onClick` is irreplaceable and 2) these components are accessible!
-</Info>
 
 Anyways, that's basically it for my site design as of right now. Have fun, and stay snazzy!

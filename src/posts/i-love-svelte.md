@@ -35,35 +35,14 @@ the compiler does most, if not all of the work for you,
 translating this into a page that needs no client-side
 rendering (if you choose, however, you still can load
 things on the client side, like blog pages and stuff
-if you like that. I dont).
+if you wanna do that).
 
-[mdsvex](https://mdsvex.com) allows me to write my pages
-in an [mdx](https://mdxjs.com)-like interface designed
-for Svelte users. It looks like markdown, it feels like
-markdown, but you can include Svelte components within it!
-
-For example, a standard hello world page would look like this:
-
-```markdown
-# Hello world!
-
-Welcome to this website!
-```
-
-This gets transpiled into Svelte and then into raw html
-and css. Thanks to Svelte's amazing and easy way to
-use preprocessor plugins of any and all kinds, its
-almost too easy to add support for any and all other
-preprocessors that make you website beautiful.
-
-Besides mdsvex, the other plugin I use is [Tailwind CSS](https://tailwindcss.com),
+Another plugin I use is [Tailwind CSS](https://tailwindcss.com),
 because it makes styling a breeze to do! It also lets me
 experiment with different styles and themes quite fast, which
 with ordinary, plain CSS would be difficult.
 
-In the end, Svelte is just amazing to work with. I don't
-think things like [nextjs](https://nextjs.org) compare,
-simply because of the elegance of writing a website with
-Svelte. It's too easy, too elegant, too simple. Truly svelte.
+In the end, Svelte is just amazing to work with.It's too easy,
+too elegant, too simple. Truly svelte.
 
 I love Svelte.
