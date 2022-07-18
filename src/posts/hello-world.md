@@ -16,8 +16,8 @@ block of typescript, colored in correctly.
 let x: string = "hello world!";
 
 const test = () => {
-  console.log(x);
-}
+    console.log(x);
+};
 
 test();
 ```
@@ -25,11 +25,9 @@ test();
 This is a footnote![^1]
 [^1]: Wow! more quality content!
 
-<!--
 Below, you should see some $\KaTeX$ being formatted correctly
 and displayed correctly as math equations. You should be seeing the _Riemann Zeta function_, $\zeta (s)$, as well as its definition!
 
 $$
-{\displaystyle \zeta (s)=\sum _{n=1}^{\infty }{\frac {1}{n^{s}}}={\frac {1}{1^{s}}}+{\frac {1}{2^{s}}}+{\frac {1}{3^{s}}}+\cdots }
+{\displaystyle \zeta (s)=\sum _{n=1}^{\infty }{\frac {1}{n^{s}}}={\frac {1}{1^{s}}}+{\frac {1}{2^{s}}}+{\frac {1}{3^{s}}}+\cdots}
 $$
--->

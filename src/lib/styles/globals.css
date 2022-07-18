@@ -15,3 +15,10 @@ u {
     width: 28px !important;
     height: 28px !important;
 }
+/**
+ * This is here because otherwise, the non-katex-rendered html will be shown.
+ */
+.katex-html {
+    display: none;
+    visibility: hidden;
+}
