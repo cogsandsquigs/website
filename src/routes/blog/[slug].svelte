@@ -5,9 +5,9 @@
     export const load = async ({ params, fetch }) => {
         const { slug } = params;
 
-        let post: Post = await (await fetch(`/api/posts/${slug}`)).json();
+        let request = await fetch(`/api/posts/${slug}`);
 
-        if (!post) {
+        if (request.status != 200) {
             return {
                 status: 404,
                 error: new Error(`Not found: /blog/${slug}`),
@@ -15,8 +15,8 @@
         }
 
         return {
-            status: 200,
-            props: { post },
+            status: request.status,
+            props: { post: await request.json() },
         };
     };
 </script>
@@ -28,6 +28,18 @@
 </script>
 
 <h1 class="mb-0">{post.title}</h1>
-<p>{post.description}</p>
-<h3>Created at: {dayjs(post.createdAt).format("MM/DD/YYYY")}</h3>
+<h2 class="my-0">Created at: {dayjs(post.createdAt).format("MM/DD/YYYY")}</h2>
+<h3 class="m-0 font-extralight">{post.description}</h3>
+{#if post.tags.length > 0}
+    <h4 class="m-0">
+        Tags:
+        {#each post.tags as tag, index}
+            {#if index > 0}
+                ,
+            {/if}
+            <a href="/blog/tags/{tag}">{tag}</a>
+        {/each}
+    </h4>
+{/if}
+<hr class="my-4" />
 {@html post.content}
