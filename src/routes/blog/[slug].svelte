@@ -1,10 +1,10 @@
 <script lang="ts" context="module">
     import type { Post } from "$lib/types";
 
-    export const load = ({ params, fetch }) => {
+    export const load = async ({ params, fetch }) => {
         const { slug } = params;
 
-        let post: Post = fetch(`/api/posts/${slug}`);
+        let post: Post = await (await fetch(`/api/posts/${slug}`)).json();
 
         if (!post) {
             return {
@@ -21,5 +21,11 @@
 </script>
 
 <script lang="ts">
+    import dayjs from "dayjs";
+
     export let post: Post;
 </script>
+
+<h1>{post.title}</h1>
+<h3>Created at: {dayjs(post.createdAt).format("MM/DD/YYYY")}</h3>
+{@html post.content}

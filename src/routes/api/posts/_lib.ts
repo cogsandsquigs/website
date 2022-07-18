@@ -1,13 +1,21 @@
 import type { Post } from "$lib/types";
 import { read } from "to-vfile"
-import { readFile } from "fs/promises";
 import glob from "glob";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkParseFrontmatter from "remark-parse-frontmatter";
+import remarkGFM from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
+import { timeZone } from "$lib/info";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import tz from "dayjs/plugin/timezone";
+
+dayjs.extend(utc)
+dayjs.extend(tz)
+
 /**
  * Gets all the posts that exist. If none exist, an empty array is returned.
  * @returns {Promise<Post[]>}
@@ -54,6 +62,7 @@ export const compilePost = async (file): Promise<Post> => {
                 tags: { type: "array", required: true },
             }
         })
+        .use(remarkGFM)
         .use(remarkRehype)
         .use(rehypeStringify)
         .process(await file)
@@ -63,7 +72,7 @@ export const compilePost = async (file): Promise<Post> => {
 
     return {
         slug: post.path.slice(10, -3),
-        createdAt: new Date(frontmatter.date),
+        createdAt: dayjs.tz(frontmatter.date, timeZone),
         title: frontmatter.title,
         description: frontmatter.description,
         content: post.value.toString(),
