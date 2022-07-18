@@ -26,6 +26,7 @@
     export let post: Post;
 </script>
 
-<h1>{post.title}</h1>
+<h1 class="mb-0">{post.title}</h1>
+<p>{post.description}</p>
 <h3>Created at: {dayjs(post.createdAt).format("MM/DD/YYYY")}</h3>
 {@html post.content}
