@@ -1,4 +1,4 @@
-<script context="module">
+<script lang="ts" context="module">
     /** @type {import('@sveltejs/kit').Load} */
     export const load = ({ error, status }) => {
         return {

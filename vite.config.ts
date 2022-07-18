@@ -16,7 +16,7 @@ const PatchSSRNoExternalPlugin = {
 
 /** @type {import('vite').UserConfig} */
 const config = {
-    plugins: [sveltekit(), PatchSSRNoExternalPlugin],
+    plugins: [sveltekit()],
 
     legacy: { buildSsrCjsExternalHeuristics: true },
 
