@@ -7,6 +7,7 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkParseFrontmatter from "remark-parse-frontmatter";
 import remarkGFM from "remark-gfm";
 import remarkRehype from "remark-rehype";
+import rehypePrism from "rehype-prism-plus";
 import rehypeStringify from "rehype-stringify";
 import { timeZone } from "$lib/info";
 import dayjs from "dayjs";
@@ -64,6 +65,7 @@ export const compilePost = async (file): Promise<Post> => {
         })
         .use(remarkGFM)
         .use(remarkRehype)
+        .use(rehypePrism)
         .use(rehypeStringify)
         .process(await file)
 

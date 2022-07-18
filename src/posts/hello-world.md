@@ -15,12 +15,15 @@ block of typescript, colored in correctly.
 ```ts
 let x: string = "hello world!";
 
-function test() {
+const test = () => {
   console.log(x);
 }
 
 test();
 ```
+
+This is a footnote![^1]
+[^1]: Wow! more quality content!
 
 <!--
 Below, you should see some $\KaTeX$ being formatted correctly

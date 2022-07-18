@@ -1,5 +1,6 @@
 <script lang="ts" context="module">
     import type { Post } from "$lib/types";
+    import "$styles/one-dark-code.css";
 
     export const load = async ({ params, fetch }) => {
         const { slug } = params;
