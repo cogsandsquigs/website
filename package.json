@@ -16,7 +16,6 @@
         "@types/glob": "^7.2.0",
         "autoprefixer": "^10.4.7",
         "glob": "^8.0.3",
-        "mdsvex": "^0.10.6",
         "postcss": "^8.4.13",
         "rehype-stringify": "^9.0.3",
         "remark-frontmatter": "^4.0.1",
