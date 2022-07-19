@@ -12,9 +12,15 @@
 
 <script lang="ts">
     import ErrorPage from "$components/ErrorPage.svelte";
+    import { title } from "$lib/info";
 
     export let error: Error;
     export let status: number;
 </script>
+
+<svelte:head>
+    <title>{title + " - " + status}</title>
+    <meta property="og:title" content={title + " - " + status} />
+</svelte:head>
 
 <ErrorPage {error} {status} />

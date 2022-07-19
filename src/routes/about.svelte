@@ -43,8 +43,8 @@
 </script>
 
 <svelte:head>
-    <title>{title + " - About Me!"}</title>
-    <meta property="og:title" content={title + " - About Me!"} />
+    <title>{title + " - about"}</title>
+    <meta property="og:title" content={title + " - about"} />
 </svelte:head>
 
 <div class="flex items-center w-fill">

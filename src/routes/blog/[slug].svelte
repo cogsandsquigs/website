@@ -22,11 +22,16 @@
 </script>
 
 <script lang="ts">
-    import { dateFormat } from "$lib/info";
+    import { dateFormat, title } from "$lib/info";
     import dayjs from "dayjs";
 
     export let post: Post;
 </script>
+
+<svelte:head>
+    <title>{title + " - " + post.title}</title>
+    <meta property="og:title" content={title + " - " + post.title} />
+</svelte:head>
 
 <h1 class="mb-0">{post.title}</h1>
 <h2 class="my-0">Created at: {dayjs(post.createdAt).format(dateFormat)}</h2>
