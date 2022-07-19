@@ -65,7 +65,6 @@ export const compile = async (
         .process(file);
 
     const post = await parsed;
-
     const frontmatter = post.data.frontmatter as any;
 
     return {
