@@ -13,8 +13,8 @@ import rehypeMathjax from "rehype-mathjax";
 import rehypeStringify from "rehype-stringify";
 import { timeZone } from "$lib/info";
 import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import tz from "dayjs/plugin/timezone";
+import utc from "dayjs/plugin/utc.js";
+import tz from "dayjs/plugin/timezone.js";
 
 dayjs.extend(utc);
 dayjs.extend(tz);
@@ -44,18 +44,18 @@ export const compile = async (file: Compatible): Promise<Post> => {
         .use(rehypePrism)
         .use(rehypeMathjax, {
             tex: {
-                packages: ['base'],
+                packages: ["base"],
                 inlineMath: [
-                    ['$', '$'],
-                    ['\\(', '\\)']
+                    ["$", "$"],
+                    ["\\(", "\\)"],
                 ],
                 displayMath: [
-                    ['$$', '$$'],
-                    ['\\[', '\\]']
+                    ["$$", "$$"],
+                    ["\\[", "\\]"],
                 ],
                 processEscapes: true,
-                tagIndent: "0em"
-            }
+                tagIndent: "0em",
+            },
         })
         .use(rehypeStringify)
         .process(file);
