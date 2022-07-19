@@ -5,11 +5,11 @@
     const infos: { title: string; text: string }[] = [
         {
             title: "First off. Pronouns?",
-            text: "He/They, and thanks in advance for respecting them!",
+            text: "He/They, and thanks in advance for respecting them ;)",
         },
         {
             title: "Any preference for titles?",
-            text: "Mr. works just fine!",
+            text: "Mr. works just fine.",
         },
         {
             title: "Okay! Anything you like?",
