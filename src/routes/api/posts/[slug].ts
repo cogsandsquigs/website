@@ -5,7 +5,16 @@ export const GET = async ({ params }) => {
     const { slug } = params;
     let post: any;
 
-    post = await import(`../../../posts/${slug}.md?raw`);
+    try {
+        post = await import(`../../../posts/${slug}.md?raw`);
+    } catch (e) {
+        return {
+            status: 404,
+            body: {
+                error: e,
+            },
+        };
+    }
 
     return {
         status: 200,
