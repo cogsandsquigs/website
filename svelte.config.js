@@ -26,6 +26,10 @@ const config = {
             hydrate: true,
             router: false,
         },
+
+        prerender: {
+            default: false,
+        },
     },
 
     preprocess: [preprocess({ postcss: true })],
