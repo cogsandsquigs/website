@@ -20,17 +20,20 @@
     <nav class="sticky top-0 bg-primary">
         <ul class="flex justify-evenly list-none p-0">
             <li class="mr-4">
-                <a href="/">Home</a>
+                <a href="/">home</a>
             </li>
             <li class="mr-4">
-                <a href="/about">About</a>
+                <a href="/about">about</a>
+            </li>
+            <li class="mr-4">
+                <a href="/blog">blog</a>
             </li>
             <li class="mr-4">
                 <Popover>
                     <PopoverButton
                         class="font-extrabold text-[#fff] underline decoration-secondary decoration-2"
                     >
-                        Socials
+                        socials
                     </PopoverButton>
                     <!-- This example uses Tailwind's transition classes -->
                     <Transition
