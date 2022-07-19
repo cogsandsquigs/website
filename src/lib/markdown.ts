@@ -1,5 +1,4 @@
 import type { Post } from "$lib/types";
-import type { Compatible } from "to-vfile";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkFrontmatter from "remark-frontmatter";
@@ -26,10 +25,7 @@ dayjs.extend(tz);
  * @param slug The slug of the file
  * @returns {Promise<Post>}
  */
-export const compile = async (
-    file: Compatible,
-    slug: string
-): Promise<Post> => {
+export const compile = async (file: string, slug: string): Promise<Post> => {
     const parsed = await unified()
         .use(remarkParse)
         .use(remarkFrontmatter)
