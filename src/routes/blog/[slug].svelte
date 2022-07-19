@@ -7,7 +7,7 @@
 
         let request = await fetch(`/api/posts/${slug}`);
 
-        if (request.status != 200) {
+        if (request.status == 404) {
             return {
                 status: 404,
                 error: new Error(`Not found: /blog/${slug}`),
