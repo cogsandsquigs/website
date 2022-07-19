@@ -16,8 +16,13 @@ u {
     height: 28px !important;
 }
 
-/* This is here because otherwise, the non-katex-rendered html will be shown. */
-.katex-html {
-    display: none;
-    visibility: hidden;
+/* These next two classes are used for making sure math is displayed properly and nicely */
+/* This is to make inline math actually inline */
+.math-inline {
+    display: inline-block;
+}
+
+/* This is to make displayed math look nicer than default */
+.math-display svg {
+    margin: auto;
 }

@@ -4,11 +4,12 @@ import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkParseFrontmatter from "remark-parse-frontmatter";
+import remarkTOC from "remark-toc";
 import remarkGFM from "remark-gfm";
 import remarkMath from "remark-math";
 import remarkRehype from "remark-rehype";
 import rehypePrism from "rehype-prism-plus";
-import rehypeKatex from "rehype-katex";
+import rehypeMathjax from "rehype-mathjax";
 import rehypeStringify from "rehype-stringify";
 import { timeZone } from "$lib/info";
 import dayjs from "dayjs";
@@ -37,12 +38,27 @@ export const compile = async (file: Compatible): Promise<Post> => {
             },
         })
         .use(remarkGFM)
+        .use(remarkTOC)
         .use(remarkMath)
         .use(remarkRehype)
         .use(rehypePrism)
-        .use(rehypeKatex)
+        .use(rehypeMathjax, {
+            tex: {
+                packages: ['base'],
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ],
+                processEscapes: true,
+                tagIndent: "0em"
+            }
+        })
         .use(rehypeStringify)
-        .process(await file);
+        .process(file);
 
     const post = await parsed;
     const frontmatter = post.data.frontmatter as any;
