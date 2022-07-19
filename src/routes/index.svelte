@@ -10,7 +10,6 @@
 </script>
 
 <script lang="ts">
-    import PostList from "$lib/components/PostList.svelte";
     import { title, subtitle } from "$lib/info";
     import type { Post } from "$lib/types";
 

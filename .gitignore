@@ -8,4 +8,5 @@ package-lock.json
 .env.*
 !.env.example
 
+/.vercel
 /.vercel_build_output

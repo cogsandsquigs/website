@@ -10,8 +10,8 @@
     },
     "type": "module",
     "devDependencies": {
-        "@sveltejs/adapter-auto": "^1.0.0-next.61",
-        "@sveltejs/kit": "^1.0.0-next.378",
+        "@sveltejs/adapter-vercel": "next",
+        "@sveltejs/kit": "next",
         "@tailwindcss/typography": "^0.5.4",
         "@types/glob": "^7.2.0",
         "autoprefixer": "^10.4.7",
