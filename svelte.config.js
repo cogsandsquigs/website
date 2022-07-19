@@ -1,11 +1,9 @@
 import adapter from "@sveltejs/adapter-vercel";
 import preprocess from "svelte-preprocess";
-import path from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
     extensions: [".svelte"],
-
     kit: {
         // Default SvelteKit options
         // target: "#svelte",

@@ -22,8 +22,9 @@ const config = {
 
     server: {
         port: 3000,
-        open: false,
     },
+
+    assetsInclude: ["**/*.md"],
 
     resolve: {
         alias: {

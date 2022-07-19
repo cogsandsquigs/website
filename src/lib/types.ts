@@ -1,8 +1,6 @@
-import type { Dayjs } from "dayjs";
-
 export interface Post {
     slug: string;
-    createdAt: Dayjs;
+    createdAt: Date;
     title: string;
     description: string;
     content: string;

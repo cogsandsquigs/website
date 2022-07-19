@@ -23,9 +23,13 @@ dayjs.extend(tz);
  * Compiles a post using unified, remark, and rehype.
  * Throws if frontmatter is incorrect, or for any other reason.
  * @param file The vfile to use
+ * @param slug The slug of the file
  * @returns {Promise<Post>}
  */
-export const compile = async (file: Compatible): Promise<Post> => {
+export const compile = async (
+    file: Compatible,
+    slug: string
+): Promise<Post> => {
     const parsed = await unified()
         .use(remarkParse)
         .use(remarkFrontmatter)
@@ -61,11 +65,12 @@ export const compile = async (file: Compatible): Promise<Post> => {
         .process(file);
 
     const post = await parsed;
+
     const frontmatter = post.data.frontmatter as any;
 
     return {
-        slug: post.path.slice(10, -3),
-        createdAt: dayjs.tz(frontmatter.date, timeZone),
+        slug: slug,
+        createdAt: dayjs.tz(frontmatter.date, timeZone).toDate(),
         title: frontmatter.title,
         description: frontmatter.description,
         content: post.value.toString(),
