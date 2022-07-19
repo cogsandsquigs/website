@@ -32,7 +32,7 @@ const config: UserConfig = {
 
     resolve: {
         alias: {
-            $lib: "/src/lib",
+            // $lib: "/src/lib",
             $styles: "/src/lib/styles",
             $components: "/src/lib/components",
             $posts: "/src/posts",
@@ -45,7 +45,22 @@ const config: UserConfig = {
     },
 
     build: {
+        minify: "esbuild",
         rollupOptions: {
+            external: [
+                "@sveltejs/adapter-vercel",
+                "@sveltejs/kit",
+                "autoprefixer",
+                "postcss",
+                /rehype-.*/, // keep an eye on this!
+                /remark-.*/, // keep an eye on this!
+                "svelte-preprocess",
+                /tailwindcss/,
+                "tslib",
+                "typescript",
+                "unified", // keep an eye on this!
+                "vite",
+            ],
             treeshake: "smallest",
         },
     },
