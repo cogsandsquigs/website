@@ -1,4 +1,3 @@
-import path from "path";
 import { sveltekit } from "@sveltejs/kit/vite";
 
 const PatchSSRNoExternalPlugin = {
@@ -28,11 +27,11 @@ const config = {
 
     resolve: {
         alias: {
-            $lib: path.resolve("src/lib"),
-            $styles: path.resolve("src/lib/styles"),
-            $components: path.resolve("src/lib/components"),
-            $posts: path.resolve("src/posts"),
-            $assets: path.resolve("src/lib/assets"),
+            $lib: "/src/lib",
+            $styles: "/src/lib/styles",
+            $components: "/src/lib/components",
+            $posts: "/src/posts",
+            $assets: "/src/lib/assets",
         },
     },
 };
