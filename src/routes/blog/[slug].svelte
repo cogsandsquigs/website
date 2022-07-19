@@ -22,13 +22,14 @@
 </script>
 
 <script lang="ts">
+    import { dateFormat } from "$lib/info";
     import dayjs from "dayjs";
 
     export let post: Post;
 </script>
 
 <h1 class="mb-0">{post.title}</h1>
-<h2 class="my-0">Created at: {dayjs(post.createdAt).format("MM/DD/YYYY")}</h2>
+<h2 class="my-0">Created at: {dayjs(post.createdAt).format(dateFormat)}</h2>
 <h3 class="m-0 font-extralight">{post.description}</h3>
 {#if post.tags.length > 0}
     <h4 class="m-0">

@@ -12,6 +12,10 @@ export const GET = async ({}) => {
                 .sync("src/posts/*.md")
                 .map(async (path) => await read(path, { encoding: "utf-8" }))
                 .map(async (file) => compile(await file))
-        ),
+        )
+            // sort by date
+            .then((posts) =>
+                posts.sort((a, b) => b.createdAt.unix() - a.createdAt.unix())
+            ),
     };
 };
