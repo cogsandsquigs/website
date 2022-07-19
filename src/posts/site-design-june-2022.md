@@ -2,7 +2,7 @@
 title: Why does my website look like this?
 date: 2022-06-01
 description: Because I want it to. Here's why.
-tags: [dev, webdev, website]
+tags: [dev, webdev, my website]
 ---
 
 Ok so. You might be wondering.
