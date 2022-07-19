@@ -1,6 +1,4 @@
 import { compile } from "$lib/markdown";
-import { read } from "to-vfile";
-import type { VFile } from "vfile";
 
 /** @type {import('./__types/[slug]').RequestHandler}*/
 export const GET = async ({ params }) => {
