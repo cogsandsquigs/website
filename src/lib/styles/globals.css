@@ -16,6 +16,22 @@ u {
     height: 28px !important;
 }
 
+details {
+    @apply px-2 py-1 my-4 min-w-full text-left border-2 border-secondary rounded-sm;
+}
+
+details > p {
+    @apply m-0;
+}
+
+details > summary::marker {
+    content: "⇒ ";
+}
+
+details[open] > summary::marker {
+    content: "⇓ ";
+}
+
 /* These next two classes are used for making sure math is displayed properly and nicely */
 /* This is to make inline math actually inline */
 .math-inline {
