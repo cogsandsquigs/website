@@ -1,18 +1,8 @@
-<script lang="ts" context="module">
-    export const load = async ({ fetch }) => {
-        let request = await fetch("/api/posts");
-        return {
-            status: request.status,
-            error: request.error,
-            props: { posts: (await request.json()).slice(0, 3) },
-        };
-    };
-</script>
-
 <script lang="ts">
     import { title, subtitle } from "$lib/info";
     import type { Post } from "$lib/types";
 
+    export let html;
     export let posts: Post[];
 </script>
 
@@ -25,9 +15,12 @@
     <h1 class="m-0">{title}</h1>
     <h2>{subtitle}</h2>
 </div>
-<p>Hello, and welcome to my website, my little slice of the blogosphere!</p>
-<h3>Recent posts:</h3>
-<ul>
+
+{@html html}
+
+<!-- TODO: Remove if/when notion-page-to-html supports databases -->
+<h3 class="m-0">Recent posts:</h3>
+<ul class="m-0">
     {#each posts as post}
         <li><a href={`/blog/${post.slug}`}>{post.title}</a></li>
     {/each}
