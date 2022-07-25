@@ -10,6 +10,7 @@
     },
     "type": "module",
     "devDependencies": {
+        "@notionhq/client": "^2.1.0",
         "@sveltejs/adapter-vercel": "next",
         "@sveltejs/kit": "next",
         "@tailwindcss/typography": "^0.5.4",
@@ -39,6 +40,8 @@
         "@rgossiaux/svelte-headlessui": "^1.0.2",
         "@rgossiaux/svelte-heroicons": "^0.1.2",
         "dayjs": "^1.11.3",
+        "dedupe": "^3.0.3",
+        "prune": "^0.0.2",
         "victormono": "^1.5.3"
     }
 }
