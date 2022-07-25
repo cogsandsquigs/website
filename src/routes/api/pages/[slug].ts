@@ -36,6 +36,7 @@ export const GET = async ({ params }) => {
             excludeCSS: true,
             excludeMetadata: true,
             excludeScripts: true,
+            excludeHeaderFromBody: true,
             excludeTitleFromHead: true,
         })
     ).html
