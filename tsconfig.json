@@ -30,8 +30,6 @@
             "$styles/*": ["src/lib/styles/*"],
             "$components": ["src/lib/components"],
             "$components/*": ["src/lib/components/*"],
-            "$posts": ["src/posts"],
-            "$posts/*": ["src/posts/*"],
             "$assets": ["src/lib/assets"],
             "$assets/*": ["src/lib/assets/*"]
         }

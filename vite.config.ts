@@ -35,7 +35,6 @@ const config: UserConfig = {
             // $lib: "/src/lib",
             $styles: "/src/lib/styles",
             $components: "/src/lib/components",
-            $posts: "/src/posts",
             $assets: "/src/lib/assets",
         },
     },
@@ -51,6 +50,7 @@ const config: UserConfig = {
                 "@sveltejs/adapter-vercel",
                 "@sveltejs/kit",
                 "autoprefixer",
+                "notion-page-to-html",
                 "postcss",
                 /rehype-.*/, // keep an eye on this!
                 /remark-.*/, // keep an eye on this!
