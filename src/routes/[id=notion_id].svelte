@@ -33,13 +33,13 @@
                             page_id: page.id,
                             property_id: "RAnF",
                         })) as any
-                    ).results[0].rich_text.text.content
+                    ).results[0]?.rich_text?.text?.content || ""
                 }`,
             };
         } else {
             return {
-                status: 301,
-                redirect: `/notion/${page.id}`,
+                status: 404,
+                error: `Not found: /${params.id}`,
             };
         }
     };

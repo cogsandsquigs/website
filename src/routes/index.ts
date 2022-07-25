@@ -6,10 +6,11 @@ export const GET = async ({ url }) => {
         await Notion.databases.query({
             database_id: "ea38bd5a70c64151897767a0a3f759a0",
             filter: {
-                property: "slug",
-                rich_text: {
-                    contains: "/",
-                },
+                or: [
+                    { property: "slug", rich_text: { contains: "/" } },
+                    { property: "slug", rich_text: { is_empty: true } }
+                ]
+
             },
         })
     ).results;
@@ -35,17 +36,17 @@ export const GET = async ({ url }) => {
         // make details closed by default
         .replaceAll(/<details open="">|<details open>/gi, "<details>");
 
+
+    let posts = await fetch(`${url.origin}/api/posts`) // adding url.origin to the endpoint b/c sveltekit fetch is not allowed here.
+        .then((res) => res.json())
+        .then((data) => data.slice(0, 3))
+
+
     return {
         status: 200,
-        headers: {
-            "Access-Control-Allow-Origin": "*",
-        },
         body: {
-            slug: "/",
             html: html,
-            posts: await fetch(`${url.origin}/api/posts`) // adding url.origin to the endpoint b/c sveltekit fetch is not allowed here.
-                .then((res) => res.json())
-                .then((data) => data.slice(0, 3)),
+            posts: posts,
         },
     };
 };

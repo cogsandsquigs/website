@@ -41,7 +41,7 @@ export const GET = async ({ params }) => {
         },
         body: {
             slug: params.slug,
-            html: html,
+            content: html,
         },
     };
 };

@@ -136,10 +136,8 @@ export const getAllPosts = async (): Promise<Post[]> => {
         })
     ).results;
 
-    let posts: Post[] = [];
-
-    for (let page of results) {
-        let post: Post = {
+    let posts: Post[] = await Promise.all(results.map(async page => {
+        return {
             slug: await Notion.pages.properties
                 .retrieve({
                     page_id: page.id,
@@ -184,10 +182,8 @@ export const getAllPosts = async (): Promise<Post[]> => {
                 .then((property) => (property as any).date.start),
 
             content: "", // excluding content for now because it is not needed when getting all posts, and it takes a lot of time to load
-        };
-
-        posts.push(post);
-    }
+        }
+    }));
 
     return posts;
 };

@@ -2,7 +2,7 @@
     import { title, subtitle } from "$lib/info";
     import type { Post } from "$lib/types";
 
-    export let html;
+    export let content: string;
     export let posts: Post[];
 </script>
 
@@ -16,7 +16,7 @@
     <h2>{subtitle}</h2>
 </div>
 
-{@html html}
+{@html content}
 
 <!-- TODO: Remove if/when notion-page-to-html supports databases -->
 <h3 class="m-0">Recent posts:</h3>

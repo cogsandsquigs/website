@@ -2,7 +2,7 @@
     import { title } from "$lib/info";
 
     export let slug;
-    export let html;
+    export let content;
 </script>
 
 <svelte:head>
@@ -10,4 +10,4 @@
     <meta property="og:title" content={title + " - " + slug} />
 </svelte:head>
 
-{@html html}
+{@html content}
