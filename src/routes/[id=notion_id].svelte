@@ -38,7 +38,7 @@
             };
         } else {
             return {
-                status: 302,
+                status: 301,
                 redirect: `/notion/${page.id}`,
             };
         }
