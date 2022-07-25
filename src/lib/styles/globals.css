@@ -28,12 +28,25 @@ details > p {
     @apply m-0;
 }
 
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 90deg;
+    }
+}
+
 details > summary::marker {
-    content: "⇒ ";
+    animation-name: rotate;
+    animation-duration: 100ms;
+    animation-timing-function: ease-out;
 }
 
 details[open] > summary::marker {
-    content: "⇓ ";
+    animation-name: rotate;
+    animation-duration: 100ms;
+    animation-timing-function: ease-out;
 }
 
 /* These next two classes are used for making sure math is displayed properly and nicely */
