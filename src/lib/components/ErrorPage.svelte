@@ -1,6 +1,4 @@
 <script lang="ts">
-    import Disclosure from "$lib/components/Disclosure.svelte";
-
     export let error: Error;
     export let status: number;
 
@@ -22,7 +20,8 @@
 {/if}
 
 {#if error.stack}
-    <Disclosure title="Trace (if ya wanna know more)">
+    <details>
+        <summary>Trace (if ya wanna know more)</summary>
         <pre>{error.stack}</pre>
-    </Disclosure>
+    </details>
 {/if}
