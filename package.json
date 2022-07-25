@@ -15,7 +15,6 @@
         "@sveltejs/kit": "next",
         "@tailwindcss/typography": "^0.5.4",
         "autoprefixer": "^10.4.7",
-        "notion-page-to-html": "^1.1.4",
         "postcss": "^8.4.13",
         "rehype-parse": "^8.0.4",
         "rehype-prism-plus": "^1.4.2",
@@ -31,6 +30,7 @@
     "dependencies": {
         "@rgossiaux/svelte-headlessui": "^1.0.2",
         "@rgossiaux/svelte-heroicons": "^0.1.2",
+        "notion-page-to-html": "^1.1.4",
         "dayjs": "^1.11.3",
         "victormono": "^1.5.3"
     }

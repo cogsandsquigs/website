@@ -50,7 +50,6 @@ const config: UserConfig = {
                 "@sveltejs/adapter-vercel",
                 "@sveltejs/kit",
                 "autoprefixer",
-                "notion-page-to-html",
                 "postcss",
                 /rehype-.*/, // keep an eye on this!
                 /remark-.*/, // keep an eye on this!
