@@ -32,7 +32,7 @@ export const GET = async ({ params }) => {
         })
     ).html
         // make details closed by default
-        .replaceAll(`<details open="">`, "<details>");
+        .replaceAll(/<details open="">|<details open>/gi, "<details>");
 
     return {
         status: 200,

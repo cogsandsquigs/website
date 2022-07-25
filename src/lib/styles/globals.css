@@ -20,7 +20,7 @@ u {
     height: 28px !important;
 }
 
-details {
+details > summary {
     @apply px-2 py-1 my-4 min-w-full text-left border-2 border-secondary rounded-sm;
 }
 

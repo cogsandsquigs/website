@@ -12,7 +12,8 @@ import rehypeStringify from "rehype-stringify";
  * Description: { id: 'R%5EPL' },
  * Published: { id: 'VFlz' },
  * Tags: { id: '~%5BOR' },
- * Name: { id: 'title' }
+ * 'Created at': { id: '~qQ%3F' },
+ * Title: { id: 'title' }
  */
 
 /** The Notion API client. */
@@ -72,11 +73,18 @@ export const getPost = async (slug: string): Promise<Post | null> => {
             })
             .then(({ multi_select }) => multi_select.map((tag) => tag.name)),
 
-        createdAt: page.created_time,
+        createdAt: await Notion.pages.properties
+            .retrieve({
+                page_id: page.id,
+                property_id: "~qQ%3F",
+            })
+            .then(({ date }) => date.start),
 
         content: await unified()
             .use(rehypeParse)
-            .use(rehypePrism)
+            .use(rehypePrism, {
+                showLineNumbers: true,
+            })
             .use(rehypeStringify)
             .process(
                 (
@@ -89,7 +97,14 @@ export const getPost = async (slug: string): Promise<Post | null> => {
                     })
                 ).html
             )
-            .then(({ value }) => value.toString()),
+            .then(({ value }) =>
+                value
+                    .toString()
+                    .replaceAll(
+                        /<details open="">|<details open>/gi,
+                        `<details>`
+                    )
+            ),
     };
 
     return post;
@@ -100,15 +115,17 @@ export const getAllPosts = async (): Promise<Post[]> => {
         await Notion.databases.query({
             database_id: "f03b1f24dc6641c49838f77ffee53390",
             filter: {
-                and: [
-                    {
-                        property: "Published",
-                        checkbox: {
-                            equals: true,
-                        },
-                    },
-                ],
+                property: "Published",
+                checkbox: {
+                    equals: true,
+                },
             },
+            sorts: [
+                {
+                    property: "Created at",
+                    direction: "descending",
+                },
+            ],
         })
     ).results;
 
@@ -146,9 +163,14 @@ export const getAllPosts = async (): Promise<Post[]> => {
                     multi_select.map((tag) => tag.name)
                 ),
 
-            createdAt: page.created_time,
+            createdAt: await Notion.pages.properties
+                .retrieve({
+                    page_id: page.id,
+                    property_id: "~qQ%3F",
+                })
+                .then(({ date }) => date.start),
 
-            content: "", // excluding content for now because it is not needed when getting all posts
+            content: "", // excluding content for now because it is not needed when getting all posts, and it takes a lot of time to load
         };
 
         posts.push(post);
