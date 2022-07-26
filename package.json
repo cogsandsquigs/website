@@ -11,7 +11,7 @@
     "type": "module",
     "devDependencies": {
         "@notionhq/client": "^2.1.0",
-        "@sveltejs/adapter-vercel": "next",
+        "@sveltejs/adapter-auto": "next",
         "@sveltejs/kit": "next",
         "@tailwindcss/typography": "^0.5.4",
         "autoprefixer": "^10.4.7",
