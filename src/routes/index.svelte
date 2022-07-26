@@ -32,7 +32,7 @@
 
 <p>
     Hello, and welcome to my website, my little slice of the blogosphere. I hope
-    you have a good time, and enjoy yourself while you're here!.
+    you have a good time, and enjoy yourself while you're here!
 </p>
 
 <p>
