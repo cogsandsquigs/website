@@ -40,7 +40,6 @@
     >.
 </p>
 
-<!-- TODO: Remove if/when notion-page-to-html supports databases -->
 <h3 class="m-0">Recent posts:</h3>
 <ul class="m-0">
     {#each posts as post}
