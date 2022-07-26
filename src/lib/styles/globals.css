@@ -25,7 +25,7 @@ summary {
 }
 
 details {
-    @apply space-y-0;
+    @apply space-y-0 pb-2;
 }
 
 details :not(summary):first-of-type {
@@ -45,7 +45,7 @@ summary:before {
     border-style: solid;
     border-color: transparent transparent transparent #fff;
     position: absolute;
-    top: 0.575rem;
+    top: 0.6rem;
     left: 0.75rem;
     transform: rotate(0);
     transform-origin: 0.3rem;
