@@ -104,13 +104,9 @@ export const getPost = async (slug: string): Promise<Post | null> => {
                     })
                 ).html
             )
-            .then(({ value }) =>
-                value
-                    .toString()
-                    .replaceAll(
-                        /<details open="">|<details open>/gi,
-                        `<details>`
-                    )
+            .then(({ value }) => value.toString())
+            // replace any open <details> tags with closed ones
+            .then((html) => html.replaceAll(/<details [\s\S]*?open[\s\S]*?>/gi, "<details>")
             ),
     };
 

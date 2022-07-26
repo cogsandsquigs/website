@@ -9,27 +9,27 @@ export const GET = async ({ params }) => {
             filter:
                 params.slug === "index"
                     ? {
-                          or: [
-                              {
-                                  property: "slug",
-                                  rich_text: { contains: "/" },
-                              },
-                              {
-                                  property: "slug",
-                                  rich_text: { contains: "index" },
-                              },
-                              {
-                                  property: "slug",
-                                  rich_text: { is_empty: true },
-                              },
-                          ],
-                      }
+                        or: [
+                            {
+                                property: "slug",
+                                rich_text: { contains: "/" },
+                            },
+                            {
+                                property: "slug",
+                                rich_text: { contains: "index" },
+                            },
+                            {
+                                property: "slug",
+                                rich_text: { is_empty: true },
+                            },
+                        ],
+                    }
                     : {
-                          property: "slug",
-                          rich_text: {
-                              contains: params.slug,
-                          },
-                      },
+                        property: "slug",
+                        rich_text: {
+                            contains: params.slug,
+                        },
+                    },
         })
     ).results;
 
@@ -50,13 +50,14 @@ export const GET = async ({ params }) => {
             excludeHeaderFromBody: true,
             excludeTitleFromHead: true,
         })
-    ).html
-        // make details closed by default
-        .replaceAll(/<details open="">|<details open>/gi, "<details>");
+    )
+        .html
+        .replaceAll(/<details [\s\S]*?open[\s\S]*?>/gi, "<details>"); // replace any open <details> tags with closed ones
 
     return {
         status: 200,
         body: {
+            /*
             title: await Notion.pages.properties
                 .retrieve({
                     page_id: page.id,
@@ -64,6 +65,7 @@ export const GET = async ({ params }) => {
                 })
                 .then((property) => (property as any).results[0])
                 .then((result) => result.title.plain_text),
+            */
             content: html,
         },
     };

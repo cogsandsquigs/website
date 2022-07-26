@@ -20,33 +20,47 @@ u {
     height: 28px !important;
 }
 
+summary {
+    @apply px-2 py-1 min-w-full text-left border-2 border-secondary rounded-sm;
+}
+
 details {
     @apply space-y-0;
 }
-details > summary {
-    @apply px-2 py-1 my-4 min-w-full text-left border-2 border-secondary rounded-sm;
+
+details :not(summary):first-of-type {
+    @apply pt-2
 }
 
-details > summary::marker {
-    animation-name: rotate;
-    animation-duration: 100ms;
-    animation-timing-function: ease-out;
+summary {
+    display: block;
+    padding-left: 2.2rem;
+    position: relative;
+    cursor: pointer;
 }
 
-details[open] > summary::marker {
-    animation-name: rotate;
-    animation-duration: 100ms;
-    animation-timing-function: ease-out;
+summary:before {
+    content: '';
+    border-width: .5rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 0.575rem;
+    left: 0.75rem;
+    transform: rotate(0);
+    transform-origin: 0.3rem;
+    transition: 100ms transform ease-out;
 }
 
-@keyframes rotate {
-    from {
-        rotate: 0deg;
-    }
-    to {
-        rotate: 90deg;
-    }
+details summary::marker {
+    display: none;
 }
+
+/* THE MAGIC 🧙‍♀️ */
+details[open]>summary:before {
+    transform: rotate(90deg);
+}
+
 
 /* These next two classes are used for making sure math is displayed properly and nicely */
 /* This is to make inline math actually inline */

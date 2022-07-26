@@ -10,7 +10,7 @@
             };
         }
 
-        let page = response.json();
+        let page = await response.json();
 
         return {
             status: 200,
