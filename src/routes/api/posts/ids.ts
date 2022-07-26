@@ -1,6 +1,6 @@
 import { Notion } from "$lib/notion";
 
-/** @type {import('./__types/pages').RequestHandler}*/
+/** @type {import('./__types/ids').RequestHandler}*/
 export const GET = async () => {
     let ids = (
         await Notion.databases.query({
@@ -9,15 +9,13 @@ export const GET = async () => {
                 {
                     timestamp: "created_time",
                     direction: "descending",
-                }
-            ]
+                },
+            ],
         })
     ).results.map(({ id }) => id);
-
-    console.log(ids);
 
     return {
         status: 200,
         body: ids,
-    }
-}
+    };
+};

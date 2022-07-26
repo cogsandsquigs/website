@@ -1,24 +1,35 @@
 import NotionPageToHTML from "notion-page-to-html";
 import { Notion } from "$lib/notion";
 
-
 /** @type {import('./__types/[slug]').RequestHandler}*/
 export const GET = async ({ params }) => {
     let results = (
         await Notion.databases.query({
             database_id: "ea38bd5a70c64151897767a0a3f759a0",
-            filter: params.slug === "index" ? {
-                or: [
-                    { property: "slug", rich_text: { contains: "/" } },
-                    { property: "slug", rich_text: { contains: "index" } },
-                    { property: "slug", rich_text: { is_empty: true } },
-                ],
-            } : {
-                property: "slug",
-                rich_text: {
-                    contains: params.slug,
-                },
-            },
+            filter:
+                params.slug === "index"
+                    ? {
+                          or: [
+                              {
+                                  property: "slug",
+                                  rich_text: { contains: "/" },
+                              },
+                              {
+                                  property: "slug",
+                                  rich_text: { contains: "index" },
+                              },
+                              {
+                                  property: "slug",
+                                  rich_text: { is_empty: true },
+                              },
+                          ],
+                      }
+                    : {
+                          property: "slug",
+                          rich_text: {
+                              contains: params.slug,
+                          },
+                      },
         })
     ).results;
 
@@ -46,7 +57,14 @@ export const GET = async ({ params }) => {
     return {
         status: 200,
         body: {
+            title: await Notion.pages.properties
+                .retrieve({
+                    page_id: page.id,
+                    property_id: "title",
+                })
+                .then((property) => (property as any).results[0])
+                .then((result) => result.title.plain_text),
             content: html,
         },
     };
-}
+};

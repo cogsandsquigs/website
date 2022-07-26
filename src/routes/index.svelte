@@ -4,14 +4,9 @@
             .then((res) => res.json())
             .then((data) => data.slice(0, 3));
 
-        let html = await fetch("/api/pages/index")
-            .then((res) => res.json())
-            .then((data) => data.content);
-
         return {
             status: 200,
             props: {
-                content: html,
                 posts: posts,
             },
         };
@@ -22,7 +17,6 @@
     import { title, subtitle } from "$lib/info";
     import type { Post } from "$lib/types";
 
-    export let content: string;
     export let posts: Post[];
 </script>
 
@@ -36,7 +30,15 @@
     <h2>{subtitle}</h2>
 </div>
 
-{@html content}
+<p>
+    Hello, and welcome to my website, my little slice of the blogosphere! I hope
+    you have a good time, and enjoy yourself ;).
+</p>
+
+<p>
+    If you wanna know more about me, check out my <a href="/about">about page</a
+    >.
+</p>
 
 <!-- TODO: Remove if/when notion-page-to-html supports databases -->
 <h3 class="m-0">Recent posts:</h3>
