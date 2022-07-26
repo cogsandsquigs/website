@@ -8,13 +8,15 @@ export const GET = async ({ url }) => {
 
     return {
         status: 200,
-        body: `<rss version="2.0">
+        contentType: "text/xml",
+        body: `<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>${title}</title>
         <link>${url.origin}</link>
         <description>${subtitle}</description>
     </channel>
-    
+
     ${posts
         .map(
             (post) => `<item>
