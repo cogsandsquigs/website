@@ -21,8 +21,8 @@
 </script>
 
 <svelte:head>
-    <title>{title + " - " + subtitle}</title>
-    <meta property="og:title" content={title + " - " + subtitle} />
+    <title>{title + " - home"}</title>
+    <meta property="og:title" content={title + " - home"} />
 </svelte:head>
 
 <div class="space-y-2">
