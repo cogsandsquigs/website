@@ -31,13 +31,10 @@
 </div>
 
 <p>
-    Hello, and welcome to my website, my little slice of the blogosphere. I hope
-    you have a good time, and enjoy yourself while you're here!
-</p>
-
-<p>
-    If you wanna know more about me, check out my <a href="/about">about page</a
-    >.
+    Hello, and welcome to my little home on the web. I hope you have a good
+    time, and enjoy yourself while you're here! If you wanna know more about me,
+    check out my <a href="/about">about page</a>. Otherwise, click around, and
+    maybe you'll find something you like. Who knows?
 </p>
 
 <h3 class="m-0">Recent posts:</h3>

@@ -26,4 +26,5 @@
     <meta property="og:title" content={title + " - " + slug} />
 </svelte:head>
 
+<h1>{slug}</h1>
 {@html content}

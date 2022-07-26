@@ -22,5 +22,5 @@
     <meta property="og:title" content={title + " - blog"} />
 </svelte:head>
 
-<h1>Blog</h1>
+<h1>blog</h1>
 <PostList {posts} />
