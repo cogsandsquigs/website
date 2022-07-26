@@ -80,7 +80,7 @@ export const getPost = async (slug: string): Promise<Post | null> => {
                 (property as any).multi_select.map((tag) => tag.name)
             ),
 
-        createdAt: await Notion.pages.properties
+        date: await Notion.pages.properties
             .retrieve({
                 page_id: page.id,
                 property_id: "~qQ%3F",
@@ -136,54 +136,56 @@ export const getAllPosts = async (): Promise<Post[]> => {
         })
     ).results;
 
-    let posts: Post[] = await Promise.all(results.map(async page => {
-        return {
-            slug: await Notion.pages.properties
-                .retrieve({
-                    page_id: page.id,
-                    property_id: "E%5Dlu",
-                })
-                .then((property) => (property as any).formula.string),
+    let posts: Post[] = await Promise.all(
+        results.map(async (page) => {
+            return {
+                slug: await Notion.pages.properties
+                    .retrieve({
+                        page_id: page.id,
+                        property_id: "E%5Dlu",
+                    })
+                    .then((property) => (property as any).formula.string),
 
-            title: await Notion.pages.properties
-                .retrieve({
-                    page_id: page.id,
-                    property_id: "title",
-                })
-                .then(
-                    (property) =>
-                        (property as any).results[0].title.text.content
-                ),
+                title: await Notion.pages.properties
+                    .retrieve({
+                        page_id: page.id,
+                        property_id: "title",
+                    })
+                    .then(
+                        (property) =>
+                            (property as any).results[0].title.text.content
+                    ),
 
-            description: await Notion.pages.properties
-                .retrieve({
-                    page_id: page.id,
-                    property_id: "R%5EPL",
-                })
-                .then(
-                    (property) =>
-                        (property as any).results[0].rich_text.text.content
-                ),
+                description: await Notion.pages.properties
+                    .retrieve({
+                        page_id: page.id,
+                        property_id: "R%5EPL",
+                    })
+                    .then(
+                        (property) =>
+                            (property as any).results[0].rich_text.text.content
+                    ),
 
-            tags: await Notion.pages.properties
-                .retrieve({
-                    page_id: page.id,
-                    property_id: "~%5BOR",
-                })
-                .then((property) =>
-                    (property as any).multi_select.map((tag) => tag.name)
-                ),
+                tags: await Notion.pages.properties
+                    .retrieve({
+                        page_id: page.id,
+                        property_id: "~%5BOR",
+                    })
+                    .then((property) =>
+                        (property as any).multi_select.map((tag) => tag.name)
+                    ),
 
-            createdAt: await Notion.pages.properties
-                .retrieve({
-                    page_id: page.id,
-                    property_id: "~qQ%3F",
-                })
-                .then((property) => (property as any).date.start),
+                date: await Notion.pages.properties
+                    .retrieve({
+                        page_id: page.id,
+                        property_id: "~qQ%3F",
+                    })
+                    .then((property) => (property as any).date.start),
 
-            content: "", // excluding content for now because it is not needed when getting all posts, and it takes a lot of time to load
-        }
-    }));
+                content: "", // excluding content for now because it is not needed when getting all posts, and it takes a lot of time to load
+            };
+        })
+    );
 
     return posts;
 };
