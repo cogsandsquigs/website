@@ -1,14 +1,22 @@
 <script lang="ts" context="module">
     export const load = async ({ params, fetch }) => {
-        let html = await fetch(`/api/pages/${params.slug}`)
-            .then((res) => res.json())
-            .then((data) => data.content);
+        let response = await fetch(`/api/pages/${params.slug}`);
+
+        if (response.status !== 200) {
+            return {
+                status: response.status,
+                error:
+                    response.status === 404 ? `Not found: /${params.slug}` : "",
+            };
+        }
+
+        let page = response.json();
 
         return {
             status: 200,
             props: {
+                ...page,
                 slug: params.slug,
-                content: html,
             },
         };
     };
