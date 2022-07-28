@@ -20,6 +20,18 @@ u {
     height: 28px !important;
 }
 
+/* These next two classes are used for making sure math is displayed properly and nicely */
+/* This is to make inline math actually inline */
+.math-inline {
+    display: inline-block;
+}
+
+/* This is to make displayed math look nicer than default */
+.math-display svg {
+    margin: auto;
+}
+
+/* details styles */
 summary {
     @apply px-2 py-1 min-w-full text-left border-2 border-secondary rounded-sm;
 }
@@ -41,12 +53,13 @@ summary {
 
 summary:before {
     content: '';
-    border-width: .5rem;
-    border-style: solid;
-    border-color: transparent transparent transparent #fff;
+    border-top: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    border-left: .8660254rem solid white;
+    opacity: 90%;
     position: absolute;
-    top: 0.6rem;
-    left: 0.75rem;
+    top: 25%;
+    left: 0.5em;
     transform: rotate(0);
     transform-origin: 0.3rem;
     transition: 100ms transform ease-out;
@@ -59,16 +72,4 @@ details summary::marker {
 /* THE MAGIC 🧙‍♀️ */
 details[open]>summary:before {
     transform: rotate(90deg);
-}
-
-
-/* These next two classes are used for making sure math is displayed properly and nicely */
-/* This is to make inline math actually inline */
-.math-inline {
-    display: inline-block;
-}
-
-/* This is to make displayed math look nicer than default */
-.math-display svg {
-    margin: auto;
 }
