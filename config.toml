@@ -3,4 +3,4 @@ copyright = "(c) 2022 Ian Pratt"
 enableEmoji = true
 languageCode = "en-us"
 title = "Cogs and Squigs"
-theme = "ananke"
+# theme = "ananke"
