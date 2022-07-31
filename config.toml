@@ -1,6 +1,3 @@
-baseURL = "https://cogsandsquigs.gq/"
-copyright = "(c) 2022 Ian Pratt"
-enableEmoji = true
-languageCode = "en-us"
-title = "Cogs and Squigs"
-# theme = "ananke"
+baseURL = 'https://cogsandsquigs.gq'
+languageCode = 'en-us'
+title = 'Cogs and Squigs'

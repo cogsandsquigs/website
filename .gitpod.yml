@@ -3,9 +3,9 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
-  - init: sudo apt install hugo -y
-    command: hugo server
+    - init: sudo apt install hugo -y
+      command: hugo server -D
 
 ports:
-  - port: 1313
-    onOpen: open-browser
+    - port: 1313
+      onOpen: open-browser
