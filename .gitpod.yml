@@ -8,5 +8,5 @@ tasks:
     command: npm run dev
 
 ports:
-  - port: 3000
+  - port: 1313
     onOpen: open-browser
