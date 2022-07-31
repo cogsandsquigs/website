@@ -3,9 +3,8 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
-  - before: sudo apt install hugo
-    init: npm install
-    command: npm run dev
+  - init: sudo apt install hugo -y
+    command: hugo server
 
 ports:
   - port: 1313
