@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta property="og:title" content="{{ .Site.Title }}" />
+
+    <title>
+        {{ block "title" . }}
+        {{ .Site.Title }}
+        {{ end }}
+    </title>
+</head>
+
+<body>
+    <div id="content">
+        {{ block "main" . }}
+        {{ .Content }}
+        {{ end }}
+    </div>
+</body>
+
+</html>

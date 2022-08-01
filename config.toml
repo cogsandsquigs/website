@@ -1,4 +1,5 @@
 baseURL = "https://cogsandsquigs.gq"
 languageCode = "en-us"
 title = "Cogs and Squigs"
-theme = "cogs"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
