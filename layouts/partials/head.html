@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:title" content="{{ $title }}" />
-    {{ $style := resources.Get "sass/style.scss" | toCSS | postCSS | minify |
+    {{ $style := resources.Get "sass/style.scss" | postCSS | toCSS | minify |
     fingerprint }}
     <link
         rel="stylesheet"
