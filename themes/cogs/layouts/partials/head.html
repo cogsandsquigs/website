@@ -7,10 +7,7 @@
     <meta property="og:title" content="{{ $title }}" />
 
     {{ $style := resources.Get "css/style.css" | postCSS (dict "config"
-    "themes/cogs/postcss.config.js") }} {{ if .Site.IsServer }}
-
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-    {{ else }} {{ $style := $style | minify | fingerprint |
+    "themes/cogs/postcss.config.js") | minify | fingerprint |
     resources.PostProcess }}
 
     <link
@@ -18,7 +15,6 @@
         href="{{ $style.Permalink }}"
         integrity="{{ $style.Data.Integrity }}"
     />
-    {{ end }}
 
     <title>{{ $title }}</title>
 </head>
