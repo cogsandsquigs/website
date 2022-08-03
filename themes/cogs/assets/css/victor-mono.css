@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Victor Mono";
+    src: url("../fonts/VictorMono/VictorMono-Regular.woff") format("woff"),
+        url("../fonts/VictorMono/VictorMono-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
