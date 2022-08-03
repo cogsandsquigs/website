@@ -12,3 +12,7 @@ body {
 .content {
     @apply mx-auto max-w-prose;
 }
+
+footer {
+    @apply absolute flex items-center justify-center inset-x-0 bottom-0 text-xs;
+}

@@ -1,0 +1,10 @@
+<p>
+    {{ .Site.Copyright }} {{ if .GitInfo }}| Last update to page:
+    <a
+        href="https://github.com/{{ .Site.Params.Github.User }}/{{ .Site.Params.Github.Repo }}/commit/{{ .GitInfo.Hash }}"
+    >
+        {{ .GitInfo.AbbreviatedHash }} on {{ dateFormat .Site.Params.DateFormat
+        .GitInfo.AuthorDate }}
+    </a>
+    {{ end }}
+</p>

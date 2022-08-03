@@ -1,6 +1,51 @@
 baseURL = "https://cogsandsquigs.gq"
 languageCode = "en-us"
 title = "Cogs and Squigs"
-theme="cogs"
+copyright = "(c) Ian Pratt 2022"
+theme = "cogs"
 disableKinds = ["taxonomy", "taxonomyTerm"]
+enableGitInfo = true
 
+# parameters
+[params]
+dateFormat = "Monday, Jan 2, 2006"
+
+[params.github]
+user = "cogsandsquigs"
+repo = "cogsandsquigs"
+
+# minification settings
+[minify]
+minifyOutput = true
+
+[minify.tdewolff]
+
+[minify.tdewolff.css]
+keepCSS2 = true
+precision = 0
+
+[minify.tdewolff.html]
+keepComments = false
+keepConditionalComments = true
+keepDefaultAttrVals = true
+keepDocumentTags = true
+keepEndTags = true
+keepQuotes = false
+keepWhitespace = false
+
+[minify.tdewolff.js]
+keepVarNames = false
+noNullishOperator = false
+precision = 0
+
+[minify.tdewolff.json]
+keepNumbers = false
+precision = 0
+
+[minify.tdewolff.svg]
+keepComments = false
+precision = 0
+
+[minify.tdewolff.xml]
+keepWhitespace = false
+keepComments = false
