@@ -1,4 +1,4 @@
-@import "themes/cogs/assets/css/victormono.css";
+@import "victormono.css";
 
 @tailwind base;
 @tailwind components;
