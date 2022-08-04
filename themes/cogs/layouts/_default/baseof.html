@@ -3,12 +3,18 @@
     {{- partial "head.html" . -}}
 
     <body
-        class="max-w-none min-h-screen bg-primary prose prose-invert prose-a:underline prose-a:decoration-secondary prose-a:decoration-2 prose-a:font-bold prose-hr:border-[1px] prose-hr:border-secondary"
+        class="max-w-none bg-primary prose prose-invert prose-a:underline prose-a:decoration-secondary prose-a:decoration-2 prose-a:font-bold prose-hr:border-[1px] prose-hr:border-secondary"
     >
-        <div class="header">{{- partial "header.html" . -}}</div>
+        <header class="sticky">{{- partial "header.html" . -}}</header>
 
-        <div class="content">{{- block "main" . }}{{- end }}</div>
+        <div class="relative box-border h-screen">
+            <div class="mx-auto max-w-prose">
+                {{- block "main" . }}{{- end }}
+            </div>
 
-        <footer>{{- partial "footer.html" . -}}</footer>
+            <!-- <footer class="w-full bottom-0 mb-2 text-xs">
+                {{- partial "footer.html" . -}}
+            </footer> -->
+        </div>
     </body>
 </html>
