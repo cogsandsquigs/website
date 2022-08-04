@@ -5,6 +5,12 @@ copyright = "(c) Ian Pratt 2022"
 theme = "cogs"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 enableGitInfo = true
+sectionPagesMenu = "main"
+
+[[menus.main]]
+identifier = 'about'
+name = 'about'
+url = '/about'
 
 # parameters
 [params]
