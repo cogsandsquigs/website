@@ -7,10 +7,19 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 enableGitInfo = true
 sectionPagesMenu = "main"
 
+## THEME PARAMS ##
 [[menus.main]]
 identifier = 'about'
 name = 'about'
 url = '/about'
+
+[[menus.main]]
+identifier = "github"
+name = "github"
+url = "https://github.com/cogsandsquigs"
+
+[taxonomies]
+tag = 'tags'
 
 # parameters
 [params]
@@ -20,7 +29,7 @@ dateFormat = "Monday, Jan 2, 2006"
 user = "cogsandsquigs"
 repo = "cogsandsquigs"
 
-# minification settings
+## MISC. PARAMS ##
 [minify]
 minifyOutput = true
 

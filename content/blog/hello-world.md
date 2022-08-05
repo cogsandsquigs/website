@@ -2,7 +2,7 @@
 title: Hello World!
 date: 2022-02-07
 description: This is my testing page for all sorts of goodies!
-tags: dev, hello world, project, webdev
+tags: [dev, hello world, project, webdev]
 draft: false
 ---
 

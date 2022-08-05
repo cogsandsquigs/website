@@ -1,5 +1,5 @@
-<nav class="sticky top-0 bg-primary">
-    <ul class="px-2 flex justify-between list-none">
+<nav class="sticky top-0 bg-primary mb-4">
+    <ul class="flex justify-evenly list-none p-0 m-0 [&>li]:p-0">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
             {{ if .HasChildren }}
@@ -25,9 +25,6 @@
                 </li>
             {{ end }}
         {{ end }}
-        <li>
-            <a href="https://github.com/{{ .Site.Params.Github.User }}">my github</a>
-        </li>
     </ul>
     <hr class="mx-1 my-0" />
-</nav class="mb-2">
+</nav>
