@@ -1,4 +1,5 @@
 @import "victormono.css";
+@import "underlines.css";
 
 @tailwind base;
 @tailwind components;

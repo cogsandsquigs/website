@@ -1,0 +1,7 @@
+u {
+    @apply underline decoration-2 decoration-secondary !important;
+}
+
+*[style*="underline"] {
+    @apply underline decoration-2 decoration-secondary !important;
+}

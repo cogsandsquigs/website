@@ -31,6 +31,12 @@ user = "cogsandsquigs"
 repo = "cogsandsquigs"
 
 ## MISC. PARAMS ##
+[markup]
+defaultMarkdownHandler = "goldmark"
+
+[markup.goldmark.extensions]
+katex = true
+
 [minify]
 minifyOutput = true
 
