@@ -19,6 +19,8 @@ name = "github"
 url = "https://github.com/cogsandsquigs"
 
 [taxonomies]
+category = 'categories'
+series = 'series'
 tag = 'tags'
 
 # parameters
