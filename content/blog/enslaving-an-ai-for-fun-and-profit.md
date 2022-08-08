@@ -2,7 +2,7 @@
 title: Enslaving an AI for fun and profit
 date: 2022-05-23
 description: Or, how I came up with the name 'cogsandsquigs’
-tags: [dev, gpt-j-6b, project, tailwind css]
+tags: [dev, gpt-j-6b, project, ai]
 draft: false
 ---
 
@@ -20,7 +20,7 @@ I quicky ran to [OpenAI’s GPT-3 API page](https://openai.com/api), and to my d
 
 _pricing tab_.
 
-I didn’t want to pay for this! I have a streak of ~~abusing~~ using free services, and I didn’t want to pay a fraction of a cent for the measly task of simply _generating new usernames_. Who am I, a common consumer?
+I didn’t want to pay for this! I have a streak of ~~abusing~~ _extensively employing_ free services, and I didn’t want to pay a fraction of a cent for the measly task of simply _generating new usernames_. Who am I, a common consumer?
 
 No, I decided to instead scour the web for other ways.
 
@@ -28,7 +28,7 @@ And then I found it.
 
 GPT-J-6b.
 
-GPT-J-6b is a creation by [Eluther.ai](https://eluther.ai/). It was designed to be a parallel to GPT-2, and more importantly, a stepping stone on the road to matching OpenAI’s language models, and even perhaps, exceeding them, for AI and language model research.
+GPT-J-6b is a creation by [Eleuther.ai](https://eleuther.ai/). It was designed to be a parallel to GPT-2, and more importantly, a stepping stone on the road to matching OpenAI’s language models, and even perhaps, exceeding them, for AI and language model research.
 
 More importantly, GPT-J-6b has a [free online public demo](https://6b.eluther.ai/). One that I could use to ~~exploit for my own purposes~~ create usernames because I was lazy and bored.
 

@@ -1,73 +1,83 @@
-baseURL = "https://cogsandsquigs.gq"
-languageCode = "en-us"
-title = "Cogs and Squigs"
-copyright = "(c) Ian Pratt 2022"
-theme = "cogs"
-enableGitInfo = true
+baseURL          = "https://cogsandsquigs.gq"
+copyright        = "(c) Ian Pratt 2022"
+enableGitInfo    = true
+languageCode     = "en-us"
 sectionPagesMenu = "main"
+theme            = "cogs"
+title            = "Cogs and Squigs"
 
 ## THEME PARAMS ##
 [[menus.main]]
-identifier = 'about'
-name = 'about'
-url = '/about'
+    name   = "home"
+    url    = "/"
+    weight = 1
 
 [[menus.main]]
-identifier = "github"
-name = "github"
-url = "https://github.com/cogsandsquigs"
+    name   = "about"
+    url    = "/about"
+    weight = 2
+
+[[menus.main]]
+    name   = "blog"
+    url    = "/blog"
+    weight = 3
+
+[[menus.main]]
+    name   = "github"
+    url    = "https://github.com/cogsandsquigs"
+    weight = 4
 
 [taxonomies]
-category = 'categories'
-series = 'series'
-tag = 'tags'
+    category = "categories"
+    series   = "series"
+    tag      = "tags"
 
 # parameters
 [params]
-dateFormat = "Monday, Jan 2, 2006"
+    dateFormat = "Monday, Jan 2, 2006"
 
-[params.github]
-user = "cogsandsquigs"
-repo = "cogsandsquigs"
+    [params.github]
+        repo = "cogsandsquigs"
+        user = "cogsandsquigs"
 
 ## MISC. PARAMS ##
 [markup]
-defaultMarkdownHandler = "goldmark"
+    defaultMarkdownHandler = "goldmark"
 
-[markup.goldmark.extensions]
-katex = true
+    [markup.goldmark.extensions]
+        katex = true
 
 [minify]
-minifyOutput = true
+    minifyOutput = true
 
-[minify.tdewolff]
+    [minify.tdewolff]
 
-[minify.tdewolff.css]
-keepCSS2 = true
-precision = 0
+        [minify.tdewolff.css]
+            keepCSS2  = true
+            precision = 0
 
-[minify.tdewolff.html]
-keepComments = false
-keepConditionalComments = true
-keepDefaultAttrVals = true
-keepDocumentTags = true
-keepEndTags = true
-keepQuotes = false
-keepWhitespace = false
+        [minify.tdewolff.html]
+            keepComments            = false
+            keepConditionalComments = true
+            keepDefaultAttrVals     = true
+            keepDocumentTags        = true
+            keepEndTags             = true
+            keepQuotes              = false
+            keepWhitespace          = false
 
-[minify.tdewolff.js]
-keepVarNames = false
-noNullishOperator = false
-precision = 0
+        [minify.tdewolff.js]
+            keepVarNames      = false
+            noNullishOperator = false
+            precision         = 0
 
-[minify.tdewolff.json]
-keepNumbers = false
-precision = 0
+        [minify.tdewolff.json]
+            keepNumbers = false
+            precision   = 0
 
-[minify.tdewolff.svg]
-keepComments = false
-precision = 0
+        [minify.tdewolff.svg]
+            keepComments = false
+            precision    = 0
 
-[minify.tdewolff.xml]
-keepWhitespace = false
-keepComments = false
+        [minify.tdewolff.xml]
+            keepComments   = false
+            keepWhitespace = false
