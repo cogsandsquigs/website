@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Cogs and Squigs"
 copyright = "(c) Ian Pratt 2022"
 theme = "cogs"
-disableKinds = ["taxonomy", "taxonomyTerm"]
 enableGitInfo = true
 sectionPagesMenu = "main"
 

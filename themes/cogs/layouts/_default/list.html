@@ -2,31 +2,4 @@
 
 <h1>{{ .Title }}</h1>
 
-{{ .Content }} {{ range .Pages.ByPublishDate.Reverse }}
-<div class="flex items-center pb-4">
-    {{ if or (not .Page.Prev) (or (gt .Page.Date.Month .Page.Prev.Date.Month)
-    (gt .Page.Date.Year .Page.Prev.Year.Month)) }}
-
-    <h2 class="m-0 mr-2">{{ .Page.Date.Month }} {{.Page.Date.Year}}</h2>
-    <hr class="flex-1 m-0" />
-
-    {{else}}
-
-    <hr />
-
-    {{ end }}
-</div>
-
-<div class="pb-4 space-y-0 [&>*]:m-0">
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    <h3>{{ .Description }}</h3>
-    <p>Posted on {{ dateFormat .Site.Params.DateFormat .Date }}</p>
-    {{ if .Params.tags }}
-    <p>
-        Tags: {{ range $index, $tag := .Params.tags }}
-        <a href="tag/{{ $tag }}">{{ $tag }}</a>
-        {{ end }}
-    </p>
-    {{ end }}
-</div>
-{{ end }} {{ end }}
+{{ .Content }} {{- partial "postlist.html" . -}} {{ end }}
