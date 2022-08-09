@@ -4,7 +4,6 @@ date: 2022-08-05
 description: My journey creating cogsandsquigs/twiboot
 draft: false
 tags: [atmega328, bootloader, dev, particle-iot, project, twiboot]
-slug: slaving-away-so-you-dont-have-to
 ---
 
 Sooo… where was I?
