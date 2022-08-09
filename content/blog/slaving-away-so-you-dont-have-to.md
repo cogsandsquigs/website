@@ -1,6 +1,6 @@
 ---
 title: Slaving away so you don’t have to
-date: 2022-08-05
+date: 2022-05-08
 description: My journey creating cogsandsquigs/twiboot
 draft: false
 tags: [atmega328, bootloader, dev, particle-iot, project, twiboot]
