@@ -10,24 +10,11 @@
     "themes/cogs/postcss.config.js") | minify | fingerprint |
     resources.PostProcess }}
 
-    <link
-        rel="stylesheet"
-        href="{{ $style.Permalink }}"
-        integrity="{{ $style.Data.Integrity }}"
-    />
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
 
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-    />
-    <script
-        defer
-        src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"
-    ></script>
-    <script
-        defer
-        src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"
-    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             renderMathInElement(document.body, {
