@@ -6,6 +6,11 @@ sectionPagesMenu = "main"
 theme            = "cogs"
 title            = "Cogs and Squigs"
 
+## ME PARAMS ##
+[author]
+	email = "ianjdpratt@gmail.com"
+    name  = "Ian Pratt"
+	
 ## THEME PARAMS ##
 [[menus.main]]
     name   = "home"
