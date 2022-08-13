@@ -8,9 +8,9 @@ title            = "Cogs and Squigs"
 
 ## ME PARAMS ##
 [author]
-	email = "ianjdpratt@gmail.com"
+    email = "ianjdpratt@gmail.com"
     name  = "Ian Pratt"
-	
+
 ## THEME PARAMS ##
 [[menus.main]]
     name   = "home"
@@ -37,7 +37,7 @@ title            = "Cogs and Squigs"
     series   = "series"
     tag      = "tags"
 
-# parameters
+# Site parameters
 [params]
     dateFormat = "Monday, Jan 2, 2006"
 
