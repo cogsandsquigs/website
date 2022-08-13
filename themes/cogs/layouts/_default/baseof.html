@@ -5,16 +5,18 @@
     <body
         class="max-w-none bg-primary prose prose-invert prose-a:underline prose-a:decoration-secondary prose-a:decoration-2 prose-a:font-bold prose-hr:border-[1px] prose-hr:border-secondary"
     >
-        <header class="sticky">{{- partial "header.html" . -}}</header>
+        <header class="top-0 bg-primary">
+            {{- partial "header.html" . -}}
+        </header>
 
-        <div class="relative box-border h-screen">
-            <div class="mx-auto max-w-prose">
-                {{- block "main" . }}{{- end }}
-            </div>
-
-            <!-- <footer class="w-full bottom-0 mb-2 text-xs">
-                {{- partial "footer.html" . -}}
-            </footer> -->
+        <div class="min-h-[86vh] h-fit mx-auto max-w-prose px-2">
+            {{- block "main" . }}{{- end }}
         </div>
+
+        <hr class="bottom-0 m-0 mb-2" />
+
+        <footer class="flex justify-center w-full bottom-0 text-xs mb-2">
+            {{- partial "footer.html" . -}}
+        </footer>
     </body>
 </html>

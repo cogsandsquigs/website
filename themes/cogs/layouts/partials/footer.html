@@ -1,14 +1,10 @@
-<hr class="my-2 m-0 bottom-0" />
-
-<div class="flex items-center justify-center [&>*]:m-0">
-    <p>
-        {{ .Site.Copyright }} {{ if .GitInfo }}| Last update to page:
-        <a
-            href="https://github.com/{{ .Site.Params.Github.User }}/{{ .Site.Params.Github.Repo }}/commit/{{ .GitInfo.Hash }}"
-        >
-            {{ .GitInfo.AbbreviatedHash }} on {{ dateFormat
-            .Site.Params.DateFormat .GitInfo.AuthorDate }}
-        </a>
-        {{ end }}
-    </p>
-</div>
+<p class="m-0">
+    {{ .Site.Copyright }} {{ if .Page.GitInfo }}| Last update to page:
+    <a
+        href="https://github.com/{{ .Site.Params.Github.User }}/{{ .Site.Params.Github.Repo }}/commit/{{ .GitInfo.Hash }}"
+    >
+        {{ .Page.GitInfo.AbbreviatedHash }} on {{ dateFormat
+        .Site.Params.DateFormat .GitInfo.AuthorDate }}
+    </a>
+    {{ end }}
+</p>

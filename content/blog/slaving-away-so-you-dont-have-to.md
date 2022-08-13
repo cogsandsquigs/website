@@ -8,7 +8,7 @@ tags: [atmega328, bootloader, dev, particle-iot, project, twiboot]
 
 Sooo… where was I?
 
-Mostly just doing my own thing, building stuff, breaking stuff, etc., etc. Living the dream, as some might say (/j obviously).
+Mostly just doing my own thing, building stuff, breaking stuff, etc., etc. Living the dream, as some might say.
 
 Part of what I was doing was taking the long, winding road to creating [cogsandsquigs/twiboot](https://cogsandsquigs/twiboot) (not to be confused with [orempel/twiboot](https://github.com/orempel/twiboot), but that’ll be explained later). How I got here was long, tiring, and frankly too exhausting. So that’s where two (of the many previous) weeks of my life went!
 
