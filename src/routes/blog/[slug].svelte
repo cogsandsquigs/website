@@ -17,6 +17,7 @@
         return {
             props: {
                 title: page.frontmatter.title,
+                date: page.frontmatter.date,
                 html: page.md,
             },
         };
@@ -25,6 +26,7 @@
 
 <script lang="ts">
     export let title: string;
+    export let date: Date;
     export let html: string;
 </script>
 
@@ -64,6 +66,9 @@
     </script>
 </svelte:head>
 
-<h1>{title}</h1>
+<h1 class="m-0">{title}</h1>
+<h3 class="m-0">Created on {date}</h3>
 
-{@html html}
+<div class="mt-4">
+    {@html html}
+</div>
