@@ -2,24 +2,22 @@
     import { pages } from "$lib/pages";
 
     /** @type {import('./__types/[slug]').Load} */
-    export const load = async ({ params }) => {
+    export const load = async ({ url, params }) => {
         let page = await pages().then((ps) =>
-            ps.find((p) => {
-                return p.slug === params.slug;
-            })
+            ps.find((p) => p.slug === params.slug)
         );
 
         if (!page) {
             return {
                 status: 404,
-                error: "Page not found",
+                error: `Not found: ${url.pathname}`,
             };
         }
 
         return {
             props: {
-                title: page?.frontmatter.title,
-                html: page?.md,
+                title: page.frontmatter.title,
+                html: page.md,
             },
         };
     };

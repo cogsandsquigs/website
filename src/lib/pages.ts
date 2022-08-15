@@ -1,8 +1,9 @@
 import { render } from "$lib/markdown";
+import type { Page } from "$lib/types";
 
 export const pages = async () => {
     let imports = import.meta.glob(["/src/content/*.md"], { as: "raw" });
-    let pages: { slug: string; frontmatter: any; md: string }[] = [];
+    let pages: Page[] = [];
 
     for (const path in imports) {
         await imports[path]().then((content) => {

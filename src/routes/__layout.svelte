@@ -8,7 +8,7 @@
 
 <Header />
 
-<div class="min-h-[86vh] h-fit mx-auto max-w-prose px-2">
+<div class="min-h-[83.9vh] h-fit mx-auto max-w-prose px-2">
     <slot />
 </div>
 
