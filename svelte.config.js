@@ -19,7 +19,7 @@ const config = {
 			crawl: true,
 			enabled: true,
 			entries: ['*'],
-			onError: "continue"
+			onError: "fail"
 		},
 
 		browser: {
