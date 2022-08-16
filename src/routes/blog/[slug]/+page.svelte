@@ -1,30 +1,34 @@
 <script lang="ts" context="module">
-    import { posts } from "$lib/posts";
+    throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
 
-    /** @type {import('./__types/[slug]').Load} */
-    export const load = async ({ url, params }) => {
-        let page = await posts().then((ps) =>
-            ps.find((p) => p.slug === params.slug)
-        );
+    // import { posts } from "$lib/posts";
 
-        if (!page) {
-            return {
-                status: 404,
-                error: `Not found: ${url.pathname}`,
-            };
-        }
+    // /** @type {import('./$types').Load} */
+    // export const load = async ({ url, params }) => {
+    //     let page = await posts().then((ps) =>
+    //         ps.find((p) => p.slug === params.slug)
+    //     );
 
-        return {
-            props: {
-                title: page.frontmatter.title,
-                date: page.frontmatter.date,
-                html: page.md,
-            },
-        };
-    };
+    //     if (!page) {
+    //         return {
+    //             status: 404,
+    //             error: `Not found: ${url.pathname}`,
+    //         };
+    //     }
+
+    //     return {
+    //         props: {
+    //             title: page.frontmatter.title,
+    //             date: page.frontmatter.date,
+    //             html: page.md,
+    //         },
+    //     };
+    // };
 </script>
 
 <script lang="ts">
+    throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
     export let title: string;
     export let date: Date;
     export let html: string;
