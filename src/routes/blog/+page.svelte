@@ -9,4 +9,4 @@
 
 <h1>blog</h1>
 
-<!-- <Postlist {posts} /> -->
+<Postlist {posts} />
