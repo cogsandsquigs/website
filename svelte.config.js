@@ -16,10 +16,14 @@ const config = {
 
 		prerender: {
 			default: true,
+			crawl: true,
+			enabled: true,
+			entries: ['*'],
+			onError: "continue"
 		},
 
 		browser: {
-			hydrate: true,
+			hydrate: false,
 			router: false,
 		}
 	}

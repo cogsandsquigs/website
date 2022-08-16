@@ -7,7 +7,7 @@ export const load = async ({ params }) => {
     );
 
     return {
-    title: params.tag,
-    posts: posts,
-};
+        title: params.tag,
+        posts: posts,
+    };
 };

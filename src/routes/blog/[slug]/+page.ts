@@ -12,8 +12,8 @@ export const load = async ({ url, params }) => {
     }
 
     return {
-    title: page.frontmatter.title,
-    date: page.frontmatter.date,
-    html: page.md,
-};
+        title: page.frontmatter.title,
+        date: page.frontmatter.date,
+        html: page.md,
+    };
 };

@@ -12,7 +12,7 @@ export const load = async ({ url, params }) => {
     }
 
     return {
-    title: page.frontmatter.title,
-    html: page.md,
-};
+        title: page.frontmatter.title,
+        html: page.md,
+    };
 };

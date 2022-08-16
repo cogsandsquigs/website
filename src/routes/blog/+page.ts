@@ -1,7 +1,7 @@
-import { posts as ps } from "$lib/posts";
+import { posts } from "$lib/posts";
 
 export const load = async () => {
     return {
-    posts: await ps(),
-};
+        posts: await posts()
+    };
 };
