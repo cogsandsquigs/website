@@ -10,8 +10,8 @@
         "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
     },
     "devDependencies": {
-        "@sveltejs/adapter-static": "next",
-        "@sveltejs/kit": "next",
+        "@sveltejs/adapter-static": "latest",
+        "@sveltejs/kit": "^1.0.0-next.418",
         "@tailwindcss/typography": "^0.5.4",
         "autoprefixer": "^10.4.8",
         "postcss": "^8.4.16",

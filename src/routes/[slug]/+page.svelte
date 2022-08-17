@@ -1,8 +1,9 @@
 <script lang="ts">
-    export let title: string;
-    export let html: string;
+    import type { PageData } from "./$types";
+
+    export let data: PageData;
 </script>
 
-<h1>{title}</h1>
+<h1>{data.title}</h1>
 
-{@html html}
+{@html data.html}

@@ -1,7 +1,7 @@
 <script lang="ts">
-    export let title: string;
-    export let date: Date;
-    export let html: string;
+    import type { PageData } from "./$types";
+
+    export let data: PageData;
 </script>
 
 <!-- Include KaTex scripts, as they are used in these pages -->
@@ -40,9 +40,9 @@
     </script>
 </svelte:head>
 
-<h1 class="m-0">{title}</h1>
-<h3 class="m-0">Created on {date}</h3>
+<h1 class="m-0">{data.title}</h1>
+<h3 class="m-0">Created on {data.date}</h3>
 
 <div class="mt-4">
-    {@html html}
+    {@html data.html}
 </div>

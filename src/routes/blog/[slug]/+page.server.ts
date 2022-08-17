@@ -1,8 +1,9 @@
-import { error } from '@sveltejs/kit';
+import { error } from "@sveltejs/kit";
 import { posts } from "$lib/posts";
 
-/** @type {import('./$types').PageLoad} */
-export const load = async ({ url, params }) => {
+import type { PageServerLoad } from "./$types";
+
+export const load: PageServerLoad = async ({ url, params }) => {
     let page = await posts().then((ps) =>
         ps.find((p) => p.slug === params.slug)
     );

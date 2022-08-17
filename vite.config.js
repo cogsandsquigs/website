@@ -1,8 +1,10 @@
-import { sveltekit } from '@sveltejs/kit/vite';
+import { sveltekit } from "@sveltejs/kit/vite";
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	plugins: [sveltekit()]
+    plugins: [sveltekit()],
+
+    legacy: { buildSsrCjsExternalHeuristics: true },
 };
 
 export default config;

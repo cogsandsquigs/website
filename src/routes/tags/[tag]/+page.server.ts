@@ -1,7 +1,8 @@
 import { posts as ps } from "$lib/posts";
 
-/** @type {import('./$types').PageLoad} */
-export const load = async ({ params }) => {
+import type { PageServerLoad } from "./$types";
+
+export const load: PageServerLoad = async ({ params }) => {
     let posts = await ps().then((ps) =>
         ps.filter((p) => p.frontmatter.tags.includes(params.tag))
     );

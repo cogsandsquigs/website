@@ -1,11 +1,11 @@
 <script lang="ts">
     import Postlist from "$lib/components/Postlist.svelte";
-    import type { Page } from "$lib/types";
 
-    export let title: string;
-    export let posts: Page[];
+    import type { PageData } from "./$types";
+
+    export let data: PageData;
 </script>
 
-<h1>{title}</h1>
+<h1>{data.title}</h1>
 
-<Postlist {posts} />
+<Postlist posts={data.posts} />

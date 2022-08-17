@@ -1,11 +1,13 @@
 <script lang="ts">
-    export let tags: string[];
+    import type { PageData } from "./$types";
+
+    export let data: PageData;
 </script>
 
 <h1>tags</h1>
 
 <ul>
-    {#each tags as tag}
+    {#each data.tags as tag}
         <li>
             <a href={`/tags/${tag}`}>
                 {tag}
