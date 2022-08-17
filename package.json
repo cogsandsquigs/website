@@ -16,6 +16,7 @@
         "autoprefixer": "^10.4.8",
         "postcss": "^8.4.16",
         "rehype-katex": "^6.0.2",
+        "rehype-prism-plus": "^1.4.2",
         "rehype-stringify": "^9.0.3",
         "remark-frontmatter": "^4.0.1",
         "remark-math": "^5.1.1",

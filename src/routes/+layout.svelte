@@ -7,6 +7,9 @@
 </script>
 
 <svelte:head>
+    <!-- Prism theme CSS -->
+    <link rel="stylesheet" href="/prism/atom-one-dark.css" />
+    <!-- Katex CSS -->
     <link rel="stylesheet" href="/katex/katex.min.css" />
 </svelte:head>
 
