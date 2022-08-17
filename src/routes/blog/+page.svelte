@@ -6,6 +6,11 @@
     export let data: PageData;
 </script>
 
+<svelte:head>
+    <title>Cogs and Squigs - blog</title>
+    <og:title>Cogs and Squigs - blog</og:title>
+</svelte:head>
+
 <h1>blog</h1>
 
 <Postlist posts={data.posts} />

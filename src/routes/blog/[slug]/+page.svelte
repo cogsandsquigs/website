@@ -38,6 +38,9 @@
             });
         });
     </script>
+
+    <title>Cogs and Squigs - {data.title}</title>
+    <og:title>Cogs and Squigs - {data.title}</og:title>
 </svelte:head>
 
 <h1 class="m-0">{data.title}</h1>

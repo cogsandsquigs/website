@@ -4,6 +4,10 @@
     export let data: PageData;
 </script>
 
+<svelte:head>
+    <title>Cogs and Squigs - tags</title>
+    <og:title>Cogs and Squigs - tags</og:title>
+</svelte:head>
 <h1>tags</h1>
 
 <ul>
