@@ -12,7 +12,7 @@ tags:
 - twiboot
 
 ---
-Sooo… where ws I?
+Sooo… where was I?
 
 Mostly just doing my own thing, building stuff, breaking stuff, etc., etc. Living the dream, as some might say.
 
