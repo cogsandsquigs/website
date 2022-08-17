@@ -6,7 +6,7 @@
 
 <svelte:head>
     <title>Cogs and Squigs - tags</title>
-    <og:title>Cogs and Squigs - tags</og:title>
+    <meta property="og:title" content="Cogs and Squigs - tags" />
 </svelte:head>
 <h1>tags</h1>
 

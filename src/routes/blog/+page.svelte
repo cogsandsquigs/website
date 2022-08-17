@@ -8,7 +8,7 @@
 
 <svelte:head>
     <title>Cogs and Squigs - blog</title>
-    <og:title>Cogs and Squigs - blog</og:title>
+    <meta property="og:title" content="Cogs and Squigs - blog" />
 </svelte:head>
 
 <h1>blog</h1>

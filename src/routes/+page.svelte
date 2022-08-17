@@ -1,6 +1,6 @@
 <svelte:head>
     <title>Cogs and Squigs - home</title>
-    <og:title>Cogs and Squigs - home</og:title>
+    <meta property="og:title" content="Cogs and Squigs - home" />
 </svelte:head>
 
 <h1>Cogs And Squigs</h1>
