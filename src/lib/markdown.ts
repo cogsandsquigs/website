@@ -1,5 +1,5 @@
 import { unified } from "unified";
-import type { VFile } from "vfile";
+import type { Compatible, VFile } from "vfile";
 import remarkParse from "remark-parse";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkParseFrontmatter from "remark-parse-frontmatter";
@@ -9,7 +9,7 @@ import rehypePrism from "rehype-prism-plus";
 import rehypeKatex from "rehype-katex";
 import rehypeStringify from "rehype-stringify";
 
-export const render = (markdown: string): VFile => {
+export const render = (markdown: Compatible): VFile => {
     return unified()
         .use(remarkParse)
         .use(remarkFrontmatter)
