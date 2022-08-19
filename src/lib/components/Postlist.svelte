@@ -28,7 +28,7 @@
                 Tags:
                 {#each post.frontmatter.tags as tag, index}
                     {#if index > 0}, {/if}
-                    <a href={`/tags/${tag}`}>{tag}</a>
+                    <a href={`/blog/tags/${tag}`}>{tag}</a>
                 {/each}
             </p>
         </li>
