@@ -22,4 +22,4 @@
         {/each}
     </h4>
 {/if}
-<hr class="m-0 mt-2" />
+<hr class="m-0 mt-2 mb-9" />

@@ -10,8 +10,8 @@
     <meta property="og:title" content="Cogs and Squigs - home" />
 </svelte:head>
 
-<h1>Cogs And Squigs</h1>
-<h2>My little slice of the blogosphere</h2>
+<h1 class="mb-2">Cogs And Squigs</h1>
+<h2 class="m-0 mb-9">My little slice of the blogosphere</h2>
 
 <p>
     Hello, and welcome to my little home on the web. I hope you have a good
