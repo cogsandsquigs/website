@@ -6,8 +6,8 @@ export const pages = async () => {
     let pages: Page[] = [];
 
     for (const path in imports) {
-        await imports[path]().then((content) => {
-            let rendered = render(content);
+        await imports[path]().then(async (content) => {
+            let rendered = await render(content);
             pages.push({
                 data: {
                     path: path.split("/")[path.split("/").length - 2],

@@ -14,3 +14,7 @@ u {
 *[style*="underline"] {
     @apply underline decoration-2 decoration-secondary !important;
 }
+
+pre code {
+    font-family: "Victor Mono", "Fira Code", monospace !important;
+}

@@ -5,21 +5,26 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkParseFrontmatter from "remark-parse-frontmatter";
 import remarkMath from "remark-math";
 import remarkRehype from "remark-rehype";
-import rehypePrism from "rehype-prism-plus";
+import rehypeShiki from "@leafac/rehype-shiki";
 import rehypeKatex from "rehype-katex";
 import rehypeStringify from "rehype-stringify";
+import shiki from "shiki";
+import Andromeda from "$lib/shiki/andromeda-italic-color-theme.json";
 
-export const render = (markdown: Compatible): VFile => {
-    return unified()
+export const render = async (markdown: Compatible): Promise<VFile> => {
+    return await unified()
         .use(remarkParse)
         .use(remarkFrontmatter)
         .use(remarkParseFrontmatter)
         .use(remarkMath)
         .use(remarkRehype)
-        .use(rehypePrism, {
-            showLineNumbers: true,
+        .use(rehypeShiki, {
+            highlighter: await shiki
+                .getHighlighter({
+                    theme: Andromeda
+                })
         })
         .use(rehypeKatex)
         .use(rehypeStringify)
-        .processSync(markdown);
+        .process(markdown);
 };

@@ -1,6 +1,7 @@
 <script lang="ts">
-    import "$lib/styles/main.css";
+    // CSS imports
     import "victormono";
+    import "$lib/styles/main.css";
 
     import Header from "$lib/components/Header.svelte";
     // import Footer from "$lib/components/Footer.svelte";
@@ -8,7 +9,7 @@
 
 <svelte:head>
     <!-- Prism theme CSS -->
-    <link rel="stylesheet" href="/prism/atom-one-dark.css" />
+    <link rel="stylesheet" href="/prism/andromeda.css" />
     <!-- Katex CSS -->
     <link rel="stylesheet" href="/katex/katex.min.css" />
 </svelte:head>
