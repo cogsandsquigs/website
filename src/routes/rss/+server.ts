@@ -2,13 +2,14 @@ export const prerender = true;
 
 import { all } from "$lib/all";
 import type { Page } from "$lib/types";
-import type { PageLoad } from "./$types";
+import type { RequestHandler } from "./$types";
 
 const base = "https://cogsandsquigs.gq";
 
-export const GET: PageLoad = async () => {
+export const GET: RequestHandler = async () => {
     const body = render(await all());
     const headers = {
+        "Cache-Control": `max-age=0, s-max-age=${600}`,
         "Content-Type": "application/xml",
     };
     return new Response(body || "", { headers });
