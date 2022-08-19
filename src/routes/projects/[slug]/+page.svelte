@@ -20,3 +20,9 @@
 <div class="mt-4">
     {@html data.html}
 </div>
+
+{#if data.github_link}
+    <p>
+        Github link to {data.title} <a href={data.github_link}>here</a>.
+    </p>
+{/if}
