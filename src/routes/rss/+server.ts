@@ -19,7 +19,7 @@ const render = (posts: Page[]) => `<?xml version="1.0" encoding="UTF-8" ?>
   <atom:link href="${base}/rss" rel="self" type="application/rss+xml" />
   <title>David W Parker</title>
   <link>${base}</link>
-  <description>David W Parker's blog about Code, Entrepreneurship, and more</description>
+  <description>My little slice of the blogosphere</description>
   ${posts
       .map(
           ({ frontmatter, slug }) => `<item>

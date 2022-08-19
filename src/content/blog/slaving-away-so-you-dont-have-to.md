@@ -8,7 +8,6 @@ tags:
     - bootloader
     - dev
     - particle-iot
-    - project
     - twiboot
 ---
 
