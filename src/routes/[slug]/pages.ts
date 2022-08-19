@@ -9,9 +9,12 @@ export const pages = async () => {
         await imports[path]().then((content) => {
             let rendered = render(content);
             pages.push({
-                slug: path.slice(13, -3),
-                md: rendered.toString(),
+                data: {
+                    path: path.split("/")[path.split("/").length - 2],
+                },
                 frontmatter: rendered.data.frontmatter,
+                slug: path.split("/")[path.split("/").length - 1].slice(0, -3),
+                md: rendered.toString(),
             });
         });
     }

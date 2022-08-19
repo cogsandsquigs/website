@@ -1,10 +1,10 @@
 import { error } from "@sveltejs/kit";
-import { posts } from "$lib/posts";
+import { projects } from "$lib/projects";
 
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async ({ url, params }) => {
-    let page = await posts().then((ps) =>
+    let page = await projects().then((ps) =>
         ps.find((p) => p.slug === params.slug)
     );
 
@@ -17,6 +17,7 @@ export const load: PageServerLoad = async ({ url, params }) => {
         date: page.frontmatter.date,
         description: page.frontmatter.description,
         tags: page.frontmatter.tags,
+        github_link: `https://github.com/cogsandsquigs/${page.frontmatter.title}`,
         html: page.md,
     };
 };

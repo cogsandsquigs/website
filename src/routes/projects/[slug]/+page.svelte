@@ -1,6 +1,5 @@
 <script lang="ts">
     import PageIntro from "$lib/components/PageIntro.svelte";
-
     import type { PageData } from "./$types";
 
     export let data: PageData;

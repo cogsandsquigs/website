@@ -1,10 +1,10 @@
-import { posts } from "$lib/posts";
+import { all } from "$lib/all";
 
 export const tags = async () => {
-    return await posts().then((posts) =>
-        posts
-            .reduce((tags: string[], post) => {
-                post.frontmatter.tags.forEach((tag: string) => {
+    return await all().then(([pages]) =>
+        [pages]
+            .reduce((tags: string[], page) => {
+                page.frontmatter.tags.forEach((tag: string) => {
                     if (!tags.includes(tag)) {
                         tags.push(tag);
                     }

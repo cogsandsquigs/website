@@ -1,14 +1,16 @@
 import { render } from "$lib/markdown";
 import type { Page } from "$lib/types";
 
-export const posts = async () => {
-    let imports = import.meta.glob(["/src/content/blog/*.md"], { as: "raw" });
-    let posts: Page[] = [];
+export const projects = async () => {
+    let imports = import.meta.glob(["/src/content/projects/*.md"], {
+        as: "raw",
+    });
+    let projects: Page[] = [];
 
     for (const path in imports) {
         await imports[path]().then((content) => {
             let rendered = render(content);
-            posts.push({
+            projects.push({
                 data: {
                     path: path.split("/")[path.split("/").length - 2],
                 },
@@ -19,7 +21,7 @@ export const posts = async () => {
         });
     }
 
-    return posts.sort((a, b) => {
+    return projects.sort((a, b) => {
         return (
             new Date(b.frontmatter.date).valueOf() -
             new Date(a.frontmatter.date).valueOf()

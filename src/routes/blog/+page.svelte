@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Postlist from "$lib/components/Postlist.svelte";
+    import PageList from "$lib/components/PageList.svelte";
 
     import type { PageData } from "./$types";
 
@@ -13,4 +13,4 @@
 
 <h1>blog</h1>
 
-<Postlist posts={data.posts} />
+<PageList pages={data.posts} />

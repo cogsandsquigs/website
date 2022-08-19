@@ -13,7 +13,7 @@
 <ul>
     {#each data.tags as tag}
         <li>
-            <a href={`/blog/tags/${tag}`}>
+            <a href={`/tags/${tag}`}>
                 {tag}
             </a>
         </li>
