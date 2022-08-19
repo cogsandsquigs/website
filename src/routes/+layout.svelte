@@ -8,8 +8,6 @@
 </script>
 
 <svelte:head>
-    <!-- Prism theme CSS -->
-    <link rel="stylesheet" href="/prism/andromeda.css" />
     <!-- Katex CSS -->
     <link rel="stylesheet" href="/katex/katex.min.css" />
 </svelte:head>
