@@ -8,4 +8,4 @@ It may be obvious at this point, but I built this whole site from scratch! I rea
 
 Check out the rest of my site for more stuff I'm doing! Or, if it's your thing, take a look at my Github page if you're into looking at someone else's code.
 
-(P.S.: If you're really into my blog, you might be happy to know that it has an [RSS feed](/blog/)! Enjoy live updates of my blog every 1-2 millenia.)
+(P.S.: If you're really into my blog n projects n stuff, you might be happy to know that it has an [RSS feed](/)! Enjoy live updates of my blog every 1-2 millenia.)
