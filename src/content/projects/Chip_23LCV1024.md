@@ -1,6 +1,6 @@
 ---
 title: Chip_23LCV1024
-date: 2022-06-23
+date: 2022-07-25
 description: Reading and writing for the 23LCV1024.
 tags:
     - particle-iot
