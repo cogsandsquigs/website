@@ -1,5 +1,5 @@
 ---
-label: Post
+label: Project
 hide_body: false
 fields:
 - type: text
@@ -11,11 +11,14 @@ fields:
 - type: text
   name: description
   label: description
+- name: repo_link
+  type: text
+  config:
+    required: false
+  label: repo_link
 - type: list
   name: tags
   label: tags
 - type: boolean
   name: draft
   label: draft
-pages:
-- src/content/blog/why-i-write-funny.md
