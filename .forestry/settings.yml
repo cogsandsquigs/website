@@ -9,6 +9,8 @@ sections:
   label: Projects
   create: documents
   match: "*.md"
+  templates:
+  - project
 - type: directory
   path: src/content/blog
   label: Posts
