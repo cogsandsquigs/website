@@ -1,17 +1,19 @@
 ---
 title: twiboot
 date: 2022-08-04
-description: Twiboot is a Particle library that allows for interfacing with the Twiboot bootloader.
+description: Twiboot is a Particle library that allows for interfacing with the Twiboot
+  bootloader.
 tags:
-    - particle-iot
-    - twiboot
-    - atmega
-    - bootloader
-    - loop-tracks
-    - project
+- particle-iot
+- twiboot
+- atmega
+- bootloader
+- loop-tracks
+- project
 draft: false
----
+repo_link: https://github.com/cogsandsquigs/twiboot
 
+---
 Twiboot is a Particle library that allows for interfacing with the Twiboot bootloader.
 It's a simple library that allows for the flashing of a new firmware to a Twiboot-enabled device.
 This library was created specifically for the Loop Tracks project.
