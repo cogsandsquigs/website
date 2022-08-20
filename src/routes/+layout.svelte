@@ -10,6 +10,10 @@
 
 <Header />
 
+<svelte:head>
+    <meta name="author" content="Ian Pratt" />
+</svelte:head>
+
 <div class="min-h-[83.9vh] h-fit mx-auto max-w-prose px-2">
     <slot />
 </div>
