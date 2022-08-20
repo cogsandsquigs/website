@@ -2,15 +2,11 @@
     // CSS imports
     import "victormono";
     import "$lib/styles/main.css";
+    import "$lib/styles/katex/katex.min.css";
 
     import Header from "$lib/components/Header.svelte";
     // import Footer from "$lib/components/Footer.svelte";
 </script>
-
-<svelte:head>
-    <!-- Katex CSS -->
-    <link rel="stylesheet" href="/katex/katex.min.css" />
-</svelte:head>
 
 <Header />
 
