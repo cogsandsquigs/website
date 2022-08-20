@@ -11,6 +11,11 @@ fields:
 - type: text
   name: description
   label: description
+- name: repo_link
+  type: text
+  config:
+    required: false
+  label: repo_link
 - type: list
   name: tags
   label: tags
