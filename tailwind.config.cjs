@@ -14,12 +14,11 @@ module.exports = {
                 warning: "#FBBD23",
                 error: "#F87272",
             },
-        },
-    },
 
-    extend: {
-        screens: {
-            xs: "540px",
+            screens: {
+                // "2xs": "360px",
+                // xs: "540px",
+            },
         },
     },
 

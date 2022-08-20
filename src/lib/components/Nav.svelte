@@ -1,7 +1,5 @@
 <nav class="mb-4">
-    <div
-        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 [&>*]:w-min [&>*]:mx-auto"
-    >
+    <div class="grid grid-cols-3 sm:grid-cols-5 my-2 [&>*]:w-min [&>*]:mx-auto">
         <slot />
     </div>
 
