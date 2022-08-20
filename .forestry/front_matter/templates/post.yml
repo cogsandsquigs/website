@@ -17,3 +17,5 @@ fields:
 - type: boolean
   name: draft
   label: draft
+pages:
+- src/content/blog/why-i-write-funny.md
