@@ -46,6 +46,6 @@ Yeah... those were an awful two weeks. But I’m done now, and you can find the 
 
 So if you’re ever in my position, and need something to help you, maybe my work can make your life easier. Maybe. Or it could make it hell, I dunno how many bugs are in there (but I tried to squash them all, don’t worry).
 
-So I guess the moral of the story is that you should do things the easier way, especially if someone has done them before, because otherwise you end up wasting weeks of your time and energy getting nearly nothing done, only for you to find out that someone else did what you tried to do better.
+So I guess the moral of the story is that you should do things the easier way, especially if someone has done them before, because otherwise you end up wasting weeks of your time and energy getting nearly nothing done, only for you to find out that someone else did what you tried to do better than you ever could.
 
 See ya!
