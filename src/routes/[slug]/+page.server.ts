@@ -14,6 +14,8 @@ export const load: PageServerLoad = async ({ url, params }) => {
 
     return {
         title: page.frontmatter.title,
+        description:
+            page.frontmatter.description || "A page on Cogs and Squigs",
         html: page.md,
     };
 };

@@ -1,14 +1,12 @@
 <script lang="ts">
     import type { PageServerData } from "./$types";
     import PageList from "$lib/components/PageList.svelte";
+    import PageHead from "$lib/components/PageHead.svelte";
 
     export let data: PageServerData;
 </script>
 
-<svelte:head>
-    <title>Cogs and Squigs - home</title>
-    <meta property="og:title" content="Cogs and Squigs - home" />
-</svelte:head>
+<PageHead title="home" description="My little slice of the blogosphere" />
 
 <h1 class="mb-2">Cogs And Squigs</h1>
 <h2 class="m-0 mb-9">My little slice of the blogosphere</h2>
