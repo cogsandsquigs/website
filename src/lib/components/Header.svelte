@@ -1,13 +1,13 @@
-<header class="top-0 bg-primary">
-    <nav class="mb-4">
-        <ul class="flex justify-evenly list-none p-0 m-0 [&>li]:p-0">
-            <li><a href="/">home</a></li>
-            <li><a href="/about">about</a></li>
-            <li><a href="/blog">blog</a></li>
-            <li><a href="/projects">projects</a></li>
-            <li><a href="https://github.com/cogsandsquigs">github</a></li>
-        </ul>
+<script lang="ts">
+    import Nav from "$lib/components/Nav.svelte";
+</script>
 
-        <hr class="mx-1 my-0" />
-    </nav>
+<header class="top-0 bg-primary">
+    <Nav>
+        <a href="/">home</a>
+        <a href="/about">about</a>
+        <a href="/blog">blog</a>
+        <a href="/projects">projects</a>
+        <a href="https://github.com/cogsandsquigs">github</a>
+    </Nav>
 </header>
