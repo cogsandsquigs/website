@@ -17,7 +17,7 @@ export const load: PageServerLoad = async ({ url, params }) => {
         date: page.frontmatter.date,
         description: page.frontmatter.description,
         tags: page.frontmatter.tags,
-        github_link: `https://github.com/cogsandsquigs/${page.frontmatter.title}`,
+        repo_link: page.frontmatter.repo_link,
         html: page.md,
     };
 };

@@ -3,12 +3,12 @@ title: Enslaving an AI for fun and profit
 date: 2022-05-23
 description: Or, how I came up with the name 'cogsandsquigs’
 tags:
-- dev
-- gpt-j-6b
-- ai
+    - dev
+    - gpt-j-6b
+    - ai
 draft: false
-
 ---
+
 So, you may wonder.
 
 “Ian, how did you come up with the username `cogsandsquigs`?”

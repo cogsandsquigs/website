@@ -19,8 +19,8 @@
     {@html data.html}
 </div>
 
-{#if data.github_link}
+{#if data.repo_link}
     <p>
-        Github link to {data.title} <a href={data.github_link}>here</a>.
+        Link to the repository <a href={data.repo_link}>here</a>.
     </p>
 {/if}

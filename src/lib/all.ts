@@ -1,22 +1,13 @@
-import { posts } from "$lib/posts";
-import { projects } from "$lib/projects";
-import type { Page } from "$lib/types";
+import { getPagesFromMd } from "./getPageFromMd";
 
 /**
  * Get all the stuff (projects, posts, etc) and return them.
+ * @returns A promise for an array of pages.
  */
-export const all = async (): Promise<Page[]> => {
-    return await posts()
-        .then(async (posts) => {
-            posts.push(...(await projects()));
-            return posts;
-        })
-        .then((items) =>
-            items.sort((a, b) => {
-                return (
-                    new Date(b.frontmatter.date).valueOf() -
-                    new Date(a.frontmatter.date).valueOf()
-                );
-            })
-        );
-};
+export const all = () =>
+    getPagesFromMd(
+        import.meta.glob<string>(
+            ["/src/content/blog/*.md", "/src/content/projects/*.md"],
+            { as: "raw" }
+        )
+    );

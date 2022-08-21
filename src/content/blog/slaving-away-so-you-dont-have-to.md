@@ -4,13 +4,13 @@ date: 2022-08-05
 description: My journey creating cogsandsquigs/twiboot
 draft: false
 tags:
-- atmega
-- bootloader
-- dev
-- particle-iot
-- twiboot
-
+    - atmega
+    - bootloader
+    - dev
+    - particle-iot
+    - twiboot
 ---
+
 Sooo… where was I?
 
 Mostly just doing my own thing, building stuff, breaking stuff, etc., etc. Living the dream, as some might say.
@@ -23,15 +23,15 @@ The question was, how do we get the ATmegas to be updated by the Argon? The answ
 
 As it turns out, it was awfully hard. Like, really, really, really hard. Low level programming with C is not for everyone (and definitely not for me!). Because I don’t want to provide too much detail, being a lazy blogger, here’s a step-by-step of what happened:
 
- 1. Research.
- 2. Start with low-level programming.
- 3. Get a simple blink example to work on an ATmega328.
- 4. Great, that works! Try doing stuff over UART/Serial.
- 5. Very difficult, but manageable. Try I2C/TWI now?.
- 6. Wow, that was awful, and it doesn’t work!.
- 7. Repeat steps 1-6 a few more times.
- 8. Stumble across [orempel/twiboot](https://github.com/orempel/twiboot).
- 9. Try to get that to work.
+1.  Research.
+2.  Start with low-level programming.
+3.  Get a simple blink example to work on an ATmega328.
+4.  Great, that works! Try doing stuff over UART/Serial.
+5.  Very difficult, but manageable. Try I2C/TWI now?.
+6.  Wow, that was awful, and it doesn’t work!.
+7.  Repeat steps 1-6 a few more times.
+8.  Stumble across [orempel/twiboot](https://github.com/orempel/twiboot).
+9.  Try to get that to work.
 10. Suprise! It doesn't :(.
 11. Repeat steps 1-6.
 12. Try to make just a bootloader, see if that can work.
