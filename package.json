@@ -34,8 +34,7 @@
     },
     "dependencies": {
         "dayjs": "^1.11.5",
-        "svelte": "^3.49.0",
-        "victormono": "^1.5.4"
+        "svelte": "^3.49.0"
     },
     "type": "module"
 }

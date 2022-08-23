@@ -1,8 +1,5 @@
 <script lang="ts">
-    // CSS imports
-    import "victormono";
     import "$lib/styles/main.css";
-    import "$lib/styles/katex/katex.min.css";
 
     import Header from "$lib/components/Header.svelte";
     // import Footer from "$lib/components/Footer.svelte";
