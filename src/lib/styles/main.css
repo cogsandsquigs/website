@@ -1,3 +1,6 @@
+/* Import KaTeX styles (for rendering KaTeX, of course) */
+@import "$lib/styles/katex/katex.min.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
