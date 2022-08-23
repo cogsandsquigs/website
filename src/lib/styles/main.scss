@@ -1,0 +1,27 @@
+// Import KaTeX styles (for rendering KaTeX, of course)
+@import "$lib/styles/katex/katex.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Victor Mono", "Fira Code", monospace !important;
+    font-size: large !important;
+
+    // Handle scrollbars
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    ::-webkit-scrollbar {
+        display: none !important;
+    }
+
+}
+
+pre code {
+    font-family: "Victor Mono", "Fira Code", monospace !important;
+}
+
+u, *[style*="underline"] {
+    @apply underline decoration-2 decoration-secondary;
+}
