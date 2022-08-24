@@ -6,8 +6,8 @@ import { getPagesFromMd } from "./getPageFromMd";
  */
 export const all = () =>
     getPagesFromMd(
-        import.meta.glob<string>(
-            ["/src/content/blog/*.md", "/src/content/projects/*.md"],
-            { as: "raw" }
-        )
+        import.meta.glob([
+            "/src/content/blog/*.md",
+            "/src/content/projects/*.md",
+        ])
     );

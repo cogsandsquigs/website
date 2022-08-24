@@ -1,8 +1,9 @@
 export type Page = {
+    render: any;
     data: {
         path: string;
     };
+    metadata: any;
     frontmatter: any;
-    md: string;
     slug: string;
 };

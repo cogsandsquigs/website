@@ -15,14 +15,12 @@
         "@sveltejs/kit": "^1.0.0-next.418",
         "@tailwindcss/typography": "^0.5.4",
         "autoprefixer": "^10.4.8",
+        "mdsvex": "^0.10.6",
         "postcss": "^8.4.16",
-        "rehype-katex": "^6.0.2",
+        "rehype-katex-svelte": "^1.1.2",
+        "rehype-shiki": "^0.0.9",
         "rehype-stringify": "^9.0.3",
-        "remark-frontmatter": "^4.0.1",
-        "remark-math": "^5.1.1",
-        "remark-parse": "^10.0.1",
-        "remark-parse-frontmatter": "^1.0.3",
-        "remark-rehype": "^10.1.0",
+        "remark-math": "^3.0.0",
         "sass": "^1.54.5",
         "shiki": "^0.10.1",
         "svelte-check": "^2.7.1",
@@ -35,7 +33,6 @@
     },
     "dependencies": {
         "dayjs": "^1.11.5",
-        "rehype-retext": "^3.0.2",
         "svelte": "^3.49.0"
     },
     "type": "module"

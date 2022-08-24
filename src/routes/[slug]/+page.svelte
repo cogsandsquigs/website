@@ -10,4 +10,4 @@
 <h1 class="mb-2">{data.title}</h1>
 <h2 class="m-0 mb-9">{data.description}</h2>
 
-{@html data.html}
+<svelte:component this={data.render} />

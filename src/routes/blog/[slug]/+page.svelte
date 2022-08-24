@@ -15,6 +15,4 @@
     tags={data.tags}
 />
 
-<div class="mt-4">
-    {@html data.html}
-</div>
+<svelte:component this={data.render} />
