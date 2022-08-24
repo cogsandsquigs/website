@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import type { Page } from "$lib/types";
 
 /**
@@ -12,17 +13,20 @@ export const getPagesFromMd = async (
 
     for (const [path, importFn] of Object.entries(imports)) {
         const page = await importFn();
-
-        pages.push({
-            render: page.default,
-            data: {
-                path: path.split("/")[path.split("/").length - 2],
-            },
-            metadata: page.metadata,
-            frontmatter: page.metadata,
-            slug: path.split("/")[path.split("/").length - 1].slice(0, -3),
-        });
+        if (!page.metadata.draft || page.metadata.published) {
+            pages.push({
+                render: page.default,
+                data: {
+                    path: path.split("/")[path.split("/").length - 2],
+                },
+                metadata: page.metadata,
+                frontmatter: page.metadata,
+                slug: path.split("/")[path.split("/").length - 1].slice(0, -3),
+            });
+        }
     }
 
-    return pages;
+    return pages.sort(
+        (a, b) => dayjs(b.metadata.date).unix() - dayjs(a.metadata.date).unix()
+    );
 };
