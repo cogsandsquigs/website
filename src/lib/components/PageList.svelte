@@ -1,5 +1,5 @@
 <script lang="ts">
-    import path from "path";
+    import * as pathLib from "path";
     import dayjs from "dayjs";
     import type { Page } from "$lib/types";
 
@@ -7,11 +7,11 @@
 </script>
 
 <ul class="list-none p-0">
-    {#each pages as { data, frontmatter, slug }, index}
-        {#if index == 0 || dayjs(frontmatter.date).month() != dayjs(pages[index - 1].frontmatter.date).month() || dayjs(frontmatter.date).year() != dayjs(pages[index - 1].frontmatter.date).year()}
+    {#each pages as { path, slug, title, date, tags }, index}
+        {#if index == 0 || dayjs(date).month() != dayjs(pages[index - 1].date).month() || dayjs(date).year() != dayjs(pages[index - 1].date).year()}
             <div class="flex items-center">
                 <h2 class="m-0 mr-2">
-                    {dayjs(frontmatter.date).format("MMMM YYYY")}
+                    {dayjs(date).format("MMMM YYYY")}
                 </h2>
                 <hr class="flex-1 m-0" />
             </div>
@@ -20,21 +20,21 @@
         {/if}
         <li class="pl-8">
             <h2 class="m-0">
-                <a href={path.join("/", data.path || "", slug)}>
-                    {frontmatter.title}
+                <a href={pathLib.join("/", path || "", slug)}>
+                    {title}
                 </a>
             </h2>
 
-            {#if frontmatter.date}
+            {#if date}
                 <p class="m-0">
-                    Created on {dayjs(frontmatter.date).format("MMMM D, YYYY")}
+                    Created on {dayjs(date).format("MMMM D, YYYY")}
                 </p>
             {/if}
 
-            {#if frontmatter.tags}
+            {#if tags}
                 <p class="m-0 text-sm">
                     Tags:
-                    {#each frontmatter.tags as tag, index}
+                    {#each tags as tag, index}
                         {#if index > 0}, {/if}
                         <a href={`/tags/${tag}`}>{tag}</a>
                     {/each}

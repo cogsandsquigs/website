@@ -14,10 +14,10 @@ export const load: PageLoad = async ({ url, params }) => {
     }
 
     return {
-        title: page.frontmatter.title,
-        date: page.frontmatter.date,
-        description: page.frontmatter.description,
-        tags: page.frontmatter.tags,
+        title: page.title,
+        date: page.date,
+        description: page.description,
+        tags: page.tags,
         render: page.render,
     };
 };

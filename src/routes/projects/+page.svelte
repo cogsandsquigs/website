@@ -1,9 +1,9 @@
 <script lang="ts">
     import PageHead from "$lib/components/PageHead.svelte";
     import PageList from "$lib/components/PageList.svelte";
-    import type { PageServerData } from "./$types";
+    import type { PageData } from "./$types";
 
-    export let data: PageServerData;
+    export let data: PageData;
 </script>
 
 <PageHead

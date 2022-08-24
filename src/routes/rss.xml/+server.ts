@@ -1,6 +1,6 @@
 export const prerender = true;
 
-import path from "path";
+import * as pathLib from "path";
 import { all } from "$lib/all";
 import type { Page } from "$lib/types";
 import type { RequestHandler } from "./$types";
@@ -25,12 +25,12 @@ const render = (posts: Page[]) => `<?xml version="1.0" encoding="UTF-8" ?>
   <description>My little slice of the blogosphere</description>
   ${posts
       .map(
-          ({ data, frontmatter, slug }) => `<item>
-  <guid>https://${path.join(base, data.path, slug)}</guid>
-  <title>${frontmatter.title}</title>
-  <link>https://${path.join(base, data.path, slug)}</link>
-  <description>${frontmatter.description}</description>
-  <pubDate>${new Date(frontmatter.date).toUTCString()}</pubDate>
+          ({ path, slug, title, date, description }) => `<item>
+  <guid>https://${pathLib.join(base, path, slug)}</guid>
+  <title>${title}</title>
+  <link>https://${pathLib.join(base, path, slug)}</link>
+  <description>${description}</description>
+  <pubDate>${new Date(date as any).toUTCString()}</pubDate>
   </item>`
       )
       .join("")}

@@ -14,11 +14,11 @@ export const load: PageLoad = async ({ url, params }) => {
     }
 
     return {
-        title: page.frontmatter.title,
-        date: page.frontmatter.date,
-        description: page.frontmatter.description,
-        tags: page.frontmatter.tags,
-        repo_link: page.frontmatter.repo_link,
+        title: page.title,
+        date: page.date,
+        description: page.description,
+        tags: page.tags,
+        repo_link: page.repo_link,
         render: page.render,
     };
 };

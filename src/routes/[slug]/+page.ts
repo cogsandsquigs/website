@@ -15,8 +15,7 @@ export const load: PageLoad = async ({ url, params }) => {
 
     return {
         render: page.render,
-        title: page.frontmatter.title,
-        description:
-            page.frontmatter.description || "A page on Cogs and Squigs",
+        title: page.title,
+        description: page.description || "A page on Cogs and Squigs",
     };
 };

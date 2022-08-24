@@ -16,17 +16,12 @@ export const getPagesFromMd = async (
         if (!page.metadata.draft || page.metadata.published) {
             pages.push({
                 render: page.default,
-                data: {
-                    path: path.split("/")[path.split("/").length - 2],
-                },
-                metadata: page.metadata,
-                frontmatter: page.metadata,
+                path: path.split("/")[path.split("/").length - 2],
                 slug: path.split("/")[path.split("/").length - 1].slice(0, -3),
+                ...page.metadata,
             });
         }
     }
 
-    return pages.sort(
-        (a, b) => dayjs(b.metadata.date).unix() - dayjs(a.metadata.date).unix()
-    );
+    return pages.sort((a, b) => dayjs(b.date).unix() - dayjs(a.date).unix());
 };

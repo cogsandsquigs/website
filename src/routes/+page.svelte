@@ -1,9 +1,9 @@
 <script lang="ts">
-    import type { PageServerData } from "./$types";
+    import type { PageData } from "./$types";
     import PageList from "$lib/components/PageList.svelte";
     import PageHead from "$lib/components/PageHead.svelte";
 
-    export let data: PageServerData;
+    export let data: PageData;
 </script>
 
 <PageHead title="home" description="My little slice of the blogosphere" />
