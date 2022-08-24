@@ -3,14 +3,14 @@ import rehypeKatexSvelte from "rehype-katex-svelte";
 import remarkMath from "remark-math";
 import shiki from "shiki";
 
-const highlighter = async (code, lang) => {
+const highlighter = async (code, lang = "") => {
     let highlighted = await shiki
         .getHighlighter({
             theme: Andromeda,
         })
         .then((highlighter) =>
             highlighter.codeToHtml(code, {
-                lang: lang,
+                lang: lang.toLowerCase(),
             })
         );
 
@@ -19,7 +19,7 @@ const highlighter = async (code, lang) => {
 
 /** @type {import('mdsvex').MdsvexOptions} */
 export default {
-    extensions: [".md"],
+    extensions: [".svx", ".md"],
 
     highlight: {
         highlighter,
