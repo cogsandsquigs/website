@@ -1,11 +1,30 @@
-import remarkMath from "remark-math";
 import rehypeKatexSvelte from "rehype-katex-svelte";
+import remarkMath from "remark-math";
+import shiki from "shiki";
+import Andromeda from "./src/lib/styles/shiki/andromeda.json" assert { type: "json" };
+
+const highlighter = async (code, lang) => {
+    let highlighted = await shiki
+        .getHighlighter({
+            theme: Andromeda,
+        })
+        .then((highlighter) =>
+            highlighter.codeToHtml(code, {
+                lang: lang,
+            })
+        );
+
+    return `{@html \`${highlighted}\` }`;
+};
 
 /** @type {import('mdsvex').MdsvexOptions} */
 export default {
     extensions: [".md"],
 
-    remarkPlugins: [remarkMath],
+    highlight: {
+        highlighter,
+    },
 
+    remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatexSvelte],
 };
