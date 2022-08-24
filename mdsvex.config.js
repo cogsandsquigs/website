@@ -1,7 +1,7 @@
+import Andromeda from "./src/lib/styles/shiki/andromeda.json" assert { type: "json" };
 import rehypeKatexSvelte from "rehype-katex-svelte";
 import remarkMath from "remark-math";
 import shiki from "shiki";
-import Andromeda from "./src/lib/styles/shiki/andromeda.json" assert { type: "json" };
 
 const highlighter = async (code, lang) => {
     let highlighted = await shiki
