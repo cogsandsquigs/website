@@ -10,7 +10,7 @@ const highlighter = async (code, lang = "") => {
         })
         .then((highlighter) =>
             highlighter.codeToHtml(code, {
-                lang: lang.toLowerCase(),
+                lang: lang,
             })
         );
 
