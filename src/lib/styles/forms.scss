@@ -1,0 +1,20 @@
+
+// Inputs 
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    @apply border-0 border-b-2 bg-inherit border-secondary;
+}
+
+// Buttons
+
+button {
+    margin-top: theme("spacing.2") !important;
+    margin-bottom: theme("spacing.2") !important;
+    @apply bg-primary min-w-max text-center border-secondary border-2 rounded;
+}
+
+button:hover {
+    background-color: darken(#111827, 2%); // TODO: replace w/ css variable for primary color
+}

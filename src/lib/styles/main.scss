@@ -1,5 +1,6 @@
-// Import KaTeX styles (for rendering KaTeX, of course)
-@import "$lib/styles/katex/katex.min.css";
+@use "$lib/styles/katex/katex.min.css"; // Import KaTeX styles (for rendering KaTeX, of course)
+@use "$lib/styles/forms.scss"; // Import form styles
+
 
 @tailwind base;
 @tailwind components;

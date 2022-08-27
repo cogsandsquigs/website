@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import type { Page } from "$lib/types";
+import { dev } from "$app/env";
 
 /**
  * Takes in a glob import of pages and returns an array of pages.
@@ -13,7 +14,7 @@ export const getPagesFromMd = async (
 
     for (const [path, importFn] of Object.entries(imports)) {
         const page = await importFn();
-        if (!page.metadata.draft || page.metadata.published) {
+        if (dev || !page.metadata.draft || page.metadata.published) {
             pages.push({
                 render: page.default,
                 path: path.split("/")[path.split("/").length - 2],

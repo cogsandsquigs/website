@@ -26,7 +26,7 @@ export default {
         },
 
         browser: {
-            hydrate: false,
+            hydrate: true,
             router: false,
         },
     },
