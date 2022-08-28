@@ -30,6 +30,15 @@ export default {
             router: false,
         },
 
+        csp: {
+            mode: "hash",
+            directives: {
+                'script-src': ['self'],
+                "style-src": ["self"],
+                "font-src": ["self"],
+            }
+        },
+
         inlineStyleThreshold: 60000, // Inline critical page styles
     },
 };
