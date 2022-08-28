@@ -3,6 +3,7 @@ import { pages } from "$lib/pages";
 import type { PageLoad } from "./$types";
 
 export const prerender = true;
+export let hydrate = false;
 
 export const load: PageLoad = async ({ url, params }) => {
     let page = await pages().then((ps) =>
@@ -12,6 +13,8 @@ export const load: PageLoad = async ({ url, params }) => {
     if (!page) {
         throw error(404, `Not found: ${url.pathname}`);
     }
+
+    hydrate = page.hydrate || false;
 
     return {
         render: page.render,
