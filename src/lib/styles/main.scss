@@ -1,6 +1,6 @@
 @use "$lib/styles/katex/katex.min.css"; // Import KaTeX styles (for rendering KaTeX, of course)
 @use "$lib/styles/forms.scss"; // Import form styles
-
+@use "$lib/styles/particles.scss"; // Import tsParticles styles
 
 @tailwind base;
 @tailwind components;

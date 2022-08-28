@@ -20,7 +20,7 @@
         {/if}
         <li class="pl-8">
             <h2 class="m-0">
-                <a href={"/" + page.path || "" + page.slug}>
+                <a href={"/" + (page.path || "") + "/" + page.slug}>
                     {page.title}
                 </a>
             </h2>
