@@ -33,9 +33,7 @@
     },
     "dependencies": {
         "dayjs": "^1.11.5",
-        "svelte": "^3.49.0",
-        "svelte-particles": "^2.2.4",
-        "tsparticles": "^2.2.4"
+        "svelte": "^3.49.0"
     },
     "type": "module"
 }
