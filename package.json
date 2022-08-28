@@ -11,8 +11,8 @@
     },
     "devDependencies": {
         "@leafac/rehype-shiki": "^2.1.2",
-        "@sveltejs/adapter-static": "latest",
-        "@sveltejs/kit": "^1.0.0-next.418",
+        "@sveltejs/adapter-static": "next",
+        "@sveltejs/kit": "^1.0.0-next.445",
         "@tailwindcss/forms": "^0.5.2",
         "@tailwindcss/typography": "^0.5.4",
         "autoprefixer": "^10.4.8",

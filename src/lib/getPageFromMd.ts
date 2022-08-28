@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import type { Page } from "$lib/types";
-import { dev } from "$app/env";
+import { dev } from "$app/environment";
 
 /**
  * Takes in a glob import of pages and returns an array of pages.
