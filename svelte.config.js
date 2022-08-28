@@ -35,7 +35,7 @@ export default {
             directives: {
                 'script-src': ['self'],
                 "style-src": ["self"],
-                "font-src": ["self"],
+                "font-src": ["self", "data:"],
             }
         },
 
