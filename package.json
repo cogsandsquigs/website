@@ -33,7 +33,6 @@
     },
     "dependencies": {
         "dayjs": "^1.11.5",
-        "path-browserify": "^1.0.1",
         "svelte": "^3.49.0",
         "svelte-particles": "^2.2.4",
         "tsparticles": "^2.2.4"
