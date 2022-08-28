@@ -31,7 +31,7 @@ export default {
         },
 
         csp: {
-            mode: "hash",
+            mode: "auto",
             directives: {
                 'script-src': ['self'],
                 "style-src": ["self"],
