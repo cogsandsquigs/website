@@ -35,8 +35,8 @@ export default {
             directives: {
                 "object-src": ["none"],
                 'script-src': ['self'],
-                "style-src": ["self"],
-                //"font-src": ["self", "data:"],
+                // "style-src": ["self", "data:"],
+                // "font-src": ["self", "data:"],
             }
         },
 
