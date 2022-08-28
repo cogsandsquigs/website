@@ -29,5 +29,7 @@ export default {
             hydrate: true,
             router: false,
         },
+
+        inlineStyleThreshold: 60000, // Inline critical page styles
     },
 };
