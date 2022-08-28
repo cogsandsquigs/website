@@ -33,9 +33,10 @@ export default {
         csp: {
             mode: "auto",
             directives: {
+                "object-src": ["none"],
                 'script-src': ['self'],
                 "style-src": ["self"],
-                "font-src": ["self", "data:"],
+                //"font-src": ["self", "data:"],
             }
         },
 
