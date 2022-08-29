@@ -1,6 +1,6 @@
 ---
 title: What the fuck CPS?
-date: 2022-08-29T23:00:00Z
+date: 2022-08-29T18:13:00Z
 description: "(Chicago Public Schools, not Child Protective Services)"
 tags:
 - rant
