@@ -18,4 +18,5 @@ fields:
   name: draft
   label: draft
 pages:
+- src/content/blog/what-the-fuck-cps-chicago-public-schools-not-child-protective-services.md
 - src/content/blog/why-i-write-funny.md
