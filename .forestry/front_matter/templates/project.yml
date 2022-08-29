@@ -22,3 +22,5 @@ fields:
 - type: boolean
   name: draft
   label: draft
+pages:
+- src/content/projects/coreml-downloader.md
