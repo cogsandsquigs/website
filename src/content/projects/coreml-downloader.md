@@ -11,4 +11,4 @@ tags:
 draft: false
 
 ---
-Just a little thing I made during my time at the [WCL](thewcl.com).
+Just a little thing I made during my time at the [WCL](https://thewcl.com).
