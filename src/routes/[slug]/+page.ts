@@ -2,8 +2,7 @@ import { error } from "@sveltejs/kit";
 import { pages } from "$lib/pages";
 import type { PageLoad } from "./$types";
 
-export const prerender = true;
-export let hydrate = false;
+export let csr = false;
 
 export const load: PageLoad = async ({ url, params }) => {
     let page = await pages().then((ps) =>
@@ -14,7 +13,7 @@ export const load: PageLoad = async ({ url, params }) => {
         throw error(404, `Not found: ${url.pathname}`);
     }
 
-    hydrate = page.hydrate || false;
+    csr = page.csr || false;
 
     return {
         render: page.render,

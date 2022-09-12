@@ -3,7 +3,7 @@ export type Page = {
     render: any; // The render function for the page
     slug: string;
     path: string;
-    hydrate: boolean;
+    csr: boolean; // If we do client-side rendering for the page
 
     // required page props
     title: string;

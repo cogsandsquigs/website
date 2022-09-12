@@ -1,6 +1,7 @@
 ---
 title: "about"
 description: "This is who I am, silly"
+csr: true
 ---
 
 Hey! I'm Ian Pratt, although I go by the online alias <u>**cogsandsquigs**</u>. I program things for fun and profit (although mainly for fun!). Currently, my main project is working on my website, and making it look as brilliant and fancy as possible. It's also a great way to practice my [webdev](/tags/webdev) skills!

@@ -18,16 +18,10 @@ export default {
         adapter: adapter(),
 
         prerender: {
-            default: true,
             crawl: true,
             enabled: true,
             entries: ["*"],
             onError: "fail",
-        },
-
-        browser: {
-            hydrate: true,
-            router: false,
         },
 
         csp: {
