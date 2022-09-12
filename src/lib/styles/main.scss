@@ -1,12 +1,13 @@
-@use "$lib/styles/katex/katex.min.css"; // Import KaTeX styles (for rendering KaTeX, of course)
 @use "$lib/styles/forms.scss"; // Import form styles
+@use "$lib/styles/katex/katex.min.css"; // Import KaTeX styles (for rendering KaTeX, of course)
+@use "$lib/styles/fonts/atkinson-hyperlegible.scss"; // Import Atkinson Hyperlegible font
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    font-family: "Victor Mono", "Fira Code", monospace !important;
+    font-family: "Atkinson Hyperlegible", Verdana, Helvetica, sans-serif !important;
     font-size: large !important;
 
     // Handle scrollbars
