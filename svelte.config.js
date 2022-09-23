@@ -28,10 +28,10 @@ export default {
             mode: "auto",
             directives: {
                 "object-src": ["none"],
-                'script-src': ['self'],
+                "script-src": ["self"],
                 // "style-src": ["self", "data:"],
                 // "font-src": ["self", "data:"],
-            }
+            },
         },
 
         inlineStyleThreshold: 60000, // Inline critical page styles
