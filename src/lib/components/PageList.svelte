@@ -37,6 +37,10 @@
                     </a>
                 </h2>
 
+                <h3 class="m-0">
+                    {page.description}
+                </h3>
+
                 {#if page.date}
                     <p class="m-0">
                         Created on {dayjs(page.date).format("MMMM D, YYYY")}
