@@ -1,0 +1,56 @@
+{
+    "basics": {
+        "name": "Ian Pratt",
+        "label": "Programmer",
+        "image": "",
+        "email": "ianjdpratt@gmail.com",
+        "url": "https://cogsandsquigs.gq",
+        "summary": "Just a person who likes to learn and code, and learn to code new things.",
+        "profiles": [
+            {
+                "network": "Github",
+                "username": "cogsandsquigs",
+                "url": "https://github.com/cogsandsquigs"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Windy City Lab",
+            "position": "Intern",
+            "url": "https://thewcl.com",
+            "startDate": "2022-06-20",
+            "endDate": "2022-08-22",
+            "summary": "Interned at the WCL as a digital electronics programmer, working on some projects.",
+            "highlights": [
+                "Developed a Particle library to use the Chip23LCV1024 SPI EEPROM to store microcode for the NAND7400.",
+                "Worked on the Loop Tracks project, and made the server and iOS app (and a couple other things too).",
+                "Worked on the Mayo EHealth project, building a Swift library to automatically download and load CoreML models from the Mayo Clinic."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Albert G Lane Technical High School",
+            "url": "https://lanetech.org/",
+            "area": "General Education with a specialty in Computer Science",
+            "startDate": "2020-09-08",
+            "endDate": "2024-06-07"
+        }
+    ],
+    "awards": [
+        {
+            "title": "HackVH BattleSnake Competition - 2nd Place",
+            "date": "2021-04-18",
+            "awarder": "HackVH",
+            "summary": "2nd Place at the HackVH BattleSnake Competition, with my (now deleted) snake, 'quasnek'."
+        }
+    ],
+    "skills": [],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Native speaker"
+        }
+    ]
+}
