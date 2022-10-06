@@ -1,4 +1,4 @@
-# cogsandsquigs.github.io
+# My website
 
 This is my personal website, and accessable [here](https://cogsandsquigs.gq) to!
 
