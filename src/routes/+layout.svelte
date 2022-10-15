@@ -16,3 +16,9 @@
 >
     <slot />
 </div>
+
+<noscript
+    class="w-full h-full fixed top-0 left-0 bg-black flex items-center justify-center"
+>
+    <h1 class="white">lol get fucked rex</h1>
+</noscript>
