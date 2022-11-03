@@ -1,9 +1,16 @@
-.DS_Store
-node_modules
-/build
-/.svelte-kit
-/.vercel
-/package
+# Environment variables
 .env
 .env.*
 !.env.example
+
+# JS/Sveltekit
+node_modules
+/build
+/.svelte-kit
+/package
+
+# Vercel
+/.vercel
+
+# Other/misc.
+.DS_Store
