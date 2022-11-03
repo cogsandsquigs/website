@@ -1,6 +1,4 @@
-<script>
-	import Link from '$components/Link.svelte';
-</script>
 
-<h1>Welcome to my website!</h1>
-<Link href="">test</Link>
+
+<h1 class="text-4xl">Welcome to my website!</h1>
+<a href="#test" class="text-2xl">test</a>
