@@ -16,7 +16,8 @@ const config = {
 
 		// Aliases for certain files/directories
 		alias: {
-			$styles: 'src/lib/styles'
+			$styles: 'src/lib/styles',
+			$components: 'src/lib/components'
 		}
 	}
 };
