@@ -1,20 +1,20 @@
 @use 'gradient.scss';
 
 a {
-	@apply relative;
+	@apply relative underline decoration-sky-100;
 }
 
-// This imitates a gradient underline
-a::after {
-	// Add the gradient
-	@extend .gradient;
+// // This imitates a gradient underline
+// a::after {
+// 	// Add the gradient
+// 	@extend .gradient;
 	
-	// This is for the underline
-	@apply absolute w-full h-0.5 bottom-0 left-0 rounded-sm;
+// 	// This is for the underline
+// 	@apply absolute w-full h-0.5 bottom-0 left-0 rounded-sm;
 	
-	// Need this because otherwise underline disappears
-	content: '';
-}
+// 	// Need this because otherwise underline disappears
+// 	content: '';
+// }
 
 a:hover {
 	// Add the gradient
