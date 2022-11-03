@@ -1,6 +1,10 @@
-<nav class="grid">
+<nav class="px-4">
+	<div class="flex">
+		<a>test</a>
+	</div>
+
 	<!-- Bottom line across screen -->
 	<hr
-		class="w-11/12 h-1 m-2 mx-auto border-none rounded-sm bg-gradient-to-r from-primary via-secondary to-accent"
+		class="gradient my-2 h-0.5 border-none rounded-sm"
 	/>
 </nav>

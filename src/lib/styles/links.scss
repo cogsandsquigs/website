@@ -1,22 +1,28 @@
+@use 'gradient.scss';
+
 a {
-	position: relative;
-}
-
-a:hover {
-	// Gradient text background
-	@apply text-transparent underline decoration-2 text-clip bg-gradient-to-r from-primary via-secondary to-accent;
-
-	// Have to do this because of firefox
-	background-clip: text;
+	@apply relative;
 }
 
 // This imitates a gradient underline
 a::after {
-	@apply rounded-sm bg-gradient-to-r from-primary via-secondary to-accent;
+	// Add the gradient
+	@extend .gradient;
+	
+	// This is for the underline
+	@apply absolute w-full h-0.5 bottom-0 left-0 rounded-sm;
+	
+	// Need this because otherwise underline disappears
 	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 2px;
-	width: 100%;
+}
+
+a:hover {
+	// Add the gradient
+	@extend .gradient;
+	
+	// Gradient text background
+	@apply text-transparent decoration-2 text-clip;
+
+	// Have to do this because of firefox
+	background-clip: text;
 }

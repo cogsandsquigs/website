@@ -1,4 +1,5 @@
-@import 'links';
+@use 'links';
+@use 'gradient';
 
 @tailwind base;
 @tailwind components;
