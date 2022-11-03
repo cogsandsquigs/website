@@ -1,14 +1,14 @@
 ---
 title: Slaving away so you don’t have to
 date: 2022-08-05
-description: My journey creating cogsandsquigs/twiboot
+description: Yak-shaving my way to cogsandsquigs/twiboot
 draft: false
 tags:
-    - atmega
-    - bootloader
-    - dev
-    - particle-iot
-    - twiboot
+  - atmega
+  - bootloader
+  - dev
+  - particle-iot
+  - twiboot
 ---
 
 Sooo… where was I?
@@ -44,7 +44,7 @@ As it turns out, it was awfully hard. Like, really, really, really hard. Low lev
 
 Yeah... those were an awful two weeks. But I’m done now, and you can find the library at the link above. Don’t confuse it for orempel’s library, though. That’s the _actual_ bootloader.
 
-So if you’re ever in my position, and need something to help you, maybe my work can make your life easier. Maybe. Or it could make it hell, I dunno how many bugs are in there (but I tried to squash them all, don’t worry).
+So if you’re ever in my position, and need something to help you, maybe my work can make your life easier. Maybe. Or it could make it hell, I dunno how many bugs are in there (but I tried to squash them all, don’t worry :P).
 
 So I guess the moral of the story is that you should do things the easier way, especially if someone has done them before, because otherwise you end up wasting weeks of your time and energy getting nearly nothing done, only for you to find out that someone else did what you tried to do better than you ever could.
 

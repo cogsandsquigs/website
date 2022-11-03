@@ -12,7 +12,12 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+
+		// Aliases for certain files/directories
+		alias: {
+			$styles: 'src/lib/styles'
+		}
 	}
 };
 
