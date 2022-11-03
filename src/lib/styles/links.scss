@@ -12,7 +12,7 @@ a:hover {
 
 // This imitates a gradient underline
 a::after {
-	@apply bg-gradient-to-r from-primary via-secondary to-accent;
+	@apply rounded-sm bg-gradient-to-r from-primary via-secondary to-accent;
 	content: '';
 	position: absolute;
 	bottom: 0;
