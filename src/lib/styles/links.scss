@@ -1,21 +1,23 @@
-@use 'gradient.scss';
+@use 'gradient';
 
+// Needed for the gradient underline
 a {
-	@apply relative underline decoration-sky-100;
+	@apply relative pb-0.5;
 }
 
-// // This imitates a gradient underline
-// a::after {
-// 	// Add the gradient
-// 	@extend .gradient;
+// This imitates a gradient underline
+a::after {
+	// Add the gradient
+	@extend .gradient;
 	
-// 	// This is for the underline
-// 	@apply absolute w-full h-0.5 bottom-0 left-0 rounded-sm;
+	// This is for the underline
+	@apply absolute w-full h-0.5 bottom-0 left-0 rounded-sm;
 	
-// 	// Need this because otherwise underline disappears
-// 	content: '';
-// }
+	// Need this because otherwise underline disappears
+	content: '';
+}
 
+// This causes the text to go gradient on hover
 a:hover {
 	// Add the gradient
 	@extend .gradient;
