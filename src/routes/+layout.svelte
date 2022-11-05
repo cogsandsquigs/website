@@ -5,6 +5,6 @@
 
 <Nav />
 
-<div class="mt-14">
+<div class="mt-14 mx-2">
 	<slot />
 </div>

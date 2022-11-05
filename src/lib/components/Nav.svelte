@@ -1,8 +1,8 @@
 <nav class="px-4 pt-2 space-y-2 fixed w-full bg-base top-0">
-	<div class="grid grid-rows-1 grid-cols-5">
-		<h1 class="col-span-3 text-2xl">Cogs and Squigs</h1>
+	<div class="grid grid-rows-1 grid-cols-4 md:grid-cols-5">
+		<h1 class="col-span-2 md:col-span-3 text-xl md:text-2xl">Cogs and Squigs</h1>
 		
-		<ul class="flex col-span-2 justify-between pr-8 items-center list-none list-outside">
+		<ul class="flex col-span-2 justify-between pr-4 md:pr-8 items-center list-none list-outside">
 			<li><a href="/">home</a></li>
 			<li><a href="/about">about</a></li>
 			<li><a href="/blog">blog</a></li>
