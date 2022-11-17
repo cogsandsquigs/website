@@ -1,23 +1,93 @@
-# The URL the site will be built for
-base_url = "https://cogsandsquigs.gq"
+baseURL      = "http://cogsandsquigs.gq/"
+languageCode = "en-us"
+paginate     = 5
+theme        = "terminal"
+title        = "Cogs And Squigs"
 
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
+[params]
+    # dir name of your main content (default is `content/posts`).
+    # the list of set content will show up on your index page (baseurl).
+    contentTypeName = "posts"
 
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
+    # ["orange", "blue", "red", "green", "pink"]
+    themeColor = "blue"
 
-# The default language for the site
-default_language = "en"
+    # if you set this to 0, only submenu trigger will be visible
+    showMenuItems = 2
 
-[[taxonomies]]
-    feed = true
-    name = "tags"
+    # show selector to switch language
+    showLanguageSelector = false
 
-[markdown]
-    # Whether to do syntax highlighting
-    # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-    highlight_code = true
+    # set theme to full screen width
+    fullWidthTheme = false
 
-[extra]
-    # Put all your custom variables here
+    # center theme with default width
+    centerTheme = true
+
+    # if your resource directory contains an image called `cover.(jpg|png|webp)`,
+    # then the file will be used as a cover automatically.
+    # With this option you don't have to put the `cover` param in a front-matter.
+    autoCover = true
+
+    # set post to show the last updated
+    # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+    showLastUpdated = false
+
+    # set a custom favicon (default is a `themeColor` square)
+    # favicon = "favicon.ico"
+
+    # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+    updatedDatePrefix = "Updated"
+
+    # set all headings to their default size (depending on browser settings)
+    # oneHeadingSize = true # default
+
+    # whether to show a page's estimated reading time
+    # readingTime = false # default
+
+    # whether to show a table of contents
+    # can be overridden in a page's front-matter
+    # Toc = false # default
+
+    # set title for the table of contents
+    # can be overridden in a page's front-matter
+    # TocTitle = "Table of Contents" # default
+
+    # [params.twitter]
+    #     # set Twitter handles for Twitter cards
+    #     # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+    #     # do not include @
+    #     creator = ""
+    #     site    = ""
+
+[languages]
+    [languages.en]
+        copyright              = "(c) Ian Pratt 2022"
+        keywords               = ""
+        languageName           = "English"
+        menuMore               = "Show more"
+        missingBackButtonLabel = "Back to home page"
+        missingContentMessage  = "Page not found..."
+        newerPosts             = "Newer posts"
+        olderPosts             = "Older posts"
+        owner                  = "Ian Pratt"
+        readMore               = "Read more"
+        readOtherPosts         = "Read other posts"
+
+        [languages.en.params.logo]
+            logoHomeLink = "/"
+            logoText     = "Cogs And Squigs"
+
+[languages.en.menu]
+    [[languages.en.menu.main]]
+        identifier = "about"
+        name       = "about"
+        url        = "/about"
+    [[languages.en.menu.main]]
+        identifier = "github"
+        name       = "github"
+        url        = "https://github.com/cogsandsquigs"
+        # [[languages.en.menu.main]]
+        #     identifier = "showcase"
+        #     name       = "Showcase"
+        #     url        = "/showcase"
