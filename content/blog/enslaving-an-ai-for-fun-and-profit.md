@@ -6,7 +6,6 @@ tags:
     - dev
     - gpt-j-6b
     - ai
-draft: false
 ---
 
 So, you may wonder.

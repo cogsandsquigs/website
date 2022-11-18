@@ -2,10 +2,9 @@
 title: "Hello World!"
 date: 2022-02-07
 description: "This is my testing page for all sorts of goodies!"
-
 tags:
-  - dev
-  - webdev
+    - dev
+    - webdev
 ---
 
 Hi! This is my testing page. What does that mean? well, it means this is where all my website features are tested.
@@ -21,7 +20,7 @@ Below, you should see a code block of typescript, colored in correctly.
 ```ts
 let x: string = "hello world!";
 const test = () => {
-  console.log(x);
+    console.log(x);
 };
 
 test();
