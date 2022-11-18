@@ -1,3 +1,3 @@
 # Cogs And Squigs
 
-## My little slice of the blogosphere
+My little slice of the blogosphere

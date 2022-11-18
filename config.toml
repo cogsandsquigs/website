@@ -7,13 +7,13 @@ title        = "Cogs And Squigs"
 [params]
     # dir name of your main content (default is `content/posts`).
     # the list of set content will show up on your index page (baseurl).
-    contentTypeName = "posts"
+    contentTypeName = "blog"
 
     # ["orange", "blue", "red", "green", "pink"]
     themeColor = "blue"
 
     # if you set this to 0, only submenu trigger will be visible
-    showMenuItems = 2
+    showMenuItems = 5
 
     # show selector to switch language
     showLanguageSelector = false
@@ -83,10 +83,17 @@ title        = "Cogs And Squigs"
         identifier = "about"
         name       = "about"
         url        = "/about"
+
+    [[languages.en.menu.main]]
+        identifier = "blog"
+        name       = "blog"
+        url        = "/blog"
+
     [[languages.en.menu.main]]
         identifier = "github"
         name       = "github"
         url        = "https://github.com/cogsandsquigs"
+
         # [[languages.en.menu.main]]
         #     identifier = "showcase"
         #     name       = "Showcase"
