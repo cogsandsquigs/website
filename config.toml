@@ -1,4 +1,5 @@
 baseURL      = "http://cogsandsquigs.gq/"
+copyright    = "© {year} Ian Pratt"
 languageCode = "en-us"
 paginate     = 5
 theme        = "cogs"
@@ -79,22 +80,22 @@ title        = "Cogs And Squigs"
 #             logoText     = "Cogs And Squigs"
 
 [menu]
-    [[menu.main]]
-        identifier = "about"
-        name       = "about"
-        url        = "/about"
+  [[menu.main]]
+    identifier = "about"
+    name       = "about"
+    url        = "/about"
 
-    [[menu.main]]
-        identifier = "blog"
-        name       = "blog"
-        url        = "/blog"
+  [[menu.main]]
+    identifier = "blog"
+    name       = "blog"
+    url        = "/blog"
 
-    [[menu.main]]
-        identifier = "github"
-        name       = "github"
-        url        = "https://github.com/cogsandsquigs"
+  [[menu.main]]
+    identifier = "github"
+    name       = "github"
+    url        = "https://github.com/cogsandsquigs"
 
-        # [[menu.main]]
-        #     identifier = "showcase"
-        #     name       = "Showcase"
-        #     url        = "/showcase"
+    # [[menu.main]]
+    #     identifier = "showcase"
+    #     name       = "Showcase"
+    #     url        = "/showcase"

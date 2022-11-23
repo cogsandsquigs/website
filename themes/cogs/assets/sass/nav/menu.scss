@@ -4,10 +4,11 @@
 	padding: 0;
 	margin: 0;
 
+	// Align them all in a row
 	display: flex;
 
 	li {
-		// Spaced links
+		// Space the links apart
 		margin-right: 1.5rem;
 	}
 }
