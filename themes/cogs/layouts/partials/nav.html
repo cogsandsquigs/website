@@ -1,0 +1,13 @@
+<nav role="navigation">
+	<div class="aside">
+		<h3><a href="/">{{ .Site.Title }}</a></h3>
+	</div>
+
+	<ul class="menu">
+		{{ range .Site.Menus.main }}
+		<li>
+			<a href="{{ .URL }}">{{ .Name }}</a>
+		</li>
+		{{ end }}
+	</ul>
+</nav>

@@ -1,4 +1,7 @@
-// .aside {
-// 	// DEV
-// 	background-color: beige;
-// }
+.aside {
+	// Remove link styles
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
