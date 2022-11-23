@@ -1,0 +1,9 @@
+<head>
+	{{ $sass := resources.Get "sass/main.scss" }} {{ $style := $sass | resources.ToCSS (dict
+	"outputStyle" "compressed") | fingerprint }}
+	<link
+		rel="stylesheet"
+		href="{{ $style.Permalink | relURL }}"
+		integrity="{{ $style.Data.Integrity }}"
+	/>
+</head>

@@ -1,0 +1,16 @@
+.menu {
+	// Get rid of default styles
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	// Fill the rest of the space
+	flex-grow: 1;
+
+	// Spaced links
+	display: flex;
+	justify-content: space-evenly;
+
+	// DEV
+	background-color: lightblue;
+}

@@ -3,10 +3,10 @@
 
 description = "The theme for my website"
 features    = []
-homepage    = "http://cogsandsquigs.gq/"
-license     = "MIT"
-licenselink = "https://github.com/cogsandsquigs/website/blob/master/LICENSE"
-min_version = "0.41.0"
+# homepage    = "http://cogsandsquigs.gq/"
+license = "MIT"
+# licenselink = "https://github.com/cogsandsquigs/website/blob/master/LICENSE"
+min_version = "0.106.0"
 name        = "Cogs"
 tags        = []
 

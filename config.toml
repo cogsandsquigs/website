@@ -74,27 +74,27 @@ title        = "Cogs And Squigs"
 #         readMore               = "Read more"
 #         readOtherPosts         = "Read other posts"
 
-#         [languages.en.params.logo]
+#         [params.logo]
 #             logoHomeLink = "/"
 #             logoText     = "Cogs And Squigs"
 
-# [languages.en.menu]
-#     [[languages.en.menu.main]]
-#         identifier = "about"
-#         name       = "about"
-#         url        = "/about"
+[menu]
+    [[menu.main]]
+        identifier = "about"
+        name       = "about"
+        url        = "/about"
 
-#     [[languages.en.menu.main]]
-#         identifier = "blog"
-#         name       = "blog"
-#         url        = "/blog"
+    [[menu.main]]
+        identifier = "blog"
+        name       = "blog"
+        url        = "/blog"
 
-#     [[languages.en.menu.main]]
-#         identifier = "github"
-#         name       = "github"
-#         url        = "https://github.com/cogsandsquigs"
+    [[menu.main]]
+        identifier = "github"
+        name       = "github"
+        url        = "https://github.com/cogsandsquigs"
 
-#         # [[languages.en.menu.main]]
-#         #     identifier = "showcase"
-#         #     name       = "Showcase"
-#         #     url        = "/showcase"
+        # [[menu.main]]
+        #     identifier = "showcase"
+        #     name       = "Showcase"
+        #     url        = "/showcase"
