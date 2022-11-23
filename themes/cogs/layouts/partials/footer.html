@@ -1,3 +1,5 @@
 <footer>
-	<span class="copyright">{{ replace .Site.Copyright "{year}" now.Year}}</span>
+	<span class="copyright">
+		{{ replace (replace .Site.Copyright "{author}" .Site.Author.name) "{year}" now.Year}}
+	</span>
 </footer>

@@ -1,83 +1,12 @@
 baseURL      = "http://cogsandsquigs.gq/"
-copyright    = "© {year} Ian Pratt"
+copyright    = "© {year} {author}"
 languageCode = "en-us"
 paginate     = 5
 theme        = "cogs"
 title        = "Cogs And Squigs"
 
-# [params]
-#     # dir name of your main content (default is `content/posts`).
-#     # the list of set content will show up on your index page (baseurl).
-#     contentTypeName = "blog"
-
-#     # ["orange", "blue", "red", "green", "pink"]
-#     themeColor = "blue"
-
-#     # if you set this to 0, only submenu trigger will be visible
-#     showMenuItems = 5
-
-#     # show selector to switch language
-#     showLanguageSelector = false
-
-#     # set theme to full screen width
-#     fullWidthTheme = false
-
-#     # center theme with default width
-#     centerTheme = true
-
-#     # if your resource directory contains an image called `cover.(jpg|png|webp)`,
-#     # then the file will be used as a cover automatically.
-#     # With this option you don't have to put the `cover` param in a front-matter.
-#     autoCover = true
-
-#     # set post to show the last updated
-#     # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-#     showLastUpdated = false
-
-#     # set a custom favicon (default is a `themeColor` square)
-#     # favicon = "favicon.ico"
-
-#     # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
-#     updatedDatePrefix = "Updated"
-
-#     # set all headings to their default size (depending on browser settings)
-#     # oneHeadingSize = true # default
-
-#     # whether to show a page's estimated reading time
-#     # readingTime = false # default
-
-#     # whether to show a table of contents
-#     # can be overridden in a page's front-matter
-#     # Toc = false # default
-
-#     # set title for the table of contents
-#     # can be overridden in a page's front-matter
-#     # TocTitle = "Table of Contents" # default
-
-#     # [params.twitter]
-#     #     # set Twitter handles for Twitter cards
-#     #     # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
-#     #     # do not include @
-#     #     creator = ""
-#     #     site    = ""
-
-# [languages]
-#     [languages.en]
-#         copyright              = "(c) Ian Pratt 2022"
-#         keywords               = ""
-#         languageName           = "English"
-#         menuMore               = "Show more"
-#         missingBackButtonLabel = "Back to home page"
-#         missingContentMessage  = "Page not found..."
-#         newerPosts             = "Newer posts"
-#         olderPosts             = "Older posts"
-#         owner                  = "Ian Pratt"
-#         readMore               = "Read more"
-#         readOtherPosts         = "Read other posts"
-
-#         [params.logo]
-#             logoHomeLink = "/"
-#             logoText     = "Cogs And Squigs"
+[author]
+  name = "Ian Pratt"
 
 [menu]
   [[menu.main]]
@@ -95,7 +24,76 @@ title        = "Cogs And Squigs"
     name       = "github"
     url        = "https://github.com/cogsandsquigs"
 
-    # [[menu.main]]
-    #     identifier = "showcase"
-    #     name       = "Showcase"
-    #     url        = "/showcase"
+    # [params]
+    #     # dir name of your main content (default is `content/posts`).
+    #     # the list of set content will show up on your index page (baseurl).
+    #     contentTypeName = "blog"
+
+    #     # ["orange", "blue", "red", "green", "pink"]
+    #     themeColor = "blue"
+
+    #     # if you set this to 0, only submenu trigger will be visible
+    #     showMenuItems = 5
+
+    #     # show selector to switch language
+    #     showLanguageSelector = false
+
+    #     # set theme to full screen width
+    #     fullWidthTheme = false
+
+    #     # center theme with default width
+    #     centerTheme = true
+
+    #     # if your resource directory contains an image called `cover.(jpg|png|webp)`,
+    #     # then the file will be used as a cover automatically.
+    #     # With this option you don't have to put the `cover` param in a front-matter.
+    #     autoCover = true
+
+    #     # set post to show the last updated
+    #     # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+    #     showLastUpdated = false
+
+    #     # set a custom favicon (default is a `themeColor` square)
+    #     # favicon = "favicon.ico"
+
+    #     # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+    #     updatedDatePrefix = "Updated"
+
+    #     # set all headings to their default size (depending on browser settings)
+    #     # oneHeadingSize = true # default
+
+    #     # whether to show a page's estimated reading time
+    #     # readingTime = false # default
+
+    #     # whether to show a table of contents
+    #     # can be overridden in a page's front-matter
+    #     # Toc = false # default
+
+    #     # set title for the table of contents
+    #     # can be overridden in a page's front-matter
+    #     # TocTitle = "Table of Contents" # default
+
+    #     # [params.twitter]
+    #     #     # set Twitter handles for Twitter cards
+    #     #     # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+    #     #     # do not include @
+    #     #     creator = ""
+    #     #     site    = ""
+
+    # [languages]
+    #     [languages.en]
+    #         copyright              = "(c) Ian Pratt 2022"
+    #         keywords               = ""
+    #         languageName           = "English"
+    #         menuMore               = "Show more"
+    #         missingBackButtonLabel = "Back to home page"
+    #         missingContentMessage  = "Page not found..."
+    #         newerPosts             = "Newer posts"
+    #         olderPosts             = "Older posts"
+    #         owner                  = "Ian Pratt"
+    #         readMore               = "Read more"
+    #         readOtherPosts         = "Read other posts"
+
+    #         [params.logo]
+    #             logoHomeLink = "/"
+    #             logoText     = "Cogs And Squigs"
