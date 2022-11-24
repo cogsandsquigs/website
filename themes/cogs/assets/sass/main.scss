@@ -4,11 +4,11 @@
 @import "footer.scss";
 @import "nav/main.scss";
 
+// Set height so that page can almost fill full screen,
+// leaving some room so that when adding footer, it doesn't
+// create a scrollbar.
 html,
 body {
-	// Set height so that page can almost fill full screen,
-	// leaving some room so that when adding footer, it doesn't
-	// create a scrollbar
 	height: 99%;
 }
 
@@ -16,6 +16,8 @@ body {
 	// Theme styles
 	background-color: $base;
 	color: $text;
+
+	// Larger line height to accomadate link underlines
 	line-height: 145%;
 
 	// Set fonts and stuff
