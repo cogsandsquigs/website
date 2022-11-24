@@ -13,7 +13,7 @@ $underline_bottom_offset: 0.2rem;
 // How long it takes for the transition to occur
 $transition_time: 400ms;
 
-// Spacing between the two underlines when transition occurs
+// Filler size between the two underlines when transition occurs
 $transition_spacing: 0.7rem;
 
 a {
@@ -25,7 +25,7 @@ a {
 
 	// Setting the different underlines to use
 	background-image:
-        // Filler gradient in between no-hover and hover links
+        // Filler gradient in between default and hover underlines
 		linear-gradient(to right, $secondary, $secondary),
 		// (Solid) underline shown normally
 		linear-gradient(to right, $secondary, $primary),
