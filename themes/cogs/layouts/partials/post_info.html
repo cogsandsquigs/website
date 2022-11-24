@@ -3,4 +3,6 @@
 		Posted on <time>{{ .PublishDate.Format "January 2, 2006" }}</time> | Approximately {{
 		.ReadingTime }}-minute read
 	</p>
+	{{ $.Scratch.Set "taglist" slice }}
+	<p>Tags: <span class="tags">{{ delimit .Params.tags ", " }}</span></p>
 </div>
