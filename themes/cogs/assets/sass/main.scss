@@ -1,4 +1,6 @@
+@import "links.scss";
 @import "fonts.scss";
+@import "theme.scss";
 @import "footer.scss";
 @import "nav/main.scss";
 
@@ -11,6 +13,10 @@ body {
 }
 
 body {
+	// Theme styles
+	background-color: $base;
+	color: $text;
+
 	// Set fonts and stuff
 	font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace;
 	text-rendering: optimizeLegibility;

@@ -1,0 +1,70 @@
+/*
+Code derived from https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline#two-backgrounds.
+*/
+
+@import "theme.scss";
+
+// The thickness of the underline
+$underline_thickness: 0.1rem;
+
+// How long it takes for the transition to occur
+$transition_time: 500ms;
+
+// Spacing between the two underlines when transition occurs
+$transition_spacing: 0.75rem;
+
+a {
+	// Removing any text decor from default styles
+	color: inherit;
+	text-decoration: none;
+
+	// Setting the different underlines to use
+	background-image:
+        // Filler gradient in between no-hover and hover links
+		linear-gradient(to right, $secondary, $base, $base, $primary),
+		// (Solid) underline shown normally
+		linear-gradient($primary, $primary),
+		// (Solid) underline shown on hover
+		linear-gradient($secondary, $secondary);
+
+	background-size: 
+        // Make the separator take up it's thickness
+		$transition_spacing $underline_thickness,
+		// Make default underline take up the whole space
+		100% $underline_thickness,
+		// Make hover underline background invisible
+		0 $underline_thickness;
+
+	// The starting position of the backgrounds
+	background-position: 
+        // Set the separating underline to start (and end) before the text's underline, making it invisible
+		calc(#{$transition_spacing} * -1) 100%,
+		// Set the default background to be all the way across
+		100% 100%,
+		// Set the hover background to be none of the way across
+		0 100%;
+
+	// Don't repeat backgrounds, so that they don't look ugly
+	background-repeat: no-repeat;
+
+	// Transition the backgrounds across
+	transition: background-size $transition_time ease, background-position $transition_time ease;
+}
+
+a:hover {
+	background-size: 
+        // Make the separator take up it's thickness
+		$transition_spacing $underline_thickness,
+		// Make default underline invisible
+		0 $underline_thickness,
+		// Make hover underline take up the whole space
+		100% $underline_thickness;
+
+	background-position: 
+        // Move the background to start and end after the underline, on the other side.
+		calc(100% + #{$transition_spacing}) 100%,
+		// Set the default background to be none of the way across
+		100% 100%,
+		// Set the hover background to be all of the way across
+		0 100%;
+}
