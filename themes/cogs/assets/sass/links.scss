@@ -7,6 +7,9 @@ Code derived from https://nickymeuleman.netlify.app/blog/css-animated-wrapping-u
 // The thickness of the underline
 $underline_thickness: 0.1rem;
 
+// The offset from the bottom of the text
+$underline_bottom_offset: 0.2rem;
+
 // How long it takes for the transition to occur
 $transition_time: 400ms;
 
@@ -17,6 +20,8 @@ a {
 	// Removing any text decor from default styles
 	color: inherit;
 	text-decoration: none;
+
+	padding-bottom: $underline_bottom_offset;
 
 	// Setting the different underlines to use
 	background-image:
