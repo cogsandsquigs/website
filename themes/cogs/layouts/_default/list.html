@@ -1,7 +1,5 @@
 {{ define "main" }}
-<h1 class="title">{{ .Title }}</h1>
-{{ .Content }} {{ range .Pages }}
-<ul>
-	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-</ul>
-{{ end }} {{ end }}
+	<h1 class="title">{{ .Title }}</h1>
+	{{ .Content }}
+	{{- partial "post_list.html" .Pages -}}
+{{ end }}

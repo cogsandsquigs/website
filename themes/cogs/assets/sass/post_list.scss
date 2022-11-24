@@ -1,0 +1,26 @@
+.post-list {
+	// Remove list styles
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	> hr {
+		margin: 0 4rem;
+	}
+}
+
+.post-list-item {
+	// Provide nice spacing
+	margin: 2rem 0;
+
+	> h2 {
+		// Make this fit with everything else
+		margin: 0;
+		padding: 0;
+
+		> a {
+			// Remove link styles
+			background: none;
+		}
+	}
+}

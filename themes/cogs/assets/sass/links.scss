@@ -5,10 +5,10 @@ Code derived from https://nickymeuleman.netlify.app/blog/css-animated-wrapping-u
 @import "theme.scss";
 
 // The thickness of the underline
-$underline_thickness: 2px;
+$underline_thickness: 1.8px;
 
 // The offset from the bottom of the text
-$underline_bottom_offset: 0.175rem;
+$underline_bottom_offset: 0.165em;
 
 // How long it takes for the transition to occur
 $transition_time: 400ms;

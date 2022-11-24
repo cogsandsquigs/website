@@ -3,5 +3,14 @@
 	"tabWidth": 4,
 	"singleQuote": false,
 	"trailingComma": "none",
-	"printWidth": 100
+	"printWidth": 100,
+	"goTemplateBracketSpacing": true,
+	"overrides": [
+		{
+			"files": ["*.html"],
+			"options": {
+				"parser": "go-template"
+			}
+		}
+	]
 }
