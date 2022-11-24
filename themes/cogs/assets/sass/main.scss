@@ -3,12 +3,14 @@
 @import "theme.scss";
 @import "footer.scss";
 @import "nav/main.scss";
+@import "container.scss";
 
 // Set height so that page can almost fill full screen,
 // leaving some room so that when adding footer, it doesn't
 // create a scrollbar.
 html,
-body {
+body,
+.container {
 	height: 99%;
 }
 
@@ -29,6 +31,7 @@ body {
 	// Lets us make the content take up the whole page
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .content {
