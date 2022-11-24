@@ -23,17 +23,17 @@ title        = "Cogs And Squigs"
     [languages.en.menu]
       [[languages.en.menu.main]]
         identifier = "about"
-        name       = "about"
+        name       = "About"
         url        = "/about"
 
       [[languages.en.menu.main]]
         identifier = "blog"
-        name       = "blog"
-        url        = "/blog"
+        name       = "Blog"
+        url        = "/posts"
 
       [[languages.en.menu.main]]
         identifier = "github"
-        name       = "github"
+        name       = "Github"
         url        = "https://github.com/cogsandsquigs"
 
         # [params]
