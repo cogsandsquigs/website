@@ -1,8 +1,4 @@
 {{ define "main" }}
 
 <h1>{{ .Title }}</h1>
-<p>
-	Posted on <time>{{ .PublishDate.Format "January 2, 2006" }}</time> | Approximately {{
-	.ReadingTime }}-minute read
-</p>
-{{ .Content }} {{ end }}
+{{- partial "post_info.html" . -}} {{ .Content }} {{ end }}
