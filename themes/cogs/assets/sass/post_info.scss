@@ -1,0 +1,23 @@
+@import "theme.scss";
+
+.post-info-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.post-tags-wrapper {
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+}
+
+.post-time {
+	flex-grow: 1;
+}
+
+.post-time,
+.post-tag {
+	margin: none;
+	padding: none;
+}
