@@ -5,7 +5,7 @@
 			<h1 class="title">{{ .Title }}</h1>
 			{{ .Content }} {{ range .Pages }}
 			<ul>
-				<li><a href="{{ .Permalink | relURL }}">{{ .Title }}</a></li>
+				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 			</ul>
 			{{ end }}
 		</div>

@@ -2,9 +2,28 @@
 @import "footer.scss";
 @import "nav/main.scss";
 
+html,
 body {
-	font-family: "Fira Code", "Courier New", Courier, monospace, sans-serif;
-	background: lightgray;
+	// Set height so that page can almost fill full screen,
+	// leaving some room so that when adding footer, it doesn't
+	// create a scrollbar
+	height: 99%;
+}
 
-	height: max-content;
+body {
+	// Set fonts and stuff
+	font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
+	font-variant-ligatures: contextual;
+
+	// Lets us make the content take up the whole page
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
 }
