@@ -26,11 +26,11 @@ a {
 	// Setting the different underlines to use
 	background-image:
         // Filler gradient in between default and hover underlines
-		linear-gradient(to right, $secondary, $secondary),
+		linear-gradient(to right, $primary, $primary),
 		// (Solid) underline shown normally
-		linear-gradient(to right, $secondary, $primary),
+		linear-gradient(to right, $primary, $secondary),
 		// (Solid) underline shown on hover
-		linear-gradient(to right, $accent, $secondary);
+		linear-gradient(to right, $accent, $secondary, $primary);
 
 	background-size: 
         // Make the separator take up it's thickness
