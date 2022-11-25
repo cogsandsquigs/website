@@ -1,0 +1,14 @@
+{{ define "main" }}
+	<h1>All {{ .Data.Plural }}</h1>
+	<ul>
+		{{ range .Pages }}
+			<li>
+				<h2>
+					<a href="{{ .RelPermalink }}">
+						{{ if eq .Type "tags" }}#{{ end }}{{ .Title }}
+					</a>
+				</h2>
+			</li>
+		{{ end }}
+	</ul>
+{{ end }}

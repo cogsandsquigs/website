@@ -1,5 +1,5 @@
 ---
-title: "about"
+title: "About"
 description: "This is who I am, silly"
 ---
 

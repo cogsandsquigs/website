@@ -1,0 +1,15 @@
+@import "theme.scss";
+
+.post-info-wrapper {
+	display: grid;
+	grid-row: 2;
+	grid-column: 1;
+	grid-auto-flow: row;
+	align-items: center;
+}
+
+.post-time,
+.post-tag {
+	margin: none;
+	padding: none;
+}

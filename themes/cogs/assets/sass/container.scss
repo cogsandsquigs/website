@@ -1,0 +1,24 @@
+@import "breakpoints.scss";
+
+.container {
+	// Lets us make the content take up the whole page
+	display: flex;
+	flex-direction: column;
+
+	// Default (phone) container width
+	width: 95%;
+
+	// Next size up: tablets
+	@media (min-width: $tablet) {
+		width: 70%;
+	}
+
+	// Next size up: desktops
+	@media (min-width: $desktop-sm) {
+		width: 60%;
+	}
+
+	@media (min-width: $desktop-lg) {
+		width: 50%;
+	}
+}

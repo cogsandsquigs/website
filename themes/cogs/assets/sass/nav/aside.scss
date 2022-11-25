@@ -1,0 +1,15 @@
+.aside {
+	// Pad the space between the aside and the navlinks
+	margin-bottom: 0.5rem;
+}
+
+.aside-text {
+	// Remove link styles
+	color: inherit;
+	text-decoration: none;
+	background-image: none; // Styles from custom underline(s)
+
+	// Make it big and bold
+	font-size: 1.5rem;
+	font-weight: bold;
+}

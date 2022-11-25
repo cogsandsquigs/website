@@ -1,0 +1,49 @@
+@import "links.scss";
+@import "fonts.scss";
+@import "theme.scss";
+@import "footer.scss";
+@import "nav/main.scss";
+@import "container.scss";
+@import "post_info.scss";
+@import "post_list.scss";
+
+// Set height so that page can almost fill full screen,
+// leaving some room so that when adding footer, it doesn't
+// create a scrollbar.
+html,
+body,
+.container {
+	height: 99%;
+}
+
+body {
+	// Theme styles
+	background-color: $base;
+	color: $text;
+
+	// Larger line height to accomadate link underlines
+	line-height: 145%;
+
+	// Set fonts and stuff
+	font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
+	font-variant-ligatures: contextual;
+
+	// Lets us make the content take up the whole page
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.content {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+}
+
+hr {
+	border: none;
+	height: 2px;
+	background: linear-gradient(to right, $secondary, $primary);
+}

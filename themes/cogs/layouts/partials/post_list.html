@@ -1,0 +1,15 @@
+<ul class="post-list">
+	{{ range $index, $post := . }}
+		{{ if gt $index 0 }}
+			<hr />
+		{{ end }}
+
+
+		<li class="post-list-item">
+			<h2>
+				<a href="{{ .RelPermalink }}">{{ $post.Title }}</a>
+			</h2>
+			{{- partial "post_info" . -}}
+		</li>
+	{{ end }}
+</ul>

@@ -1,0 +1,5 @@
+{{ define "main" }}
+	<h1 class="title">{{ .Title }}</h1>
+	{{ .Content }}
+	{{- partial "post_list.html" .Pages -}}
+{{ end }}

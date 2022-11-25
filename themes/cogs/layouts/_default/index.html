@@ -1,0 +1,10 @@
+{{ define "main" }}
+	{{ .Content }}
+
+	{{- partial "post_list.html" (first 3 (.Site.GetPage "/posts").Pages) -}}
+
+
+	<a href="{{ (.Site.GetPage `/posts`).RelPermalink }}">
+		{{ .Site.Params.menuMore | default "Show more" }} -></a
+	>
+{{ end }}

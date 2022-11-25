@@ -17,9 +17,9 @@ See, I use [Notion](https://notion.so) to take notes, make flashcards, and organ
 
 This angers me so so so much. Notion is so extraordinarily useful to me for note-taking, flashcards, scheduling and numerous other things. Yet, just because it doesn't meet CPS' off-kilter standards, I now can't use it on my school Chromebook?
 
-Not only is CPS banning other, random yet useful utilities, but they are _still allowing other utilities that aren't fully approved according to SOPPA legislation through!_
+Not only is CPS banning other, random yet useful utilities, but they are _still allowing other utilities that aren't fully approved according to SOPPA legislation!_
 
-For example, [ASPEN](https://aspen.cps.edu/aspen/logon.do) is still allowed, even though they don't have a vendor contract on file! This is a clear violation of SOPPA, yet CPS doesn't even bat an eye. Ditto with Google products, [Naviance](https://www.naviance.com/) and [Desmos](https://www.desmos.com/). Yet Notion isn't allowed? Is it because not as many people use it? Or just because CPS doesn't like it? If I were to guess, it'd be a mix of both, probably.
+For example, [ASPEN](https://aspen.cps.edu/aspen/logon.do) is still allowed, even though they don't have a vendor contract on file! This is a clear violation of SOPPA, yet CPS doesn't even bat an eye. Ditto with Google products, [Naviance](https://www.naviance.com/), and [Desmos](https://www.desmos.com/). Yet Notion isn't allowed? Is it because not as many people use it? Or just because CPS doesn't like it? If I were to guess, it'd be a mix of both, probably.
 
 Anyways, my rant is done here. I'm pissed, and CPS (probably) won't budge.
 
