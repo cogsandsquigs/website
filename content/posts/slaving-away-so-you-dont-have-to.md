@@ -1,14 +1,9 @@
----
-title: Slaving away so you don’t have to
-date: 2022-08-05
-description: Yak-shaving my way to cogsandsquigs/twiboot
-tags:
-    - atmega
-    - bootloader
-    - dev
-    - particle-iot
-    - twiboot
----
++++
+date = '2022-08-05'
+description = 'Yak-shaving my way to cogsandsquigs/twiboot'
+tags = ['atmega', 'bootloader', 'dev', 'particle-iot', 'twiboot']
+title = 'Slaving away so you don’t have to'
++++
 
 Sooo… where was I?
 

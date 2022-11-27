@@ -1,9 +1,8 @@
 +++
-date = 2022-11-27T18:00:00Z
-description = ""
-tags = ["poetry"]
-title = "Flying high"
-
+date = '2022-11-27T18:00:00Z'
+description = ''
+tags = ['poetry']
+title = 'Flying high'
 +++
 Flying high, I see the skies that cradle the ground below, with its shifting hues casting an iridescent delight to those below and above. Clouds roll by, forming an unbeknownst land of night-dark ocean and puffy-white land. Shifting and changing, it renews itself, creating worlds in the air that only exist for a moment.
 

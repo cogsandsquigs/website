@@ -1,7 +1,7 @@
----
-title: "About"
-description: "This is who I am, silly"
----
++++
+description = 'This is who I am, silly'
+title = 'About'
++++
 
 <script>
     import PFP from "$lib/components/PFP.svelte";
