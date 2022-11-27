@@ -15,10 +15,9 @@ fields:
   name: tags
   label: tags
 - name: draft
-  type: text
-  config:
-    required: false
+  type: boolean
   label: draft
   description: If this post is a draft or not
+  default: false
 pages:
 - content/posts/flying-high.md
