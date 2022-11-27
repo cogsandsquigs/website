@@ -14,3 +14,9 @@ fields:
 - type: list
   name: tags
   label: tags
+- name: draft
+  type: text
+  config:
+    required: false
+  label: draft
+  description: If this post is a draft or not
