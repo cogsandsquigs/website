@@ -11,6 +11,6 @@ Also requires a `prepare` script, like so:
 
 ```json
 {
-	"prepare": "cd themes/cogs && npm i "
+	"prepare": "cd themes/cogs && npm i"
 }
 ```
