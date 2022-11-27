@@ -14,11 +14,7 @@
 	}
 
 	// Next size up: desktops
-	@media (min-width: $desktop-sm) {
-		width: 60%;
-	}
-
-	@media (min-width: $desktop-lg) {
+	@media (min-width: $desktop) {
 		width: 50%;
 	}
 }
