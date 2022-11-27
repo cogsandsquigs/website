@@ -1,24 +1,18 @@
 {
-  "name": "website",
-  "version": "0.0.0",
-  "description": "This is my personal website, and accessable [here](https://cogsandsquigs.gq) to!",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cogsandsquigs/website.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cogsandsquigs/website/issues"
-  },
-  "homepage": "https://github.com/cogsandsquigs/website#readme",
-  "devDependencies": {
-    "postcss": "^8.4.19",
-    "postcss-cli": "^10.0.0",
-    "prettier-plugin-go-template": "^0.0.13"
-  }
+	"name": "website",
+	"version": "0.0.0",
+	"scripts": {
+		"prepare": "cd themes/cogs && npm i "
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cogsandsquigs/website.git"
+	},
+	"author": "Ian Pratt <ianjdpratt@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"postcss": "^8.4.19",
+		"postcss-cli": "^10.0.0",
+		"prettier-plugin-go-template": "^0.0.13"
+	}
 }
