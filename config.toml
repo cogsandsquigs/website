@@ -2,7 +2,6 @@ baseURL       = "http://cogsandsquigs.gq/"
 copyright     = "© {author} 2019-{year}"
 enableGitInfo = true
 languageCode  = "en-us"
-paginate      = 5
 theme         = "cogs"
 title         = "Cogs And Squigs"
 
