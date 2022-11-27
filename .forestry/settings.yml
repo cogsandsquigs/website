@@ -12,8 +12,9 @@ sections:
 - type: directory
   path: content/blog
   label: Blog
-  create: all
-  match: "*"
+  create: documents
+  match: "*.md"
+  new_doc_ext: ".md"
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
