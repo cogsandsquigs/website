@@ -2,7 +2,7 @@
 	"name": "website",
 	"version": "0.0.0",
 	"scripts": {
-		"prepare": "cd themes/cogs && npm i "
+		"prepare": "cd themes/cogs && npm i"
 	},
 	"repository": {
 		"type": "git",
