@@ -1,8 +1,0 @@
-<div class="post-info-wrapper">
-	<p class="post-time">Posted on <time>{{ .PublishDate.Format "January 2, 2006" }}</time></p>
-	<div class="post-tags-wrapper">
-		{{ range .Params.tags }}
-			<a class="post-tag" href="/tags/{{ . }}">#{{ . }}</a>
-		{{ end }}
-	</div>
-</div>

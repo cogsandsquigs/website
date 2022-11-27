@@ -2,8 +2,6 @@
 Code derived from https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline#two-backgrounds.
 */
 
-@import "theme.scss";
-
 // The thickness of the underline
 $underline_thickness: 1.8px;
 
@@ -26,11 +24,16 @@ a {
 	// Setting the different underlines to use
 	background-image:
         // Filler gradient in between default and hover underlines
-		linear-gradient(to right, $primary, $primary),
+		linear-gradient(to right, theme("colors.primary"), theme("colors.primary")),
 		// (Solid) underline shown normally
-		linear-gradient(to right, $primary, $secondary),
+		linear-gradient(to right, theme("colors.primary"), theme("colors.secondary")),
 		// (Solid) underline shown on hover
-		linear-gradient(to right, $accent, $secondary, $primary);
+		linear-gradient(
+				to right,
+				theme("colors.accent"),
+				theme("colors.secondary"),
+				theme("colors.primary")
+			);
 
 	background-size: 
         // Make the separator take up it's thickness

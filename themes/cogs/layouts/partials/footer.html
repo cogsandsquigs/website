@@ -1,5 +1,5 @@
-<footer>
-	<span class="copyright">
-		{{ replace (replace .Site.Copyright "{author}" .Site.Author.name) "{year}" now.Year}}
+<footer class="py-4 w-full text-center">
+	<span>
+		{{ replace (replace .Site.Copyright "{author}" .Site.Author.name) "{year}" now.Year }}
 	</span>
 </footer>

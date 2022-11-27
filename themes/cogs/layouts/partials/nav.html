@@ -1,15 +1,13 @@
-<nav role="navigation">
-	<div class="aside">
-		<a class="aside-text" href="/">{{ .Site.Title }}</a>
+<nav role="navigation" class="">
+	<div class="">
+		<a class="text-2xl font-bold no-underline bg-none" href="/">{{ .Site.Title }}</a>
 	</div>
 
-	<ul class="menu">
+	<ul class="flex p-0 m-0 list-none">
 		{{ range .Site.Menus.main }}
-			<li class="menu-item">
+			<li class="mr-6">
 				<a href="{{ .URL }}">{{ .Name }}</a>
 			</li>
 		{{ end }}
 	</ul>
 </nav>
-
-<hr />
