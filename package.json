@@ -11,8 +11,6 @@
 	"author": "Ian Pratt <ianjdpratt@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {
-		"postcss": "^8.4.19",
-		"postcss-cli": "^10.0.0",
 		"prettier-plugin-go-template": "^0.0.13"
 	}
 }
