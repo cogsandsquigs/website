@@ -20,3 +20,5 @@ fields:
     required: false
   label: draft
   description: If this post is a draft or not
+pages:
+- content/posts/flying-high.md
