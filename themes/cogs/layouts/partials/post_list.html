@@ -8,28 +8,10 @@
 		<li>
 			<div class="mb-4">
 				<h2 class="mr-3 text-2xl font-bold">
-					<a class="no-underline bg-none" href="{{ .RelPermalink }}">{{ $post.Title }}</a>
+					<a class="no-underline bg-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
 				</h2>
 
-				{{ if or (not (eq $post.Description "")) (not (eq $post.Description nil)) }}
-					<h3 class="mr-3 text-lg font-bold opacity-75">
-						<a class="no-underline bg-none" href="{{ .RelPermalink }}">
-							{{ $post.Description }}
-						</a>
-					</h3>
-				{{ end }}
-
-
-				<time class="opacity-75">
-					Posted on
-					{{ .PublishDate.Format "January 2, 2006" }}
-				</time>
-
-				<div class="opacity-75">
-					{{ range .Params.tags }}
-						<a class="" href="/tags/{{ . }}">#{{ . }}</a>
-					{{ end }}
-				</div>
+				{{- partial "post_info.html" . -}}
 			</div>
 
 			<div>

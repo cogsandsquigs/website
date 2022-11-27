@@ -1,0 +1,19 @@
+{{ if or (not (eq .Description "")) (not (eq .Description nil)) }}
+	<h3 class="my-0 mr-3 text-lg font-bold opacity-75">
+		<a class="no-underline bg-none" href="{{ .RelPermalink }}">
+			{{ .Description }}
+		</a>
+	</h3>
+{{ end }}
+
+
+<time class="opacity-75">
+	Posted on
+	{{ .PublishDate.Format "January 2, 2006" }}
+</time>
+
+<div class="opacity-75">
+	{{ range .Params.tags }}
+		<a class="" href="/tags/{{ . }}">#{{ . }}</a>
+	{{ end }}
+</div>

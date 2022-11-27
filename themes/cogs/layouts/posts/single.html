@@ -1,0 +1,7 @@
+{{ define "main" }}
+	<h1 class="mb-0">{{ .Title }}</h1>
+
+	{{- partial "post_info.html" . -}}
+
+	{{ .Content }}
+{{ end }}
