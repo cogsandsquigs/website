@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/cogsandsquigs/website#readme",
   "devDependencies": {
+    "postcss-cli": "^10.0.0",
     "prettier-plugin-go-template": "^0.0.13"
   }
 }

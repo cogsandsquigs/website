@@ -7,6 +7,10 @@
 @import "post_info.scss";
 @import "post_list.scss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // Set height so that page can almost fill full screen,
 // leaving some room so that when adding footer, it doesn't
 // create a scrollbar.

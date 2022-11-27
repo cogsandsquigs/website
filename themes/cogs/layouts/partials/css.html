@@ -1,5 +1,11 @@
-{{ $sass := resources.Get "sass/main.scss" }}
-{{ $style := $sass | resources.ToCSS (dict
-	"outputStyle" "compressed") | fingerprint
+{{ $styles := resources.Get "sass/main.scss" }}
+{{ $styles = $styles | resources.ToCSS | resources.PostCSS (dict
+	"config" "themes/cogs/postcss.config.js"
+	)
 }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
+{{ if hugo.IsProduction }}
+	{{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+{{ else }}
+	{{ $styles = $styles | resources.ExecuteAsTemplate (printf "css/main.dev.%v.css" now.UnixMilli) . }}
+{{ end }}
+<link href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" rel="stylesheet" />

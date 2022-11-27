@@ -1,0 +1,16 @@
+{
+	"name": "cogs",
+	"version": "0.0.0",
+	"description": "",
+	"scripts": {},
+	"keywords": [],
+	"author": "Ian Pratt <ianjdpratt@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"autoprefixer": "^10.4.13",
+		"postcss": "^8.4.19",
+		"postcss-cli": "^10.0.0",
+		"postcss-import": "^15.0.0",
+		"tailwindcss": "^3.2.4"
+	}
+}
