@@ -9,6 +9,10 @@ title         = "Cogs And Squigs"
 [author]
     name = "Ian Pratt"
 
+[taxonomies]
+    series = 'series'
+    tag    = 'tags'
+
 [languages]
     [languages.en]
         keywords               = ""

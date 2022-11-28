@@ -6,10 +6,10 @@ features    = []
 # homepage    = "http://cogsandsquigs.gq/"
 license = "MIT"
 # licenselink = "https://github.com/cogsandsquigs/website/blob/master/LICENSE"
-min_version = "0.106.0"
+min_version = "0.100.0"
 name        = "Cogs"
 tags        = []
 
 [author]
-  homepage = "https://cogsandsquigs.gq"
-  name     = "Ian Pratt <ianjdpratt@gmail.com>"
+    homepage = "https://cogsandsquigs.gq"
+    name     = "Ian Pratt <ianjdpratt@gmail.com>"
