@@ -1,4 +1,33 @@
 <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- HTML Meta Tags -->
+	<meta name="description" content="" />
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url" content="{{ .Site.BaseURL }}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{{ .Title }}" />
+	{#
+	<meta property="og:image" content="" />
+	#}
+
+	<!-- Twitter Meta Tags -->
+	<meta property="twitter:domain" content="{{ path.BaseName .Site.BaseURL }}" />
+	<meta property="twitter:url" content="{{ .Site.BaseURL }}" />
+	<meta name="twitter:title" content="{{ .Title }}" />
+	{#
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="" />
+	#}
+	{{ if not (or (eq .Description "") (eq .Description nil)) }}
+		<meta name="description" content="{{ .Description }}" />
+		<meta property="og:description" content="{{ .Description }}" />
+		<meta name="twitter:description" content="{{ .Description }}" />
+	{{ end }}
+
+
 	<title>
 		{{ .Site.Title }}
 		{{ if not (eq .Title "") }}| {{ .Title }}{{ end }}
