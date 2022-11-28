@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 	{{- partial "head.html" . -}}
-	<body class="flex justify-center min-h-screen bg-base">
-		<div class="w-full prose max-w-[95%] md:max-w-prose prose-invert prose-a:no-underline">
+	<body
+		class="mx-auto w-full min-h-screen max-w-[95%] md:max-w-prose prose prose-invert prose-a:no-underline bg-base"
+	>
+		<div class="flex flex-col items-center min-h-screen">
 			{{- partial "header.html" . -}}
-			<div>{{- block "main" . }}{{- end }}</div>
+
+
+			<hr class="w-full my-4" />
+
+			<div class="flex-grow">{{- block "main" . }}{{- end }}</div>
+
 			{{- partial "footer.html" . -}}
 		</div>
 	</body>
