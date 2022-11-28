@@ -2,9 +2,6 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!-- HTML Meta Tags -->
-	<meta name="description" content="" />
-
 	<!-- Facebook Meta Tags -->
 	<meta property="og:url" content="{{ .Site.BaseURL }}" />
 	<meta property="og:type" content="website" />
@@ -21,16 +18,19 @@
 	<meta name="twitter:image" content="" />
     -->
 
-	{{ if not (or (eq .Description "") (eq .Description nil)) }}
-		<meta name="description" content="{{ .Description }}" />
-		<meta property="og:description" content="{{ .Description }}" />
-		<meta name="twitter:description" content="{{ .Description }}" />
+	{{ with .Description }}
+		<meta name="description" content="{{ . }}" />
+		<meta property="og:description" content="{{ . }}" />
+		<meta name="twitter:description" content="{{ . }}" />
 	{{ end }}
 
 
 	<title>
 		{{ .Site.Title }}
-		{{ if not (eq .Title "") }}| {{ .Title }}{{ end }}
+		{{ with .Title }}
+			|
+			{{ . }}
+		{{ end }}
 	</title>
 
 	{{ range .AlternativeOutputFormats -}}
