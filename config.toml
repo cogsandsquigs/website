@@ -7,101 +7,106 @@ theme         = "cogs"
 title         = "Cogs And Squigs"
 
 [author]
-    name = "Ian Pratt"
+  name = "Ian Pratt"
 
 [taxonomies]
-    series = 'series'
-    tag    = 'tags'
+  series = 'series'
+  tag    = 'tags'
 
 [languages]
-    [languages.en]
-        keywords               = ""
-        languageName           = "English"
-        menuMore               = "Show me more!"
-        missingBackButtonLabel = "Why don't you go back home?"
-        missingContentMessage  = "Whatever you're looking for - it doesn't exist. Sorry."
-        newerPosts             = "Newer posts"
-        olderPosts             = "Older posts"
-        readMore               = "Read more"
-        readOtherPosts         = "Read other posts"
+  [languages.en]
+    keywords               = ""
+    languageName           = "English"
+    menuMore               = "Show me more!"
+    missingBackButtonLabel = "Why don't you go back home?"
+    missingContentMessage  = "Whatever you're looking for - it doesn't exist. Sorry."
+    newerPosts             = "Newer posts"
+    olderPosts             = "Older posts"
+    readMore               = "Read more"
+    readOtherPosts         = "Read other posts"
 
-        [languages.en.menu]
-            [[languages.en.menu.main]]
-                identifier = "about"
-                name       = "About"
-                url        = "/about"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name       = "About"
+        url        = "/about"
 
-            [[languages.en.menu.main]]
-                identifier = "blog"
-                name       = "Blog"
-                url        = "/posts"
+      [[languages.en.menu.main]]
+        identifier = "blog"
+        name       = "Blog"
+        url        = "/posts"
 
-            [[languages.en.menu.main]]
-                identifier = "github"
-                name       = "Github"
-                url        = "https://github.com/cogsandsquigs"
+      [[languages.en.menu.main]]
+        identifier = "github"
+        name       = "Github"
+        url        = "https://github.com/cogsandsquigs"
 
 [outputFormats]
-    [outputFormats.RSS]
-        baseName  = "rss"
-        mediatype = "application/rss"
+  [outputFormats.RSS]
+    baseName  = "rss"
+    mediatype = "application/rss"
 
-        # [params]
-        #     # dir name of your main content (default is `content/posts`).
-        #     # the list of set content will show up on your index page (baseurl).
-        #     contentTypeName = "blog"
+[params]
+  # The directory to your favicons from the `static` folder. Requires '/' at the end
+  # if it's a folder
+  faviconDir = "favicons/"
 
-        #     # ["orange", "blue", "red", "green", "pink"]
-        #     themeColor = "blue"
+  # [params]
+  #     # dir name of your main content (default is `content/posts`).
+  #     # the list of set content will show up on your index page (baseurl).
+  #     contentTypeName = "blog"
 
-        #     # if you set this to 0, only submenu trigger will be visible
-        #     showMenuItems = 5
+  #     # ["orange", "blue", "red", "green", "pink"]
+  #     themeColor = "blue"
 
-        #     # show selector to switch language
-        #     showLanguageSelector = false
+  #     # if you set this to 0, only submenu trigger will be visible
+  #     showMenuItems = 5
 
-        #     # set theme to full screen width
-        #     fullWidthTheme = false
+  #     # show selector to switch language
+  #     showLanguageSelector = false
 
-        #     # center theme with default width
-        #     centerTheme = true
+  #     # set theme to full screen width
+  #     fullWidthTheme = false
 
-        #     # if your resource directory contains an image called `cover.(jpg|png|webp)`,
-        #     # then the file will be used as a cover automatically.
-        #     # With this option you don't have to put the `cover` param in a front-matter.
-        #     autoCover = true
+  #     # center theme with default width
+  #     centerTheme = true
 
-        #     # set post to show the last updated
-        #     # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-        #     showLastUpdated = false
+  #     # if your resource directory contains an image called `cover.(jpg|png|webp)`,
+  #     # then the file will be used as a cover automatically.
+  #     # With this option you don't have to put the `cover` param in a front-matter.
+  #     autoCover = true
 
-        #     # set a custom favicon (default is a `themeColor` square)
-        #     # favicon = "favicon.ico"
+  #     # set post to show the last updated
+  #     # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+  #     showLastUpdated = false
 
-        #     # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
-        #     updatedDatePrefix = "Updated"
+  #     # set a custom favicon (default is a `themeColor` square)
+  #     # favicon = "favicon.ico"
 
-        #     # set all headings to their default size (depending on browser settings)
-        #     # oneHeadingSize = true # default
+  #     # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+  #     updatedDatePrefix = "Updated"
 
-        #     # whether to show a page's estimated reading time
-        #     # readingTime = false # default
+  #     # set all headings to their default size (depending on browser settings)
+  #     # oneHeadingSize = true # default
 
-        #     # whether to show a table of contents
-        #     # can be overridden in a page's front-matter
-        #     # Toc = false # default
+  #     # whether to show a page's estimated reading time
+  #     # readingTime = false # default
 
-        #     # set title for the table of contents
-        #     # can be overridden in a page's front-matter
-        #     # TocTitle = "Table of Contents" # default
+  #     # whether to show a table of contents
+  #     # can be overridden in a page's front-matter
+  #     # Toc = false # default
 
-        #     # [params.twitter]
-        #     #     # set Twitter handles for Twitter cards
-        #     #     # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
-        #     #     # do not include @
-        #     #     creator = ""
-        #     #     site    = ""
+  #     # set title for the table of contents
+  #     # can be overridden in a page's front-matter
+  #     # TocTitle = "Table of Contents" # default
 
-        #         [params.logo]
-        #             logoHomeLink = "/"
-        #             logoText     = "Cogs And Squigs"
+  #     # [params.twitter]
+  #     #     # set Twitter handles for Twitter cards
+  #     #     # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+  #     #     # do not include @
+  #     #     creator = ""
+  #     #     site    = ""
+
+  #         [params.logo]
+  #             logoHomeLink = "/"
+  #             logoText     = "Cogs And Squigs"
