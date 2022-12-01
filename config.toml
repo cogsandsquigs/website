@@ -49,7 +49,7 @@ title         = "Cogs And Squigs"
 [params]
   # The directory to your favicons from the `static` folder. Requires '/' at the end
   # if it's a folder
-  faviconDir = "" # No favicon dir
+  # faviconDir = "" # No favicon dir
 
   # [params]
   #     # dir name of your main content (default is `content/posts`).
