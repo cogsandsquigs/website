@@ -14,6 +14,13 @@ fields:
 - type: list
   name: tags
   label: tags
+- name: series
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: series
 - name: draft
   type: boolean
   label: draft
