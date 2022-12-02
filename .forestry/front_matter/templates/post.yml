@@ -21,11 +21,6 @@ fields:
     min: 
     max: 
   label: series
-- name: draft
-  type: boolean
-  label: draft
-  description: If this post is a draft or not
-  default: false
 pages:
 - content/posts/advent-of-code-2022-day-1.md
 - content/posts/flying-high.md
