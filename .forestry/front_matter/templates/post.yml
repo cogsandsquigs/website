@@ -15,11 +15,9 @@ fields:
   name: tags
   label: tags
 - name: series
-  type: list
+  type: text
   config:
-    use_select: false
-    min: 
-    max: 
+    required: false
   label: series
 pages:
 - content/posts/advent-of-code-2022-day-1.md
