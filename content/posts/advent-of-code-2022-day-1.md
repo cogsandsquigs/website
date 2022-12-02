@@ -1,7 +1,7 @@
 +++
 date = 2022-12-02T04:00:00Z
 description = "Challenging myself to actually complete it this year"
-series = ["advent of code 2022"]
+series = "advent of code 2022"
 tags = ["rust", "advent of code"]
 title = "Advent of code 2022 - Day 1"
 
