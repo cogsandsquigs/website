@@ -12,12 +12,17 @@
 
 <div class="opacity-75">
 	{{ with .Params.series }}
-		<p>This article is part of the <a class="" href="/series/{{ . }}">{{ . }}</a> series</p>
+		{{ $series := $.Site.GetPage (printf "/series/%s" (urlize .)) }}
+		<p>
+			This article is part of the
+			<a class="" href="{{ $series.RelPermalink }}">{{ $series.Title }}</a> series
+		</p>
 	{{ end }}
 
 	{{ with .Params.tags }}
 		{{ range . }}
-			<a href="/tags/{{ . }}">#{{ . }}</a>
+			{{ $tag := $.Site.GetPage (printf "/tags/%s" (urlize .)) }}
+			<a href="{{ $tag.RelPermalink }}">#{{ $tag.Title }}</a>
 		{{ end }}
 	{{ end }}
 </div>
