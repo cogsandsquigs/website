@@ -5,28 +5,31 @@
 {{ end }}
 
 
-<time class="opacity-75">
-	{{ $reading_time := .ReadingTime }}
-	Posted on {{ .PublishDate.Format "January 2, 2006" }} | Approximate reading time:
-	{{ $reading_time }}
-	{{ if eq $reading_time 1 }}minute{{ else }}minutes{{ end }}
-
-	<!-- Last modified on {{ .Lastmod.Format "January 2, 2006" }} -->
-</time>
-
 <div class="opacity-75">
+	<time>
+		{{ $reading_time := .ReadingTime }}
+		Posted on {{ .PublishDate.Format "January 2, 2006" }} | Approximate reading time:
+		{{ $reading_time }}
+		{{ if eq $reading_time 1 }}minute{{ else }}minutes{{ end }}
+
+		<!-- Last modified on {{ .Lastmod.Format "January 2, 2006" }} -->
+	</time>
+
 	{{ with .Params.series }}
 		{{ $series := $.Site.GetPage (printf "/series/%s" (urlize .)) }}
-		<p>
+		<p class="m-0">
 			This article is part of the
-			<a class="" href="{{ $series.RelPermalink }}">{{ $series.Title }}</a> series
+			<a class="font-bold" href="{{ $series.RelPermalink }}">{{ $series.Title }}</a> series
 		</p>
 	{{ end }}
 
 	{{ with .Params.tags }}
-		{{ range . }}
-			{{ $tag := $.Site.GetPage (printf "/tags/%s" (urlize .)) }}
-			<a href="{{ $tag.RelPermalink }}">#{{ $tag.Title }}</a>
-		{{ end }}
+		<p class="m-0">
+			Tags:
+			{{ range . }}
+				{{ $tag := $.Site.GetPage (printf "/tags/%s" (urlize .)) }}
+				<a class="font-bold" href="{{ $tag.RelPermalink }}">#{{ $tag.Title }}</a>
+			{{ end }}
+		</p>
 	{{ end }}
 </div>
