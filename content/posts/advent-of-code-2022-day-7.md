@@ -110,3 +110,24 @@ Next, if we find an [`ls`](https://en.wikipedia.org/wiki/Ls) command, we know we
 If it's not an `ls` command, we check if it's a [`cd`](https://en.wikipedia.org/wiki/Cd_(command)) command. Specifically, if we are `cd`ing to `..`, the upper directory, we break out of the loop and return `root`. Otherwise, we recurse, and replace the folder we are `cd`ing into with the `traverse`d result. If anything else happens, we break out.
 
 Whew! That was a lot of code, and I'm sorry if this isn't as readable as you hoped. Don't worry, the other parts are easier. Let's now talk about the meat of part 1.
+
+```rs
+fn part_1(input: &str) -> usize {
+    let mut lines = input.lines();
+
+    // Get rid of `$ cd /`
+    lines.next();
+
+    let tree = traverse(
+        &mut lines,
+        Folder {
+            folders: HashMap::new(),
+            files: HashMap::new(),
+        },
+    );
+
+    part_1_walk(&tree)
+}
+```
+
+This gets all of the lines, and for our convenience, gets rid of the first one so it's easier to access all the root subfolders. We then get the tree from the input, and run `part_1_walk` on a reference to it.
