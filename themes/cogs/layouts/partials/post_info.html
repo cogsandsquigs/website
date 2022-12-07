@@ -6,8 +6,12 @@
 
 
 <time class="opacity-75">
-	Posted on {{ .PublishDate.Format "January 2, 2006" }} | Last modified on
-	{{ .Lastmod.Format "January 2, 2006" }}
+	{{ $reading_time := .ReadingTime }}
+	Posted on {{ .PublishDate.Format "January 2, 2006" }} | Approximate reading time:
+	{{ $reading_time }}
+	{{ if eq $reading_time 1 }}minute{{ else }}minutes{{ end }}
+
+	<!-- Last modified on {{ .Lastmod.Format "January 2, 2006" }} -->
 </time>
 
 <div class="opacity-75">
