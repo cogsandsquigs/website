@@ -51,62 +51,37 @@ title         = "Cogs And Squigs"
   # if it's a folder
   # faviconDir = "" # No favicon dir
 
-  # [params]
-  #     # dir name of your main content (default is `content/posts`).
-  #     # the list of set content will show up on your index page (baseurl).
-  #     contentTypeName = "blog"
+  # If we use KaTeX or not
+  useKatex = true
 
-  #     # ["orange", "blue", "red", "green", "pink"]
-  #     themeColor = "blue"
+  # Any and all options for rendering KaTeX, in the spec defined on the KaTeX docs 
+  # website.
+  [params.katex]
 
-  #     # if you set this to 0, only submenu trigger will be visible
-  #     showMenuItems = 5
+    delimiters = [
+      { left = "$$", right = "$$", display = true },
+      { left = "$", right = "$", display = false },
+      { left = "\\(", right = "\\)", display = false },
+      { left = "\\[", right = "\\]", display = true },
+    ]
 
-  #     # show selector to switch language
-  #     showLanguageSelector = false
+    throwOnError = false
 
-  #     # set theme to full screen width
-  #     fullWidthTheme = false
+    trust = true
 
-  #     # center theme with default width
-  #     centerTheme = true
+    # {
+    # 	// customised options
+    # 	// • auto-render specific keys, e.g.:
+    # 	delimiters: [
+    # 		{ left = "$$", right= "$$", display= true },
+    # 		{ left = "$", right= "$", display= false },
+    # 		{ left = "\\(", right= "\\)", display= false },
+    # 		{ left = "\\[", right= "\\]", display= true }
+    # 	],
 
-  #     # if your resource directory contains an image called `cover.(jpg|png|webp)`,
-  #     # then the file will be used as a cover automatically.
-  #     # With this option you don't have to put the `cover` param in a front-matter.
-  #     autoCover = true
+    # 	// • rendering keys, e.g.:
+    # 	throwOnError: false,
 
-  #     # set post to show the last updated
-  #     # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-  #     showLastUpdated = false
-
-  #     # set a custom favicon (default is a `themeColor` square)
-  #     # favicon = "favicon.ico"
-
-  #     # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
-  #     updatedDatePrefix = "Updated"
-
-  #     # set all headings to their default size (depending on browser settings)
-  #     # oneHeadingSize = true # default
-
-  #     # whether to show a page's estimated reading time
-  #     # readingTime = false # default
-
-  #     # whether to show a table of contents
-  #     # can be overridden in a page's front-matter
-  #     # Toc = false # default
-
-  #     # set title for the table of contents
-  #     # can be overridden in a page's front-matter
-  #     # TocTitle = "Table of Contents" # default
-
-  #     # [params.twitter]
-  #     #     # set Twitter handles for Twitter cards
-  #     #     # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
-  #     #     # do not include @
-  #     #     creator = ""
-  #     #     site    = ""
-
-  #         [params.logo]
-  #             logoHomeLink = "/"
-  #             logoText     = "Cogs And Squigs"
+    # 	// This should
+    # 	trust: true
+    # }

@@ -11,5 +11,5 @@ name        = "Cogs"
 tags        = []
 
 [author]
-    homepage = "https://cogsandsquigs.gq"
-    name     = "Ian Pratt <ianjdpratt@gmail.com>"
+  homepage = "https://cogsandsquigs.gq"
+  name     = "Ian Pratt <ianjdpratt@gmail.com>"

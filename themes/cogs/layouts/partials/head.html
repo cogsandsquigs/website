@@ -7,7 +7,10 @@
 	{{- partial "favicon.html" -}}
 
 	{{ partialCached "css.html" . }}
-	{{- partial "katex.html" -}}
+
+	{{ if .Site.Params.useKatex }}
+		{{- partial "katex.html" -}}
+	{{ end }}
 
 
 	<title>
