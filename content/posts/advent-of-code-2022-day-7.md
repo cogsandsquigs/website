@@ -21,6 +21,7 @@ I don't really have anything else to say right now, so goodbye for now :3
 It's several hours later, and after a 5-hour "nap", I feel (somewhat) up to the task of explaining my code. Be warned, I made this from 11-1 in the morning (right around when the AoC puzzle released).
 
 Firstly, we need to represent the files and folders with something. I choose to make these structs to satisfy that need:
+
 ```rs
 #[derive(Clone, Debug)]
 struct Folder {
@@ -130,4 +131,68 @@ fn part_1(input: &str) -> usize {
 }
 ```
 
-This gets all of the lines, and for our convenience, gets rid of the first one so it's easier to access all the root subfolders. We then get the tree from the input, and run `part_1_walk` on a reference to it.
+This gets all of the lines, and for our convenience, gets rid of the first one so it's easier to access all the root sub-folders. We then get the tree from the input, and run `part_1_walk` on a reference to it.
+
+```rs
+fn part_1_walk(root: &Folder) -> usize {
+    let mut sum = 0;
+
+    for (_, folder) in (&root.folders).into_iter() {
+        let x = folder.size();
+        if x <= 100000 {
+            sum += x;
+        }
+
+        sum += part_1_walk(folder);
+    }
+
+    sum
+}
+```
+
+That function (`part_1_walk`) is the special sauce. It iterates over all folders of the directory, and adds up the ones that are less than (or equal to) 100000. Then, it adds the directory sizes recieved from the same function being called on each folder. Thus, this gets us the sum of all the folders who's size is less than or equal to 100000.
+
+Part 2 is a bit more complicated. We have to find the directory with the smallest size that, when added to the unused space size, will return something greater or equal to 30000000.
+
+```rs
+fn part_2(input: &str) -> usize {
+    let mut lines = input.lines();
+
+    // Get rid of `$ cd /`
+    lines.next();
+
+    let tree = traverse(
+        &mut lines,
+        Folder {
+            folders: HashMap::new(),
+            files: HashMap::new(),
+        },
+    );
+
+    let unused_size = 70000000 - tree.size();
+
+    part_2_walk(&tree, unused_size)
+}
+```
+
+Like before, this does (nearly) the same as `part_1`, as well as getting the unused size.
+
+```rs
+fn part_2_walk(root: &Folder, unused_size: usize) -> usize {
+    let mut smallest = root.size();
+
+    for (_, folder) in (&root.folders).into_iter() {
+        let folder_size = part_2_walk(folder, unused_size);
+
+        if unused_size + folder_size >= 30000000 && folder_size < smallest {
+            smallest = folder_size
+        }
+    }
+
+    smallest
+}
+```
+
+This function is the unique(est? er?) part. It walks all the folders, and keeps track of the smallest size found (starting with the root folder size). It then checks if that folder size is 1) over 30000000, and 2) less than the smallest folder size seen. If it is, it replaces the smallest folder size with that one. This repeats until all folders have been searched, and we just return the smallest we saw.
+
+That's pretty much everything, so hopefully it wasn't too bad to read through :P. Anyways, see y'all next time!
