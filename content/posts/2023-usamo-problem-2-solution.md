@@ -8,7 +8,7 @@ title = "2023 USAMO Problem 2 Solution"
 +++
 Taking a brief respite from my hiatus, here's a nice solution to the 2023 USAMO problem 2:
 
-_Let $\\mathbb{R}^{+}$ be the set of positive real numbers. Find all functions $f:\\mathbb{R}^{+}\\rightarrow\\mathbb{R}^{+}$ such that, for all $x, y \\in \\mathbb{R}^{+}$,_
+_Let $\mathbb{R}^{+}$ be the set of positive real numbers. Find all functions $f:\mathbb{R}^{+}\rightarrow\mathbb{R}^{+}$ such that, for all $x, y \in \mathbb{R}^{+}$,_
 
 $$f(xy + f(x)) = xf(y) + 2$$
 
@@ -16,13 +16,13 @@ First, let us plug in some special points; specifically, plugging in $x=0$ and $
 
 $$
 
-\\begin{align}
+\begin{align}
 
-    f(f(0)) &= 2 \\\\
+    f(f(0)) &= 2 \\
 
     f(y + f(1)) &= f(y) + 2
 
-\\end{align}
+\end{align}
 
 $$
 
@@ -30,11 +30,11 @@ Next, let us find the first and second derivatives of this function. First, with
 
 $$
 
-\\begin{align*}
+\begin{align*}
 
    f(y) = f(y + f(1)) - 2
 
-\\end{align*}
+\end{align*}
 
 $$
 
@@ -42,7 +42,7 @@ and then take the derivative:
 
 $$
 
-\\begin{align*}
+\begin{align*}
 
     \\dfrac{\\mathrm{d}f}{\\mathrm{d}y}
 
@@ -56,7 +56,7 @@ $$
 
     f'(y) &= f'(y + f(1))\\\\
 
-\\end{align*}
+\end{align*}
 
 $$
 
@@ -64,7 +64,7 @@ The second derivative is as follows:
 
 $$
 
-\\begin{align*}
+\begin{align*}
 
     \\dfrac{\\mathrm{d}^2f}{\\mathrm{d}y^2}
 
@@ -76,7 +76,7 @@ $$
 
     f''(y) &= f''(y + f(1))\\\\
 
-\\end{align*}
+\end{align*}
 
 $$
 
@@ -84,11 +84,11 @@ For both of these derivatives, we see that the input to the function does not ma
 
 $$
 
-\\begin{align*}
+\begin{align*}
 
     f(x) = ax + b
 
-\\end{align*}
+\end{align*}
 
 $$
 
