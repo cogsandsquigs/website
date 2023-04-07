@@ -58,9 +58,7 @@ For both of these derivatives, we see that the input to the function does not ma
 
 $$
 \begin{align*}
-
     f(x) = ax + b
-
 \end{align*}
 $$
 
