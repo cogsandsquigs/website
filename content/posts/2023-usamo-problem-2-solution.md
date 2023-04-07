@@ -8,7 +8,9 @@ title = "2023 USAMO Problem 2 Solution"
 +++
 Taking a brief respite from my hiatus, here's a nice solution to the 2023 USAMO problem 2:
 
-_Let $\\mathbb{R}^{+}$ be the set of positive real numbers. Find all functions $f:\\mathbb{R}^{+}\\rightarrow\\mathbb{R}^{+}$ such that, for all $x, y \\in \\mathbb{R}^{+}$,\[f(xy + f(x)) = xf(y) + 2\]_
+_Let $\\mathbb{R}^{+}$ be the set of positive real numbers. Find all functions $f:\\mathbb{R}^{+}\\rightarrow\\mathbb{R}^{+}$ such that, for all $x, y \\in \\mathbb{R}^{+}$,_
+
+$$f(xy + f(x)) = xf(y) + 2$$
 
 First, let us plug in some special points; specifically, plugging in $x=0$ and $x=1$, respectively:
 
