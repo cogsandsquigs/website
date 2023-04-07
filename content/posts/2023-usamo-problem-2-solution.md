@@ -6,7 +6,7 @@ tags = ["puzzle", "calculus", "usamo", "math"]
 title = "2023 USAMO Problem 2 Solution"
 
 +++
-Taking a brief respite from my hiatus, here's a nice solution to the 2023 USAMO problem 2:
+Taking a brief respite from my hiatus, here's a nice solution to the 2023 USAMO problem 2 that I came up with:
 
 _Let $\mathbb{R}^{+}$ be the set of positive real numbers. Find all functions $f:\mathbb{R}^{+}\rightarrow\mathbb{R}^{+}$ such that, for all $x, y \in \mathbb{R}^{+}$,_
 
