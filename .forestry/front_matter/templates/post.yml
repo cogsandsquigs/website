@@ -20,6 +20,7 @@ fields:
     required: false
   label: series
 pages:
+- content/posts/2023-usamo-problem-2-solution.md
 - content/posts/advent-of-code-2022-day-1.md
 - content/posts/advent-of-code-2022-day-7.md
 - content/posts/advent-of-code-day-17.md
