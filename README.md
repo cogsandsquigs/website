@@ -2,6 +2,6 @@
 
 # My website
 
-This is my personal website, and accessable [here](https://cogsandsquigs.gq) to!
+This is my personal website, and accessable [here](https://cogsandsquigs.gq)!
 
 Built with sveltekit and love <3
