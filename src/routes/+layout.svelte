@@ -1,12 +1,20 @@
 <script>
-	import Head from '$components/Head.svelte';
-	import '$styles/main.scss';
+	import Favicons from "$components/Favicons.svelte";
+	import Footer from "$components/Footer.svelte";
+	import Header from "$components/Header.svelte";
+	import config from "$lib/config";
+	import "$styles/main.scss";
 </script>
 
-<!-- Add more head data here -->
-<Head/>
+<!-- Add <head> tag data here -->
+<svelte:head>
+	<Favicons />
+	<title>
+		{config.title}
+	</title>
+</svelte:head>
 
-<!-- {{- partial "header.html" . -}} -->
+<Header />
 
 <hr class="my-4 w-full" />
 
@@ -14,4 +22,4 @@
 	<slot />
 </div>
 
-<!-- {{- partial "footer.html" . -}} -->
+<Footer />

@@ -1,11 +1,15 @@
-+++
-date = 2023-04-07T15:45:16Z
-description = "With some algebra and just a touch of calculus, it is conquered."
-series = ""
-tags = ["puzzle", "calculus", "usamo", "math"]
-title = "2023 USAMO Problem 2 Solution"
+---
+date: "2023-04-07T15:45:16Z"
+description: With some algebra and just a touch of calculus, it is conquered.
+series: ""
+tags:
+  - puzzle
+  - calculus
+  - usamo
+  - math
+title: 2023 USAMO Problem 2 Solution
+---
 
-+++
 Taking a brief respite from my hiatus, here's a nice solution to the 2023 USAMO problem 2 that I came up with:
 
 ## Problem
@@ -73,7 +77,7 @@ $$
 \end{aligned}
 $$
 
-Via (1), we get the following: 
+Via (1), we get the following:
 
 $$
 \begin{aligned}
@@ -83,7 +87,7 @@ $$
 \end{aligned}
 $$
 
-And via (2), 
+And via (2),
 
 $$
 \begin{aligned}
@@ -103,7 +107,7 @@ $$
 \end{aligned}
 $$
 
-Therefore, 
+Therefore,
 
 $$
 \begin{aligned}

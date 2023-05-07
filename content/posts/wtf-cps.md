@@ -1,9 +1,13 @@
-+++
-date = '2022-08-29T18:11:00.000+00:00'
-description = '(Chicago Public Schools, not Child Protective Services)'
-tags = ['rant', 'notion', 'soppa', 'cps']
-title = 'What the fuck CPS?'
-+++
+---
+date: "2022-08-29T18:11:00.000+00:00"
+description: (Chicago Public Schools, not Child Protective Services)
+tags:
+- rant
+- notion
+- soppa
+- cps
+title: What the fuck CPS?
+---
 
 Oh look. CPS made another horrible decision. Yayyyyy (/s).
 

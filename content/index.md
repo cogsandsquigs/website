@@ -1,3 +1,7 @@
+---
+title: "Home"
+---
+
 # Cogs And Squigs
 
 Welcome to my little slice of the blogosphere!

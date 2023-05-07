@@ -1,9 +1,11 @@
-+++
-date = 2022-02-07
-description = 'This is my testing page for all sorts of goodies!'
-tags = ['dev', 'webdev']
-title = 'Hello World!'
-+++
+---
+date: "2022-02-07"
+description: This is my testing page for all sorts of goodies!
+tags:
+  - dev
+  - webdev
+title: Hello World!
+---
 
 Hi! This is my testing page. What does that mean? well, it means this is where all my website features are tested.
 
@@ -29,7 +31,7 @@ test();
 Below, you should see some $\LaTeX$ being formatted correctly and displayed correctly as math equations. You should be seeing the _Riemann Zeta function_, $\zeta(s)$, as well as its definition!
 
 $$
-{\displaystyle \zeta (s)=\sum _{n=1}^{\infty }{\frac {1}{n^{s}}}={\frac {1}{1^{s}}}+{\frac {1}{2^{s}}}+{\frac {1}{3^{s}}}+\cdots}
+\displaystyle \zeta (s)=\sum _{n=1}^{\infty }{\frac {1}{n^{s}}}={\frac {1}{1^{s}}}+{\frac {1}{2^{s}}}+{\frac {1}{3^{s}}}+\cdots
 $$
 
 (p.s.: Did you know that this $\LaTeX$ is rendered with [$\KaTeX$](https://katex.org/)? pretty cool, right?)

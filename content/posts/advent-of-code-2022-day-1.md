@@ -1,11 +1,13 @@
-+++
-date = 2022-12-02T04:00:00Z
-description = "Challenging myself to actually complete it this year"
-series = "advent of code 2022"
-tags = ["rust", "advent of code"]
-title = "Advent of code 2022 - Day 1"
+---
+date: "2022-12-02T04:00:00Z"
+description: Challenging myself to actually complete it this year
+series: advent of code 2022
+tags:
+  - rust
+  - advent of code
+title: Advent of code 2022 - Day 1
+---
 
-+++
 Hey!
 
 As some of you may know, today marks the start of the _advent of code_! It's an annual programming puzzle game/competition, lasting 25 days from December 1st to the 25th.

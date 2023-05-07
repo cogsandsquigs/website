@@ -1,11 +1,13 @@
-+++
-date = 2022-12-07T07:00:00Z
-description = "It's my birthday, so I deserve a puzzle, as a treat :)"
-series = "advent of code 2022"
-tags = ["status update", "rust", "advent of code"]
-title = "Advent of code 2022 - Day 7"
-
-+++
+---
+date: "2022-12-07T07:00:00Z"
+description: It's my birthday, so I deserve a puzzle, as a treat :)
+series: advent of code 2022
+tags:
+- status update
+- rust
+- advent of code
+title: Advent of code 2022 - Day 7
+---
 Heyo!
 
 Sorry for being extra sporadic with my advent of code posts. Between home and school life, as well as a general lack of motivation and dealing with shit, I haven't had much time. However, I thought you guys (the .04 people reading this) deserved an update.

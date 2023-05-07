@@ -1,11 +1,12 @@
-+++
-date = 2022-12-17T06:00:00Z
-description = "I didn't solve this :("
-series = "advent of code 2022"
-tags = ["advent of code", "rust"]
-title = "Advent of code - Day 17"
-
-+++
+---
+date: "2022-12-17T06:00:00Z"
+description: I didn't solve this :(
+series: advent of code 2022
+tags:
+- advent of code
+- rust
+title: Advent of code - Day 17
+---
 Hey guys...
 
 So, today's one (as well as yesterday's) were especially hard. Long story short, I'm not doing today's advent of code. 
