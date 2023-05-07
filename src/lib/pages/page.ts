@@ -2,6 +2,9 @@ type Page = {
 	// The path to the page.
 	path: string;
 
+	// The renderer for the page.
+	renderer: () => Promise<unknown>;
+
 	// Metadata about the page.
 	meta: {
 		// The title of the page.
@@ -16,6 +19,19 @@ type Page = {
 		// The tags for the page.
 		tags: string[];
 	};
+};
+
+/// Gets a page with a given path.
+export const fetch_page = async (path: string): Promise<Page> => {
+	let pages = await fetch_pages();
+
+	let page = pages.find((page) => page.path === path);
+
+	if (page === undefined) {
+		throw new Error(`No page found with path ${path}`);
+	}
+
+	return page;
 };
 
 /// Gets all the pages from the `/content` directory.
@@ -42,7 +58,10 @@ export const fetch_posts = async (): Promise<Page[]> => {
 
 // Converts a raw page to a `Page` object.
 const raw_to_page = async ([path, resolver]: [string, () => Promise<unknown>]) => {
-	const { metadata } = (await resolver()) as any;
+	const {
+		default: { render },
+		metadata
+	} = (await resolver()) as any;
 	const page_path = path.slice(8, -3);
 
 	console.log(metadata);
@@ -50,6 +69,7 @@ const raw_to_page = async ([path, resolver]: [string, () => Promise<unknown>]) =
 
 	return {
 		path: page_path,
+		renderer: render,
 		meta: {
 			title: metadata.title,
 			date: metadata.date,

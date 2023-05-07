@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fetch_pages } from "$lib/pages/page";
+	import { fetch_page } from "$lib/pages/page";
 
-	fetch_pages();
+	let index_page = fetch_page("/index");
 </script>
