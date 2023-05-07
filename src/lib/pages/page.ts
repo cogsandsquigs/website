@@ -1,9 +1,11 @@
-type Page = {
+import { compile_md_file } from "./compiler";
+
+export type Page = {
 	// The path to the page.
 	path: string;
 
-	// The renderer for the page.
-	renderer: () => Promise<unknown>;
+	// The content for the page.
+	content: string;
 
 	// Metadata about the page.
 	meta: {
@@ -23,9 +25,7 @@ type Page = {
 
 /// Gets a page with a given path.
 export const fetch_page = async (path: string): Promise<Page> => {
-	let pages = await fetch_pages();
-
-	let page = pages.find((page) => page.path === path);
+	let page = compile_md_file(path);
 
 	if (page === undefined) {
 		throw new Error(`No page found with path ${path}`);
@@ -58,23 +58,9 @@ export const fetch_posts = async (): Promise<Page[]> => {
 
 // Converts a raw page to a `Page` object.
 const raw_to_page = async ([path, resolver]: [string, () => Promise<unknown>]) => {
-	const {
-		default: { render },
-		metadata
-	} = (await resolver()) as any;
-	const page_path = path.slice(8, -3);
+	const page_path = path.slice(9, -3);
 
-	console.log(metadata);
-	console.log(page_path);
+	let page = await compile_md_file(page_path);
 
-	return {
-		path: page_path,
-		renderer: render,
-		meta: {
-			title: metadata.title,
-			date: metadata.date,
-			description: metadata.description,
-			tags: metadata.tags ?? []
-		}
-	};
+	return page;
 };

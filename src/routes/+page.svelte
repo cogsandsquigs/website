@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { fetch_page } from "$lib/pages/page";
-
-	let index_page = fetch_page("/index");
+	import type { Page } from "$lib/pages/page";
+	export let data: { page: Page };
 </script>
+
+{@html data.page.content}
