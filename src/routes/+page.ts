@@ -1,8 +1,12 @@
-import { fetch_page } from "$lib/pages/page";
-import type { PageLoad } from "./$types";
+import { page_from_import, posts_from_import, type Page } from "$lib/pages";
 
-export const load: PageLoad = async ({ params, url }) => {
-	let index_page = await fetch_page("index");
+// Load the page component
+export const load = async (): Promise<{ page: Page; recent_posts: Page[] }> => {
+	return {
+		// The page itself.
+		page: await page_from_import("index"),
 
-	return { page: index_page };
+		// The 3 most recent posts.
+		recent_posts: (await posts_from_import()).slice(0, 3)
+	};
 };

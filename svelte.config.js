@@ -1,14 +1,17 @@
-import adapter from "@sveltejs/adapter-auto";
+import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/kit/vite";
+import { mdsvex } from "mdsvex";
 import preprocess from "svelte-preprocess";
+import mdsvexConfig from "./mdsvex.config.js";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: [".svelte"],
+	extensions: [".svelte", ...mdsvexConfig.extensions],
 
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
 	preprocess: [
+		mdsvex(mdsvexConfig),
 		vitePreprocess(),
 		preprocess({
 			postcss: true
@@ -23,6 +26,9 @@ const config = {
 
 		// Aliases to different parts of the project can be added here.
 		alias: {
+			// Aliasing to the content.
+			$content: "./content",
+
 			// This is the default, but adding it here for completeness.
 			$lib: "./src/lib",
 

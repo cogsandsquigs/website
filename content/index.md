@@ -1,8 +1,6 @@
 ---
-title: "Home"
+title: "Cogs And Squigs"
 ---
-
-# Cogs And Squigs
 
 Welcome to my little slice of the blogosphere!
 
