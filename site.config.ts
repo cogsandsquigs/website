@@ -1,10 +1,10 @@
+// The configuration for this website!
 export default {
+	// Title, author, other stuff that needs to go here.
 	title: "Cogs And Squigs",
 	author: "Ian Pratt",
 	description: "My little slice of the blogosphere.",
-
-	// The site URL
-	site_url: "https://cogsandsquigs.gq",
+	site_url: "https://cogsandsquigs.gq", // Site URL for generating RSS feed.
 
 	// Uses a scheme to replace {author} and {year} with the values from the config object in
 	// `$components/Footer.svelte`

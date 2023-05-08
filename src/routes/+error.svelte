@@ -7,7 +7,11 @@
 
 <p>
 	{#if $page.error}
-		{config.languages.en.error_404_message ?? "Message: " + $page.error.message}
+		{#if $page.status === 404}
+			{config.languages.en.error_404_message ?? "Message: " + $page.error.message}
+		{:else}
+			{$page.error.message}
+		{/if}
 	{:else}
 		Unknown error!
 	{/if}

@@ -37,7 +37,7 @@ export const posts_from_import = async (): Promise<Page[]> => {
 
 	// Import the .md file using glob import.
 	try {
-		posts_imports = import.meta.glob(`../../content/posts/**/*.md`);
+		posts_imports = import.meta.glob("../../content/posts/**/*.md");
 	} catch (e) {
 		// If it doesn't exist, use the 404 page.
 		throw error(404, `Directory does not exist!`);
@@ -54,7 +54,7 @@ export const pages_from_import = async (): Promise<Page[]> => {
 
 	// Import the .md file using glob import.
 	try {
-		posts_imports = import.meta.glob(`../../content/*.md`);
+		posts_imports = import.meta.glob("../../content/*.md");
 	} catch (e) {
 		// If it doesn't exist, use the 404 page.
 		throw error(404, `Directory does not exist!`);
@@ -84,7 +84,7 @@ export const load_page = async ([path, resolver]: [string, unknown]): Promise<Pa
 
 	// Import the .md file using the `slug` from the URL
 	try {
-		let { default: renderable, metadata } = await (resolver as any)(); // gets the page from the content directory
+		let { default: content, metadata } = await (resolver as any)(); // gets the page from the content directory
 
 		return {
 			// The path to the page.
@@ -99,10 +99,16 @@ export const load_page = async ([path, resolver]: [string, unknown]): Promise<Pa
 			series: metadata.series == "" || !metadata.series ? null : metadata.series,
 
 			// The content of the page, as a renderable Svelte component.
-			content: renderable
+			content
 		};
-	} catch (e) {
-		// If it doesn't exist, use the 404 page.
-		throw error(404, `Page '${path}' does not exist!`);
+	} catch (err: any) {
+		// If the file is not found, then return 404.
+		if (err.message.includes("Unknown variable dynamic import")) {
+			throw error(404, `Page '${path}' does not exist!`);
+		}
+		// Otherwise, return a 500 error.
+		else {
+			throw error(500, err.message);
+		}
 	}
 };

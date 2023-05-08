@@ -6,13 +6,13 @@ import type { RequestHandler } from "./$types";
 export const prerender = true;
 
 export const GET: RequestHandler = async () => {
-	let pages = await posts_from_import();
+	let posts = await posts_from_import();
 
 	return json(
-		pages
+		posts
 			// Get rid of content, as we don't query for that here.
-			.map((page) => {
-				return { ...page, content: undefined };
+			.map((post) => {
+				return { ...post, content: undefined };
 			})
 			// Sort by date!
 			.sort((a, b) => b.date.valueOf() - a.date.valueOf())

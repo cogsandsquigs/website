@@ -1,9 +1,8 @@
 import { sveltekit } from "@sveltejs/kit/vite";
 import { defineConfig, searchForWorkspaceRoot } from "vite";
-import { ViteToml } from "vite-plugin-toml";
 
 export default defineConfig({
-	plugins: [sveltekit(), ViteToml()],
+	plugins: [sveltekit()],
 
 	assetsInclude: ["**/*.md", "**/*.toml"],
 
