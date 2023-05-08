@@ -1,9 +1,9 @@
 <script lang="ts">
 	import PostList from "$lib/components/PostList.svelte";
 	import config from "$lib/config";
-	import type { Page } from "$lib/pages";
+	import type { PageData } from "./$types";
 
-	export let data: { page: Page; recent_posts: Page[] };
+	export let data: PageData;
 </script>
 
 <h1>{data.page.title}</h1>

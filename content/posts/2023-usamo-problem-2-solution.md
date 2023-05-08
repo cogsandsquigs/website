@@ -16,7 +16,11 @@ Taking a brief respite from my hiatus, here's a nice solution to the 2023 USAMO 
 
 _Let $\mathbb{R}^{+}$ be the set of positive real numbers. Find all functions $f:\mathbb{R}^{+}\rightarrow\mathbb{R}^{+}$ such that, for all $x, y \in \mathbb{R}^{+}$,_
 
-$$f(xy + f(x)) = xf(y) + 2$$
+$$
+\begin{aligned}
+    f(xy + f(x)) = xf(y) + 2
+\end{aligned}
+$$
 
 ## Solution
 

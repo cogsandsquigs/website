@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Page } from "$lib/pages";
+	import type { PageData } from "./$types";
 
-	export let data: Page;
+	export let data: PageData;
 </script>
 
 <h1>{data.title}</h1>

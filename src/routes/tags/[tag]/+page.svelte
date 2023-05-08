@@ -5,6 +5,6 @@
 	export let data: PageData;
 </script>
 
-<h1>Blog</h1>
+<h1>Tag: {data.tag}</h1>
 
 <PostList posts={data.posts} />
