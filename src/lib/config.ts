@@ -1,6 +1,11 @@
 export default {
 	title: "Cogs And Squigs",
 	author: "Ian Pratt",
+	description: "My little slice of the blogosphere.",
+
+	// The site URL
+	site_url: "https://cogsandsquigs.gq",
+
 	// Uses a scheme to replace {author} and {year} with the values from the config object in
 	// `$components/Footer.svelte`
 	copyright: "© {author} 2019-{year}",

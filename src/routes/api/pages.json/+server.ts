@@ -2,6 +2,9 @@ import { pages_from_import } from "$lib/pages";
 import { json } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
 
+// Make these prerenderable
+export const prerender = true;
+
 export const GET: RequestHandler = async () => {
 	let pages = await pages_from_import();
 
