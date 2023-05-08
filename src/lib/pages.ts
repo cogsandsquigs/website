@@ -20,8 +20,15 @@ export type Page = {
 	// The series associated with the page.
 	series: string;
 
-	// The content of the page, as a renderable Svelte component.
-	content: any;
+	// The content of the page, as a renderable Svelte component. Note that
+	// there may be no content, like if we are fetching the post from an API
+	// endpoint.
+	content?: any;
+};
+
+// Helper function to fully deserialize a page from JSON.
+export const deserialize_from_json = (page: any): Page => {
+	return { ...page, date: dayjs(page.date) };
 };
 
 // Imports all the posts dynamically from the `content` directory, and returns them as an array of `Page` objects.
@@ -41,9 +48,31 @@ export const posts_from_import = async (): Promise<Page[]> => {
 	return pages;
 };
 
+// Imports all the pages dynamically from the `content` directory, and returns them as an array of `Page` objects.
+export const pages_from_import = async (): Promise<Page[]> => {
+	let posts_imports: any;
+
+	// Import the .md file using glob import.
+	try {
+		posts_imports = import.meta.glob(`../../content/*.md`);
+	} catch (e) {
+		// If it doesn't exist, use the 404 page.
+		throw error(404, `Directory does not exist!`);
+	}
+
+	const pages = await Promise.all(Object.entries(posts_imports).map(load_page));
+
+	return pages;
+};
+
+// Import a post dynamically from the `content` directory, and return it as a `Page` object.
+export const post_from_import = async (path: string): Promise<Page> => {
+	return load_page([path, () => import(`../../content/posts/${path}.md`)]);
+};
+
 // Import a page dynamically from the `content` directory, and return it as a `Page` object.
 export const page_from_import = async (path: string): Promise<Page> => {
-	return load_page([path, () => import(`/content/${path}.md`)]);
+	return load_page([path, () => import(`../../content/${path}.md`)]);
 };
 
 // Helper function to load data from an imported page.
