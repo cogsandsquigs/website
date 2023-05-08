@@ -10,28 +10,30 @@ export default {
 	// `$components/Footer.svelte`
 	copyright: "© {author} 2019-{year}",
 
-	// The nav menu for the site
-	nav_menu: [
-		{
-			// identifier: "about",
-			name: "About",
-			url: "/about"
-		},
-		{
-			// identifier: "blog",
-			name: "Blog",
-			url: "/posts"
-		},
-		{
-			// identifier: "github",
-			name: "Github",
-			url: "https://github.com/cogsandsquigs"
-		}
-	],
-
 	// i18n config
 	languages: {
 		en: {
+			// The navigation menu for the site
+			menu: {
+				main: [
+					{
+						// identifier: "about",
+						name: "About",
+						url: "/about"
+					},
+					{
+						// identifier: "blog",
+						name: "Blog",
+						url: "/posts"
+					},
+					{
+						// identifier: "github",
+						name: "Github",
+						url: "https://github.com/cogsandsquigs"
+					}
+				]
+			},
+
 			keywords: "",
 			languageName: "English",
 

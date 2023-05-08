@@ -1,4 +1,4 @@
-import config from "$lib/config";
+import config from "$config";
 import { deserialize_from_json, type Page } from "$lib/pages";
 
 export const prerender = true;

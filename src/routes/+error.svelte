@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-	import config from "$lib/config";
+	import config from "$config";
 </script>
 
 <h1>Error: {$page.status}</h1>

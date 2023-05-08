@@ -1,6 +1,6 @@
 <script lang="ts">
 	import PostInfo from "$components/PostInfo.svelte";
-	import config from "$lib/config";
+	import config from "$config";
 	import type { Page } from "$lib/pages";
 
 	export let posts: Page[] = [];

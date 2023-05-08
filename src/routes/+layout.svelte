@@ -2,7 +2,7 @@
 	import Favicons from "$components/Favicons.svelte";
 	import Footer from "$components/Footer.svelte";
 	import Header from "$components/Header.svelte";
-	import config from "$lib/config";
+	import config from "$config";
 	import "$styles/main.scss";
 </script>
 

@@ -26,6 +26,9 @@ const config = {
 
 		// Aliases to different parts of the project can be added here.
 		alias: {
+			// Configuration aliasing.
+			$config: "./site.config.ts",
+
 			// Aliasing to the content.
 			$content: "./content",
 

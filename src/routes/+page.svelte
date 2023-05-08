@@ -1,6 +1,6 @@
 <script lang="ts">
 	import PostList from "$lib/components/PostList.svelte";
-	import config from "$lib/config";
+	import config from "$config";
 	import type { PageData } from "./$types";
 
 	export let data: PageData;

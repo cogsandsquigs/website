@@ -1,5 +1,5 @@
 <script>
-	import config from "$lib/config";
+	import config from "$config";
 </script>
 
 <footer class="py-4 w-full text-center">
