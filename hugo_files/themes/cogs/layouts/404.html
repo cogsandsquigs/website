@@ -1,7 +1,0 @@
-{{ define "main" }}
-	<h1>404</h1>
-	<p>{{ .Site.Params.missingContentMessage | default "Page not found..." }}</p>
-	<p>
-		<a href="/">{{ .Site.Params.missingBackButtonLabel | default "Back to home page" }} -></a>
-	</p>
-{{ end }}
