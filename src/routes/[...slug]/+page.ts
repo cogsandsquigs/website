@@ -1,4 +1,4 @@
-import { page_from_import, type Page } from "$lib/pages";
+import { page_from_import, type Page, posts_from_import } from "$lib/pages";
 
 // Load the page component
 export const load = async ({ params: { slug } }): Promise<Page> => {
@@ -7,5 +7,5 @@ export const load = async ({ params: { slug } }): Promise<Page> => {
 		slug = "index";
 	}
 
-	return page_from_import(slug);
+	return await page_from_import(slug);
 };

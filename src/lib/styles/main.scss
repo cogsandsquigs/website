@@ -1,5 +1,6 @@
-@import 'links.scss';
-@import 'fonts.scss';
+@use "links.scss";
+@use "fonts.scss";
+@use "katex.scss";
 
 @tailwind base;
 @tailwind components;
@@ -7,9 +8,9 @@
 
 body {
 	// Set fonts and stuff
-	font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
+	font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace;
 	text-rendering: optimizeLegibility;
-	font-feature-settings: 'liga', 'tnum', 'zero', 'ss01', 'locl';
+	font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
 	font-variant-ligatures: contextual;
 }
 
@@ -18,8 +19,8 @@ hr {
 	height: 2px;
 	background: linear-gradient(
 		to right,
-		theme('colors.accent'),
-		theme('colors.secondary'),
-		theme('colors.primary')
+		theme("colors.accent"),
+		theme("colors.secondary"),
+		theme("colors.primary")
 	);
 }

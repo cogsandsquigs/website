@@ -43,7 +43,7 @@ export const posts_from_import = async (): Promise<Page[]> => {
 
 // Import a page dynamically from the `content` directory, and return it as a `Page` object.
 export const page_from_import = async (path: string): Promise<Page> => {
-	return load_page([path, () => import(`../../content/${path}.md`)]);
+	return load_page([path, () => import(`/content/${path}.md`)]);
 };
 
 // Helper function to load data from an imported page.

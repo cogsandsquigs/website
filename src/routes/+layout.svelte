@@ -9,6 +9,7 @@
 <!-- Add <head> tag data here -->
 <svelte:head>
 	<Favicons />
+
 	<title>
 		{config.title}
 	</title>
