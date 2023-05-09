@@ -16,7 +16,7 @@
 			<!-- General information and post listing -->
 			<div class="mb-4">
 				<h2 class="mr-3 text-2xl font-bold">
-					<a class="no-underline bg-none" href={post.slug}>{post.data.title}</a>
+					<a class="no-underline bg-none" href={`/blog/${post.slug}`}>{post.data.title}</a>
 				</h2>
 
 				<PostInfo {post} />
