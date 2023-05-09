@@ -3,6 +3,9 @@ import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
+
 // https://astro.build/config
 export default defineConfig({
 	integrations: [svelte(), tailwind()],
@@ -11,10 +14,21 @@ export default defineConfig({
 		smartypants: true,
 
 		// Remark plugins. These run before the markdown is compiled to HTML.
-		remarkPlugins: [remarkMath],
+		remarkPlugins: [
+			// Adds math support to markdown.
+			remarkMath
+		],
 
 		// Rehype plugins. These run after the markdown is compiled to HTML.
 		rehypePlugins: [
+			// Adds heading slug IDs to heading sections.
+			rehypeSlug,
+
+			// Adds links back to heading sections.
+			// TODO: make link dissapear (maybe except on hover?)
+			// [rehypeAutolinkHeadings, { behavior: "wrap" }],
+
+			// Renders math with KaTeX.
 			[
 				rehypeKatex,
 				{
