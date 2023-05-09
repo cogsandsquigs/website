@@ -19,7 +19,7 @@ import { z, defineCollection } from "astro:content";
 const pageCollection = defineCollection({
 	schema: z.object({
 		// The title of the page in question.
-		title: z.string()
+		title: z.optional(z.string())
 	})
 });
 
