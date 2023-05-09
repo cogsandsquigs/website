@@ -28,7 +28,7 @@
 					<!-- TODO: get post preview -->
 				</p>
 
-				<a href={post.slug}>
+				<a href={`/blog/${post.slug}`}>
 					{config.languages.en.read_more ?? "Read more"} ->
 				</a>
 			</div>
