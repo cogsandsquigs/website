@@ -1,20 +1,19 @@
 {
-    "overrides": [
-        {
-            "files": "*.svelte",
-            "options": {
-                "parser": "svelte"
-            }
-        }
-    ],
-    "pluginSearchDirs": [
-        "."
-    ],
-    "plugins": [
-        "prettier-plugin-svelte"
-    ],
-    "printWidth": 100,
-    "singleQuote": false,
-    "trailingComma": "none",
-    "useTabs": true
+	"printWidth": 100,
+	"singleQuote": false,
+	"trailingComma": "none",
+	"useTabs": true,
+
+	"overrides": [
+		{
+			"files": "*.svelte",
+			"options": {
+				"parser": "svelte"
+			}
+		}
+	],
+
+	"pluginSearchDirs": ["."],
+
+	"plugins": ["prettier-plugin-svelte", "prettier-plugin-astro"]
 }

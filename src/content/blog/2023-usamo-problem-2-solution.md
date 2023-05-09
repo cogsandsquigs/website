@@ -1,7 +1,6 @@
 ---
 date: "2023-04-07T15:45:16Z"
 description: With some algebra and just a touch of calculus, it is conquered.
-series: ""
 tags:
   - puzzle
   - calculus

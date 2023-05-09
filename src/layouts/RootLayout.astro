@@ -1,0 +1,38 @@
+---
+import Favicons from "$components/Favicons.svelte";
+import Footer from "$components/Footer.svelte";
+import Header from "$components/Header.svelte";
+// import config from "$config";
+// import "$styles/main.scss";
+
+// Get configuration
+const { title } = Astro.props.frontmatter ?? Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<Favicons />
+		<title>{title}</title>
+		<!-- TODO: add more head stuff! -->
+	</head>
+
+	<body
+		data-sveltekit-preload-data="hover"
+		class="mx-auto w-full min-h-screen max-w-[95%] md:max-w-prose prose prose-invert prose-a:no-underline bg-base"
+	>
+		<div style="display: contents" class="flex flex-col items-center min-h-screen">
+			<Header />
+
+			<hr class="my-4 w-full" />
+
+			<div class="flex-grow">
+				<slot />
+			</div>
+
+			<Footer />
+		</div>
+	</body>
+</html>

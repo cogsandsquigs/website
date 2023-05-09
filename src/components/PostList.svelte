@@ -1,9 +1,9 @@
 <script lang="ts">
 	import PostInfo from "$components/PostInfo.svelte";
 	import config from "$config";
-	import type { Page } from "$lib/pages";
+	import type { CollectionEntry } from "astro:content";
 
-	export let posts: Page[] = [];
+	export let posts: CollectionEntry<"blog">[] = [];
 </script>
 
 <ul class="p-0 m-0 list-none not-prose">
@@ -13,21 +13,22 @@
 		{/if}
 
 		<li>
+			<!-- General information and post listing -->
 			<div class="mb-4">
 				<h2 class="mr-3 text-2xl font-bold">
-					<a class="no-underline bg-none" href={post.path}>{post.meta.title}</a>
+					<a class="no-underline bg-none" href={post.slug}>{post.data.title}</a>
 				</h2>
 
 				<PostInfo {post} />
 			</div>
 
 			<div>
+				<!-- The preview for the post -->
 				<p class="mb-4 line-clamp-3">
-					<!-- TODO: get raw text somehow? -->
-					{@html post.content}
+					<!-- TODO: get post preview -->
 				</p>
 
-				<a href={post.path}>
+				<a href={post.slug}>
 					{config.languages.en.read_more ?? "Read more"} ->
 				</a>
 			</div>

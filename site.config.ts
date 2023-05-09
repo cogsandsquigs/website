@@ -24,7 +24,7 @@ export default {
 					{
 						// identifier: "blog",
 						name: "Blog",
-						url: "/posts"
+						url: "/blog"
 					},
 					{
 						// identifier: "github",
@@ -33,6 +33,14 @@ export default {
 					}
 				]
 			},
+
+			// The date format
+			date_format: {
+				weekday: "long",
+				year: "numeric",
+				month: "short",
+				day: "numeric"
+			} as Intl.DateTimeFormatOptions,
 
 			keywords: "",
 			languageName: "English",

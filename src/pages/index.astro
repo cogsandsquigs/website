@@ -1,15 +1,17 @@
 ---
+import RootLayout from "$layouts/RootLayout.astro";
+import { getEntryBySlug } from "astro:content";
+
+// Get the index page markdown file.
+let indexPage = await getEntryBySlug("pages", "index");
+
+const { Content } = await indexPage.render();
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<RootLayout>
+	<h1>{indexPage.data.title}</h1>
+
+	<Content />
+
+	<!-- TODO: Put recent posts here! -->
+</RootLayout>
