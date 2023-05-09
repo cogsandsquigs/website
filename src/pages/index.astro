@@ -1,17 +1,21 @@
 ---
 import RootLayout from "$layouts/RootLayout.astro";
-import { getEntryBySlug } from "astro:content";
+import { getCollection, getEntryBySlug } from "astro:content";
+import PostList from "$components/PostList.svelte";
+import config from "$config";
 
 // Get the index page markdown file.
-let indexPage = await getEntryBySlug("pages", "index");
+const index_page = await getEntryBySlug("pages", "index");
+const { Content } = await index_page.render();
 
-const { Content } = await indexPage.render();
+// Get the 3 most recent posts.
+const recent_posts = await getCollection("blog").then((blog) => blog.slice(0, 3));
 ---
 
 <RootLayout>
-	<h1>{indexPage.data.title}</h1>
+	<h1>{config.title}</h1>
 
 	<Content />
 
-	<!-- TODO: Put recent posts here! -->
+	<PostList posts={recent_posts} />
 </RootLayout>
