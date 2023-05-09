@@ -1,6 +1,7 @@
 {
-	"name": "tmp",
+	"name": "cogsandsquigs-website",
 	"type": "module",
+	"author": "Ian Pratt <ianjdpratt@gmail.com>",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "astro dev",
