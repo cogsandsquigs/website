@@ -1,14 +1,14 @@
 <script lang="ts">
-	import PostList from "$lib/components/PostList.svelte";
 	import config from "$config";
+	import PostList from "$lib/components/PostList.svelte";
 	import type { PageData } from "./$types";
 
 	export let data: PageData;
 </script>
 
-<h1>{data.page.title}</h1>
+<h1>{data.page.meta.title}</h1>
 
-<svelte:component this={data.page.content} />
+{@html data.page.content}
 
 <!-- The 3 most recent posts -->
 <PostList posts={data.recent_posts} />

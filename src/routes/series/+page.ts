@@ -10,7 +10,7 @@ export const load: PageLoad = async ({ fetch }): Promise<{ series: string[] }> =
 		// Deserialize everything fully.
 		.then((posts) => posts.map(deserialize_from_json))
 		// Only get the series.
-		.then((posts) => posts.map((post: Page) => post.series));
+		.then((posts) => posts.map((post: Page) => post.meta.series));
 
 	return { series };
 };

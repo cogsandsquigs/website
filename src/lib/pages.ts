@@ -2,28 +2,37 @@ import { error } from "@sveltejs/kit";
 import dayjs, { type Dayjs } from "dayjs";
 
 export type Page = {
-	// The path to the page.
+	/**
+	 * The path to the page.
+	 */
 	path: string;
 
-	// The title of the page.
-	title: string;
+	/**
+	 * The content of the page, as a renderable Svelte component. Note that
+	 * there may be no content, like if we are fetching the post from an API
+	 * endpoint.
+	 */
+	content: string;
 
-	// The description of the page.
-	description: string;
+	/**
+	 * Metadata about the page.
+	 */
+	meta: {
+		// The title of the page.
+		title: string;
 
-	// The date it was published.
-	date: Dayjs;
+		// The description of the page.
+		description: string;
 
-	// The tags associated with the page.
-	tags: string[];
+		// The date it was published.
+		date: Dayjs;
 
-	// The series associated with the page.
-	series: string;
+		// The tags associated with the page.
+		tags: string[];
 
-	// The content of the page, as a renderable Svelte component. Note that
-	// there may be no content, like if we are fetching the post from an API
-	// endpoint.
-	content?: any;
+		// The series associated with the page.
+		series: string;
+	};
 };
 
 // Helper function to fully deserialize a page from JSON.
@@ -75,8 +84,13 @@ export const page_from_import = async (path: string): Promise<Page> => {
 	return load_page([path, () => import(`../../content/${path}.md`)]);
 };
 
-// Helper function to load data from an imported page.
-export const load_page = async ([path, resolver]: [string, unknown]): Promise<Page> => {
+/**
+ * Helper function to load data from an imported page.
+ * @param path The path to the page.
+ * @param resolver The resolver function to import the page.
+ * @returns The page as a `Page` object.
+ */
+const load_page = async ([path, resolver]: [string, unknown]): Promise<Page> => {
 	// If the path is from a glob import, so it is not pre-trimmed, trim it.
 	if (/\.\.\/\.\.\/content\/.*\.md/.test(path)) {
 		path = path.slice(14, -3);
@@ -90,16 +104,19 @@ export const load_page = async ([path, resolver]: [string, unknown]): Promise<Pa
 			// The path to the page.
 			path: "/" + path,
 
-			// Load all the metadata!
-			...metadata,
-
-			// Override some things, like tags and series with defaults if they don't exist.
-			date: dayjs(metadata.date ?? new Date()),
-			tags: metadata.tags ?? [],
-			series: metadata.series == "" || !metadata.series ? null : metadata.series,
-
 			// The content of the page, as a renderable Svelte component.
-			content
+			content: "test",
+
+			// Metadata about the page.
+			meta: {
+				// Load all the metadata!
+				...metadata,
+
+				// Override some things, like tags and series with defaults if they don't exist.
+				date: dayjs(metadata.date ?? new Date()),
+				tags: metadata.tags ?? [],
+				series: metadata.series == "" || !metadata.series ? null : metadata.series
+			}
 		};
 	} catch (err: any) {
 		// If the file is not found, then return 404.

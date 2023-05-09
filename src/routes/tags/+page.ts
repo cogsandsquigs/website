@@ -10,7 +10,7 @@ export const load: PageLoad = async ({ fetch }): Promise<{ tags: string[] }> => 
 		// Deserialize everything fully.
 		.then((posts) => posts.map(deserialize_from_json))
 		// Only get the tags.
-		.then((posts) => posts.map((post: Page) => post.tags))
+		.then((posts) => posts.map((post: Page) => post.meta.tags))
 		// Flatten the tags.
 		.then((tags) => tags.flat());
 

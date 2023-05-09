@@ -36,10 +36,10 @@ const render = (posts: Page[]) => `<?xml version="1.0" encoding="UTF-8" ?>
 			.map(
 				(post) => `<item>
                 <guid isPermaLink="true">${config.site_url}/blog/${post.path}</guid>
-                <title>${post.title}</title>
+                <title>${post.meta.title}</title>
                 <link>${config.site_url}/blog/${post.path}</link>
-                <description>${post.description}</description>
-                <pubDate>${post.date.toString()}</pubDate>
+                <description>${post.meta.description}</description>
+                <pubDate>${post.meta.date.toString()}</pubDate>
             </item>`
 			)
 			.join("")}

@@ -13,7 +13,7 @@ export const load: PageLoad = async ({
 		// Deserialize everything fully.
 		.then((posts) => posts.map(deserialize_from_json))
 		// Only get posts with the tag
-		.then((posts) => posts.filter((post: Page) => post.tags.includes(tag)));
+		.then((posts) => posts.filter((post: Page) => post.meta.tags.includes(tag)));
 
 	return { tag, posts };
 };

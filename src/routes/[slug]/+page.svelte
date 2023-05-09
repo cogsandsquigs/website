@@ -6,4 +6,4 @@
 
 <h1>{data.title}</h1>
 
-<svelte:component this={data.content} />
+{@html data.content}

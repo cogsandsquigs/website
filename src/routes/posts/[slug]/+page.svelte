@@ -5,8 +5,8 @@
 	export let data: PageData;
 </script>
 
-<h1>{data.title}</h1>
+<h1>{data.meta.title}</h1>
 
 <PostInfo post={data} />
 
-<svelte:component this={data.content} />
+{@html data.content}

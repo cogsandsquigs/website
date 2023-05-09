@@ -15,6 +15,6 @@ export const GET: RequestHandler = async () => {
 				return { ...page, content: undefined };
 			})
 			// Sort by date!
-			.sort((a, b) => b.date.valueOf() - a.date.valueOf())
+			.sort((a, b) => b.meta.date.valueOf() - a.meta.date.valueOf())
 	);
 };

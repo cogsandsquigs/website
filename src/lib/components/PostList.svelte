@@ -15,7 +15,7 @@
 		<li>
 			<div class="mb-4">
 				<h2 class="mr-3 text-2xl font-bold">
-					<a class="no-underline bg-none" href={post.path}>{post.title}</a>
+					<a class="no-underline bg-none" href={post.path}>{post.meta.title}</a>
 				</h2>
 
 				<PostInfo {post} />
@@ -24,7 +24,7 @@
 			<div>
 				<p class="mb-4 line-clamp-3">
 					<!-- TODO: get raw text somehow? -->
-					<svelte:component this={post.content} />
+					{@html post.content}
 				</p>
 
 				<a href={post.path}>
