@@ -8,10 +8,17 @@ import { getCollection } from "astro:content";
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
 	const blogEntries = await getCollection("pages");
-	return blogEntries.map((entry) => ({
-		params: { slug: entry.slug },
-		props: { entry }
-	}));
+
+	return (
+		blogEntries
+			// Filter out index page - that is generated separately in `src/pages/index.astro` because
+			// it requires special components.
+			.filter((entry) => entry.slug != "index")
+			.map((entry) => ({
+				params: { slug: entry.slug },
+				props: { entry }
+			}))
+	);
 }
 
 // 2. When it's time to render, you can get the entry directly from the prop
