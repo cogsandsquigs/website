@@ -9,7 +9,10 @@ import { getBlogPosts } from "$lib/blog_posts";
 export async function getStaticPaths() {
 	const blogPosts = await getBlogPosts();
 
-	let series = blogPosts.map((entry) => entry.data.series);
+	let series = blogPosts
+		.map((entry) => entry.data.series)
+		// Filter out pages w/o series.
+		.filter((series) => series != "" && series != undefined);
 
 	return series.map((series) => {
 		return {
