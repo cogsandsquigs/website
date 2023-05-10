@@ -1,12 +1,12 @@
+import shikiTheme from "./src/styles/code-theme.shiki.json";
+import mdx from "@astrojs/mdx";
 import svelte from "@astrojs/svelte";
 import { defineConfig } from "astro/config";
 import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
+import remarkGemoji from "remark-gemoji";
 import remarkMath from "remark-math";
 import remarkSmartypants from "remark-smartypants";
-import shikiTheme from "./src/styles/code-theme.shiki.json";
-
-import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
@@ -53,6 +53,7 @@ export default defineConfig({
 		remarkPlugins: [
 			// Adds math support to markdown.
 			remarkMath,
+
 			// Turn -- and --- into en- and em-dashes respectively.
 			[
 				remarkSmartypants,
@@ -63,7 +64,10 @@ export default defineConfig({
 					elipses: false,
 					backticks: false
 				}
-			]
+			],
+
+			// Support emoji shortcodes
+			remarkGemoji
 		],
 
 		// Allow smartypants and GFM

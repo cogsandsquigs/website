@@ -15,5 +15,5 @@
 
 	"pluginSearchDirs": ["."],
 
-	"plugins": ["prettier-plugin-svelte", "prettier-plugin-astro"]
+	"plugins": ["prettier-plugin-svelte", "prettier-plugin-astro", "@trivago/prettier-plugin-sort-imports"]
 }

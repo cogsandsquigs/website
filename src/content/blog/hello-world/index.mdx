@@ -8,6 +8,7 @@ title: Hello World!
 ---
 
 import Counter from "./Counter.svelte";
+import CounterDisplay from "./CounterDisplay.svelte";
 
 Hi! This is my testing page. What does that mean? well, it means this is where all my website features are tested.
 
@@ -44,4 +45,16 @@ This blog also supports _dynamic content_ through [MDX](https://mdxjs.com/), whi
 
 Below, click the button to update the counter.
 
-<Counter client:idle />
+<div class="text-center">
+	<Counter client:idle />
+</div>
+
+Note that we can _share state_ between components using stores, like [nanostores](https://github.com/nanostores/nanostores), or by using plain Svelte stores.
+
+(However, nanostores are more compatible with other frameworks.)
+
+<div class="text-center">
+	<CounterDisplay client:idle />
+</div>
+
+:point_up: This is a component sharing state through a nanostore!

@@ -1,11 +1,11 @@
 <script>
-	let count = 0;
+	import { count } from "./stores";
 
 	function handleClick() {
-		count += 1;
+		count.set($count + 1);
 	}
 </script>
 
 <button on:click={handleClick}>
-	clicks: {count}
+	clicks: {$count}
 </button>
