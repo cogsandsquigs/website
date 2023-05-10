@@ -3,7 +3,7 @@
 
 	export let title: string = config.title;
 	export let description: string = config.description;
-	export let path: string;
+	export let path: string = "/";
 </script>
 
 <!-- Meta tag for description -->
