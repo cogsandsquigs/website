@@ -1,6 +1,5 @@
 ---
 // This page is a page for each post that contains a certain tag.
-
 import PostList from "$components/PostList.svelte";
 import RootLayout from "$layouts/RootLayout.astro";
 import { getBlogPosts } from "$lib/blog_posts";
@@ -31,7 +30,10 @@ const {
 } = Astro;
 ---
 
-<RootLayout>
+<RootLayout
+	title={`Series: ${series}`}
+	description={`The ${series} series listing for all posts in this series`}
+>
 	<h1>Series: {series}</h1>
 
 	<PostList posts={entries} />

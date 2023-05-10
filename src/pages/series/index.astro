@@ -1,6 +1,5 @@
 ---
 // This page is a page for each post that contains a certain tag.
-
 import RootLayout from "$layouts/RootLayout.astro";
 import { getBlogPosts } from "$lib/blog_posts";
 
@@ -11,7 +10,7 @@ const series = await getBlogPosts()
 	.then((series) => [...new Set(series)]);
 ---
 
-<RootLayout>
+<RootLayout title="All series" description="All the series for all the blog posts">
 	<h1>Tags</h1>
 
 	<ul>

@@ -1,7 +1,6 @@
 ---
 // This page is where all the files in `/src/content/blog` are rendered. Specifically, this is a
 // blog post!
-
 import PostInfo from "$components/PostInfo.svelte";
 import RootLayout from "$layouts/RootLayout.astro";
 import { getCollection } from "astro:content";
@@ -20,7 +19,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<RootLayout>
+<RootLayout title={entry.data.title} description={entry.data.description}>
 	<h1>{entry.data.title}</h1>
 
 	<PostInfo post={entry} />

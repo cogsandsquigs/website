@@ -1,6 +1,5 @@
 ---
 // This page is a page for each post that contains a certain tag.
-
 import PostList from "$components/PostList.svelte";
 import RootLayout from "$layouts/RootLayout.astro";
 import { getBlogPosts } from "$lib/blog_posts";
@@ -28,7 +27,10 @@ const {
 } = Astro;
 ---
 
-<RootLayout>
+<RootLayout
+	title={`Tag: ${tag}`}
+	description={`The #${tag} tag listing for all posts with this tag`}
+>
 	<h1>Tag: #{tag}</h1>
 
 	<PostList posts={entries} />

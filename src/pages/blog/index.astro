@@ -1,14 +1,14 @@
 ---
 // The blog page, where all posts are listed.
-import RootLayout from "$layouts/RootLayout.astro";
 import PostList from "$components/PostList.svelte";
+import RootLayout from "$layouts/RootLayout.astro";
 import { getBlogPosts } from "$lib/blog_posts";
 
 // Get the posts!
 const posts = await getBlogPosts();
 ---
 
-<RootLayout>
+<RootLayout title="Blog">
 	<h1>Blog</h1>
 
 	<PostList {posts} />

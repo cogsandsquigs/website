@@ -1,0 +1,17 @@
+<script lang="ts">
+	import config from "$config";
+
+	export let title: string = config.title;
+	export let description: string = config.description;
+	export let path: string;
+</script>
+
+<!-- Meta tag for description -->
+<meta name="description" content={description} />
+
+<!-- OpenGraph Tags-->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={config.site_url + path} />
+<meta property="og:locale" content="en-us" />
+<meta property="og:type" content="website" />

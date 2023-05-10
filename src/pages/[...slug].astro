@@ -1,7 +1,6 @@
 ---
 // This page is where all the files in `/src/content/pages` are rendered. Specifically, this is just
 // a normal, top-level page.
-
 import RootLayout from "$layouts/RootLayout.astro";
 import { getCollection } from "astro:content";
 
@@ -26,7 +25,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<RootLayout>
+<RootLayout title={entry.data.title} , description={`The ${entry.data.title} page`}>
 	<h1>{entry.data.title}</h1>
 
 	<Content />

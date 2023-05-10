@@ -2,22 +2,27 @@
 import Favicons from "$components/Favicons.svelte";
 import Footer from "$components/Footer.svelte";
 import Header from "$components/Header.svelte";
+import SEO from "$components/SEO.svelte";
 import config from "$config";
 import "$styles/main.scss";
 
 // Get configuration
-const { title } = Astro.props;
+let { title: prop_title, description } = Astro.props;
+const title = prop_title != undefined ? `${config.title} | ` + prop_title : config.title;
 ---
 
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
 		<link rel="icon" href="/favicon.ico" />
+
+		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
+
 		<Favicons />
-		<title>
-			{title != undefined ? `${config.title} | ` + title : config.title}
-		</title>
+
+		<title>{title}</title>
+
+		<SEO {title} {description} path={Astro.url.pathname} />
 		<!-- TODO: add more head stuff! -->
 	</head>
 
