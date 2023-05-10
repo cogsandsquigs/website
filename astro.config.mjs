@@ -10,6 +10,9 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
+	// Configure the output build directory to be /build
+	outDir: "./build",
+
 	// Note that tailwind is being used, even without the tailwindcss integration. I
 	// find it easier to manage everything when it all goes through one place (in this case,
 	// PostCSS), not as separate vendor-dependent integrations.

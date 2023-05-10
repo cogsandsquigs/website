@@ -1,5 +1,5 @@
 # build output
-dist/
+build/
 package-lock.json
 yarn.lock
 pnpm-lock.yaml

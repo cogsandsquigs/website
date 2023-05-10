@@ -1,5 +1,8 @@
 # build output
-dist/
+build/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # generated types
 .astro/
@@ -19,8 +22,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-# build artefacts
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
