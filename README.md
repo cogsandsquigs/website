@@ -8,6 +8,5 @@ Built with Astro and love <3
 
 ## Notes (mostly for myself)
 
-- TODO: Add `tags` and `series` pages.
-- Add `mdx` support
+- TODO: Add `mdx` support
   - Add example of `mdx` on testing page --- see if it works with KaTeX?
