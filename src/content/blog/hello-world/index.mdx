@@ -7,6 +7,8 @@ tags:
 title: Hello World!
 ---
 
+import Counter from "./Counter.svelte";
+
 Hi! This is my testing page. What does that mean? well, it means this is where all my website features are tested.
 
 ## Post format
@@ -38,6 +40,8 @@ $$
 
 ## Dynamic content with MDX
 
-<script>const counter = 0;</script>
+This blog also supports _dynamic content_ through [MDX](https://mdxjs.com/), which means that you can interact with stuff on this page!
 
-{counter}
+Below, click the button to update the counter.
+
+<Counter client:idle />

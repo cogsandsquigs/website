@@ -1,6 +1,6 @@
-/*
-Code derived from https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline#two-backgrounds.
-*/
+/**
+ * Code derived from https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline#two-backgrounds.
+ */
 
 // The thickness of the underline
 $underline_thickness: 1.8px;
@@ -58,22 +58,22 @@ a {
 
 	// Transition the backgrounds across
 	transition: background-size $transition_time ease, background-position $transition_time ease;
-}
 
-a:hover {
-	background-size: 
-        // Make the separator take up it's thickness
-		$transition_spacing $underline_thickness,
-		// Make default underline invisible
-		0 $underline_thickness,
-		// Make hover underline take up the whole space
-		100% $underline_thickness;
+	&:hover {
+		background-size: 
+			// Make the separator take up it's thickness
+			$transition_spacing $underline_thickness,
+			// Make default underline invisible
+			0 $underline_thickness,
+			// Make hover underline take up the whole space
+			100% $underline_thickness;
 
-	background-position: 
-        // Move the background to start and end after the underline, on the other side.
-		calc(100% + #{$transition_spacing}) 100%,
-		// Set the default background to be none of the way across
-		100% 100%,
-		// Set the hover background to be all of the way across
-		0 100%;
+		background-position: 
+			// Move the background to start and end after the underline, on the other side.
+			calc(100% + #{$transition_spacing}) 100%,
+			// Set the default background to be none of the way across
+			100% 100%,
+			// Set the hover background to be all of the way across
+			0 100%;
+	}
 }

@@ -1,0 +1,8 @@
+button {
+	border: theme("borderWidth.2") solid;
+	border-color: theme("colors.primary");
+	border-radius: theme("borderRadius.md");
+	padding: theme("padding.2") !important;
+
+	// TODO: add gradient border sometime?
+}
