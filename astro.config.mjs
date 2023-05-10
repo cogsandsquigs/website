@@ -6,6 +6,8 @@ import remarkMath from "remark-math";
 import remarkSmartypants from "remark-smartypants";
 import shikiTheme from "./src/styles/code-theme.shiki.json";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
 	// Note that tailwind is being used, even without the tailwindcss integration. I
@@ -13,9 +15,11 @@ export default defineConfig({
 	// PostCSS), not as separate vendor-dependent integrations.
 	integrations: [
 		// Add support for Svelte components.
-		svelte()
+		svelte(),
+		mdx()
 	],
 
+	// Markdown configuration and settings.
 	markdown: {
 		// Use Shiki highlighting for code.
 		syntaxHighlight: "shiki",
@@ -46,7 +50,6 @@ export default defineConfig({
 		remarkPlugins: [
 			// Adds math support to markdown.
 			remarkMath,
-
 			// Turn -- and --- into en- and em-dashes respectively.
 			[
 				remarkSmartypants,
@@ -65,7 +68,6 @@ export default defineConfig({
 		rehypePlugins: [
 			// Adds heading slug IDs to heading sections.
 			rehypeSlug,
-
 			// Adds links back to heading sections.
 			// TODO: make link dissapear (maybe except on hover?)
 			// [rehypeAutolinkHeadings, { behavior: "wrap" }],
