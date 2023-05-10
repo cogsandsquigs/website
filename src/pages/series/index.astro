@@ -1,0 +1,30 @@
+---
+// This page is a page for each post that contains a certain tag.
+
+import RootLayout from "$layouts/RootLayout.astro";
+import { getBlogPosts } from "$lib/blog_posts";
+
+const series = await getBlogPosts()
+	.then((posts) => posts.map((entry) => entry.data.series))
+	.then((series) => series.filter((series) => series != "" && series != undefined))
+	// Remove duplicates.
+	.then((series) => [...new Set(series)]);
+---
+
+ags
+
+<RootLayout>
+	<h1>Tags</h1>
+
+	<ul>
+		{
+			series.map((series) => (
+				<li>
+					<h2>
+						<a href={`/series/${series}`}>#{series}</a>
+					</h2>
+				</li>
+			))
+		}
+	</ul>
+</RootLayout>
