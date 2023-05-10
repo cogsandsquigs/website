@@ -1,8 +1,8 @@
 ---
-import RootLayout from "$layouts/RootLayout.astro";
-import { getCollection, getEntryBySlug } from "astro:content";
 import PostList from "$components/PostList.svelte";
 import config from "$config";
+import RootLayout from "$layouts/RootLayout.astro";
+import { getCollection, getEntryBySlug } from "astro:content";
 
 // Get the index page markdown file.
 const index_page = await getEntryBySlug("pages", "index");

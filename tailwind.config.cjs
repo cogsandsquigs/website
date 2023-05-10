@@ -15,10 +15,15 @@ const config = {
 				accent: "#ff23ff",
 
 				// The base/background color
-				base: "#131315"
+				base: "#131315",
+
+				// A lighter base/background color
+				// TODO: is this really the color I want?
+				"base-light": "#5b5b65"
 			}
 		}
 	},
+
 	plugins: [require("@tailwindcss/typography")]
 };
 

@@ -1,15 +1,22 @@
-import { defineConfig } from "astro/config";
 import svelte from "@astrojs/svelte";
-import tailwind from "@astrojs/tailwind";
-import remarkMath from "remark-math";
+import { defineConfig } from "astro/config";
 import rehypeKatex from "rehype-katex";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
+import remarkMath from "remark-math";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [svelte(), tailwind()],
+	// Note that tailwind is being used, even without the tailwindcss integration. I
+	// find it easier to manage everything when it all goes through one place (in this case,
+	// PostCSS), not as separate vendor-dependent integrations.
+	integrations: [
+		// Add support for Svelte components.
+		svelte()
+	],
+
 	markdown: {
+		extendDefaultPlugins: true,
+
 		// Turn -- and --- into en- and em-dashes respectively.
 		smartypants: true,
 

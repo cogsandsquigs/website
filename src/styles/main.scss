@@ -6,6 +6,7 @@
 @tailwind components;
 @tailwind utilities;
 
+// Main body styles
 body {
 	// Set fonts and stuff
 	font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace;
@@ -14,13 +15,18 @@ body {
 	font-variant-ligatures: contextual;
 }
 
+// Styles for the <hr> element - a dash through the page.
 hr {
-	border: none;
-	height: 2px;
-	background: linear-gradient(
-		to right,
-		theme("colors.accent"),
-		theme("colors.secondary"),
-		theme("colors.primary")
-	);
+	// border: none;
+	// height: 2px;
+	// background: linear-gradient(
+	// 	to right,
+	// 	theme("colors.accent"),
+	// 	theme("colors.secondary"),
+	// 	theme("colors.primary")
+	// );
+
+	border: solid;
+	border-width: 1px;
+	border-color: theme("colors.base-light") !important;
 }

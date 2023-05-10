@@ -2,9 +2,11 @@
 import Favicons from "$components/Favicons.svelte";
 import Footer from "$components/Footer.svelte";
 import Header from "$components/Header.svelte";
+import config from "$config";
 import "$styles/main.scss";
 
 // Get configuration
+console.log(Astro);
 const { title } = Astro.props;
 ---
 
@@ -14,7 +16,9 @@ const { title } = Astro.props;
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<Favicons />
-		<title>{title != undefined ? "Cogs and Squigs | " + title : "Cogs and Squigs"}</title>
+		<title>
+			{title != undefined ? `${config.title} | ` + title : config.title}
+		</title>
 		<!-- TODO: add more head stuff! -->
 	</head>
 

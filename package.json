@@ -11,10 +11,13 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@astrojs/rss": "^2.4.1",
 		"@astrojs/svelte": "^2.1.1",
-		"@astrojs/tailwind": "^3.1.2",
 		"@tailwindcss/typography": "^0.5.9",
 		"astro": "^2.4.3",
+		"autoprefixer": "^10.4.14",
+		"cssnano": "^6.0.1",
+		"postcss": "^8.4.23",
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-katex": "^6.0.3",
 		"rehype-slug": "^5.1.0",
