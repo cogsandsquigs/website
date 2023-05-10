@@ -6,7 +6,11 @@ This is my personal website, and accessable [here](https://cogsandsquigs.gq)!
 
 Built with Astro and love <3
 
-## Notes (mostly for myself)
+## Notes for people looking at this
 
-- TODO: Add `mdx` support
-  - Add example of `mdx` on testing page --- see if it works with KaTeX?
+- `/tina` holds all the [TinaCMS configuration files](https://tina.io/docs/tina-folder/overview/) for the content in this site.
+- The structure of this repository follows [the standard Astro project structure](https://docs.astro.build/en/core-concepts/project-structure/).
+
+## TODO
+
+- Add TinaCMS support.
