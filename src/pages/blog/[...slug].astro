@@ -22,6 +22,10 @@ const { Content } = await entry.render();
 
 <RootLayout>
 	<h1>{entry.data.title}</h1>
+
 	<PostInfo post={entry} />
+
+	<hr class="mx-10" />
+
 	<Content />
 </RootLayout>

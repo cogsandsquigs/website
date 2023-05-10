@@ -10,6 +10,7 @@
 			"$layouts/*": ["src/layouts/*"],
 			"$assets/*": ["src/assets/*"],
 			"$styles/*": ["src/styles/*"],
+			"$lib/*": ["src/lib/*"],
 			"$config": ["site.config.ts"]
 		}
 	}

@@ -1,11 +1,11 @@
 ---
 // The blog page, where all posts are listed.
 import RootLayout from "$layouts/RootLayout.astro";
-import { getCollection } from "astro:content";
 import PostList from "$components/PostList.svelte";
+import { getBlogPosts } from "$lib/blog_posts";
 
 // Get the posts!
-const posts = await getCollection("blog");
+const posts = await getBlogPosts();
 ---
 
 <RootLayout>
