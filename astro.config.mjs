@@ -4,7 +4,7 @@ import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
 import remarkMath from "remark-math";
 import remarkSmartypants from "remark-smartypants";
-import { loadTheme } from "shiki";
+import shikiTheme from "./src/styles/code-theme.shiki.json";
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,7 +24,7 @@ export default defineConfig({
 		shikiConfig: {
 			// Choose from Shiki's built-in themes (or add your own)
 			// https://github.com/shikijs/shiki/blob/main/docs/themes.md
-			theme: loadTheme("../../src/styles/code-theme.shiki.json"),
+			theme: shikiTheme,
 			// Add custom languages
 			// Note: Shiki has countless langs built-in, including .astro!
 			// https://github.com/shikijs/shiki/blob/main/docs/languages.md
