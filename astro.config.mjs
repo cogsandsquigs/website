@@ -10,6 +10,12 @@ import remarkSmartypants from "remark-smartypants";
 
 // https://astro.build/config
 export default defineConfig({
+	// Experimental settings
+	experimental: {
+		// Allow for built-in assets
+		assets: true
+	},
+
 	// Configure the output build directory to be /build
 	outDir: "./build",
 

@@ -13,4 +13,5 @@ Built with Astro and love <3
 
 ## TODO
 
-- Add TinaCMS support.
+- Fix links
+- Fix TinaCMS

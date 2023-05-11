@@ -1,0 +1,34 @@
+// Animation for link underlines
+@keyframes link-color-cycle {
+	0% {
+		text-decoration-color: theme("colors.primary");
+	}
+
+	33% {
+		text-decoration-color: theme("colors.accent");
+	}
+
+	66% {
+		text-decoration-color: theme("colors.secondary");
+	}
+
+	100% {
+		text-decoration-color: theme("colors.primary");
+	}
+}
+
+@layer base {
+	// Have links that change color of wavy underline.
+	a {
+		font-weight: bold;
+		text-decoration: underline wavy;
+		text-decoration-thickness: 0.15;
+		text-decoration-color: theme("colors.primary");
+
+		&:hover {
+			animation-name: link-color-cycle;
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+		}
+	}
+}
