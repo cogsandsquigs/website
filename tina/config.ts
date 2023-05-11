@@ -12,18 +12,25 @@ export default defineConfig({
 		outputFolder: "admin",
 		publicFolder: "public"
 	},
+
 	media: {
 		tina: {
 			mediaRoot: "",
 			publicFolder: "public"
 		}
 	},
+
 	schema: {
 		collections: [
+			// TODO: get it to match MDX?
 			{
 				name: "blog",
 				label: "Blog",
 				path: "src/content/blog",
+				match: {
+					include: "**/*"
+				},
+				format: "md",
 				fields: [
 					{
 						type: "string",
@@ -63,7 +70,17 @@ export default defineConfig({
 				name: "pages",
 				label: "Pages",
 				path: "src/content/pages",
+				match: {
+					include: "**/*"
+				},
+				format: "md",
 				fields: [
+					{
+						type: "string",
+						name: "title",
+						label: "Title",
+						required: false
+					},
 					{
 						type: "rich-text",
 						name: "body",
