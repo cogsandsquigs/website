@@ -1,9 +1,4 @@
 {
-	"printWidth": 100,
-	"singleQuote": false,
-	"trailingComma": "none",
-	"useTabs": true,
-
 	"overrides": [
 		{
 			"files": "*.svelte",
@@ -12,8 +7,10 @@
 			}
 		}
 	],
-
 	"pluginSearchDirs": ["."],
-
-	"plugins": ["prettier-plugin-svelte", "prettier-plugin-astro", "@trivago/prettier-plugin-sort-imports"]
+	"plugins": ["prettier-plugin-svelte", "prettier-plugin-astro"],
+	"printWidth": 100,
+	"singleQuote": false,
+	"trailingComma": "none",
+	"useTabs": true
 }

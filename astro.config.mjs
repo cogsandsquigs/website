@@ -1,3 +1,4 @@
+import remarkBib from "./remark-bib-plugin";
 import shikiTheme from "./src/styles/code-theme.shiki.json";
 import mdx from "@astrojs/mdx";
 import svelte from "@astrojs/svelte";
@@ -5,6 +6,7 @@ import remarkA11yEmoji from "@fec/remark-a11y-emoji";
 import { defineConfig } from "astro/config";
 import rehypeMathJax from "rehype-mathjax/chtml";
 import rehypeSlug from "rehype-slug";
+import remarkDirective from "remark-directive";
 import remarkGemoji from "remark-gemoji";
 import remarkMath from "remark-math";
 import remarkSmartypants from "remark-smartypants";
@@ -58,6 +60,9 @@ export default defineConfig({
 
 		// Remark plugins. These run before the markdown is compiled to HTML.
 		remarkPlugins: [
+			// Add directives to markdown.
+			remarkDirective,
+
 			// Adds math support to markdown.
 			remarkMath,
 
@@ -77,7 +82,10 @@ export default defineConfig({
 			remarkGemoji,
 
 			// Make emoji accessable
-			remarkA11yEmoji
+			remarkA11yEmoji,
+
+			// Add bibliography support
+			remarkBib
 		],
 
 		// Allow smartypants and GFM
