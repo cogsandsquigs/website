@@ -12,6 +12,8 @@ series: math problems
 
 Taking a brief respite from my hiatus, here's a nice solution to the 2023 USAMO problem 2 that I came up with:
 
+(Note: this solution was pointed out to me to be flawed. However, I'm still keeping it up here because, well, not everything can be a winner, right?)
+
 ## Problem
 
 _Let $\mathbb{R}^{+}$ be the set of positive real numbers. Find all functions $f:\mathbb{R}^{+}\rightarrow\mathbb{R}^{+}$ such that, for all $x, y \in \mathbb{R}^{+}$,_
@@ -45,10 +47,10 @@ and then take the derivative:
 
 $$
 \begin{aligned}
-	\dfrac{\mathrm{d}f}{\mathrm{d}y}
-	&= \dfrac{\mathrm{d}f}{\mathrm{d}y}\left[f(y + f(1)) - 2\right] \\
-	&= \dfrac{\mathrm{d}f}{\mathrm{d}y}\left[f(y + f(1))\right] - \dfrac{\mathrm{d}f}{\mathrm{d}y}\left[2\right] \\
-	&= f'(y + f(1))\cdot\dfrac{\mathrm{d}f}{\mathrm{d}y}\left[y + f(1)\right] \\
+	\dv{f}{y}
+	&= \dv{f}{y}\left[f(y + f(1)) - 2\right] \\
+	&= \dv{f}{y}\left[f(y + f(1))\right] - \dv{f}{y}\left[2\right] \\
+	&= f'(y + f(1))\cdot\dv{f}{y}\left[y + f(1)\right] \\
 	&= f'(y + f(1))\cdot(1)\\
 	f'(y) &= f'(y + f(1))\\
 \end{aligned}

@@ -1,6 +1,7 @@
 import shikiTheme from "./src/styles/code-theme.shiki.json";
 import mdx from "@astrojs/mdx";
 import svelte from "@astrojs/svelte";
+import remarkA11yEmoji from "@fec/remark-a11y-emoji";
 import { defineConfig } from "astro/config";
 import rehypeMathJax from "rehype-mathjax/chtml";
 import rehypeSlug from "rehype-slug";
@@ -73,7 +74,10 @@ export default defineConfig({
 			],
 
 			// Support emoji shortcodes
-			remarkGemoji
+			remarkGemoji,
+
+			// Make emoji accessable
+			remarkA11yEmoji
 		],
 
 		// Allow smartypants and GFM
@@ -97,7 +101,14 @@ export default defineConfig({
 					// TeX options.
 					tex: {
 						// extensions to use
-						packages: { "[+]": ["physics"] },
+						packages: {
+							"[+]": [
+								// Stuff like `align` and `aligned`
+								"ams",
+								// Derivatives, curl, divergence, jacobians, etc.
+								"physics"
+							]
+						},
 
 						// start/end delimiter pairs for in-line math
 						inlineMath: [
@@ -109,27 +120,7 @@ export default defineConfig({
 						displayMath: [
 							["$$", "$$"],
 							["\\[", "\\]"]
-						],
-
-						// process \begin{xxx}...\end{xxx} outside math mode
-						processEnvironments: true,
-
-						// use \$ to produce a literal dollar sign
-						processEscapes: true,
-
-						// Macros for mathjax
-						macros: {
-							"\\E": "\\mathbb{E}",
-							"\\C": "\\mathbb{C}",
-							"\\R": "\\mathbb{R}",
-							"\\N": "\\mathbb{N}",
-							"\\Q": "\\mathbb{Q}",
-							"\\bigO": "\\mathcal{O}",
-							"\\abs": "|#1|",
-							"\\set": "\\{ #1 \\}",
-							"\\indep": "{\\perp\\mkern-9.5mu\\perp}",
-							"\\nindep": "{\\not\\!\\perp\\!\\!\\!\\perp}"
-						}
+						]
 					}
 				}
 			]

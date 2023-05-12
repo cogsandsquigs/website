@@ -1,0 +1,7 @@
+// Settings for MathJax.
+
+// Increase the font size, because the default `prose-base` is too small to read well. This uses
+// KaTeX's 1.21x times increase in font size.
+.MathJax {
+	font-size: 1.21em;
+}

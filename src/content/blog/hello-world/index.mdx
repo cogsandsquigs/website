@@ -9,6 +9,7 @@ title: Hello World!
 
 import Counter from "./Counter.svelte";
 import CounterDisplay from "./CounterDisplay.svelte";
+import PersistentCounter from "./PersistentCounter.svelte";
 
 Hi! This is my testing page. What does that mean? well, it means this is where all my website features are tested.
 
@@ -37,7 +38,18 @@ $$
 \displaystyle \zeta (s)=\sum _{n=1}^{\infty }{\frac {1}{n^{s}}}={\frac {1}{1^{s}}}+{\frac {1}{2^{s}}}+{\frac {1}{3^{s}}}+\cdots
 $$
 
-(p.s.: Did you know that this $\LaTeX$ is rendered with [$\KaTeX$](https://katex.org/)? pretty cool, right?)
+(p.s.: Did you know that this $\LaTeX$ is rendered with [MathJax](https://www.mathjax.org/)? pretty cool, right?)
+
+Here's some more math, using the $\LaTeX$ [physics package](https://ctan.org/pkg/physics?lang=en). Specifically, these are four new calculus theorems you learn in Calculus III:
+
+$$
+\begin{aligned}
+	\int_a^b\grad f\cdot\dd{\vec r} &= f(\vec{r}(b))-f(\vec{r}(a))\\
+	\oint_C \vec F\cdot\dd{\vec r} &= \iint_R\pdv{Q}{x}-\pdv{P}{y}\,\dd A\\
+	\oint_C\vec F\cdot\dd{\vec r} &= \iint_S\curl\vec F\cdot\dd{\vec S}\\
+	\iint_S\vec F\cdot\dd{\vec S} &= \iiint_E\div\vec F\,\dd V
+\end{aligned}
+$$
 
 ## Dynamic content with MDX
 
@@ -47,6 +59,12 @@ Below, click the button to update the counter.
 
 <div class="text-center">
 	<Counter client:idle />
+</div>
+
+This counter stores your clicks in `localStorage`, so they persist on page reloads!
+
+<div class="text-center">
+	<PersistentCounter client:idle />
 </div>
 
 Note that we can _share state_ between components using stores, like [nanostores](https://github.com/nanostores/nanostores), or by using plain Svelte stores.
