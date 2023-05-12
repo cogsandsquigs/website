@@ -2,7 +2,7 @@ import shikiTheme from "./src/styles/code-theme.shiki.json";
 import mdx from "@astrojs/mdx";
 import svelte from "@astrojs/svelte";
 import { defineConfig } from "astro/config";
-import rehypeKatex from "rehype-katex";
+import rehypeMathJax from "rehype-mathjax/chtml";
 import rehypeSlug from "rehype-slug";
 import remarkGemoji from "remark-gemoji";
 import remarkMath from "remark-math";
@@ -85,24 +85,51 @@ export default defineConfig({
 			// TODO: make link dissapear (maybe except on hover?)
 			// [rehypeAutolinkHeadings, { behavior: "wrap" }],
 
-			// Renders math with KaTeX.
+			// Renders math with MathJax.
 			[
-				rehypeKatex,
+				rehypeMathJax,
 				{
-					// ... other Katex Options
-					macros: {
-						"\\E": "\\mathbb{E}",
-						"\\C": "\\mathbb{C}",
-						"\\R": "\\mathbb{R}",
-						"\\N": "\\mathbb{N}",
-						"\\Q": "\\mathbb{Q}",
-						"\\bigO": "\\mathcal{O}",
-						"\\abs": "|#1|",
-						"\\set": "\\{ #1 \\}",
-						"\\indep": "{\\perp\\mkern-9.5mu\\perp}",
-						"\\nindep": "{\\not\\!\\perp\\!\\!\\!\\perp}",
-						"\\latex": "\\LaTeX",
-						"\\katex": "\\KaTeX"
+					// CHTML options.
+					chtml: {
+						fontURL: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/output/chtml/fonts/woff-v2"
+					},
+
+					// TeX options.
+					tex: {
+						// extensions to use
+						packages: { "[+]": ["physics"] },
+
+						// start/end delimiter pairs for in-line math
+						inlineMath: [
+							["$", "$"],
+							["\\(", "\\)"]
+						],
+
+						// start/end delimiter pairs for display math
+						displayMath: [
+							["$$", "$$"],
+							["\\[", "\\]"]
+						],
+
+						// process \begin{xxx}...\end{xxx} outside math mode
+						processEnvironments: true,
+
+						// use \$ to produce a literal dollar sign
+						processEscapes: true,
+
+						// Macros for mathjax
+						macros: {
+							"\\E": "\\mathbb{E}",
+							"\\C": "\\mathbb{C}",
+							"\\R": "\\mathbb{R}",
+							"\\N": "\\mathbb{N}",
+							"\\Q": "\\mathbb{Q}",
+							"\\bigO": "\\mathcal{O}",
+							"\\abs": "|#1|",
+							"\\set": "\\{ #1 \\}",
+							"\\indep": "{\\perp\\mkern-9.5mu\\perp}",
+							"\\nindep": "{\\not\\!\\perp\\!\\!\\!\\perp}"
+						}
 					}
 				}
 			]

@@ -22,7 +22,7 @@
 		"nanostores": "^0.8.1",
 		"postcss": "^8.4.23",
 		"rehype-autolink-headings": "^6.1.1",
-		"rehype-katex": "^6.0.3",
+		"rehype-mathjax": "^4.0.2",
 		"rehype-slug": "^5.1.0",
 		"remark-gemoji": "^7.0.1",
 		"remark-math": "^5.1.1",

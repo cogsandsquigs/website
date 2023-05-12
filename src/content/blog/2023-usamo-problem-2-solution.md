@@ -1,6 +1,6 @@
 ---
 date: 2023-04-07T15:45:16.000Z
-description: 'With some algebra and just a touch of calculus, it is conquered.'
+description: "With some algebra and just a touch of calculus, it is conquered."
 tags:
   - puzzle
   - calculus
@@ -14,11 +14,11 @@ Taking a brief respite from my hiatus, here's a nice solution to the 2023 USAMO 
 
 ## Problem
 
-*Let $\mathbb{R}^{+}$ be the set of positive real numbers. Find all functions $f:\mathbb{R}^{+}\rightarrow\mathbb{R}^{+}$ such that, for all $x, y \in \mathbb{R}^{+}$,*
+_Let $\mathbb{R}^{+}$ be the set of positive real numbers. Find all functions $f:\mathbb{R}^{+}\rightarrow\mathbb{R}^{+}$ such that, for all $x, y \in \mathbb{R}^{+}$,_
 
 $$
 \begin{aligned}
-f(xy + f(x)) = xf(y) + 2
+	f(xy + f(x)) = xf(y) + 2
 \end{aligned}
 $$
 
@@ -27,22 +27,17 @@ $$
 First, let us plug in some special points; specifically, plugging in $x=0$ and $x=1$, respectively:
 
 $$
-\begin{equation}
-f(f(0)) = 2 \\
-\end{equation}
-$$
-
-$$
-\begin{equation}
-f(y + f(1)) = f(y) + 2
-\end{equation}
+\begin{align}
+	f(f(0)) = 2 \\
+	f(y + f(1)) = f(y) + 2
+\end{align}
 $$
 
 Next, let us find the derivative of this function. First, with (2), we isolate $f(y)$ one one side
 
 $$
 \begin{aligned}
-f(y) = f(y + f(1)) - 2
+	f(y) = f(y + f(1)) - 2
 \end{aligned}
 $$
 
@@ -50,12 +45,12 @@ and then take the derivative:
 
 $$
 \begin{aligned}
-\dfrac{\mathrm{d}f}{\mathrm{d}y}
-&= \dfrac{\mathrm{d}f}{\mathrm{d}y}\left\[f(y + f(1)) - 2\right] \\
-&= \dfrac{\mathrm{d}f}{\mathrm{d}y}\left\[f(y + f(1))\right] - \dfrac{\mathrm{d}f}{\mathrm{d}y}\left\[2\right] \\
-&= f'(y + f(1))\cdot\dfrac{\mathrm{d}f}{\mathrm{d}y}\left\[y + f(1)\right] \\
-&= f'(y + f(1))\cdot(1)\\
-f'(y) &= f'(y + f(1))\\
+	\dfrac{\mathrm{d}f}{\mathrm{d}y}
+	&= \dfrac{\mathrm{d}f}{\mathrm{d}y}\left[f(y + f(1)) - 2\right] \\
+	&= \dfrac{\mathrm{d}f}{\mathrm{d}y}\left[f(y + f(1))\right] - \dfrac{\mathrm{d}f}{\mathrm{d}y}\left[2\right] \\
+	&= f'(y + f(1))\cdot\dfrac{\mathrm{d}f}{\mathrm{d}y}\left[y + f(1)\right] \\
+	&= f'(y + f(1))\cdot(1)\\
+	f'(y) &= f'(y + f(1))\\
 \end{aligned}
 $$
 
@@ -65,11 +60,11 @@ Therefore, the function $f'$ must be a constant, and $f$ must be a linear equati
 
 $$
 \begin{aligned}
-f(xy + f(x)) &= xf(y) + 2 \\
-f &= xf + 2 \\
-f - xf &= 2 \\
-f(1-x) &= 2 \\
-f &= \dfrac{2}{1-x} \\
+	f(xy + f(x)) &= xf(y) + 2 \\
+	f &= xf + 2 \\
+	f - xf &= 2 \\
+	f(1-x) &= 2 \\
+	f &= \dfrac{2}{1-x} \\
 \end{aligned}
 $$
 
@@ -77,7 +72,7 @@ where $f$ is the constant from $f(x)$. As we see, $f$ would depend on $x$, makin
 
 $$
 \begin{aligned}
-f(x) = ax + b
+	f(x) = ax + b
 \end{aligned}
 $$
 
@@ -85,9 +80,9 @@ Via (1), we get the following:
 
 $$
 \begin{aligned}
-f(f(0)) &= 2 \\
-a(a(0) + b) + b &= 2 \\
-ab + b &= 2
+	f(f(0)) &= 2 \\
+	a(a(0) + b) + b &= 2 \\
+	ab + b &= 2
 \end{aligned}
 $$
 
@@ -95,10 +90,10 @@ And via (2),
 
 $$
 \begin{aligned}
-f(y + f(1)) &= f(y) + 2 \\
-a(y + a(1) + b) + b &= ay + b + 2 \\
-ay + a^2 + ab + b &= ay + b + 2 \\
-a^2 + ab &= 2 \\
+	f(y + f(1)) &= f(y) + 2 \\
+	a(y + a(1) + b) + b &= ay + b + 2 \\
+	ay + a^2 + ab + b &= ay + b + 2 \\
+	a^2 + ab &= 2 \\
 \end{aligned}
 $$
 
@@ -106,8 +101,8 @@ Setting these equations equal to each other,
 
 $$
 \begin{aligned}
-ab + b &= a^2 + ab \\
-b &= a^2 \\
+	ab + b &= a^2 + ab \\
+	b &= a^2 \\
 \end{aligned}
 $$
 
@@ -115,8 +110,8 @@ Therefore,
 
 $$
 \begin{aligned}
-ab + b &= 2 \\
-a^3 + a^2 &= 2 \\
+	ab + b &= 2 \\
+	a^3 + a^2 &= 2 \\
 \end{aligned}
 $$
 
@@ -124,9 +119,9 @@ There are three solutions to this equation: $a = 1$, $a = -1 + i$, and $a = -1 -
 
 $$
 \begin{aligned}
-f(x) &= x + 1 \\
-f(x) &= x(-1 + i) - 2i \\
-f(x) &= x(-1 - i) + 2i \\
+	f(x) &= x + 1 \\
+	f(x) &= x(-1 + i) - 2i \\
+	f(x) &= x(-1 - i) + 2i \\
 \end{aligned}
 $$
 

@@ -1,5 +1,5 @@
 @use "fonts";
-@use "katex";
+// @use "katex";
 @use "forms";
 @use "preflight";
 
@@ -18,15 +18,6 @@ body {
 
 // Styles for the <hr> element - a dash through the page.
 hr {
-	// border: none;
-	// height: 2px;
-	// background: linear-gradient(
-	// 	to right,
-	// 	theme("colors.accent"),
-	// 	theme("colors.secondary"),
-	// 	theme("colors.primary")
-	// );
-
 	border: solid;
 	border-width: 1px;
 	border-color: theme("colors.base-light") !important;

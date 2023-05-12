@@ -11,12 +11,18 @@ export default defineConfig({
 	token, // Get this from tina.io
 
 	build: {
+		// This is the page that Tina will render for editing. This page will be at `<url>/admin`,
+		// so that's where to go for edits :3.
 		outputFolder: "admin",
-		publicFolder: "src/assets"
+
+		// This is the path to the public folder, so that Tina knows to put the admin files there.
+		publicFolder: "public"
 	},
 
 	media: {
 		tina: {
+			// Different from the other `publicFolder`, as this is the path to the assets folder in
+			// Astro, not the public folder in the Tina build.
 			publicFolder: "src/assets",
 			mediaRoot: ""
 		}
