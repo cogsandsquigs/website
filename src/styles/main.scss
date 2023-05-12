@@ -1,7 +1,7 @@
-@use "fonts.scss";
-@use "katex.scss";
-@use "forms.scss";
-@use "preflight.scss";
+@use "fonts";
+@use "katex";
+@use "forms";
+@use "preflight";
 
 @tailwind base;
 @tailwind components;

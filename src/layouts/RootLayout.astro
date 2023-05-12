@@ -26,13 +26,18 @@ const title = prop_title != undefined ? `${config.title} | ` + prop_title : conf
 		<!-- TODO: add more head stuff! -->
 	</head>
 
+	<!--
+		Note that all the `prose-a` tags mimic the styles in `preflight.scss`. This is not a mistake.
+		If this was not the case, every `prose`-d link would not be underlined properly otherwise. 
+		Therefore, this ugliness must ensue. Sorry :(
+	-->
 	<body
-		class="mx-auto w-full min-h-screen max-w-[95%] md:max-w-prose prose prose-invert prose-a:no-underline bg-base"
+		class="mx-auto w-full min-h-screen max-w-[95%] md:max-w-prose prose prose-invert prose-a:decoration-wavy prose-a:decoration-primary bg-base"
 	>
 		<div style="display: contents" class="flex flex-col items-center min-h-screen">
 			<Header />
 
-			<hr class="my-4 w-full" />
+			<hr class="w-full my-4" />
 
 			<div class="flex-grow">
 				<slot />

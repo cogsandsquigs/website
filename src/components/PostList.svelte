@@ -9,7 +9,7 @@
 <ul class="p-0 m-0 list-none not-prose">
 	{#each posts as post, index}
 		{#if index > 0}
-			<hr class="my-10 mx-10" />
+			<hr class="mx-10 my-10" />
 		{/if}
 
 		<li>
@@ -29,7 +29,7 @@
 				</p>
 
 				<a href={`/blog/${post.slug}`}>
-					{config.languages.en.read_more ?? "Read more"} ->
+					{config.languages.en.read_more ?? "Read more"} -&gt;
 				</a>
 			</div>
 		</li>

@@ -2,6 +2,6 @@
 	import Nav from "$components/Nav.svelte";
 </script>
 
-<header class="mt-4 w-full not-prose">
+<header class="w-full mt-4 not-prose">
 	<Nav />
 </header>

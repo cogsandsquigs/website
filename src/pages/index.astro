@@ -21,4 +21,6 @@ const recent_posts = await getBlogPosts().then((posts) => posts.slice(0, 3));
 	<Content />
 
 	<PostList posts={recent_posts} />
+
+	<a href="/blog">{config.languages.en.menu_more ?? "See all posts"} -&gt;</a>
 </RootLayout>
