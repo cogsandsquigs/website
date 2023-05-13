@@ -76,3 +76,41 @@ Note that we can _share state_ between components using stores, like [nanostores
 </div>
 
 :point_up: This is a component sharing state through a nanostore!
+
+## Bibliographies
+
+I made my own plugin to support bibliographies in my blog posts! It uses `remark-directive` to parse the directives, and `citation-js` to parse the citations.
+
+Here's an in-text citation :cite[knuth:1984] wow!
+
+Another one! :cite[lesk:1977]
+
+### Bibliography
+
+:::bib
+
+```bibtex
+@article{knuth:1984,
+title={Literate Programming},
+author={Donald E. Knuth},
+journal={The Computer Journal},
+volume={27},
+number={2},
+pages={97--111},
+year={1984},
+publisher={Oxford University Press}
+}
+
+@inproceedings{lesk:1977,
+title={Computer Typesetting of Technical Journals on {UNIX}},
+author={Michael Lesk and Brian Kernighan},
+booktitle={Proceedings of American Federation of
+Information Processing Societies: 1977
+National Computer Conference},
+pages={879--888},
+year={1977},
+address={Dallas, Texas}
+}
+```
+
+:::

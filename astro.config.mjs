@@ -1,7 +1,6 @@
-import remarkBib from "./remark-bib-plugin";
-import shikiTheme from "./src/styles/code-theme.shiki.json";
 import mdx from "@astrojs/mdx";
 import svelte from "@astrojs/svelte";
+import remarkBibliography from "@cogsandsquigs/remark-bibliography";
 import remarkA11yEmoji from "@fec/remark-a11y-emoji";
 import { defineConfig } from "astro/config";
 import rehypeMathJax from "rehype-mathjax/chtml";
@@ -10,6 +9,7 @@ import remarkDirective from "remark-directive";
 import remarkGemoji from "remark-gemoji";
 import remarkMath from "remark-math";
 import remarkSmartypants from "remark-smartypants";
+import shikiTheme from "./src/styles/code-theme.shiki.json";
 
 // https://astro.build/config
 export default defineConfig({
@@ -63,6 +63,9 @@ export default defineConfig({
 			// Add directives to markdown.
 			remarkDirective,
 
+			// Add bibliography support
+			remarkBibliography,
+
 			// Adds math support to markdown.
 			remarkMath,
 
@@ -82,10 +85,7 @@ export default defineConfig({
 			remarkGemoji,
 
 			// Make emoji accessable
-			remarkA11yEmoji,
-
-			// Add bibliography support
-			remarkBib
+			remarkA11yEmoji
 		],
 
 		// Allow smartypants and GFM
