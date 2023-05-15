@@ -15,17 +15,4 @@ import RootLayout from "$layouts/RootLayout.astro";
 	</div>
 
 	<p class="m-0">{resume.basics.summary}</p>
-	<ul class="">
-		{
-			resume.basics.profiles.map((profile) => {
-				return (
-					<p>
-						<a href={profile.url}>
-							{profile.network}: {profile.username}
-						</a>
-					</p>
-				);
-			})
-		}
-	</ul>
 </RootLayout>

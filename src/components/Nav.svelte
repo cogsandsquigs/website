@@ -3,10 +3,6 @@
 </script>
 
 <nav>
-	<div>
-		<a class="text-2xl font-bold no-underline bg-none" href="/">{config.title}</a>
-	</div>
-
 	<ul class="flex p-0 m-0 list-none">
 		{#each config.languages.en.menu.main as nav_item}
 			<li class="mr-6">
