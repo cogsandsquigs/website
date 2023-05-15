@@ -10,7 +10,3 @@ Built with Astro and love <3
 
 - `/tina` holds all the [TinaCMS configuration files](https://tina.io/docs/tina-folder/overview/) for the content in this site.
 - The structure of this repository follows [the standard Astro project structure](https://docs.astro.build/en/core-concepts/project-structure/).
-
-## TODO
-
-- Fix TinaCMS
