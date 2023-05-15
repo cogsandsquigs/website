@@ -2,11 +2,11 @@
 	"basics": {
 		"name": "Ian Pratt",
 		"label": "Programmer",
-		"image": "",
+		"image": "$assets/pfp.png",
 		"email": "ianjdpratt@gmail.com",
 		"phone": "",
 		"url": "https://cogsandsquigs.gq",
-		"summary": "A summary of Ian Pratt...",
+		"summary": "A programmer learning everything I can about Math and CS.",
 		"location": {},
 		"profiles": [
 			{
