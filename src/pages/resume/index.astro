@@ -8,10 +8,24 @@ import RootLayout from "$layouts/RootLayout.astro";
 	<p>This is under construction - thank you for being patient!</p>
 
 	<div class="flex items-baseline space-x-4">
-		<h2 class="">{resume.basics.name}</h2>
+		<h2><a href={resume.basics.url}>{resume.basics.name}</a></h2>
 		<p class="font-bold opacity-75">
 			<a href={`mailto:${resume.basics.email}`}>{resume.basics.email}</a>
 		</p>
 	</div>
+
 	<p class="m-0">{resume.basics.summary}</p>
+	<ul class="">
+		{
+			resume.basics.profiles.map((profile) => {
+				return (
+					<p>
+						<a href={profile.url}>
+							{profile.network}: {profile.username}
+						</a>
+					</p>
+				);
+			})
+		}
+	</ul>
 </RootLayout>
