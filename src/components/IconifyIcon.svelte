@@ -1,4 +1,6 @@
 <script lang="ts">
+	// Code for this came from https://docs.iconify.design/api/svg.html
+
 	/**
 	 * The icon set this icon belongs to.
 	 */
@@ -10,12 +12,12 @@
 	export let name: string;
 
 	/**
-	 * The width of the icon.
+	 * The width of the icon. Numbers without units are treaded as pixel measurements.
 	 */
 	export let width: string | number | undefined = "1em";
 
 	/**
-	 * The height of the icon.
+	 * The height of the icon. Numbers without units are treated as pixel measurements.
 	 */
 	export let height: string | number | undefined = width;
 
