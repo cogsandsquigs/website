@@ -10,3 +10,4 @@ Built with Astro and love <3
 
 - `/tina` holds all the [TinaCMS configuration files](https://tina.io/docs/tina-folder/overview/) for the content in this site.
 - The structure of this repository follows [the standard Astro project structure](https://docs.astro.build/en/core-concepts/project-structure/).
+- `"svgo": "2.8.0"` is required in the `devDependencies` to fix [this issue](https://github.com/natemoo-re/astro-icon/issues/93) with astro-icon.
