@@ -3,7 +3,7 @@
 import PostList from "$components/PostList.svelte";
 import RootLayout from "$layouts/RootLayout.astro";
 import { getBlogPosts } from "$lib/blog_posts";
-import { Icon } from "astro-icon";
+import Icon from "$components/Icon.astro";
 
 // Get the posts!
 const posts = await getBlogPosts();

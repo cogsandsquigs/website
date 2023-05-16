@@ -8,5 +8,22 @@ export const read_string_stream = async (response: Response): Promise<string> =>
 		throw new Error(`The stream at ${response.url} does not exist!`);
 	}
 
-	return null;
+	if (response.body == null) {
+		throw new Error(`There is no body to read the stream from!`);
+	}
+
+	const reader = response.body.getReader();
+	let read_string = "";
+
+	while (true) {
+		const { done, value } = await reader.read();
+
+		// Process current chunk
+		read_string += new TextDecoder().decode(value);
+
+		if (done) {
+			// Exit reader
+			return read_string;
+		}
+	}
 };

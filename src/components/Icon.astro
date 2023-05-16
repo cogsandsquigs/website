@@ -15,27 +15,34 @@ interface Props {
 	name: string;
 
 	/**
+	 * The width of the icon. If it is a number, it's interpreted as raw pixel measurements.
+	 * @default "1em"
+	 */
+	width?: string | number | undefined;
+
+	/**
 	 * The classes associated with the icon.
 	 */
 	class?: string;
 }
 
-let { pack, name, ...otherProps } = Astro.props;
+let { pack, name, width, class: classes, ...otherProps } = Astro.props;
 
-let requestURL = `https://api.iconify.design/${pack}/${name}.svg`;
-let response = await fetch(requestURL);
-
-if (response.status == 404) {
-	throw new Error(`The icon ${pack}:${name} does not exist!`);
-}
-
-let svgHTML = read_string_stream(response);
-
-console.log(svgHTML);
-
-if (import.meta.env.MODE === "production") {
-	throw new Error("Not ready for production yet!");
-}
+// Get the raw inner html of the svg.
+let svgHTML = await fetch(`https://api.iconify.design/${pack}/${name}.svg`)
+	// Read the SVG.
+	.then((response) => read_string_stream(response))
+	// Get all content within the SVG.
+	.then((svg) => svg.match(/(?<=\<svg.+?\>).+?(?=\<\/svg\>)/g))
+	// Touch-ups before releasing into the wild.
+	.then((innerHTML) => (innerHTML ? innerHTML[0] : ""));
 ---
 
-<svg {...otherProps} set:html="Test!" />
+<svg
+	iconify-icon={`${pack}:${name}`}
+	class={classes}
+	viewBox="0 0 24 24"
+	width={width ? width : "1em"}
+	set:html={svgHTML}
+	{...otherProps}
+/>
