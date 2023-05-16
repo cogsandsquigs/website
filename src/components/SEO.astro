@@ -1,10 +1,10 @@
-<script lang="ts">
-	import config from "$config";
+---
+import config from "$config";
 
-	export let title: string = config.title;
-	export let description: string = config.description;
-	export let path: string = "/";
-</script>
+export let title: string = config.title;
+export let description: string = config.description;
+export let path: string = "/";
+---
 
 <!-- Meta tag for description -->
 <meta name="description" content={description} />

@@ -7,7 +7,7 @@ export default {
 	site_url: "https://cogsandsquigs.gq", // Site URL for generating RSS feed.
 
 	// Uses a scheme to replace {author} and {year} with the values from the config object in
-	// `$components/Footer.svelte`
+	// `$components/Footer.astro`
 	copyright: "© {author} 2019-{year}",
 
 	// i18n config

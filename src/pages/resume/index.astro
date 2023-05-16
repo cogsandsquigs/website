@@ -1,18 +1,12 @@
 ---
 import resume from "$content/resume.json";
 import RootLayout from "$layouts/RootLayout.astro";
+import ResumeJSON from "$components/ResumeJSON.svelte";
 ---
 
 <RootLayout>
 	<h1>Resume</h1>
 	<p>This is under construction - thank you for being patient!</p>
 
-	<div class="flex items-baseline space-x-4">
-		<h2><a href={resume.basics.url}>{resume.basics.name}</a></h2>
-		<p class="font-bold opacity-75">
-			<a href={`mailto:${resume.basics.email}`}>{resume.basics.email}</a>
-		</p>
-	</div>
-
-	<p class="m-0">{resume.basics.summary}</p>
+	<ResumeJSON {resume} />
 </RootLayout>

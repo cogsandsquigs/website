@@ -1,0 +1,26 @@
+@mixin pulse($property) {
+	$name: inline-#{unique-id()};
+
+	// Animation for pulsating color. Using a mixin so the property to change can be customized.
+	@keyframes #{$name} {
+		0% {
+			#{$property}: theme("colors.primary");
+		}
+
+		33% {
+			#{$property}: theme("colors.accent");
+		}
+
+		66% {
+			#{$property}: theme("colors.secondary");
+		}
+
+		100% {
+			#{$property}: theme("colors.primary");
+		}
+	}
+
+	animation-name: #{$name};
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+}

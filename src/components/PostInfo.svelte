@@ -29,7 +29,7 @@
 		<p class="m-0">
 			Tags:
 			{#each post.data.tags as tag}
-				<a class="font-bold mr-3" href={`/tags/${tag}`}>#{tag}</a>
+				<a class="mr-3 font-bold" href={`/tags/${tag}`}>#{tag}</a>
 			{/each}
 		</p>
 	{/if}

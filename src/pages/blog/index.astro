@@ -3,13 +3,20 @@
 import PostList from "$components/PostList.svelte";
 import RootLayout from "$layouts/RootLayout.astro";
 import { getBlogPosts } from "$lib/blog_posts";
+import { Icon } from "astro-icon";
 
 // Get the posts!
 const posts = await getBlogPosts();
 ---
 
 <RootLayout title="Blog">
-	<h1>Blog</h1>
+	<h1 class="flex items-center space-x-2">
+		<span>Blog</span>
+
+		<a href="/blog/rss.xml">
+			<Icon pack="mdi" name="rss" />
+		</a>
+	</h1>
 
 	<PostList {posts} />
 </RootLayout>

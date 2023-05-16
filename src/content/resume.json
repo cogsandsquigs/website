@@ -18,35 +18,45 @@
 	},
 	"work": [
 		{
-			"name": "The Windy City Lab",
+			"name": "Windy City Lab",
 			"position": "Intern",
 			"url": "https://thewcl.com",
 			"startDate": "2023-06-08",
 			"endDate": "2023-08-19",
 			"summary": "Second summer internship at the WCL.",
-			"highlights": ["TA-ed the CTD IoT Engineering Course"]
+			"highlights": ["TA-ed the CTD IoT Engineering Course."]
 		},
 		{
-			"name": "The Windy City Lab",
+			"name": "Windy City Lab",
 			"position": "Intern",
 			"url": "https://thewcl.com",
 			"startDate": "2022-06-20",
 			"endDate": "2022-08-19",
 			"summary": "Summer internship at the WCL: worked on multiple projects, both internal and for clients.",
-			"highlights": ["Worked on the Mayo Clinic EHealth project."]
+			"highlights": [
+				"Worked on the Mayo Clinic EHealth project.",
+				"Worked on the interal Loop-Tracks project."
+			]
 		}
 	],
 	"volunteer": [],
 	"education": [
 		{
-			"institution": "High School",
+			"institution": "Lane Tech HS",
 			"url": "https://lanetech.org/",
 			"area": "General Education",
 			"studyType": "GED",
 			"startDate": "2021-08-08",
 			"endDate": "2024-08-05",
-			"score": "5.09",
-			"courses": []
+			"score": "5.1",
+			"courses": [
+				"Honors Cybersecurity",
+				"Calculus III",
+				"Honors Microarchitecture",
+				"AP Calculus BC",
+				"AP Computer Science A",
+				"Honors Web Development"
+			]
 		}
 	],
 	"awards": [],
@@ -56,7 +66,7 @@
 		{
 			"name": "IoT",
 			"level": "Beginner",
-			"keywords": ["C++", "Particle"]
+			"keywords": ["C", "C++", "Particle"]
 		},
 		{
 			"name": "Web Development",

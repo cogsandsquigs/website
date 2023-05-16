@@ -1,0 +1,14 @@
+---
+import Nav from "$components/Nav.svelte";
+import Socials from "$components/Socials.astro";
+import config from "$config";
+---
+
+<header class="mt-4 w-full not-prose">
+	<a class="text-2xl font-bold no-underline bg-none" href="/">{config.title}</a>
+
+	<div class="flex justify-between">
+		<Nav />
+		<Socials />
+	</div>
+</header>

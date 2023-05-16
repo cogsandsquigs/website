@@ -1,8 +1,8 @@
 ---
-import Favicons from "$components/Favicons.svelte";
-import Footer from "$components/Footer.svelte";
-import Header from "$components/Header.svelte";
-import SEO from "$components/SEO.svelte";
+import Favicons from "$components/Favicons.astro";
+import Footer from "$components/Footer.astro";
+import Header from "$components/Header.astro";
+import SEO from "$components/SEO.astro";
 import config from "$config";
 import "$styles/main.scss";
 
@@ -37,7 +37,7 @@ const title = prop_title != undefined ? `${config.title} | ` + prop_title : conf
 		<div style="display: contents" class="flex flex-col items-center min-h-screen">
 			<Header />
 
-			<hr class="w-full my-4" />
+			<hr class="my-4 w-full" />
 
 			<div class="flex-grow">
 				<slot />

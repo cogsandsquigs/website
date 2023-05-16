@@ -1,3 +1,5 @@
+@use "pulse" as *;
+
 // Preflight for TailwindCSS
 @layer base {
 	// Have links that change color of wavy underline. This is required because not
@@ -10,28 +12,23 @@
 
 		// This part is for every link, `prose`-d or otherwise: it makes the underline change color on hover.
 		&:hover {
-			animation-name: link-color-cycle;
-			animation-duration: 1.5s;
-			animation-iteration-count: infinite;
+			@include pulse(text-decoration-color);
 		}
 	}
-}
 
-// Animation for link underlines
-@keyframes link-color-cycle {
-	0% {
-		text-decoration-color: theme("colors.primary");
-	}
+	// Have icons pulse on hover.
+	a > svg {
+		// The width (and height, because square) of the icon.
+		width: 1.1em;
+		height: auto;
 
-	33% {
-		text-decoration-color: theme("colors.accent");
-	}
+		// The default text color for the website - prose-invert for prose-gray
+		fill: theme("colors.gray[300]");
 
-	66% {
-		text-decoration-color: theme("colors.secondary");
-	}
-
-	100% {
-		text-decoration-color: theme("colors.primary");
+		// Pulses the color on hover. Selects each element below, otherwise it won't work.
+		// NOTE: This will break for dual-tone icons (obviously).
+		&:hover > * {
+			@include pulse(fill);
+		}
 	}
 }
