@@ -4,12 +4,11 @@ import config from "$config";
 import RootLayout from "$layouts/RootLayout.astro";
 import { getBlogPosts } from "$lib/blog_posts";
 import { getEntryBySlug } from "astro:content";
+import Icon from "$components/Icon.astro";
 
 // Get the index page markdown file.
 const index_page = await getEntryBySlug("pages", "index");
 const { Content } = await index_page.render();
-
-export const test = "asdf";
 
 // Get the 3 most recent posts.
 const recent_posts = await getBlogPosts().then((posts) => posts.slice(0, 3));
@@ -17,6 +16,7 @@ const recent_posts = await getBlogPosts().then((posts) => posts.slice(0, 3));
 
 <RootLayout>
 	<h1>{config.title}</h1>
+	<Icon pack="mdi" name="github" class="bg-red" />
 
 	<Content />
 

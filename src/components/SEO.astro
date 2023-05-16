@@ -1,9 +1,25 @@
 ---
 import config from "$config";
 
-export let title: string = config.title;
-export let description: string = config.description;
-export let path: string = "/";
+// The props for for the SEO object
+interface Props {
+	/**
+	 * The title for the page.
+	 */
+	title: string;
+
+	/**
+	 * The description of the page.
+	 */
+	description: string;
+
+	/**
+	 * The path to the page.
+	 */
+	path: string;
+}
+
+let { title, description, path } = Astro.props;
 ---
 
 <!-- Meta tag for description -->

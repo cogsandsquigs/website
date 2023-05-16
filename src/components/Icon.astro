@@ -1,0 +1,41 @@
+---
+//This component renders Iconify icons, given their pack and the icon's name.
+import { read_string_stream } from "$lib/read_stream";
+
+// The props for the component.
+interface Props {
+	/**
+	 * The icon pack that the icon belongs to.
+	 */
+	pack: string;
+
+	/**
+	 * The name of the icon.
+	 */
+	name: string;
+
+	/**
+	 * The classes associated with the icon.
+	 */
+	class?: string;
+}
+
+let { pack, name, ...otherProps } = Astro.props;
+
+let requestURL = `https://api.iconify.design/${pack}/${name}.svg`;
+let response = await fetch(requestURL);
+
+if (response.status == 404) {
+	throw new Error(`The icon ${pack}:${name} does not exist!`);
+}
+
+let svgHTML = read_string_stream(response);
+
+console.log(svgHTML);
+
+if (import.meta.env.MODE === "production") {
+	throw new Error("Not ready for production yet!");
+}
+---
+
+<svg {...otherProps} set:html="Test!" />

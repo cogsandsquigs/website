@@ -6,9 +6,23 @@ import SEO from "$components/SEO.astro";
 import config from "$config";
 import "$styles/main.scss";
 
+interface Props {
+	/**
+	 * The title of the page.
+	 */
+	title?: string;
+
+	/**
+	 * The description of the page.
+	 */
+	description?: string;
+}
+
 // Get configuration
-let { title: prop_title, description } = Astro.props;
-const title = prop_title != undefined ? `${config.title} | ` + prop_title : config.title;
+let { title, description } = Astro.props;
+
+title = title != undefined ? `${config.title} | ` + title : config.title;
+description = description ? description : config.description;
 ---
 
 <html lang="en">
