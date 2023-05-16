@@ -1,6 +1,5 @@
 ---
 //This component renders Iconify icons, given their pack and the icon's name.
-import { read_string_stream } from "$lib/read_stream";
 
 // The props for the component.
 interface Props {
@@ -15,34 +14,68 @@ interface Props {
 	name: string;
 
 	/**
-	 * The width of the icon. If it is a number, it's interpreted as raw pixel measurements.
-	 * @default "1em"
+	 * Alt text for the icon. Accessability FTW!
 	 */
-	width?: string | number | undefined;
+	alt: string;
 
 	/**
-	 * The classes associated with the icon.
+	 * The width of the icon. If it is a number, it's interpreted as raw pixel measurements.
+	 * If the other value is set, defaults to that value. Otherwise defaults to `"1em"`.
+	 * @default "1em"
 	 */
-	class?: string;
+	width?: string | number;
+
+	/**
+	 * The height of the icon. If it is a number, it's interpreted as raw pixel measurements.
+	 * If the other value is set, defaults to that value. Otherwise defaults to `"1em"`.
+	 * @default "1em"
+	 */
+	height?: string | number;
 }
 
-let { pack, name, width, class: classes, ...otherProps } = Astro.props;
+let { pack, name, alt, width, height, ...attributes } = Astro.props;
 
-// Get the raw inner html of the svg.
-let svgHTML = await fetch(`https://api.iconify.design/${pack}/${name}.svg`)
-	// Read the SVG.
-	.then((response) => read_string_stream(response))
-	// Get all content within the SVG.
-	.then((svg) => svg.match(/(?<=\<svg.+?\>).+?(?=\<\/svg\>)/g))
-	// Touch-ups before releasing into the wild.
-	.then((innerHTML) => (innerHTML ? innerHTML[0] : ""));
+// If width and height are both undefined, set both to `1em`.
+if (!width && !height) {
+	width = "1em";
+	height = "1em";
+}
+// If only height is undefined, set it to width.
+else if (!height) {
+	height = width;
+}
+// If only width is undefined, set it to height.
+else if (!width) {
+	width = height;
+}
+
+// Get the icon data associated with the icon in IconifyJSON format.
+let iconData = await fetch(`https://api.iconify.design/${pack}.json?icons=${name}`)
+	// Read the icon data JSON.
+	.then((response) => response.json());
+
+// A unique ID to reference the title and description by. Need this so that screen readers know
+// exactly which element to reference for descriptions.
+// Maybe a bit excessive?
+let uniqueID = `iconify-icon-alt-${pack}:${name}-${Math.round(Math.random() * 1000000)}`;
+
+// The inner HTML of the svg.
+let innerHTML =
+	// Add accessability features: an icon title, which is the name of the icon.
+	`<title id="${uniqueID}-title">${name} icon</title>` +
+	// An icon description, which is provided by the alt text.
+	`<desc id="${uniqueID}-desc">${alt}</desc>` +
+	// Finally, the body
+	iconData.icons[name].body;
 ---
 
 <svg
+	{...attributes}
 	iconify-icon={`${pack}:${name}`}
-	class={classes}
-	viewBox="0 0 24 24"
-	width={width ? width : "1em"}
-	set:html={svgHTML}
-	{...otherProps}
+	role="img"
+	aria-labelledby={`${uniqueID}-title ${uniqueID}-desc`}
+	viewBox={`0 0 ${iconData.width} ${iconData.height}`}
+	width={width}
+	height={height}
+	set:html={innerHTML}
 />
