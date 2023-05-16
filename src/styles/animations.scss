@@ -23,4 +23,9 @@
 	animation-name: #{$name};
 	animation-duration: 1.5s;
 	animation-iteration-count: infinite;
+
+	@media (prefers-reduced-motion: reduced) {
+		animation-duration: 0s;
+		animation-iteration-count: 0;
+	}
 }

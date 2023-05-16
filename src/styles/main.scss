@@ -1,8 +1,8 @@
 @use "fonts";
 @use "mathjax";
 @use "forms";
-@use "preflight";
 @use "bibliographies";
+@use "animations" as *;
 
 @tailwind base;
 @tailwind components;
@@ -15,6 +15,9 @@ body {
 	text-rendering: optimizeLegibility;
 	font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
 	font-variant-ligatures: contextual;
+
+	// Text color woohoo
+	color: theme("colors.text");
 }
 
 // Styles for the <hr> element - a dash through the page.
@@ -22,4 +25,34 @@ hr {
 	border: solid;
 	border-width: 1px;
 	border-color: theme("colors.base-light") !important;
+}
+
+// Have links that change color of wavy underline. This is required because not
+// all links are `prose`-d by tailwind (e.g. in the header, post lists, etc.).
+a {
+	// This part is for any link that is not prose.
+	font-weight: bold;
+	text-decoration: underline wavy;
+	text-decoration-color: theme("colors.primary");
+
+	// This part is for every link, `prose`-d or otherwise: it makes the underline change color on hover.
+	&:hover {
+		@include pulse(text-decoration-color);
+	}
+}
+
+// Have icons pulse on hover.
+a > svg {
+	// The width (and height, because square) of the icon.
+	width: 1.1em;
+	height: auto;
+
+	// The default text color for the website - prose-invert for prose-gray
+	fill: theme("colors.gray[300]");
+
+	// Pulses the color on hover. Selects each element below, otherwise it won't work.
+	// NOTE: This will break for dual-tone icons (obviously).
+	&:hover > * {
+		@include pulse(fill);
+	}
 }

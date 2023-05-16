@@ -19,7 +19,13 @@ const config = {
 
 				// A lighter base/background color
 				// TODO: is this really the color I want?
-				"base-light": "#5b5b65"
+				"base-light": "#5b5b65",
+
+				// The text color
+				text: "#d1d5db",
+
+				// A lighter (brighter) text color
+				"text-bright": "#f9fafb"
 			}
 		}
 	},
