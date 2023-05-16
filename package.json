@@ -44,6 +44,7 @@
 		"prettier": "^2.8.8",
 		"prettier-plugin-astro": "^0.8.0",
 		"prettier-plugin-svelte": "^2.10.0",
+		"svgo": "2.8.0",
 		"tinacms": "^1.5.5"
 	}
 }

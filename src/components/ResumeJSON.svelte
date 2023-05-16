@@ -9,8 +9,8 @@
 
 <h2>{resume.basics.name}</h2>
 
-<p class="font-bold opacity-75">
-	<a class="no-underline" href={`mailto:${resume.basics.email}`}>{resume.basics.email}</a>
+<p>
+	Contact: <a class="no-underline" href={`mailto:${resume.basics.email}`}>{resume.basics.email}</a>
 </p>
 
 <p class="m-0">{resume.basics.summary}</p>
@@ -19,7 +19,11 @@
 	<h2 class="mb-0">Work</h2>
 
 	<ul class="pl-0 list-none">
-		{#each resume.work as work}
+		{#each resume.work as work, index}
+			{#if index > 0}
+				<hr class="mx-10 my-10" />
+			{/if}
+
 			<li class="pl-0">
 				<div class="flex items-baseline m-0 space-x-4">
 					<p class="mb-0 font-bold">
@@ -52,7 +56,11 @@
 	<h2 class="mb-0">Work</h2>
 
 	<ul class="pl-0 list-none">
-		{#each resume.volunteer as volunteer}
+		{#each resume.volunteer as volunteer, index}
+			{#if index > 0}
+				<hr class="mx-10 my-10" />
+			{/if}
+
 			<li class="pl-0">
 				<div class="flex items-baseline m-0 space-x-4">
 					<p class="mb-0 font-bold">
@@ -85,7 +93,11 @@
 	<h2 class="mb-0">Education</h2>
 
 	<ul class="pl-0 list-none">
-		{#each resume.education as education}
+		{#each resume.education as education, index}
+			{#if index > 0}
+				<hr class="mx-10 my-10" />
+			{/if}
+
 			<li class="pl-0">
 				<div class="flex items-baseline m-0 space-x-4">
 					<p class="mb-0 font-bold">
