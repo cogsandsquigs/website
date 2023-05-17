@@ -35,14 +35,8 @@ a {
 	text-decoration: underline wavy;
 	text-decoration-color: theme("colors.primary");
 
-	transition-property: font-size;
-	transition-duration: 200ms;
-	transition-timing-function: ease-in-out;
-
 	// This part is for every link, `prose`-d or otherwise: it makes the underline change color on hover.
-	&:hover:not(.no-hover-change) {
-		font-size: 110%;
-
+	&:hover {
 		@include pulse(text-decoration-color);
 	}
 
