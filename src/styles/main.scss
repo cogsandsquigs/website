@@ -40,8 +40,8 @@ a {
 	transition-timing-function: ease-in-out;
 
 	// This part is for every link, `prose`-d or otherwise: it makes the underline change color on hover.
-	&:hover {
-		font-size: 1.1em;
+	&:hover:not(.no-hover-change) {
+		font-size: 110%;
 
 		@include pulse(text-decoration-color);
 	}
