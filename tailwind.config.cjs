@@ -22,10 +22,7 @@ const config = {
 				"base-light": "#5b5b65",
 
 				// The text color
-				text: "#d1d5db",
-
-				// A lighter (brighter) text color
-				"text-bright": "#f9fafb"
+				text: "#d1d5db"
 			}
 		}
 	},
