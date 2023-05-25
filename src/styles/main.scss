@@ -18,6 +18,10 @@ body {
 
 	// Text color woohoo
 	color: theme("colors.text");
+
+	// Set min height as 100dvh, so that the footer is always at the bottom.
+	// Doing this here because tailwind doesn't support `vh` units.
+	min-height: 100dvh;
 }
 
 // Styles for the <hr> element - a dash through the page.
