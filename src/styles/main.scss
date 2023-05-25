@@ -20,7 +20,8 @@ body {
 	color: theme("colors.text");
 
 	// Set min height as 100dvh, so that the footer is always at the bottom.
-	// Doing this here because tailwind doesn't support `vh` units.
+	// Doing this here because tailwind doesn't support `dvh` units, and `dvh`
+	// is superior to `vh` for this case.
 	min-height: 100dvh;
 }
 
