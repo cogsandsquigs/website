@@ -53,7 +53,7 @@
 {/if}
 
 {#if resume.volunteer.length > 0}
-	<h2 class="mb-0">Work</h2>
+	<h2 class="mb-0">Volunteering</h2>
 
 	<ul class="pl-0 list-none">
 		{#each resume.volunteer as volunteer, index}
@@ -128,4 +128,32 @@
 	</ul>
 {/if}
 
-<!-- TODO: Awards, certificates, publications -->
+{#if resume.awards.length > 0}
+	<h2 class="mb-0">Awards</h2>
+
+	<ul class="pl-0 list-none">
+		{#each resume.awards as award, index}
+			{#if index > 0}
+				<hr class="mx-10 my-10" />
+			{/if}
+
+			<li class="pl-0">
+				<div class="flex items-baseline m-0 space-x-4">
+					<p class="mb-0 font-bold opacity-75">{award.title}</p>
+
+					<p class="mb-0 opacity-75">
+						{dayjs(award.date).format("MMMM D, YYYY")}
+					</p>
+				</div>
+
+				<p class="my-0">{award.summary}</p>
+			</li>
+		{/each}
+	</ul>
+{/if}
+
+<!-- TODO: certificates, publications -->
+
+<!-- TODO: Interests, skills -->
+
+<!-- TODO: References -->

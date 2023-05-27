@@ -59,7 +59,14 @@
 			]
 		}
 	],
-	"awards": [],
+	"awards": [
+		{
+			"title": "ICTM State Algebra 2 Team - 8th Place",
+			"date": "2032-04-22",
+			"awarder": "ICTM",
+			"summary": "As part of the Lane Tech Math Team, myself (and fellow juniors) placed at ICTM state, the Illinois state math contest."
+		}
+	],
 	"certificates": [],
 	"publications": [],
 	"skills": [
