@@ -6,6 +6,7 @@ tags:
   - rust
   - advent of code
 title: Advent of code 2022 - Day 1
+draft: false
 ---
 
 Hey!

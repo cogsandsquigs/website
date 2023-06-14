@@ -41,6 +41,12 @@ export default defineConfig({
 				format: "md",
 				fields: [
 					{
+						type: "boolean",
+						name: "draft",
+						label: "Draft",
+						required: true
+					},
+					{
 						type: "string",
 						name: "title",
 						label: "Title",

@@ -1,4 +1,4 @@
-import { z, defineCollection } from "astro:content";
+import { defineCollection, z } from "astro:content";
 
 // Define the pages schema for main pages.
 const pageCollection = defineCollection({
@@ -11,6 +11,9 @@ const pageCollection = defineCollection({
 // Define the blog schema for posts.
 const blogCollection = defineCollection({
 	schema: z.object({
+		// Whether or not the file is a draft.
+		draft: z.boolean(),
+
 		// The title of the page in question.
 		title: z.string(),
 

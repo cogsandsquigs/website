@@ -8,6 +8,7 @@ tags:
   - math
 title: 2023 USAMO Problem 2 Solution
 series: math problems
+draft: false
 ---
 
 Taking a brief respite from my hiatus, here's a nice solution to the 2023 USAMO problem 2 that I came up with:

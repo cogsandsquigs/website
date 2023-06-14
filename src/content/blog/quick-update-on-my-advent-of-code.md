@@ -3,11 +3,13 @@ date: "2022-12-14T04:35:00Z"
 description: Don't worry, I haven't given up (yet!)
 series: advent of code 2022
 tags:
-- status update
-- advent of code
-- rust
+  - status update
+  - advent of code
+  - rust
 title: Quick update on my Advent of Code
+draft: false
 ---
+
 Hey everybody!
 
 So, quick update: I've decided that my [Advent of Code repo](https://github.com/cogsandsquigs/advent-of-code-2022) isn't gonna be some static monument to all the stuff that I wrote.

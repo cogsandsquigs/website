@@ -3,11 +3,13 @@ date: "2022-12-07T07:00:00Z"
 description: It's my birthday, so I deserve a puzzle, as a treat :)
 series: advent of code 2022
 tags:
-- status update
-- rust
-- advent of code
+  - status update
+  - rust
+  - advent of code
 title: Advent of code 2022 - Day 7
+draft: false
 ---
+
 Heyo!
 
 Sorry for being extra sporadic with my advent of code posts. Between home and school life, as well as a general lack of motivation and dealing with shit, I haven't had much time. However, I thought you guys (the .04 people reading this) deserved an update.
@@ -18,7 +20,7 @@ And as for all other things, I'm doing pretty well for myself. School is going w
 
 I don't really have anything else to say right now, so goodbye for now :3
 
-***
+---
 
 It's several hours later, and after a 5-hour "nap", I feel (somewhat) up to the task of explaining my code. Be warned, I made this from 11-1 in the morning (right around when the AoC puzzle released).
 
@@ -110,7 +112,7 @@ If the input has ended, we `break` out of the loop and return the `root` folder.
 
 Next, if we find an [`ls`](https://en.wikipedia.org/wiki/Ls) command, we know we have to parse all of the output lines (until we reach another command, which is why we clone the lines, and then consume `consumed_n-1` of them after the fact). We iterate over each line, checking if it's a folder or a file, and add it to the `root`.
 
-If it's not an `ls` command, we check if it's a [`cd`](https://en.wikipedia.org/wiki/Cd_(command)) command. Specifically, if we are `cd`ing to `..`, the upper directory, we break out of the loop and return `root`. Otherwise, we recurse, and replace the folder we are `cd`ing into with the `traverse`d result. If anything else happens, we break out.
+If it's not an `ls` command, we check if it's a [`cd`](<https://en.wikipedia.org/wiki/Cd_(command)>) command. Specifically, if we are `cd`ing to `..`, the upper directory, we break out of the loop and return `root`. Otherwise, we recurse, and replace the folder we are `cd`ing into with the `traverse`d result. If anything else happens, we break out.
 
 Whew! That was a lot of code, and I'm sorry if this isn't as readable as you hoped. Don't worry, the other parts are easier. Let's now talk about the meat of part 1.
 
