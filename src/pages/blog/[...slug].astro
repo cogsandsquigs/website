@@ -3,11 +3,12 @@
 // blog post!
 import PostInfo from "$components/PostInfo.svelte";
 import RootLayout from "$layouts/RootLayout.astro";
-import { CollectionEntry, getCollection } from "astro:content";
+import { getBlogPosts } from "$lib/blog_posts";
+import type { CollectionEntry } from "astro:content";
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
-	const blogEntries = await getCollection("blog");
+	const blogEntries = await getBlogPosts();
 	return blogEntries.map((entry) => ({
 		params: { slug: entry.slug },
 		props: { entry }

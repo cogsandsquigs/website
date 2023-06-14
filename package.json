@@ -37,12 +37,12 @@
 		"tailwindcss": "^3.3.2"
 	},
 	"devDependencies": {
-		"@tinacms/cli": "^1.5.12",
+		"@tinacms/cli": "^1.4.1",
 		"eslint": "^8.40.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"prettier": "^2.8.8",
 		"prettier-plugin-astro": "^0.8.0",
 		"prettier-plugin-svelte": "^2.10.0",
-		"tinacms": "^1.5.5"
+		"tinacms": "^0.68.15"
 	}
 }

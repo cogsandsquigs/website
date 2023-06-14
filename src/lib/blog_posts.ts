@@ -5,7 +5,7 @@ import { CollectionEntry, getCollection } from "astro:content";
  * @returns the blog posts, ordered from most to least recent.
  */
 export const getBlogPosts = async (): Promise<CollectionEntry<"blog">[]> => {
-	return await getCollection("blog").then((posts) =>
-		posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-	);
+	return await getCollection("blog")
+		.then((posts) => posts.filter((post) => !post.data.draft))
+		.then((posts) => posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()));
 };
