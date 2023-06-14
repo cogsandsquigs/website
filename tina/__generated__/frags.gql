@@ -1,0 +1,13 @@
+fragment BlogParts on Blog {
+  draft
+  title
+  date
+  tags
+  series
+  body
+}
+
+fragment PagesParts on Pages {
+  title
+  body
+}
