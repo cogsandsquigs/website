@@ -26,7 +26,7 @@ pnpm-debug.log*
 ## TinaCMS files
 # Ignore generated output
 public/admin
-tina/__generated__
+tina/__generated__/*
 # These files are necessary to keep for TinaCMS to work properly.
 !tina/__generated__/_graphql.json
 !tina/__generated__/_lookup.json
