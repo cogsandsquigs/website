@@ -5,7 +5,8 @@ tags:
   - atmega
   - bootloader
   - dev
-  - particle-iot
+  - iot
+  - particle
   - twiboot
 title: Slaving away so you don’t have to
 draft: false

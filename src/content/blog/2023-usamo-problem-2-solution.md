@@ -1,6 +1,6 @@
 ---
 date: 2023-04-07T15:45:16.000Z
-description: 'With some algebra and just a touch of calculus, it is conquered.'
+description: "With some algebra and just a touch of calculus, it is conquered."
 tags:
   - puzzle
   - calculus
@@ -17,7 +17,7 @@ Taking a brief respite from my hiatus, here's a nice solution to the 2023 USAMO 
 
 ## Problem
 
-*Let $\mathbb{R}^{+}$ be the set of positive real numbers. Find all functions $f:\mathbb{R}^{+}\rightarrow\mathbb{R}^{+}$ such that, for all $x, y \in \mathbb{R}^{+}$,*
+_Let $\mathbb{R}^{+}$ be the set of positive real numbers. Find all functions $f:\mathbb{R}^{+}\rightarrow\mathbb{R}^{+}$ such that, for all $x, y \in \mathbb{R}^{+}$,_
 
 $$
 \begin{aligned}

@@ -42,6 +42,12 @@ export type SystemInfoBreadcrumbsArgs = {
   excludeExtension?: InputMaybe<Scalars['Boolean']>;
 };
 
+export type Folder = {
+  __typename?: 'Folder';
+  name: Scalars['String'];
+  path: Scalars['String'];
+};
+
 export type PageInfo = {
   __typename?: 'PageInfo';
   hasPreviousPage: Scalars['Boolean'];
@@ -169,9 +175,10 @@ export type CollectionDocumentsArgs = {
   last?: InputMaybe<Scalars['Float']>;
   sort?: InputMaybe<Scalars['String']>;
   filter?: InputMaybe<DocumentFilter>;
+  folder?: InputMaybe<Scalars['String']>;
 };
 
-export type DocumentNode = Blog | Pages;
+export type DocumentNode = Blog | Pages | Folder;
 
 export type Blog = Node & Document & {
   __typename?: 'Blog';
