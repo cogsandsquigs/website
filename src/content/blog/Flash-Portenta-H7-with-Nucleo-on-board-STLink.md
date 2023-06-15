@@ -1,7 +1,9 @@
 ---
-draft: true
+draft: false
 title: Flash Portenta H7 with Nucleo on-board STLink
-description: How to flash the Portenta H7 with a Nucleo board's on-board STLink debugger, and avoid my grisly fate at the same time!
+description: >-
+  How to flash the Portenta H7 with a Nucleo board's on-board STLink debugger,
+  and avoid my grisly fate at the same time!
 date: 2023-06-14T05:00:00.000Z
 tags:
   - dev
@@ -13,19 +15,19 @@ This post comes from an issue I had at work, that I spent hours trying to debug 
 
 Sometimes, after messing around with things for a while, you'll cause your Arduino Portenta H7 to brick itself by scrambling the bootloader. This leads to:
 
-- The leftmost orange LED staying on permanently, or with occasional flickering.
-- The Portenta no longer responds over USB, and thus cannot be programmed the usual way.
+* The leftmost orange LED staying on permanently, or with occasional flickering.
+* The Portenta no longer responds over USB, and thus cannot be programmed the usual way.
 
 To fix this issue, you'll need to flash the Portenta's bootloader with an external JTAG/SWD debugger of your choice. In my case, I had an STLink-V3PWR to flash with, but that kept failing for some unknown reason. So, I decided to use a Nucleo-64 on-board STLink-V2 debugger to flash. This is how I did it.
 
 ## Materials
 
-- 1 [Portenta H7](https://store-usa.arduino.cc/products/portenta-h7) board, bricked or otherwise.
-- 1 [Portenta Breakout](https://store-usa.arduino.cc/products/arduino-portenta-breakout) board.
-- 1 [Nucleo](https://www.st.com/en/evaluation-tools/nucleo-f072rb.html) board with built-in STLink debugger. I used a Nucleo-F072RB, but other similar boards may work. The documentation for Nucleo-F072RB boards is [here](https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf), and a list of documentation for all boards is [here](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards/documentation.html).
-- 5 strands of thin wire that can wrap around the JTAG pins on the Portenta breakout. I used [Saleae Test Leads](https://usd.saleae.com/collections/accessories/products/wire-harness-94) with their [Saleae Test Clips](https://usd.saleae.com/collections/accessories/products/test-clips-93).
-- 1 USB-C cable (for the portenta).
-- 1 Mini-USB cable (for the Nucleo).
+* 1 [Portenta H7](https://store-usa.arduino.cc/products/portenta-h7) board, bricked or otherwise.
+* 1 [Portenta Breakout](https://store-usa.arduino.cc/products/arduino-portenta-breakout) board.
+* 1 [Nucleo](https://www.st.com/en/evaluation-tools/nucleo-f072rb.html) board with built-in STLink debugger. I used a Nucleo-F072RB, but other similar boards may work. The documentation for Nucleo-F072RB boards is [here](https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf), and a list of documentation for all boards is [here](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards/documentation.html).
+* 5 strands of thin wire that can wrap around the JTAG pins on the Portenta breakout. I used [Saleae Test Leads](https://usd.saleae.com/collections/accessories/products/wire-harness-94) with their [Saleae Test Clips](https://usd.saleae.com/collections/accessories/products/test-clips-93).
+* 1 USB-C cable (for the portenta).
+* 1 Mini-USB cable (for the Nucleo).
 
 ## Procedure
 
@@ -43,11 +45,11 @@ Portenta breakout JTAG connector:
 
 1. In the following order, use the 5 wires to connect these 5 pins from the Nucleo debugger to the Portenta JTAG pins:
 
-- **VDD_TARGET** (pin 1) to **+3V3** (pin 1)
-- **SWCLK** (pin 2) to **TCK/SWCLK** (pin 4)
-- **GND** (pin 3) to **GND** (pin 3, 5, or 9)
-- **SWDIO** (pin 4) to **TMS/SWDIO** (pin 2)
-- **NRST** (pin 5) to **RESET** (pin 10)
+* **VDD\_TARGET** (pin 1) to **+3V3** (pin 1)
+* **SWCLK** (pin 2) to **TCK/SWCLK** (pin 4)
+* **GND** (pin 3) to **GND** (pin 3, 5, or 9)
+* **SWDIO** (pin 4) to **TMS/SWDIO** (pin 2)
+* **NRST** (pin 5) to **RESET** (pin 10)
   A picture of the setup is shown below:
   ![](/images/portenta_breakout_swd_wiring.jpeg)
 
