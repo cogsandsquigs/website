@@ -9,6 +9,10 @@ tags:
   - dev
   - iot
   - portenta-h7
+  - nucleo
+  - stlink
+  - debugger
+  - arduino
 ---
 
 This post comes from an issue I had at work, that I spent hours trying to debug and fix. Now, you can avoid my terrible fate!
