@@ -36,10 +36,11 @@ To fix this issue, you'll need to flash the Portenta's bootloader with an extern
 
 Nucleo debugger:
 ![](/images/nucleo_stlink_pinout_diagram.png)
+
 Portenta breakout JTAG connector:
 ![](/images/portenta_breakout_pinout_diagram.png)
 
-In the following order, use the 5 wires to connect these 5 pins from the Nucleo debugger to the Portenta JTAG pins:
+1. In the following order, use the 5 wires to connect these 5 pins from the Nucleo debugger to the Portenta JTAG pins:
 
 * **VDD\_TARGET** (pin 1) to **+3V3** (pin 1)
 * **SWCLK** (pin 2) to **TCK/SWCLK** (pin 4)
