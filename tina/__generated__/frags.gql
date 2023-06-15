@@ -1,6 +1,7 @@
 fragment BlogParts on Blog {
   draft
   title
+  description
   date
   tags
   series

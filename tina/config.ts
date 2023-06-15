@@ -54,6 +54,12 @@ export default defineConfig({
 						required: true
 					},
 					{
+						type: "string",
+						name: "description",
+						label: "Description",
+						required: true
+					},
+					{
 						type: "datetime",
 						name: "date",
 						label: "Date Posted",

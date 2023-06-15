@@ -92,6 +92,7 @@ union DocumentNode = Blog | Pages | Folder
 type Blog implements Node & Document {
   draft: Boolean!
   title: String!
+  description: String!
   date: String!
   tags: [String!]!
   series: String
@@ -130,6 +131,7 @@ input RichTextFilter {
 input BlogFilter {
   draft: BooleanFilter
   title: StringFilter
+  description: StringFilter
   date: DatetimeFilter
   tags: StringFilter
   series: StringFilter
@@ -196,6 +198,7 @@ input DocumentMutation {
 input BlogMutation {
   draft: Boolean
   title: String
+  description: String
   date: String
   tags: [String]
   series: String

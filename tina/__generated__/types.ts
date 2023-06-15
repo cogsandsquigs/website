@@ -184,6 +184,7 @@ export type Blog = Node & Document & {
   __typename?: 'Blog';
   draft: Scalars['Boolean'];
   title: Scalars['String'];
+  description: Scalars['String'];
   date: Scalars['String'];
   tags: Array<Scalars['String']>;
   series?: Maybe<Scalars['String']>;
@@ -222,6 +223,7 @@ export type RichTextFilter = {
 export type BlogFilter = {
   draft?: InputMaybe<BooleanFilter>;
   title?: InputMaybe<StringFilter>;
+  description?: InputMaybe<StringFilter>;
   date?: InputMaybe<DatetimeFilter>;
   tags?: InputMaybe<StringFilter>;
   series?: InputMaybe<StringFilter>;
@@ -345,6 +347,7 @@ export type DocumentMutation = {
 export type BlogMutation = {
   draft?: InputMaybe<Scalars['Boolean']>;
   title?: InputMaybe<Scalars['String']>;
+  description?: InputMaybe<Scalars['String']>;
   date?: InputMaybe<Scalars['String']>;
   tags?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   series?: InputMaybe<Scalars['String']>;
@@ -356,7 +359,7 @@ export type PagesMutation = {
   body?: InputMaybe<Scalars['JSON']>;
 };
 
-export type BlogPartsFragment = { __typename?: 'Blog', draft: boolean, title: string, date: string, tags: Array<string>, series?: string | null, body?: any | null };
+export type BlogPartsFragment = { __typename?: 'Blog', draft: boolean, title: string, description: string, date: string, tags: Array<string>, series?: string | null, body?: any | null };
 
 export type PagesPartsFragment = { __typename?: 'Pages', title?: string | null, body?: any | null };
 
@@ -365,7 +368,7 @@ export type BlogQueryVariables = Exact<{
 }>;
 
 
-export type BlogQuery = { __typename?: 'Query', blog: { __typename?: 'Blog', id: string, draft: boolean, title: string, date: string, tags: Array<string>, series?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type BlogQuery = { __typename?: 'Query', blog: { __typename?: 'Blog', id: string, draft: boolean, title: string, description: string, date: string, tags: Array<string>, series?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type BlogConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']>;
@@ -377,7 +380,7 @@ export type BlogConnectionQueryVariables = Exact<{
 }>;
 
 
-export type BlogConnectionQuery = { __typename?: 'Query', blogConnection: { __typename?: 'BlogConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'BlogConnectionEdges', cursor: string, node?: { __typename?: 'Blog', id: string, draft: boolean, title: string, date: string, tags: Array<string>, series?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type BlogConnectionQuery = { __typename?: 'Query', blogConnection: { __typename?: 'BlogConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'BlogConnectionEdges', cursor: string, node?: { __typename?: 'Blog', id: string, draft: boolean, title: string, description: string, date: string, tags: Array<string>, series?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export type PagesQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -402,6 +405,7 @@ export const BlogPartsFragmentDoc = gql`
     fragment BlogParts on Blog {
   draft
   title
+  description
   date
   tags
   series
