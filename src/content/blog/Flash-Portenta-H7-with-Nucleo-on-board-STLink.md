@@ -24,28 +24,33 @@ To fix this issue, you'll need to flash the Portenta's bootloader with an extern
 * 1 [Nucleo](https://www.st.com/en/evaluation-tools/nucleo-f072rb.html) board with built-in STLink debugger. I used a Nucleo-F072RB, but other similar boards may work. The documentation for Nucleo-F072RB boards is [here](https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf), and a list of documentation for all boards is [here](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards/documentation.html).
 * 5 strands of thin wire that can wrap around the JTAG pins on the Portenta breakout. I used [Saleae Test Leads](https://usd.saleae.com/collections/accessories/products/wire-harness-94) with their [Saleae Test Clips](https://usd.saleae.com/collections/accessories/products/test-clips-93).
 * 1 USB-C cable (for the portenta).
-* 1 Mini-USB cable (for the Nucleo).
+* 1 Mini-USB cable (for the Nucleo).
 
 ## Procedure
 
 1. Connect the Portenta to the Portenta breakout board. If desired, break off the Nucleo debugger (it is the smaller portion attached by 3 bridges to the main board).
 2. Remove the **CN2** jumpers off of the Nucleo debugger. This section may change, so refer to your board's documentation on using the on-board debugger to debug external chips.
 3. Connect jumper wires to the **SWD** section (also labeled **CM4**) of the Nucleo debugger. Refer to your board's documentation for more information on where to place these. A picture of the wires are shown below.
+   ![](/images/nucleo_stlink_swd_wiring.jpeg)
 4. Connect the Nucleo debugger to the Portenta. This step is non-trivial, so pay attention! The diagrams below show the respective pinouts of important areas for the two boards.
 
-   Nucleo debugger:
+Nucleo debugger:
+![](/images/nucleo_stlink_pinout_diagram.png)
+Portenta breakout JTAG connector:
+![](/images/portenta_breakout_pinout_diagram.png)
 
-   Portenta breakout JTAG connector:
+In the following order, use the 5 wires to connect these 5 pins from the Nucleo debugger to the Portenta JTAG pins:
 
-   In the following order, use the 5 wires to connect these 5 pins from the Nucleo debugger to the Portenta JTAG pins:
-   * **VDD\_TARGET** (pin 1) to **+3V3** (pin 1)
-   * **SWCLK** (pin 2) to **TCK/SWCLK** (pin 4)
-   * **GND** (pin 3) to **GND** (pin 3, 5, or 9)
-   * **SWDIO** (pin 4) to **TMS/SWDIO** (pin 2)
-   * **NRST** (pin 5) to **RESET** (pin 10)
-     A picture of the setup is shown below:
-5. Connect **both** the Nucleo debugger and the Portenta to power. Make sure that each cable can transfer data to and from their respective ports.
-6. In the Arduino IDE, go to **Tools > Port** and set the port to the Nucleo debugger (it should show up as a long string of numbers). Go to **Tools > Programmer** and set it to **STMicroelectronics STLINK**. Make sure that the board type is set to **Portenta H7**.
-7. Go to **Tools > Burn bootloader**. The bootloader should now be burned onto the Portenta!
+* **VDD\_TARGET** (pin 1) to **+3V3** (pin 1)
+* **SWCLK** (pin 2) to **TCK/SWCLK** (pin 4)
+* **GND** (pin 3) to **GND** (pin 3, 5, or 9)
+* **SWDIO** (pin 4) to **TMS/SWDIO** (pin 2)
+* **NRST** (pin 5) to **RESET** (pin 10)
+  A picture of the setup is shown below:
+  ![](/images/portenta_breakout_swd_wiring.jpeg)
+
+1. Connect **both** the Nucleo debugger and the Portenta to power. Make sure that each cable can transfer data to and from their respective ports.
+2. In the Arduino IDE, go to **Tools > Port** and set the port to the Nucleo debugger (it should show up as a long string of numbers). Go to **Tools > Programmer** and set it to **STMicroelectronics STLINK**. Make sure that the board type is set to **Portenta H7**.
+3. Go to **Tools > Burn bootloader**. The bootloader should now be burned onto the Portenta!
 
 And now, the issue should be resolved. The orange LED should no longer stay on permanently, and you can now flash any program you like onto the Portenta.
