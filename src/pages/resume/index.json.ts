@@ -1,6 +1,6 @@
 // This file is the endpoint for the raw JSON resume schema generating all this.
 
-import resume from "$content/resume.json";
+import resume from "$content/resume/resume.json";
 import type { APIRoute } from "astro";
 
 /**

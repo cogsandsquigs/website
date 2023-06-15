@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { persistentCount } from "./stores";
+	import { persistentCount } from "./_stores";
 
 	const handleClick = () => {
 		persistentCount.set($persistentCount + 1);

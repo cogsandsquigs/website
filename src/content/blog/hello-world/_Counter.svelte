@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { count } from "./stores";
+	import { count } from "./_stores";
 
 	const handleClick = () => {
 		count.set($count + 1);
