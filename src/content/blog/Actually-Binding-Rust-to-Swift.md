@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: (Actually) Binding Rust to Swift
 description: >-
   Because no-one else thoroughly tells you how to package Swift (not even the
