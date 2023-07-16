@@ -28,7 +28,9 @@ My poison of choice for this project is [UniFFI](https://mozilla.github.io/uniff
 2. Include some [magic mumbo jumbo](https://mozilla.github.io/uniffi-rs/tutorial/Rust_scaffolding.html) in your library to expose the symbols (This step is VERY important! It won't generate any warnings if it's skipped, but doing so will lead to undefined symbol errors down the line in Xcode or whatever).
 3. [Create and export code](https://mozilla.github.io/uniffi-rs/tutorial/foreign_language_bindings.html) in your language of choice via an [associated binary](https://mozilla.github.io/uniffi-rs/tutorial/foreign_language_bindings.html#creating-the-bindgen-binary). You can also use [custom back-ends](https://github.com/mozilla/uniffi-rs/#third-party-foreign-language-bindings) for unofficially supported languages!
 
-That's it! The documentation pretty much ends there, and expects you to package everything nice and neat like the good little developer you are. Funnily enough, there's not a lot of documentation online on how to do this, even on Apple's part. Fortunately, some guy has a [guide](https://rhonabwy.com/2023/02/10/creating-an-xcframework/) on how to package Rust applications into an `XCFramework`, which is a special type of binary that can be used on Apple platforms. There's also a [rust library](https://github.com/y-crdt/yswift) that demonstrates compiling to an `XCFramework`, which that guy worked on! I specifically used that library to make the `Makefile` that I use to compile `nand7400`, shown below:
+That's it! The documentation pretty much ends there, and expects you to package everything nice and neat like the good little developer you are. Funnily enough, there's not a lot of documentation online on how to do this, even on Apple's part. Fortunately, some guy has a [guide](https://rhonabwy.com/2023/02/10/creating-an-xcframework/) on how to package Rust applications into an `XCFramework`, which is a special type of binary that can be used on Apple platforms. There's also a [rust library](https://github.com/y-crdt/yswift) that demonstrates compiling to an `XCFramework`, which that guy worked on!
+
+To get everything up and running, follow [that guide](https://rhonabwy.com/2023/02/10/creating-an-xcframework/) to set up your dev environment for creating an `XCFramework`. You can use [my own makefile](https://github.com/cogsandsquigs/nand7400/blob/main/Makefile) to set up and compile everything, too, which is shown below. In my case, I have the main Rust library in `nand7400`, the Swift-binding Rust scaffolding code in `nand7400-ffi`, and export the Swift code to `nand7400-ffi-bindings/swift` (I used the YSwift repository's [build script](https://github.com/y-crdt/yswift/blob/main/scripts/build-xcframework.sh) to start this `Makefile`, then tweaked it to my liking and specific setup).
 
 ```make
 # This makefile is used to build the Nand7400 framework for iOS, macOS and Mac Catalyst. To use it, run `make package` in 
@@ -181,10 +183,7 @@ package: package-swift
 	@echo "▸ Done!"
 ```
 
-In my case, I have the main Rust library in `nand7400`, the Swift-binding Rust scaffolding code in `nand7400-ffi`, and export the Swift code to `nand7400-ffi-bindings/swift`.
-
-We're not done, however. We also need to define a `Package.swift` that tells Xcode how to install the swift binary. This is mostly also copied from the above repo, and is shown below:\
- 
+We're not done, however. We also need to define a `Package.swift` that tells Xcode how to install the swift binary. This is mostly also copied from the above repo, and is shown below:
 
 ```swift
 // swift-tools-version:5.8
@@ -219,6 +218,6 @@ let package = Package(
 )
 ```
 
-We define a .target to export to, and also a .binaryTarget which the .target depends on (that's where the bindings live). I also specify a path to the swift bindings in .target, because the default is Sources. 
+We define a `.target` to export to, and also a `.binaryTarget` which the `.target` depends on (that's where the bindings live). I also specify a path to the swift bindings in `.target`, because the default is `Sources`.
 
-Once everything's done and set up, you should be good to go! If you're running my makefile, run make package to package everything up into an XCFramework, and then export that somewhere and put the link (and sha256) in the Package.swift file.
+Once everything's done and set up, you should be good to go! If you're running my makefile, run make package to package everything up into an `XCFramework`, and then export that somewhere and put the link (and `sha256`) in the `Package.swift` file.
