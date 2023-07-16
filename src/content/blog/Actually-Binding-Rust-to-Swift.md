@@ -220,4 +220,6 @@ let package = Package(
 
 We define a `.target` to export to, and also a `.binaryTarget` which the `.target` depends on (that's where the bindings live). I also specify a path to the swift bindings in `.target`, because the default is `Sources`.
 
-Once everything's done and set up, you should be good to go! If you're running my makefile, run make package to package everything up into an `XCFramework`, and then export that somewhere and put the link (and `sha256`) in the `Package.swift` file.
+Once everything's done and set up, you should be good to go! If you're running my makefile, run `make package` to package everything up into an `XCFramework`, then export that somewhere and put the link (as well as the `sha256`) in the `Package.swift` file.
+
+Happy binding!
