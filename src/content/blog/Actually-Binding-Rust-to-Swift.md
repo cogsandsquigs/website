@@ -183,4 +183,42 @@ package: package-swift
 
 In my case, I have the main Rust library in `nand7400`, the Swift-binding Rust scaffolding code in `nand7400-ffi`, and export the Swift code to `nand7400-ffi-bindings/swift`.
 
-We're not done, however. We also need to define a Package.swift that tells Xcode how to install
+We're not done, however. We also need to define a `Package.swift` that tells Xcode how to install the swift binary. This is mostly also copied from the above repo, and is shown below:\
+ 
+
+```swift
+// swift-tools-version:5.8
+
+import Foundation
+import PackageDescription
+
+let FFIbinaryTarget: PackageDescription.Target
+
+let package = Package(
+	name: "Nand7400",
+	platforms: [.iOS(.v13), .macOS(.v10_15)],
+	products: [
+		.library(
+			name: "Nand7400",
+			targets: ["Nand7400"]
+		),
+	],
+	dependencies: [],
+	targets: [
+		.target(
+			name: "Nand7400",
+			dependencies: ["Nand7400FFI"],
+			path: "nand7400-ffi-bindings/swift"
+		),
+		.binaryTarget(
+			name: "Nand7400FFI",
+			url: "https://github.com/cogsandsquigs/nand7400/releases/download/v0.3.1/Nand7400FFI.xcframework.zip",
+			checksum: "3bcdfb390e55cd7f940a5fabb1944f8bb2fbf85791a3b8c55fbd1492d1c18428"
+		),
+	]
+)
+```
+
+We define a .target to export to, and also a .binaryTarget which the .target depends on (that's where the bindings live). I also specify a path to the swift bindings in .target, because the default is Sources. 
+
+Once everything's done and set up, you should be good to go! If you're running my makefile, run make package to package everything up into an XCFramework, and then export that somewhere and put the link (and sha256) in the Package.swift file.
