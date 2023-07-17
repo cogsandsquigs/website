@@ -1,14 +1,14 @@
 import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import remarkBibliography from "@cogsandsquigs/remark-bibliography";
-import remarkA11yEmoji from "@fec/remark-a11y-emoji";
 import { defineConfig } from "astro/config";
 import rehypeMathJax from "rehype-mathjax/chtml";
 import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive";
-import remarkGemoji from "remark-gemoji";
 import remarkMath from "remark-math";
 import remarkSmartypants from "remark-smartypants";
+import config from "./site.config";
 import shikiTheme from "./src/styles/code-theme.shiki.json";
 
 // https://astro.build/config
@@ -19,6 +19,9 @@ export default defineConfig({
 		assets: true
 	},
 
+	// The URL of my website, for the sitemap
+	site: config.site_url,
+
 	// Configure the output build directory to be /build
 	outDir: "./build",
 
@@ -28,6 +31,11 @@ export default defineConfig({
 	integrations: [
 		// Add support for Svelte components.
 		svelte(),
+
+		// Generate a sitemap.
+		sitemap(),
+
+		// Use MDX for markdown.
 		mdx({
 			// Don't build any draft posts.
 			draft: false
@@ -87,13 +95,7 @@ export default defineConfig({
 					elipses: false,
 					backticks: false
 				}
-			],
-
-			// Support emoji shortcodes
-			remarkGemoji,
-
-			// Make emoji accessable
-			remarkA11yEmoji
+			]
 		],
 
 		// Allow smartypants and GFM

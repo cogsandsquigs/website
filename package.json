@@ -8,14 +8,14 @@
 		"dev": "tinacms dev -c 'astro dev'",
 		"build": "tinacms build && astro build",
 		"preview": "astro preview",
-		"astro": "astr"
+		"astro": "astro"
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^0.19.7",
 		"@astrojs/rss": "^2.4.3",
+		"@astrojs/sitemap": "^1.4.0",
 		"@astrojs/svelte": "^3.1.0",
 		"@cogsandsquigs/remark-bibliography": "^1.1.0",
-		"@fec/remark-a11y-emoji": "^3.1.0",
 		"@nanostores/persistent": "^0.9.1",
 		"@tailwindcss/typography": "^0.5.9",
 		"astro": "^2.8.3",
@@ -29,7 +29,6 @@
 		"rehype-mathjax": "^4.0.2",
 		"rehype-slug": "^5.1.0",
 		"remark-directive": "^2.0.1",
-		"remark-gemoji": "^7.0.1",
 		"remark-math": "^5.1.1",
 		"remark-mdx-math-enhanced": "^0.0.1-beta.3",
 		"remark-smartypants": "^2.0.0",
@@ -40,8 +39,8 @@
 	"devDependencies": {
 		"@tinacms/cli": "^1.5.25",
 		"eslint": "^8.45.0",
-		"eslint-plugin-prettier": "^5.0.0",
-		"prettier": "^3.0.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"prettier": "^2.0.0",
 		"prettier-plugin-astro": "^0.11.0",
 		"prettier-plugin-svelte": "^2.10.1",
 		"tinacms": "^1.5.16"
