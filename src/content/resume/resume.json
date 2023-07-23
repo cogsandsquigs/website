@@ -1,54 +1,33 @@
 {
+	"awards": [
+		{
+			"awarder": "ICTM",
+			"date": "2032-04-22",
+			"summary": "As part of the Lane Tech Math Team, myself (and fellow juniors) placed at ICTM state, the Illinois state math contest. I led the team with the highest score of 34/40.",
+			"title": "ICTM State Algebra 2 Team - 8th Place"
+		}
+	],
 	"basics": {
-		"name": "Ian Pratt",
-		"label": "Programmer",
-		"image": "$assets/pfp.png",
 		"email": "ianjdpratt@gmail.com",
-		"phone": "",
-		"url": "https://cogsandsquigs.gq",
-		"summary": "A programmer learning everything I can about Math and CS.",
+		"image": "$assets/pfp.png",
+		"label": "Programmer",
 		"location": {},
+		"name": "Ian Pratt",
+		"phone": "",
 		"profiles": [
 			{
 				"network": "Github",
-				"username": "cogsandsquigs",
-				"url": "https://github.com/cogsandsquigs"
+				"url": "https://github.com/cogsandsquigs",
+				"username": "cogsandsquigs"
 			}
-		]
+		],
+		"summary": "A programmer learning everything I can about Math and CS.",
+		"url": "https://cogsandsquigs.gq"
 	},
-	"work": [
-		{
-			"name": "Windy City Lab",
-			"position": "Intern",
-			"url": "https://thewcl.com",
-			"startDate": "2023-06-08",
-			"endDate": "2023-08-19",
-			"summary": "Second summer internship at the WCL.",
-			"highlights": ["TA-ed the CTD IoT Engineering Course."]
-		},
-		{
-			"name": "Windy City Lab",
-			"position": "Intern",
-			"url": "https://thewcl.com",
-			"startDate": "2022-06-20",
-			"endDate": "2022-08-19",
-			"summary": "Summer internship at the WCL: worked on multiple projects, both internal and for clients.",
-			"highlights": [
-				"Worked on the Mayo Clinic EHealth project.",
-				"Worked on the interal Loop-Tracks project."
-			]
-		}
-	],
-	"volunteer": [],
+	"certificates": [],
 	"education": [
 		{
-			"institution": "Lane Tech HS",
-			"url": "https://lanetech.org/",
 			"area": "General Education",
-			"studyType": "GED",
-			"startDate": "2021-08-08",
-			"endDate": "2024-08-05",
-			"score": "5.1",
 			"courses": [
 				"Honors Cybersecurity",
 				"Calculus III",
@@ -56,43 +35,68 @@
 				"AP Calculus BC",
 				"AP Computer Science A",
 				"Honors Web Development"
-			]
-		}
-	],
-	"awards": [
-		{
-			"title": "ICTM State Algebra 2 Team - 8th Place",
-			"date": "2032-04-22",
-			"awarder": "ICTM",
-			"summary": "As part of the Lane Tech Math Team, myself (and fellow juniors) placed at ICTM state, the Illinois state math contest."
-		}
-	],
-	"certificates": [],
-	"publications": [],
-	"skills": [
-		{
-			"name": "IoT",
-			"level": "Beginner",
-			"keywords": ["C", "C++", "Particle"]
-		},
-		{
-			"name": "Web Development",
-			"level": "Beginner",
-			"keywords": ["HTML", "CSS", "JavaScript"]
-		}
-	],
-	"languages": [
-		{
-			"language": "English",
-			"fluency": "Native speaker"
+			],
+			"endDate": "2024-08-05",
+			"institution": "Lane Tech HS",
+			"score": "5.17",
+			"startDate": "2021-08-08",
+			"studyType": "GED",
+			"url": "https://lanetech.org/"
 		}
 	],
 	"interests": [
 		{
-			"name": "Programming",
-			"keywords": ["Web Development", "IoT"]
+			"keywords": ["Web Development", "IoT"],
+			"name": "Programming"
 		}
 	],
+	"languages": [
+		{
+			"fluency": "Native speaker",
+			"language": "English"
+		}
+	],
+	"projects": [],
+	"publications": [],
 	"references": [],
-	"projects": []
+	"skills": [
+		{
+			"keywords": ["C", "C++", "Particle"],
+			"level": "Intermediate - 2+ years",
+			"name": "IoT"
+		},
+		{
+			"keywords": ["HTML", "CSS", "JavaScript"],
+			"level": "Beginner - 2+ years (nonseriously/on and off)",
+			"name": "Web Development"
+		}
+	],
+	"volunteer": [],
+	"work": [
+		{
+			"endDate": "2023-08-19",
+			"highlights": [
+				"TA-ed the CTD IoT Engineering Course.",
+				"TA-ed the CTD CPU Architecture Course and gave lectures.",
+				"Helped to develop software to assist the teaching of the above courses."
+			],
+			"name": "Windy City Lab",
+			"position": "Intern",
+			"startDate": "2023-06-08",
+			"summary": "Second summer internship at the WCL.",
+			"url": "https://thewcl.com"
+		},
+		{
+			"endDate": "2022-08-19",
+			"highlights": [
+				"Worked on the Mayo Clinic EHealth project.",
+				"Worked on the interal Loop-Tracks project."
+			],
+			"name": "Windy City Lab",
+			"position": "Intern",
+			"startDate": "2022-06-20",
+			"summary": "Summer internship at the WCL: worked on multiple projects, both internal and for clients.",
+			"url": "https://thewcl.com"
+		}
+	]
 }

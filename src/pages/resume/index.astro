@@ -1,5 +1,5 @@
 ---
-import ResumeJSON from "$components/ResumeJSON.svelte";
+import Resume from "$components/Resume/Main.svelte";
 import resume from "$content/resume/resume.json";
 import RootLayout from "$layouts/RootLayout.astro";
 ---
@@ -8,5 +8,5 @@ import RootLayout from "$layouts/RootLayout.astro";
 	<h1>Resume</h1>
 	<p>This is under construction - thank you for being patient!</p>
 
-	<ResumeJSON {resume} />
+	<Resume {resume} />
 </RootLayout>

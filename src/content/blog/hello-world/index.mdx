@@ -46,7 +46,7 @@ Here's some more math, using the $\LaTeX$ [physics package](https://ctan.org/pkg
 $$
 \begin{aligned}
 	\int_a^b\grad f\cdot\dd{\vec r} &= f(\vec{r}(b))-f(\vec{r}(a))\\
-	\oint_C \vec F\cdot\dd{\vec r} &= \iint_R\pdv{Q}{x}-\pdv{P}{y}\,\dd A\\
+	\oint_C \vec F\cdot\dd{\vec r} &= \iint_R\curl\vec F\cdot\hat k\,\dd A\\
 	\oint_C\vec F\cdot\dd{\vec r} &= \iint_S\curl\vec F\cdot\dd{\vec S}\\
 	\iint_S\vec F\cdot\dd{\vec S} &= \iiint_E\div\vec F\,\dd V
 \end{aligned}
@@ -76,7 +76,7 @@ Note that we can _share state_ between components using stores, like [nanostores
 	<CounterDisplay client:idle />
 </div>
 
-:point_up: This is a component sharing state through a nanostore!
+^ This is a component sharing state through a nanostore!
 
 ## Bibliographies
 

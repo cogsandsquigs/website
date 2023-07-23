@@ -1,5 +1,5 @@
 <script lang="ts">
-	import dayjs from "dayjs";
+	import DateSpan from "./DateSpan.svelte";
 
 	/**
 	 * The resume that will be displayed.
@@ -10,7 +10,7 @@
 <h2>{resume.basics.name}</h2>
 
 <p>
-	Contact: <a class="no-underline" href={`mailto:${resume.basics.email}`}>{resume.basics.email}</a>
+	Contact: <a href={`mailto:${resume.basics.email}`}>{resume.basics.email}</a>
 </p>
 
 <p class="m-0">{resume.basics.summary}</p>
@@ -32,10 +32,7 @@
 
 					<p class="mb-0 font-bold opacity-75">{work.position}</p>
 
-					<p class="mb-0 opacity-75">
-						{dayjs(work.startDate).format("MMMM D, YYYY")} to
-						{dayjs(work.endDate).format("MMMM D, YYYY")}
-					</p>
+					<DateSpan startDate={work.startDate} endDate={work.endDate} />
 				</div>
 
 				<p class="my-0">{work.summary}</p>
@@ -69,10 +66,7 @@
 
 					<p class="mb-0 font-bold opacity-75">{volunteer.position}</p>
 
-					<p class="mb-0 opacity-75">
-						{dayjs(volunteer.startDate).format("MMMM D, YYYY")} to
-						{dayjs(volunteer.endDate).format("MMMM D, YYYY")}
-					</p>
+					<DateSpan startDate={volunteer.startDate} endDate={volunteer.endDate} />
 				</div>
 
 				<p class="my-0">{volunteer.summary}</p>
@@ -106,10 +100,7 @@
 
 					<p class="mb-0 font-bold opacity-75">{education.area}</p>
 
-					<p class="mb-0 opacity-75">
-						{dayjs(education.startDate).format("MMMM D, YYYY")} to
-						{dayjs(education.endDate).format("MMMM D, YYYY")}
-					</p>
+					<DateSpan startDate={education.startDate} endDate={education.endDate} />
 				</div>
 
 				<p class="my-0">
@@ -141,9 +132,7 @@
 				<div class="flex items-baseline m-0 space-x-4">
 					<p class="mb-0 font-bold opacity-75">{award.title}</p>
 
-					<p class="mb-0 opacity-75">
-						{dayjs(award.date).format("MMMM D, YYYY")}
-					</p>
+					<DateSpan startDate={award.startDate} />
 				</div>
 
 				<p class="my-0">{award.summary}</p>
