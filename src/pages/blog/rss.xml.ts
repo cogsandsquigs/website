@@ -1,7 +1,7 @@
 import config from "$config";
 import rss from "@astrojs/rss";
-import { getCollection } from "astro:content";
 import type { APIRoute } from "astro";
+import { getCollection } from "astro:content";
 
 /**
  * The RSS feed for my blog page.
