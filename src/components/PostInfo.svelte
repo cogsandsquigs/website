@@ -1,6 +1,7 @@
 <script lang="ts">
-	import type { CollectionEntry } from "astro:content";
+	import Tag from "$components/Tag.svelte";
 	import config from "$config";
+	import type { CollectionEntry } from "astro:content";
 
 	export let post: CollectionEntry<"blog">;
 </script>
@@ -18,7 +19,7 @@
 	</time>
 
 	{#if post.data.series}
-		<p class="m-0">
+		<p>
 			This article is part of the
 			<a class="font-bold" href={`/series/${post.data.series}`}>{post.data.series}</a> series
 			<!-- TODO: add series title like in hugo? -->
@@ -26,10 +27,9 @@
 	{/if}
 
 	{#if post.data.tags}
-		<p class="m-0">
-			Tags:
+		<p class="whitespace-pre-line">
 			{#each post.data.tags as tag}
-				<a class="mr-3 font-bold" href={`/tags/${tag}`}>#{tag}</a>
+				<Tag {tag} />
 			{/each}
 		</p>
 	{/if}

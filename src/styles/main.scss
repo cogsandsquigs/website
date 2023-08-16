@@ -37,12 +37,16 @@ hr {
 a {
 	// This part is for any link that is not prose.
 	font-weight: bold;
-	text-decoration: underline wavy;
+	text-decoration: underline wavy theme("textDecorationThickness.1");
 	text-decoration-color: theme("colors.primary");
 
 	// This part is for every link, `prose`-d or otherwise: it makes the underline change color on hover.
 	&:hover {
 		@include pulse(text-decoration-color);
+	}
+
+	&.tag:hover {
+		@include pulse(border-color, color);
 	}
 
 	// Have icons pulse on hover.
