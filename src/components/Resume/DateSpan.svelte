@@ -9,7 +9,7 @@
 	/**
 	 * @optional The end date of the work.
 	 */
-	export let endDate: any | undefined;
+	export let endDate: any | undefined = undefined;
 
 	const DATE_FORMAT = "MMMM D, YYYY";
 </script>

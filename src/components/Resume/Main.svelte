@@ -107,13 +107,15 @@
 					Achieved my {education.studyType} with a (weighted) GPA of {education.score}
 				</p>
 
-				<p class="mb-0">Courses (not a full list):</p>
+				{#if education.courses.length > 0}
+					<p class="mb-0">Courses (not a full list):</p>
 
-				<ul>
-					{#each education.courses as course}
-						<li>{course}</li>
-					{/each}
-				</ul>
+					<ul>
+						{#each education.courses as course}
+							<li>{course}</li>
+						{/each}
+					</ul>
+				{/if}
 			</li>
 		{/each}
 	</ul>

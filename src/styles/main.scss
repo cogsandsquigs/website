@@ -66,3 +66,16 @@ a {
 		}
 	}
 }
+
+// Make inline code look like code.
+:not(pre) > code {
+	&::before,
+	&::after {
+		--tw-content: "" !important;
+		content: "" !important;
+	}
+
+	background: #1e1e2e;
+
+	@apply font-normal p-1 rounded-md #{!important};
+}

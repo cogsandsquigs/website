@@ -25,12 +25,12 @@ export default {
 						// identifier: "blog",
 						name: "Blog",
 						url: "/blog"
+					},
+					{
+						// identifier: "resume",
+						name: "Resume",
+						url: "/resume"
 					}
-					// {
-					// 	// identifier: "github",
-					// 	name: "Github",
-					// 	url: "https://github.com/cogsandsquigs"
-					// }
 				]
 			},
 

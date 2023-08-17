@@ -28,14 +28,7 @@
 	"education": [
 		{
 			"area": "General Education",
-			"courses": [
-				"Honors Cybersecurity",
-				"Calculus III",
-				"Honors Microarchitecture",
-				"AP Calculus BC",
-				"AP Computer Science A",
-				"Honors Web Development"
-			],
+			"courses": [],
 			"endDate": "2024-08-05",
 			"institution": "Lane Tech HS",
 			"score": "5.17",
@@ -78,7 +71,7 @@
 			"highlights": [
 				"TA-ed the CTD IoT Engineering Course.",
 				"TA-ed the CTD CPU Architecture Course and gave lectures.",
-				"Helped to develop software to assist the teaching of the above courses."
+				"Helped to develop software and hardware to assist the teaching of the above courses."
 			],
 			"name": "Windy City Lab",
 			"position": "Intern",
@@ -89,7 +82,7 @@
 		{
 			"endDate": "2022-08-19",
 			"highlights": [
-				"Worked on the Mayo Clinic EHealth project.",
+				"Assisted with the Mayo Clinic EHealth project.",
 				"Worked on the interal Loop-Tracks project."
 			],
 			"name": "Windy City Lab",
