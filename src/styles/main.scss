@@ -45,12 +45,12 @@ a {
 		@include pulse(text-decoration-color);
 	}
 
+	// Tags are pills, so they should be rounded.
 	&.tag:hover {
 		@include pulse(border-color, color);
 	}
 
 	// Have icons pulse on hover.
-
 	& > svg {
 		// The width (and height, because square) of the icon.
 		width: 1.1em;
