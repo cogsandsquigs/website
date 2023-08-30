@@ -134,7 +134,7 @@
 				<div class="flex items-baseline m-0 space-x-4">
 					<p class="mb-0 font-bold opacity-75">{award.title}</p>
 
-					<DateSpan startDate={award.startDate} />
+					<DateSpan startDate={award.date} />
 				</div>
 
 				<p class="my-0">{award.summary}</p>
