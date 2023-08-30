@@ -1,6 +1,12 @@
 {
 	"awards": [
 		{
+			"awarder": "CCML",
+			"date": "2023-4-13",
+			"summary": "As part of the Lane Tech Math Team, myself (and fellow juniors) placed at CCML, the City of Chicago Math League.",
+			"title": "CCML City Algebra 2 Team - 3st Place"
+		},
+		{
 			"awarder": "ICTM",
 			"date": "2023-04-22",
 			"summary": "As part of the Lane Tech Math Team, myself (and fellow juniors) placed at ICTM state, the Illinois state math contest. I led the team with the highest score of 34/40.",
