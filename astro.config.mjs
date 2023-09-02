@@ -13,12 +13,6 @@ import shikiTheme from "./src/styles/code-theme.shiki.json";
 
 // https://astro.build/config
 export default defineConfig({
-	// Experimental settings
-	experimental: {
-		// Allow for built-in assets
-		assets: true
-	},
-
 	// The URL of my website, for the sitemap
 	site: config.site_url,
 
