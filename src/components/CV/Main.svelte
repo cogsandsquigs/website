@@ -2,24 +2,24 @@
 	import DateSpan from "./DateSpan.svelte";
 
 	/**
-	 * The resume that will be displayed.
+	 * The cv that will be displayed.
 	 */
-	export let resume: any;
+	export let cv: any;
 </script>
 
-<h2>{resume.basics.name}</h2>
+<h2>{cv.basics.name}</h2>
 
 <p>
-	Contact: <a href={`mailto:${resume.basics.email}`}>{resume.basics.email}</a>
+	Contact: <a href={`mailto:${cv.basics.email}`}>{cv.basics.email}</a>
 </p>
 
-<p class="m-0">{resume.basics.summary}</p>
+<p class="m-0">{cv.basics.summary}</p>
 
-{#if resume.work.length > 0}
+{#if cv.work.length > 0}
 	<h2 class="mb-0">Work</h2>
 
 	<ul class="pl-0 list-none">
-		{#each resume.work as work, index}
+		{#each cv.work as work, index}
 			{#if index > 0}
 				<hr class="mx-10 my-10" />
 			{/if}
@@ -49,11 +49,11 @@
 	</ul>
 {/if}
 
-{#if resume.volunteer.length > 0}
+{#if cv.volunteer.length > 0}
 	<h2 class="mb-0">Volunteering</h2>
 
 	<ul class="pl-0 list-none">
-		{#each resume.volunteer as volunteer, index}
+		{#each cv.volunteer as volunteer, index}
 			{#if index > 0}
 				<hr class="mx-10 my-10" />
 			{/if}
@@ -83,11 +83,11 @@
 	</ul>
 {/if}
 
-{#if resume.education.length > 0}
+{#if cv.education.length > 0}
 	<h2 class="mb-0">Education</h2>
 
 	<ul class="pl-0 list-none">
-		{#each resume.education as education, index}
+		{#each cv.education as education, index}
 			{#if index > 0}
 				<hr class="mx-10 my-10" />
 			{/if}
@@ -121,11 +121,11 @@
 	</ul>
 {/if}
 
-{#if resume.awards.length > 0}
+{#if cv.awards.length > 0}
 	<h2 class="mb-0">Awards</h2>
 
 	<ul class="pl-0 list-none">
-		{#each resume.awards as award, index}
+		{#each cv.awards as award, index}
 			{#if index > 0}
 				<hr class="mx-10 my-10" />
 			{/if}

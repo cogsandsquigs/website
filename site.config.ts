@@ -27,9 +27,9 @@ export default {
 						url: "/blog"
 					},
 					{
-						// identifier: "resume",
-						name: "Resume",
-						url: "/resume"
+						// identifier: "cv",
+						name: "CV",
+						url: "/cv"
 					}
 				]
 			},

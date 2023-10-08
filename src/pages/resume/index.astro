@@ -1,21 +1,21 @@
 ---
+import CV from "$components/CV/Main.svelte";
 import Icon from "$components/Icon.astro";
-import Resume from "$components/Resume/Main.svelte";
-import resume from "$content/resume/resume.json";
+import cv from "$content/cv/cv.json";
 import RootLayout from "$layouts/RootLayout.astro";
 ---
 
 <RootLayout>
 	<h1 class="flex items-center space-x-2">
-		<span>Resume</span>
+		<span>CV</span>
 
-		<a href="/resume.json">
+		<a href="/cv.json">
 			<Icon
 				pack="mdi"
 				name="code-json"
-				alt="A brackets icon linking to the JSON making up this resume."
+				alt="A brackets icon linking to the JSON making up this cv."
 			/>
 		</a>
 	</h1>
-	<Resume {resume} />
+	<CV {cv} />
 </RootLayout>
