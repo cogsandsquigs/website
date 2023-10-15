@@ -1,6 +1,12 @@
 {
 	"awards": [
 		{
+			"awarder": "NMSC",
+			"date": "2023-10-22",
+			"summary": "Because of my high 2022 PSAT/NMSQT score, I qualified as a National Merit Semifinalist.",
+			"title": "National Merit Semifinalist"
+		},
+		{
 			"awarder": "ICTM",
 			"date": "2023-04-22",
 			"summary": "As part of the Lane Tech Math Team, myself (and fellow juniors) placed at ICTM state, the Illinois state math contest. I led the team with the highest score of 34/40.",

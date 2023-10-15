@@ -134,6 +134,7 @@
 				<div class="flex items-baseline m-0 space-x-4">
 					<p class="mb-0 font-bold opacity-75">{award.title}</p>
 
+					<p class="mb-0 opacity-75">{award.awarder}</p>
 					<DateSpan startDate={award.date} />
 				</div>
 
