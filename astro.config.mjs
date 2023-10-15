@@ -1,5 +1,5 @@
 import mdx from "@astrojs/mdx";
-// import sitemap from "@astrojs/sitemap";
+import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import remarkBibliography from "@cogsandsquigs/remark-bibliography";
 import { defineConfig } from "astro/config";
@@ -26,8 +26,8 @@ export default defineConfig({
 		// Add support for Svelte components.
 		svelte(),
 
-		// // Generate a sitemap.
-		// sitemap(),
+		// Generate a sitemap.
+		sitemap(),
 
 		// Use MDX for markdown.
 		mdx({
