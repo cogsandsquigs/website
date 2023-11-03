@@ -1,4 +1,4 @@
-import { CollectionEntry, getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 
 /**
  * Gets all the blog posts, ordered by date.

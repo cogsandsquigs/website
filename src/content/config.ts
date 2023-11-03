@@ -31,8 +31,26 @@ const blogCollection = defineCollection({
 	})
 });
 
+// Define the blog schema for posts.
+const projectCollection = defineCollection({
+	schema: z.object({
+		// Whether or not the file is a draft.
+		draft: z.boolean(),
+
+		// The title of the page in question.
+		title: z.string(),
+
+		// A (short) description of the page.
+		description: z.string(),
+
+		// A link to the github page.
+		github: z.string()
+	})
+});
+
 // Export all the defined collections.
 export const collections = {
 	pages: pageCollection,
-	blog: blogCollection
+	blog: blogCollection,
+	projects: projectCollection
 };
