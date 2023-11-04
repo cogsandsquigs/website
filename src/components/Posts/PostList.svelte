@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PostInfo from "$components/PostInfo.svelte";
+	import PostInfo from "$components/Posts/PostInfo.svelte";
 	import config from "$config";
 	import type { CollectionEntry } from "astro:content";
 
@@ -15,9 +15,9 @@
 		<li>
 			<!-- General information and post listing -->
 			<div class="mb-4">
-				<h2 class="mr-3 text-2xl font-bold">
+				<h3 class="mr-3 text-xl font-bold">
 					<a class="no-underline bg-none" href={`/blog/${post.slug}`}>{post.data.title}</a>
-				</h2>
+				</h3>
 
 				<PostInfo {post} />
 			</div>

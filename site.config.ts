@@ -27,6 +27,11 @@ export default {
 						url: "/blog"
 					},
 					{
+						// identifier: "projects",
+						name: "Projects",
+						url: "/projects"
+					},
+					{
 						// identifier: "cv",
 						name: "CV",
 						url: "/cv"

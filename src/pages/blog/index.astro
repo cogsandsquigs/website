@@ -1,9 +1,9 @@
 ---
 // The blog page, where all posts are listed.
-import PostList from "$components/PostList.svelte";
-import RootLayout from "$layouts/RootLayout.astro";
-import { getBlogPosts } from "$lib/blog_posts";
 import Icon from "$components/Icon.astro";
+import PostList from "$components/Posts/PostList.svelte";
+import RootLayout from "$layouts/RootLayout.astro";
+import { getBlogPosts } from "$lib/collections";
 
 // Get the posts!
 const posts = await getBlogPosts();

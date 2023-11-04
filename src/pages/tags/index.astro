@@ -1,7 +1,7 @@
 ---
 // This page is a page for each post that contains a certain tag.
 import RootLayout from "$layouts/RootLayout.astro";
-import { getBlogPosts } from "$lib/blog_posts";
+import { getBlogPosts } from "$lib/collections";
 
 const tags = await getBlogPosts()
 	.then((tags) => tags.map((entry) => entry.data.tags))

@@ -43,8 +43,11 @@ const projectCollection = defineCollection({
 		// A (short) description of the page.
 		description: z.string(),
 
+		// Any tags for the project.
+		tags: z.array(z.string()),
+
 		// A link to the github page.
-		github: z.string()
+		git: z.string()
 	})
 });
 
