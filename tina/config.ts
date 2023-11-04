@@ -117,6 +117,12 @@ export default defineConfig({
 					},
 					{
 						type: "string",
+						name: "git",
+						label: "Git",
+						required: true
+					},
+					{
+						type: "string",
 						list: true,
 						name: "tags",
 						label: "Tags",

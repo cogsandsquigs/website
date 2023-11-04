@@ -21,15 +21,8 @@
 				</h2>
 
 				<ProjectInfo {project} />
-			</div>
 
-			<div>
-				<!-- The preview for the project -->
-				<p class="mb-4 line-clamp-3">
-					<!-- TODO: get project preview -->
-				</p>
-
-				<a href={`/projects/${project.slug}`}>
+				<a class="mt-1" href={`/projects/${project.slug}`}>
 					{config.languages.en.read_more ?? "Read more"} -&gt;
 				</a>
 			</div>

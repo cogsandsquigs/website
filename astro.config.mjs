@@ -32,7 +32,10 @@ export default defineConfig({
 		// Use MDX for markdown.
 		mdx({
 			// Don't build any draft posts.
-			draft: false
+			draft: false,
+
+			// Optimise the build speed.
+			optimize: true
 		})
 	],
 

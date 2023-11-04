@@ -20,15 +20,13 @@
 				</h3>
 
 				<PostInfo {post} />
-			</div>
 
-			<div>
 				<!-- The preview for the post -->
-				<p class="mb-4 line-clamp-3">
-					<!-- TODO: get post preview -->
-				</p>
+				<!-- TODO: get post preview from content -->
+				<!-- <p class="mb-4 line-clamp-3">
+				</p> -->
 
-				<a href={`/blog/${post.slug}`}>
+				<a class="mt-1" href={`/blog/${post.slug}`}>
 					{config.languages.en.read_more ?? "Read more"} -&gt;
 				</a>
 			</div>

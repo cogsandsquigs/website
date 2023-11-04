@@ -11,7 +11,7 @@
 	</h3>
 {/if}
 
-<div class="opacity-75">
+<div class="opacity-75 space-y-1">
 	<a href={project.data.git}>Git Repository</a>
 
 	{#if project.data.tags}
