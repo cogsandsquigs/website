@@ -29,7 +29,7 @@
 					<!-- TODO: get project preview -->
 				</p>
 
-				<a href={`/blog/${project.slug}`}>
+				<a href={`/projects/${project.slug}`}>
 					{config.languages.en.read_more ?? "Read more"} -&gt;
 				</a>
 			</div>
