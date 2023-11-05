@@ -12,7 +12,7 @@
 	</h3>
 {/if}
 
-<div class="opacity-75">
+<div class="opacity-75 space-y-1">
 	<time>
 		<!-- @ts-ignore -->
 		Posted on {post.data.date.toLocaleDateString("en-us", config.languages.en.date_format)}

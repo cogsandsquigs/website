@@ -1,16 +1,23 @@
 ---
-import PostList from "$components/PostList.svelte";
+import PostList from "$components/Posts/PostList.svelte";
+import ProjectList from "$components/Projects/ProjectList.svelte";
 import config from "$config";
 import RootLayout from "$layouts/RootLayout.astro";
-import { getBlogPosts } from "$lib/blog_posts";
+import { getBlogPosts, getProjects } from "$lib/collections";
 import { getEntryBySlug } from "astro:content";
 
 // Get the index page markdown file.
 const index_page = await getEntryBySlug("pages", "index");
 const { Content } = await index_page.render();
 
-// Get the 3 most recent posts.
-const recent_posts = await getBlogPosts().then((posts) => posts.slice(0, 3));
+// Get the most recent post.
+export const recent_post = await getBlogPosts().then((posts) => posts.slice(0, 1));
+
+// Get a random project.
+export const random_project = await getProjects().then((projects) => {
+	const random_index = Math.floor(Math.random() * projects.length);
+	return projects.slice(random_index, random_index + 1);
+});
 ---
 
 <RootLayout>
@@ -18,7 +25,14 @@ const recent_posts = await getBlogPosts().then((posts) => posts.slice(0, 3));
 
 	<Content />
 
-	<PostList posts={recent_posts} />
+	<PostList posts={recent_post} />
 
 	<a href="/blog">{config.languages.en.menu_more ?? "See all posts"} -&gt;</a>
+
+	<br />
+	<br />
+
+	<ProjectList projects={random_project} />
+
+	<a href="/projects">{config.languages.en.menu_more ?? "Projects"} -&gt;</a>
 </RootLayout>

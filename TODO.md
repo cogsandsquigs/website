@@ -6,4 +6,7 @@
 - [x] Add JSON cv
   - [x] Add awards, certificates, and publications in JSON cv
 - [x] Once all prettier plugins upgrade to prettier v3, upgrade prettier + plugins all at once.
-- [ ] Add back sitemap when Node upgrades to 20.6.1 OR when Bun upgrades to fix the issue.
+- [x] Add back sitemap when Node upgrades to 20.6.1 OR when Bun upgrades to fix the issue.
+- [ ] CV PDF instead of _just_ web version + JSON
+- [ ] Add projects page
+  - [ ] Add projects to projects page

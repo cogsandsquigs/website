@@ -86,6 +86,56 @@ export default defineConfig({
 					}
 				]
 			},
+			// TODO: get it to match MDX?
+			{
+				name: "projects",
+				label: "Projects",
+				path: "src/content/projects",
+				match: {
+					include: "**/*"
+				},
+				format: "md",
+				fields: [
+					{
+						type: "boolean",
+						name: "draft",
+						label: "Draft",
+						required: true
+					},
+					{
+						type: "string",
+						name: "title",
+						label: "Title",
+						isTitle: true,
+						required: true
+					},
+					{
+						type: "string",
+						name: "description",
+						label: "Description",
+						required: true
+					},
+					{
+						type: "string",
+						name: "git",
+						label: "Git",
+						required: true
+					},
+					{
+						type: "string",
+						list: true,
+						name: "tags",
+						label: "Tags",
+						required: true
+					},
+					{
+						type: "rich-text",
+						name: "body",
+						label: "Body",
+						isBody: true
+					}
+				]
+			},
 			{
 				name: "pages",
 				label: "Pages",

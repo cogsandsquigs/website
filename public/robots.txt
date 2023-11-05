@@ -1,0 +1,4 @@
+User-agent: *
+User-agent: AdsBot-Google # AdsBot crawlers must be named explicitly
+Allow: /
+Disallow: /cv*

@@ -1,9 +1,9 @@
 ---
 // This page is where all the files in `/src/content/blog` are rendered. Specifically, this is a
 // blog post!
-import PostInfo from "$components/PostInfo.svelte";
+import PostInfo from "$components/Posts/PostInfo.svelte";
 import RootLayout from "$layouts/RootLayout.astro";
-import { getBlogPosts } from "$lib/blog_posts";
+import { getBlogPosts } from "$lib/collections";
 import type { CollectionEntry } from "astro:content";
 
 // 1. Generate a new path for every collection entry

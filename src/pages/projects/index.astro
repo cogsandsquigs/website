@@ -1,3 +1,22 @@
 ---
-// TODO: Make the projects landing page.
+// The projects page, where all projects are listed.
+import Icon from "$components/Icon.astro";
+import ProjectList from "$components/Projects/ProjectList.svelte";
+import RootLayout from "$layouts/RootLayout.astro";
+import { getProjects } from "$lib/collections";
+
+// Get the projects!
+const projects = await getProjects();
 ---
+
+<RootLayout title="Projects">
+	<h1 class="flex items-center space-x-2">
+		<span>Projects</span>
+
+		<a href="/projects/rss.xml">
+			<Icon pack="mdi" name="rss" alt="An RSS icon linking to the projects' RSS feed." />
+		</a>
+	</h1>
+
+	<ProjectList {projects} />
+</RootLayout>
