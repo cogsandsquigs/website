@@ -15,7 +15,8 @@ For those who don't know, the Early Action/Early Decision (EA/ED) deadline just 
 
 But what even is EA/ED? What's the difference? Why does it matter? How should you start? Well, here's a quick rundown:
 
-## Making a lis
+## Making a list and checking it twice (thrice, qurice?)
+The first thing you should do in your sophomore and/or junior year of highschool 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE2NTA1MjkxXX0=
+eyJoaXN0b3J5IjpbMTExMDM0MjAxMV19
 -->
