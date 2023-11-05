@@ -11,7 +11,11 @@ series: college
 
 So... Where have I been?
 
-For those who don't know, the Early Action/Early Decision (EA/ED) deadline just passed a few days ago (4, at the time of writing). This means that any and all schools who have deadlines for EA/ED application pools have just closed, and you can't apply to them in the EA/ED pools anymore. It was a *lot* of work to get here, and
+For those who don't know, the Early Action/Early Decision (EA/ED) deadline just passed a few days ago (4, at the time of writing). This means that any and all schools who have deadlines for EA/ED application pools have just closed, and you can't apply to them in the EA/ED pools anymore. It was a *lot* of work to get here, and I had to figure a lot of things out for myself with not a lot of guidance, at least for some less-heard-of things.
+
+But what even is EA/ED? What's the difference? Why does it matter? How should you start? Well, here's a quick rundown:
+
+## Making a lis
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzQ5Nzg2Nl19
+eyJoaXN0b3J5IjpbNTE2NTA1MjkxXX0=
 -->
