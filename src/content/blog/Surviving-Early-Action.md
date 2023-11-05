@@ -9,3 +9,6 @@ tags:
 series: college
 ---
 
+So... Where have I been?
+
+For those who don't know,
