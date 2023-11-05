@@ -16,7 +16,7 @@ For those who don't know, the Early Action/Early Decision (EA/ED) deadline just 
 But what even is EA/ED? What's the difference? Why does it matter? How should you start? Well, here's a quick rundown:
 
 ## Making a list and checking it twice (thrice, qurice?)
-The first thing you should do in your sophomore and/or junior year of highschool 
+The first thing you should do in your sophomore and/or junior year of high school (or 10th/11th grade in whatever secondary education you have) is making a college list. This is 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMDM0MjAxMV19
+eyJoaXN0b3J5IjpbLTcxOTg1OTM5MV19
 -->
