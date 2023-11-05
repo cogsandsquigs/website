@@ -4,7 +4,7 @@ export default {
 	title: "Cogs And Squigs",
 	author: "Ian Pratt",
 	description: "My little slice of the blogosphere.",
-	site_url: "https://cogsandsquigs.gq", // Site URL for generating RSS feed.
+	site_url: "https://cogsandsquigs.dev", // Site URL for generating RSS feed.
 
 	// Uses a scheme to replace {author} and {year} with the values from the config object in
 	// `$components/Footer.astro`
