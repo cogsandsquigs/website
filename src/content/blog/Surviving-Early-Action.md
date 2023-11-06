@@ -34,11 +34,14 @@ The important thing to get right about writing your essay is that you want to de
 You should start writing this essay near or on the end of Junior year (11th grade), so that you can (hopefully) finish it by late August or early September. Remember to write many drafts!
 
 ### Side note: Having a second pair of eyes
-It's *really* nice to have someone else there to look over your essay. Not write it for you, of course (you'll have to do that yourself), but just be there to help make sure that you're going in the right direction and making 
+It's *really* nice to have someone else there to look over your essay. Not write it for you, of course (you'll have to do that yourself), but just be there to help make sure that you're going in the right direction and making all the right writing choices. Choose someone who's gone through this process before, because they can also help you with the general process too!
+
+## Filling out the CommonApp
+By now, it's early September. Early action deadlines 
 
 [^1]: Early Decision is *binding* for most (if not all) schools.
 [^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
 [^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but *does* require it in its own supplemental sections? Whatever.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjUwODk3ODhdfQ==
+eyJoaXN0b3J5IjpbMTQ5OTI3MDg3NV19
 -->
