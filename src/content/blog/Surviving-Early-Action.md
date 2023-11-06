@@ -104,7 +104,3 @@ It's over.
 [^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but _does_ require it in its own supplemental sections? Whatever.
 [^4]: Unless you're applying to [UChicago](https://www.uchicago.edu/), in which case they [get funky with it](https://collegeadmissions.uchicago.edu/apply/uchicago-supplemental-essay-questions).
 [^5]: However, this year the FAFSA is delayed because they're remaking it to make it easier (???), so it opens in December and most colleges just want it ASAP, so do it quick!
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYxNTY1MzkzXX0=
--->
