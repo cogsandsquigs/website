@@ -62,12 +62,12 @@ Most schools, after submitting an application, will send you an email with furth
 
 There's also the **CSS Profile** and **FAFSA**. For US students, you'll want to fill out the **FAFSA** (and may even be required to by your state!). It's an application for free federal aid from the US to use towards tuition/boarding/etc. fees, and its, uh, free! There's also the **CSS Profile**, which is made by our beloved lord and savior CollegeBoard and costs money to send. However, many schools require this to see if they need/want to give you financial aid.
 
-These forms usually open in Oct
+These forms usually open[^5 in October and are due sometime in December (although MIT's is due the 30th of November). It's best to complete them as soon as possible, and you'll want whoever does your finances to do that for you (or at least help)
 
 [^1]: Early Decision is *binding* for most (if not all) schools. See [Filling out the CommonApp](#Filling out the CommonApp)
 [^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
 [^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but *does* require it in its own supplemental sections? Whatever.
 [^4]: Unless you're applying to [UChicago](https://www.uchicago.edu/), in which case they [get funky with it](https://collegeadmissions.uchicago.edu/apply/uchicago-supplemental-essay-questions).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjI4NzE2OTVdfQ==
+eyJoaXN0b3J5IjpbLTk2NTM3Njc5MF19
 -->
