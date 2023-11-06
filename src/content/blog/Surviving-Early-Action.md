@@ -31,11 +31,11 @@ The next most important thing is to start working on your *personal essay*. See,
 The important thing to get right about writing your essay is that you want to demonstrate parts of your character that you can't put anywhere else on your applications. Most applications will ask for awards, club activities, et cetera, but your personal essay is where you can shine by showing a part of you that isn't easily shown on paper. The advice I've heard (and what I've written about) is to write about a time, event, place, idea, or something that shows that you've grown as a person. Whether a difficult class, an ugly relationship, or whatever.
 > Note: DON'T make yourself seem pitiful! Admissions officers don't have time for that and don't want that. Instead, focus the main part of the essay on how you've *grown* as a person from that experience, and how it benefits you to this day (ideally, how it will benefit you in college too).
 
-
+You should start writing this essay near or on the end of Junior year (11th grade), so 
 
 [^1]: Early Decision is *binding* for most (if not all) schools.
 [^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
 [^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but *does* require it in its own supplemental sections? Whatever.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE0NzAxMjFdfQ==
+eyJoaXN0b3J5IjpbLTcxODIxMDgwMV19
 -->
