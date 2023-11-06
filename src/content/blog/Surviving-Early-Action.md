@@ -41,12 +41,16 @@ By now, it's early September. EA deadlines are at early November, so you need to
 
 However, there's another section of the CommonApp, one that has to be done *per school*. these are the *supplemental essay questions* ("supplementals" for short), and most schools ask at least one. Usually, they're pretty tame, like "Why do you want to go to \<insert university\>" or "How would your friends describe you"[^4]. You'd probably want the same person looking over your personal essay to look over your supplementals, too, just to make sure you're not doing anything silly there.
 
-Once all of that's done, each school usually requires a \$75-\$80 fee to send in a single application, and that fee is *per-school*. if you're
+Once all of that's done, each school usually requires a \$75-\$80 fee to send in a single application, and that fee is *per-school*. 10 schools would cost \$750-\$800, while 20 would cost over 1000! (and that's not even accounting for the CSS Profile!)
+
+There really isn't much else to say here, just make sure you present yourself in the best light possible and include as many activities as you can possibly include. 
+
+## 
 
 [^1]: Early Decision is *binding* for most (if not all) schools. See [Filling out the CommonApp](#Filling out the CommonApp)
 [^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
 [^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but *does* require it in its own supplemental sections? Whatever.
 [^4]: Unless you're applying to [UChicago](https://www.uchicago.edu/), in which case they [go crazy with it](https://collegeadmissions.uchicago.edu/apply/uchicago-supplemental-essay-questions).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYyNjI2MzU3XX0=
+eyJoaXN0b3J5IjpbLTE2OTcwMTcxNTFdfQ==
 -->
