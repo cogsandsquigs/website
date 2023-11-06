@@ -19,7 +19,7 @@ But what even is EA/ED? What's the difference? Why does it matter? How should yo
 The first thing you should do in your sophomore and/or junior year of high school (or 10th/11th grade in whatever secondary education you have) is making a college list. This is *the* most important thing you should be doing, right up there with studying for the SAT/ACT (which you should've definitely heard of by now). Knowing what schools you'll be applying to will make this entire process smoother, because then you'll be able to organize your work around the deadlines for each (and believe me, they all have different ones for every little thing). Make a list of about 10-15 that you want to go to, and make sure you *want* to go there: in some cases, there's no backing out [^1]. Once that's done, you can start on working towards your second goal, the *personal essay*.
 
 The most important choice to make right now is whether to apply EA, REA, ED, RD/RA, or whatever the fuck else colleges come up with. Here's a quick rundown:
-- **EA**: Stands for early action, it's the application pool due November 1st. Why have sooner deadlines? Because the application pool is smaller, so you have a better chance of getting in. It also shows colleges that you really want to go there, although REA/ED is a better way of showing that. This application is *non-restrictive*, meaning you can apply EA to as many schools as you want.
+- **EA**: Stands for early action, it's the application pool due November 1st (mostly, sometimes the 2nd or 3rd). Why have sooner deadlines? Because the application pool is smaller, so you have a better chance of getting in. It also shows colleges that you really want to go there, although REA/ED is a better way of showing that. This application is *non-binding*, meaning you can apply EA to as many schools as you want.
 - **ED**: Early decision. The most notable difference is that this is *binding*, meaning you 1) can't apply to any other schools but one with ED, and 2) If you get in *you must go*. This is a biggie, so consider if you really want to go to a school that you're applying ED to. The best part about this application is that it shows severe dedication to the school you're applying to.
 - **REA**: Restrictive Early Action. This is something similar to ED, but *non-binding*. You're only allowed to apply to 1 school REA, and you also can't apply EA/ED to any other schools. However, you don't have to go if you get in. I don't really understand why you'd want to do this unless you're too nervous about ED but want to show dedication to the school. 
 - **RD/RA**: Regular Decision/Regular Action. These mean the same thing, and it's the "regular" due date for the college's applications. It's *non-binding*, and the deadline's a lot later (usually late December to early January).
@@ -52,12 +52,17 @@ Once all of that's done, each school usually requires a \$75-\$80 fee to send in
 There really isn't much else to say here, just make sure you present yourself in the best light possible and include as many activities as you can possibly include. 
 
 ## But Wait! There's More!
-Wohoo! It's November 2nd, and you've submittied all of your EA/ED applications
+Wohoo! It's November 2nd, and you've submittied all of your EA/ED applications. There's nothing else to do, right?
+
+Right?
+
+WRONG! There's so much more fun to be had!
+
 
 [^1]: Early Decision is *binding* for most (if not all) schools. See [Filling out the CommonApp](#Filling out the CommonApp)
 [^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
 [^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but *does* require it in its own supplemental sections? Whatever.
 [^4]: Unless you're applying to [UChicago](https://www.uchicago.edu/), in which case they [get funky with it](https://collegeadmissions.uchicago.edu/apply/uchicago-supplemental-essay-questions).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1ODUxNjYzOV19
+eyJoaXN0b3J5IjpbLTc3NzQ4NDgxOV19
 -->
