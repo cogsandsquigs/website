@@ -36,12 +36,14 @@ You should start writing this essay near or on the end of Junior year (11th grad
 ### Side note: Having a second pair of eyes
 It's *really* nice to have someone else there to look over your essay. Not write it for you, of course (you'll have to do that yourself), but just be there to help make sure that you're going in the right direction and making all the right writing choices. Choose someone who's gone through this process before, because they can also help you with the general process too!
 
-## Filling out the CommonApp
-By now, it's early September. EA deadlines are at early November, so you need to hurry. Now's the time to start filling out the CommonApp (or any other college application forms). 
+## CommonAppl
+By now, it's early September. EA deadlines are at early November, so you need to hurry. Now's the time to start filling out the CommonApp (or any other college application forms). Generally, they'll list a series of sections asking about you, your family, your grades, activities, awards, and anything else any college would need. Make sure you have everything you'll need to report the best self you were in the past 4 years.
+
+However, there's another section of the CommonApp, one that has to be done *per school*. these are the 
 
 [^1]: Early Decision is *binding* for most (if not all) schools. See [Filling out the CommonApp](#Filling out the CommonApp)
 [^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
 [^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but *does* require it in its own supplemental sections? Whatever.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDY1MzY2Ml19
+eyJoaXN0b3J5IjpbMzM5MTAxMDA2XX0=
 -->
