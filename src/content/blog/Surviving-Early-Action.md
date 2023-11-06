@@ -20,7 +20,8 @@ The first thing you should do in your sophomore and/or junior year of high schoo
 
 The most important choice to make right now is whether to apply EA, REA, ED, RD/RA, or whatever the fuck else colleges come up with. Here's a quick rundown:
 - **EA**: Stands for early action, it's the application pool due November 1st. Why have sooner deadlines? Because the application pool is smaller, so you have a better chance of getting in. It also shows colleges that you really want to go there, although REA/ED is a better way of showing that. This application is *non-restrictive*, meaning you can apply EA to as many schools as you want.
-- **ED**: Early decision. The most notable difference is that this is *binding*, meaning you 1) can't apply to any other schools but one with ED, and 
+- **ED**: Early decision. The most notable difference is that this is *binding*, meaning you 1) can't apply to any other schools but one with ED, and 2) If you get in *you must go*. This is a biggie, so consider if you really want to go to a school that you're applying ED to. The best part about this application is that it shows severe dedication to the school you're applying to.
+- **REA**: Restrictive Early Action. This is something similar to ED, but *non-binding*. Y
 
 ## Spilling the beans (or tea, or hot goss, or...)
 The next most important thing is to start working on your *personal essay*. See, most colleges[^2] use an application platform called [CommonApp](https://www.commonapp.org/), which requires a personal essay. This essay is then used by most[^3] colleges to help aid in evaluating your application, because it will (should) give a good overview of who you are as a person and who you've come to be. For my application year (2023-2024), there were 7 different prompts that I could chose from (not all 7!) to write my essay about. They were, as follows:
@@ -57,5 +58,5 @@ Wohoo! It's November 2nd, and you've submittied all of your EA/ED applications
 [^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but *does* require it in its own supplemental sections? Whatever.
 [^4]: Unless you're applying to [UChicago](https://www.uchicago.edu/), in which case they [get funky with it](https://collegeadmissions.uchicago.edu/apply/uchicago-supplemental-essay-questions).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3OTYxNTUxMF19
+eyJoaXN0b3J5IjpbODY2MTkxMjgwXX0=
 -->
