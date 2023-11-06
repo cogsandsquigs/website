@@ -19,11 +19,11 @@ But what even is EA/ED? What's the difference? Why does it matter? How should yo
 The first thing you should do in your sophomore and/or junior year of high school (or 10th/11th grade in whatever secondary education you have) is making a college list. This is *the* most important thing you should be doing, right up there with studying for the SAT/ACT (which you should've definitely heard of by now). Knowing what schools you'll be applying to will make this entire process smoother, because then you'll be able to organize your work around the deadlines for each (and believe me, they all have different ones for every little thing). Make a list of about 10-15 that you want to go to, and make sure you *want* to go there: in some cases, there's no backing out [^1]. Once that's done, you can start on working towards your second goal, the *personal essay*.
 
 ## Spilling the beans (or tea, or hot goss, or...)
-The next most important thing is to start working on your *personal essay*. See, most colleges[^2] use an application platform called [CommonApp](https://www.commonapp.org/), which requires a personal essay. This essay is then used by most[^3] colleges
+The next most important thing is to start working on your *personal essay*. See, most colleges[^2] use an application platform called [CommonApp](https://www.commonapp.org/), which requires a personal essay. This essay is then used by most[^3] colleges to help aid in evaluating your application, because it will (should) give a good overview of who you are as a person and who you've come to be. 
 
 [^1]: Early Decision is *binding* for most (if not all) schools.
 [^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
-[^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the C.
+[^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but *does* require it in its own supplemental sections? Whatever.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDUyMTM2Nl19
+eyJoaXN0b3J5IjpbLTE3NzQxNTU2NzJdfQ==
 -->
