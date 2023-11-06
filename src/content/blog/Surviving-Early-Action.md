@@ -64,8 +64,14 @@ There's also the **CSS Profile** and **FAFSA**. For US students, you'll want to 
 
 These forms usually[^5] open in October and are due sometime in December (although MIT's is due the 30th of November). It's best to complete them as soon as possible, and you'll want whoever does your finances to do that for you (or at least help).
 
+Now, you should start searching for scholarships to help with finances. Sites like [Bold.org](https://bold.org) have collections of scholarships you can apply to in one batch, and your school (if good) will have other information on scholarships that you can use. It's always nice to get free money for school.
+
 ## Done...?
-If you're not doing EA/ED, you can shift this schedule over by a few months (except for CSS Profile/FAFSA, which is usually due always at the same time for every application). Once all your applications are submitted, finances financed, and profiles profiled, you're done! Now you'll just need to play the waiting game. This is probably the worst part of it, and I'm going through it right now (:////). It sucks, but hang in there, 'kay? Watch some funny videos or something. College applications can wait now (hopefully, unless yo
+If you're not doing EA/ED, you can shift this schedule over by a few months (except for CSS Profile/FAFSA, which is usually due always at the same time for every application). Once all your applications are submitted, finances financed, and profiles profiled, you're done! Now you'll just need to play the waiting game. This is probably the worst part of it, and I'm going through it right now (:////). It sucks, but hang in there, 'kay? Watch some funny videos or something. College applications can wait now (hopefully, unless you're procrastinating).
+
+Breathe. 
+
+It's over.
 
 [^1]: Early Decision is *binding* for most (if not all) schools. See [Filling out the CommonApp](#Filling out the CommonApp)
 [^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
@@ -73,5 +79,5 @@ If you're not doing EA/ED, you can shift this schedule over by a few months (exc
 [^4]: Unless you're applying to [UChicago](https://www.uchicago.edu/), in which case they [get funky with it](https://collegeadmissions.uchicago.edu/apply/uchicago-supplemental-essay-questions).
 [^5]: However, this year the FAFSA is delayed because they're remaking it to make it easier (???), so it opens in December and most colleges just want it ASAP, so do it quick!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMzExMDIzNl19
+eyJoaXN0b3J5IjpbNDYxNTY1MzkzXX0=
 -->
