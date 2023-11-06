@@ -39,11 +39,12 @@ It's *really* nice to have someone else there to look over your essay. Not write
 ## CommonApp-ing
 By now, it's early September. EA deadlines are at early November, so you need to hurry. Now's the time to start filling out the CommonApp (or any other college application forms). Generally, they'll list a series of sections asking about you, your family, your grades, activities, awards, and anything else any college would need. Make sure you have everything you'll need to report the best self you were in the past 4 years.
 
-However, there's another section of the CommonApp, one that has to be done *per school*. these are the *supplemental essay questions* ("supplementals" for short). 
+However, there's another section of the CommonApp, one that has to be done *per school*. these are the *supplemental essay questions* ("supplementals" for short), and most schools ask at least one. Usually, they're pretty tame, like "Why do you want to go to \<insert university\>" or "How would your friends describe you"[^4]
 
 [^1]: Early Decision is *binding* for most (if not all) schools. See [Filling out the CommonApp](#Filling out the CommonApp)
 [^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
 [^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but *does* require it in its own supplemental sections? Whatever.
+[^4]: Unless you're UChicago, in which case you go 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NjE0NDgzMF19
+eyJoaXN0b3J5IjpbLTExMjIxMDc1NzldfQ==
 -->
