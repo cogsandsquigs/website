@@ -60,12 +60,14 @@ WRONG! There's so much more fun to be had!
 
 Most schools, after submitting an application, will send you an email with further instructions on creating an account for their website and uploading additional materials there (if needed). It's also where they'll (usually) show you if you got in or not; either that or through the mail/email. You'll need to do all of those, otherwise your applications won't go through or will get rescinded. 
 
-There's also the **CSS Profile** and **FAFSA**. For US students, you'll want to fill out the **FAFSA** (and may even be required to by your state!). It's an application for free fed
+There's also the **CSS Profile** and **FAFSA**. For US students, you'll want to fill out the **FAFSA** (and may even be required to by your state!). It's an application for free federal aid from the US to use towards tuition/boarding/etc. fees, and its, uh, free! There's also the **CSS Profile**, which is made by our beloved lord and savior CollegeBoard and costs money to send. However, many schools require this to see if they need/want to give you financial aid.
+
+These forms usually open in Oct
 
 [^1]: Early Decision is *binding* for most (if not all) schools. See [Filling out the CommonApp](#Filling out the CommonApp)
 [^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
 [^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but *does* require it in its own supplemental sections? Whatever.
 [^4]: Unless you're applying to [UChicago](https://www.uchicago.edu/), in which case they [get funky with it](https://collegeadmissions.uchicago.edu/apply/uchicago-supplemental-essay-questions).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODI2MjMxMzBdfQ==
+eyJoaXN0b3J5IjpbLTE0NjI4NzE2OTVdfQ==
 -->
