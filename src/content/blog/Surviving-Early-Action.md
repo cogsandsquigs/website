@@ -19,7 +19,8 @@ But what even is EA/ED? What's the difference? Why does it matter? How should yo
 The first thing you should do in your sophomore and/or junior year of high school (or 10th/11th grade in whatever secondary education you have) is making a college list. This is *the* most important thing you should be doing, right up there with studying for the SAT/ACT (which you should've definitely heard of by now). Knowing what schools you'll be applying to will make this entire process smoother, because then you'll be able to organize your work around the deadlines for each (and believe me, they all have different ones for every little thing). Make a list of about 10-15 that you want to go to, and make sure you *want* to go there: in some cases, there's no backing out [^1]. Once that's done, you can start on working towards your second goal, the *personal essay*.
 
 The most important choice to make right now is whether to apply EA, REA, ED, RD/RA, or whatever the fuck else colleges come up with. Here's a quick rundown:
-- **EA**: Stands for early action, it's the application pool due November 1st. Why have sooner deadlines? Because the application pool is smaller, so you have a better chance of getting in. It also shows colleges that you really want to go there
+- **EA**: Stands for early action, it's the application pool due November 1st. Why have sooner deadlines? Because the application pool is smaller, so you have a better chance of getting in. It also shows colleges that you really want to go there, although REA/ED is a better way of showing that. This application is *non-restrictive*, meaning you can apply EA to as many schools as you want.
+- **ED**: Early decision. The most notable difference is that this is *binding*, meaning you 1) can't apply to any other schools but one with ED, and 
 
 ## Spilling the beans (or tea, or hot goss, or...)
 The next most important thing is to start working on your *personal essay*. See, most colleges[^2] use an application platform called [CommonApp](https://www.commonapp.org/), which requires a personal essay. This essay is then used by most[^3] colleges to help aid in evaluating your application, because it will (should) give a good overview of who you are as a person and who you've come to be. For my application year (2023-2024), there were 7 different prompts that I could chose from (not all 7!) to write my essay about. They were, as follows:
@@ -56,5 +57,5 @@ Wohoo! It's November 2nd, and you've submittied all of your EA/ED applications
 [^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but *does* require it in its own supplemental sections? Whatever.
 [^4]: Unless you're applying to [UChicago](https://www.uchicago.edu/), in which case they [get funky with it](https://collegeadmissions.uchicago.edu/apply/uchicago-supplemental-essay-questions).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODM3NjE5ODhdfQ==
+eyJoaXN0b3J5IjpbLTM3OTYxNTUxMF19
 -->
