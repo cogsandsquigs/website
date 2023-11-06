@@ -58,11 +58,12 @@ Right?
 
 WRONG! There's so much more fun to be had!
 
+Most schools, after submitting an application, will send you an email with further instructions on creating an account for their website and uploading additional materials there (if needed). It's also where they'll (usually) show you if you got in or not; either that or through the mail/email. You'
 
 [^1]: Early Decision is *binding* for most (if not all) schools. See [Filling out the CommonApp](#Filling out the CommonApp)
 [^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
 [^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the CommonApp, but *does* require it in its own supplemental sections? Whatever.
 [^4]: Unless you're applying to [UChicago](https://www.uchicago.edu/), in which case they [get funky with it](https://collegeadmissions.uchicago.edu/apply/uchicago-supplemental-essay-questions).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NzQ4NDgxOV19
+eyJoaXN0b3J5IjpbLTExNDUwMjI3OTZdfQ==
 -->
