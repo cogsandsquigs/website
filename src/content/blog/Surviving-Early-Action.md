@@ -23,7 +23,7 @@ The next most important thing is to start working on your *personal essay*. See,
 
 [^1]: Early Decision is *binding* for most (if not all) schools.
 [^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
-[^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera.
+[^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera. For some reason, the University of Washington doesn't require an essay in the Writing section of the C.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NjIxOTM5Nl19
+eyJoaXN0b3J5IjpbLTE3MDUyMTM2Nl19
 -->
