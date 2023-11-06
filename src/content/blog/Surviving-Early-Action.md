@@ -22,7 +22,8 @@ The first thing you should do in your sophomore and/or junior year of high schoo
 The next most important thing is to start working on your *personal essay*. See, most colleges[^2] use an application platform called [CommonApp](https://www.commonapp.org/), which requires a personal essay. This essay is then used by most[^3] colleges
 
 [^1]: Early Decision is *binding* for most (if not all) schools.
-[^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the UC Colleges Application
+[^2]: See: [MIT's application](https://apply.mitadmissions.org/apply), the [UC Colleges Application](https://apply.universityofcalifornia.edu), et cetera.
+[^3]: Again, see [MIT's essay questions](https://mitadmissions.org/apply/firstyear/essays-activities-academics/), the [UC Colleges Personal Insight questions](https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/personal-insight-questions.html), et cetera.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM1ODUyNTM5XX0=
+eyJoaXN0b3J5IjpbMTE3NjIxOTM5Nl19
 -->
