@@ -7,7 +7,7 @@ import type { APIRoute } from "astro";
  * The raw JSON cv, as a static endpoint.
  * @returns The raw JSON cv.
  */
-export const get: APIRoute = async () => {
+export const GET: APIRoute = async () => {
 	return {
 		body: JSON.stringify(cv)
 	};

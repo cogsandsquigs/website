@@ -43,6 +43,9 @@ const projectCollection = defineCollection({
 		// A (short) description of the page.
 		description: z.string(),
 
+		// The date the project was made.
+		date: z.coerce.date(),
+
 		// Any tags for the project.
 		tags: z.array(z.string()),
 

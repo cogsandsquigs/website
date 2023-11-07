@@ -1,5 +1,5 @@
 import config from "$config";
-import { getBlogPosts } from "$lib/collections";
+import { getProjects } from "$lib/collections";
 import rss from "@astrojs/rss";
 import type { APIRoute } from "astro";
 
@@ -8,7 +8,7 @@ import type { APIRoute } from "astro";
  * @returns A response which is a string of XML representing the RSS feed for my blog.
  */
 export const GET: APIRoute = async (): Promise<{ body: string }> => {
-	const posts = await getBlogPosts();
+	const posts = await getProjects();
 	return rss({
 		title: config.title,
 		description: config.description,
@@ -17,7 +17,7 @@ export const GET: APIRoute = async (): Promise<{ body: string }> => {
 			title: post.data.title,
 			pubDate: post.data.date,
 			description: post.data.description,
-			link: `/blog/${post.slug}`
+			link: `/projects/${post.slug}`
 		})),
 		customData: "<language>en-us</language>"
 	});
