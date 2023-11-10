@@ -116,6 +116,12 @@ export default defineConfig({
 						required: true
 					},
 					{
+						type: "datetime",
+						name: "date",
+						label: "Date Created",
+						required: true
+					},
+					{
 						type: "string",
 						name: "git",
 						label: "Git",
