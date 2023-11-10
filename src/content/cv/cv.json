@@ -48,21 +48,21 @@
 			"area": "General Education",
 			"courses": [],
 			"endDate": "2024-05-29",
-			"institution": "Lane Tech HS",
-			"score": "5.17",
-			"startDate": "2020-08-08",
-			"studyType": "General Education",
-			"url": "https://lanetech.org/"
-		},
-		{
-			"area": "General Education",
-			"courses": [],
-			"endDate": "2024-05-29",
 			"institution": "Loyola University Chicago",
 			"score": "4.0",
 			"startDate": "2022-08-08",
 			"studyType": "Dual Credit / College Credit",
 			"url": "https://www.luc.edu/dualcredit/"
+		},
+		{
+			"area": "General Education",
+			"courses": [],
+			"endDate": "2024-05-29",
+			"institution": "Lane Tech HS",
+			"score": "5.17",
+			"startDate": "2020-08-08",
+			"studyType": "General Education",
+			"url": "https://lanetech.org/"
 		}
 	],
 	"interests": [
