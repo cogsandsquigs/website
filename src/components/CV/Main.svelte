@@ -104,7 +104,7 @@
 				</div>
 
 				<p class="my-0">
-					Achieved my {education.studyType} with a (weighted) GPA of {education.score}
+					{education.studyType} - GPA of {education.score}
 				</p>
 
 				{#if education.courses.length > 0}
