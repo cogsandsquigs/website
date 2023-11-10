@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: Dotbak
 description: A dotfile synchronizer for my dotfiles
 git: 'https://github.com/cogsandsquigs/dotbak'
@@ -14,11 +14,11 @@ The current methods were always too tedious and time-consuming to update my dotf
 
 With `dotbak`, I can run a single command, `dotbak sync`, to update my dotfiles *right where they are in the filesystem!* I don't need to run [something like](https://www.chezmoi.io/quick-start/#start-using-chezmoi-on-your-current-machine) `chezmoi cd && git add . && git commit -m "Dotfile update"`. Instead, It's just one command.
 
-You might wonder why I would go through making my own solution when there are probably other solutions that would work. After all, why reinvent the wheel?\
+You might wonder why I would go through making my solution when there are probably other solutions that would work. After all, why reinvent the wheel?\
 \
 For one, I want to get experience making something that would impact people, even if that person is just me. The process of creating is always something that I can learn from, and I don't want to just use a solution that I don't learn anything from.
 
-This brings me to my second point, which is that I want to *understand* the solution I'm given. If I don't understand how something works, then why use it? What if it breaks, or ruins my system, or is feature-incomplete (for me, at least)? With my own home-grown solution, I can make all the features I need, and patch all the fixes I want when I want. 
+This brings me to my second point, which is that I want to *understand* the solution I'm given. If I don't understand how something works, then why use it? What if it breaks, or ruins my system, or is feature-incomplete (for me, at least)? With a home-grown solution, I can make all the features I need, and patch all the fixes I want when I want. 
 
 Right now, this project is mostly complete. In the future, I may add more features like automatic synchronization in the background (using some kind of daemon), but that's only if I have the time, energy, and need for it. Otherwise, this is mostly done!
 
