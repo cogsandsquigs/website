@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: Jarfe
 description: My JAvascript Rust jsFuck Engine
 date: 2022-10-14T05:00:00.000Z
