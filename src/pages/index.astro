@@ -14,10 +14,7 @@ const { Content } = await index_page.render();
 export const recent_post = await getBlogPosts().then((posts) => posts.slice(0, 1));
 
 // Get a random project.
-export const random_project = await getProjects().then((projects) => {
-	const random_index = Math.floor(Math.random() * projects.length);
-	return projects.slice(random_index, random_index + 1);
-});
+export const recent_project = await getProjects().then((projects) => projects.slice(0, 1));
 ---
 
 <RootLayout>
@@ -32,7 +29,7 @@ export const random_project = await getProjects().then((projects) => {
 	<br />
 	<br />
 
-	<ProjectList projects={random_project} />
+	<ProjectList projects={recent_project} />
 
 	<a href="/projects">{config.languages.en.menu_more ?? "See all projects"} -&gt;</a>
 </RootLayout>

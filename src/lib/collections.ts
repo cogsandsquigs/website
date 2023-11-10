@@ -11,11 +11,11 @@ export const getBlogPosts = async (): Promise<CollectionEntry<"blog">[]> => {
 };
 
 /**
- * Gets all the project posts.
- * @returns the project posts.
+ * Gets all the project posts, ordered by date.
+ * @returns the project posts, ordered from most to least recent.
  */
 export const getProjects = async (): Promise<CollectionEntry<"projects">[]> => {
-	return await getCollection("projects").then((projects) =>
-		projects.filter((project) => !project.data.draft)
-	);
+	return await getCollection("projects")
+		.then((projects) => projects.filter((project) => !project.data.draft))
+		.then((posts) => posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()));
 };
