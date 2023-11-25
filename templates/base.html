@@ -1,3 +1,5 @@
+{% import "macros/seo.html" as seo %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +9,15 @@
 
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
+
+		{% if page and page.title %}
+		<title>{{ config.title }} | {{ page.title }}</title>
+		{% else %}
+		<title>{{ config.title }}</title>
+		{% endif %}
+
+		{{ seo::seo() }}
+
 		{% endblock %}
 	</head>
 
