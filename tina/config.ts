@@ -30,7 +30,6 @@ export default defineConfig({
 
 	schema: {
 		collections: [
-			// TODO: get it to match MDX?
 			{
 				name: "blog",
 				label: "Blog",
@@ -86,7 +85,6 @@ export default defineConfig({
 					},
 				],
 			},
-			// TODO: get it to match MDX?
 			{
 				name: "projects",
 				label: "Projects",
