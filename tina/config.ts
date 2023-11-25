@@ -15,14 +15,14 @@ export default defineConfig({
 		// so that's where to go for edits :3.
 		outputFolder: "admin",
 
-		// This is the path to the public folder, so that Tina knows to put the admin files there.
-		publicFolder: "public",
+		// This is the path to the folder where static assets are held, so that Tina knows to put the admin files there.
+		publicFolder: "static",
 	},
 
 	media: {
 		tina: {
-			// Different from the other `publicFolder`, as this is the path to the assets folder in
-			// Astro, not the public folder in the Tina build.
+			// Different from the other `publicFolder`, as this is the path to the assets folder where
+			// images/other media are held.
 			publicFolder: "static/assets",
 			mediaRoot: "",
 		},
