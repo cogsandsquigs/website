@@ -1,4 +1,3 @@
-{% macro seo() %}
 {% if page and page.title %}
 <meta property="og:title" content="{{ config.title }} | {{ page.title }}" />
 {% else %}
@@ -16,4 +15,3 @@
 <meta property="og:url" content="{{ current_url }}" />
 <meta property="og:locale" content="en-us" />
 <meta property="og:type" content="website" />
-{% endmacro seo %}

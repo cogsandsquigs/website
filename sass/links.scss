@@ -1,7 +1,8 @@
 @use "theme";
 
+// Base styles, applies to all links on all browsers.
 a {
-	text-decoration: underline solid theme.$text 0.1rem;
+	text-decoration: underline solid theme.$primary 0.1rem;
 	text-underline-offset: 0.2rem;
 
 	&:hover {
@@ -28,9 +29,9 @@ a {
 	// the second is the base color.
 	background-image: 
 		// Most inner gradient is the text color
-		linear-gradient(to bottom, theme.$text 50%, theme.$base 0),
+		linear-gradient(to bottom, theme.$primary 50%, theme.$base 0),
 		// Outer gradient is the base color
-		linear-gradient(to bottom, theme.$base 50%, theme.$text 0);
+		linear-gradient(to bottom, theme.$base 50%, theme.$primary 0);
 
 	background-clip: text, border-box;
 	-webkit-background-clip: text, border-box;
@@ -51,17 +52,14 @@ a {
 // Hack to target only firefox from here: https://stackoverflow.com/questions/952861/targeting-only-firefox-with-css
 @-moz-document url-prefix() {
 	a {
-		color: theme.$text; // Set the text color to the text color
+		color: theme.$primary; // Set the text color to the text color
 		background-image: none; // Remove the background image
-
-		text-decoration: underline solid theme.$text 0.1rem;
-		font-weight: normal;
 
 		transition: 250ms;
 
 		&:hover {
+			font-weight: bold;
 			text-decoration-thickness: 0.25rem; // Emphasize the underline
-			font-weight: bold; // Bold the text
 		}
 	}
 }

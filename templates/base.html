@@ -1,5 +1,3 @@
-{% import "macros/seo.html" as seo %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +13,7 @@
 		<title>{{ config.title }}</title>
 		{% endif %}
 
-		{{ seo::seo() }}
+		{% include "partials/seo.html" %}
 
 		<link rel="stylesheet" href="/base.css" />
 

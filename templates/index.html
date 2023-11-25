@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% import "macros/nav.html" as nav %}
 
 {% block head %}
 <link rel="stylesheet" href="/index.css" />
@@ -10,7 +9,7 @@
 
 	<h1 class="title">{{ config.title }}</h1>
 
-	{{ nav::nav() }}
+	{% include "partials/nav.html" %}
 
 </div>
 {% endblock %}
