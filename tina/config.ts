@@ -23,7 +23,7 @@ export default defineConfig({
 		tina: {
 			// Different from the other `publicFolder`, as this is the path to the assets folder in
 			// Astro, not the public folder in the Tina build.
-			publicFolder: "src/assets",
+			publicFolder: "static/assets",
 			mediaRoot: "",
 		},
 	},
@@ -145,9 +145,9 @@ export default defineConfig({
 			{
 				name: "pages",
 				label: "Pages",
-				path: "content/pages",
+				path: "content",
 				match: {
-					include: "**/*",
+					include: "*",
 				},
 				format: "md",
 				fields: [
