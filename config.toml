@@ -1,13 +1,9 @@
-# The URL the site will be built for
-base_url = "https://cogsandsquigs.dev"
+base_url           = "https://cogsandsquigs.dev" # The URL the site will be built for
+build_search_index = true                        # Whether to build a search index to be used later on by a JavaScript library
+compile_sass       = true                        # Whether to automatically compile all Sass files in the sass directory
+minify_html        = true                        # Whether to minify the HTML output
+output_dir         = "build"                     # The output directory that will contain the site build
 
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
-
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
-
-output_dir = "build"
 [markdown]
 	# Whether to do syntax highlighting
 	# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
