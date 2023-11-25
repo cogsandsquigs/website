@@ -1,0 +1,24 @@
+@use "theme.scss";
+
+h1.title {
+	text-align: center;
+	font-size: 8rem;
+	background-image: linear-gradient(
+		45deg,
+		theme.$primary,
+		theme.$secondary,
+		theme.$accent
+	);
+	background-clip: text; // Make the gradient only apply to the text, and not outside of it
+	-webkit-text-fill-color: transparent; // Make the text see-through so we can see the gradient
+}
+
+div.content {
+	top: 0%;
+	height: 100%;
+
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+}
