@@ -5,7 +5,7 @@ title: "About"
 import { Image } from "astro:assets";
 import pfp from "$assets/images/pfp.png";
 
-{/* The PFP that I use on github, as a logo/image thingy here. */}
+{/_ The PFP that I use on github, as a logo/image thingy here. _/}
 
 <Image
 	src={pfp}
@@ -20,4 +20,4 @@ It may be obvious at this point, but I built this whole site from scratch! I rea
 
 Check out the rest of my site for more stuff I'm doing! Or, if it's your thing, take a look at my Github page if you're into looking at someone else's code.
 
-(P.S.: If you're really into my blog n projects n stuff, you might be happy to know that it has an [RSS feed](/blog/rss.xml)! Enjoy live updates of my blog every 1-2 millenia.)
+(P.S.: If you're really into my blog n projects n stuff, you might be happy to know that it has an [RSS feed](/rss.xml)! Enjoy live updates of my blog every 1-2 millenia.)
