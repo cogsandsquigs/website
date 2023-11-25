@@ -1,8 +1,25 @@
-@use "theme.scss";
+@use "theme";
+
+.content {
+	max-width: none; // override the base content class width
+	margin: none; // override the base content class margin
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
 h1.title {
+	// Make the text see-through so we can see the gradient
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+
 	text-align: center;
 	font-size: 8rem;
+	margin-top: -1.5rem; // Move the title up a bit
+
+	// Gradient!
 	background-image: linear-gradient(
 		45deg,
 		theme.$primary,
@@ -10,15 +27,4 @@ h1.title {
 		theme.$accent
 	);
 	background-clip: text; // Make the gradient only apply to the text, and not outside of it
-	-webkit-text-fill-color: transparent; // Make the text see-through so we can see the gradient
-}
-
-div.content {
-	top: 0%;
-	height: 100%;
-
-	display: flex;
-
-	justify-content: center;
-	align-items: center;
 }

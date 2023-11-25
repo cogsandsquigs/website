@@ -1,9 +1,11 @@
 @use "theme";
+@use "links";
 
 // Import fonts
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
+
 html {
-	height: 100svh;
+	height: 100dvh;
 }
 
 body {
@@ -16,66 +18,40 @@ body {
 	height: 100%;
 }
 
-/* LINK STYLES */
-
-a {
-	text-decoration: underline solid theme.$text 0.1rem;
-	text-underline-offset: 0.2rem;
-
-	&:hover {
-		cursor: pointer;
-	}
+// Profile picture
+.pfp {
+	//float-right
+	float: right;
+	margin: 0 0 0 1rem;
+	border-radius: 50%;
+	border: 0.2rem solid theme.$primary;
 }
 
-// Links where on hover the background color slides up from the bottom to change from the base color to the text color,
-// and the text color slides up from the bottom to change from the text color to the base color.
-// This DOES NOT work on firefox! see here: https://bugzilla.mozilla.org/show_bug.cgi?id=1481498. Therefore, there's a
-// fallback below to emphasize the underline.
-a {
-	color: transparent; // Make the text see-through so we can see the background color (animations, see below)
+// Content in a page
+.content {
+	top: 0%;
+	height: 100%;
 
-	// Setting up the background slide animation.
-	display: inline-block;
-	background-size: 100% 200%;
-
-	// linear-gradient(direction, initial color, final color)
-	// The gradient is 50% the base color, and 50% the text color. No
-	// blending inbetween (transition is a hard delineation).
-	// We have 2 background images: the first is the text color, and
-	// the second is the base color.
-	background-image: 
-		// Most inner gradient is the text color
-		linear-gradient(to bottom, theme.$text 50%, theme.$base 0),
-		// Outer gradient is the base color
-		linear-gradient(to bottom, theme.$base 50%, theme.$text 0);
-
-	background-clip: text, border-box;
-	-webkit-background-clip: text, border-box;
-
-	background-position: top;
-
-	transition: background-position 500ms;
-
-	&:hover {
-		// Slides the background down to the bottom, revealing the
-		// color coming up from the bottom.
-		background-position: bottom;
-	}
+	max-width: 65ch; // 65 characters per line, prose standard for tailwindcss
+	margin: 0 auto; // center the div itself
 }
 
-// Fallback for firefox. Emphasizes the underline.
-// TODO: make the above work on firefox
-// Hack to target only firefox from here: https://stackoverflow.com/questions/952861/targeting-only-firefox-with-css
-@-moz-document url-prefix() {
-	a {
-		color: theme.$text;
-		background-image: none;
-		text-decoration: underline solid theme.$text 0.1rem;
+// Navigation
+nav.nav {
+	width: 90%;
 
-		transition: 200ms;
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
 
-		&:hover {
-			text-decoration-thickness: 0.25rem;
-		}
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	li {
+		margin: 0 0.5rem;
 	}
 }

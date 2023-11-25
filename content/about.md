@@ -2,17 +2,7 @@
 title: "About"
 ---
 
-import { Image } from "astro:assets";
-import pfp from "$assets/images/pfp.png";
-
-{/_ The PFP that I use on github, as a logo/image thingy here. _/}
-
-<Image
-	src={pfp}
-	width={150}
-	alt="A pixelated version of myself, used as my Github profile picture"
-	class="float-right m-2 rounded-full border-2 border-primary"
-/>
+<img src="/assets/images/pfp.png" class="pfp" width=150 alt="A pixelated version of myself, used as my Github profile picture"/>
 
 Hey! I'm Ian Pratt, although I go by the online alias _cogsandsquigs_. I program things for fun and profit (although mainly for fun!). Currently, my main project is working on my website, and making it look as brilliant and fancy as possible. It's also a great way to practice my [webdev](/tags/webdev) skills!
 
