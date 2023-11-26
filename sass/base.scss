@@ -1,12 +1,11 @@
 @use "theme";
 @use "links";
+@use "header";
+@use "footer";
 @use "sass:color";
 
 // Import fonts
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
-
-$header-height: 7dvh;
-$footer-height: 3dvh;
 
 html {
 	min-height: 100dvh;
@@ -31,86 +30,12 @@ body {
 	align-items: center;
 }
 
-// Header
-header {
-	height: $header-height;
-	width: 90%;
-	margin: 0 auto; // center the header itself
-
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-
-	// Leftmost item
-	.home-link {
-		padding: 0 1rem 0 0;
-	}
-
-	// Rightmost item
-	nav {
-		padding: 0 0 0 1rem;
-		width: 70%;
-	}
-}
-
-// Navigation
-nav {
-	width: 90%;
-
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	li {
-		margin: 0 0.5rem;
-	}
-}
-
-.home-link {
-	text-decoration: none; // Remove the underline in link from previous styles
-	font-weight: bold;
-
-	text-align: center;
-	font-size: 1.5rem;
-
-	// Make the text see-through so we can see the gradient
-	color: transparent;
-	-webkit-text-fill-color: transparent;
-
-	// Gradient!
-	background-image: linear-gradient(
-		45deg,
-		theme.$primary,
-		theme.$secondary,
-		theme.$accent
-	);
-	background-clip: text; // Make the gradient only apply to the text, and not outside of it
-	background-size: 100% 300%;
-	background-position: top;
-
-	transition: background-position 300ms;
-
-	&:hover {
-		// Slides the background down to the bottom, revealing the
-		// color coming up from the bottom.
-		background-position: bottom;
-	}
-}
-
 // Content in a page
 .content {
 	top: 0%;
-	min-height: calc(100dvh - #{$header-height} - #{$footer-height});
+	min-height: 100dvh - header.$header-height - footer.$footer-height;
 
-	max-width: 65ch; // 65 characters per line, prose standard for tailwindcss
+	width: 65ch; // 65 characters per line, prose standard for tailwindcss
 	margin: 0 auto; // center the div itself
 
 	flex-grow: 1; // Make the content div take up all the space it can
@@ -120,18 +45,23 @@ img {
 	max-width: 100%; // Make it fit within the content div
 }
 
+.page-info {
+	time {
+		color: fade-out(theme.$text, 0.4);
+	}
+}
+
+// Code
+pre {
+	padding: 1rem;
+	border-radius: 0.5rem;
+	overflow-x: auto; // Scroll bar
+}
+
 // Profile picture
 .pfp {
 	float: right;
 	margin: 0 0 0 1rem;
 	border-radius: 100%;
 	border: 0.2rem solid theme.$primary;
-}
-
-// Footer
-footer {
-	height: $footer-height;
-	width: 100%;
-	text-align: center;
-	color: fade-out(theme.$text, 0.5);
 }

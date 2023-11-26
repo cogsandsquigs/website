@@ -10,6 +10,18 @@ compile_sass       = true    # Whether to automatically compile all Sass files i
 minify_html        = true    # Whether to minify the HTML output
 output_dir         = "build" # The output directory that will contain the site build
 
+# The tags taxonomy
+[[taxonomies]]
+	feed = true   # Whether to generate an RSS feed for this taxonomy
+	name = "tags" # The name of the taxonomy
+
+# The series taxonomy
+[[taxonomies]]
+	feed = true     # Whether to generate an RSS feed for this taxonomy
+	name = "series" # The name of the taxonomy
+
+[[taxonomies]]
+
 [markdown]
 	highlight_code  = true      # Whether to do syntax highlighting
 	highlight_theme = "dracula" # The syntax highlighting theme to use

@@ -8,6 +8,7 @@ header {
 .content {
 	max-width: none; // override the base content class width
 	margin: none; // override the base content class margin
+	width: 100%;
 
 	display: flex;
 	flex-direction: column;

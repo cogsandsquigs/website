@@ -1,0 +1,7 @@
+<div class="page-info">
+	{% if page.date %}
+	<time>{{ page.date | date(format="%B %e, %Y")}}</time>
+	{% endif %}
+
+	<p>{{ page.description }}</p>
+</div>

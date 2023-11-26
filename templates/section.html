@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block head %}
+<link rel="stylesheet" href="/section.css">
+{% endblock head %}
+
 {% block content %}
 
 <h1>
@@ -8,8 +12,17 @@
 
 <ul>
 	<!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
-	{% for page in section.pages %}
-	<li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+	{% for page in section.pages | filter(attribute="draft", value=false) | sort(attribute="date") | reverse %}
+
+	<li>
+		<h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
+		{% include "partials/page_info.html" %}
+	</li>
+
+	{% if not loop.last %}
+	<hr />
+	{% endif %}
+
 	{% endfor %}
 </ul>
 
