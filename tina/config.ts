@@ -36,6 +36,7 @@ export default defineConfig({
 				path: "content/blog",
 				match: {
 					include: "**/*",
+					exclude: "_index.md",
 				},
 				format: "md",
 				fields: [
@@ -91,6 +92,7 @@ export default defineConfig({
 				path: "content/projects",
 				match: {
 					include: "**/*",
+					exclude: "_index.md",
 				},
 				format: "md",
 				fields: [
