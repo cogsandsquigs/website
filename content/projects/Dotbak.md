@@ -4,9 +4,10 @@ title: Dotbak
 description: A dotfile synchronizer for my dotfiles
 date: 2023-07-18T05:00:00.000Z
 git: "https://github.com/cogsandsquigs/dotbak"
-tags:
-  - rust
-  - dotfiles
+taxonomies:
+    tags:
+        - rust
+        - dotfiles
 ---
 
 When I made this, I was facing an issue: how do I synchronize my shared environments, my laptop, desktop, and even (home)server? How can I make it as easy as possible to share my dotfiles?

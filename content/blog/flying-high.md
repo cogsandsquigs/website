@@ -2,8 +2,9 @@
 date: "2022-11-27T18:00:00Z"
 description: ""
 series: poetry
-tags:
-  - poetry
+taxonomies:
+    tags:
+        - poetry
 title: Flying high
 draft: true
 ---

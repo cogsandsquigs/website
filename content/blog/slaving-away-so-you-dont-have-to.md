@@ -1,13 +1,14 @@
 ---
 date: "2022-08-05"
 description: Yak-shaving my way to cogsandsquigs/twiboot
-tags:
-  - atmega
-  - bootloader
-  - dev
-  - iot
-  - particle
-  - twiboot
+taxonomies:
+    tags:
+        - atmega
+        - bootloader
+        - dev
+        - iot
+        - particle
+        - twiboot
 title: Slaving away so you don’t have to
 draft: false
 ---

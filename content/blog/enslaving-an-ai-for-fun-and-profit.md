@@ -1,10 +1,11 @@
 ---
 date: "2022-05-23"
 description: Or, how I came up with the name 'cogsandsquigs’
-tags:
-  - dev
-  - gpt-j-6b
-  - ai
+taxonomies:
+    tags:
+        - dev
+        - gpt-j-6b
+        - ai
 title: Enslaving an AI for fun and profit
 draft: false
 ---

@@ -1,10 +1,12 @@
 ---
 date: "2022-12-17T06:00:00Z"
 description: I didn't solve this :(
-series: advent of code 2022
-tags:
-  - advent of code
-  - rust
+taxonomies:
+    series:
+        - advent of code 2022
+    tags:
+        - advent of code
+        - rust
 title: Advent of code - Day 17
 draft: false
 ---

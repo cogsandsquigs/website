@@ -66,17 +66,24 @@ export default defineConfig({
 						required: true,
 					},
 					{
-						type: "string",
-						list: true,
-						name: "tags",
-						label: "Tags",
-						required: true,
-					},
-					{
-						type: "string",
-						name: "series",
-						label: "Series",
-						required: false,
+						type: "object",
+						name: "taxonomies",
+						label: "Taxonomies",
+						fields: [
+							{
+								type: "string",
+								list: true,
+								name: "tags",
+								label: "Tags",
+								required: true,
+							},
+							{
+								type: "string",
+								name: "series",
+								label: "Series",
+								required: false,
+							},
+						],
 					},
 					{
 						type: "rich-text",
@@ -128,11 +135,18 @@ export default defineConfig({
 						required: true,
 					},
 					{
-						type: "string",
-						list: true,
-						name: "tags",
-						label: "Tags",
-						required: true,
+						type: "object",
+						name: "taxonomies",
+						label: "Taxonomies",
+						fields: [
+							{
+								type: "string",
+								list: true,
+								name: "tags",
+								label: "Tags",
+								required: true,
+							},
+						],
 					},
 					{
 						type: "rich-text",

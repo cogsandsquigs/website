@@ -3,10 +3,11 @@ draft: false
 title: Hematite
 description: A Rust Battlesnake I made for fun.
 date: 2023-02-07T05:00:00.000Z
-tags:
-  - rust
-  - battlesnake
-  - ai
+taxonomies:
+    tags:
+        - rust
+        - battlesnake
+        - ai
 git: https://github.com/cogsandsquigs/hematite
 ---
 

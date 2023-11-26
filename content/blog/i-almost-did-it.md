@@ -1,10 +1,12 @@
 ---
 date: "2023-01-04T06:00:00Z"
 description: All except 6...
-series: advent of code 2022
-tags:
-  - status update
-  - advent of code
+taxonomies:
+    series:
+        - advent of code 2022
+    tags:
+        - status update
+        - advent of code
 title: I almost did it!
 draft: false
 ---

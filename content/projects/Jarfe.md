@@ -3,11 +3,12 @@ draft: false
 title: Jarfe
 description: My JAvascript Rust jsFuck Engine
 date: 2022-10-14T05:00:00.000Z
-git: 'https://github.com/cogsandsquigs/jarfe'
-tags:
-  - jsfuck
-  - javascript
-  - rust
+git: "https://github.com/cogsandsquigs/jarfe"
+taxonomies:
+    tags:
+        - jsfuck
+        - javascript
+        - rust
 ---
 
 This was just a silly side-project to make a [JSFuck](https://jsfuck.com/) compiler, in Rust of course! I just wanted something to do, so why not this?

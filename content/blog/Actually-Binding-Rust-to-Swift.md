@@ -2,23 +2,24 @@
 draft: false
 title: (Actually) Binding Rust to Swift
 description: >-
-  Because no-one else thoroughly tells you how to package Swift (not even the
-  docs)
+    Because no-one else thoroughly tells you how to package Swift (not even the
+    docs)
 date: 2023-07-16T05:00:00.000Z
-tags:
-  - macos
-  - ios
-  - xcode
-  - ffi
-  - bindings
-  - uniffi
-  - swift
-  - rust
+taxonomies:
+    tags:
+        - macos
+        - ios
+        - xcode
+        - ffi
+        - bindings
+        - uniffi
+        - swift
+        - rust
 ---
 
 So, about Rust.
 
-It's great and all, but unfortunately, not *every* company supports using Rust directly on their platform (boo! boo Apple!). In my case, it's (surprise, surprise) Apple that doesn't support Rust instead of Swift. *However*, other people have had this problem in the past, and they've created solutions to work around this.
+It's great and all, but unfortunately, not _every_ company supports using Rust directly on their platform (boo! boo Apple!). In my case, it's (surprise, surprise) Apple that doesn't support Rust instead of Swift. _However_, other people have had this problem in the past, and they've created solutions to work around this.
 
 Why am I writing about binding Swift to Rust in the first place? Because for my work, I needed to create an [assembler for a custom CPU](https://github.com/cogsandsquigs/nand7400) (called `nand7400`) that's programmed via an iOS/MacOS app. Besides, bindings are a (theoretically) fun adventure into more low-level concepts, something I wanted to (quote-unquote) enjoy more often.
 
@@ -33,7 +34,7 @@ That's it! The documentation pretty much ends there, and expects you to package 
 To get everything up and running, follow [that guide](https://rhonabwy.com/2023/02/10/creating-an-xcframework/) to set up your dev environment for creating an `XCFramework`. You can use [my own makefile](https://github.com/cogsandsquigs/nand7400/blob/main/Makefile) to set up and compile everything, too, which is shown below. In my case, I have the main Rust library in `nand7400`, the Swift-binding Rust scaffolding code in `nand7400-ffi`, and export the Swift code to `nand7400-ffi-bindings/swift` (I used the YSwift repository's [build script](https://github.com/y-crdt/yswift/blob/main/scripts/build-xcframework.sh) to start this `Makefile`, then tweaked it to my liking and specific setup).
 
 ```make
-# This makefile is used to build the Nand7400 framework for iOS, macOS and Mac Catalyst. To use it, run `make package` in 
+# This makefile is used to build the Nand7400 framework for iOS, macOS and Mac Catalyst. To use it, run `make package` in
 # the root of the repository.
 
 # Rust-specific configuration
@@ -66,11 +67,11 @@ setup-build:
 	@rustup target add x86_64-apple-ios
 #	iOS Simulator (M1)
 	@rustup target add aarch64-apple-ios-sim
-#	iOS Device 
+#	iOS Device
 	@rustup target add aarch64-apple-ios
 #	macOS ARM/M1
 	@rustup target add aarch64-apple-darwin
-#	macOS Intel/x86 
+#	macOS Intel/x86
 	@rustup target add x86_64-apple-darwin
 
 clean:
@@ -118,7 +119,7 @@ build-swift: bind
 	@mkdir -p ${ARTIFACTS_FOLDER}/includes
 	@cp ${BINDINGS_FOLDER}/swift/${FRAMEWORK_NAME}.h ${ARTIFACTS_FOLDER}/includes
 	@cp ${BINDINGS_FOLDER}/swift/${FRAMEWORK_NAME}.modulemap ${ARTIFACTS_FOLDER}/includes/module.modulemap
-	
+
 	@echo "▸ Merging x86 and arm iOS simulator static libraries into a fat static binary..."
 	@mkdir -p ${ARTIFACTS_FOLDER}/ios-simulator/release
 	@lipo -create \
