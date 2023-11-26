@@ -1,4 +1,5 @@
 @use "theme";
+@use "header";
 
 $nav-reveal-initial-delay: 250ms;
 $nav-item-reveal-duration: 750ms;
@@ -27,7 +28,8 @@ header {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	@for $i from 1 through 4 {
+	// Fade in the navigation items one after the other
+	@for $i from 1 through header.$nav-items {
 		nav > ul :nth-child(#{$i}) {
 			opacity: 0;
 			animation: fadeIn $nav-item-reveal-duration ease-in-out;
