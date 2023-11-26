@@ -3,6 +3,7 @@
 @use "header";
 @use "footer";
 @use "page-info";
+@use "responsive";
 @use "sass:color";
 
 // Import fonts
@@ -16,12 +17,6 @@ body {
 	background: theme.$base;
 	color: theme.$text;
 
-	// Set fonts and stuff
-	font-family: "Fira Mono", monospace;
-	text-rendering: optimizeLegibility;
-	font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
-	font-variant-ligatures: contextual;
-
 	margin: 0;
 	padding: 0;
 	min-height: 100dvh;
@@ -29,16 +24,33 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	// Set fonts and stuff
+	font-family: "Fira Mono", monospace;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
+	font-variant-ligatures: contextual;
+
+	// Default font: target mobile screens
+	font-size: 0.875rem; /* 14px */
+
+	// Increase to regular font size at sm breakpoint
+	@media (min-width: responsive.$sm) {
+		font-size: 1rem; /* 16px */
+	}
+
+	// Increase to larger fonts at lg breakpoint
+	@media (min-width: responsive.$lg) {
+		font-size: 1.125rem; /* 18px */
+	}
 }
 
 // Content in a page
 .content {
 	top: 0%;
+	max-width: 65ch; // 65 characters per line, prose standard for tailwindcss
 	min-height: 100dvh - header.$header-height - footer.$footer-height;
-
-	width: 65ch; // 65 characters per line, prose standard for tailwindcss
 	margin: header.$header-height auto 0 auto; // Center the div itself, and avoid content overlay
-
 	flex-grow: 1; // Make the content div take up all the space it can
 
 	h1 {

@@ -5,11 +5,6 @@ $nav-reveal-initial-delay: 250ms;
 $nav-item-reveal-duration: 750ms;
 $nav-item-reveal-between-delay: 100ms;
 
-header {
-	height: 0;
-	width: 0;
-}
-
 .content {
 	max-width: none; // override the base content class width
 	margin: none; // override the base content class margin
@@ -21,10 +16,11 @@ header {
 	align-items: center;
 }
 
-.home-link {
+h1.home-link {
 	text-align: center;
 	font-size: 8rem;
 	margin-top: -1.5rem; // Move the title up a bit
+	margin-bottom: 4rem; // Push the navigation down a bit
 }
 
 @media (prefers-reduced-motion: no-preference) {

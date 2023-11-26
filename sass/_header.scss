@@ -1,4 +1,5 @@
 @use "theme";
+@use "responsive";
 
 $header-height: 7dvh;
 $nav-items: 4; // The number of items in the navigation bar
@@ -38,6 +39,14 @@ header {
 nav {
 	width: 90%;
 
+	// Font sizes
+	font-size: 0.675rem;
+
+	// Increase to regular font size at sm breakpoint
+	@media (min-width: responsive.$sm) {
+		font-size: inherit;
+	}
+
 	ul {
 		list-style: none;
 		padding: 0;
@@ -52,6 +61,10 @@ nav {
 	li {
 		margin: 0 0.5rem;
 	}
+
+	a {
+		text-decoration: none;
+	}
 }
 
 .home-link {
@@ -59,7 +72,6 @@ nav {
 	font-weight: bold;
 
 	text-align: center;
-	font-size: 1.5rem;
 
 	// Make the text see-through so we can see the gradient
 	color: transparent;
@@ -82,5 +94,17 @@ nav {
 		// Slides the background down to the bottom, revealing the
 		// color coming up from the bottom.
 		background-position: bottom;
+	}
+
+	font-size: 0.875rem;
+
+	// Increase to regular font size at sm breakpoint
+	@media (min-width: responsive.$sm) {
+		font-size: 1.25rem;
+	}
+
+	// Increase to larger fonts at lg breakpoint
+	@media (min-width: responsive.$lg) {
+		font-size: 2rem;
 	}
 }
