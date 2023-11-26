@@ -37,7 +37,7 @@ body {
 	min-height: 100dvh - header.$header-height - footer.$footer-height;
 
 	width: 65ch; // 65 characters per line, prose standard for tailwindcss
-	margin: 0 auto; // center the div itself
+	margin: header.$header-height auto 0 auto; // Center the div itself, and avoid content overlay
 
 	flex-grow: 1; // Make the content div take up all the space it can
 }
