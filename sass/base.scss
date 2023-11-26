@@ -1,5 +1,6 @@
 @use "theme";
 @use "links";
+@use "sass:color";
 
 // Import fonts
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
@@ -115,6 +116,10 @@ nav {
 	flex-grow: 1; // Make the content div take up all the space it can
 }
 
+img {
+	max-width: 100%; // Make it fit within the content div
+}
+
 // Profile picture
 .pfp {
 	float: right;
@@ -128,4 +133,5 @@ footer {
 	height: $footer-height;
 	width: 100%;
 	text-align: center;
+	color: fade-out(theme.$text, 0.5);
 }
