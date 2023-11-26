@@ -7,6 +7,7 @@ feed_filename = "rss.xml"                   # The name of the RSS feed file
 
 build_search_index = true    # Whether to build a search index to be used later on by a JavaScript library
 compile_sass       = true    # Whether to automatically compile all Sass files in the sass directory
+generate_feed      = true    # Whether to generate an RSS feed
 minify_html        = true    # Whether to minify the HTML output
 output_dir         = "build" # The output directory that will contain the site build
 
