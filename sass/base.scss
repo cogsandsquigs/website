@@ -4,23 +4,35 @@
 // Import fonts
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
 
+$header-height: 7dvh;
+$footer-height: 3dvh;
+
 html {
-	height: 100dvh;
+	min-height: 100dvh;
 }
 
 body {
 	background: theme.$base;
 	color: theme.$text;
+
+	// Set fonts and stuff
 	font-family: "Fira Mono", monospace;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "liga", "tnum", "zero", "ss01", "locl";
+	font-variant-ligatures: contextual;
 
 	margin: 0;
 	padding: 0;
-	height: 100%;
+	min-height: 100dvh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 // Header
 header {
-	height: 7dvh;
+	height: $header-height;
 	width: 90%;
 	margin: 0 auto; // center the header itself
 
@@ -95,10 +107,12 @@ nav {
 // Content in a page
 .content {
 	top: 0%;
-	height: 90dvh;
+	min-height: calc(100dvh - #{$header-height} - #{$footer-height});
 
 	max-width: 65ch; // 65 characters per line, prose standard for tailwindcss
 	margin: 0 auto; // center the div itself
+
+	flex-grow: 1; // Make the content div take up all the space it can
 }
 
 // Profile picture
@@ -107,4 +121,11 @@ nav {
 	margin: 0 0 0 1rem;
 	border-radius: 100%;
 	border: 0.2rem solid theme.$primary;
+}
+
+// Footer
+footer {
+	height: $footer-height;
+	width: 100%;
+	text-align: center;
 }

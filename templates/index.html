@@ -7,12 +7,10 @@
 {# Empty header b/c we have our own set of info in the title #}
 {% block header %}{% endblock %}
 
-{% block body %}
-<div class="content">
+{% block content %}
 
-	<h1 class="title home-link">{{ config.title }}</h1>
+<h1 class="title home-link">{{ config.title }}</h1>
 
-	{% include "partials/nav.html" %}
+{% include "partials/nav.html" %}
 
-</div>
 {% endblock %}
