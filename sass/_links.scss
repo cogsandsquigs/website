@@ -31,14 +31,14 @@ a {
 		// blending inbetween (transition is a hard delineation).
 		// We have 2 background images: the first is the text color, and
 		// the second is the base color.
-		background-image: 
+		background-image:
 		// Most inner gradient is the text color
 			linear-gradient(to bottom, theme.$primary 50%, theme.$base 0),
 			// Outer gradient is the base color
 			linear-gradient(to bottom, theme.$base 50%, theme.$primary 0);
 
-		background-clip: text, border-box;
-		-webkit-background-clip: text, border-box;
+		background-clip: text, padding-box;
+		-webkit-background-clip: text, padding-box;
 
 		background-position: top;
 

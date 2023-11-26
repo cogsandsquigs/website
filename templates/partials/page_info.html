@@ -1,7 +1,17 @@
 <div class="page-info">
-	{% if page.date %}
-	<time>{{ page.date | date(format="%B %e, %Y")}}</time>
-	{% endif %}
+	<div class="quick-info">
+		{% if page.date %}
+		<time>{{ page.date | date(format="%B %e, %Y")}}</time>
+		{% endif %}
 
-	<p>{{ page.description }}</p>
+		{% if page.taxonomies.tags %}
+		<ul class="tags">
+			{% for tag in page.taxonomies.tags %}
+			<li class="tag"><a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">{{ tag }}</a></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	</div>
+
+	<h3>{{ page.description }}</h3>
 </div>

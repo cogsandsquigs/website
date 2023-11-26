@@ -2,6 +2,7 @@
 @use "links";
 @use "header";
 @use "footer";
+@use "page-info";
 @use "sass:color";
 
 // Import fonts
@@ -43,12 +44,6 @@ body {
 
 img {
 	max-width: 100%; // Make it fit within the content div
-}
-
-.page-info {
-	time {
-		color: fade-out(theme.$text, 0.4);
-	}
 }
 
 // Code
