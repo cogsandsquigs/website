@@ -18,25 +18,31 @@ body {
 	height: 100%;
 }
 
-// Profile picture
-.pfp {
-	float: right;
-	margin: 0 0 0 1rem;
-	border-radius: 100%;
-	border: 0.2rem solid theme.$primary;
-}
+// Header
+header {
+	height: 7dvh;
+	width: 90%;
+	margin: 0 auto; // center the header itself
 
-// Content in a page
-.content {
-	top: 0%;
-	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 
-	max-width: 65ch; // 65 characters per line, prose standard for tailwindcss
-	margin: 0 auto; // center the div itself
+	// Leftmost item
+	.home-link {
+		padding: 0 1rem 0 0;
+	}
+
+	// Rightmost item
+	nav {
+		padding: 0 0 0 1rem;
+		width: 70%;
+	}
 }
 
 // Navigation
-nav.nav {
+nav {
 	width: 90%;
 
 	ul {
@@ -53,4 +59,52 @@ nav.nav {
 	li {
 		margin: 0 0.5rem;
 	}
+}
+
+.home-link {
+	text-decoration: none; // Remove the underline in link from previous styles
+	font-weight: bold;
+
+	text-align: center;
+	font-size: 1.5rem;
+
+	// Make the text see-through so we can see the gradient
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+
+	// Gradient!
+	background-image: linear-gradient(
+		45deg,
+		theme.$primary,
+		theme.$secondary,
+		theme.$accent
+	);
+	background-clip: text; // Make the gradient only apply to the text, and not outside of it
+	background-size: 100% 300%;
+	background-position: top;
+
+	transition: background-position 300ms;
+
+	&:hover {
+		// Slides the background down to the bottom, revealing the
+		// color coming up from the bottom.
+		background-position: bottom;
+	}
+}
+
+// Content in a page
+.content {
+	top: 0%;
+	height: 90dvh;
+
+	max-width: 65ch; // 65 characters per line, prose standard for tailwindcss
+	margin: 0 auto; // center the div itself
+}
+
+// Profile picture
+.pfp {
+	float: right;
+	margin: 0 0 0 1rem;
+	border-radius: 100%;
+	border: 0.2rem solid theme.$primary;
 }

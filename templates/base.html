@@ -23,6 +23,12 @@
 	</head>
 
 	<body>
+		<header>
+			{% block header %}
+			<a class="home-link" href="/">{{ config.title }}</a>
+			{% include "partials/nav.html" %}
+			{% endblock %}
+		</header>
 		{% block body %}
 		{% endblock %}
 	</body>
