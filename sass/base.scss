@@ -39,8 +39,8 @@ body {
 		font-size: 1rem; /* 16px */
 	}
 
-	// Increase to larger fonts at lg breakpoint
-	@media (min-width: responsive.$lg) {
+	// Increase to larger fonts at xl-2 breakpoint
+	@media (min-width: responsive.$xl-2) {
 		font-size: 1.125rem; /* 18px */
 	}
 }

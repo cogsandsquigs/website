@@ -7,10 +7,11 @@ $nav-items: 4; // The number of items in the navigation bar
 // Header
 header {
 	height: $header-height;
-	width: 90%;
-	margin: 0 auto; // center the header itself
+	width: 100%;
 	position: fixed;
-	backdrop-filter: blur(1rem); // Make the header see-through but blurry
+
+	// Make the header see-through but blurry
+	backdrop-filter: blur(1rem);
 	// Make the edges fuzzy instead of sharp dileneation between blurry and not
 	mask-image: linear-gradient(
 		0deg,
@@ -25,12 +26,13 @@ header {
 
 	// Leftmost item
 	.home-link {
-		padding: 0 1rem 0 0;
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 
 	// Rightmost item
 	nav {
-		padding: 0 0 0 1rem;
+		padding-right: 1rem;
 		width: 70%;
 	}
 }
@@ -70,7 +72,6 @@ nav {
 .home-link {
 	text-decoration: none; // Remove the underline in link from previous styles
 	font-weight: bold;
-
 	text-align: center;
 
 	// Make the text see-through so we can see the gradient
@@ -103,8 +104,8 @@ nav {
 		font-size: 1.25rem;
 	}
 
-	// Increase to larger fonts at lg breakpoint
-	@media (min-width: responsive.$lg) {
+	// Increase to larger fonts at xl-2 breakpoint
+	@media (min-width: responsive.$xl-2) {
 		font-size: 2rem;
 	}
 }

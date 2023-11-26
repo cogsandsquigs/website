@@ -1,5 +1,6 @@
 @use "theme";
 @use "header";
+@use "responsive";
 
 $nav-reveal-initial-delay: 250ms;
 $nav-item-reveal-duration: 750ms;
@@ -18,7 +19,20 @@ $nav-item-reveal-between-delay: 100ms;
 
 h1.home-link {
 	text-align: center;
-	font-size: 8rem;
+
+	// Font sizes
+	font-size: 6rem;
+
+	// Increase to regular font size at sm breakpoint
+	@media (min-width: responsive.$sm) {
+		font-size: 8rem; /* 16px */
+	}
+
+	// Increase to larger fonts at xl-2 breakpoint
+	@media (min-width: responsive.$xl-2) {
+		font-size: 9rem; /* 18px */
+	}
+
 	margin-top: -1.5rem; // Move the title up a bit
 	margin-bottom: 4rem; // Push the navigation down a bit
 }

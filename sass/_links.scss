@@ -59,7 +59,7 @@ a {
 			color: theme.$primary; // Set the text color to the text color
 			background-image: none; // Remove the background image
 
-			transition: 250ms;
+			transition: font-weight 250ms;
 
 			&:hover {
 				font-weight: bold;

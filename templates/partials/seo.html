@@ -12,6 +12,9 @@
 <meta property="og:description" content="{{ config.description }}" />
 {% endif %}
 
+{% if current_url %}
 <meta property="og:url" content="{{ current_url }}" />
+{% endif %}
+
 <meta property="og:locale" content="en-us" />
 <meta property="og:type" content="website" />
