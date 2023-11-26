@@ -1,5 +1,9 @@
 @use "theme";
 
+$nav-reveal-initial-delay: 250ms;
+$nav-item-reveal-duration: 750ms;
+$nav-item-reveal-between-delay: 100ms;
+
 header {
 	height: 0;
 	width: 0;
@@ -20,4 +24,31 @@ header {
 	text-align: center;
 	font-size: 8rem;
 	margin-top: -1.5rem; // Move the title up a bit
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	@for $i from 1 through 4 {
+		nav > ul :nth-child(#{$i}) {
+			opacity: 0;
+			animation: fadeIn $nav-item-reveal-duration ease-in-out;
+			animation-fill-mode: forwards; // Keep the opacity at 1 after the animation
+
+			// Delay the animation of each item, so that they don't all fade in at once but instead
+			// one after the other
+			animation-delay: $nav-reveal-initial-delay +
+				$nav-item-reveal-between-delay *
+				($i - 1) +
+				$nav-item-reveal-duration *
+				($i - 1);
+		}
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

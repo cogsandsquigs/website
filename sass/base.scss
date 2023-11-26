@@ -40,6 +40,10 @@ body {
 	margin: header.$header-height auto 0 auto; // Center the div itself, and avoid content overlay
 
 	flex-grow: 1; // Make the content div take up all the space it can
+
+	h1 {
+		margin-bottom: 0.5rem;
+	}
 }
 
 img {
