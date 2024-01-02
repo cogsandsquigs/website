@@ -3,7 +3,8 @@ draft: false
 title: Jarfe
 description: My JAvascript Rust jsFuck Engine
 date: 2022-10-14T05:00:00.000Z
-git: "https://github.com/cogsandsquigs/jarfe"
+extra:
+    git: "https://github.com/cogsandsquigs/jarfe"
 taxonomies:
     tags:
         - jsfuck

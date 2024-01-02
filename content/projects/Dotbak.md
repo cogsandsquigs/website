@@ -3,7 +3,8 @@ draft: false
 title: Dotbak
 description: A dotfile synchronizer for my dotfiles
 date: 2023-07-18T05:00:00.000Z
-git: "https://github.com/cogsandsquigs/dotbak"
+extra:
+    git: "https://github.com/cogsandsquigs/dotbak"
 taxonomies:
     tags:
         - rust

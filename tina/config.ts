@@ -129,10 +129,18 @@ export default defineConfig({
 						required: true,
 					},
 					{
-						type: "string",
-						name: "git",
-						label: "Git",
-						required: true,
+						type: "object",
+						name: "extra",
+						label: "Extra",
+						fields: [
+							{
+								type: "string",
+								list: true,
+								name: "git",
+								label: "Repository Link",
+								required: true,
+							},
+						],
 					},
 					{
 						type: "object",

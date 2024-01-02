@@ -8,7 +8,8 @@ taxonomies:
         - rust
         - battlesnake
         - ai
-git: https://github.com/cogsandsquigs/hematite
+extra:
+    git: https://github.com/cogsandsquigs/hematite
 ---
 
 This is a [Battlesnake](https://play.battlesnake.com/) that I made a a while ago, which I still run on [fly.io](https://fly.io/) to this day. Occasionally, I may try to improve it, although I have a few other things going on right now, so it's not top priority.
