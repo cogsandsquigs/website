@@ -76,3 +76,24 @@ pre {
 	border-radius: 100%;
 	border: 0.2rem solid theme.$primary;
 }
+
+// Footnote definitions
+.footnote-definition {
+	// Have all the stuff (superscript number, definition, backlink) be on the same line
+	display: inline-flex;
+
+	// Add extra bottom-margin to the <hr> if it's before a definition
+	hr:has(+ &) {
+		margin-bottom: 1rem;
+	}
+
+	// Remove top padding from <p> so that the footnote definition is on the same line as the superscript number
+	p {
+		margin-top: 0;
+	}
+
+	// Give the superscript right-padding to make it less squished against the definition
+	sup {
+		padding-right: 0.5rem;
+	}
+}

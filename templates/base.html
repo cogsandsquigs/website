@@ -18,6 +18,9 @@
 
 		<link rel="stylesheet" href="/base.css" />
 
+		<!-- Fix for the pulldown-cmark crate that's used to build Zola -->
+		<script type="text/javascript" src="/pulldown-cmark-fix.js"></script>
+
 		{% block head %}
 		{% endblock %}
 	</head>
@@ -25,7 +28,7 @@
 	<body>
 		<header>
 			{% block header %}
-			<h3><a class="home-link" href="/">{{ config.title }}</a></h3>
+			<h3><a class=" home-link" href="/">{{ config.title }}</a></h3>
 			{% include "partials/nav.html" %}
 			{% endblock %}
 		</header>
@@ -40,6 +43,7 @@
 			<span>© {{ config.author }} 2019-{{ now() | date(format="%Y") }}</span>
 			{% endblock %}
 		</footer>
+
 	</body>
 
 </html>
