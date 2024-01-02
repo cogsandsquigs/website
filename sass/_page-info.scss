@@ -2,7 +2,8 @@
 @use "sass:color";
 
 .page-info {
-	.quick-info {
+	.quick-info,
+	.after-quick-info {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -14,7 +15,7 @@
 	}
 
 	time {
-		color: fade-out(theme.$text, 0.2);
+		color: theme.$text-dim;
 		min-width: max-content;
 	}
 
@@ -40,6 +41,6 @@
 	}
 
 	h3 {
-		margin-top: 0.25rem;
+		margin: 0.25rem 0;
 	}
 }

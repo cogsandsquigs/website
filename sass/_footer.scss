@@ -7,5 +7,5 @@ footer {
 	height: $footer-height;
 	width: 100%;
 	text-align: center;
-	color: fade-out(theme.$text, 0.5);
+	color: theme.$text-dimmer;
 }
