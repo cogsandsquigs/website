@@ -9,4 +9,4 @@ taxonomies:
     - status update
 ---
 
-I never promised that I'd been 
+I never promised to provide consistent updates to this blog, and here is that un-promise in action. It's not that I hate this blog; on the contrary, I find it one of the more prideful points of this site. However, I never 
