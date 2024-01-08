@@ -10,3 +10,5 @@ taxonomies:
 ---
 
 I never promised to provide consistent updates to this blog, and here is that un-promise in action. It's not that I hate this blog; on the contrary, I find it one of the more prideful points of this site. However, I never 
+
+* I finished submitting my [regular-decision](@/blog/Surviving-Early-Action.md) college applications
