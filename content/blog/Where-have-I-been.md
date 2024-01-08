@@ -21,4 +21,4 @@ Finals week came and went at my school, and while it wasn't too bad, it could ha
 
 ## Projects!
 
-I've been working on a few projects here and there, which you may see on this website! I finally added links to the repositories hosting the projects on the [projects page]().
+I've been working on a few projects here and there, which you may see on this website! I finally added links to the repositories hosting the projects on the [projects page](/projects).
