@@ -21,4 +21,4 @@ Finals week came and went at my school, and while it wasn't too bad, it could ha
 
 ## Projects!
 
-I've been working on a few projects here and there, which you may see on this website! I finally added links to the repositories hosting the projects on the [projects page](/projects) as well as other (mostly invisible) issues that have been bugging me for a bit. Besides private projects, the biggest endeavour was releasing new versions of [dotbak](@/projects/Dotbak.md)!
+I've been working on a few projects here and there, which you may see on this website! I finally added links to the repositories hosting the projects on the [projects page](/projects) as well as other (mostly invisible) issues that have been bugging me for a bit. Besides private projects, the biggest endeavor was releasing new versions of [dotbak](@/projects/Dotbak.md). As of writing, the latest release is v0.3.2, which includes major UI improvements, synchronization fixes, refactors, and more! Go check it out on [crates.io](https://crates.io/crates/dotbak) or install it with cargo install dotbak.
