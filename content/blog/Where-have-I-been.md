@@ -9,4 +9,4 @@ taxonomies:
     - status update
 ---
 
-I never promised that I've been 
+I never promised that I'd been 
