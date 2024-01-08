@@ -22,3 +22,13 @@ Finals week came and went at my school, and while it wasn't too bad, it could ha
 ## Projects!
 
 I've been working on a few projects here and there, which you may see on this website! I finally added links to the repositories hosting the projects on the [projects page](/projects) as well as other (mostly invisible) issues that have been bugging me for a bit. Besides private projects, the biggest endeavor was releasing new versions of [dotbak](@/projects/Dotbak.md). As of writing, the latest release is v0.3.2, which includes major UI improvements, synchronization fixes, refactors, and more! Go check it out on [crates.io](https://crates.io/crates/dotbak) or install it with cargo install dotbak.
+
+## Part-time Job
+
+I've landed myself a part-time job recently, which is awesome: now I have more money to spend on \~\~apple hardware\~\~ \~\~snacks :3\~\~ responsible things an adult would spend on. However, this will take up a lot of my free time, which means slower (if you can even imagine) progress on development and posts. Therefore, don't expect anything big until I either get a college update (!!) or have a major change.
+
+## Being a capital-G Gamer
+
+I played playing Portal and Portal 2 for the first time in December, and it was really fun. I liked the puzzle-platformer-style challenges reminiscent of other platformers like Celeste as well as the very smooth graphics that a decades-old game on modern hardware offers. I know it's crazy that I haven't played it yet, but that's who I am. I've also started [Portal Revolution](https://store.steampowered.com/app/601360/Portal_Revolution/), a free-to-play mod that's really, really good and bridges the gap between Portal and Portal 2 in terms of story. I'm looking forward to playing it in the future.
+
+Overall, I'm mostly satisfied with the state of my life so far, and I'm hoping that this post explains why I haven't posted about Advent of Code this year, like even at all (don't worry, I did it, it was fun). Now if you'll excuse me, I have some business (see the above) to attend to.
