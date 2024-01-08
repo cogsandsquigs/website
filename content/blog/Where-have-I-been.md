@@ -25,7 +25,7 @@ I've been working on a few projects here and there, which you may see on this we
 
 ## Part-time Job
 
-I've landed myself a part-time job recently, which is awesome: now I have more money to spend on \~\~apple hardware\~\~ \~\~snacks :3\~\~ responsible things an adult would spend on. However, this will take up a lot of my free time, which means slower (if you can even imagine) progress on development and posts. Therefore, don't expect anything big until I either get a college update (!!) or have a major change.
+I've landed myself a part-time job recently, which is awesome: now I have more money to spend on ~~apple hardware~~ ~~snacks :3~~ responsible things an adult would spend on. However, this will take up a lot of my free time, which means slower (if you can even imagine) progress on development and posts. Therefore, don't expect anything big until I either get a college update (!!) or have a major change.
 
 ## Being a capital-G Gamer
 
