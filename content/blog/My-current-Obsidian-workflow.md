@@ -49,4 +49,4 @@ Let's dive right in:
 
 1. Download the [Working copy app](https://workingcopy.app/).
 2. If possible, use the [educational discount](https://workingcopy.app/education/) to activate all features. Otherwise, you'll need to pay for more than what's available in-app.
-3.
+3. Click the **+**
