@@ -34,3 +34,14 @@ We'll start with synching between the desktop and the Macbook:
 > Why? Well, iCloud doesn't play nice with app folders like .git, so we tell iCloud to ignore the directory by adding .nosync at the end.\
 > "Wait!" I hear you ask. "How do we tell git the new git folder without using the `--git-dir` flag or the `GIT_DIR` environment variable?"\
 > Fortunately, that's right on queue...
+
+4\. Run the command echo gitdir: ./.git.nosync > .git.
+
+> Here's a cool trick: Having a file named .git at the root of your git repository with the contents gitdir: /path/to/gitdir will automatically tell git to look there for the repository. How cool is that!\
+> (Thanks to [this answer](https://stackoverflow.com/a/5338153) on stackoverflow for this cool hack!)
+
+5\. Create a .gitignore with the contents .git.nosync: echo .git.nosync > .gitignore.
+
+6\. Commit, push, and pull for good measure.
+
+7\. Done!
