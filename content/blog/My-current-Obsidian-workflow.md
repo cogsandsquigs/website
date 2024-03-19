@@ -58,3 +58,5 @@ Let's dive right in:
 ## Wrapping up
 
 This is pretty much my workflow. I've set up some automation to synchronize my Obsidian vault on my iPhone whenever I use it with Shortcuts, but you don't have to. It's pretty neat that this all works the way it does, with minimal conflicts to boot (though there will still be some)!
+
+Overall, I love obsidian, and if synching were free, none of this would be needed. However, I understand that they need to have some revenue to continue developing this app for free. Kudos to them for making this app in the first place --- I haven't found anything that compares yet! 
