@@ -31,4 +31,6 @@ We'll start with synching between the desktop and the Macbook:
 2. Create, commit, and push a git repo there to your desired repository host.
 3. Rename the .git folder to .git.nosync via the command mv .git .git.nosync.
 
-> Why? Well, iCloud doesn't play nice with app folders like .git, so 
+> Why? Well, iCloud doesn't play nice with app folders like .git, so we tell iCloud to ignore the directory by adding .nosync at the end.\
+> "Wait!" I hear you ask. "How do we tell git the new git folder without using the `--git-dir` flag or the `GIT_DIR` environment variable?"\
+> Fortunately, that's right on queue...
