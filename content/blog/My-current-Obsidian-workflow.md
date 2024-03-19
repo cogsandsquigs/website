@@ -35,11 +35,13 @@ We'll start with synching between the desktop and the Macbook:
 6. Commit, push, and pull for good measure.
 7. Done!
 
-> What does all this do? Well, iCloud doesn't play nice with app folders like .git, so we tell iCloud to ignore the directory by adding .nosync at the end.\
-> "Wait!" I hear you ask. "How do we tell git the new git folder without using the `--git-dir` flag or the `GIT_DIR` environment variable?"\
-> Well here's a cool trick: Having a file named `.git` at the root of your git repository with the contents `gitdir: /path/to/gitdir` will automatically tell git to look there for the repository. How cool is that!\
-> (Thanks to [this answer](https://stackoverflow.com/a/5338153) on stackoverflow for this cool hack!)
-> Now for the phone...
+What does all this do? Well, iCloud doesn't play nice with app folders like .git, so we tell iCloud to ignore the directory by adding .nosync at the end.
+
+"Wait!" I hear you ask. "How do we tell git the new git folder without using the `--git-dir` flag or the `GIT_DIR` environment variable?"
+
+Well here's a cool trick: Having a file named `.git` at the root of your git repository with the contents `gitdir: /path/to/gitdir` will automatically tell git to look there for the repository. How cool is that! (Thanks to [this answer](https://stackoverflow.com/a/5338153) on stackoverflow for this cool hack!)
+
+Now for the iPhone...
 
 ## Step 3: Abuse the student discounts, kids
 
