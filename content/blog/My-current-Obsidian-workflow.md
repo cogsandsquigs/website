@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: My (current) Obsidian workflow
 description: Of course it's gotta be kind of scuffed
 date: 2024-03-19T05:00:00.000Z
