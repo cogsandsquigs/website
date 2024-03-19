@@ -9,3 +9,4 @@ taxonomies:
     - obsidian
 ---
 
+I *love* using [Obsidian](https://obsidian.md)
