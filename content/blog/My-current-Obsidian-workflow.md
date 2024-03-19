@@ -35,7 +35,7 @@ We'll start with synching between the desktop and the Macbook:
 6. Commit, push, and pull for good measure.
 7. Done!
 
-What does all this do? Well, iCloud doesn't play nice with app folders like `.git`, so we tell iCloud to ignore the directory by adding .nosync at the end.
+What does all this do? Well, iCloud doesn't play nice with app folders like `.git`, so we tell iCloud to ignore the directory by adding `.nosync` at the end.
 
 "Wait!" I hear you ask. "How do we tell git the new git folder without using the `--git-dir` flag or the `GIT_DIR` environment variable?"
 
@@ -46,4 +46,7 @@ Now for the iPhone...
 ## Step 3: Abuse the student discounts, kids
 
 Let's dive right in:
-1\.
+
+1. Download the [Working copy app](https://workingcopy.app/).
+2. If possible, use the [educational discount](https://workingcopy.app/education/) to activate all features. Otherwise, you'll need to pay for more than what's available in-app.
+3.
