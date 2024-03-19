@@ -39,7 +39,7 @@ What does all this do? Well, iCloud doesn't play nice with app folders like `.gi
 
 "Wait!" I hear you ask. "How do we tell git the new git folder without using the `--git-dir` flag or the `GIT_DIR` environment variable?"
 
-Well here's a cool trick: Having a file named `.git` at the root of your git repository with the contents `gitdir: /path/to/gitdir` will automatically tell git to look there for the repository. How cool is that! (Thanks to [this answer](https://stackoverflow.com/a/5338153) on stackoverflow for this cool hack!)
+Well here's a cool trick: Having a file named `.git` at the root of your git repository with the contents `gitdir: /path/to/gitdir` will automatically tell git to look there for the repository. How cool is that! (Thanks to [this answer](https://stackoverflow.com/a/5338153) on StackOverflow for this cool hack!)
 
 Now for the iPhone...
 
@@ -47,6 +47,14 @@ Now for the iPhone...
 
 Let's dive right in:
 
-1. Download the [Working copy app](https://workingcopy.app/).
+1. Download the [Working Copy app](https://workingcopy.app/).
 2. If possible, use the [educational discount](https://workingcopy.app/education/) to activate all features. Otherwise, you'll need to pay for more than what's available in-app.
-3. Click the **+**
+3. Click the **+**, then navigate to your Obsidian vault in the Obsidian app folder and select it.
+4. Inside the repository (click on the new selection named \<your vault name> if it doesn't automatically redirect you), select Repository Status and Configuration > Configuration 
+5. Set the setting .git location to Working Copy. This means that Working Copy won't read the .git file (which will cause problems), but instead will store the git directory in its own special location.
+6. (Only for those with the Obsidian Git plugin) Open your vault on your phone, go to Settings (the gear icon) > Community Plugins > Git > Disable on this device, and turn it on. This prevents Obsidian from freaking out because it's trying to access git on an iPhone.
+7. Done!
+
+## Wrapping up
+
+This is pretty much my workflow. I've set up some automation to synchronize my Obsidian vault on my iPhone whenever I use it with Shortcuts, but you don't have to. It's pretty neat that this all works the way it does, with minimal conflicts to boot (though there will still be some)!
