@@ -9,4 +9,4 @@ taxonomies:
     - obsidian
 ---
 
-I *love* using [Obsidian](https://obsidian.md). It's one of the best note-taking/organizational/study apps I've ever used. Why? And how? Because it's the VSCode of note-taking apps. You get a marketplace of plugins, with local text-based storage, awesome themes, and more. The only problem is... [you gotta pay for synching](https://obsidian.md/sync).
+I *love* using [Obsidian](https://obsidian.md). It's one of the best note-taking/organizational/study apps I've ever used. Why? And how? Because it's the VSCode of note-taking apps. You get a marketplace of plugins, with local text-based storage, awesome themes, and more. The only problem is... [you gotta pay for synching](https://obsidian.md/sync). 
