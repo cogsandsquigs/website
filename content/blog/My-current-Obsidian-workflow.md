@@ -39,8 +39,7 @@ We'll start with synching between the desktop and the Macbook:
 > "Wait!" I hear you ask. "How do we tell git the new git folder without using the `--git-dir` flag or the `GIT_DIR` environment variable?"\
 > Well here's a cool trick: Having a file named `.git` at the root of your git repository with the contents `gitdir: /path/to/gitdir` will automatically tell git to look there for the repository. How cool is that!\
 > (Thanks to [this answer](https://stackoverflow.com/a/5338153) on stackoverflow for this cool hack!)
-
-Now for the phone...
+> Now for the phone...
 
 ## Step 3: Abuse the student discounts, kids
 
