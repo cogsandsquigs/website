@@ -15,7 +15,12 @@ Knowing me, I hate paying when I don't have to. So, what to do? Why, abuse free 
 
 ## Step 1: iCloud Drive
 
-I currently have a desktop, Macbook Pro (m3 pro model ❤️), and iPhone. With iCloud Drive, it's easy to synchronize my vault:
+I currently have a desktop, a Macbook Pro (the M3 Pro model ❤️), and an iPhone. With iCloud Drive, it's easy to synchronize my vault between the latter two:
 
 1. Open Obsidian on your iPhone. Tap Create new vault, name it, and then turn the setting Store in iCloud on.
-2. This should create an app folder for Obsidian in your iCloud Drive, with the name of your vault in it. On your Macbook or other Apple device, select Open folder as vault, then select the vault inside the Obsidian app folder.
+2. This should create an app folder for Obsidian (it has the Obsidian icon) in your iCloud Drive, with the name of your vault in it. On your Macbook or other Apple device, select Open folder as vault, then select the vault inside the Obsidian app folder.
+3. Done!
+
+You may notice that my desktop is left out of the equation, however. How could I be so rude? To fix this, we need to introduce every developer's best friend: git!
+
+## Step 2: git commit -am "life is pain"
