@@ -24,3 +24,11 @@ I currently have a desktop, a Macbook Pro (the M3 Pro model ❤️), and an iPho
 You may notice that my desktop is left out of the equation, however. How could I be so rude? To fix this, we need to introduce every developer's best friend: git!
 
 ## Step 2: git commit -am "life is pain"
+
+We'll start with synching between the desktop and the Macbook:
+
+1. Open the terminal, and navigate to the vault location.
+2. Create, commit, and push a git repo there to your desired repository host.
+3. Rename the .git folder to .git.nosync via the command mv .git .git.nosync.
+
+> Why? Well, iCloud doesn
