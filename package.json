@@ -1,26 +1,27 @@
 {
-	"name": "cogsandsquigs-website",
-	"version": "0.0.1",
-	"type": "module",
-	"author": "Ian Pratt <ianjdpratt@gmail.com>",
-	"scripts": {
-		"dev": "astro dev",
-		"dev-tina": "tinacms dev -c 'astro dev'",
-		"start": "astro dev",
-		"build": "tinacms build && astro check && astro build",
-		"preview": "astro preview",
-		"astro": "astro",
-		"clean": "rm -rf package-lock.json tina/__generated__ node_modules build .astro && bun i"
-	},
-	"dependencies": {
-		"@astrojs/check": "^0.5.10",
-		"astro": "^4.6.1"
-	},
-	"devDependencies": {
-		"@tinacms/cli": "^1.5.28",
-		"@types/bun": "^1.0.12",
-		"tinacms": "^1.5.19",
-		"typescript": "^5.4.5",
-		"sharp": "^0.33.3"
-	}
+  "type": "module",
+  "version": "0.0.1",
+  "author": "Ian Pratt <ianjdpratt@gmail.com>",
+  "name": "cogsandsquigs-website",
+  "scripts": {
+    "astro": "astro",
+    "build": "tinacms build && astro check && astro build",
+    "clean": "rm -rf package-lock.json tina/__generated__ node_modules build .astro && bun i",
+    "dev": "astro dev",
+    "dev-tina": "tinacms dev -c 'astro dev'",
+    "preview": "astro preview",
+    "start": "astro dev"
+  },
+  "dependencies": {
+    "astro": "^4.6.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/sitemap": "^3.1.2",
+    "@tinacms/cli": "^1.5.43",
+    "@types/bun": "^1.0.12",
+    "sharp": "^0.33.3",
+    "tinacms": "^1.6.1",
+    "typescript": "^5.4.5"
+  }
 }
