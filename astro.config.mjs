@@ -9,7 +9,7 @@ export default defineConfig({
 	// Image optimization service
 	image: {
 		// Use Squoosh for image optimization instead of the default Sharp service as Sharp is not available with Bun
-		service: squooshImageService({}),
+		service: squooshImageService({ webp: true }),
 	},
 
 	// Integrations / plugins that make my website work better
