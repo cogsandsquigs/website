@@ -1,10 +1,16 @@
 import sitemap from "@astrojs/sitemap";
-import { defineConfig } from "astro/config";
+import { defineConfig, squooshImageService } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
 	// The URL of my website
 	site: "https://cogsandsquigs.dev",
+
+	// Image optimization service
+	image: {
+		// Use Squoosh for image optimization instead of the default Sharp service as Sharp is not available with Bun
+		service: squooshImageService({}),
+	},
 
 	// Integrations / plugins that make my website work better
 	integrations: [
