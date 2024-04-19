@@ -1,0 +1,41 @@
+---
+interface Props {
+	title: string;
+	description: string | undefined;
+}
+
+let { title, description } = Astro.props;
+---
+
+<meta
+	property="og:title"
+	content={title}
+/>
+
+<meta
+	name="description"
+	content={description}
+/>
+<meta
+	property="og:description"
+	content={description}
+/>
+
+<!-- <meta
+	property="og:url"
+	content="{{ current_url }}"
+/> -->
+
+<meta
+	property="og:locale"
+	content="en-us"
+/>
+<meta
+	property="og:type"
+	content="website"
+/>
+
+<meta
+	name="generator"
+	content={Astro.generator}
+/>
