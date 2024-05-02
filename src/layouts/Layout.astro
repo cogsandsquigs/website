@@ -1,5 +1,6 @@
 ---
 import Favicons from "$components/Favicons.astro";
+import Header from "$components/Header.astro";
 import SEO from "$components/SEO.astro";
 
 interface Props {
@@ -12,7 +13,7 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
+	<head class="max-h-full">
 		<meta charset="UTF-8" />
 
 		<link
@@ -35,7 +36,13 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 
-	<body class="bg-base text-foreground">
-		<slot />
+	<body
+		class="flex flex-col items-center prose prose-invert bg-base max-w-full max-h-full"
+	>
+		<Header />
+
+		<div class="max-w-prose min-height-[100dvh] flex-grow">
+			<slot />
+		</div>
 	</body>
 </html>
