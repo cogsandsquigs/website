@@ -5,7 +5,37 @@ import { defineCollection, z } from "astro:content";
 const pageCollection = defineCollection({
 	type: "content", // v2.5.0 and later
 	schema: z.object({
+		title: z.optional(z.string()),
+	}),
+});
+
+const blogCollection = defineCollection({
+	type: "content", // v2.5.0 and later
+	schema: z.object({
+		draft: z.boolean(),
 		title: z.string(),
+		description: z.string(),
+		date: z.date(),
+		taxonomies: z.object({
+			tags: z.string().array(),
+			series: z.optional(z.string()),
+		}),
+	}),
+});
+
+const projectCollection = defineCollection({
+	type: "content", // v2.5.0 and later
+	schema: z.object({
+		draft: z.boolean(),
+		title: z.string(),
+		description: z.string(),
+		date: z.date(),
+		extra: z.object({
+			git: z.string(),
+		}),
+		taxonomies: z.object({
+			tags: z.string().array(),
+		}),
 	}),
 });
 
@@ -13,4 +43,6 @@ const pageCollection = defineCollection({
 //    This key should match your collection directory name in "src/content"
 export const collections = {
 	pages: pageCollection,
+	blog: blogCollection,
+	projects: projectCollection,
 };
