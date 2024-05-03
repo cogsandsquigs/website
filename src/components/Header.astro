@@ -1,7 +1,37 @@
+---
+interface Props {
+	// The height of the header in device view height (dvh)
+	height: number;
+}
+
+const { height } = Astro.props;
+---
+
+<!-- have to use `style` because tailwind w/ astro doesn't support dynamic styles -->
 <header
-	class="flex flex-row items-center justify-between max-w-full backdrop-blur-sm"
+	class="flex flex-row items-center justify-between backdrop-blur-sm fixed w-full"
+	style={"height: " + height + "dvh;"}
 >
-	a
+	<nav class="w-full">
+		<ul
+			class="list-none p-0 m-0 flex flex-row justify-around items-center [&>li]:pl-0"
+		>
+			<li>
+				<h3><a href="/about">About Me</a></h3>
+			</li>
+			<li>
+				<h3><a href="/blog">Blog</a></h3>
+			</li>
+			<li>
+				<h3><a href="/projects">Projects</a></h3>
+			</li>
+			<li>
+				<h3>
+					<a href="https://github.com/cogsandsquigs">My Github</a>
+				</h3>
+			</li>
+		</ul>
+	</nav>
 </header>
 
 <style lang="scss">

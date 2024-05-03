@@ -1,4 +1,10 @@
 {
 	"prettier.prettierPath": "./node_modules/prettier/index.cjs",
-	"circleci.persistedProjectSelection": []
+	"circleci.persistedProjectSelection": [],
+	"tailwindCSS.classAttributes": [
+		"class",
+		"className",
+		"ngClass",
+		"class:list"
+	]
 }

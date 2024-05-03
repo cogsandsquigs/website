@@ -23,8 +23,8 @@ export default defineConfig({
 		tina: {
 			// Different from the other `publicFolder`, as this is the path to the assets folder where
 			// images/other media are held.
-			publicFolder: "public",
-			mediaRoot: "media",
+			publicFolder: "src/assets",
+			mediaRoot: "",
 		},
 	},
 

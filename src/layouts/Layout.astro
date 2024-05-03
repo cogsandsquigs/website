@@ -9,6 +9,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const headerHeight = 7;
 ---
 
 <!doctype html>
@@ -39,9 +40,13 @@ const { title, description } = Astro.props;
 	<body
 		class="flex flex-col items-center prose prose-invert bg-base max-w-full max-h-full"
 	>
-		<Header />
+		<Header height={headerHeight} />
 
-		<div class="max-w-prose min-height-[100dvh] flex-grow">
+		<!-- have to use `style` because tailwind w/ astro doesn't support dynamic styles -->
+		<div
+			class="max-w-prose flex-grow"
+			style={`min-height: ${100 - headerHeight}dvh; margin: ${headerHeight}dvh auto 0 auto`}
+		>
 			<slot />
 		</div>
 	</body>
