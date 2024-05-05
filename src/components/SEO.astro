@@ -7,35 +7,51 @@ interface Props {
 let { title, description } = Astro.props;
 ---
 
+<!-- SEO -->
+<meta charset="UTF-8" />
+
+<link
+	rel="sitemap"
+	href="/sitemap-index.xml"
+/>
+
 <meta
-	property="og:title"
-	content={title}
+	name="viewport"
+	content="width=device-width"
 />
 
 <meta
 	name="description"
 	content={description}
 />
-<meta
-	property="og:description"
-	content={description}
-/>
-
-<!-- <meta
-	property="og:url"
-	content="{{ current_url }}"
-/> -->
 
 <meta
-	property="og:locale"
-	content="en-us"
+	name="generator"
+	content={Astro.generator}
 />
+
+<!-- Open Graph Protocol -->
+<meta
+	property="og:title"
+	content={title}
+/>
+
 <meta
 	property="og:type"
 	content="website"
 />
 
 <meta
-	name="generator"
-	content={Astro.generator}
+	property="og:description"
+	content={description}
+/>
+
+<meta
+	property="og:url"
+	content={Astro.url}
+/>
+
+<meta
+	property="og:locale"
+	content="en-us"
 />
