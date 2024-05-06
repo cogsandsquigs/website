@@ -1,0 +1,31 @@
+---
+import Layout from "$layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const entry = await getCollection("pages").then((pages) =>
+	pages.find((page) => page.slug === "about"),
+);
+const { Content } = await entry?.render();
+---
+
+<Layout title={entry?.data.title}>
+	<Content />
+</Layout>
+
+<style is:inline>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	img {
+		border-radius: 50%;
+		margin: 0 auto;
+		display: block;
+		float: right;
+		margin: 1rem !important;
+		width: 150px;
+
+		/* Originally I would have used `theme("colors.primary")`, but I'm using the hardcoded value instead.*/
+		border: 0.2rem solid theme("colors.primary.DEFAULT");
+	}
+</style>

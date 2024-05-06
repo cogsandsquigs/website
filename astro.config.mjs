@@ -1,5 +1,4 @@
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
 import { defineConfig, squooshImageService } from "astro/config";
 
 // https://astro.build/config
@@ -18,6 +17,5 @@ export default defineConfig({
 	// Integrations / plugins that make my website work better
 	integrations: [
 		sitemap(), // Generates a sitemap.xml file for SEO
-		tailwind(), // Adds Tailwind CSS support
 	],
 });
