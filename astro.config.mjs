@@ -14,6 +14,14 @@ export default defineConfig({
 		}),
 	},
 
+	markdown: {
+		// Example: Switch to use prism for syntax highlighting in Markdown
+		syntaxHighlight: "shiki",
+		shikiConfig: {
+			theme: "nord",
+		},
+	},
+
 	// Integrations / plugins that make my website work better
 	integrations: [
 		sitemap(), // Generates a sitemap.xml file for SEO

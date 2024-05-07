@@ -6,7 +6,7 @@
   "scripts": {
     "astro": "astro",
     "build": "tinacms build && astro check && astro build",
-    "clean": "rm -rf package-lock.json tina/__generated__ node_modules build .astro && bun i",
+    "clean": "rm -rf package-lock.json bun.lockb tina/__generated__ node_modules build .astro && bun i",
     "dev": "astro dev",
     "dev-tina": "tinacms dev -c 'astro dev'",
     "preview": "astro preview",
