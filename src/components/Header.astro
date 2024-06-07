@@ -9,18 +9,18 @@ const { height } = Astro.props;
 
 <!-- have to use `style` because tailwind w/ astro doesn't support dynamic styles -->
 <header
-	class="backdrop-blur-md fixed w-full"
+	class="backdrop-blur-md flex items-center fixed w-full my-auto"
 	style={"height: " + height + "dvh;"}
 >
 	<nav
-		class="w-full flex items-center flex-row [&_h1]:m-0 [&_h1]:p-0 [&_h3]:m-0"
+		class="w-full flex items-center justify-between p-5 [&_h1]:m-0 [&_h1]:p-0 [&_h3]:m-0"
 	>
 		<h1 class="text-2xl flex p-2 col-span-1">
 			<a href="/">Cogs & Squigs</a>
 		</h1>
 
 		<ul
-			class="list-none p-0 m-0 col-start-2 flex flex-row justify-around items-center [&>li]:pl-0"
+			class="list-none p-0 m-0 col-start-2 flex w-1/2 justify-around items-center [&>li]:pl-0"
 		>
 			<li>
 				<h3><a href="/about">About Me</a></h3>
