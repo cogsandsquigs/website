@@ -2,12 +2,12 @@ author      = "Ian Pratt"                          # The default author name use
 description = "My little slice of the blogosphere" # The site description
 title       = "Cogs And Squigs"                    # The site title 
 
-base_url      = "https://cogsandsquigs.dev" # The URL the site will be built for
-feed_filename = "rss.xml"                   # The name of the RSS feed file
+base_url       = "https://cogsandsquigs.dev" # The URL the site will be built for
+feed_filenames = ["rss.xml"]                 # The name of the RSS feed file
 
 build_search_index = true    # Whether to build a search index to be used later on by a JavaScript library
 compile_sass       = true    # Whether to automatically compile all Sass files in the sass directory
-generate_feed      = true    # Whether to generate an RSS feed
+generate_feeds     = true    # Whether to generate an RSS feed
 minify_html        = true    # Whether to minify the HTML output
 output_dir         = "build" # The output directory that will contain the site build
 
