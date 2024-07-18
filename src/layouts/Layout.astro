@@ -1,8 +1,6 @@
 ---
-import Favicons from "$components/Favicons.astro";
 import Header from "$components/Header.astro";
-import SEO from "$components/SEO.astro";
-import "$styles/tailwind.scss";
+import Base from "$layouts/Base.astro";
 
 interface Props {
 	title: string;
@@ -13,32 +11,17 @@ const { title, description } = Astro.props;
 const headerHeight = 7;
 ---
 
-<!doctype html>
-<html lang="en">
-	<head class="max-h-full">
-		<Favicons />
+<Base
+	title={title}
+	description={description}
+>
+	<Header height={headerHeight} />
 
-		<SEO
-			{title}
-			{description}
-		/>
-
-		<title>{title}</title>
-
-		<slot name="head" />
-	</head>
-
-	<body
-		class="flex flex-col items-center prose prose-slate prose-invert bg-base-900 max-w-full max-h-full"
+	<!-- have to use `style` because tailwind w/ astro doesn't support dynamic styles -->
+	<div
+		class="max-w-prose flex-grow"
+		style={`min-height: ${100 - headerHeight}dvh; margin: ${headerHeight}dvh auto 0 auto`}
 	>
-		<Header height={headerHeight} />
-
-		<!-- have to use `style` because tailwind w/ astro doesn't support dynamic styles -->
-		<div
-			class="max-w-prose flex-grow"
-			style={`min-height: ${100 - headerHeight}dvh; margin: ${headerHeight}dvh auto 0 auto`}
-		>
-			<slot />
-		</div>
-	</body>
-</html>
+		<slot />
+	</div>
+</Base>

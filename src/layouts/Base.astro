@@ -1,0 +1,50 @@
+---
+import Favicons from "$components/Favicons.astro";
+import SEO from "$components/SEO.astro";
+import "$styles/tailwind.scss";
+
+interface Props {
+	title: string;
+	description: string | undefined;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head class="max-h-full">
+		<!-- FONTS -->
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<Favicons />
+
+		<SEO
+			{title}
+			{description}
+		/>
+
+		<title>{title}</title>
+
+		<slot name="head" />
+	</head>
+
+	<body
+		class="flex flex-col items-center prose bg-base max-w-full max-h-full h-full"
+	>
+	</body>
+</html>
+
+<slot />

@@ -1,5 +1,31 @@
 ---
-import Layout from "$layouts/Layout.astro";
+import Base from "$layouts/Base.astro";
 ---
 
-<Layout title="Home" />
+<Base
+	title="Home"
+	description={undefined}
+>
+	<div class="">
+		<h1 class="text-8xl">Cogs And Squigs</h1>
+
+		<ul
+			class="list-none p-0 m-0 col-start-2 flex w-1/2 justify-around items-center [&>li]:pl-0"
+		>
+			<li>
+				<h3><a href="/about">About Me</a></h3>
+			</li>
+			<li>
+				<h3><a href="/blog">Blog</a></h3>
+			</li>
+			<li>
+				<h3><a href="/projects">Projects</a></h3>
+			</li>
+			<li>
+				<h3>
+					<a href="https://github.com/cogsandsquigs">My Github</a>
+				</h3>
+			</li>
+		</ul>
+	</div>
+</Base>

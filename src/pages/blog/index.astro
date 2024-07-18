@@ -1,5 +1,16 @@
 ---
 import Layout from "$layouts/Layout.astro";
+import PageCard from "$components/PageCard.astro";
+import { getCollection } from "astro:content";
+
+const pageEntries = await getCollection("blog");
 ---
 
-<Layout title="Blog" />
+<Layout
+	title="Blog"
+	description={undefined}
+>
+	<div class="space-y-2">
+		{pageEntries.map((entry) => <PageCard entry />)}
+	</div>
+</Layout>
