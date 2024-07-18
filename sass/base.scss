@@ -57,9 +57,11 @@ body {
 		margin-bottom: 0.5rem;
 	}
 
-    p, li, blockquote {
-      line-height: round(24 / 14),
-  } 
+	p,
+	li,
+	blockquote {
+		line-height: round(24 / 14);
+	}
 }
 
 img {
