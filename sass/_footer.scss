@@ -8,4 +8,7 @@ footer {
 	width: 100%;
 	text-align: center;
 	color: theme.$text-dimmer;
+	& > * + * {
+		margin-left: 2rem;
+	}
 }
