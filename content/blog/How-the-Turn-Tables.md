@@ -19,4 +19,4 @@ But what you probably don't know is that I *also* applied internationally. Yes, 
 
 ANYWAYS, in January of this year I got back a notification from imperial: I had a *conditional* offer! If I got all 5s on my APs and reached 2 in STEP 2, I could make it in! Suffice to say, I infact got in.
 
-However, it's not as simple as just getting in and going: Remember, I also applied to *US* colleges, and I "officially" decided on U
+However, it's not as simple as just getting in and going: Remember, I also applied to *US* colleges, and I "officially" decided on UMaryland. I didn't know about Imperial until
