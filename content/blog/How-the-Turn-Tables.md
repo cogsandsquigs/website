@@ -19,4 +19,6 @@ But what you probably don't know is that I *also* applied internationally. Yes, 
 
 ANYWAYS, in January of this year I got back a notification from imperial: I had a *conditional* offer! If I got all 5s on my APs and reached 2 in STEP 2, I could make it in! Suffice to say, I infact got in.
 
-However, it's not as simple as just getting in and going: Remember, I also applied to *US* colleges, and I "officially" decided on UMaryland. I didn't know about Imperial until *August*. That's because results for the STEP 2 come out August 15th (at least in 2024), and so I waited.
+However, it's not as simple as just getting in and going: Remember, I also applied to *US* colleges, and I "officially" decided on UMaryland. I didn't know about Imperial until *August*. That's because results for the STEP 2 come out August 15th (at least in 2024), and so I waited. But because I accepted Maryland, I needed to move in the 23rd of August, which meant I planned to leave the 22nd. Therefore, I had a less-than-a-week turnaround to get out of Maryland and into Imperial.
+
+Seeing that, as of writing, it's the 25th and I'm *not* in Maryland right now, I must be successful. But how? Well, thanks to a flurry of activity, numerous rounds of begging, and the wise choice of planning ahead, I was able to recieve expedited proof of enrollement from Imperial, and then use that to simultaneously apply for my visa *and* unenroll from Maryland.
