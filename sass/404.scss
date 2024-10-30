@@ -1,22 +1,22 @@
 @use "responsive";
 
 h1 {
-	// Font sizes
-	font-size: 6rem;
+    // Font sizes
+    font-size: 6rem;
 
-	// Increase to regular font size at sm breakpoint
-	@media (min-width: responsive.$sm) {
-		font-size: 8rem; /* 16px */
-	}
+    // Increase to regular font size at sm breakpoint
+    @media (min-width: responsive.$sm) {
+        font-size: 8rem; /* 16px */
+    }
 
-	// Increase to larger fonts at xl-2 breakpoint
-	@media (min-width: responsive.$xl-2) {
-		font-size: 9rem; /* 18px */
-	}
+    // Increase to larger fonts at xl-2 breakpoint
+    @media (min-width: responsive.$xl-2) {
+        font-size: 9rem; /* 18px */
+    }
 }
 
 .content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

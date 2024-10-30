@@ -1,123 +1,123 @@
 {
-	"awards": [
-		{
-			"awarder": "CyberStart",
-			"date": "2023-11-09",
-			"summary": "As taken from the badge's description: \"Students earn this award by gaining at least 100,000 points in CyberStart through the CyberStart America program, showing that they are among the most curious, tenacious and quick learners of their age group. This achievement shows that the student has made excellent progress in a comprehensive breadth of skills, with exceptional traits to succeed in further cybersecurity training. Topics they have studied include: steganography, networking, code-breaking, Python programming, and digital forensics.\"",
-			"title": "CyberStart Gold"
-		},
-		{
-			"awarder": "NMSC",
-			"date": "2023-10-13",
-			"summary": "Because of my high 2022 PSAT/NMSQT score, I qualified as a National Merit Semifinalist. I practiced many hours a week every week until the date of the test to earn this score.",
-			"title": "National Merit Semifinalist"
-		},
-		{
-			"awarder": "ICTM",
-			"date": "2023-04-22",
-			"summary": "As part of the Lane Tech Math Team, myself (and fellow juniors) placed at ICTM state, the Illinois state math contest. I led the team with the highest score of 34/40. This required many hours of training and preparation, both in group sessions and individually on my own free time.",
-			"title": "State Algebra 2 Team - 8th Place"
-		},
-		{
-			"awarder": "CCML",
-			"date": "2023-04-13",
-			"summary": "As part of the Lane Tech Math Team, myself (and fellow juniors) placed at CCML contest 5, the City of Chicago Math League. This required many hours of training, both in group sessions and individually on my own free time.",
-			"title": "Algebra 2 Team, Contest 5 - 3rd Place"
-		}
-	],
-	"basics": {
-		"email": "ianjdpratt@gmail.com",
-		"image": "$assets/pfp.png",
-		"label": "Programmer",
-		"location": {},
-		"name": "Ian Pratt",
-		"phone": "",
-		"profiles": [
-			{
-				"network": "Github",
-				"url": "https://github.com/cogsandsquigs",
-				"username": "cogsandsquigs"
-			}
-		],
-		"summary": "A programmer learning everything I can about Math and CS.",
-		"url": "https://cogsandsquigs.gq"
-	},
-	"certificates": [],
-	"education": [
-		{
-			"area": "General Education",
-			"courses": [],
-			"endDate": "2024-05-29",
-			"institution": "Loyola University Chicago",
-			"score": "4.0",
-			"startDate": "2022-08-08",
-			"studyType": "Dual Credit / College Credit",
-			"url": "https://www.luc.edu/dualcredit/"
-		},
-		{
-			"area": "General Education",
-			"courses": [],
-			"endDate": "2024-05-29",
-			"institution": "Lane Tech HS",
-			"score": "5.20",
-			"startDate": "2020-08-08",
-			"studyType": "General Education",
-			"url": "https://lanetech.org/"
-		}
-	],
-	"interests": [
-		{
-			"keywords": ["Web Development", "IoT"],
-			"name": "Programming"
-		}
-	],
-	"languages": [
-		{
-			"fluency": "Native speaker",
-			"language": "English"
-		}
-	],
-	"projects": [],
-	"publications": [],
-	"references": [],
-	"skills": [
-		{
-			"keywords": ["C", "C++", "Particle"],
-			"level": "Intermediate - 2+ years",
-			"name": "IoT"
-		},
-		{
-			"keywords": ["HTML", "CSS", "JavaScript"],
-			"level": "Beginner - 2+ years (nonseriously/on and off)",
-			"name": "Web Development"
-		}
-	],
-	"volunteer": [],
-	"work": [
-		{
-			"endDate": "2023-08-19",
-			"highlights": [
-				"TA-ed the CTD IoT Engineering Course.",
-				"TA-ed the CTD CPU Architecture Course and gave lectures.",
-				"Helped to develop software and hardware to assist the teaching of the above courses."
-			],
-			"name": "Windy City Lab",
-			"position": "Intern",
-			"startDate": "2023-06-08",
-			"summary": "Second summer internship at the WCL.",
-			"url": "https://thewcl.com"
-		},
-		{
-			"endDate": "2022-08-19",
-			"highlights": [
-				"Assisted with the Mayo Clinic EHealth project.",
-				"Worked on the interal Loop-Tracks project."
-			],
-			"name": "Windy City Lab",
-			"position": "Intern",
-			"startDate": "2022-06-20",
-			"summary": "Summer internship at the WCL: worked on multiple projects, both internal and for clients.",
-			"url": "https://thewcl.com"
-		}
-	]
+    "awards": [
+        {
+            "awarder": "CyberStart",
+            "date": "2023-11-09",
+            "summary": "As taken from the badge's description: \"Students earn this award by gaining at least 100,000 points in CyberStart through the CyberStart America program, showing that they are among the most curious, tenacious and quick learners of their age group. This achievement shows that the student has made excellent progress in a comprehensive breadth of skills, with exceptional traits to succeed in further cybersecurity training. Topics they have studied include: steganography, networking, code-breaking, Python programming, and digital forensics.\"",
+            "title": "CyberStart Gold"
+        },
+        {
+            "awarder": "NMSC",
+            "date": "2023-10-13",
+            "summary": "Because of my high 2022 PSAT/NMSQT score, I qualified as a National Merit Semifinalist. I practiced many hours a week every week until the date of the test to earn this score.",
+            "title": "National Merit Semifinalist"
+        },
+        {
+            "awarder": "ICTM",
+            "date": "2023-04-22",
+            "summary": "As part of the Lane Tech Math Team, myself (and fellow juniors) placed at ICTM state, the Illinois state math contest. I led the team with the highest score of 34/40. This required many hours of training and preparation, both in group sessions and individually on my own free time.",
+            "title": "State Algebra 2 Team - 8th Place"
+        },
+        {
+            "awarder": "CCML",
+            "date": "2023-04-13",
+            "summary": "As part of the Lane Tech Math Team, myself (and fellow juniors) placed at CCML contest 5, the City of Chicago Math League. This required many hours of training, both in group sessions and individually on my own free time.",
+            "title": "Algebra 2 Team, Contest 5 - 3rd Place"
+        }
+    ],
+    "basics": {
+        "email": "ianjdpratt@gmail.com",
+        "image": "$assets/pfp.png",
+        "label": "Programmer",
+        "location": {},
+        "name": "Ian Pratt",
+        "phone": "",
+        "profiles": [
+            {
+                "network": "Github",
+                "url": "https://github.com/cogsandsquigs",
+                "username": "cogsandsquigs"
+            }
+        ],
+        "summary": "A programmer learning everything I can about Math and CS.",
+        "url": "https://cogsandsquigs.gq"
+    },
+    "certificates": [],
+    "education": [
+        {
+            "area": "General Education",
+            "courses": [],
+            "endDate": "2024-05-29",
+            "institution": "Loyola University Chicago",
+            "score": "4.0",
+            "startDate": "2022-08-08",
+            "studyType": "Dual Credit / College Credit",
+            "url": "https://www.luc.edu/dualcredit/"
+        },
+        {
+            "area": "General Education",
+            "courses": [],
+            "endDate": "2024-05-29",
+            "institution": "Lane Tech HS",
+            "score": "5.20",
+            "startDate": "2020-08-08",
+            "studyType": "General Education",
+            "url": "https://lanetech.org/"
+        }
+    ],
+    "interests": [
+        {
+            "keywords": ["Web Development", "IoT"],
+            "name": "Programming"
+        }
+    ],
+    "languages": [
+        {
+            "fluency": "Native speaker",
+            "language": "English"
+        }
+    ],
+    "projects": [],
+    "publications": [],
+    "references": [],
+    "skills": [
+        {
+            "keywords": ["C", "C++", "Particle"],
+            "level": "Intermediate - 2+ years",
+            "name": "IoT"
+        },
+        {
+            "keywords": ["HTML", "CSS", "JavaScript"],
+            "level": "Beginner - 2+ years (nonseriously/on and off)",
+            "name": "Web Development"
+        }
+    ],
+    "volunteer": [],
+    "work": [
+        {
+            "endDate": "2023-08-19",
+            "highlights": [
+                "TA-ed the CTD IoT Engineering Course.",
+                "TA-ed the CTD CPU Architecture Course and gave lectures.",
+                "Helped to develop software and hardware to assist the teaching of the above courses."
+            ],
+            "name": "Windy City Lab",
+            "position": "Intern",
+            "startDate": "2023-06-08",
+            "summary": "Second summer internship at the WCL.",
+            "url": "https://thewcl.com"
+        },
+        {
+            "endDate": "2022-08-19",
+            "highlights": [
+                "Assisted with the Mayo Clinic EHealth project.",
+                "Worked on the interal Loop-Tracks project."
+            ],
+            "name": "Windy City Lab",
+            "position": "Intern",
+            "startDate": "2022-06-20",
+            "summary": "Summer internship at the WCL: worked on multiple projects, both internal and for clients.",
+            "url": "https://thewcl.com"
+        }
+    ]
 }

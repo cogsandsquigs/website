@@ -7,60 +7,60 @@ $nav-item-reveal-duration: 750ms;
 $nav-item-reveal-between-delay: 100ms;
 
 .content {
-	max-width: none; // override the base content class width
-	margin: none; // override the base content class margin
-	width: 100%;
+    max-width: none; // override the base content class width
+    margin: none; // override the base content class margin
+    width: 100%;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1.home-link {
-	text-align: center;
+    text-align: center;
 
-	// Font sizes
-	font-size: 6rem;
+    // Font sizes
+    font-size: 6rem;
 
-	// Increase to regular font size at sm breakpoint
-	@media (min-width: responsive.$sm) {
-		font-size: 8rem; /* 16px */
-	}
+    // Increase to regular font size at sm breakpoint
+    @media (min-width: responsive.$sm) {
+        font-size: 8rem; /* 16px */
+    }
 
-	// Increase to larger fonts at xl-2 breakpoint
-	@media (min-width: responsive.$xl-2) {
-		font-size: 9rem; /* 18px */
-	}
+    // Increase to larger fonts at xl-2 breakpoint
+    @media (min-width: responsive.$xl-2) {
+        font-size: 9rem; /* 18px */
+    }
 
-	margin-top: -1.5rem; // Move the title up a bit
-	margin-bottom: 4rem; // Push the navigation down a bit
+    margin-top: -1.5rem; // Move the title up a bit
+    margin-bottom: 4rem; // Push the navigation down a bit
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	// Fade in the navigation items one after the other
-	@for $i from 1 through header.$nav-items {
-		nav > ul :nth-child(#{$i}) {
-			opacity: 0;
-			animation: fadeIn $nav-item-reveal-duration ease-in-out;
-			animation-fill-mode: forwards; // Keep the opacity at 1 after the animation
+    // Fade in the navigation items one after the other
+    @for $i from 1 through header.$nav-items {
+        nav > ul :nth-child(#{$i}) {
+            opacity: 0;
+            animation: fadeIn $nav-item-reveal-duration ease-in-out;
+            animation-fill-mode: forwards; // Keep the opacity at 1 after the animation
 
-			// Delay the animation of each item, so that they don't all fade in at once but instead
-			// one after the other
-			animation-delay: $nav-reveal-initial-delay +
-				$nav-item-reveal-between-delay *
-				($i - 1) +
-				$nav-item-reveal-duration *
-				($i - 1);
-		}
-	}
+            // Delay the animation of each item, so that they don't all fade in at once but instead
+            // one after the other
+            animation-delay: $nav-reveal-initial-delay +
+                $nav-item-reveal-between-delay *
+                ($i - 1) +
+                $nav-item-reveal-duration *
+                ($i - 1);
+        }
+    }
 }
 
 @keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

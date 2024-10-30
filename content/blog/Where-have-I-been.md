@@ -4,9 +4,9 @@ title: Where have I been?
 description: What I've been doing since Early Action
 date: 2024-01-08T06:00:00.000Z
 taxonomies:
-  tags:
-    - my life
-    - status update
+    tags:
+        - my life
+        - status update
 ---
 
 I never promised to provide consistent updates to this blog, and here is that un-promise in action. It's not that I hate this blog; on the contrary, I find it one of the more prideful points of this site. However, I can't provide consistent updates because I have many things going on right now, and most likely will until next year or slightly before. Between college apps and finals, projects and part-time jobs, I've got a lot on my plate. So here's my (attempted) explainer for what I've been doing.

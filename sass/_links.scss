@@ -2,69 +2,69 @@
 
 // Base styles, applies to all links on all browsers.
 a {
-	text-decoration: underline solid theme.$primary 0.1rem;
-	text-underline-offset: 0.2rem;
+    text-decoration: underline solid theme.$primary 0.1rem;
+    text-underline-offset: 0.2rem;
 
-	&:hover {
-		cursor: pointer;
-	}
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 // If the user has not requested reduced motion, then apply the animations.
 // This is the default.
 
 @media (prefers-reduced-motion: no-preference) {
-	// Links where on hover the background color slides up from the bottom to change from the base color to the text color,
-	// and the text color slides up from the bottom to change from the text color to the base color.
-	// This DOES NOT work on firefox! see here: https://bugzilla.mozilla.org/show_bug.cgi?id=1481498. Therefore, there's a
-	// fallback below to emphasize the underline.
-	// TODO: make this work on firefox
-	a {
-		color: transparent; // Make the text see-through so we can see the background color (animations, see below)
+    // Links where on hover the background color slides up from the bottom to change from the base color to the text color,
+    // and the text color slides up from the bottom to change from the text color to the base color.
+    // This DOES NOT work on firefox! see here: https://bugzilla.mozilla.org/show_bug.cgi?id=1481498. Therefore, there's a
+    // fallback below to emphasize the underline.
+    // TODO: make this work on firefox
+    a {
+        color: transparent; // Make the text see-through so we can see the background color (animations, see below)
 
-		// Setting up the background slide animation.
-		display: inline-block;
-		background-size: 100% 200%;
+        // Setting up the background slide animation.
+        display: inline-block;
+        background-size: 100% 200%;
 
-		// linear-gradient(direction, initial color, final color)
-		// The gradient is 50% the base color, and 50% the text color. No
-		// blending inbetween (transition is a hard delineation).
-		// We have 2 background images: the first is the text color, and
-		// the second is the base color.
-		background-image:
+        // linear-gradient(direction, initial color, final color)
+        // The gradient is 50% the base color, and 50% the text color. No
+        // blending inbetween (transition is a hard delineation).
+        // We have 2 background images: the first is the text color, and
+        // the second is the base color.
+        background-image:
 		// Most inner gradient is the text color
-			linear-gradient(to bottom, theme.$primary 50%, theme.$base 0),
-			// Outer gradient is the base color
-			linear-gradient(to bottom, theme.$base 50%, theme.$primary 0);
+            linear-gradient(to bottom, theme.$primary 50%, theme.$base 0),
+            // Outer gradient is the base color
+            linear-gradient(to bottom, theme.$base 50%, theme.$primary 0);
 
-		background-clip: text, padding-box;
-		-webkit-background-clip: text, padding-box;
+        background-clip: text, padding-box;
+        -webkit-background-clip: text, padding-box;
 
-		background-position: top;
+        background-position: top;
 
-		transition: background-position 500ms;
+        transition: background-position 500ms;
 
-		&:hover {
-			// Slides the background down to the bottom, revealing the
-			// color coming up from the bottom.
-			background-position: bottom;
-		}
-	}
+        &:hover {
+            // Slides the background down to the bottom, revealing the
+            // color coming up from the bottom.
+            background-position: bottom;
+        }
+    }
 
-	// Fallback for firefox. Emphasizes the underline and bolds the text.
-	// TODO: make the above work on firefox
-	// Hack to target only firefox from here: https://stackoverflow.com/questions/952861/targeting-only-firefox-with-css
-	@-moz-document url-prefix() {
-		a {
-			color: theme.$primary; // Set the text color to the text color
-			background-image: none; // Remove the background image
+    // Fallback for firefox. Emphasizes the underline and bolds the text.
+    // TODO: make the above work on firefox
+    // Hack to target only firefox from here: https://stackoverflow.com/questions/952861/targeting-only-firefox-with-css
+    @-moz-document url-prefix() {
+        a {
+            color: theme.$primary; // Set the text color to the text color
+            background-image: none; // Remove the background image
 
-			transition: 250ms;
+            transition: 250ms;
 
-			&:hover {
-				font-weight: bold;
-				text-decoration-thickness: 0.25rem; // Emphasize the underline
-			}
-		}
-	}
+            &:hover {
+                font-weight: bold;
+                text-decoration-thickness: 0.25rem; // Emphasize the underline
+            }
+        }
+    }
 }

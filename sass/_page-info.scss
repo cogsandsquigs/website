@@ -2,45 +2,45 @@
 @use "sass:color";
 
 .page-info {
-	.quick-info,
-	.after-quick-info {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
+    .quick-info,
+    .after-quick-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
 
-		& * + * {
-			margin: 0 0 0 1rem;
-		}
-	}
+        & * + * {
+            margin: 0 0 0 1rem;
+        }
+    }
 
-	time {
-		color: theme.$text-dim;
-		min-width: max-content;
-	}
+    time {
+        color: theme.$text-dim;
+        min-width: max-content;
+    }
 
-	ul.tags {
-		list-style: none;
-		display: flex;
-		flex-direction: row;
-		align-items: right;
-		justify-content: flex-end;
-		flex-wrap: wrap;
-		column-gap: 0.3rem;
-		row-gap: 0.02rem;
+    ul.tags {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: right;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        column-gap: 0.3rem;
+        row-gap: 0.02rem;
 
-		li.tag > a {
-			display: inline-block;
-			margin: 0.5rem 0 0;
-			padding: 0.2rem 0.5rem;
-			border: 0.1rem solid theme.$primary;
-			border-radius: 0.5rem;
+        li.tag > a {
+            display: inline-block;
+            margin: 0.5rem 0 0;
+            padding: 0.2rem 0.5rem;
+            border: 0.1rem solid theme.$primary;
+            border-radius: 0.5rem;
 
-			text-decoration: none;
-		}
-	}
+            text-decoration: none;
+        }
+    }
 
-	h3 {
-		margin: 0.25rem 0;
-	}
+    h3 {
+        margin: 0.25rem 0;
+    }
 }

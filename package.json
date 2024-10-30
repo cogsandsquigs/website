@@ -1,17 +1,17 @@
 {
-  "name": "cogsandsquigs-website",
-  "version": "0.0.1",
-  "type": "module",
-  "author": "Ian Pratt <ianjdpratt@gmail.com>",
-  "scripts": {
-    "clean": "rm -rf package-lock.json tina/__generated__ node_modules build .astro && bun i",
-    "dev": "zola serve",
-    "dev-tina": "tinacms dev -c 'zola serve'",
-    "build": "tinacms build && zola build"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@tinacms/cli": "^1.6.0",
-    "tinacms": "^1.6.7"
-  }
+    "name": "cogsandsquigs-website",
+    "version": "0.0.1",
+    "type": "module",
+    "author": "Ian Pratt <ianjdpratt@gmail.com>",
+    "scripts": {
+        "clean": "rm -rf package-lock.json tina/__generated__ node_modules build .astro && bun i",
+        "dev": "zola serve",
+        "dev-tina": "tinacms dev -c 'zola serve'",
+        "build": "tinacms build && zola build"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@tinacms/cli": "^1.6.0",
+        "tinacms": "^1.6.7"
+    }
 }

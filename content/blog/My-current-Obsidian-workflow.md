@@ -4,12 +4,12 @@ title: My (current) Obsidian workflow
 description: Of course it's gotta be kind of scuffed
 date: 2024-03-19T05:00:00.000Z
 taxonomies:
-  tags:
-    - my life
-    - obsidian
+    tags:
+        - my life
+        - obsidian
 ---
 
-I *love* using [Obsidian](https://obsidian.md). It's one of the best note-taking/organizational/study apps I've ever used. Why? And how? Because it's the VSCode of note-taking apps. You get a marketplace of plugins, with local text-based storage, awesome themes, and more. The only problem is... [you gotta pay](https://obsidian.md/sync) for synching vaults.
+I _love_ using [Obsidian](https://obsidian.md). It's one of the best note-taking/organizational/study apps I've ever used. Why? And how? Because it's the VSCode of note-taking apps. You get a marketplace of plugins, with local text-based storage, awesome themes, and more. The only problem is... [you gotta pay](https://obsidian.md/sync) for synching vaults.
 
 Knowing me, I hate paying when I don't have to. So, what to do? Why, abuse free services of course!
 
@@ -50,7 +50,7 @@ Let's dive right in:
 1. Download the [Working Copy app](https://workingcopy.app/).
 2. If possible, use the [educational discount](https://workingcopy.app/education/) to activate all features. Otherwise, you'll need to pay for more than what's available in-app.
 3. Click the **+**, then navigate to your Obsidian vault in the Obsidian app folder and select it.
-4. Inside the repository (click on the new selection named \<your vault name> if it doesn't automatically redirect you), select Repository Status and Configuration > Configuration 
+4. Inside the repository (click on the new selection named \<your vault name> if it doesn't automatically redirect you), select Repository Status and Configuration > Configuration
 5. Set the setting .git location to Working Copy. This means that Working Copy won't read the .git file (which will cause problems), but instead will store the git directory in its own special location.
 6. (Only for those with the Obsidian Git plugin) Open your vault on your phone, go to Settings (the gear icon) > Community Plugins > Git > Disable on this device, and turn it on. This prevents Obsidian from freaking out because it's trying to access git on an iPhone.
 7. Done!
@@ -59,4 +59,4 @@ Let's dive right in:
 
 This is pretty much my workflow. I've set up some automation to synchronize my Obsidian vault on my iPhone whenever I use it with Shortcuts, but you don't have to. It's pretty neat that this all works the way it does, with minimal conflicts to boot (though there will still be some)!
 
-Overall, I love obsidian, and if synching were free, none of this would be needed. However, I understand that they need to have some revenue to continue developing this app for free. Kudos to them for making this app in the first place --- I haven't found anything that compares yet! 
+Overall, I love obsidian, and if synching were free, none of this would be needed. However, I understand that they need to have some revenue to continue developing this app for free. Kudos to them for making this app in the first place --- I haven't found anything that compares yet!

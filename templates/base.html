@@ -1,62 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link
-			rel="icon"
-			href="/favicon.ico"
-		/>
+    <head>
+        <link
+            rel="icon"
+            href="/favicon.ico"
+        />
 
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width"
-		/>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width"
+        />
 
-		{% if page and page.title %}
-		<title>{{ config.title }} | {{ page.title }}</title>
-		{% else %}
-		<title>{{ config.title }}</title>
-		{% endif %} {% include "partials/seo.html" %} {% include
-		"partials/favicons.html" %}
+        {% if page and page.title %}
+        <title>{{ config.title }} | {{ page.title }}</title>
+        {% else %}
+        <title>{{ config.title }}</title>
+        {% endif %} {% include "partials/seo.html" %} {% include
+        "partials/favicons.html" %}
 
-		<link
-			rel="stylesheet"
-			href="/base.css"
-		/>
+        <link
+            rel="stylesheet"
+            href="/base.css"
+        />
 
-		<!-- Fix for the pulldown-cmark crate that's used to build Zola -->
-		<script
-			type="text/javascript"
-			src="/pulldown-cmark-fix.js"
-		></script>
+        <!-- Fix for the pulldown-cmark crate that's used to build Zola -->
+        <script
+            type="text/javascript"
+            src="/pulldown-cmark-fix.js"
+        ></script>
 
-		{% block head %} {% endblock %}
-	</head>
+        {% block head %} {% endblock %}
+    </head>
 
-	<body>
-		<header>
-			{% block header %}
-			<h3>
-				<a
-					class="home-link"
-					href="/"
-					>{{ config.title }}</a
-				>
-			</h3>
-			{% include "partials/nav.html" %} {% endblock %}
-		</header>
+    <body>
+        <header>
+            {% block header %}
+            <h3>
+                <a
+                    class="home-link"
+                    href="/"
+                    >{{ config.title }}</a
+                >
+            </h3>
+            {% include "partials/nav.html" %} {% endblock %}
+        </header>
 
-		<div class="content">{% block content %} {% endblock %}</div>
+        <div class="content">{% block content %} {% endblock %}</div>
 
-		<footer>
-			{% block footer %}
-			<span
-				>© {{ config.author }} 2019-{{ now() | date(format="%Y")
-				}}</span
-			>
-			<span><a href="/public-key.asc">GPG key</a></span>
-			{% endblock %}
-		</footer>
-	</body>
+        <footer>
+            {% block footer %}
+            <span
+                >© {{ config.author }} 2019-{{ now() | date(format="%Y")
+                }}</span
+            >
+            <span><a href="/public-key.asc">GPG key</a></span>
+            {% endblock %}
+        </footer>
+    </body>
 </html>
-
