@@ -21,8 +21,6 @@ output_dir         = "build" # The output directory that will contain the site b
 	feed = true     # Whether to generate an RSS feed for this taxonomy
 	name = "series" # The name of the taxonomy
 
-[[taxonomies]]
-
 [markdown]
 	highlight_code  = true      # Whether to do syntax highlighting
 	highlight_theme = "dracula" # The syntax highlighting theme to use
