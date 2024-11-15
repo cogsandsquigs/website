@@ -20,7 +20,7 @@ Flash back to a boring weekend. I was bored, and I got sick of my current userna
 
 And then, I remembered: GPT-3 exists! I could use that to auto-generate some new usernames from existing examples I could pull from my friends and myself!
 
-I quicky ran to [OpenAI’s GPT-3 API page](https://openai.com/api), and to my dismay, there I saw it. The formidable, awful, horrendous…
+I quicky ran to [OpenAI’s GPT-3 API page](https://openai.com/api), and to my dismay, there I saw it. The formidable, awful, horrendous...
 
 _pricing tab_.
 

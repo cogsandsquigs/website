@@ -9,6 +9,7 @@
             "$components/*": ["./src/components/*"],
             "$styles/*": ["./src/styles/*"],
             "$layouts/*": ["./src/layouts/*"],
+            "$assets/*": ["./src/assets/*"],
             "$consts": ["./src/consts.ts"]
         }
     }

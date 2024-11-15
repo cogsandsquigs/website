@@ -2,8 +2,7 @@
 date: "2022-12-17T06:00:00Z"
 description: I didn't solve this :(
 taxonomies:
-    series:
-        - advent of code 2022
+    series: advent of code 2022
     tags:
         - advent of code
         - rust

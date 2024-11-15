@@ -45,15 +45,15 @@ To fix this issue, you'll need to flash the Portenta's bootloader with an extern
 2. Remove the **CN2** jumpers off of the Nucleo debugger. This section may change, so refer to your board's documentation on using the on-board debugger to debug external chips.
 
 3. Connect jumper wires to the **SWD** section (also labeled **CM4**) of the Nucleo debugger. Refer to your board's documentation for more information on where to place these. A picture of the wires are shown below.
-   ![](../../assets/images/nucleo_stlink_swd_wiring.jpeg)
+   ![]($assets/images/nucleo_stlink_swd_wiring.jpeg)
 
 4. Connect the Nucleo debugger to the Portenta. This step is non-trivial, so pay attention! The diagrams below show the respective pinouts of important areas for the two boards.
 
     Nucleo debugger:
-    ![](../../assets/images/nucleo_stlink_pinout_diagram.png)
+    ![]($assets/images/nucleo_stlink_pinout_diagram.png)
 
     Portenta breakout JTAG connector:
-    ![](../../assets/images/portenta_breakout_pinout_diagram.png)
+    ![]($assets/images/portenta_breakout_pinout_diagram.png)
 
 5. In the following order, use the 5 wires to connect these 5 pins from the Nucleo debugger to the Portenta JTAG pins:
 
@@ -64,7 +64,7 @@ To fix this issue, you'll need to flash the Portenta's bootloader with an extern
     - **NRST** (pin 5) to **RESET** (pin 10)
 
     A picture of the setup is shown below:
-    ![](../../assets/images/portenta_breakout_swd_wiring.jpeg)
+    ![]($assets/images/portenta_breakout_swd_wiring.jpeg)
 
 6. Connect **both** the Nucleo debugger and the Portenta to power. Make sure that each cable can transfer data to and from their respective ports.
 
