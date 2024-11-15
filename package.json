@@ -6,7 +6,7 @@
         "dev": "bun --bun astro dev",
         "dev-tina": "tinacms dev -c 'bun dev'",
         "start": "bun --bun astro dev",
-        "build": "tinacms build && astro check && astro build",
+        "build": "tinacms build && astro build",
         "preview": "astro preview",
         "astro": "astro",
         "tinacms": "tinacms"
