@@ -1,0 +1,65 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "$components/FormattedDate.astro";
+import Page from "$layouts/Page.astro";
+type Props = CollectionEntry<"blog">["data"];
+
+const {
+    title,
+    description,
+    date,
+    updated,
+    taxonomies: { tags, series },
+} = Astro.props;
+---
+
+<Page
+    {title}
+    {description}
+>
+    <article class="prose mx-auto">
+        <div class="flex flex-row">
+            <div class="grow justify-start space-y-2">
+                <FormattedDate date={date} />
+                {
+                    updated && (
+                        <div class="">
+                            Last updated at <FormattedDate date={updated} />
+                        </div>
+                    )
+                }
+                <h1 class="mb-0">{title}</h1>
+            </div>
+            <div class="flex flex-col justify-end space-y-2">
+                <div class="flex flex-wrap justify-center gap-2">
+                    {
+                        tags.map((tag) => (
+                            <a
+                                class="badge badge-primary badge-outline no-underline"
+                                href={`/tags/${tag}`}
+                            >
+                                {tag}
+                            </a>
+                        ))
+                    }
+                </div>
+                {
+                    series && (
+                        <div class="flex flex-wrap justify-end">
+                            <a
+                                class="badge badge-primary no-underline"
+                                href={`/series/${series}`}
+                            >
+                                Series: {series}
+                            </a>
+                        </div>
+                    )
+                }
+            </div>
+        </div>
+
+        <hr />
+
+        <slot />
+    </article>
+</Page>

@@ -1,0 +1,28 @@
+---
+import { posts } from "$lib/posts";
+import Page from "$layouts/Page.astro";
+
+const tags = [
+    ...new Set(posts.map((p) => p.data.taxonomies.tags).flat()),
+].sort();
+---
+
+<Page
+    title="Tags"
+    description="All the tags"
+>
+    <section class="prose mx-auto max-w-prose">
+        <div class="flex flex-wrap items-center justify-center gap-3">
+            {
+                tags.map((tag) => (
+                    <a
+                        class="btn btn-outline btn-primary text-2xl no-underline"
+                        href={`/tags/${tag}`}
+                    >
+                        {tag}
+                    </a>
+                ))
+            }
+        </div>
+    </section>
+</Page>

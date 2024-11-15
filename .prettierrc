@@ -4,5 +4,14 @@
     "semi": true,
     "singleAttributePerLine": true,
     "singleQuote": false,
-    "bracketSpacing": true
+    "bracketSpacing": true,
+    "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+    "overrieds": [
+        {
+            "files": "*.astro",
+            "options": {
+                "parser": "astro"
+            }
+        }
+    ]
 }

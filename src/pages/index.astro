@@ -1,0 +1,45 @@
+---
+import Base from "$layouts/Base.astro";
+import GradientText from "$components/GradientText.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "$consts";
+---
+
+<Base
+    title={SITE_TITLE}
+    description={SITE_DESCRIPTION}
+>
+    <div class="hero">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <div class="mb-5 space-y-2">
+                    <h1 class="text-5xl font-bold">
+                        <GradientText>{SITE_TITLE}</GradientText>
+                    </h1>
+                    <h2 class="text-3xl font-thin">{SITE_DESCRIPTION}</h2>
+                </div>
+                <div class="space-x-2">
+                    <a
+                        href="/about"
+                        class="btn btn-outline btn-primary"
+                    >
+                        About
+                    </a>
+
+                    <a
+                        href="/blog"
+                        class="btn btn-outline btn-primary"
+                    >
+                        Blog
+                    </a>
+
+                    <a
+                        href="https://github.com"
+                        class="btn btn-outline btn-primary"
+                    >
+                        Github
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</Base>

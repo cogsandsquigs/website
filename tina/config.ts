@@ -16,14 +16,14 @@ export default defineConfig({
         outputFolder: "admin",
 
         // This is the path to the folder where static assets are held, so that Tina knows to put the admin files there.
-        publicFolder: "static",
+        publicFolder: "public",
     },
 
     media: {
         tina: {
             // Different from the other `publicFolder`, as this is the path to the assets folder where
             // images/other media are held.
-            publicFolder: "static/assets",
+            publicFolder: "public/assets",
             mediaRoot: "",
         },
     },
@@ -33,7 +33,7 @@ export default defineConfig({
             {
                 name: "blog",
                 label: "Blog",
-                path: "content/blog",
+                path: "src/content/blog",
                 match: {
                     include: "**/*",
                     exclude: "_index.md",
@@ -96,7 +96,7 @@ export default defineConfig({
             {
                 name: "projects",
                 label: "Projects",
-                path: "content/projects",
+                path: "src/content/projects",
                 match: {
                     include: "**/*",
                     exclude: "_index.md",
@@ -167,7 +167,7 @@ export default defineConfig({
             {
                 name: "pages",
                 label: "Pages",
-                path: "content",
+                path: "src/content/pages",
                 match: {
                     include: "*",
                 },

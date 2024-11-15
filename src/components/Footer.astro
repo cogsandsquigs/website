@@ -1,0 +1,12 @@
+---
+const today = new Date();
+---
+
+<footer class="flex flex-col items-center justify-items-center">
+    <!-- NOTE: Need `w-[65ch]` so that the `hr` actually is visible + extends to that width -->
+    <div class="prose w-[65ch] max-w-prose py-4">
+        <hr class="" />
+    </div>
+
+    <p>&copy; {today.getFullYear()} Ian Pratt. All rights reserved.</p>
+</footer>

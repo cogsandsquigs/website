@@ -1,0 +1,29 @@
+---
+import PostList from "$components/PostList.astro";
+import Page from "$layouts/Page.astro";
+import { posts } from "$lib/posts";
+
+export async function getStaticPaths() {
+    return [...new Set(posts.map((p) => p.data.taxonomies.tags).flat())].map(
+        (tag) => ({
+            params: { slug: tag },
+            props: { tag },
+        }),
+    );
+}
+
+export interface Props {
+    tag: string;
+}
+
+const { tag } = Astro.props;
+
+const filtered = posts.filter((p) => p.data.taxonomies.tags.includes(tag));
+---
+
+<Page
+    title={`Tag: ${tag}`}
+    description=""
+>
+    <PostList posts={filtered as any} />
+</Page>

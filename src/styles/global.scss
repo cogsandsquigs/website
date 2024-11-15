@@ -1,0 +1,15 @@
+@use "fonts" as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    @include atkinson-hyperlegible-regular;
+}
+
+code,
+pre > code {
+    @include fira-code-regular;
+}

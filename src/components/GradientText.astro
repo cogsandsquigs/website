@@ -1,0 +1,78 @@
+<span id="gradient">
+    <slot />
+</span>
+
+<script>
+    // NOTE: Will never be undefined, as the element is always present
+    const text = document.getElementById("gradient") as HTMLElement;
+
+    document.addEventListener("mousemove", (event) => {
+        let mouseCoords = getRelativePosition(
+            text,
+            event.clientX,
+            event.clientY,
+        );
+
+        let deg = (180 * Math.atan(mouseCoords[1] / mouseCoords[0])) / Math.PI;
+
+        // NOTE: Need to do this so that the gradient doesn't *magically* flip when
+        // the mouse crosses the y-axis.
+        if (mouseCoords[1] < 0 && deg < 0) {
+            deg = 180 + deg;
+        } else if (mouseCoords[1] > 0 && deg > 0) {
+            deg = -180 + deg;
+        }
+
+        text.style?.setProperty("--gradient-deg", `${deg}deg`);
+    });
+
+    function getRelativePosition(
+        elem: HTMLElement,
+        x: number,
+        y: number,
+    ): [number, number] {
+        let elemCoords = getCenterCoords(elem);
+
+        return [elemCoords[0] - x, elemCoords[1] - y];
+    }
+
+    function getCenterCoords(elem: HTMLElement): [number, number] {
+        let elemRect = elem.getBoundingClientRect();
+
+        return [
+            elemRect.left + elem.offsetWidth / 2,
+            elemRect.top + elem.offsetHeight / 2,
+        ];
+    }
+</script>
+
+<style lang="scss">
+    #gradient {
+        --gradient-deg: 45deg;
+
+        color: transparent;
+
+        background-image: linear-gradient(
+            var(--gradient-deg),
+            theme("colors.primary") 0%,
+            theme("colors.secondary") 50%,
+            theme("colors.accent") 100%
+        );
+        background-clip: text; // Make the gradient only apply to the text, and not outside of it
+    }
+
+    // Fix gradient in place
+    @media (prefers-reduced-motion) {
+        #gradient {
+            color: transparent;
+
+            background-image: linear-gradient(
+                45deg,
+                theme("colors.primary") 0%,
+                theme("colors.secondary") 50%,
+                theme("colors.accent") 100%
+            );
+            background-clip: text; // Make the gradient only apply to the text, and not outside of it
+        }
+    }
+</style>

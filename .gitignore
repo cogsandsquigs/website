@@ -1,34 +1,24 @@
-## build output
-build/
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-bun.lockb
-
-## generated types
+# build output
+dist/
+# generated types
 .astro/
 
-## dependencies
+# dependencies
 node_modules/
 
-## logs
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-## environment variables
+
+# environment variables
 .env
 .env.production
 
-## macOS-specific files
+# macOS-specific files
 .DS_Store
 
-## TinaCMS files
-# Ignore generated output
-public/admin
-tina/__generated__/*
-# These files are necessary to keep for TinaCMS to work properly.
-!tina/__generated__/_graphql.json
-!tina/__generated__/_lookup.json
-!tina/__generated__/_schema.json
+# jetbrains setting folder
+.idea/

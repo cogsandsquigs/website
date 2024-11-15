@@ -1,0 +1,76 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "$components/FormattedDate.astro";
+
+type Props = CollectionEntry<"blog">;
+
+const {
+    slug,
+    data: {
+        title,
+        description,
+        date,
+        updated,
+        taxonomies: { tags, series },
+    },
+} = Astro.props;
+---
+
+<div class="card card-bordered max-w-96 bg-base-300 shadow-xl">
+    <div class="card-body">
+        <h2 class="card-title">{title}</h2>
+
+        <section class="flex-grow space-y-1">
+            <p>{description}</p>
+
+            <p class="text-base-content/50">
+                Posted on <FormattedDate {date} />
+            </p>
+            {
+                updated && (
+                    <p class="text-base-content/50">
+                        Updated at <FormattedDate {date} />
+                    </p>
+                )
+            }
+        </section>
+
+        <div
+            class="card-actions mt-2 flex flex-nowrap items-center justify-between"
+        >
+            <div class="flex flex-col space-y-2">
+                <div class="flex flex-wrap justify-center gap-1">
+                    {
+                        tags.map((tag) => (
+                            <a
+                                class="badge badge-secondary badge-outline"
+                                href={`/tags/${tag}`}
+                            >
+                                {tag}
+                            </a>
+                        ))
+                    }
+                </div>
+                {
+                    series && (
+                        <div class="flex flex-wrap justify-center gap-2">
+                            <a
+                                class="badge badge-accent badge-outline"
+                                href={`/series/${series}`}
+                            >
+                                Series: {series}
+                            </a>
+                        </div>
+                    )
+                }
+            </div>
+
+            <a
+                class="btn btn-outline btn-primary"
+                href={`/blog/${slug}`}
+            >
+                Read
+            </a>
+        </div>
+    </div>
+</div>

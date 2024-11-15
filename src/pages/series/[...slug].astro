@@ -1,0 +1,29 @@
+---
+import PostList from "$components/PostList.astro";
+import Page from "$layouts/Page.astro";
+import { posts } from "$lib/posts";
+
+export async function getStaticPaths() {
+    return [...new Set(posts.map((p) => p.data.taxonomies.series))].map(
+        (series) => ({
+            params: { slug: series },
+            props: { series },
+        }),
+    );
+}
+
+export interface Props {
+    series: string;
+}
+
+const { series } = Astro.props;
+
+const filtered = posts.filter((p) => p.data.taxonomies.series == series);
+---
+
+<Page
+    title={`Series: ${series}`}
+    description=""
+>
+    <PostList posts={filtered as any} />
+</Page>

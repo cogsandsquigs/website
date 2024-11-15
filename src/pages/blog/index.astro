@@ -1,0 +1,12 @@
+---
+import { posts } from "$lib/posts";
+import Page from "$layouts/Page.astro";
+import PostList from "$components/PostList.astro";
+---
+
+<Page
+    title="Blog Posts"
+    description="the posts !"
+>
+    <PostList {posts} />
+</Page>
