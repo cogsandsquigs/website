@@ -17,6 +17,24 @@ const blog = defineCollection({
     }),
 });
 
+const projects = defineCollection({
+    type: "content",
+    // Type-check frontmatter using a schema
+    schema: z.object({
+        draft: z.boolean(),
+        title: z.string(),
+        description: z.string(),
+        date: z.coerce.date(),
+        taxonomies: z.object({
+            tags: z.array(z.string()),
+            series: z.coerce.string().optional(),
+        }),
+        extra: z.object({
+            git: z.coerce.string().optional(),
+        }),
+    }),
+});
+
 const pages = defineCollection({
     type: "content",
     // Type-check frontmatter using a schema
@@ -27,4 +45,4 @@ const pages = defineCollection({
     }),
 });
 
-export const collections = { blog, pages };
+export const collections = { blog, pages, projects };

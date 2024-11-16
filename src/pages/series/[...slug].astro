@@ -1,7 +1,7 @@
 ---
 import PostList from "$components/PostList.astro";
 import Page from "$layouts/Page.astro";
-import { posts } from "$lib/posts";
+import { posts } from "$lib/content";
 
 export async function getStaticPaths() {
     return [...new Set(posts.map((p) => p.data.taxonomies.series))].map(
