@@ -6,6 +6,11 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
     site: "https://cogsandsquigs.dev",
     integrations: [mdx(), sitemap()],
+    markdown: {
+        shikiConfig: {
+            theme: "catppuccin-mocha",
+        },
+    },
     vite: {
         css: {
             preprocessorOptions: {

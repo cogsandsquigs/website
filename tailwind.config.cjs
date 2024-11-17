@@ -1,10 +1,15 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 
+import defaultTheme from "tailwindcss/defaultTheme";
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ["./src/**/*.{astro,html,js,md,mdx}"],
     theme: {
-        extend: {},
+        fontFamily: {
+            sans: ["'Atkinson Hyperlegible'", ...defaultTheme.fontFamily.sans],
+            mono: ["Fira Code", ...defaultTheme.fontFamily.sans],
+        },
     },
     plugins: [require("@tailwindcss/typography"), require("daisyui")],
 
