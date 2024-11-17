@@ -1,5 +1,5 @@
 ---
-import PostList from "$components/PostList.astro";
+import PostList from "$components/PageCardsList.astro";
 import Page from "$layouts/Page.astro";
 import { posts } from "$lib/content";
 
@@ -25,5 +25,5 @@ const filtered = posts.filter((p) => p.data.taxonomies.tags.includes(tag));
     title={`Tag: ${tag}`}
     description=""
 >
-    <PostList posts={filtered as any} />
+    <PostList pages={filtered as any} />
 </Page>

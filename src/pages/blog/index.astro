@@ -1,12 +1,12 @@
 ---
 import { posts } from "$lib/content";
 import Page from "$layouts/Page.astro";
-import PostList from "$components/PostList.astro";
+import PostList from "$components/PageCardsList.astro";
 ---
 
 <Page
     title="Blog Posts"
     description="the posts !"
 >
-    <PostList {posts} />
+    <PostList pages={posts} />
 </Page>

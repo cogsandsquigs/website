@@ -2,16 +2,22 @@
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "$components/FormattedDate.astro";
 
-type Props = CollectionEntry<"blog"> | CollectionEntry<"projects">;
+interface Props {
+    url_prefix: string;
+    page: CollectionEntry<"blog"> | CollectionEntry<"projects">;
+}
 
 const {
-    slug,
-    data: {
-        title,
-        description,
-        date,
-        updated,
-        taxonomies: { tags, series },
+    url_prefix,
+    page: {
+        slug,
+        data: {
+            title,
+            description,
+            date,
+            updated,
+            taxonomies: { tags, series },
+        },
     },
 } = Astro.props;
 ---
@@ -67,7 +73,7 @@ const {
 
             <a
                 class="btn btn-outline btn-primary"
-                href={`/blog/${slug}`}
+                href={`/${url_prefix}/${slug}`}
             >
                 Read
             </a>
