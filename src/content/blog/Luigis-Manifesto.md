@@ -3,6 +3,9 @@ draft: true
 title: Luigi's Manifesto
 description: What it says on the tin
 date: 2024-12-15T00:00:00.000Z
+taxonomies:
+    tags:
+        - politics
 ---
 
 Since other news outlets aren't posting it (as of right now), I think I might as well, just because it needs to be shown to everyone (The reason I didn't post it sooner was mainly due to coursework, as well as being a tad sickly at the moment). The fact that Reddit seems to be [banning the manifesto](https://www.theverge.com/2024/12/12/24319957/reddit-bans-posting-uhc-shooter-luigi-mangione-manifesto) is insane to me as well. It truly became a slave to corporate overlords.
@@ -13,4 +16,4 @@ It's insane to think that sympathy for Luigi needs to be ["dialed back"](https:/
 
 I wish I could do more, but I can't, not really. I have coursework to do, finals to study for, etc., and it doesn't help that the holiday laziness is hitting harder than ever. But at least, I hope, someone might look here, and see the truly shit-fucking state my goddamn country is in.
 
-[^1]: Cited from [here](https://www.kenklippenstein.com/p/luigis-manifesto). Used it because [other](https://www.washingtontimes.com/news/2024/dec/10/luigi-mangione-manifesto-full-text-released-ken-kl/) [sources](https://www.newsweek.com/luigi-mangione-manifesto-full-document-1998945) have bad formatting or don't even show it in full, and many mainstream news sources refuse to post it. What a shithole of a time we live in. 
+[^1]: Cited from [here](https://www.kenklippenstein.com/p/luigis-manifesto). Used it because [other](https://www.washingtontimes.com/news/2024/dec/10/luigi-mangione-manifesto-full-text-released-ken-kl/) [sources](https://www.newsweek.com/luigi-mangione-manifesto-full-document-1998945) have bad formatting or don't even show it in full, and many mainstream news sources refuse to post it. What a shithole of a time we live in.
