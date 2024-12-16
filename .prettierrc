@@ -6,7 +6,7 @@
     "singleQuote": false,
     "bracketSpacing": true,
     "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
-    "overrieds": [
+    "overrides": [
         {
             "files": "*.astro",
             "options": {
