@@ -4,7 +4,10 @@ import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: ["./src/**/*.{astro,html,js,md,mdx}"],
+    content: [
+        "./src/**/*.{astro,html,js,md,mdx}",
+        "./content/**/*.{astro,html,js,md,mdx}",
+    ],
     theme: {
         fontFamily: {
             sans: ["'Atkinson Hyperlegible'", ...defaultTheme.fontFamily.sans],
