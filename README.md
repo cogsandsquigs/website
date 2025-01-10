@@ -9,9 +9,9 @@ Built with Zola and love <3
 
 ## Notes for people looking at this
 
--   `/tina` holds all the [TinaCMS configuration files](https://tina.io/docs/tina-folder/overview/) for the content in this site.
--   The structure of this repository follows [the standard Zola project structure](https://www.getzola.org/documentation/getting-started/directory-structure/).
+- `/tina` holds all the [TinaCMS configuration files](https://tina.io/docs/tina-folder/overview/) for the content in this site.
+- The structure of this repository follows [the standard Zola project structure](https://www.getzola.org/documentation/getting-started/directory-structure/).
 
 ## TODOs
 
--   [ ] Fix footers
+- [ ] Fix footers
