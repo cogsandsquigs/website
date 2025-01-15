@@ -43,6 +43,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "$consts";
                     </a>
 
                     <a
+                        href="/cv.pdf"
+                        class="btn btn-outline btn-primary"
+                    >
+                        CV
+                    </a>
+
+                    <a
                         href="https://github.com"
                         class="btn btn-outline btn-primary"
                     >
@@ -58,10 +65,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "$consts";
     $nav-reveal-initial-delay: 250ms;
     $nav-item-reveal-duration: 500ms;
     $nav-item-reveal-between-delay: 100ms;
+    $num-nav-items: 5;
 
     @media (prefers-reduced-motion: no-preference) {
         // Fade in the navigation items one after the other
-        @for $i from 1 through 4 {
+        @for $i from 1 through $num-nav-items {
             #nav-items :nth-child(#{$i}) {
                 opacity: 0;
                 animation: fadeIn $nav-item-reveal-duration ease-in-out;

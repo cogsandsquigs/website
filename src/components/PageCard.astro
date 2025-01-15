@@ -10,7 +10,7 @@ interface Props {
 const {
     url_prefix,
     page: {
-        slug,
+        id,
         data: {
             title,
             description,
@@ -73,7 +73,7 @@ const {
 
             <a
                 class="btn btn-outline btn-primary"
-                href={`/${url_prefix}/${slug}`}
+                href={`/${url_prefix}/${id}`}
             >
                 Read
             </a>

@@ -1,0 +1,29 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import Page from "$layouts/Page.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("pages");
+
+    return posts
+        .filter((page) => !page.data.draft)
+        .map((page) => ({
+            params: { collection: page.id },
+            props: page,
+        }));
+}
+
+type Props = CollectionEntry<"pages">;
+
+const page = Astro.props;
+const { Content } = await render(page);
+---
+
+<Page
+    title={page.data.title}
+    description={page.data.description}
+>
+    <main class="prose mx-auto">
+        <Content />
+    </main>
+</Page>
