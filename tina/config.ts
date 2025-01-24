@@ -33,7 +33,7 @@ export default defineConfig({
             {
                 name: "blog",
                 label: "Blog",
-                path: "src/content/blog",
+                path: "content/blog",
                 match: {
                     include: "**/*",
                     exclude: "_index.md",
@@ -96,7 +96,7 @@ export default defineConfig({
             {
                 name: "projects",
                 label: "Projects",
-                path: "src/content/projects",
+                path: "content/projects",
                 match: {
                     include: "**/*",
                     exclude: "_index.md",
@@ -167,7 +167,7 @@ export default defineConfig({
             {
                 name: "pages",
                 label: "Pages",
-                path: "src/content/pages",
+                path: "content/pages",
                 match: {
                     include: "*",
                 },
