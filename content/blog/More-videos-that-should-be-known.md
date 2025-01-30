@@ -14,4 +14,4 @@ I just want to put some videos here, y'know, so that maybe someone can watch the
 
 !\[vlogbrothers - This Is Not Normal]\([https://www.youtube.com/watch?v=ZfBkw0j-QIs](https://www.youtube.com/watch?v=ZfBkw0j-QIs))
 
-Hopefully they provide some insights
+Hopefully they provide some insights.
