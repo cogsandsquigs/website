@@ -3,6 +3,9 @@ draft: false
 title: Another info drop
 description: A reddit post that kinda explains some things
 date: 2025-01-30T00:00:00.000Z
+taxonomies:
+  tags:
+    - politics
 ---
 
 Just putting this here, as I think it's important for people to know (jesus christ it just never stops i guess). For context, this was originally posted by a throwaway who works at the Office of Personnel Management (U.S. Gov't office).
