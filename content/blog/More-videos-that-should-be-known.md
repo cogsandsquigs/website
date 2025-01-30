@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: Videos that should be known
 description: More things I think we should all watch
 date: 2025-01-30T00:00:00.000Z
