@@ -12,3 +12,5 @@ taxonomies:
 [https://www.404media.co/zuckerberg-says-everything-i-say-leaks-in-leaked-meeting-audio/](https://www.404media.co/zuckerberg-says-everything-i-say-leaks-in-leaked-meeting-audio/)
 
 lol. lmao even.
+
+also just check out 404 media. they rock.
