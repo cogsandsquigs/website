@@ -4,8 +4,8 @@ title: Internet Standards and Fascism
 description: fuck. fuck fuck fuck fuck fuck (redux)
 date: 2025-01-24T00:00:00.000Z
 taxonomies:
-    tags:
-        - politics
+  tags:
+    - politics
 ---
 
 [IANA](https://www.iana.org/).
@@ -18,7 +18,7 @@ taxonomies:
 
 [IETF](https://www.ietf.org/).
 
-[OpenJS Foundation](https://openjsf.org/)
+[OpenJS Foundation.](https://openjsf.org/)
 
 What do all of these things have in common? Well, they're all crucial, important pieces of how we communicate today --- without them, we wouldn't even be able to text, email, or even just go online. They set the standards, organizations, and utilities we use to make sure that, for example:
 
@@ -29,7 +29,7 @@ What do all of these things have in common? Well, they're all crucial, important
 5. Your computer understands the things it receives from `cogsandsquig.dev`, and can decode them (IETF)
 6. Your browser can understand the decoded files --- HTML, CSS, JS (W3C, Unicode)
 7. Your browser can display the decoded files (W3C, Unicode)
-8. Your browser (and consequently, computer) understand _when_ I published this page (IANA, specifically [TZDB](https://www.iana.org/time-zones))
+8. Your browser (and consequently, computer) understand *when* I published this page (IANA, specifically [TZDB](https://www.iana.org/time-zones))
 
 Any one of these things going offline would result in massive catastrophe across the internet, and subsequently would probably lead to the shuttering of many necessary and important services we use day-to-day (think: email communication, texting, digital maps, etc.).
 
@@ -37,8 +37,8 @@ And yet, here they are. In the US of A. Which is currently suffering under a fas
 that, I just hope you read a history book one day).
 
 If Trump (or, let's be honest, Musk) decides to target any one of these organizations, we're basically done for. No more
-communication _globally_, at all. Zip. Zilch. Nada. It's not gonna be another Great Firewall (a la China). Instead, _all
-of the internet will be at stake_. People in unrelated countries, with unrelated politics and unrelated gripes will
+communication *globally*, at all. Zip. Zilch. Nada. It's not gonna be another Great Firewall (a la China). Instead, *all
+of the internet will be at stake*. People in unrelated countries, with unrelated politics and unrelated gripes will
 suffer. We all will.
 
 I pray that hopefully, this doesn't happen. Hopefully, I'm wrong. Hopefully, we can trust these organizations.
