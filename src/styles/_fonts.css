@@ -1,6 +1,3 @@
-// // Main/sans-serif font - Atkinson Hyperlegible
-// @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
 @font-face {
     font-family: "Atkinson Hyperlegible";
     font-weight: normal;
@@ -34,10 +31,6 @@
         format("woff");
 }
 
-// // Code/monospace font - Fira Code
-// @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
-
-// Code/monospace font - Fira Code (with nerd font)
 @font-face {
     font-family: "Fira Code";
     font-weight: normal;
