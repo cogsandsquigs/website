@@ -1,8 +1,8 @@
 ---
-import GradientText from "$components/GradientText.astro";
-import { SITE_TITLE } from "$consts";
+import Command from "./Command.astro";
 ---
 
+<!--
 <header>
     <nav class="navbar sticky">
         <div class="navbar-start">
@@ -73,5 +73,22 @@ import { SITE_TITLE } from "$consts";
                 </svg>
             </a>
         </div>
+    </nav>
+</header>
+-->
+<header>
+    <nav class="navbar sticky mb-2 flex flex-col items-start font-mono">
+        <Command command="find . -type l" />
+
+        <ul class="menu menu-horizontal self-center py-0 text-base [&>li]:py-0">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Me</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/cv.pdf">CV</a></li>
+            <li><a href="https://github.com/cogsandsquigs">GitHub</a></li>
+        </ul>
+
+        <Command command="less index.html" />
     </nav>
 </header>

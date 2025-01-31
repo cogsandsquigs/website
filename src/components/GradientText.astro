@@ -13,17 +13,17 @@
             event.clientY,
         );
 
-        let deg = (180 * Math.atan(mouseCoords[1] / mouseCoords[0])) / Math.PI;
+        let angle = Math.atan(mouseCoords[1] / mouseCoords[0]);
 
         // NOTE: Need to do this so that the gradient doesn't *magically* flip when
         // the mouse crosses the y-axis.
-        if (mouseCoords[1] < 0 && deg < 0) {
-            deg = 180 + deg;
-        } else if (mouseCoords[1] > 0 && deg > 0) {
-            deg = -180 + deg;
+        if (mouseCoords[1] < 0 && angle < 0) {
+            angle = Math.PI + angle;
+        } else if (mouseCoords[1] > 0 && angle > 0) {
+            angle = -Math.PI + angle;
         }
 
-        text.style?.setProperty("--gradient-deg", `${deg}deg`);
+        text.style?.setProperty("--gradient-angle", `${angle}rad`);
     });
 
     function getRelativePosition(
@@ -48,12 +48,12 @@
 
 <style lang="scss">
     #gradient {
-        --gradient-deg: 45deg;
+        --gradient-angle: 45deg;
 
         color: transparent;
 
         background-image: linear-gradient(
-            var(--gradient-deg),
+            var(--gradient-angle),
             var(--color-primary) 0%,
             var(--color-secondary) 50%,
             var(--color-accent) 100%

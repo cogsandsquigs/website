@@ -1,10 +1,24 @@
 ---
+import GradientText from "$components/GradientText.astro";
+
 interface Props {
-    dir?: string;
+    command: string;
 }
+
+const { command } = Astro.props;
 ---
 
-<p>
-     <span class="divide-cyan-600"> ~/Projects/website</span> on
-    <span id="command-green">  main ❯</span>
-</p>
+<div class="font-mono">
+    <p>
+        
+        <span class="font-bold text-sky-500">
+            
+            <span class="mr-[-0.65rem] ml-1">
+                <GradientText>cogsandsquigs</GradientText>
+            </span>{Astro.url.pathname}
+        </span>
+        on
+        <span class="text-emerald-400">  main ❯ </span>
+        <span>{command}</span>
+    </p>
+</div>
