@@ -5,16 +5,19 @@ import Command from "$components/Command.astro";
 type Props = {
     title: string;
     description: string;
+    displayCommand?: string;
 };
 
-const { title, description } = Astro.props;
+const { title, description, displayCommand = "less index.html" } = Astro.props;
 ---
 
 <Layout
     {title}
     {description}
 >
-    <div class="mockup-code flex min-h-full w-full flex-col items-start">
+    <div
+        class="mockup-code flex min-h-full w-full flex-col items-start [&>*]:px-4"
+    >
         <Command command="find . -type l">
             <div class="flex w-full justify-center">
                 <ul class="menu menu-horizontal py-0 text-base [&>li]:py-0">
@@ -31,7 +34,7 @@ const { title, description } = Astro.props;
         </Command>
 
         <Command
-            command="less index.html"
+            command={displayCommand}
             delay={1.2}
         >
             <div class="mt-2 w-full flex-none">

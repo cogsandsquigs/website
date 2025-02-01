@@ -17,7 +17,7 @@ const { command, keyDuration = 0.03, delay = 0 } = Astro.props;
 
 <!-- NOTE: `command-wrapper` is for the already-visited script -->
 <div class="command-wrapper flex w-full flex-col">
-    <div class="command flex w-max flex-row items-start space-x-2 font-mono">
+    <code class="command flex w-max flex-row items-start space-x-2 font-mono">
         <p>
             <span class="ml-2">
                 <GradientText>cogsandsquigs</GradientText>
@@ -29,7 +29,7 @@ const { command, keyDuration = 0.03, delay = 0 } = Astro.props;
             <span class="text-emerald-400"> main ❯ </span>
         </p>
         <p class="typewriter">{command}</p>
-    </div>
+    </code>
 
     <div class="command-output w-full">
         <slot />
@@ -54,7 +54,7 @@ const { command, keyDuration = 0.03, delay = 0 } = Astro.props;
         visibility: hidden;
         max-height: 0;
         animation: fade-in-bottom 0.5s ease
-            calc((var(--delay) + var(--duration)) * 1s + 0.2s) forwards;
+            calc((var(--delay) + var(--duration)) * 1s + 0.5s) forwards;
     }
 
     .typewriter {
