@@ -1,5 +1,6 @@
 ---
 import GradientText from "$components/GradientText.astro";
+import { COMMIT_HASH_SHORT } from "$consts";
 
 interface Props {
     // Command to "execute"
@@ -26,7 +27,7 @@ const { command, keyDuration = 0.03, delay = 0 } = Astro.props;
                 ~{Astro.url.pathname}
             </span>
             on
-            <span class="text-emerald-400"> main ❯ </span>
+            <span class="text-emerald-400"> {COMMIT_HASH_SHORT} ❯ </span>
         </p>
         <p class="typewriter">{command}</p>
     </code>
