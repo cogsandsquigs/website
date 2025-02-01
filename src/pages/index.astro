@@ -1,7 +1,38 @@
 ---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import Page from "$layouts/Page.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("pages");
+
+    return posts
+        .filter((page) => !page.data.draft)
+        .map((page) => ({
+            params: { slug: page.id },
+            props: page,
+        }));
+}
+
+type Props = CollectionEntry<"pages">;
+
+const page = (await getCollection("pages")).find((page) => page.id == "index");
+const { Content } = await render(page);
+---
+
+<Page
+    title="Welcome!"
+    description="Hi!"
+>
+    <main class="prose mx-auto">
+        <Content />
+    </main>
+</Page>
+<!--
+---
 import Base from "$layouts/Base.astro";
 import GradientText from "$components/GradientText.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "$consts";
+import Command from "$components/Command.astro";
 ---
 
 <Base
@@ -59,8 +90,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "$consts";
                 </div>
             </div>
 </div>
--->
-        <div class="hero-content"></div>
+
+        <div class="hero-content">
+            <Command command="find . -type l" />
+        </div>
     </div>
 </Base>
 
@@ -98,3 +131,4 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "$consts";
         }
     }
 </style>
+-->
