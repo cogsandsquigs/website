@@ -18,47 +18,54 @@ const {
     {description}
 >
     <main class="prose mx-auto">
-        <div class="flex flex-col space-y-2">
-            <div class="grow justify-start space-y-2 self-start">
-                <FormattedDate date={date} />
-                {
-                    updated && (
-                        <div class="">
-                            Last updated at <FormattedDate date={updated} />
-                        </div>
-                    )
-                }
-                <h1 class="mb-0">{title}</h1>
-            </div>
-            <div class="flex flex-col justify-end space-y-2 self-end">
-                <div class="flex flex-wrap justify-center gap-2">
+        <div class="not-prose space-y-2">
+            <h1 class="my-0 py-0 text-4xl font-bold">{title}</h1>
+            <h2 class="text-base-content/80 my-0 py-0 text-lg">
+                {description}
+            </h2>
+
+            <div class="mt-2 flex items-end justify-between">
+                <div class="space-y-2 [&>*]:mb-0">
+                    <FormattedDate date={date} />
                     {
-                        tags.map((tag) => (
-                            <a
-                                class="badge badge-primary badge-outline no-underline"
-                                href={`/tags/${tag}`}
-                            >
-                                {tag}
-                            </a>
-                        ))
+                        updated && (
+                            <div class="">
+                                Last updated at <FormattedDate date={updated} />
+                            </div>
+                        )
                     }
                 </div>
-                {
-                    series && (
-                        <div class="flex flex-wrap justify-end">
-                            <a
-                                class="badge badge-primary no-underline"
-                                href={`/series/${series}`}
-                            >
-                                Series: {series}
-                            </a>
-                        </div>
-                    )
-                }
+
+                <div class="flex flex-col justify-end space-y-2 self-end">
+                    <div class="flex flex-wrap justify-center gap-2">
+                        {
+                            tags.map((tag) => (
+                                <a
+                                    class="badge badge-primary badge-outline no-underline"
+                                    href={`/tags/${tag}`}
+                                >
+                                    {tag}
+                                </a>
+                            ))
+                        }
+                    </div>
+                    {
+                        series && (
+                            <div class="flex flex-wrap justify-end">
+                                <a
+                                    class="badge badge-primary no-underline"
+                                    href={`/series/${series}`}
+                                >
+                                    Series: {series}
+                                </a>
+                            </div>
+                        )
+                    }
+                </div>
             </div>
         </div>
 
-        <hr class="my-1" />
+        <hr class="not-prose text-base-content/80 my-4" />
 
         <slot />
     </main>
