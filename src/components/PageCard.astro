@@ -15,14 +15,14 @@ const {
             title,
             description,
             date,
-            updated,
+            updated = null,
             taxonomies: { tags, series },
         },
     },
 } = Astro.props;
 ---
 
-<div class="card card-bordered max-w-96 bg-base-300 shadow-xl">
+<div class="card card-border border-base-content max-w-96">
     <div class="card-body">
         <h2 class="card-title">{title}</h2>
 
@@ -64,7 +64,7 @@ const {
                                 class="badge badge-accent badge-outline"
                                 href={`/series/${series}`}
                             >
-                                Series: {series}
+                                {series}
                             </a>
                         </div>
                     )

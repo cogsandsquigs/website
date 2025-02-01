@@ -12,7 +12,7 @@ interface Props {
     delay?: number;
 }
 
-const { command, keyDuration = 0.12, delay = 0 } = Astro.props;
+const { command, keyDuration = 0.03, delay = 0 } = Astro.props;
 ---
 
 <!-- NOTE: `command-wrapper` is for the already-visited script -->
@@ -54,7 +54,7 @@ const { command, keyDuration = 0.12, delay = 0 } = Astro.props;
         visibility: hidden;
         max-height: 0;
         animation: fade-in-bottom 0.5s ease
-            calc((var(--delay) + var(--duration)) * 1s + 0.3s) forwards;
+            calc((var(--delay) + var(--duration)) * 1s + 0.2s) forwards;
     }
 
     .typewriter {

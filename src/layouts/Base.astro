@@ -26,12 +26,7 @@ const { title, description } = Astro.props;
     <body class="flex min-h-screen w-full flex-col">
         <slot name="header" />
 
-        <!--
-        <main class="flex flex-grow">
-            <slot />
-        </main>
--->
-        <div class="flex w-full flex-grow">
+        <div class="flex w-full flex-grow p-4">
             <slot />
         </div>
 
