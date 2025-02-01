@@ -15,18 +15,18 @@ interface Props {
 const { command, keyDuration = 0.12, delay = 0 } = Astro.props;
 ---
 
-<div class="flex w-full flex-col">
+<!-- NOTE: `command-wrapper` is for the already-visited script -->
+<div class="command-wrapper flex w-full flex-col">
     <div class="command flex w-max flex-row items-start space-x-2 font-mono">
         <p>
-            
+            <span class="ml-2">
+                <GradientText>cogsandsquigs</GradientText>
+            </span>
             <span class="font-bold text-sky-500">
-                
-                <span class="ml-2">
-                    <GradientText>cogsandsquigs</GradientText>
-                </span> ~{Astro.url.pathname}
+                ~{Astro.url.pathname}
             </span>
             on
-            <span class="text-emerald-400">  main ❯ </span>
+            <span class="text-emerald-400"> main ❯ </span>
         </p>
         <p class="typewriter">{command}</p>
     </div>
@@ -53,7 +53,7 @@ const { command, keyDuration = 0.12, delay = 0 } = Astro.props;
     .command-output {
         visibility: hidden;
         max-height: 0;
-        animation: reveal 0s ease
+        animation: fade-in-bottom 0.5s ease
             calc((var(--delay) + var(--duration)) * 1s + 0.3s) forwards;
     }
 
@@ -66,9 +66,8 @@ const { command, keyDuration = 0.12, delay = 0 } = Astro.props;
         * Yes, this *is* a pain to deal with later.
         */
 
-        width: 0;
         overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: 0.15em solid transparent; /* The typwriter cursor */
+        border-right: 0.15 solid transparent; /* The typwriter cursor */
         white-space: nowrap; /* Keeps the content on a single line */
         margin: 0 auto; /* Gives that scrolling effect as the typing happens */
         /* letter-spacing: 0.15em; /* Adjust as needed */
@@ -79,6 +78,8 @@ const { command, keyDuration = 0.12, delay = 0 } = Astro.props;
                 calc(var(--delay) * 1s)
                 calc(round(up, var(--duration) / var(--blink-duration)));
     }
+
+    /* NOTE: Used when pausing animation if we alr. viewed it*/
 
     @media (prefers-reduced-motion) {
         .typewriter {
@@ -119,4 +120,42 @@ const { command, keyDuration = 0.12, delay = 0 } = Astro.props;
             max-height: none;
         }
     }
+
+    @keyframes fade-in-bottom {
+        0% {
+            visibility: visible;
+            max-height: none;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        100% {
+            visibility: visible;
+            max-height: none;
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 </style>
+
+<script>
+    const KEY = "visited";
+    // localStorage.setItem(KEY);
+    const visited = new Set(JSON.parse(localStorage.getItem(KEY) ?? "[]"));
+    const site = window.location.pathname;
+
+    if (visited.has(site)) {
+        for (let elem of document.querySelectorAll(
+            ".typewriter, .command, .command-output",
+        ) as NodeListOf<HTMLElement>) {
+            elem.style.animation = "none";
+            elem.style.visibility = "visible";
+            elem.style.maxHeight = "none";
+            elem.style.opacity = "1";
+            console.log(elem);
+        }
+    }
+
+    // NOTE: This should be at the end!
+    visited.add(site);
+    localStorage.setItem(KEY, JSON.stringify([...visited]));
+</script>

@@ -23,7 +23,7 @@ const { title, description } = Astro.props;
         <slot name="head" />
     </head>
 
-    <body class="flex min-h-screen flex-col">
+    <body class="flex min-h-screen w-full flex-col">
         <slot name="header" />
 
         <!--
@@ -31,8 +31,12 @@ const { title, description } = Astro.props;
             <slot />
         </main>
 -->
-        <slot />
+        <div class="flex w-full flex-grow">
+            <slot />
+        </div>
 
-        <Footer />
+        <div class="w-full self-end">
+            <Footer />
+        </div>
     </body>
 </html>
