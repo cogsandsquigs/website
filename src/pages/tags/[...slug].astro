@@ -24,6 +24,7 @@ const filtered = posts.filter((p) => p.data.taxonomies.tags.includes(tag));
 <Page
     title={`Tag: ${tag}`}
     description=""
+    displayCommand="ls -l"
 >
     <PostList pages={filtered as any} />
 </Page>

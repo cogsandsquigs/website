@@ -18,7 +18,7 @@ const { title, description, displayCommand = "less index.html" } = Astro.props;
     <div
         class="mockup-code flex min-h-full w-full flex-col items-start [&>*]:px-4"
     >
-        <Command command="find . -type l">
+        <Command command="find ~ -type l">
             <div class="flex w-full justify-center">
                 <ul class="menu menu-horizontal py-0 text-base [&>li]:py-0">
                     <li><a href="/">Home</a></li>

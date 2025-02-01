@@ -24,6 +24,7 @@ const filtered = posts.filter((p) => p.data.taxonomies.series == series);
 <Page
     title={`Series: ${series}`}
     description=""
+    displayCommand="ls -l"
 >
     <PostList pages={filtered as any} />
 </Page>
