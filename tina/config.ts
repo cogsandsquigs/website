@@ -66,6 +66,12 @@ export default defineConfig({
                         required: true,
                     },
                     {
+                        type: "datetime",
+                        name: "updated",
+                        label: "Last Updated",
+                        required: false,
+                    },
+                    {
                         type: "object",
                         name: "taxonomies",
                         label: "Taxonomies",

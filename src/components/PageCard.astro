@@ -15,7 +15,7 @@ const {
             title,
             description,
             date,
-            updated = null,
+            updated,
             taxonomies: { tags, series },
         },
     },
@@ -30,12 +30,12 @@ const {
             <p>{description}</p>
 
             <p class="text-base-content/50">
-                Posted on <FormattedDate {date} />
+                <FormattedDate {date} />
             </p>
             {
                 updated && (
                     <p class="text-base-content/50">
-                        Updated at <FormattedDate {date} />
+                        Updated <FormattedDate {date} />
                     </p>
                 )
             }
