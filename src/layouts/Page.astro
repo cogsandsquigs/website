@@ -43,3 +43,17 @@ const { title, description, displayCommand = "less index.html" } = Astro.props;
         </Command>
     </div>
 </Layout>
+
+<style>
+    /* 
+     * NOTE: This is copying the "button" code on the mockup, w/ same everything 
+     * except that we are editing the color 
+     * */
+    .mockup-code::before {
+        opacity: 1; /* Make sure colors have full saturation! */
+        box-shadow: /* Make the colors match window color */
+            1.4em 0 var(--color-error),
+            2.8em 0 var(--color-warning),
+            4.2em 0 var(--color-success);
+    }
+</style>
