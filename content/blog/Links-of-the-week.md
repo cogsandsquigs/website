@@ -1,14 +1,14 @@
 ---
 draft: false
 title: Links Of The Week
-description: 'Just some things I find interesting, useful, or otherwise informative.'
+description: "Just some things I find interesting, useful, or otherwise informative."
 date: 2025-01-31T00:00:00.000Z
 updated: 2025-02-01T00:00:00.000Z
 taxonomies:
-  tags:
-    - links
-    - big tech
-    - politics
+    tags:
+        - links
+        - big tech
+        - politics
 ---
 
 ## 1. Zuck is Zucked
