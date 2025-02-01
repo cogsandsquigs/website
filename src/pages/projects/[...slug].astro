@@ -5,7 +5,7 @@ import { projects } from "$lib/content";
 
 export async function getStaticPaths() {
     return projects.map((project) => ({
-        params: { slug: project.slug },
+        params: { slug: project.id },
         props: project,
     }));
 }

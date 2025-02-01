@@ -1,29 +1,33 @@
-<span id="gradient">
+<span class="gradient">
     <slot />
 </span>
 
 <script>
     // NOTE: Will never be undefined, as the element is always present
-    const text = document.getElementById("gradient") as HTMLElement;
+    const texts = document.getElementsByClassName(
+        "gradient",
+    ) as HTMLCollectionOf<HTMLElement>;
 
     document.addEventListener("mousemove", (event) => {
-        let mouseCoords = getRelativePosition(
-            text,
-            event.clientX,
-            event.clientY,
-        );
+        for (var text of texts) {
+            let mouseCoords = getRelativePosition(
+                text,
+                event.clientX,
+                event.clientY,
+            );
 
-        let angle = Math.atan(mouseCoords[1] / mouseCoords[0]);
+            let angle = Math.atan(mouseCoords[1] / mouseCoords[0]);
 
-        // NOTE: Need to do this so that the gradient doesn't *magically* flip when
-        // the mouse crosses the y-axis.
-        if (mouseCoords[1] < 0 && angle < 0) {
-            angle = Math.PI + angle;
-        } else if (mouseCoords[1] > 0 && angle > 0) {
-            angle = -Math.PI + angle;
+            // NOTE: Need to do this so that the gradient doesn't *magically* flip when
+            // the mouse crosses the y-axis.
+            if (mouseCoords[1] < 0 && angle < 0) {
+                angle = Math.PI + angle;
+            } else if (mouseCoords[1] > 0 && angle > 0) {
+                angle = -Math.PI + angle;
+            }
+
+            text.style?.setProperty("--gradient-angle", `${angle}rad`);
         }
-
-        text.style?.setProperty("--gradient-angle", `${angle}rad`);
     });
 
     function getRelativePosition(
@@ -47,7 +51,7 @@
 </script>
 
 <style lang="scss">
-    #gradient {
+    .gradient {
         --gradient-angle: 45deg;
 
         color: transparent;

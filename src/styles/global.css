@@ -4,11 +4,14 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
+    /*
     --font-sans: "Atkinson Hyperlegible", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
+*/
     --font-mono: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco,
         Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-sans: var(--font-mono);
 }
 
 @plugin "daisyui" {

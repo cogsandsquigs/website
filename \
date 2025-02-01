@@ -15,8 +15,8 @@ interface Props {
 const { command, keyDuration = 0.12, delay = 0 } = Astro.props;
 ---
 
-<div class="flex w-full flex-col">
-    <div class="command flex w-max flex-row items-start space-x-2 font-mono">
+<div class="flex flex-col">
+    <div class="command flex flex-row items-start space-x-2 font-mono">
         <p>
             
             <span class="font-bold text-sky-500">
@@ -31,7 +31,7 @@ const { command, keyDuration = 0.12, delay = 0 } = Astro.props;
         <p class="typewriter">{command}</p>
     </div>
 
-    <div class="command-output w-full">
+    <div class="command-output">
         <slot />
     </div>
 </div>
@@ -40,31 +40,24 @@ const { command, keyDuration = 0.12, delay = 0 } = Astro.props;
     define:vars={{
         "text-len": command.length,
         "key-duration": keyDuration,
-        duration: keyDuration * command.length,
         delay,
     }}
 >
     .command {
         visibility: hidden;
         max-height: 0;
-        animation: reveal 0s ease calc(var(--delay) * 1s) forwards;
-    }
-
-    .command-output {
-        visibility: hidden;
-        max-height: 0;
-        animation: reveal 0s ease
-            calc((var(--delay) + var(--duration)) * 1s + 0.3s) forwards;
+        animation: reveal 1s ease 0s step-end;
     }
 
     .typewriter {
-        --blink-duration: 0.5;
-
         /* 
         * NOTE: Since we need these two variables for the calculation of the iteration value for the 
         * blink animation, we make them unitless (they are both in seconds).
         * Yes, this *is* a pain to deal with later.
         */
+
+        --blink-duration: 0.5;
+        --duration: calc(var(--key-duration) * var(--text-len));
 
         width: 0;
         overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -114,7 +107,8 @@ const { command, keyDuration = 0.12, delay = 0 } = Astro.props;
             visibility: hidden;
             max-height: 0;
         }
-        to {
+
+        from {
             visibility: visible;
             max-height: none;
         }
