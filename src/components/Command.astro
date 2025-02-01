@@ -27,7 +27,8 @@ const { command, keyDuration = 0.03, delay = 0 } = Astro.props;
                 ~{Astro.url.pathname}
             </span>
             on
-            <span class="text-emerald-400"> {COMMIT_HASH_SHORT} ❯ </span>
+            <span class="text-emerald-400"></span>
+            @<span class="text-emerald-400">{COMMIT_HASH_SHORT} ❯ </span>
         </p>
         <p class="typewriter">{command}</p>
     </code>
