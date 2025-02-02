@@ -9,9 +9,12 @@ export const GET: APIRoute = async (context) => {
         title: SITE_TITLE,
         description: SITE_DESCRIPTION,
         site: context.site ?? "",
-        items: posts.map((post) => ({
-            ...post.data,
-            link: `/blog/${post.id}/`,
-        })),
+        items: posts
+            .map((post) => ({
+                ...post.data,
+                link: `/blog/${post.id}/`,
+            }))
+            // Reverse sort
+            .sort((a, b) => b.date.getTime() - a.date.getTime()),
     });
 };
