@@ -12,6 +12,7 @@ export const GET: APIRoute = async (context) => {
         items: posts
             .map((post) => ({
                 ...post.data,
+                pubDate: post.data.date, // TODO: Change this attribute
                 link: `/blog/${post.id}/`,
             }))
             // Reverse sort
