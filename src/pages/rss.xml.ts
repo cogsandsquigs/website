@@ -13,6 +13,7 @@ export const GET: APIRoute = async (context) => {
             .map((post) => ({
                 ...post.data,
                 pubDate: post.data.date, // TODO: Change this attribute
+                categories: post.data.taxonomies.tags, // Fix tags
                 link: `/blog/${post.id}/`,
             }))
             // Reverse sort
