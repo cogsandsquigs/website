@@ -27,7 +27,7 @@ const { command, keyDuration = 0.03, delay = 0 } = Astro.props;
             </span>
             on
             <span class="text-emerald-400"></span>
-            @<span class="text-emerald-400">{COMMIT_HASH_SHORT} ❯ </span>
+            @<span class="text-emerald-400"><a href={`https://github.com/cogsandsquigs/website/commit/${COMMIT_HASH_SHORT}`}>{COMMIT_HASH_SHORT}</a> ❯ </span>
         </p>
         <p class="typewriter">{command}</p>
     </code>
