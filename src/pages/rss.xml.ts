@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import type { APIRoute } from "astro";
 import MarkdownIt from "markdown-it";
+
 const parser = new MarkdownIt();
 
 export const GET: APIRoute = async (context) => {
@@ -19,6 +20,5 @@ export const GET: APIRoute = async (context) => {
             link: `/blog/${post.id}/`,
             content: parser.render(post.body ?? ""),
         })),
-        // Reverse sort
     });
 };
