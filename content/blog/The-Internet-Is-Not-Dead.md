@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: Leave The Dead Mall
 description: The internet lost it's mother tongue. You should find it again.
 date: 2025-02-02T00:00:00.000Z
