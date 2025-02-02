@@ -16,8 +16,7 @@ interface Props {
 const { command, keyDuration = 0.03, delay = 0 } = Astro.props;
 ---
 
-<!-- NOTE: `command-wrapper` is for the already-visited script -->
-<div class="command-wrapper flex w-full flex-col">
+<div class="flex w-full flex-col">
     <code class="command flex w-max flex-row items-start space-x-2 font-mono">
         <p>
             <span class="ml-2 font-bold">
@@ -153,7 +152,6 @@ const { command, keyDuration = 0.03, delay = 0 } = Astro.props;
             elem.style.visibility = "visible";
             elem.style.maxHeight = "none";
             elem.style.opacity = "1";
-            console.log(elem);
         }
     }
 
