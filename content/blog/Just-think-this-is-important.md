@@ -9,7 +9,7 @@ taxonomies:
     - politics
 ---
 
-Edit: originally, it was just link1 but because there is so much shit going on we're doing another links of the week. 
+Edit: originally, it was just link1 but because there is so much shit going on we're doing another links of the week.
 
 ## 1. Somebody is doing something
 
@@ -28,3 +28,9 @@ Anyways, this just gives me a little (teeny-tiny sliver) of hope, that maybe we 
 What. The fuck. huh????
 
 I guess democracy dies with a "nuh uh!"
+
+## 3. :(
+
+[https://www.chicagotribune.com/2025/02/06/trump-immigration-sanctuary-lawsuit/](https://www.chicagotribune.com/2025/02/06/trump-immigration-sanctuary-lawsuit/)
+
+:((((
