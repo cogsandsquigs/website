@@ -3,7 +3,7 @@ draft: false
 title: Links of the Week 2
 description: Apocalypse edition
 date: 2025-02-04T00:00:00.000Z
-updated: 2025-02-05T00:00:00.000Z
+updated: 2025-02-06T00:00:00.000Z
 taxonomies:
   tags:
     - politics
