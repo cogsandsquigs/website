@@ -29,8 +29,14 @@ What. The fuck. huh????
 
 I guess democracy dies with a "nuh uh!"
 
-## 3. :(
+## 3. A little more hope
+
+[https://www.chicagotribune.com/2025/02/05/illinois-gender-affirming-care-trump-order/](https://www.chicagotribune.com/2025/02/05/illinois-gender-affirming-care-trump-order/)
+
+Hey! Some people care a bit!
+
+## 3. all gone now :(
 
 [https://www.chicagotribune.com/2025/02/06/trump-immigration-sanctuary-lawsuit/](https://www.chicagotribune.com/2025/02/06/trump-immigration-sanctuary-lawsuit/)
 
-:((((
+aaaand there goes the good vibes
