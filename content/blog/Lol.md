@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Lol
+title: ONE TRICK THAT ELON MUSK DON'T WANT YOU TO KNOW!
 description: Hi elon
 date: 2025-02-07T00:00:00.000Z
 taxonomies:
