@@ -25,3 +25,7 @@ A fun, classy one-liner from our "favorite" monarch-in-chief.
 ## 4. [RFK's "Plan" for "Healthier" Minds](https://www.motherjones.com/politics/2025/02/kennedy-rfk-antidepressants-ssri-school-shootings/) (archives: [1](https://web.archive.org/web/20250215185722/https://www.motherjones.com/politics/2025/02/kennedy-rfk-antidepressants-ssri-school-shootings/), [2](https://archive.ph/OKxHE))
 
 Wow! Great Idea Robert! We should Definitely take away all those Bad Bad Drugs (zoloft :/)! This will have No Consequences At All!
+
+## 5. [And, For Some "Fun" News](https://www.404media.co/anyone-can-push-updates-to-the-doge-gov-website-2/) (archives: [1](https://web.archive.org/web/20250216010257/https://www.404media.co/anyone-can-push-updates-to-the-doge-gov-website-2/), [2](https://archive.ph/aTSIM))
+
+The doge.gov website got hacked LMAO.
