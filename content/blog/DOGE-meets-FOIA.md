@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: DOGE meets FOIA
 description: 'Have fun with this! '
 date: 2025-03-11T00:00:00.000Z
