@@ -21,7 +21,7 @@
         # Essentially, all the things we have access to during build/compile/whatever.
         devShell = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
-            nodejs-22_x
+            nodejs_22
             bun
           ];
         };
