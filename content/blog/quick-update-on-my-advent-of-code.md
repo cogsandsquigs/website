@@ -2,7 +2,8 @@
 date: "2022-12-14T04:35:00Z"
 description: Don't worry, I haven't given up (yet!)
 taxonomies:
-    series: advent of code 2022
+    series:
+        - advent of code 2022
     tags:
         - status update
         - advent of code

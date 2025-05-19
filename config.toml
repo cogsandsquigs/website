@@ -1,0 +1,18 @@
+base_url           = "https://cogsandsquigs.dev" # The URL the site will be built for
+compile_sass       = true                        # Whether to automatically compile all Sass files in the sass directory
+build_search_index = true                        # Whether to build a search index to be used later on by a JavaScript library
+
+[markdown]
+    highlight_code  = true   # Whether to do syntax highlighting
+    highlight_theme = "nord" # Theme can be customised by setting this variable to a theme supported by Zola
+
+[[taxonomies]]
+    name = "tags"
+    feed = true
+
+[[taxonomies]]
+    name = "series"
+    feed = true
+
+[extra]
+    # Put all your custom variables here

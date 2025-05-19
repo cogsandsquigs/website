@@ -2,7 +2,8 @@
 date: "2023-01-04T06:00:00Z"
 description: All except 6...
 taxonomies:
-    series: advent of code 2022
+    series:
+        - advent of code 2022
     tags:
         - status update
         - advent of code

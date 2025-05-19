@@ -2,7 +2,8 @@
 date: "2022-12-07T07:00:00Z"
 description: It's my birthday, so I deserve a puzzle, as a treat :)
 taxonomies:
-    series: advent of code 2022
+    series:
+        - advent of code 2022
     tags:
         - status update
         - rust
