@@ -1,0 +1,7 @@
+<div class="profile-photo">
+    <!-- NOTE: Doing `pr-[4px]` b/c image is offset horribly and it bothers me -->
+    <!-- TODO: Fix these tailwind classes into sass! -->
+    <img src="{{ photo | safe }}"
+         class="not-prose ring-primary ring-offset-base-100 rounded-full ring ring-offset-2"
+         {% if alt %} alt="{{ alt }}" {% else %} alt = "A profile picture of me." {% endif %} />
+</div>

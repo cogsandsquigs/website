@@ -1,0 +1,14 @@
+// Colors:
+$primary: #007bff;
+$secondary: #6c757d;
+$accent: #28a745;
+
+// Spacing:
+$spacing: 0.25rem;
+
+/* Utility functions */
+
+// Calculates a space given some multiplier, using our default spacing value.
+@function space($mult) {
+    @return $spacing * $mult;
+}

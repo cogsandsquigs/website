@@ -3,15 +3,7 @@ title: "About"
 description: "My bio lmao"
 ---
 
-import { Image } from "astro:assets"
-import pfp from "$assets/images/pfp.png";
-
-<div class="avatar float-right mt-7">
-    <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
-        {/* <!-- NOTE: Doing `pr-[4px]` b/c image is offset horribly and it bothers me --> */}
-        <Image src={pfp} class="not-prose pr-[4px]" alt="A pixelated version of myself, used as my Github profile picture"/>
-    </div>
-</div>
+{{ profile(photo="/images/pfp.png", alt="A pixelated version of myself, used as my Github profile picture") }}
 
 Hey! I'm Ian Pratt, although I go by the online alias _cogsandsquigs_. I program things for fun and profit (although mainly for fun!). Currently, my main project is working on my website, and making it look as brilliant and fancy as possible. It's also a great way to practice my web development skills!
 

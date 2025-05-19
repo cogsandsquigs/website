@@ -1,0 +1,30 @@
+@use "theme";
+
+.gradient {
+    --gradient-angle: 45deg;
+
+    color: transparent;
+
+    background-image: linear-gradient(
+        var(--gradient-angle),
+        var(theme.$primary) 0%,
+        var(theme.$secondary) 50%,
+        var(theme.$accent) 100%
+    );
+    background-clip: text; // Make the gradient only apply to the text, and not outside of it
+}
+
+// Fix gradient in place
+@media (prefers-reduced-motion) {
+    #gradient {
+        color: transparent;
+
+        background-image: linear-gradient(
+            45deg,
+            var(theme.$primary) 0%,
+            var(theme.$secondary) 50%,
+            var(theme.$accent) 100%
+        );
+        background-clip: text; // Make the gradient only apply to the text, and not outside of it
+    }
+}
