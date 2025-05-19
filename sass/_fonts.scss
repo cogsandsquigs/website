@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102.woff")
+        format("woff");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102.woff")
+        format("woff");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+    src: url("/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102.woff")
+        format("woff");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+    src: url("/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-BoldItalic-102.woff")
+        format("woff");
+}
+
+@font-face {
+    font-family: "Fira Code";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/FiraCodeNerdFont/FiraCodeNerdFont-Regular.ttf")
+        format("truetype");
+}

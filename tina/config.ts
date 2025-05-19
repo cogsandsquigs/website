@@ -85,6 +85,7 @@ export default defineConfig({
                             },
                             {
                                 type: "string",
+                                list: true,
                                 name: "series",
                                 label: "Series",
                                 required: false,

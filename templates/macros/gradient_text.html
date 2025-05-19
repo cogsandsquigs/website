@@ -1,0 +1,78 @@
+<span {% if class %} class="{{ class }} gradient" {% else %} class="gradient" {% endif %}>
+    <slot />
+</span>
+
+<script>
+    // NOTE: Will never be undefined, as the element is always present
+    const texts = document.getElementsByClassName(
+        "gradient",
+    ) as HTMLCollectionOf < HTMLElement > ;
+
+    document.addEventListener("mousemove", (event) => {
+        for (var text of texts) {
+            let mouseCoords = getRelativePosition(
+                text,
+                event.clientX,
+                event.clientY,
+            );
+
+            let angle = Math.atan(mouseCoords[1] / mouseCoords[0]);
+
+            // NOTE: Need to do this so that the gradient doesn't *magically* flip when
+            // the mouse crosses the y-axis.
+            if (mouseCoords[1] < 0 && angle < 0) {
+                angle = Math.PI + angle;
+            } else if (mouseCoords[1] > 0 && angle > 0) {
+                angle = -Math.PI + angle;
+            }
+
+            text.style?.setProperty("--gradient-angle", `${angle}rad`);
+        }
+    });
+
+    function getRelativePosition(
+        elem: HTMLElement,
+        x: number,
+        y: number,
+    ): [number, number] {
+        let elemCoords = getCenterCoords(elem);
+
+        return [elemCoords[0] - x, elemCoords[1] - y];
+    }
+
+    function getCenterCoords(elem: HTMLElement): [number, number] {
+        let elemRect = elem.getBoundingClientRect();
+
+        return [
+            elemRect.left + elem.offsetWidth / 2,
+            elemRect.top + elem.offsetHeight / 2,
+        ];
+    }
+</script>
+
+<style lang="scss">
+    .gradient {
+        --gradient-angle: 45deg;
+
+        color: transparent;
+
+        background-image: linear-gradient(var(--gradient-angle),
+                var(--color-primary) 0%,
+                var(--color-secondary) 50%,
+                var(--color-accent) 100%);
+        background-clip: text; // Make the gradient only apply to the text, and not outside of it
+    }
+
+    // Fix gradient in place
+    @media (prefers-reduced-motion) {
+        #gradient {
+            color: transparent;
+
+            background-image: linear-gradient(45deg,
+                    var(--color-primary) 0%,
+                    var(--color-secondary) 50%,
+                    var(--color-accent) 100%);
+            background-clip: text; // Make the gradient only apply to the text, and not outside of it
+        }
+    }
+</style>
