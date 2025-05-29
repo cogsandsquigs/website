@@ -1,51 +1,55 @@
-<span {% if class %} class="{{ class }} gradient" {% else %} class="gradient" {% endif %}>
-    <slot />
-</span>
+{% macro gradient_text(class) %}
 
-<script>
-    // NOTE: Will never be undefined, as the element is always present
-    const texts = document.getElementsByClassName(
-        "gradient",
-    ) as HTMLCollectionOf < HTMLElement > ;
+    <span {% if class %} class="{{ class }} gradient" {% else %} class="gradient" {% endif %}>
+        <slot />
+    </span>
 
-    document.addEventListener("mousemove", (event) => {
-        for (var text of texts) {
-            let mouseCoords = getRelativePosition(
-                text,
-                event.clientX,
-                event.clientY,
-            );
+    <script>
+        // NOTE: Will never be undefined, as the element is always present
+        const texts = document.getElementsByClassName(
+            "gradient",
+        ) as HTMLCollectionOf < HTMLElement > ;
 
-            let angle = Math.atan(mouseCoords[1] / mouseCoords[0]);
+        document.addEventListener("mousemove", (event) => {
+            for (var text of texts) {
+                let mouseCoords = getRelativePosition(
+                    text,
+                    event.clientX,
+                    event.clientY,
+                );
 
-            // NOTE: Need to do this so that the gradient doesn't *magically* flip when
-            // the mouse crosses the y-axis.
-            if (mouseCoords[1] < 0 && angle < 0) {
-                angle = Math.PI + angle;
-            } else if (mouseCoords[1] > 0 && angle > 0) {
-                angle = -Math.PI + angle;
+                let angle = Math.atan(mouseCoords[1] / mouseCoords[0]);
+
+                // NOTE: Need to do this so that the gradient doesn't *magically* flip when
+                // the mouse crosses the y-axis.
+                if (mouseCoords[1] < 0 && angle < 0) {
+                    angle = Math.PI + angle;
+                } else if (mouseCoords[1] > 0 && angle > 0) {
+                    angle = -Math.PI + angle;
+                }
+
+                text.style?.setProperty("--gradient-angle", `${angle}rad`);
             }
+        });
 
-            text.style?.setProperty("--gradient-angle", `${angle}rad`);
+        function getRelativePosition(
+            elem: HTMLElement,
+            x: number,
+            y: number,
+        ): [number, number] {
+            let elemCoords = getCenterCoords(elem);
+
+            return [elemCoords[0] - x, elemCoords[1] - y];
         }
-    });
 
-    function getRelativePosition(
-        elem: HTMLElement,
-        x: number,
-        y: number,
-    ): [number, number] {
-        let elemCoords = getCenterCoords(elem);
+        function getCenterCoords(elem: HTMLElement): [number, number] {
+            let elemRect = elem.getBoundingClientRect();
 
-        return [elemCoords[0] - x, elemCoords[1] - y];
-    }
+            return [
+                elemRect.left + elem.offsetWidth / 2,
+                elemRect.top + elem.offsetHeight / 2,
+            ];
+        }
+    </script>
 
-    function getCenterCoords(elem: HTMLElement): [number, number] {
-        let elemRect = elem.getBoundingClientRect();
-
-        return [
-            elemRect.left + elem.offsetWidth / 2,
-            elemRect.top + elem.offsetHeight / 2,
-        ];
-    }
-</script>
+{% endmacro %}

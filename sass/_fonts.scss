@@ -1,3 +1,7 @@
+/*************************
+ * ATKINSON HYPERLEGIBLE *
+ *************************/
+
 @font-face {
     font-family: "Atkinson Hyperlegible";
     font-weight: normal;
@@ -33,6 +37,42 @@
     src: url("/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-BoldItalic-102.woff")
         format("woff");
 }
+
+/***********
+ * GEORGIA *
+ ***********/
+
+@font-face {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/Georgia/georgia.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Georgia";
+    font-style: italic;
+    font-weight: normal;
+    src: url("/fonts/Georgia/georgiai.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: bold;
+    src: url("/fonts/Georgia/georgiab.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Georgia";
+    font-style: italic;
+    font-weight: bold;
+    src: url("/fonts/Georgia/georgiaz.woff") format("woff");
+}
+
+/*************
+ * FIRA CODE *
+ *************/
 
 @font-face {
     font-family: "Fira Code";

@@ -1,0 +1,14 @@
+{% macro head() %}
+
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ config.title }}</title>
+
+        <!-- Styles  -->
+        <link rel="stylesheet" href="{{ get_url(path="style.css") }}" />
+
+        <!-- CSS framework: Simple CSS (minified) -->
+        <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    </head>
+
+{% endmacro %}

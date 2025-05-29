@@ -1,3 +1,53 @@
 @use "fonts";
 @use "gradient";
-@use "profile_photo";
+@use "theme" as *;
+
+/***********************
+ * NORMALIZATION/RESET *
+ ***********************/
+
+// Apply a natural box layout model to all elements, but allowing components to change
+// See: https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+html {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+}
+
+/*********
+ * FONTS *
+ *********/
+
+html {
+    // Set font-family globally
+    // font-family: "Atkinson Hyperlegible", sans-serif;
+    font-family: "Georgia", serif !important;
+}
+
+// Set coding styles globally
+pre,
+code {
+    font-family: "Fira Code", monospace;
+}
+
+/*
+/**********
+ * COLORS *
+ *********
+
+html {
+    // Set BG color.
+    background-color: $color-base-100;
+
+    // Ensure text color is correct.
+    color: $color-base-content;
+}
+*/
