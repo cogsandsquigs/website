@@ -1,0 +1,6 @@
+@use "variables" as *;
+
+html {
+    color: $foreground;
+    background-color: $background;
+}

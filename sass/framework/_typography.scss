@@ -1,0 +1,87 @@
+@use "variables" as *;
+
+/*************
+ * SET FONTS *
+ *************/
+
+html {
+    font-size: $font-size;
+    font-family: $font-family-base;
+    line-height: $line-height;
+}
+
+code,
+pre code {
+    font-family: $font-family-monospace;
+}
+
+/****************
+ * SET HEADINGS *
+ ****************/
+
+// NOTE: These values are taken from https://simplecss.org/demo#basic-typography
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.44rem;
+}
+
+h5 {
+    font-size: 1.15rem;
+}
+
+h6 {
+    font-size: 0.96rem;
+}
+
+/*********************
+ * LINKS AND BUTTONS *
+ *********************/
+
+// NOTE: links with a `.button` class will be styled as buttons.
+
+a:not(.button) {
+    color: $primary;
+    text-decoration: underline;
+    transition: color $transition-fast;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+button,
+a.button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    font-family: $font-family-base;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $foreground;
+    background-color: $primary;
+    border: none;
+    border-radius: $border-radius;
+    padding: $spacing-sm $spacing-md;
+    cursor: pointer;
+    transition:
+        background-color $transition-fast,
+        color $transition-fast;
+
+    &:hover,
+    &:focus {
+        opacity: $opacity-focused;
+    }
+}

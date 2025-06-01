@@ -5,4 +5,5 @@
     "singleAttributePerLine": true,
     "singleQuote": false,
     "bracketSpacing": true,
+    "printWidth": 80
 }

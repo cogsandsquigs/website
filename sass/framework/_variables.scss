@@ -1,0 +1,107 @@
+// Themeing and customization for the Sass framework.
+// All customization is done thru CSS variables for compatability with plain CSS.
+
+/*****************
+ * CSS VARIABLES *
+ *****************/
+
+:root {
+    --color-primary: #007bff; // Primary color
+    --color-secondary: #6c757d; // Secondary color
+    --color-success: #28a745; // Success color
+    --color-danger: #dc3545; // Danger color
+    --color-warning: #ffc107; // Warning color
+    --color-info: #17a2b8; // Info color
+    --color-background: #fff; // Background color
+    --color-foreground: #111; // Foreground color
+
+    --opacity-focused: 0.9; // Opacity for hover/focus states
+
+    --font-family-base: "Helvetica", Arial, sans-serif; // Base font family
+    --font-family-monospace: Courier, monospace; // Monospace font family
+    --font-size: 16px; // Font size
+    --line-height: 1.5; // Line height
+
+    // Spacing variables
+    --spacing-xs: 0.25rem; // 4px
+    --spacing-sm: 0.5rem; // 8px
+    --spacing-md: 1rem; // 16px
+    --spacing-lg: 1.5rem; // 24px
+    --spacing-xl: 2rem; // 32px
+    --spacing-xxl: 3rem; // 48px
+
+    // Border variables
+    --border-width: 1px;
+    --border-radius: 0.375rem; // 6px
+    --border-radius-sm: 0.125rem; // 2px
+    --border-radius-lg: 0.5rem; // 8px
+    --border-color: rgba(255, 255, 255, 0.2);
+
+    // Shadow variables
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    // Transition variables
+    --transition-fast: 150ms ease-in-out;
+    --transition-normal: 300ms ease-in-out;
+    --transition-slow: 500ms ease-in-out;
+
+    // Z-index variables
+    --z-dropdown: 1000;
+    --z-modal: 1050;
+    --z-tooltip: 1100;
+}
+
+/******************
+ * SASS VARIABLES *
+ ******************/
+
+$primary: var(--color-primary);
+$secondary: var(--color-secondary);
+$success: var(--color-success);
+$danger: var(--color-danger);
+$warning: var(--color-warning);
+$info: var(--color-info);
+$background: var(--color-background);
+$foreground: var(--color-foreground);
+
+$opacity-focused: var(--opacity-focused);
+
+// Font variables
+$font-family-base: var(--font-family-base);
+$font-family-monospace: var(--font-family-monospace);
+$font-size: var(--font-size);
+$line-height: var(--line-height);
+
+// Spacing variables
+$spacing-xs: var(--spacing-xs);
+$spacing-sm: var(--spacing-sm);
+$spacing-md: var(--spacing-md);
+$spacing-lg: var(--spacing-lg);
+$spacing-xl: var(--spacing-xl);
+$spacing-xxl: var(--spacing-xxl);
+
+// Border variables
+$border-width: var(--border-width);
+$border-radius: var(--border-radius);
+$border-radius-sm: var(--border-radius-sm);
+$border-radius-lg: var(--border-radius-lg);
+$border-color: var(--border-color);
+
+// Shadow variables
+$shadow-sm: var(--shadow-sm);
+$shadow-md: var(--shadow-md);
+$shadow-lg: var(--shadow-lg);
+
+// Transition variables
+$transition-fast: var(--transition-fast);
+$transition-normal: var(--transition-normal);
+$transition-slow: var(--transition-slow);
+
+// Z-index variables
+$z-dropdown: var(--z-dropdown);
+$z-modal: var(--z-modal);
+$z-tooltip: var(--z-tooltip);

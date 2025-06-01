@@ -3,8 +3,6 @@ title: "About"
 description: "My bio lmao"
 ---
 
-{{ profile(photo="/images/pfp.png", alt="A pixelated version of myself, used as my Github profile picture") }}
-
 Hey! I'm Ian Pratt, although I go by the online alias _cogsandsquigs_. I program things for fun and profit (although mainly for fun!). Currently, my main project is working on my website, and making it look as brilliant and fancy as possible. It's also a great way to practice my web development skills!
 
 It may be obvious at this point, but I built this whole site from scratch! I really like programming things (especially things I can see!), and I plan to have a job in computer science in the future as well.
