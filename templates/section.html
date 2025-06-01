@@ -1,0 +1,11 @@
+{% extends "page.html" %}
+{% import "macros/page-list.html" as page_list %}
+
+{% block content %}
+    <section style="text-align: center;">
+        <h1 style="margin: 0;">{{ section.title }}</h1>
+    </section>
+
+    {{ page_list::page_list(pages=section.pages) }}
+
+{% endblock %}

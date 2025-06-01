@@ -1,0 +1,12 @@
+{% extends "page.html" %}
+
+{% block content %}
+
+    <section style="text-align: center; vertical-align: middle; min-height: 100%;">
+        {% for term in terms %}
+            <!-- Generate each term -->
+            <a href="{{ term.permalink }}" style="padding: var(--spacing-sm);">{{ term.name }}</a>
+        {% endfor %}
+    </section>
+
+{% endblock %}

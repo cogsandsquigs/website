@@ -65,8 +65,7 @@ footer {
 
 // Sections of text or whatnot.
 section {
-    //   border-bottom: $border-width solid $primary;
-    // border-top: $border-width solid $primary;
+    max-width: 100%;
     padding: $spacing-md;
     &:after,
     &:before {

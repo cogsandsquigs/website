@@ -8,7 +8,11 @@
 
         <article>
             {% block content %}
-                {{ page.content | safe }}
+                {% if page.content %}
+                    {{ page.content | safe }}
+                {% else %}
+                    {{ content | safe }}
+                {% endif %}
             {% endblock content %}
         </article>
 

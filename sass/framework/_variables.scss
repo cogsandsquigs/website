@@ -41,6 +41,9 @@
     --spacing-xl: 2rem; // 32px
     --spacing-xxl: 3rem; // 48px
 
+    // Grid variables
+    --grid-gap: calc(2 * var(--spacing-sm)); // 16px
+
     // Border variables
     --border-width: 1px;
     --border-radius-sm: 0.125rem; // 2px
@@ -101,6 +104,9 @@ $spacing-md: var(--spacing-md);
 $spacing-lg: var(--spacing-lg);
 $spacing-xl: var(--spacing-xl);
 $spacing-xxl: var(--spacing-xxl);
+
+// Grid variables
+$grid-gap: var(--grid-gap);
 
 // Border variables
 $border-width: var(--border-width);

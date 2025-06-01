@@ -1,0 +1,13 @@
+{% macro page_list(pages) %}
+
+    <div class="grid-col-3">
+        {% for page in pages %}
+            <!-- Call page list item builder-->
+            {{ self::page_list_item(page=page) }}
+        {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro page_list_item(page) %}
+    <p>Hello !</p>
+{% endmacro %}
