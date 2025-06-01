@@ -1,12 +1,17 @@
-{% import "macros/head.html" as head %}
-
 <!DOCTYPE html>
 <html lang="en">
-    {{ head::head() }}
+    {% include "partials/head.html" %}
 
     <body>
-        {% block content %}
-            {{ page.content | safe }}
-        {% endblock content %}
+        <header>
+        </header>
+
+        <article>
+            {% block content %}
+                {{ page.content | safe }}
+            {% endblock content %}
+        </article>
+
+        {% include "partials/footer.html" %}
     </body>
 </html>

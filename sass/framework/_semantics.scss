@@ -1,0 +1,170 @@
+@use "variables" as *;
+
+/***********
+ * CONTENT *
+ ***********/
+
+// Should take up the entire screen/page:
+html,
+body {
+    min-height: 100%; // Full height of the viewport.
+    min-width: 100%; // Full width of the viewport.
+}
+
+// Should be at the top of the page.
+header {
+    min-width: 100%;
+    padding: $spacing-md;
+
+    position: sticky;
+    top: 0;
+
+    background-color: $background;
+}
+
+// A readable article thing
+article {
+    max-width: 65ch; // Readable width, dynamic: 65 characters per line.
+    min-height: 100%;
+
+    margin: 0 auto; // center itself in the element.
+}
+
+// Should be at the bottom of the page. If there's not enough content, it will
+// stick to the bottom. If there's enough content, it will be pushed down.
+footer {
+    min-width: 100%;
+    padding: $spacing-md;
+
+    opacity: $disabled-opacity;
+    text-align: center;
+    font-size: 0.9rem;
+
+    &:before {
+        content: ""; // Required for the pseudo-elements to work.
+        display: block;
+        margin: 0 auto;
+
+        // This is literally the whole reason why we use `:before` and `:after`
+        // pseudo-elements. instead of just `border-top` and `border-bottom`. Doing
+        // this, we can set the "border" length to be whatever we want, and it
+        // will just work.
+        //
+        // NOTE: We do 2 * spacing so that we have exactly 1 spacing on each size
+        width: calc(100% - 2 * $spacing-xl);
+
+        /**
+         * These are required for the "border" to work properly. We set `padding-x` and
+         * `border-y` so that we space the border away from the content.
+         **/
+
+        padding-bottom: $spacing-md;
+        border-top: $border-width solid $primary;
+    }
+}
+
+// Sections of text or whatnot.
+section {
+    //   border-bottom: $border-width solid $primary;
+    // border-top: $border-width solid $primary;
+    padding: $spacing-md;
+    &:after,
+    &:before {
+        content: ""; // Required for the pseudo-elements to work.
+        display: block;
+        margin: 0 auto;
+
+        // This is literally the whole reason why we use `:before` and `:after`
+        // pseudo-elements. instead of just `border-top` and `border-bottom`. Doing
+        // this, we can set the "border" length to be whatever we want, and it
+        // will just work.
+        //
+        // NOTE: We do 2 * spacing so that we have exactly 1 spacing on each size
+        width: calc(100% - 2 * $spacing-md);
+    }
+
+    /**
+     * These are required for the "border" to work properly. We set `padding-x` and
+     * `border-y` so that we space the border away from the content.
+     **/
+
+    &:before {
+        padding-bottom: $spacing-md;
+        border-top: $border-width solid $primary;
+    }
+
+    &:after {
+        padding-top: $spacing-md;
+        border-bottom: $border-width solid $primary;
+    }
+
+    // No border at the top of the first section.
+    &:first-child:before {
+        border-top: none;
+    }
+
+    // No border at the bottom of the last section.
+    &:last-child:after {
+        border-bottom: none;
+    }
+}
+
+hr {
+    color: $primary;
+}
+
+/********
+ * CODE *
+ ********/
+
+// Inline code
+*:not(pre) > code {
+    border: $border-width solid $primary;
+    border-radius: $border-radius-md;
+    padding: 0 $spacing-xs;
+}
+
+/**
+ * NOTE: This code is taken from 
+ * https://www.getzola.org/documentation/content/syntax-highlighting/
+ * as we assume zola syntax highlighting will be used. Fortunately, it's mostly
+ * adaptable to our needs.
+ **/
+
+// NOT inline code
+pre {
+    border: $border-width solid $primary;
+    border-radius: $border-radius-lg;
+    padding: $spacing-md;
+
+    // Scrollable if it overflows.
+    overflow: auto;
+}
+
+// The line numbers already provide some kind of left/right padding
+pre[data-linenos] {
+    padding: 1rem 0;
+}
+
+pre table td {
+    padding: 0;
+}
+
+// The line number cells
+pre table td:nth-of-type(1) {
+    text-align: center;
+    vertical-align: top;
+    user-select: none;
+}
+
+pre mark {
+    /* If you want your highlights to take the full width */
+    display: block;
+    /* The default background colour of a mark is bright yellow */
+    background-color: rgba(254, 252, 232, 0.9);
+}
+
+pre table {
+    width: 100%;
+    border-collapse: collapse;
+}

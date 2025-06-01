@@ -53,13 +53,30 @@ h6 {
 
 a:not(.button) {
     color: $primary;
-    text-decoration: underline;
-    transition: color $transition-fast;
+    font-weight: bold;
+
+    // Make underline offset a little bigger than the border width
+    text-decoration: underline $border-width;
+    text-underline-offset: calc($border-width + 0.0625rem);
+
+    // Transitions
+    transition: text-underline-offset $transition-fast;
+
+    // styles to apply if a user's device settings are set to reduced motion
+    @media (prefers-reduced-motion: reduce) {
+        transition: text-decoration $transition-fast;
+    }
 
     &:hover,
     &:focus {
-        text-decoration: none;
+        text-underline-offset: calc($border-width + 0.25rem);
+
         filter: brightness($focus-brightness);
+
+        @media (prefers-reduced-motion: reduce) {
+            text-underline-offset: calc($border-width + 0.0625rem);
+            text-decoration: none;
+        }
     }
 }
 
@@ -74,7 +91,7 @@ a.button,
     color: $primary-content;
     background-color: $primary;
     border: none;
-    border-radius: $border-radius;
+    border-radius: $border-radius-md;
     padding: $spacing-xs $spacing-sm;
     cursor: pointer;
     transition:
@@ -85,45 +102,4 @@ a.button,
     &:focus {
         filter: brightness($focus-brightness);
     }
-}
-
-/***********
- * CONTENT *
- ***********/
-
-// Should take up the entire screen/page:
-html,
-body {
-    min-height: 100%; // Full height of the viewport.
-    min-width: 100%; // Full width of the viewport.
-}
-
-// Should be at the top of the page.
-header {
-    min-width: 100%;
-    padding: $spacing-md;
-
-    position: sticky;
-    top: 0;
-
-    background-color: $background;
-}
-
-// A readable article thing
-article {
-    max-width: 65ch; // Readable width, dynamic: 65 characters per line.
-    min-height: 100%;
-
-    margin: 0 auto; // center itself in the element.
-}
-
-// Should be at the bottom of the page. If there's not enough content, it will
-// stick to the bottom. If there's enough content, it will be pushed down.
-footer {
-    min-width: 100%;
-    padding: $spacing-md;
-
-    opacity: $disabled-opacity;
-    text-align: center;
-    font-size: 0.9rem;
 }

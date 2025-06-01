@@ -43,9 +43,9 @@
 
     // Border variables
     --border-width: 1px;
-    --border-radius: 0.375rem; // 6px
     --border-radius-sm: 0.125rem; // 2px
-    --border-radius-lg: 0.5rem; // 8px
+    --border-radius-md: calc(3 * var(--border-radius-sm)); // 6px
+    --border-radius-lg: calc(4 * var(--border-radius-sm)); // 8px
     --border-color: rgba(255, 255, 255, 0.2);
 
     // Shadow variables
@@ -104,8 +104,8 @@ $spacing-xxl: var(--spacing-xxl);
 
 // Border variables
 $border-width: var(--border-width);
-$border-radius: var(--border-radius);
 $border-radius-sm: var(--border-radius-sm);
+$border-radius-md: var(--border-radius-md);
 $border-radius-lg: var(--border-radius-lg);
 $border-color: var(--border-color);
 

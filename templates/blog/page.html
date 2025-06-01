@@ -1,0 +1,11 @@
+{% extends "page.html" %}
+
+{% block content %}
+    <!-- TODO: Page title, etc. -->
+    <section style="text-align: center;">
+        <h3 style="margin: 0;">{{ page.title }}</h3>
+    </section>
+
+    <!-- Actual page content -->
+    {{ page.content | safe }}
+{% endblock %}

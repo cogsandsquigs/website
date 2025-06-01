@@ -8,7 +8,8 @@
 :root {
     // Fonts
 
-    --font-family-base: "Georgia", serif;
+    // --font-family-base: "Georgia", serif;
+    --font-family-base: "Atkinson Hyperlegible", serif;
     --font-family-monospace: "Fira Code", monospace;
 
     // Colors
@@ -25,6 +26,15 @@
     --color-info-content: var(--color-primary-content); // Info color
 
     // How much we brighten/dim on hover.
+    //
     // NOTE: If this is < 1, we dim.
+    //
+    // NOTE: We don't need to set `--disabled-opacity` here, as it is calculated
+    // from `--focus-brightness`. Specifically, it is calculated as:
+    // ```
+    // -- disabled-opacity: calc(200% - var(--focus-brightness));
+    // ```
+    // (it's the inverse of the focus brightness. If `--focus-brightness` is 125%,
+    // then `--disabled-opacity` will be 75%.)
     --focus-brightness: 125%;
 }

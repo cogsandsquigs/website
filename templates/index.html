@@ -1,8 +1,6 @@
-{% import "macros/head.html" as head %}
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    {{ head::head() }}
+    {% include "partials/head.html" %}
 
     <body>
 
@@ -21,17 +19,16 @@
             <a href="{{ get_url(path="index.html") }}">Index</a>
 
             <br>
-       
+
             <button onclick="alert('Hello, World!')">Click Me!</button>
 
             <br>
-        
+
             <a href="{{ get_url(path="index.html") }}" class="button">Index</a>
         </article>
-        
 
         <footer>
             Hello! I'm a footer!
         </footer>
- </body>
+    </body>
 </html>

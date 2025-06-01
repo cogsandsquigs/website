@@ -1,0 +1,43 @@
+<footer class="flex flex-col items-center justify-items-center">
+    <p>
+        <a href="{{current_url}}">This site</a> © {{ now() | date(format="%Y")
+        }} by <a href="{{get_url(path="/about")}}">Ian Pratt</a> is licensed under
+        <a 
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            target="_blank"
+            rel="license noopener noreferrer"
+        >
+            CC BY-NC-SA 4.0</a>
+
+        <img
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+            style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+        />
+
+        <img
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
+            style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+        />
+
+        <img
+            src="https://mirrors.creativecommons.org/presskit/icons/nc.svg"
+            style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+        />
+
+        <img
+            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg"
+            style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+        />
+    </p>
+
+    <p>
+        Any software or program herein is licensed under
+        <a
+            href="https://opensource.org/license/agpl-v3"
+            target="_blank"
+            rel="license noopener noreferrer"
+        >
+            GNU Affero General Public License v3.0</a>
+        unless otherwise stated
+    </p>
+</footer>
