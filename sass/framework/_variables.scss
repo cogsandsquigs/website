@@ -7,15 +7,26 @@
 
 :root {
     --color-primary: #007bff; // Primary color
+    --color-primary-content: var(--color-content); // Primary content color
     --color-secondary: #6c757d; // Secondary color
-    --color-success: #28a745; // Success color
-    --color-danger: #dc3545; // Danger color
-    --color-warning: #ffc107; // Warning color
+    --color-secondary-content: var(--color-content); // Secondary content color
     --color-info: #17a2b8; // Info color
+    --color-info-content: var(--color-content); // Info content color
+    --color-success: #28a745; // Success color
+    --color-success-content: var(--color-content); // Success content color
+    --color-danger: #dc3545; // Danger color
+    --color-danger-content: var(--color-content); // Danger content color
+    --color-warning: #ffc107; // Warning color
+    --color-warning-content: #212529; // Warning content color
     --color-background: #fff; // Background color
-    --color-foreground: #111; // Foreground color
+    --color-content: #111; // Foreground color
 
-    --opacity-focused: 0.9; // Opacity for hover/focus states
+    // The brightness of focused elements. NOTE: This
+    // can be less than 1!
+    --focus-brightness: 0.9;
+
+    // The disabled opacity is calculated based on the focus brightness.
+    --disabled-opacity: calc(200% - var(--focus-brightness));
 
     --font-family-base: "Helvetica", Arial, sans-serif; // Base font family
     --font-family-monospace: Courier, monospace; // Monospace font family
@@ -60,15 +71,22 @@
  ******************/
 
 $primary: var(--color-primary);
+$primary-content: var(--color-primary-content);
 $secondary: var(--color-secondary);
+$secondary-content: var(--color-secondary-content);
 $success: var(--color-success);
+$success-content: var(--color-success-content);
 $danger: var(--color-danger);
+$danger-content: var(--color-danger-content);
 $warning: var(--color-warning);
+$warning-content: var(--color-warning-content);
 $info: var(--color-info);
+$info-content: var(--color-info-content);
 $background: var(--color-background);
-$foreground: var(--color-foreground);
+$content: var(--color-content);
 
-$opacity-focused: var(--opacity-focused);
+$focus-brightness: var(--focus-brightness);
+$disabled-opacity: var(--disabled-opacity);
 
 // Font variables
 $font-family-base: var(--font-family-base);

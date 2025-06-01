@@ -1,34 +1,30 @@
 @use "fonts";
-@use "gradient";
-@use "theme" as *;
 @use "framework";
 
 /*********
- * FONTS *
+ * THEME *
  *********/
 
-html {
-    // Set font-family globally
-    // font-family: "Atkinson Hyperlegible", sans-serif;
-    font-family: "Georgia", serif !important;
+:root {
+    // Fonts
+
+    --font-family-base: "Georgia", serif;
+    --font-family-monospace: "Fira Code", monospace;
+
+    // Colors
+
+    --color-background: oklch(18.76% 0.004 286.01); // Background color
+    --color-content: oklch(92% 0.004 286.32); // Foreground/content color
+
+    --color-primary: oklch(74% 0.16 232.661); // Sky blue
+    --color-primary-content: var(--color-background);
+    --color-secondary: oklch(70.91% 0.3123 328.27); // Fuschia
+    --color-secondary-content: var(--color-background);
+
+    --color-info: var(--color-primary);
+    --color-info-content: var(--color-primary-content); // Info color
+
+    // How much we brighten/dim on hover.
+    // NOTE: If this is < 1, we dim.
+    --focus-brightness: 125%;
 }
-
-// Set coding styles globally
-pre,
-code {
-    font-family: "Fira Code", monospace;
-}
-
-/*
-/**********
- * COLORS *
- *********
-
-html {
-    // Set BG color.
-    background-color: $color-base-100;
-
-    // Ensure text color is correct.
-    color: $color-base-content;
-}
-*/

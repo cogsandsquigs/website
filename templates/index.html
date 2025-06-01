@@ -5,21 +5,33 @@
     {{ head::head() }}
 
     <body>
-        <h1>{{ config.title }}</h1>
-        <h2>asdf</h2>
-        <h3>asdf</h3>
-        <h4>asdf</h4>
-        <h5>asdf</h5>
-        <h6>asdf</h6>
 
-        <a href="{{ get_url(path="index.html") }}">Index</a>
+        <header>
+            Hello! I'm a header!
+        </header>
 
-        <br>
+        <article>
+            <h1>{{ config.title }}</h1>
+            <h2>asdf</h2>
+            <h3>asdf</h3>
+            <h4>asdf</h4>
+            <h5>asdf</h5>
+            <h6>asdf</h6>
+
+            <a href="{{ get_url(path="index.html") }}">Index</a>
+
+            <br>
        
-        <button onclick="alert('Hello, World!')">Click Me!</button>
+            <button onclick="alert('Hello, World!')">Click Me!</button>
 
-        <br>
+            <br>
         
-        <a href="{{ get_url(path="index.html") }}" class="button">Index</a>
-    </body>
+            <a href="{{ get_url(path="index.html") }}" class="button">Index</a>
+        </article>
+        
+
+        <footer>
+            Hello! I'm a footer!
+        </footer>
+ </body>
 </html>

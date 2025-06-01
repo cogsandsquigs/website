@@ -1,4 +1,6 @@
-#
+# Framework
+
+My Sass/CSS framework for this website. Essentially, a bespoke Micro-CSS framework.
 
 ## NOTES
 

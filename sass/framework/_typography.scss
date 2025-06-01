@@ -59,6 +59,7 @@ a:not(.button) {
     &:hover,
     &:focus {
         text-decoration: none;
+        filter: brightness($focus-brightness);
     }
 }
 
@@ -70,11 +71,11 @@ a.button,
     font-family: $font-family-base;
     font-size: $font-size;
     line-height: $line-height;
-    color: $foreground;
+    color: $primary-content;
     background-color: $primary;
     border: none;
     border-radius: $border-radius;
-    padding: $spacing-sm $spacing-md;
+    padding: $spacing-xs $spacing-sm;
     cursor: pointer;
     transition:
         background-color $transition-fast,
@@ -82,6 +83,47 @@ a.button,
 
     &:hover,
     &:focus {
-        opacity: $opacity-focused;
+        filter: brightness($focus-brightness);
     }
+}
+
+/***********
+ * CONTENT *
+ ***********/
+
+// Should take up the entire screen/page:
+html,
+body {
+    min-height: 100%; // Full height of the viewport.
+    min-width: 100%; // Full width of the viewport.
+}
+
+// Should be at the top of the page.
+header {
+    min-width: 100%;
+    padding: $spacing-md;
+
+    position: sticky;
+    top: 0;
+
+    background-color: $background;
+}
+
+// A readable article thing
+article {
+    max-width: 65ch; // Readable width, dynamic: 65 characters per line.
+    min-height: 100%;
+
+    margin: 0 auto; // center itself in the element.
+}
+
+// Should be at the bottom of the page. If there's not enough content, it will
+// stick to the bottom. If there's enough content, it will be pushed down.
+footer {
+    min-width: 100%;
+    padding: $spacing-md;
+
+    opacity: $disabled-opacity;
+    text-align: center;
+    font-size: 0.9rem;
 }
