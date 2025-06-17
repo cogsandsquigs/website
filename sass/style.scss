@@ -32,7 +32,7 @@
     // NOTE: We don't need to set `--disabled-opacity` here, as it is calculated
     // from `--focus-brightness`. Specifically, it is calculated as:
     // ```
-    // -- disabled-opacity: calc(200% - var(--focus-brightness));
+    // --disabled-opacity: calc(200% - var(--focus-brightness));
     // ```
     // (it's the inverse of the focus brightness. If `--focus-brightness` is 125%,
     // then `--disabled-opacity` will be 75%.)

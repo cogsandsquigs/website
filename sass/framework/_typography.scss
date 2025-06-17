@@ -93,6 +93,7 @@ a.button,
     border: none;
     border-radius: $border-radius-md;
     padding: $spacing-xs $spacing-sm;
+    margin: $spacing-xs 0;
     cursor: pointer;
     transition:
         background-color $transition-fast,

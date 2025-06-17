@@ -1,0 +1,46 @@
+@use "variables" as *;
+
+/**************
+ * NAVIGATION *
+ **************/
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; // Space between elements.
+    align-items: center; // Items vertically centered.
+}
+
+// Start section of the navigation.
+nav > .start {
+    display: flex;
+    flex: 1; // Take up all available space.
+    order: 1;
+    justify-content: start;
+}
+
+// Center section of the navigation.
+nav > .center {
+    display: flex;
+    flex: 1; // Take up all available space.
+    order: 2;
+    justify-content: center;
+}
+
+// End section of the navigation.
+nav > .end {
+    display: flex;
+    flex: 1; // Take up all available space.
+    order: 3;
+    justify-content: end;
+}
+
+nav ul,
+nav ol {
+    display: flex;
+    list-style-type: none;
+
+    & > li:not(:last-child) {
+        margin-right: $spacing-md;
+    }
+}
