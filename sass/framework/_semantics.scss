@@ -7,25 +7,25 @@
 // Should take up the entire screen/page:
 html,
 body {
-    min-height: 100%; // Full height of the viewport.
+    min-height: 100vh; // Full height of the viewport.
     min-width: 100%; // Full width of the viewport.
 }
 
 // Should be at the top of the page.
 header {
-    min-width: 100%;
+    min-width: 100% !important; // Full width of the viewport.
     padding: $spacing-md;
 
     position: sticky;
     top: 0;
-
-    background-color: $background;
 }
 
 // A readable article thing
 article {
     max-width: 65ch; // Readable width, dynamic: 65 characters per line.
     min-height: 100%;
+    flex-grow: 1; // Allow the article to grow and fill the available space.
+    justify-self: start; // Center the content vertically.
 
     margin: 0 auto; // center itself in the element.
 }
@@ -35,6 +35,7 @@ article {
 footer {
     min-width: 100%;
     padding: $spacing-md;
+    flex-direction: column;
 
     opacity: $disabled-opacity;
     text-align: center;

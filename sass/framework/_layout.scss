@@ -1,0 +1,37 @@
+.vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; // Space between elements.
+    align-items: center; // Items vertically centered.
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; // Space between elements.
+    align-items: center; // Items vertically centered.
+}
+
+// Start section of the content.
+.start {
+    display: flex;
+    min-width: fit-content; // Ensure it takes up full width.
+    order: 1;
+    justify-content: start;
+}
+
+// Center section of the content.
+.center {
+    display: flex;
+    min-width: fit-content; // Ensure it takes up full width.
+    order: 2;
+    justify-content: center;
+}
+
+// End section of the content.
+.end {
+    display: flex;
+    min-width: fit-content; // Ensure it takes up full width.
+    order: 3;
+    justify-content: end;
+}

@@ -23,26 +23,44 @@ pre code {
 
 h1 {
     font-size: 3rem;
+    margin: 0;
+    padding: 0;
 }
 
 h2 {
     font-size: 2.6rem;
+    margin: 0;
+    padding: 0;
 }
 
 h3 {
     font-size: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 h4 {
     font-size: 1.44rem;
+    margin: 0;
+    padding: 0;
 }
 
 h5 {
     font-size: 1.15rem;
+    margin: 0;
+    padding: 0;
 }
 
 h6 {
     font-size: 0.96rem;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 /*********************
@@ -50,8 +68,8 @@ h6 {
  *********************/
 
 // NOTE: links with a `.button` class will be styled as buttons.
-
-a:not(.button) {
+// NOTE: links with a `.pill` class will be styled as pills.
+a:not(.button, .pill) {
     color: $primary;
     font-weight: bold;
 
@@ -85,13 +103,30 @@ a.button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-    font-family: $font-family-base;
-    font-size: $font-size;
-    line-height: $line-height;
     color: $primary-content;
     background-color: $primary;
     border: none;
     border-radius: $border-radius-md;
+    padding: $spacing-xs $spacing-sm;
+    margin: $spacing-xs 0;
+    cursor: pointer;
+    transition:
+        background-color $transition-fast,
+        color $transition-fast;
+
+    &:hover,
+    &:focus {
+        filter: brightness($focus-brightness);
+    }
+}
+
+pill,
+.pill {
+    font-family: $font-family-base;
+    font-weight: bold;
+    color: $primary;
+    border: $border-width solid $border-color;
+    border-radius: $border-radius-full;
     padding: $spacing-xs $spacing-sm;
     margin: $spacing-xs 0;
     cursor: pointer;

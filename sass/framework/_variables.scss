@@ -49,7 +49,10 @@
     --border-radius-sm: 0.125rem; // 2px
     --border-radius-md: calc(3 * var(--border-radius-sm)); // 6px
     --border-radius-lg: calc(4 * var(--border-radius-sm)); // 8px
-    --border-color: rgba(255, 255, 255, 0.2);
+    --border-radius-full: calc(
+        infinity * 1px
+    ); // Full border radius for circular elements
+    --border-color: var(--color-primary); // Default border color
 
     // Shadow variables
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -113,6 +116,9 @@ $border-width: var(--border-width);
 $border-radius-sm: var(--border-radius-sm);
 $border-radius-md: var(--border-radius-md);
 $border-radius-lg: var(--border-radius-lg);
+$border-radius-full: var(
+    --border-radius-full
+); // Full border radius for circular elements
 $border-color: var(--border-color);
 
 // Shadow variables

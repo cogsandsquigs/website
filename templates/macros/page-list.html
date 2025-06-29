@@ -1,13 +1,52 @@
 {% macro page_list(pages) %}
+    {% set rand_id = get_random(end=9999999) %}
 
-    <div class="grid-col-3">
+    <ul style="list-style-type: none; margin: 0; padding: 0;">
         {% for page in pages %}
             <!-- Call page list item builder-->
-            {{ self::page_list_item(page=page) }}
+            <li>{{ self::page_list_item(page=page) }}</li>
+            {% if not loop.last %}<hr />{% endif %}
         {% endfor %}
-    </div>
+    </ul>
 {% endmacro %}
 
 {% macro page_list_item(page) %}
-    <p>Hello !</p>
+    <div style="justify-content: center;">
+        <h3 style="margin: 0; padding: 0;">
+            <a href="{{ page.permalink }}">{{ page.title }}</a>
+        </h3>
+
+        {{ self::page_info(page=page) }}
+    </div>
+{% endmacro %}
+
+{% macro page_info(page) %}
+    <h4>{{ page.description | default(default="No description available.") }}</h4>
+
+    <div class="horizontal">
+        <h5 class="start">
+            <!-- See: https://docs.rs/chrono/0.4.41/chrono/format/strftime/index.html -->
+            <date>{{ page.date | date(format="%B %e, %Y") }}</date>
+        </h5>
+
+        {% if page.taxonomies.series %}
+            <a href="{{ get_taxonomy_url(kind=`series`, name=page.taxonomies.series[0]) }}"
+               class="pill center">Series: {{ page.taxonomies.series[0] }}</a>
+        {% endif %}
+
+        <ul class="end"
+            style="list-style-type: none;
+                   margin: 0;
+                   padding: 0;
+                   display:flex">
+            {% for tag in page.taxonomies.tags %}
+                <a href="{{ get_taxonomy_url(kind=`tags`, name=tag) }}"
+                   class="pill"
+                   style="{% if not loop.last %} margin-right: var(--spacing-xs);
+                          {% endif %}">{{ tag }}</a>
+            {% endfor %}
+        </ul>
+
+    </div>
+
 {% endmacro %}

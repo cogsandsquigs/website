@@ -2,48 +2,18 @@
 <html lang="en">
     {% include "partials/head.html" %}
 
-    <body>
-
+    <body class="vertical">
         <header>
-            Hello! I'm a header!
-            <nav>
-                <div class="start">I'm a navigation bar!</div>
-
-                <ul class="end">
-                    <li>
-                        <a href="{{ get_url(path="index.html") }}">Index</a>
-                    </li>
-                    <li>
-                        <a href="{{ get_url(path="page.html") }}">Page</a>
-                    </li>
-                    <li>
-                        <a href="{{ get_url(path="about.html") }}">About</a>
-                    </li>
-                </ul>
-            </nav>
+            {% include "partials/header.html" %}
         </header>
 
-        <article>
-            <h1>{{ config.title }}</h1>
-            <h2>asdf</h2>
-            <h3>asdf</h3>
-            <h4>asdf</h4>
-            <h5>asdf</h5>
-            <h6>asdf</h6>
-
-            <a href="{{ get_url(path="index.html") }}">Index</a>
-
-            <br>
-
-            <button onclick="alert('Hello, World!')">Click Me!</button>
-
-            <br>
-
-            <a href="{{ get_url(path="index.html") }}" class="button">Index</a>
+        <article class="center horizontal" style="min-width:100%;min-height:76vh;">
+            <section class="center" style="text-align: center;">
+                <h1 style="min-width:100%;">{{ config.title }}</h1>
+            </section>
         </article>
 
-        <footer>
-            Hello! I'm a footer!
-        </footer>
+        {% include "partials/footer.html" %}
     </body>
+
 </html>

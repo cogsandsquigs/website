@@ -1,9 +1,11 @@
 {% extends "page.html" %}
+{% import "macros/page-list.html" as page_info %}
 
 {% block content %}
     <!-- TODO: Page title, etc. -->
     <section style="text-align: center;">
         <h3 style="margin: 0;">{{ page.title }}</h3>
+        <div style="text-align: start;">{{ page_info::page_info(page=page) }}</div>
     </section>
 
     <!-- Actual page content -->
