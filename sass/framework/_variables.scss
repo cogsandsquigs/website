@@ -6,23 +6,22 @@
  *****************/
 
 :root {
-    --color-primary: #007bff; // Primary color
-    --color-primary-content: var(--color-content); // Primary content color
-    --color-secondary: #6c757d; // Secondary color
-    --color-secondary-content: var(--color-content); // Secondary content color
-    --color-info: #17a2b8; // Info color
-    --color-info-content: var(--color-content); // Info content color
-    --color-success: #28a745; // Success color
-    --color-success-content: var(--color-content); // Success content color
-    --color-danger: #dc3545; // Danger color
-    --color-danger-content: var(--color-content); // Danger content color
-    --color-warning: #ffc107; // Warning color
-    --color-warning-content: #212529; // Warning content color
-    --color-background: #fff; // Background color
-    --color-content: #111; // Foreground color
+    --color-background: oklch(18.76% 0.004 286.01); // Background color
+    --color-content: oklch(92% 0.004 286.32); // Foreground/content color
 
-    // The brightness of focused elements. NOTE: This
-    // can be less than 1!
+    --color-primary: oklch(74% 0.16 232.661); // Sky blue
+    --color-primary-content: var(--color-background);
+
+    --color-info: oklch(74% 0.16 232.661); // Info
+    --color-info-content: oklch(29% 0.066 243.157); // Text w/ info background
+    --color-success: oklch(76% 0.177 163.223); // Success
+    --color-success-content: oklch(37% 0.077 168.94); // Text w/ success background
+    --color-warning: oklch(82% 0.189 84.429); // Warning
+    --color-warning-content: oklch(41% 0.112 45.904); // Text w/ warning background
+    --color-error: oklch(71% 0.194 13.428); // Error
+    --color-error-content: oklch(71% 0.194 13.428); // Text w/ error background
+
+    // The brightness of focused elements. NOTE: This can be less than 1!
     --focus-brightness: 0.9;
 
     // The disabled opacity is calculated based on the focus brightness.
@@ -49,17 +48,13 @@
     --border-radius-sm: 0.125rem; // 2px
     --border-radius-md: calc(3 * var(--border-radius-sm)); // 6px
     --border-radius-lg: calc(4 * var(--border-radius-sm)); // 8px
-    --border-radius-full: calc(
-        infinity * 1px
-    ); // Full border radius for circular elements
+    --border-radius-full: calc(infinity * 1px); // Full border radius for circular elements
     --border-color: var(--color-primary); // Default border color
 
     // Shadow variables
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md:
-        0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg:
-        0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
     // Transition variables
     --transition-fast: 150ms ease-in-out;
@@ -116,9 +111,7 @@ $border-width: var(--border-width);
 $border-radius-sm: var(--border-radius-sm);
 $border-radius-md: var(--border-radius-md);
 $border-radius-lg: var(--border-radius-lg);
-$border-radius-full: var(
-    --border-radius-full
-); // Full border radius for circular elements
+$border-radius-full: var(--border-radius-full); // Full border radius for circular elements
 $border-color: var(--border-color);
 
 // Shadow variables

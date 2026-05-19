@@ -9,7 +9,7 @@
     // Fonts
 
     // --font-family-base: "Georgia", serif;
-    --font-family-base: "Atkinson Hyperlegible", serif;
+    --font-family-base: "Merriweather", "Georgia", serif;
     --font-family-monospace: "Fira Code", monospace;
 
     // Colors
@@ -19,11 +19,15 @@
 
     --color-primary: oklch(74% 0.16 232.661); // Sky blue
     --color-primary-content: var(--color-background);
-    --color-secondary: oklch(70.91% 0.3123 328.27); // Fuschia
-    --color-secondary-content: var(--color-background);
 
-    --color-info: var(--color-primary);
-    --color-info-content: var(--color-primary-content); // Info color
+    --color-info: oklch(74% 0.16 232.661);
+    --color-info-content: oklch(29% 0.066 243.157);
+    --color-success: oklch(76% 0.177 163.223);
+    --color-success-content: oklch(37% 0.077 168.94);
+    --color-warning: oklch(82% 0.189 84.429);
+    --color-warning-content: oklch(41% 0.112 45.904);
+    --color-error: oklch(71% 0.194 13.428);
+    --color-error-content: oklch(71% 0.194 13.428);
 
     // How much we brighten/dim on hover.
     //

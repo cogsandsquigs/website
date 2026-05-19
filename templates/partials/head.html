@@ -1,10 +1,16 @@
 
 <head>
         <meta charset="utf-8" />
-        <title>{{ config.title }}</title>
+
+        
+        <!-- Font Preconnects -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         <!-- Styles  -->
         <link rel="stylesheet" href="{{ get_url(path="style.css") }}" />
+
+        
 
         <!-- Math rendering! See: https://katex.org/docs/browser -->
         <!-- KaTeX CSS -->
@@ -28,5 +34,8 @@
             crossorigin="anonymous"
             onload="renderMathInElement(document.body);"
         ></script>
-</head>
+
+        <title>{{ config.title }}</title>
+
+        </head>
 

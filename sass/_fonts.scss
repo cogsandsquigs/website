@@ -1,73 +1,15 @@
-/*************************
- * ATKINSON HYPERLEGIBLE *
- *************************/
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+
+/****************
+ * MERRIWEATHER *
+ ****************/
 
 @font-face {
-    font-family: "Atkinson Hyperlegible";
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
-    src: url("/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102.woff")
-        format("woff");
-}
-
-@font-face {
-    font-family: "Atkinson Hyperlegible";
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-    src: url("/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102.woff")
-        format("woff");
-}
-
-@font-face {
-    font-family: "Atkinson Hyperlegible";
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-    src: url("/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102.woff")
-        format("woff");
-}
-
-@font-face {
-    font-family: "Atkinson Hyperlegible";
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-    src: url("/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-BoldItalic-102.woff")
-        format("woff");
-}
-
-/***********
- * GEORGIA *
- ***********/
-
-@font-face {
-    font-family: "Georgia";
-    font-style: normal;
-    font-weight: normal;
-    src: url("/fonts/Georgia/georgia.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Georgia";
-    font-style: italic;
-    font-weight: normal;
-    src: url("/fonts/Georgia/georgiai.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Georgia";
-    font-style: normal;
-    font-weight: bold;
-    src: url("/fonts/Georgia/georgiab.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Georgia";
-    font-style: italic;
-    font-weight: bold;
-    src: url("/fonts/Georgia/georgiaz.woff") format("woff");
+    font-variation-settings: "wdth" 100;
 }
 
 /*************
@@ -76,9 +18,7 @@
 
 @font-face {
     font-family: "Fira Code";
+    font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
-    src: url("/fonts/FiraCodeNerdFont/FiraCodeNerdFont-Regular.ttf")
-        format("truetype");
 }
