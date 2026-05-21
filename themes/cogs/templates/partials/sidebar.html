@@ -12,18 +12,20 @@
             {% endfor %}
         </ul>
 
-        <ul class="nav-externals">
-            {% for external in config.extra.nav_externals %}
-                <li class="nav-link"><a href="{{ external.href }}">{{ external.title }}</a></li>
-            {% endfor %}
-        </ul>
+        {% if config.extra.theme and (config.extra.theme | length > 0) %}
+            <ul class="nav-externals">
+                {% for external in config.extra.theme.nav_externals %}
+                    <li class="nav-link"><a href="{{ external.href }}">{{ external.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
 
         <ul class="nav-sections">
             <!--
                 NOTE: need to rename to `subsection` here b/c otherwise the `section` varible
                 somehow interferes w/ this.
             --->
-            {% for subsection in root.subsections %}
+            {% for subsection in root.subsections | sort %}
                 {% set subsection = get_section(path=subsection) %}
                 <li class="nav-link">
                     <a href="{{ subsection.path }}">{{ subsection.title }}</a>

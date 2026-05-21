@@ -7,7 +7,7 @@
 html {
     font-size: $font-size-base;
     font-family: $font-family-base;
-    line-height: $line-height-base;
+    line-height: 1.5;
 }
 
 code,
@@ -20,22 +20,14 @@ pre code {
  ****************/
 
 h1 {
-    font-size: calc($font-size-base * pow($header-scale, 5));
-}
-
-h2 {
-    font-size: calc($font-size-base * pow($header-scale, 4));
-}
-
-h3 {
     font-size: calc($font-size-base * pow($header-scale, 3));
 }
 
-h4 {
+h2 {
     font-size: calc($font-size-base * pow($header-scale, 2));
 }
 
-h5 {
+h3 {
     font-size: calc($font-size-base * pow($header-scale, 1));
 }
 
@@ -43,23 +35,32 @@ p {
     font-size: $font-size-base;
 }
 
-h6 {
+small {
+    font-size: calc($font-size-base * pow($header-scale, -2));
+}
+
+h4 {
     font-size: calc($font-size-base * pow($header-scale, -1));
 }
 
-small {
+h5 {
     font-size: calc($font-size-base * pow($header-scale, -2));
+}
+
+h6 {
+    font-size: calc($font-size-base * pow($header-scale, -3));
 }
 
 h1,
 h2,
 h3,
+p,
+small,
 h4,
 h5,
-p,
-h6,
-small {
-    margin-bottom: calc($line-height-base * 1.5rem);
+h6 {
+    margin-bottom: calc($font-size-base * 1.5);
+    overflow-wrap: break-word; // Prevent long strings from overflowing container
 }
 
 /**************

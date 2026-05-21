@@ -1,16 +1,21 @@
-author             = "Ian Pratt <ianjdpratt@gmail.com>"
-base_url           = "https://cogsandsquigs.dev"          # The URL the site will be built for
-build_search_index = true                                 # Whether to build a search index to be used later on by a JavaScript library
-compile_sass       = true                                 # Whether to automatically compile all Sass files in the sass directory
+author      = "Ian Pratt <ianjdpratt@gmail.com>"
+base_url    = "https://cogsandsquigs.dev"          # The URL the site will be built for
+description = "My little slice of the blogosphere"
+title       = "Cogs & Squigs"
+
+build_search_index = true                    # Whether to build a search index to be used later on by a JavaScript library
+compile_sass       = true                    # Whether to automatically compile all Sass files in the sass directory
 default_language   = "en"
-description        = "My little slice of the blogosphere"
 feed_filenames     = ["atom.xml", "rss.xml"]
 generate_feeds     = true
 minify_html        = true
-title              = "Cogs & Squigs"
+theme              = "cogs"                  # Custom theme, in themes/cogs
 
 [markdown]
-    render_emoji = true # When set to "true", emoji aliases are translated in the rendered Markdown files. (e.g.: :smile: => 😄)
+    bottom_footnotes    = true   # Whether footnotes are rendered in the GitHub-style (at the bottom, with back references) or plain (in the place, where they are defined)
+    github_alerts       = true   # Render github-flavored alerts
+    insert_anchor_links = "left" # See "Internal links & deep linking" in the documentation for more information.
+    render_emoji        = true   # When set to "true", emoji aliases are translated in the rendered Markdown files. (e.g.: :smile: => 😄)
 
     [markdown.highlighting]
         highlight = true   # Whether to do syntax highlighting
@@ -25,4 +30,14 @@ title              = "Cogs & Squigs"
     name = "series"
 
 [extra]
-    # Put all your custom variables here
+    # Theme-related configuration for `cogs` themee
+    [extra.theme]
+        # Nav-links for the theme. See `theme.toml`
+        [[extra.theme.nav_externals]]
+            href  = "https://codeberg.org/cogsandsquigs"
+            title = "Codeberg"
+
+        # Nav-links for the theme. See `theme.toml`
+        [[extra.theme.nav_externals]]
+            href  = "https://github.com/cogsandsquigs"
+            title = "GitHub"

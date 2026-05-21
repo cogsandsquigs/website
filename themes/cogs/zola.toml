@@ -9,7 +9,9 @@ title          = "Cogs' Theme"
     name = "tags"
 
 [extra]
-    # Nav-links for the theme. See `theme.toml`
-    [[extra.nav_externals]]
-        href  = "https://codeberg.org/cogsandsquigs"
-        title = "Codeberg"
+    # Theme-related configuration
+    [extra.theme]
+        # Nav-links for the theme. See `theme.toml`
+        [[extra.theme.nav_externals]]
+            href  = "https://codeberg.org/cogsandsquigs"
+            title = "Codeberg"

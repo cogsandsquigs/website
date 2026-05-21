@@ -1,0 +1,6 @@
+// Anchor links should have no decoration and same color as foreground
+a.anchor-link,
+a.anchor-link:visited {
+    text-decoration: none;
+    // NOTE: Keep focus hover effect, so no changing that here!
+}

@@ -1,5 +1,6 @@
 ---
 title: "Blog"
 sort_by: "date" # Sort pages by date.
-page_template: "blog/page.html" # Sets the page template for this section to the blog one.
 ---
+
+If I want to talk about my life or something I've learned, it goes here (usually!).

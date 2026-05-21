@@ -17,15 +17,17 @@ tags        = []
 # be merged with user data, some kind of prefix or nesting is preferable
 # Use snake_casing to be consistent with the rest of Zola
 [extra]
-    # Any and all links you want to display, in the order you want to display them. These are
-    # objects with the following type signature:
-    # 
-    # ```
-    # {
-    #     title = "The name of the link",
-    #     href = "The url it links to"
-    # }
-    # ```
-    # 
-    # By default, there aren't any.
-    nav_externals = []
+    # All theme-related configuration is here!
+    [extra.theme]
+        # Any and all links you want to display, in the order you want to display them. These are
+        # objects with the following type signature:
+        # 
+        # ```
+        # {
+        #     title = "The name of the link",
+        #     href = "The url it links to"
+        # }
+        # ```
+        # 
+        # By default, there aren't any.
+        nav_externals = []

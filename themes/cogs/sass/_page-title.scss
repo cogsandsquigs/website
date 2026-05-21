@@ -5,25 +5,16 @@
     margin-bottom: 1rem;
 
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    align-content: stretch;
-    justify-content: space-between;
+    flex-direction: column;
 
-    .page-info-left,
-    .page-info-right {
+    .page-info-top,
+    .page-info-bottom {
+        min-width: 100%;
+
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: baseline;
         justify-content: space-between;
-        min-height: 100%;
-    }
-
-    .page-info-left {
-        align-items: start;
-    }
-
-    .page-info-right {
-        align-items: end;
     }
 
     h1 {
@@ -42,8 +33,14 @@
         // NOTE: Keep focus hover effect, so no changing that here!
     }
 
-    // Taxonomy terms should have a bit of horiz. padding.
-    .taxonomy-term {
-        padding: 0 0.25rem;
+    .taxonomies {
+        text-align: right;
+
+        .taxonomy {
+            // Taxonomy terms should have a bit of horiz. padding.
+            .taxonomy-term {
+                padding: 0 0.25rem;
+            }
+        }
     }
 }

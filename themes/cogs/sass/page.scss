@@ -4,7 +4,8 @@
 
 @use "base";
 @use "sidebar";
-@use "page_title";
+@use "page-title";
+@use "anchor-link";
 
 // Set the body as the flexbox container for the whole stuffs
 body {
