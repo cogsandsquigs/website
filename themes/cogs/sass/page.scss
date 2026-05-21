@@ -3,9 +3,11 @@
  */
 
 @use "base";
+@use "code";
 @use "sidebar";
 @use "page-title";
 @use "anchor-link";
+@use "github-alerts";
 
 // Set the body as the flexbox container for the whole stuffs
 body {

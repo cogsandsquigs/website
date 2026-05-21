@@ -59,6 +59,8 @@ small,
 h4,
 h5,
 h6 {
+    padding: 0;
+    margin-top: 0;
     margin-bottom: calc($font-size-base * 1.5);
     overflow-wrap: break-word; // Prevent long strings from overflowing container
 }

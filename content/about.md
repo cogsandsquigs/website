@@ -15,7 +15,7 @@ as well.
 Check out the rest of my site for more stuff I'm doing! Or, if it's your thing, take a look at my
 [Codeberg](https://codeberg.org/cogsandsquigs) if you're into looking at someone else's code
 
-> [!INFO]
+> [!NOTE]
 > I am in the process of migrating away from [my old GitHub](https://github.com/cogsandsquigs), due
 > to Microsoft's recent actions and association with ICE.
 

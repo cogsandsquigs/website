@@ -2,17 +2,29 @@
  * Stylize github alerts (if they appear at all!)
  */
 
-.markdown-alert-note {
+@use "variables" as *;
+
+@mixin markdown-alert($color, $emoji, $message) {
+    border-left: calc($border-width) solid $color;
+    padding-left: 0.5rem;
+
+    &::before {
+        content: "#{$emoji} #{$message}";
+        color: $color;
+    }
 }
 
-.markdown-alert-tip {
+blockquote.markdown-alert-note,
+blockquote.markdown-alert-tip,
+blockquote.markdown-alert-important {
+    // The info (w/ box) emoji
+    @include markdown-alert($color-info, "ℹ️", "Info");
 }
 
-.markdown-alert-important {
+blockquote.markdown-alert-warning,
+blockquote.markdown-alert-caution {
+    @include markdown-alert($color-warn, "&#x2139;&#xFE0F;", "Warning!");
 }
 
-.markdown-alert-warning {
-}
-
-.markdown-alert-caution {
-}
+// TODO: More differentiation
+// TODO: Does tera support "error" and "info" alerts?

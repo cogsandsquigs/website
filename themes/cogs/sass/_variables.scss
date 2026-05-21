@@ -31,8 +31,28 @@ $color-fg: oklch(0.97807 0.029 256.847);
 $color-primary: oklch(0.73 0.1219 232.66);
 $color-primary-content: oklch(0.23 0.06095 232.66);
 
-// TODO: get info/success/warn/error colors from daisyui dark theme
+$color-info: oklch(74% 0.16 232.661);
+$color-info-content: oklch(29% 0.066 243.157);
+
+$color-success: oklch(76% 0.177 163.223);
+$color-success-content: oklch(37% 0.077 168.94);
+
+$color-warn: oklch(82% 0.189 84.429);
+$color-warn-content: oklch(41% 0.112 45.904);
+
+$color-error: oklch(71% 0.194 13.428);
+$color-error-content: oklch(27% 0.105 12.094);
+
+// TODO: tip-color? (LMFAO)
+
+/***********
+ * BORDERS *
+ ***********/
+
+$border-width: 3px;
+$border-radius-sm: 0.125rem;
+$border-radius-md: calc(3 * $border-radius-sm);
+$border-radius-lg: calc(4 * $border-radius-sm);
 
 $transition-fast: 150ms ease-in-out;
-$border-width: 2px;
 $focus-brightness: 0.8;
