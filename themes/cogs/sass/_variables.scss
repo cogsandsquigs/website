@@ -1,0 +1,44 @@
+/**************
+ * TYPOGRAPHY *
+ **************/
+
+/**
+ * The base font size; i.e., the font size of paragraph elements.
+ * Also, responsive font size.
+ * See: https://stackoverflow.com/questions/15649244/responsive-font-size-in-css
+ */
+$font-size-base: calc(16px + 0.5vw);
+
+/* The base font family; i.e. the font family used by otherwise unstyled paragraph elements. */
+$font-family-base: "PT Serif", Georgia, "Times New Roman", Times, serif;
+
+/* The monospaced font family; i.e. the font family used by code and other such things. */
+$font-family-mono: "Fira Code", monospace;
+
+/**
+ * The line height of the text. THIS MUST HAVE UNITS. Defaults to the golden ratio times the font
+ * size for optimal legibility.
+ */
+$line-height-base: calc(1.618 * $font-size-base);
+
+/**
+ * The multiplicative factor when scaling up to next header level (starting from base/<p>). By
+ * default, this is Major Second. See https://typescale.com/.
+ */
+$header-scale: 1.125;
+
+/************
+ * THEMEING *
+ ************/
+
+$color-bg: oklch(0.1973 0.0134 267.09); // oklch(25.33% 0.016 252.42);
+$color-fg: oklch(0.97807 0.029 256.847);
+
+$color-primary: oklch(0.73 0.1219 232.66);
+$color-primary-content: oklch(0.23 0.06095 232.66);
+
+// TODO: get info/success/warn/error colors from daisyui dark theme
+
+$transition-fast: 150ms ease-in-out;
+$border-width: 2px;
+$focus-brightness: 0.8;

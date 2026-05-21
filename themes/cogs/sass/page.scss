@@ -1,0 +1,29 @@
+/**
+ * Set up the page styling, including side-/nav-bar and content
+ */
+
+@use "base";
+@use "sidebar";
+@use "page_title";
+
+// Set the body as the flexbox container for the whole stuffs
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+
+    // NOTE: need 0 top/bottom padding so that we can have stable scroll for sidebar.
+    padding: 0rem 2rem;
+}
+
+// 25% of the page
+.sidebar {
+    width: 25%;
+}
+
+// 75% of the page + padding
+.content {
+    padding-top: 1rem;
+    width: 75%;
+}

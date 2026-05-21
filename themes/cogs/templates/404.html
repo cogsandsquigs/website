@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link href="/page.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block title %}
+    {{ config.title }} - 404
+{% endblock %}
+
+{% block body %}
+    {% include "partials/sidebar.html" %}
+    
+    <div class="content">
+        {% block content %}
+            <div class="page-title">
+                <div class="page-info-left">
+                    <h1>404</h1>
+                </div>
+            </div>
+            
+            <hr/>
+
+            {% block msg_404 %}
+                <p>This page doesn't exist. What exactly were you looking for?</p>
+            {% endblock %}
+        {% endblock %}
+    </div>
+{% endblock %}

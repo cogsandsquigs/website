@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <!--
+        The page stylesheet. Because this imports the base stylsheet, no need to also import the
+        base stylesheet again!
+    --->
+    <link href="/page.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block title %}
+    {{ config.title }} - {{ page.title }}
+{% endblock %}
+
+{% block body %}
+    {% include "partials/sidebar.html" %}
+    
+    <div class="content">
+        {% block content %}
+            {% include "partials/page-title.html" %}
+
+            <hr>
+            
+            {{ page.content | safe }}
+        {% endblock %}
+    </div>
+{% endblock %}

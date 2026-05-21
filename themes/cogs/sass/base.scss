@@ -1,0 +1,12 @@
+/**
+ * Set up typography + fonts for the theme.
+ */
+
+@use "typography";
+
+// Fill the page
+html,
+body {
+    min-width: 100%;
+    min-height: 100vh;
+}

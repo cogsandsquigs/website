@@ -1,0 +1,15 @@
+base_url       = "https://codeberg.org/cogsandsquigs/cogsandsquigs.dev/src/branch/main/themes/cogs"
+compile_sass   = true
+description    = "My theme for my website."
+generate_feeds = true
+title          = "Cogs' Theme"
+
+[[taxonomies]]
+    feed = true
+    name = "tags"
+
+[extra]
+    # Nav-links for the theme. See `theme.toml`
+    [[extra.nav_externals]]
+        href  = "https://codeberg.org/cogsandsquigs"
+        title = "Codeberg"

@@ -1,0 +1,57 @@
+/**
+ * Style the `sidebar`. The navbar is contained within the `nav` tag.
+ */
+
+@use "variables" as *;
+
+.sidebar {
+    padding-top: 1rem;
+    margin-right: 1rem;
+
+    // Both below necessary for sticky
+    position: sticky;
+    top: 0;
+
+    // Make this flex for items w/in!
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: baseline;
+
+    // Links w/in nav should have no decoration and same color as foreground
+    a,
+    a:visited {
+        color: $color-fg;
+        font-weight: bold;
+        filters: none;
+        text-decoration: none;
+
+        // NOTE: Keep focus hover effect, so no changing that here!
+    }
+
+    nav {
+        .nav-link {
+            padding-bottom: 0.3rem;
+        }
+
+        // Some left-padding for style
+        padding-left: 1.5rem;
+
+        // Lists w/in nav for nav sections and pages should be no text-decor.
+        ul.nav-pages,
+        ul.nav-externals,
+        ul.nav-sections {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            ul.nav-sections-subsection {
+                list-style: none;
+                padding-left: 0.75rem;
+                margin-left: 0.5rem;
+
+                border-left: $border-width solid;
+            }
+        }
+    }
+}

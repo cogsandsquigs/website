@@ -1,0 +1,49 @@
+@use "variables" as *;
+
+.page-title {
+    min-width: 100%;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    align-content: stretch;
+    justify-content: space-between;
+
+    .page-info-left,
+    .page-info-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+    }
+
+    .page-info-left {
+        align-items: start;
+    }
+
+    .page-info-right {
+        align-items: end;
+    }
+
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+
+    // Links w/in page title should have no decoration and same color as foreground
+    a,
+    a:visited {
+        color: $color-fg;
+        font-weight: bold;
+        filters: none;
+        text-decoration: none;
+
+        // NOTE: Keep focus hover effect, so no changing that here!
+    }
+
+    // Taxonomy terms should have a bit of horiz. padding.
+    .taxonomy-term {
+        padding: 0 0.25rem;
+    }
+}

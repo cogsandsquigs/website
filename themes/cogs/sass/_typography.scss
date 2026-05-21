@@ -1,0 +1,116 @@
+@use "variables" as *;
+
+/*************
+ * SET FONTS *
+ *************/
+
+html {
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    line-height: $line-height-base;
+}
+
+code,
+pre code {
+    font-family: $font-family-mono;
+}
+
+/****************
+ * SET HEADINGS *
+ ****************/
+
+h1 {
+    font-size: calc($font-size-base * pow($header-scale, 5));
+}
+
+h2 {
+    font-size: calc($font-size-base * pow($header-scale, 4));
+}
+
+h3 {
+    font-size: calc($font-size-base * pow($header-scale, 3));
+}
+
+h4 {
+    font-size: calc($font-size-base * pow($header-scale, 2));
+}
+
+h5 {
+    font-size: calc($font-size-base * pow($header-scale, 1));
+}
+
+p {
+    font-size: $font-size-base;
+}
+
+h6 {
+    font-size: calc($font-size-base * pow($header-scale, -1));
+}
+
+small {
+    font-size: calc($font-size-base * pow($header-scale, -2));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+h6,
+small {
+    margin-bottom: calc($line-height-base * 1.5rem);
+}
+
+/**************
+ * SET COLORS *
+ **************/
+
+html,
+hr {
+    color: $color-fg;
+    background-color: $color-bg;
+}
+
+a,
+a:visited {
+    color: $color-primary;
+    font-weight: bold;
+}
+
+/************************
+ * SET TEXT DECORATIONS *
+ ************************/
+
+a,
+a:visited {
+    // Make underline offset a little bigger than the border width. Exclude color prop. since same
+    // color as link color.
+    text-decoration: underline solid $border-width;
+    text-underline-offset: calc($border-width + 0.0625rem);
+}
+
+/********************************
+ * SET ANIMATIONS & TRANSITIONS *
+ ********************************/
+
+a,
+a:visited {
+    &:hover,
+    &:focus {
+        filter: brightness($focus-brightness);
+    }
+}
+
+// Since this is motion, only allow if there's no reduced-motion preference
+@media (prefers-reduced-motion: no-preference) {
+    a,
+    a:visited {
+        transition: text-underline-offset $transition-fast;
+
+        &:hover,
+        &:focus {
+            text-underline-offset: calc($border-width + 0.25rem);
+        }
+    }
+}

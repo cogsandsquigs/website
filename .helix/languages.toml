@@ -1,0 +1,15 @@
+# Necessary b/c we need overrides for all HTML in here to force it to use Tera templating settings
+
+[[language]]
+    auto-format      = true
+    file-types       = ["html"]
+    language-servers = ["twig-language-server"]
+    name             = "twig"
+
+    [language.indent]
+        tab-width = 4
+        unit      = "    "
+
+[language-server.twig-language-server]
+    args    = ["--stdio"]
+    command = "twig-language-server"

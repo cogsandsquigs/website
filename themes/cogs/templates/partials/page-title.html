@@ -1,0 +1,46 @@
+<div class="page-title">
+    <div class="page-info-left">
+        <h1>{{ page.title }}</h1>
+
+        {% if page.description %}
+            <em>{{ page.description }}</em>
+        {% endif %}
+    </div>
+
+    <div class="page-info-right">
+        {% if page.date %}
+            <em><date>{{ page.date | date(format="%B %-d, %Y") }}</date></em>
+        {% endif %}
+
+        <div>
+            {% if page.taxonomies %}
+                {% for taxon, terms in page.taxonomies %}
+                    {% if taxon == "tag" or taxon == "tags" %}
+                        {% set taxon_prefix = "" %}
+                        {% set term_prefix = "#" %}
+                    {% else %}
+                        {% set taxon_prefix = taxon ~ ": " %}
+                        {% set term_prefix = "" %}
+                    {% endif %}
+
+                    <!-- Divider between taxonomies -->
+                    {% if not loop.first %} / {% endif %}
+                
+                    <span class="taxonomy">
+                        <em>
+                            {{ taxon_prefix }}
+                            {% for term in terms %}
+                                <a
+                                    href="{{ get_taxonomy_url(kind=taxon, name=term) }}"
+                                    class="taxonomy-term"
+                                >
+                                    {{ term_prefix }}{{ term }}
+                                </a>
+                            {% endfor %}
+                        </em>
+                    <span>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>

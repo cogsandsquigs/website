@@ -7,7 +7,7 @@ description        = "My little slice of the blogosphere"
 feed_filenames     = ["atom.xml", "rss.xml"]
 generate_feeds     = true
 minify_html        = true
-title              = "Cogs And Squigs"
+title              = "Cogs & Squigs"
 
 [markdown]
     render_emoji = true # When set to "true", emoji aliases are translated in the rendered Markdown files. (e.g.: :smile: => 😄)

@@ -15,7 +15,13 @@
                 pkgs = import nixpkgs { inherit system; };
             in
             {
-                devShells.default = pkgs.mkShell { packages = with pkgs; [ zola ]; };
+                devShells.default = pkgs.mkShell {
+                    packages = with pkgs; [
+                        zola # SSG
+                        twig-language-server # LSP for templates
+                        ludtwig # Formatter for templates
+                    ];
+                };
             }
         );
 }
