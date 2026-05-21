@@ -19,19 +19,51 @@ taxonomies:
 
 So, about Rust.
 
-It's great and all, but unfortunately, not _every_ company supports using Rust directly on their platform (boo! boo Apple!). In my case, it's (surprise, surprise) Apple that doesn't support Rust instead of Swift. _However_, other people have had this problem in the past, and they've created solutions to work around this.
+It's great and all, but unfortunately, not _every_ company supports using Rust directly on their
+platform (boo! boo Apple!). In my case, it's (surprise, surprise) Apple that doesn't support Rust
+instead of Swift. _However_, other people have had this problem in the past, and they've created
+solutions to work around this.
 
-Why am I writing about binding Swift to Rust in the first place? Because for my work, I needed to create an [assembler for a custom CPU](https://github.com/cogsandsquigs/nand7400) (called `nand7400`) that's programmed via an iOS/MacOS app. Besides, bindings are a (theoretically) fun adventure into more low-level concepts, something I wanted to (quote-unquote) enjoy more often.
+Why am I writing about binding Swift to Rust in the first place? Because for my work, I needed to
+create an [assembler for a custom CPU](https://github.com/cogsandsquigs/nand7400) (called
+`nand7400`) that's programmed via an iOS/MacOS app. Besides, bindings are a (theoretically) fun
+adventure into more low-level concepts, something I wanted to (quote-unquote) enjoy more often.
 
-My poison of choice for this project is [UniFFI](https://mozilla.github.io/uniffi-rs/). This library allows Swift to bind and call to Rust, without much hassle (remember the "much"). You should go read the docs, but in essence:
+My poison of choice for this project is [UniFFI](https://mozilla.github.io/uniffi-rs/). This library
+allows Swift to bind and call to Rust, without much hassle (remember the "much"). You should go read
+the docs, but in essence:
 
-1. [Define a .udl file](https://mozilla.github.io/uniffi-rs/tutorial/udl_file.html) which [specifies](https://mozilla.github.io/uniffi-rs/udl_file_spec.html) the exposed APIs.
-2. Include some [magic mumbo jumbo](https://mozilla.github.io/uniffi-rs/tutorial/Rust_scaffolding.html) in your library to expose the symbols (This step is VERY important! It won't generate any warnings if it's skipped, but doing so will lead to undefined symbol errors down the line in Xcode or whatever).
-3. [Create and export code](https://mozilla.github.io/uniffi-rs/tutorial/foreign_language_bindings.html) in your language of choice via an [associated binary](https://mozilla.github.io/uniffi-rs/tutorial/foreign_language_bindings.html#creating-the-bindgen-binary). You can also use [custom back-ends](https://github.com/mozilla/uniffi-rs/#third-party-foreign-language-bindings) for unofficially supported languages!
+1. [Define a .udl file](https://mozilla.github.io/uniffi-rs/tutorial/udl_file.html) which
+   [specifies](https://mozilla.github.io/uniffi-rs/udl_file_spec.html) the exposed APIs.
+2. Include some
+   [magic mumbo jumbo](https://mozilla.github.io/uniffi-rs/tutorial/Rust_scaffolding.html) in your
+   library to expose the symbols (This step is VERY important! It won't generate any warnings if
+   it's skipped, but doing so will lead to undefined symbol errors down the line in Xcode or
+   whatever).
+3. [Create and export code](https://mozilla.github.io/uniffi-rs/tutorial/foreign_language_bindings.html)
+   in your language of choice via an
+   [associated binary](https://mozilla.github.io/uniffi-rs/tutorial/foreign_language_bindings.html#creating-the-bindgen-binary).
+   You can also use
+   [custom back-ends](https://github.com/mozilla/uniffi-rs/#third-party-foreign-language-bindings)
+   for unofficially supported languages!
 
-That's it! The documentation pretty much ends there, and expects you to package everything nice and neat like the good little developer you are. Funnily enough, there's not a lot of documentation online on how to do this, even on Apple's part. Fortunately, some guy has a [guide](https://rhonabwy.com/2023/02/10/creating-an-xcframework/) on how to package Rust applications into an `XCFramework`, which is a special type of binary that can be used on Apple platforms. There's also a [rust library](https://github.com/y-crdt/yswift) that demonstrates compiling to an `XCFramework`, which that guy worked on!
+That's it! The documentation pretty much ends there, and expects you to package everything nice and
+neat like the good little developer you are. Funnily enough, there's not a lot of documentation
+online on how to do this, even on Apple's part. Fortunately, some guy has a
+[guide](https://rhonabwy.com/2023/02/10/creating-an-xcframework/) on how to package Rust
+applications into an `XCFramework`, which is a special type of binary that can be used on Apple
+platforms. There's also a [rust library](https://github.com/y-crdt/yswift) that demonstrates
+compiling to an `XCFramework`, which that guy worked on!
 
-To get everything up and running, follow [that guide](https://rhonabwy.com/2023/02/10/creating-an-xcframework/) to set up your dev environment for creating an `XCFramework`. You can use [my own makefile](https://github.com/cogsandsquigs/nand7400/blob/main/Makefile) to set up and compile everything, too, which is shown below. In my case, I have the main Rust library in `nand7400`, the Swift-binding Rust scaffolding code in `nand7400-ffi`, and export the Swift code to `nand7400-ffi-bindings/swift` (I used the YSwift repository's [build script](https://github.com/y-crdt/yswift/blob/main/scripts/build-xcframework.sh) to start this `Makefile`, then tweaked it to my liking and specific setup).
+To get everything up and running, follow
+[that guide](https://rhonabwy.com/2023/02/10/creating-an-xcframework/) to set up your dev
+environment for creating an `XCFramework`. You can use
+[my own makefile](https://github.com/cogsandsquigs/nand7400/blob/main/Makefile) to set up and
+compile everything, too, which is shown below. In my case, I have the main Rust library in
+`nand7400`, the Swift-binding Rust scaffolding code in `nand7400-ffi`, and export the Swift code to
+`nand7400-ffi-bindings/swift` (I used the YSwift repository's
+[build script](https://github.com/y-crdt/yswift/blob/main/scripts/build-xcframework.sh) to start
+this `Makefile`, then tweaked it to my liking and specific setup).
 
 ```make
 # This makefile is used to build the Nand7400 framework for iOS, macOS and Mac Catalyst. To use it, run `make package` in
@@ -184,7 +216,8 @@ package: package-swift
 	@echo "▸ Done!"
 ```
 
-We're not done, however. We also need to define a `Package.swift` that tells Xcode how to install the swift binary. This is mostly also copied from the above repo, and is shown below:
+We're not done, however. We also need to define a `Package.swift` that tells Xcode how to install
+the swift binary. This is mostly also copied from the above repo, and is shown below:
 
 ```swift
 // swift-tools-version:5.8
@@ -219,8 +252,12 @@ let package = Package(
 )
 ```
 
-We define a `.target` to export to, and also a `.binaryTarget` which the `.target` depends on (that's where the bindings live). I also specify a path to the swift bindings in `.target`, because the default is `Sources`.
+We define a `.target` to export to, and also a `.binaryTarget` which the `.target` depends on
+(that's where the bindings live). I also specify a path to the swift bindings in `.target`, because
+the default is `Sources`.
 
-Once everything's done and set up, you should be good to go! If you're running my makefile, run `make package` to package everything up into an `XCFramework`, then export that somewhere and put the link (as well as the `sha256`) in the `Package.swift` file.
+Once everything's done and set up, you should be good to go! If you're running my makefile, run
+`make package` to package everything up into an `XCFramework`, then export that somewhere and put
+the link (as well as the `sha256`) in the `Package.swift` file.
 
 Happy binding!

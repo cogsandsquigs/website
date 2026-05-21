@@ -9,8 +9,8 @@ it look as brilliant and fancy as possible. It's also a great way to practice my
 skills!
 
 It may be obvious at this point, but I built this whole site from scratch! I really like programming
-things (especially things I can see!), and I plan to have a job in computer science in the future
-as well.
+things (especially things I can see!), and I plan to have a job in computer science in the future as
+well.
 
 Check out the rest of my site for more stuff I'm doing! Or, if it's your thing, take a look at my
 [Codeberg](https://codeberg.org/cogsandsquigs) if you're into looking at someone else's code

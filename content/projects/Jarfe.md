@@ -12,6 +12,8 @@ taxonomies:
         - rust
 ---
 
-This was just a silly side-project to make a [JSFuck](https://jsfuck.com/) compiler, in Rust of course! I just wanted something to do, so why not this?
+This was just a silly side-project to make a [JSFuck](https://jsfuck.com/) compiler, in Rust of
+course! I just wanted something to do, so why not this?
 
-It was fun making this, and while it serves no practical purpose, it was at least a nice distraction from boredom. Maybe you'll find it useful? (I doubt it)
+It was fun making this, and while it serves no practical purpose, it was at least a nice distraction
+from boredom. Maybe you'll find it useful? (I doubt it)

@@ -21,9 +21,12 @@ blockquote.markdown-alert-important {
     @include markdown-alert($color-info, "ℹ️", "Info");
 }
 
-blockquote.markdown-alert-warning,
-blockquote.markdown-alert-caution {
+blockquote.markdown-alert-warning {
     @include markdown-alert($color-warn, "&#x2139;&#xFE0F;", "Warning!");
+}
+
+blockquote.markdown-alert-caution {
+    @include markdown-alert($color-error, "&#x2139;&#xFE0F;", "Danger!");
 }
 
 // TODO: More differentiation
