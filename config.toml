@@ -18,8 +18,8 @@ theme              = "cogs"                  # Custom theme, in themes/cogs
     render_emoji        = true   # When set to "true", emoji aliases are translated in the rendered Markdown files. (e.g.: :smile: => 😄)
 
     [markdown.highlighting]
-        highlight = true   # Whether to do syntax highlighting
-        theme     = "nord" # Theme can be customised by setting this variable to a theme supported by Zola
+        highlight = true                  # Whether to do syntax highlighting
+        theme     = "github-dark-default" # Theme can be customised by setting this variable to a theme supported by Zola
 
 [[taxonomies]]
     feed = true

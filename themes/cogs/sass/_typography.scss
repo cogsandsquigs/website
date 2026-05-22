@@ -1,3 +1,4 @@
+@use "sass:math" as *;
 @use "variables" as *;
 
 /*************
@@ -20,15 +21,15 @@ pre code {
  ****************/
 
 h1 {
-    font-size: calc($font-size-base * pow($header-scale, 3));
+    font-size: $font-size-base * pow($header-scale, 3);
 }
 
 h2 {
-    font-size: calc($font-size-base * pow($header-scale, 2));
+    font-size: $font-size-base * pow($header-scale, 2);
 }
 
 h3 {
-    font-size: calc($font-size-base * pow($header-scale, 1));
+    font-size: $font-size-base * pow($header-scale, 1);
 }
 
 p {
@@ -36,19 +37,19 @@ p {
 }
 
 small {
-    font-size: calc($font-size-base * pow($header-scale, -2));
+    font-size: $font-size-base * pow($header-scale, -2);
 }
 
 h4 {
-    font-size: calc($font-size-base * pow($header-scale, -1));
+    font-size: $font-size-base * pow($header-scale, -1);
 }
 
 h5 {
-    font-size: calc($font-size-base * pow($header-scale, -2));
+    font-size: $font-size-base * pow($header-scale, -2);
 }
 
 h6 {
-    font-size: calc($font-size-base * pow($header-scale, -3));
+    font-size: $font-size-base * pow($header-scale, -3);
 }
 
 h1,
@@ -61,10 +62,18 @@ h5,
 h6,
 /* Also hr b/c want 2 apply the same */
 hr, {
+    overflow-wrap: break-word; // Prevent long strings from overflowing container
     padding: 0;
     margin-top: 0;
-    margin-bottom: calc($font-size-base * 1.5);
-    overflow-wrap: break-word; // Prevent long strings from overflowing container
+
+    /**
+     * Line height * (1/2) = $font-size-base * (1.5) * (1/2)
+     * 
+     * Note that we do `+ 0em` to convert to `em` units, and then `* 1em` to multiply the
+     * bottom-padding by the current font size at this point. That way, spacing is scaled with
+     * different font sizes.
+     */
+    margin-bottom: calc(calc($font-size-base * 0.75 + 0em) * 1em);
 }
 
 /**************
@@ -92,7 +101,7 @@ a:visited {
     // Make underline offset a little bigger than the border width. Exclude color prop. since same
     // color as link color.
     text-decoration: underline solid $border-width;
-    text-underline-offset: calc($border-width + 0.0625rem);
+    text-underline-offset: $underline-offset;
 }
 
 /********************************
@@ -115,7 +124,7 @@ a:visited {
 
         &:hover,
         &:focus {
-            text-underline-offset: calc($border-width + 0.25rem);
+            text-underline-offset: calc($underline-offset + 0.1875em);
         }
     }
 }

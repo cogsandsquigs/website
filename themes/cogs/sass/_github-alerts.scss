@@ -4,29 +4,78 @@
 
 @use "variables" as *;
 
-@mixin markdown-alert($color, $emoji, $message) {
-    border-left: calc($border-width) solid $color;
-    padding-left: 0.5rem;
+// Taken from: https://github.com/ebkalderon/terminus/blob/main/sass/css/_alerts.scss
+
+$icon-note: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' %3E%3Cpath d='M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z'/%3E%3C/svg%3E");
+$icon-tip: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' %3E%3Cpath d='M480-78.258q-33.718 0-56.974-22.166-23.256-22.167-23.59-55.885h161.128q-.334 33.718-23.59 55.885Q513.718-78.258 480-78.258ZM318.257-210.515v-67.588h323.486v67.588H318.257Zm7.846-121.128q-67.692-42.487-106.896-109.134-39.205-66.648-39.205-147.479 0-123.769 88.149-211.884 88.149-88.115 211.967-88.115 123.817 0 211.849 88.115 88.031 88.115 88.031 211.884 0 80.831-38.999 147.479-39 66.647-107.102 109.134H326.103Zm21.927-67.588h264.351q46.311-32 73.17-81.681 26.859-49.68 26.859-107.144 0-96.918-68-164.765-68-67.846-164.564-67.846t-164.41 67.713q-67.846 67.712-67.846 164.725 0 57.52 26.859 107.259t73.581 81.739Zm131.97 0Z'/%3E%3C/svg%3E");
+$icon-important: $icon-note;
+$icon-warn: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' %3E%3Cpath d='M109-120q-11 0-20-5.5T75-140q-5-9-5.5-19.5T75-180l370-640q6-10 15.5-15t19.5-5q10 0 19.5 5t15.5 15l370 640q6 10 5.5 20.5T885-140q-5 9-14 14.5t-20 5.5H109Zm69-80h604L480-720 178-200Zm302-40q17 0 28.5-11.5T520-280q0-17-11.5-28.5T480-320q-17 0-28.5 11.5T440-280q0 17 11.5 28.5T480-240Zm0-120q17 0 28.5-11.5T520-400v-120q0-17-11.5-28.5T480-560q-17 0-28.5 11.5T440-520v120q0 17 11.5 28.5T480-360Zm0-100Z'/%3E%3C/svg%3E");
+$icon-caution: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' %3E%3Cpath d='M239.256-400q0 58.091 27.975 108.995t76.13 81.237q-5.616-8.513-8.487-18.398-2.872-9.885-2.872-19.167 1.333-26.436 12.153-50.307 10.821-23.872 31.41-43.461L480-443.921l105.819 102.82q18.923 19.311 29.885 43.321 10.961 24.011 12.294 50.447 0 9.282-2.872 19.167-2.871 9.885-7.82 18.398 47.488-30.333 75.796-81.237Q721.41-341.909 721.41-400q0-47.622-19.258-93.169-19.259-45.547-53.998-82.549-19.951 13.41-42.202 19.859Q583.7-549.41 561-549.41q-62.448 0-105.108-38.039-42.661-38.038-51.225-98.628v-9.744q-39.385 31.949-69.898 67.68-30.513 35.73-51.987 74.166t-32.5 77.464Q239.256-437.483 239.256-400ZM480-349.539l-57.436 56.436q-12.154 11.821-17.731 26.029-5.577 14.208-5.577 29.074 0 32.769 23.498 55.757 23.497 22.987 57.246 22.987 33.432 0 57.421-22.906 23.989-22.906 23.989-55.561 0-16.162-6.116-30.162-6.116-13.999-17.454-25.154l-57.84-56.5Zm-11.002-469.022V-708q0 38.637 26.832 64.819 26.831 26.183 65.17 26.183 15.609 0 30.818-5.923 15.208-5.923 28.131-17.718l22.615-24.102q67.564 44.128 106.999 114.917 39.435 70.79 39.435 150.156 0 128.206-89.846 218.103Q609.307-91.668 480-91.668q-129.027 0-218.68-89.652-89.652-89.653-89.652-218.68 0-119.178 79.371-232.447t217.959-186.114Z'/%3E%3C/svg%3E");
+
+/* Use in the `::before` element */
+@mixin alert-icon($color, $icon) {
+    display: flex;
+    align-items: center;
+    margin-inline-end: 0.5em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+    width: 1.5em;
+
+    content: "";
+    mask: $icon;
+    background-color: $color;
+}
+
+@mixin markdown-alert($color, $icon, $message) {
+    border-left: calc($border-width * 2) solid $color;
+    background-color: $color-primary-content;
+    padding: 0.5em 1em;
 
     &::before {
-        content: "#{$emoji} #{$message}";
-        color: $color;
+        @include alert-icon($color, $icon);
+    }
+
+    /* First element establishes the alert title in the `::before` */
+    > p {
+        &::before {
+            display: flex;
+            align-items: center;
+            margin-inline-start: 2em;
+            font-weight: bold;
+
+            content: $message;
+        }
+
+        &:first-child {
+        }
+
+        /* Last element shouldn't have that padding, etc. */
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
     }
 }
 
-blockquote.markdown-alert-note,
-blockquote.markdown-alert-tip,
+blockquote.markdown-alert-note {
+    @include markdown-alert($color-info, $icon-note, "Note");
+}
+
 blockquote.markdown-alert-important {
-    // The info (w/ box) emoji
-    @include markdown-alert($color-info, "ℹ️", "Info");
+    @include markdown-alert($color-info, $icon-important, "Important");
+}
+
+blockquote.markdown-alert-tip {
+    @include markdown-alert($color-info, $icon-tip, "Tip");
 }
 
 blockquote.markdown-alert-warning {
-    @include markdown-alert($color-warn, "&#x2139;&#xFE0F;", "Warning!");
+    @include markdown-alert($color-warn, $icon-warn, "Warning!");
 }
 
 blockquote.markdown-alert-caution {
-    @include markdown-alert($color-error, "&#x2139;&#xFE0F;", "Danger!");
+    @include markdown-alert($color-error, $icon-caution, "Caution!");
 }
 
 // TODO: More differentiation

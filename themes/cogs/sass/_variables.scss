@@ -1,3 +1,15 @@
+/***********
+ * BORDERS *
+ ***********/
+
+$border-width: 2px;
+$border-radius-sm: 0.125rem;
+$border-radius-md: calc(3 * $border-radius-sm);
+$border-radius-lg: calc(4 * $border-radius-sm);
+
+$transition-fast: 150ms ease-in-out;
+$focus-brightness: 0.8;
+
 /**************
  * TYPOGRAPHY *
  **************/
@@ -20,6 +32,11 @@ $font-family-mono: "Fira Code", monospace;
  * default, this is Major Second. See https://typescale.com/.
  */
 $header-scale: 1.125;
+
+/**
+ * The underline offset for underlined items
+ */
+$underline-offset: calc($border-width + 0.0625em);
 
 /************
  * THEMEING *
@@ -44,15 +61,3 @@ $color-error: oklch(71% 0.194 13.428);
 $color-error-content: oklch(27% 0.105 12.094);
 
 // TODO: tip-color? (LMFAO)
-
-/***********
- * BORDERS *
- ***********/
-
-$border-width: 3px;
-$border-radius-sm: 0.125rem;
-$border-radius-md: calc(3 * $border-radius-sm);
-$border-radius-lg: calc(4 * $border-radius-sm);
-
-$transition-fast: 150ms ease-in-out;
-$focus-brightness: 0.8;
