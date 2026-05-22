@@ -1,15 +1,21 @@
 {% extends "page.html" %}
 
+{% import "macros/page-title.html" as page_title %}
+{% import "macros/page-list.html" as page_list %}
+
 {% block title %}
     {{ config.title }} - {{ section.title }}
 {% endblock %}
 
 {% block content %}
-    <div class="page-title">
-        <h1>{{ section.title }}</h1>
-    </div>
-    
+    {{ page_title::page_title(page=section) }}
+
     <hr/>
 
-    {{ section.content | safe }}
+    {% if section.content %}
+        {{ section.content | safe }}
+        <hr/>
+    {% endif %}
+    
+    {{ page_list::page_list(pages=section.pages) }}
 {% endblock %}

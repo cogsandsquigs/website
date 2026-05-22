@@ -1,11 +1,41 @@
 {% extends "base.html" %}
 
+{% import "macros/page-title.html" as page_title %}
+
 {% block head %}
     <!--
         The page stylesheet. Because this imports the base stylsheet, no need to also import the
         base stylesheet again!
     --->
     <link href="/page.css" rel="stylesheet"/>
+
+    <!-- Enable KaTeX rendering -->
+    {% if config.extra.theme.katex %}
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.16.47/dist/katex.min.css"
+            integrity="sha384-nH0MfJ44wi1dd7w6jinlyBgljjS8EJAh2JBoRad8a3VDw2K69vfaaqm4WnR+gXtA"
+            crossorigin="anonymous"
+        />
+
+        <!-- The loading of KaTeX is deferred to speed up page rendering -->
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.47/dist/katex.min.js"
+            integrity="sha384-CwjPRVHTvLiMBFjEoij+QZViMV5rhTOIp7CJzl24JEqpRDA1sJFHVXXLURktbYYp"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- To automatically render math in text elements, include the auto-render extension: -->
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.47/dist/contrib/auto-render.min.js"
+            integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+            crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"
+        ></script>   
+    {% endif %}
+    
 {% endblock %}
 
 {% block title %}
@@ -17,10 +47,8 @@
     
     <div class="content">
         {% block content %}
-            {% include "partials/page-title.html" %}
-
+            {{ page_title::page_title(page=page) }}
             <hr>
-            
             {{ page.content | safe }}
         {% endblock %}
     </div>

@@ -11,6 +11,8 @@ title          = "Cogs' Theme"
 [extra]
     # Theme-related configuration
     [extra.theme]
+        katex = true
+
         # Nav-links for the theme. See `theme.toml`
         [[extra.theme.nav_externals]]
             href  = "https://codeberg.org/cogsandsquigs"

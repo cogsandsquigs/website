@@ -1,0 +1,11 @@
+{% import "macros/page-title.html" as page_title %}
+
+{% macro page_list(pages) %}
+<ul class="page-list">
+    {% for page in pages | sort(attribute="date") | reverse %}
+        <li class="page-list-item">
+            {{ page_title::page_title(page=page, title_link=true) }}
+        </li>
+    {% endfor %}
+<ul>
+{% endmacro %}

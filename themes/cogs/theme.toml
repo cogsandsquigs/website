@@ -19,6 +19,9 @@ tags        = []
 [extra]
     # All theme-related configuration is here!
     [extra.theme]
+        # Enable KaTeX support & rendering. Off by default.
+        katex = false
+
         # Any and all links you want to display, in the order you want to display them. These are
         # objects with the following type signature:
         # 
