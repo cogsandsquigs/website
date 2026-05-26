@@ -60,14 +60,20 @@ did it.
 
 3. Connect jumper wires to the **SWD** section (also labeled **CM4**) of the Nucleo debugger. Refer
    to your board's documentation for more information on where to place these. A picture of the
-   wires are shown below. ![]($assets/images/nucleo_stlink_swd_wiring.jpeg)
+   wires are shown below.
+
+   ![](nucleo_stlink_swd_wiring.jpeg)
 
 4. Connect the Nucleo debugger to the Portenta. This step is non-trivial, so pay attention! The
    diagrams below show the respective pinouts of important areas for the two boards.
 
-   Nucleo debugger: ![]($assets/images/nucleo_stlink_pinout_diagram.png)
+   Nucleo debugger:
 
-   Portenta breakout JTAG connector: ![]($assets/images/portenta_breakout_pinout_diagram.png)
+   ![](nucleo_stlink_pinout_diagram.png)
+
+   Portenta breakout JTAG connector:
+
+   ![](portenta_breakout_pinout_diagram.png)
 
 5. In the following order, use the 5 wires to connect these 5 pins from the Nucleo debugger to the
    Portenta JTAG pins:
@@ -78,7 +84,9 @@ did it.
    - **SWDIO** (pin 4) to **TMS/SWDIO** (pin 2)
    - **NRST** (pin 5) to **RESET** (pin 10)
 
-   A picture of the setup is shown below: ![]($assets/images/portenta_breakout_swd_wiring.jpeg)
+   A picture of the setup is shown below:
+
+   ![](portenta_breakout_swd_wiring.jpeg)
 
 6. Connect **both** the Nucleo debugger and the Portenta to power. Make sure that each cable can
    transfer data to and from their respective ports.
