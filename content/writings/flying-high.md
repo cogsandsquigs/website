@@ -4,6 +4,7 @@ description: ""
 series: poetry
 taxonomies:
     tags:
+        - writing
         - poetry
 title: Flying high
 draft: false

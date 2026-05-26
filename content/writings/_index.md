@@ -1,5 +1,5 @@
 ---
-title: Stories
+title: Writings
 sort_by: date
 ---
 

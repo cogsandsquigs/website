@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{ taxonomy.name | capitalize}}</h1>
+    <h1>{{ taxonomy.name | capitalize }}</h1>
 
     <hr/>
 
@@ -16,7 +16,12 @@
         {% for term in terms | sort(attribute="page_count") | reverse %}
             <li class="taxonomy-list-item">
                 <h1><a href="{{ term.path }}">{{ term.name }}</a></h1>
-                <span><em>{{ term.page_count }} pages</em></span>
+
+                {% if term.page_count == 1 %}
+                    <span><em>{{ term.page_count }} page</em></span>
+                {% else %}
+                    <span><em>{{ term.page_count }} pages</em></span>
+                {% endif %}
             </li>
         {% endfor %}
     <ul>
