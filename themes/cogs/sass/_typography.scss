@@ -56,6 +56,7 @@ h6 {
     font-size: $font-size-base * pow($header-scale, -3);
 }
 
+/* Also hr b/c want 2 apply the same */
 h1,
 h2,
 h3,
@@ -64,8 +65,7 @@ small,
 h4,
 h5,
 h6,
-/* Also hr b/c want 2 apply the same */
-hr, {
+hr {
     overflow-wrap: break-word; // Prevent long strings from overflowing container
     padding: 0;
     margin-top: 0;
@@ -77,7 +77,7 @@ hr, {
      * bottom-padding by the current font size at this point. That way, spacing is scaled with
      * different font sizes.
      */
-    margin-bottom: calc(calc($font-size-base * 0.75 + 0em) * 1em);
+    margin-bottom: $font-size-base * 0.75;
 }
 
 /**************
