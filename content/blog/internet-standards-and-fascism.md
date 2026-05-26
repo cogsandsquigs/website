@@ -28,8 +28,7 @@ They set the standards, organizations, and utilities we use to make sure that, f
 2. This website can be published under the name `cogsandsquigs.dev` (IANA, ICANN)
 3. Your computer knows how to get from `cogsandsquigs.dev` to it's IP address (IANA, ICANN, IETF)
 4. Your computer can route it's packets from itself to `cogsandsquigs.dev`'s IP (IETF)
-5. Your computer understands the things it receives from `cogsandsquig.dev`, and can decode them
-   (IETF)
+5. Your computer can decode the packets it receives from `cogsandsquig.dev` (IETF)
 6. Your browser can understand the decoded files --- HTML, CSS, JS (W3C, Unicode)
 7. Your browser can display the decoded files (W3C, Unicode)
 8. Your browser (and consequently, computer) understand _when_ I published this page (IANA,
