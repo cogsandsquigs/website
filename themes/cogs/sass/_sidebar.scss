@@ -2,6 +2,7 @@
  * Style the `sidebar`. The navbar is contained within the `nav` tag.
  */
 
+@use "mixins" as *;
 @use "variables" as *;
 
 .sidebar {
@@ -19,15 +20,7 @@
     align-items: baseline;
 
     // Links w/in nav should have no decoration and same color as foreground
-    a,
-    a:visited {
-        color: $color-fg;
-        font-weight: bold;
-        filters: none;
-        text-decoration: none;
-
-        // NOTE: Keep focus hover effect, so no changing that here!
-    }
+    @include remove-link-decoration;
 
     nav {
         .nav-link {

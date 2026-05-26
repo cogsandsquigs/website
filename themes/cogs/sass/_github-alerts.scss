@@ -28,8 +28,8 @@ $icon-caution: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'
 }
 
 @mixin markdown-alert($color, $icon, $message) {
-    border-left: calc($border-width * 2) solid $color;
-    background-color: $color-primary-content;
+    border: calc($border-width) solid $color;
+    background-color: color-as-bg($color);
     padding: 0.5em 1em;
 
     &::before {

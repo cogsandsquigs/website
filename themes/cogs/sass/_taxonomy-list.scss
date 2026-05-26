@@ -2,9 +2,10 @@
  * Style page lists
  */
 
+@use "mixins" as *;
 @use "variables" as *;
 
-ul.page-list {
+ul.taxonomy-list {
     list-style: none;
     margin: 0 0;
     padding: 0 0;
@@ -15,4 +16,16 @@ ul.page-list {
     */
     width: $page-list-width-ratio;
     margin-inline: auto;
+
+    li.taxonomy-list-item {
+        margin: 0 0;
+        padding: 0 0;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align: baseline;
+
+        @include remove-link-decoration;
+    }
 }

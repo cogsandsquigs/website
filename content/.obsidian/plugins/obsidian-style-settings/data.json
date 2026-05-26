@@ -1,0 +1,9 @@
+{
+  "catppuccin-theme-settings@@catppuccin-theme-accents": "ctp-accent-sapphire",
+  "catppuccin-heading-settings@@ctp-h6": "var(--ctp-rosewater)",
+  "catppuccin-heading-settings@@ctp-h5": "var(--ctp-flamingo)",
+  "catppuccin-heading-settings@@ctp-h4": "var(--ctp-pink)",
+  "catppuccin-heading-settings@@ctp-h3": "var(--ctp-mauve)",
+  "catppuccin-heading-settings@@ctp-h2": "var(--ctp-red)",
+  "catppuccin-heading-settings@@ctp-h1": "var(--ctp-maroon)"
+}

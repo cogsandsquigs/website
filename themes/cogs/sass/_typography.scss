@@ -1,3 +1,4 @@
+@use "fonts";
 @use "sass:math" as *;
 @use "variables" as *;
 
@@ -11,8 +12,11 @@ html {
     line-height: 1.5;
 }
 
+tt,
 code,
-pre code {
+kbd,
+samp,
+pre {
     font-family: $font-family-mono;
 }
 

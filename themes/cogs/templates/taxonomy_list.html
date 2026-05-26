@@ -1,0 +1,23 @@
+{% extends "section.html" %}
+
+{% import "macros/page-list.html" as page_list %}
+
+{% block title %}
+    {{ config.title }} - {{ taxonomy.name }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ taxonomy.name | capitalize}}</h1>
+
+    <hr/>
+
+    <ul class="taxonomy-list">
+        <!-- Put most-used terms first! -->
+        {% for term in terms | sort(attribute="page_count") | reverse %}
+            <li class="taxonomy-list-item">
+                <h1><a href="{{ term.path }}">{{ term.name }}</a></h1>
+                <span><em>{{ term.page_count }} pages</em></span>
+            </li>
+        {% endfor %}
+    <ul>
+{% endblock %}

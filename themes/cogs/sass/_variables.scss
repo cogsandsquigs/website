@@ -3,12 +3,6 @@
  ***********/
 
 $border-width: 2px;
-$border-radius-sm: 0.125rem;
-$border-radius-md: calc(3 * $border-radius-sm);
-$border-radius-lg: calc(4 * $border-radius-sm);
-
-$transition-fast: 150ms ease-in-out;
-$focus-brightness: 0.8;
 
 /**************
  * TYPOGRAPHY *
@@ -25,7 +19,7 @@ $font-size-base: 1.15rem;
 $font-family-base: "PT Serif", Georgia, "Times New Roman", Times, serif;
 
 /* The monospaced font family; i.e. the font family used by code and other such things. */
-$font-family-mono: "Fira Code", monospace;
+$font-family-mono: "FiraCode Nerd Font Propo", "Fira Code", monospace;
 
 /**
  * The multiplicative factor when scaling up to next header level (starting from base/<p>). By
@@ -46,18 +40,40 @@ $color-bg: oklch(0.1973 0.0134 267.09); // oklch(25.33% 0.016 252.42);
 $color-fg: oklch(0.97807 0.029 256.847);
 
 $color-primary: oklch(0.73 0.1219 232.66);
-$color-primary-content: oklch(0.23 0.06095 232.66);
+/* $color-primary-content: oklch(0.23 0.06095 232.66); */
 
 $color-info: oklch(74% 0.16 232.661);
-$color-info-content: oklch(29% 0.066 243.157);
+/* $color-info-content: oklch(29% 0.066 243.157); */
 
 $color-success: oklch(76% 0.177 163.223);
-$color-success-content: oklch(37% 0.077 168.94);
+/* $color-success-content: oklch(37% 0.077 168.94); */
 
 $color-warn: oklch(82% 0.189 84.429);
-$color-warn-content: oklch(41% 0.112 45.904);
+/* $color-warn-content: oklch(41% 0.112 45.904); */
 
 $color-error: oklch(71% 0.194 13.428);
-$color-error-content: oklch(27% 0.105 12.094);
+/* $color-error-content: oklch(27% 0.105 12.094); */
 
 // TODO: tip-color? (LMFAO)
+
+/**
+ * Takes a color and makes it a viable background color.
+ */
+@function color-as-bg($color) {
+    @return color-mix(in oklch, $color 25%, contrast-color($color) 35%, $color-bg 40%);
+}
+
+/*****************
+ * MISCELLANEOUS *
+ *****************/
+
+/**
+ * The width of a list of pages divided by the widh of a page itself. This is used to set the
+ * maximum width of a page list by multiplying it by the maximum width of a page.
+ *
+ * NOTE: This is a PERCENTAGE.
+ */
+$page-list-width-ratio: 90%;
+
+$transition-fast: 150ms ease-in-out;
+$focus-brightness: 0.6;
