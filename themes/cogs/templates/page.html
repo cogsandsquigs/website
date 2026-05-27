@@ -47,9 +47,17 @@
     
     <div class="content">
         {% block content %}
-            {{ page_title::page_title(page=page) }}
+            {% block content_title %}
+                {{ page_title::page_title(page=page) }}
+            {% endblock %}
+            
             <hr>
-            {{ page.content | safe }}
+            
+            <div class="content-body">
+                {% block content_body %}
+                    {{ page.content | safe }}
+                {% endblock %}
+            </div>
         {% endblock %}
     </div>
 {% endblock %}

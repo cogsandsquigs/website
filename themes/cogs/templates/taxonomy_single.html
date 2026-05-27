@@ -6,8 +6,10 @@
     {{ config.title }} - {{ term.name }}
 {% endblock %}
 
-{% block content %}
+{% block content_title %}
     <h1>{{ taxonomy.name | capitalize }}: {{ term.name }}</h1>
-    <hr/>
+{% endblock %}
+
+{% block content_body %}
     {{ page_list::page_list(pages=term.pages) }}
 {% endblock %}

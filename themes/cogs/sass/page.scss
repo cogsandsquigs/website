@@ -31,4 +31,14 @@ body {
 .content {
     padding-top: 1rem;
     width: 75%;
+
+    // Title as displayed within the content.
+    .content-title {
+    }
+
+    // Body as displayed within the content.
+    .content-body {
+        width: min(100ch, 100%);
+        margin-inline: auto;
+    }
 }
