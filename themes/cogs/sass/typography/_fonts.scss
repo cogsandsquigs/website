@@ -1,0 +1,17 @@
+@use "../theme" as *;
+
+/* Set the fonts. */
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+tt,
+code,
+kbd,
+samp,
+pre {
+    font-family: $font-family-mono;
+}

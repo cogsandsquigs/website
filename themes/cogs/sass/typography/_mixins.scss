@@ -1,0 +1,13 @@
+@use "../theme" as *;
+
+@mixin remove-link-decoration() {
+    a,
+    a:visited {
+        color: $color-fg;
+        font-weight: bold;
+        filters: none;
+        text-decoration: none;
+
+        // NOTE: Keep focus hover effect, so no changing that here!
+    }
+}

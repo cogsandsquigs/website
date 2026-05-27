@@ -7,14 +7,15 @@
     {{ config.title }} - {{ section.title }}
 {% endblock %}
 
-{% block content_title %}
+{% block header %}
     {{ page_title::page_title(page=section) }}
 {% endblock %}
 
-{% block content_body %}
+{% block content %}
     {% if section.content %}
         {{ section.content | safe }}
         <hr/>
     {% endif %}
+
     {{ page_list::page_list(pages=section.pages) }}
 {% endblock %}

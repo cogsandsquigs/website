@@ -19,9 +19,6 @@ tags        = []
 [extra]
     # All theme-related configuration is here!
     [extra.theme]
-        # Enable KaTeX support & rendering. Off by default.
-        katex = false
-
         # Any and all links you want to display, in the order you want to display them. These are
         # objects with the following type signature:
         # 
@@ -34,3 +31,15 @@ tags        = []
         # 
         # By default, there aren't any.
         nav_externals = []
+
+        # Configure KaTeX support & rendering. 
+        [extra.theme.katex]
+            # Enable KaTeX rendering. Off by default.
+            enable = false
+
+            # If KaTeX is enabled, auto-render math on page. True by default. Note that turning this
+            # off means that you will need to manually insert javascript to render any math on the
+            # page. However, the KaTeX library for doing so will be available to you.
+            #
+            # See: https://katex.org/docs
+            auto_render = true

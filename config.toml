@@ -32,8 +32,9 @@ theme              = "cogs"                  # Custom theme, in themes/cogs
 [extra]
     # Theme-related configuration for `cogs` themee
     [extra.theme]
-        # Enable KaTeX support & rendering
-        katex = true
+        [extra.theme.katex]
+            # Enable KaTeX support & rendering
+            enable = true
 
         # Nav-links for the theme. See `theme.toml`
         [[extra.theme.nav_externals]]

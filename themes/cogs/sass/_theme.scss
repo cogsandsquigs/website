@@ -1,0 +1,87 @@
+/*
+    CSS variables have the following naming convention:
+    ```
+        --<property>-<kind>-<modifier>
+    ```
+      - `<property>` is a certain CSS property that we are setting. It could be color, length, font,
+        or something else.
+      - `<kind>` is the *kind* of value that this contains. Is it a foreground color, or background?
+        What type of color is it? What length is it setting? What font property is it setting?
+      - `<modifier>` is optional, and is present only if it modifies something.
+*/
+
+:root {
+    /**********************
+     * FONTS & TYPOGRAPHY *
+     **********************/
+
+    /* The base font family; i.e. the font family used by otherwise unstyled paragraph elements. */
+    --font-family-base: "PT Serif", Georgia, "Times New Roman", Times, serif;
+
+    /* The monospaced font family; i.e. the font family used by code and other such things. */
+    --font-family-mono: "Fira Code", "Monaco", monospace;
+
+    /* The base font size that is used. */
+    --font-size: 1.15rem;
+
+    /* The base line hight that is used. Must ALWAYS be a single number. */
+    --line-height: 1.5;
+
+    /************
+     * HEADINGS *
+     ************/
+
+    /* The heading scalar used to multiply the base font size by for each level of heading. */
+    --heading-size-scalar: 1.125;
+
+    /*
+        The size of the bottom-margin of all headings.
+        Equivalent to <Line height> * (1/2) = var(--font-size) * var(--line-height) * (1/2)
+    */
+    --heading-margin-bottom: calc(var(--font-size) * var(--line-height) * 0.5);
+
+    /**********
+     * COLORS *
+     **********/
+
+    --color-bg: oklch(0.1973 0.0134 267.09);
+    --color-fg: oklch(0.97807 0.029 256.847);
+
+    --color-primary: oklch(0.73 0.1219 232.66);
+    --color-primary-content: oklch(0.23 0.06095 232.66);
+
+    --color-info: oklch(74% 0.16 232.661);
+    --color-info-content: oklch(29% 0.066 243.157);
+
+    --color-success: oklch(76% 0.177 163.223);
+    --color-success-content: oklch(37% 0.077 168.94);
+
+    --color-warn: oklch(82% 0.189 84.429);
+    --color-warn-content: oklch(41% 0.112 45.904);
+
+    --color-error: oklch(71% 0.194 13.428);
+    --color-error-content: oklch(27% 0.105 12.094);
+}
+
+/* Now, set variables to use. */
+
+$font-family-base: var(--font-family-base);
+$font-family-mono: var(--font-family-mono);
+$font-size: var(--font-size);
+$line-height: var(--line-height);
+
+$heading-size-scalar: var(--heading-size-scalar);
+$heading-margin-bottom: var(--heading-margin-bottom);
+
+$color-bg: var(--color-bg);
+$color-fg: var(--color-fg);
+$color-primary: var(--color-primary);
+$color-primary-content: var(--color-primary-content);
+$color-info: var(--color-info);
+$color-info-content: var(--color-info-content);
+$color-success: var(--color-success);
+$color-success-content: var(--color-success-content);
+$color-warn: var(--color-warn);
+$color-warn-content: var(--color-warn-content);
+$color-error: var(--color-error);
+$color-error-content: var(--color-error-content);

@@ -1,0 +1,52 @@
+/*
+    Configures headings. For the sake of simplicity, we consider <p> a heading as well.
+*/
+
+@use "../theme" as *;
+
+h1 {
+    font-size: calc($font-size * pow($heading-size-scalar, 3));
+}
+
+h2 {
+    font-size: calc($font-size * pow($heading-size-scalar, 2));
+}
+
+h3 {
+    font-size: calc($font-size * pow($heading-size-scalar, 1));
+}
+
+p {
+    font-size: $font-size;
+}
+
+small {
+    font-size: calc($font-size * pow($heading-size-scalar, -2));
+}
+
+h4 {
+    font-size: calc($font-size * pow($heading-size-scalar, -1));
+}
+
+h5 {
+    font-size: calc($font-size * pow($heading-size-scalar, -2));
+}
+
+h6 {
+    font-size: calc($font-size * pow($heading-size-scalar, -3));
+}
+
+/* Also hr b/c want 2 apply the same */
+h1,
+h2,
+h3,
+p,
+small,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word; // Prevent long strings from overflowing container
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: $heading-margin-bottom;
+}

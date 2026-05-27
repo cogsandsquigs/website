@@ -6,11 +6,11 @@
     {{ config.title }} - {{ taxonomy.name }}
 {% endblock %}
 
-{% block content_title %}
+{% block header %}
     <h1>{{ taxonomy.name | capitalize }}</h1>
 {% endblock %}
 
-{% block content_body %}
+{% block content %}
     <ul class="taxonomy-list">
         <!-- Put most-used terms first! -->
         {% for term in terms | sort(attribute="page_count") | reverse %}

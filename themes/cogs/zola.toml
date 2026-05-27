@@ -1,3 +1,7 @@
+#################################################################################################
+# NOTE: THIS IS ONLY HERE SO WE CAN RENDER THIS THEME AS AN EXAMPLE. THIS IS NOT A REAL WEBSITE #
+#################################################################################################
+
 base_url       = "https://codeberg.org/cogsandsquigs/cogsandsquigs.dev/src/branch/main/themes/cogs"
 compile_sass   = true
 description    = "My theme for my website."
@@ -11,7 +15,8 @@ title          = "Cogs' Theme"
 [extra]
     # Theme-related configuration
     [extra.theme]
-        katex = true
+        [extra.theme.katex]
+            enable = true
 
         # Nav-links for the theme. See `theme.toml`
         [[extra.theme.nav_externals]]
