@@ -7,23 +7,27 @@
 {% endblock %}
 
 {% block body %}
-            <aside class="sidebar">
-                {% block sidebar %}
-                    {% include "partials/sidebar.html" %}
-                {% endblock %}
-            </aside>
+    <aside>
+        {% block sidebar %}
+            {% include "partials/sidebar.html" %}
+        {% endblock %}
+    </aside>
 
-            <main>
+    <main>
+        {% block main%}
+            <header>
                 {% block header %}
                     {{ page_title::page_title(page=page) }}
                 {% endblock %}
-        
-                <hr>
-        
-                <div class="content">
-                    {% block content %}
-                        {{ page.content | safe }}
-                    {% endblock %}
-                </div>
-            </main>
+            </header>
+
+            <hr>
+
+            <article>
+                {% block content %}
+                    {{ page.content | safe }}
+                {% endblock %}
+            </article>
+        {% endblock %}
+    </main>
 {% endblock %}

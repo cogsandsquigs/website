@@ -14,18 +14,26 @@ body {
 
     display: flex;
     flex-direction: row;
-}
 
-/* The sidebar that goes next to the main content. */
-aside.sidebar {
-    width: 25%;
+    /* The sidebar that goes next to the main content. */
+    aside {
+        width: 25%;
 
-    padding-top: 1rem;
-    margin-right: 1rem;
-}
+        padding-top: 1rem;
+        margin-right: 1rem;
+    }
 
-/* The main tag contains all the main "content", i.e. the header and main body content. */
-main {
-    width: 75%;
-    padding-top: 1rem;
+    /* The main tag contains all the main "content", i.e. the header and main body content. */
+    main {
+        width: 75%;
+        padding-top: 1rem;
+
+        /* The title and page-specific information */
+        header {
+        }
+
+        /* The page's contents. */
+        article {
+        }
+    }
 }

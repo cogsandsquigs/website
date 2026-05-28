@@ -5,7 +5,7 @@
 @use "../theme" as *;
 @use "../typography" as *;
 
-aside.sidebar {
+aside {
     // Both below necessary for sticky
     position: sticky;
     top: 0;
@@ -20,22 +20,22 @@ aside.sidebar {
     @include remove-link-decoration;
 
     nav {
-        .nav-link {
-            padding-bottom: 0.5em;
-        }
-
         // Some left-padding for style
         padding-left: 1.5rem;
 
         // Lists w/in nav for nav sections and pages should be no text-decor.
-        ul.nav-pages,
-        ul.nav-externals,
-        ul.nav-sections {
+        ul {
             list-style: none;
             padding: 0;
             margin: 0;
 
-            ul.nav-sections-subsection {
+            // List-elements are links to other pages.
+            li {
+                padding-bottom: 0.5em;
+            }
+
+            // Sub-lists are sub-pages of the following page.
+            ul {
                 list-style: none;
                 padding-left: 0.75rem;
                 margin-left: 0.5rem;

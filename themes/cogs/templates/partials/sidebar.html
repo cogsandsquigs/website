@@ -3,40 +3,40 @@
 <h1><a href="/">{{ config.title }}</a></h1>
 
 <nav>
-    <ul class="nav-pages">
+    <ul>
         <!-- Sort every root page by its title. -->
         {% for page in root.pages | sort(attribute="title") %}
             {% set page = get_page(path=page.relative_path, metadata_only=true) %}
-            <li class="nav-link"><a href="{{ page.path }}">{{ page.title }}</a></li>
+            <li><a href="{{ page.path }}">{{ page.title }}</a></li>
         {% endfor %}
     </ul>
 
     {% if config.extra.theme and (config.extra.theme | length > 0) %}
-        <ul class="nav-externals">
+        <ul>
             {% for external in config.extra.theme.nav_externals %}
-                <li class="nav-link"><a href="{{ external.href }}">{{ external.title }}</a></li>
+                <li><a href="{{ external.href }}">{{ external.title }}</a></li>
             {% endfor %}
         </ul>
     {% endif %}
 
-    <ul class="nav-sections">
+    <ul>
         <!--
             NOTE: need to rename to `subsection` here b/c otherwise the `section` varible
             somehow interferes w/ this.
         --->
         {% for subsection in root.subsections | sort %}
             {% set subsection = get_section(path=subsection) %}
-            <li class="nav-link">
+            <li>
                 <a href="{{ subsection.path }}">{{ subsection.title }}</a>
 
-                <ul class="nav-sections-subsection">
+                <ul>
                     <!--
                         Only get the 3 most recent posts... so we need 2 reverse since sorted
                         ascending (we want descending).
                     --->
                     {% for page in subsection.pages | sort(attribute="date") | reverse | slice(end=3) %}
                         {% set page = get_page(path=page.relative_path, metadata_only=true) %}
-                        <li class="nav-link">
+                        <li>
                             <small>
                                 <em><a href="{{ page.path }}">{{ page.title }}</a></em>
                             </small>
