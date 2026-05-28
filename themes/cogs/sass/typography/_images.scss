@@ -1,0 +1,5 @@
+img {
+    max-width: 30ch;
+    display: block; // Necessary for margin-inline to work, not set for images.
+    margin-inline: auto; // Fill excess empty space w/ margin. "center" on page.
+}

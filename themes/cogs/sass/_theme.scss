@@ -25,7 +25,7 @@
     --font-size: 1.15rem;
 
     /* The base line hight that is used. Must ALWAYS be a single number. */
-    --line-height: 1.5;
+    --line-height: 1.618;
 
     /************
      * HEADINGS *
@@ -40,12 +40,29 @@
     */
     --heading-margin-bottom: calc(var(--font-size) * var(--line-height) * 0.5);
 
+    /************************
+     * BORDERS & UNDERLINES *
+     ************************/
+
+    /* The width of borders */
+    --border-width: 2px;
+
+    /* The thickness of underlines */
+    --underline-thickness: var(--border-width);
+
+    /* The underline offset for underlined items */
+    --underline-offset: calc(var(--border-width) + 0.0625em);
+
+    /* The underline style */
+    --underline-style: solid;
+
     /**********
      * COLORS *
      **********/
 
     --color-bg: oklch(0.1973 0.0134 267.09);
-    --color-fg: oklch(0.97807 0.029 256.847);
+    --color-fg: oklch(0.92 0.004 286.32);
+    --color-fg-content: oklch(0.44 0.017 285.786);
 
     --color-primary: oklch(0.73 0.1219 232.66);
     --color-primary-content: oklch(0.23 0.06095 232.66);
@@ -61,6 +78,19 @@
 
     --color-error: oklch(71% 0.194 13.428);
     --color-error-content: oklch(27% 0.105 12.094);
+
+    /*************************
+     * EFFECTS & TRANSITIONS *
+     *************************/
+
+    /* How much to scale the brightness by when element is focused. */
+    --filter-focus-brightness: 0.9;
+
+    /* The fast speed of transitions */
+    --transition-speed-fast: 150ms;
+
+    /* The timing functions for transition */
+    --transition-timing: ease-in-out;
 }
 
 /* Now, set variables to use. */
@@ -72,6 +102,11 @@ $line-height: var(--line-height);
 
 $heading-size-scalar: var(--heading-size-scalar);
 $heading-margin-bottom: var(--heading-margin-bottom);
+
+$border-width: var(--border-width);
+$underline-thickness: var(--underline-thickness);
+$underline-offset: var(--underline-offset);
+$underline-style: var(--underline-style);
 
 $color-bg: var(--color-bg);
 $color-fg: var(--color-fg);
@@ -85,3 +120,7 @@ $color-warn: var(--color-warn);
 $color-warn-content: var(--color-warn-content);
 $color-error: var(--color-error);
 $color-error-content: var(--color-error-content);
+
+$filter-focus-brightness: var(--filter-focus-brightness);
+$transition-speed-fast: var(--transition-speed-fast);
+$transition-timing: var(--transition-timing);

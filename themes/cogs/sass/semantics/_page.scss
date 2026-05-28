@@ -1,0 +1,31 @@
+/*
+    Specifies the layout of a page.
+*/
+
+/* Set the page to be full width and height */
+body,
+html {
+    min-height: 100vh;
+}
+
+/* The body contains everything */
+body {
+    padding: 0 2rem;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/* The sidebar that goes next to the main content. */
+aside.sidebar {
+    width: 25%;
+
+    padding-top: 1rem;
+    margin-right: 1rem;
+}
+
+/* The main tag contains all the main "content", i.e. the header and main body content. */
+main {
+    width: 75%;
+    padding-top: 1rem;
+}

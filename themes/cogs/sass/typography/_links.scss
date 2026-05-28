@@ -1,0 +1,38 @@
+@use "../theme" as *;
+
+a,
+a:visited {
+    color: $color-fg;
+    font-weight: bold;
+
+    // Make underline offset a little bigger than the border width. Exclude color prop. since same
+    // color as link color.
+    text-decoration: underline $underline-thickness $underline-style $color-primary;
+    text-underline-offset: $underline-offset;
+
+    &:hover,
+    &:focus {
+        filter: brightness($filter-focus-brightness);
+    }
+}
+
+// Since this is motion, only allow if there's no reduced-motion preference
+@media (prefers-reduced-motion: no-preference) {
+    a,
+    a:visited {
+        transition: text-underline-offset $transition-speed-fast $transition-timing;
+
+        &:hover,
+        &:focus {
+            text-underline-offset: calc($underline-offset + 0.1875em);
+        }
+    }
+}
+
+// Anchor links should have no decoration and same color as foreground
+a.anchor-link,
+a.anchor-link:visited {
+    text-decoration: none;
+    margin-right: $heading-margin-bottom;
+    // NOTE: Keep focus hover effect, so no changing that here!
+}
