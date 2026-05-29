@@ -27,6 +27,13 @@
     /* The base line hight that is used. Must ALWAYS be a single number. */
     --line-height: 1.618;
 
+    /*
+        The maximum line length, in any CSS unit. Note that this is defaulted to 80ch as per the
+        WCAG guidelines (see: https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-visual-presentation).
+        However, if you are using a CJK language, limit to 40ch (also per the guidelines).
+    */
+    --line-length-maximum: 80ch;
+
     /************
      * HEADINGS *
      ************/
@@ -99,6 +106,7 @@ $font-family-base: var(--font-family-base);
 $font-family-mono: var(--font-family-mono);
 $font-size: var(--font-size);
 $line-height: var(--line-height);
+$line-length-maximum: var(--line-length-maximum);
 
 $heading-size-scalar: var(--heading-size-scalar);
 $heading-margin-bottom: var(--heading-margin-bottom);

@@ -17,7 +17,15 @@
         {% block main%}
             <header>
                 {% block header %}
-                    {{ page_title::page_title(page=page) }}
+                    {{
+                        page_title::page_title(
+                            title=page.title,
+                            description=page.description,
+                            url=page.path,
+                            date=page.date,
+                            taxonomies=page.taxonomies
+                        )
+                    }}
                 {% endblock %}
             </header>
 

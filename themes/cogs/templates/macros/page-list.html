@@ -4,7 +4,15 @@
 <ul class="page-list">
     {% for page in pages | sort(attribute="date") | reverse %}
         <li class="page-list-item">
-            {{ page_title::page_title(page=page, title_link=true) }}
+            {{
+                page_title::page_title(
+                    title=page.title,
+                    description=page.description,
+                    url=page.path,
+                    date=page.date,
+                    taxonomies=page.taxonomies
+                )
+            }}
         </li>
     {% endfor %}
 <ul>

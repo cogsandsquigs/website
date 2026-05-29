@@ -1,25 +1,25 @@
-{% macro page_title(page, title_link=false) %}
-<div class="page-title">
+{% macro page_title(title, description=false, url=false, date=false, taxonomies=false) %}
+<section class="page-title">
     <div class="page-info-top">
-        {% if title_link %}
-            <h1><a href="{{ page.path }}">{{ page.title }}</a></h1>
+        {% if url %}
+            <h1><a href="{{ url }}">{{ title }}</a></h1>
         {% else %}
-            <h1>{{ page.title }}</h1>
+            <h1>{{ title }}</h1>
         {% endif %}
 
-        {% if page.date %}
-            <em><date>{{ page.date | date(format="%B %-d, %Y") }}</date></em>
+        {% if date %}
+            <em><date>{{ date | date(format="%B %-d, %Y") }}</date></em>
         {% endif %}
     </div>
 
     <div class="page-info-bottom">
-        {% if page.description %}
-            <p><em>{{ page.description }}</em></p>
+        {% if description %}
+            <p><em>{{ description }}</em></p>
         {% endif %}
 
-        {% if page.taxonomies %}
+        {% if taxonomies %}
             <div class="taxonomies">
-                {% for taxon, terms in page.taxonomies %}
+                {% for taxon, terms in taxonomies %}
                     {% if taxon == "tag" or taxon == "tags" %}
                         {% set taxon_prefix = "" %}
                         {% set term_prefix = "#" %}
@@ -48,5 +48,5 @@
             </div>
         {% endif %}
     </div>
-</div>
+</section>
 {% endmacro %}

@@ -1,0 +1,23 @@
+/*
+    Defines typography rules for HTML semantic elements. While <hr> is not *technically* a semantic
+    element, it practically is used the same.
+*/
+
+@use "../theme" as *;
+
+hr {
+    border: none;
+    height: $border-width;
+
+    color: $color-fg;
+    background-color: $color-fg;
+
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: $heading-margin-bottom;
+}
+
+article {
+    max-width: $line-length-maximum;
+    margin-inline: auto;
+}
