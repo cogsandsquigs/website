@@ -1,0 +1,11 @@
+/*
+    The styling of blockquotes specifically
+*/
+
+@use "../theme" as *;
+
+blockquote {
+    border-left: min(calc($border-width * 1.5), 0.4ch) solid $color-fg;
+    margin-inline: 2rem;
+    padding-inline: 0.75rem;
+}
