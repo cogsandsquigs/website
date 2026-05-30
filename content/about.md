@@ -1,6 +1,5 @@
 ---
 title: "About"
-description: "My bio lmao"
 ---
 
 Hey! I'm Ian Pratt, although I go by the online alias `cogsandsquigs`. I program things for fun and

@@ -1,0 +1,21 @@
+/**
+ * Style page lists
+ */
+
+@use "../theme" as *;
+
+ul.page-list {
+    list-style: none;
+    margin: 0 0;
+    padding: 0 0;
+
+    li {
+        border: $border-width solid $color-primary;
+
+        /* top | left and right | bottom */
+        padding: $heading-margin-bottom $heading-margin-bottom 0;
+
+        /* top and bottom | left and right */
+        margin: $heading-margin-bottom calc($heading-margin-bottom * 2);
+    }
+}
