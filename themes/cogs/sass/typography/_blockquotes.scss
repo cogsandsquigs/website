@@ -1,11 +1,57 @@
 /*
-    The styling of blockquotes specifically
+    The styling of blockquotes. This also includes the styling of github-style alerts.
 */
 
 @use "../theme" as *;
 
 blockquote {
-    border-left: min(calc($border-width * 1.5), 0.4ch) solid $color-fg;
-    margin-inline: 2rem;
-    padding-inline: 0.75rem;
+    border-left: calc($border-width * 2) solid $color-fg;
+    margin: $heading-margin-bottom calc($heading-margin-bottom * 2);
+    padding: $heading-margin-bottom;
+
+    // Remove the padding/margin from the bottom of last element, since contained w/in blockquotes.
+    *:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+/* Styling github-flavored alerts */
+
+// Mixin to do the styling (type shiiii...)
+@mixin style-gfm-alert($color-text, $color-bg, $name, $emoji-icon) {
+    background-color: $color-bg;
+    border-color: $color-text; // oth. default color will be defined by `blockquote` ($color-fg).
+
+    // Put the gfm alert text before it...
+    &::before {
+        content: "#{$emoji-icon} #{$name}";
+        font-weight: bold;
+    }
+}
+
+/*
+    NOTE: As per zola docs (see here: https://www.getzola.org/documentation/getting-started/configuration/),
+    the possible css class suffixes are `note`, `tip`, `important`, `warning`, or `caution`,
+    depending on the alert type.
+*/
+
+blockquote.markdown-alert-note {
+    @include style-gfm-alert($color-note, $color-note-content, "Note", 📝);
+}
+
+blockquote.markdown-alert-tip {
+    @include style-gfm-alert($color-success, $color-success-content, "Tip", 💡);
+}
+
+blockquote.markdown-alert-important {
+    @include style-gfm-alert($color-important, $color-important-content, "Important", ❕);
+}
+
+blockquote.markdown-alert-warning {
+    @include style-gfm-alert($color-warn, $color-warn-content, "Warning", ⚠️);
+}
+
+blockquote.markdown-alert-caution {
+    @include style-gfm-alert($color-error, $color-error-content, "Danger!", 🔥);
 }

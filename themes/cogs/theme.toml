@@ -19,6 +19,10 @@ tags        = []
 [extra]
     # All theme-related configuration is here!
     [extra.theme]
+        # The date formatting string. This follows the `chrono` formatting convention.
+        # See here: https://docs.rs/chrono/latest/chrono/format/strftime/
+        date_format = "%B %-d, %Y"
+
         # Any and all links you want to display, in the order you want to display them. These are
         # objects with the following type signature:
         # 

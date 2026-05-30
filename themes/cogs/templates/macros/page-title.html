@@ -1,6 +1,6 @@
 {% macro page_title(title, description=false, url=false, date=false, taxonomies=false) %}
 <section class="page-title">
-    <div class="page-info-top">
+    <div class="top">
         {% if url %}
             <h1><a href="{{ url }}">{{ title }}</a></h1>
         {% else %}
@@ -8,11 +8,11 @@
         {% endif %}
 
         {% if date %}
-            <em><date>{{ date | date(format="%B %-d, %Y") }}</date></em>
+            <p><em><date>{{ date | date(format=config.extra.theme.date_format) }}</date></em></p>
         {% endif %}
     </div>
 
-    <div class="page-info-bottom">
+    <div class="bottom">
         {% if description %}
             <p><em>{{ description }}</em></p>
         {% endif %}
@@ -31,7 +31,7 @@
                     <!-- Divider between taxonomies -->
                     {% if not loop.first %} / {% endif %}
             
-                    <span class="taxonomy">
+                    <p class="taxonomy">
                         <em>
                             {{ taxon_prefix }}
                             {% for term in terms %}
@@ -43,7 +43,7 @@
                                 </a>
                             {% endfor %}
                         </em>
-                    </span>
+                    </p>
                 {% endfor %}
             </div>
         {% endif %}

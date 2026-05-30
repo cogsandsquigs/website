@@ -8,6 +8,9 @@ description    = "My theme for my website."
 generate_feeds = true
 title          = "Cogs' Theme"
 
+[markdown]
+    github_alerts = true
+
 [[taxonomies]]
     feed = true
     name = "tags"

@@ -1,3 +1,29 @@
-section.header {
-    background: red;
+@use "../typography" as *;
+
+section.page-title {
+    display: flex;
+    flex-direction: column;
+
+    // Remove page link styles
+    @include remove-link-decoration;
+
+    .top,
+    .bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+
+        // Last elements have text justified to the right
+        > *:last-child {
+            text-align: end;
+        }
+    }
+
+    .taxonomies {
+        .taxonomy {
+            .taxonomy-term {
+            }
+        }
+    }
 }
