@@ -13,14 +13,24 @@
             system:
             let
                 pkgs = import nixpkgs { inherit system; };
+
+                buildPackages = with pkgs; [ zola ];
+
+                devPackages = with pkgs; [
+                    twig-language-server
+                    ludtwig
+                ];
             in
             {
-                devShells.default = pkgs.mkShell {
-                    packages = with pkgs; [
-                        zola # SSG
-                        twig-language-server # LSP for templates
-                        ludtwig # Formatter for templates
-                    ];
+                devShells.default = pkgs.mkShell { packages = buildPackages ++ devPackages; };
+
+                packages.default = pkgs.stdenv.mkDerivation {
+                    pname = "cogsandsquigs-dev-website";
+                    version = "0.1.0";
+                    src = ./.;
+                    nativeBuildInputs = buildPackages;
+                    buildPhase = "zola build -o $out";
+                    dontInstall = true;
                 };
             }
         );
