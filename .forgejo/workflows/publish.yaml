@@ -5,7 +5,7 @@ on:
 
 jobs:
     publish:
-        runs-on: codeberg-tiny
+        runs-on: codeberg-small
         steps:
             - uses: actions/checkout@v4
             - uses: https://github.com/DeterminateSystems/nix-installer-action@main
