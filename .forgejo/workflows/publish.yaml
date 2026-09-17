@@ -8,7 +8,7 @@ jobs:
         runs-on: codeberg-small
         steps:
             - uses: actions/checkout@v4
-            - uses: DeterminateSystems/nix-installer-action@main
+            - uses: https://github.com/DeterminateSystems/nix-installer-action@main
             - run: nix build .
             - uses: https://codeberg.org/git-pages/action@v2
               with:
