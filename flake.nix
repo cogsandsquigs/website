@@ -21,7 +21,10 @@
                 pkgs = import nixpkgs { inherit system; };
                 mv = multiverse.multiverse.${system};
 
-                buildPackages = [ (mv.version "zola" "0.23.6") ];
+                buildPackages = [
+                    (mv.version "zola" "0.23.6")
+                    (mv.version "cacert" "3.125")
+                ];
 
                 devPackages = [
                     mv.latest.twig-language-server
