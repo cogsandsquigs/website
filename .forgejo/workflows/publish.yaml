@@ -8,8 +8,9 @@ jobs:
         runs-on: codeberg-small
         steps:
             - uses: actions/checkout@v4
-            - uses: https://github.com/DeterminateSystems/nix-installer-action@main
-            - run: nix build .
+            - uses: actions/setup-zola@v1
+              with:
+                  zola-version: 0.23.6
             - uses: https://codeberg.org/git-pages/action@v2
               with:
                   site: https://cogsandsquigs.dev/

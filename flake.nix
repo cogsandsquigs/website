@@ -1,8 +1,8 @@
 {
     # Flake inputs
     inputs = {
-        nixpkgs.url = "github:NixOS/nixpkgs?ref=e9188e0072f22982a93bbdb2c69975b18a3c5cdb";
-        flake-utils.url = "github:numtide/flake-utils?ref=11707dc2f618dd54ca8739b309ec4fc024de578b";
+        nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+        flake-utils.url = "github:numtide/flake-utils";
     };
 
     # Flake outputs

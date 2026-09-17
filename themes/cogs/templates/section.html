@@ -1,19 +1,16 @@
 {% extends "page.html" %}
 
-{% import "macros/page-title.html" as page_title %}
-{% import "macros/page-list.html" as page_list %}
-
 {% block title %}
     {{ config.title }} - {{ section.title }}
 {% endblock %}
 
 {% block header %}
     {{
-        page_title::page_title(
-            title=section.title,
-            description=section.description,
-            url=section.path,
-        )
+        <page.title
+            title={section.title}
+            description={section.description}
+            url={section.path}
+        />
     }}
 {% endblock %}
 
@@ -23,5 +20,5 @@
         <hr/>
     {% endif %}
 
-    {{ page_list::page_list(pages=section.pages) }}
+    {{ <page.list pages={section.pages} date_format={config.extra.theme.date_format} /> }}
 {% endblock %}

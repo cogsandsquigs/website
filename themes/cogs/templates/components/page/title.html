@@ -1,4 +1,4 @@
-{% macro page_title(title, description=false, url=false, date=false, taxonomies=false) %}
+{% component page.title(title, description=None, url=None, date=None, taxonomies=None, date_format=None) %}
 <section class="page-title">
     <div class="top">
         {% if url %}
@@ -8,7 +8,7 @@
         {% endif %}
 
         {% if date %}
-            <p><em><date>{{ date | date(format=config.extra.theme.date_format) }}</date></em></p>
+            <p><em><date>{{ date | date(format=(date_format or "%B %-d, %Y")) }}</date></em></p>
         {% endif %}
     </div>
 
@@ -36,7 +36,7 @@
                             {{ taxon_prefix }}
                             {% for term in terms %}
                                 <a
-                                    href="{{ get_taxonomy_url(kind=taxon, name=term) }}"
+                                    href="{{ get_taxonomy_url(kind=taxon, term=term) }}"
                                     class="taxonomy-term"
                                 >
                                     {{ term_prefix }}{{ term }}
@@ -49,4 +49,4 @@
         {% endif %}
     </div>
 </section>
-{% endmacro %}
+{% endcomponent %}

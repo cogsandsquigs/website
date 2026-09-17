@@ -34,7 +34,8 @@
                         Only get the 3 most recent posts... so we need 2 reverse since sorted
                         ascending (we want descending).
                     --->
-                    {% for page in subsection.pages | sort(attribute="date") | reverse | slice(end=3) %}
+                    {% set recent = subsection.pages | sort(attribute="date") | reverse %}
+                    {% for page in recent[0:3] %}
                         {% set page = get_page(path=page.relative_path, metadata_only=true) %}
                         <li>
                             <small>

@@ -23,8 +23,7 @@ theme              = "cogs"                  # Custom theme, in themes/cogs
     smart_punctuation = true
 
     [markdown.highlighting]
-        highlight = true                  # Whether to do syntax highlighting
-        theme     = "github-dark-default" # Theme can be customised by setting this variable to a theme supported by Zola
+        theme = "github-dark-default" # Theme can be customised by setting this variable to a theme supported by Zola
 
 [[taxonomies]]
     feed = true

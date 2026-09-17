@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-{% import "macros/page-title.html" as page_title %}
-
 {% block title %}
     {{ config.title }} - {{ page.title }}
 {% endblock %}
@@ -18,13 +16,14 @@
             <header>
                 {% block header %}
                     {{
-                        page_title::page_title(
-                            title=page.title,
-                            description=page.description,
-                            url=page.path,
-                            date=page.date,
-                            taxonomies=page.taxonomies
-                        )
+                        <page.title
+                            title={page.title}
+                            description={page.description}
+                            url={page.path}
+                            date={page.date}
+                            taxonomies={page.taxonomies}
+                            date_format={config.extra.theme.date_format}
+                        />
                     }}
                 {% endblock %}
             </header>

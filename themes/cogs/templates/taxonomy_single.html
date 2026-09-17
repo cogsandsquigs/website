@@ -1,17 +1,14 @@
 {% extends "section.html" %}
 
-{% import "macros/page-list.html" as page_list %}
-
 {% block title %}
     {{ config.title }} - {{ term.name }}
 {% endblock %}
 
 {% block header %}
-    <h1>{{ taxonomy.name | capitalize }}: {{ term.name }}</h1>
     {% set taxonomy_title = taxonomy.name | capitalize %}
-    {{ page_title::page_title(title=(taxonomy_title ~ ": " ~ term.name)) }}
+    {{ <page.title title={taxonomy_title ~ ": " ~ term.name} /> }}
 {% endblock %}
 
 {% block content %}
-    {{ page_list::page_list(pages=term.pages) }}
+    {{ <page.list pages={term.pages} date_format={config.extra.theme.date_format} /> }}
 {% endblock %}

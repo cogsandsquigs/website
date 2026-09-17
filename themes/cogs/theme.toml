@@ -4,7 +4,7 @@ name        = "cogs"
 
 demo        = "https://cogsandsquigs.dev" # An optional live demo URL
 license     = "MIT"
-min_version = "0.22.1"                    # The minimum version of Zola required
+min_version = "0.23.6"                    # The minimum version of Zola required
 tags        = []
 
 # The theme author info: you!

@@ -1,13 +1,11 @@
 {% extends "section.html" %}
 
-{% import "macros/page-list.html" as page_list %}
-
 {% block title %}
     {{ config.title }} - {{ taxonomy.name }}
 {% endblock %}
 
 {% block header %}
-    {{ page_title::page_title(title=(taxonomy.name | capitalize)) }}
+    {{ <page.title title={taxonomy.name | capitalize} /> }}
 {% endblock %}
 
 {% block content %}
@@ -24,5 +22,5 @@
                 {% endif %}
             </li>
         {% endfor %}
-    <ul>
+    </ul>
 {% endblock %}
