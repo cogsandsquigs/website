@@ -14,6 +14,13 @@ jobs:
             # and because the next action runs in a separate container, we move from the build
             # output (`result`) to something not symliked (`static`, default for zola normally)
             - run: cp -rL --no-preserve=mode,ownership result static
+            # Deploy to codeberg pages domain (`cogsandsquigs.codeberg.page`)
+            - uses: https://codeberg.org/git-pages/action@v2
+              with:
+                  site: https://${{ forge.repository_owner }}.codeberg.page/
+                  token: ${{ forge.token }}
+                  source: static/
+            # Deploy to personal website domain (`cogsandsquigs.dev`)
             - uses: https://codeberg.org/git-pages/action@v2
               with:
                   site: https://cogsandsquigs.dev/
